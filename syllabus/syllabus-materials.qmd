@@ -1,0 +1,24 @@
+---
+title: "Course materials"
+---
+
+## Textbooks
+
+All books are **freely available online**:
+
+1.  `[ims]`: Mine Çetinkaya-Rundel and Jo Hardin. [Introduction to Modern Statistics](https://openintro-ims2.netlify.app/). 2nd edition. OpenIntro, 2024.
+2.  `[r4ds]`: Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund. [R for Data Science](https://r4ds.hadley.nz/). 2nd edition. O'Reilly, 2022.
+
+## Technology
+
+You will need to bring a laptop to all lectures and labs. Options for obtaining a laptop through the university are described [here](https://sta199-s25.github.io/syllabus/syllabus_resources.html#course-costs). Armed with your trusty laptop, you must be able to access the following:
+
+-   [This course page](https://sta199-s25.github.io/) that you are on right now;
+-   `R`/`RStudio` as provided by the [Duke Container Manager](https://cmgr.oit.duke.edu/containers);
+-   [Canvas](https://go.canvas.duke.edu/), through which you can access...
+    -   [Gradescope](https://www.gradescope.com/courses/935402);
+    -   [Ed Discussion](https://edstem.org/us/courses/70595/discussion);
+-   [Panopto](https://duke.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=74a0ba52-f70b-4868-8324-b260017e1689) (for the lecture recordings);
+-   [Zoom](https://duke.zoom.us/) (e.g. for remote office hours).
+
+If access to technology becomes a concern for you during the semester, contact the instructor immediately to discuss options.

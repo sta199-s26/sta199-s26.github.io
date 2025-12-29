@@ -1,0 +1,9 @@
+---
+title: Solarz, Katie
+categories: 
+  - Lab Leader, Lecture Helper
+description: "M 10:05AM - 11:20AM (Sec 2)"
+subtitle: "[🔗](https://docs.google.com/spreadsheets/d/1Bft17R-KHqjK3LlK8aRUEQCGmtnFaH0BgVX830SysOE/edit?usp=sharing)"
+image: headshots/solarz.jpg
+image-alt: Headshot of TA
+---

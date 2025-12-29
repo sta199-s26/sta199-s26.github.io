@@ -1,0 +1,104 @@
+project:
+  type: website
+
+website:
+  page-navigation: true
+  title: "STA 199 Spring 2026"
+  description: "Homepage for STA 199 Introduction to Data Science at Duke University, Spring 2026."
+  site-url: "https://sta199-s26.github.io/"
+
+  repo-url: https://github.com/sta199-s26/sta199-s26.github.io/
+  repo-actions: [edit, issue]
+
+  open-graph: true
+
+  sidebar:
+    background: "#9c1625"
+    logo: "img/logo.png"
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://github.com/sta199-s26
+        text: "GitHub organization"
+      - icon: code-square
+        href: https://cmgr.oit.duke.edu/containers
+        text: "RStudio containers"
+      - icon: camera-reels-fill
+        href: https://duke.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=74a0ba52-f70b-4868-8324-b260017e1689
+        text: "Class recordings"
+      - icon: life-preserver
+        text: Support
+        menu:
+          - icon: person-raised-hand
+            text: Office hours
+            href: https://docs.google.com/spreadsheets/d/1Bft17R-KHqjK3LlK8aRUEQCGmtnFaH0BgVX830SysOE/edit?usp=sharing
+          - icon: people-fill
+            text: Ed Discussion
+            href: https://edstem.org/us/courses/70595/discussion
+      - icon: file-check-fill
+        text: "Canvas"
+        menu:
+          - icon: megaphone-fill
+            text: Announcements
+            url: https://canvas.duke.edu/courses/50057/announcements
+          - icon: file-arrow-up-fill
+            text: Gradescope
+            url: https://canvas.duke.edu/courses/50057/external_tools/181
+          - icon: alphabet-uppercase
+            text: Gradebook
+            url: https://canvas.duke.edu/courses/50057/gradebook
+
+    style: docked
+    search: true
+    collapse-level: 1
+    contents:
+      - section: "Syllabus"
+        contents:
+          - href: syllabus/syllabus-overview.qmd
+            text: Overview
+          - href: syllabus/syllabus-team.qmd
+            text: Teaching team
+          - href: syllabus/syllabus-materials.qmd
+            text: Materials
+          - href: syllabus/syllabus-assignments.qmd
+            text: Assignments and grading
+          - href: syllabus/syllabus-policies.qmd
+            text: Policies
+          - href: syllabus/syllabus-resources.qmd
+            text: University resources
+          - href: index.qmd
+            text: Schedule
+          - href: syllabus/syllabus-faq.qmd
+            text: FAQ
+      - section: "Computing"
+        contents:
+          - href: computing/coding-access.qmd
+            text: Access
+          - href: computing/coding-cheatsheets.qmd
+            text: Cheatsheets
+
+
+
+  page-footer:
+    right: 'This page is built with [Quarto](https://quarto.org/).'
+    left: "&copy; Copyright 2026 Mine Çetinkaya-Rundel, Mary Knox, Marie Neubrander, John Zito"
+    background: "#9c1625"
+
+format: 
+  html:
+    mainfont: Atkinson Hyperlegible
+    highlight-style: a11y-light
+
+theme:
+  light: [cosmo, style/sta199.scss]
+linkcolor: "#798b93"
+toc: true
+code-copy: hover
+code-link: true
+code-overflow: wrap
+
+execute:
+  freeze: auto
+
+editor: visual

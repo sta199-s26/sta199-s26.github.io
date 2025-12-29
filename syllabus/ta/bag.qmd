@@ -1,0 +1,9 @@
+---
+title: Bag, Devarpita
+categories: 
+  - Lab Helper
+description: "M 3:05PM - 4:20PM (Sec 9)"
+subtitle: "[🔗](https://docs.google.com/spreadsheets/d/1Bft17R-KHqjK3LlK8aRUEQCGmtnFaH0BgVX830SysOE/edit?usp=sharing)"
+image: headshots/bag.jpg
+image-alt: Headshot of TA
+---

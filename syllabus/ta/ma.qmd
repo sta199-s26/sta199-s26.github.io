@@ -1,0 +1,9 @@
+---
+title: Ma, Liane
+categories: 
+  - Lab Helper
+description: "M 10:05AM - 11:20AM (Sec 3)"
+subtitle: "[🔗](https://docs.google.com/spreadsheets/d/1Bft17R-KHqjK3LlK8aRUEQCGmtnFaH0BgVX830SysOE/edit?usp=sharing)"
+image: headshots/liane.png
+image-alt: Headshot of TA
+---

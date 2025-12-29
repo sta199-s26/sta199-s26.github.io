@@ -1,0 +1,84 @@
+---
+title: "Assignments and grading"
+---
+
+Your final course grade will be calculated as follows:
+
+| Category              | Percentage |
+|-----------------------|------------|
+| Application exercises | 5%         |
+| Labs                  | 15%        |
+| Midterm Exam 1        | 20%        |
+| Midterm Exam 2        | 20%        |
+| Final exam            | 20%        |
+| Final project         | 20%        |
+
+Your final letter grade will be determined based on these thresholds:
+
+| Letter Grade | Final Course Grade |
+|--------------|--------------------|
+| A            | \>= 93             |
+| A-           | 90 - 92.99         |
+| B+           | 87 - 89.99         |
+| B            | 83 - 86.99         |
+| B-           | 80 - 82.99         |
+| C+           | 77 - 79.99         |
+| C            | 73 - 76.99         |
+| C-           | 70 - 72.99         |
+| D+           | 67 - 69.99         |
+| D            | 63 - 66.99         |
+| D-           | 60 - 62.99         |
+| F            | \< 60              |
+
+::: callout-warning
+These thresholds will not change, and they will be applied exactly. This means that the final grades will not be curved, and a 92.99, for example, will not be rounded up to an A.
+:::
+
+## Application exercises (5%)
+
+During most lectures, we will work through an *application exercise* (*AE*) together. This is essentially a guided mini-lab that shows you how to implement the concepts introduced that day. On-time completion of at least 70% of AEs will result in full credit for the AE component of the final course grade. Here is what that means:
+
+-   AEs are due at 2PM ET on the day they are introduced;
+-   Submit an AE by pushing your work to your GitHub repo;
+-   AEs are graded for completion; if you make a good faith attempt at *all* parts of the exercisem you get the credit.
+
+::: callout-note
+You can miss 30% of AEs before it starts affecting your final grade. This policy is meant to smooth over technical mishaps, absences due to illness, athletics, etc. So we generally will not grant extensions or exemptions for AEs. We just let the 30% policy do its thing;
+:::
+
+## Labs (15%)
+
+In labs, you will apply what you have learned in the videos and during lectures to complete data analysis tasks. You may discuss lab assignments with other students; however, the lab should be completed and submitted individually. Lab assignments must be typed up using Quarto, all work must be pushed to your GitHub repository for the lab, and the lab’s PDF output must be submitted on Gradescope by the deadline. Labs are due at 8:30 am ET on the indicated due date (generally the Monday after the lab is first introduced).
+
+::: callout-note
+**Your lowest lab score will be dropped**. This policy will be applied to the gradebook at the end of the semester, after all labs have been graded/regraded, and before the final exam.
+:::
+
+## Midterm Exams (20% each)
+
+There will be two midterm exams, each with two components:
+
+-   **In-class** (70% of the grade): sit-down, in-person, "pencil-and-paper," with no technology, and with no outside resources apart from a note sheet that you and only you have prepared (both sides of an 8.5" x 11" piece of paper);
+-   **Take-home** (30% of the grade): each in-class exam will end at 1:00 PM ET on a Thursday. You will then have until 8:00 AM ET the following Monday to work independently on the take-home. This will consist of a data analysis in R, and submission will be identical to our usual labs (Quarto \> PDF \> Gradescope). The take-home portion of the midterms is completely open resource, but the citation policies of the course still apply, and you are forbidden from discussing the exam with your peers in any way.
+
+Unless we indicate otherwise, you should assume that all course content and materials (videos, readings, lectures, labs, AEs, etc) are testable.
+
+::: callout-warning
+See the [course schedule](https://sta199-s25.github.io/) for dates and times of the exams. Exam dates cannot be changed and no make-up exams will be given. If you cannot take the exams on these dates, you should drop this class.
+:::
+
+## Final Exam (20%)
+
+On Tuesday April 29 we have our final exam from 9AM ET to 12PM ET. This exam will be cumulative, and it will have the same format as the in-class components of the midterm exams. The final exam does not have a take-home portion.
+
+::: callout-note
+If you do better on the final exam than you did on the in-class component of a midterm, we will replace your lowest in-class midterm exam score with your final exam score.
+:::
+
+## Final project (20%)
+
+After the first midterm exam, we will assign you to teams of four or five **within your lab section**. Teams will select a dataset and conduct an original data analysis using the tools from the course. The project has various intermediate deadlines ("Milestones") that contribute to the project grade, and on the last day of the semester (Wednesday April 23) teams will submit a final written report and a five minute video presentation summarizing the results of the analysis.
+
+::: callout-warning
+If you do not complete the project, you will not receive a passing grade in this course.
+:::

@@ -1,0 +1,49 @@
+---
+title: "Course overview"
+---
+
+## Description
+
+Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. Gain experience in data wrangling and munging, exploratory data analysis, predictive modeling, data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language.
+
+**Prerequisites:** none.
+
+## Meetings
+
++---------+--------------------------------+----------------------------+-----------+
+| Meeting | Location                       | Time                       | Staff     |
++=========+================================+============================+===========+
+| Lecture | Biological Sciences 111        | Tu Thu 11:45 AM - 01:00 PM | John Z\   |
+|         |                                |                            | Sonya\    |
+|         |                                |                            | TBD       |
++---------+--------------------------------+----------------------------+-----------+
+| Lab 01  | Perkins LINK 087 (Classroom 3) | M 08:30 AM - 09:45 AM      | Caitrin\  |
+|         |                                |                            | Han       |
++---------+--------------------------------+----------------------------+-----------+
+| Lab 02  | Perkins LINK 087 (Classroom 3) | M 10:05 AM - 11:20 AM      | Katie\    |
+|         |                                |                            | Hyunjin   |
++---------+--------------------------------+----------------------------+-----------+
+| Lab 03  | Perkins LINK 071 (Classroom 5) | M 10:05 AM - 11:20 AM      | Jasmine\  |
+|         |                                |                            | Liane     |
++---------+--------------------------------+----------------------------+-----------+
+| Lab 04  | Perkins LINK 087 (Classroom 3) | M 11:45 AM - 01:00 PM      | Avery\    |
+|         |                                |                            | Alexa     |
++---------+--------------------------------+----------------------------+-----------+
+| Lab 05  | Perkins LINK 071 (Classroom 5) | M 11:45 AM - 01:00 PM      | Dom\      |
+|         |                                |                            | Julia     |
++---------+--------------------------------+----------------------------+-----------+
+| Lab 06  | Perkins LINK 087 (Classroom 3) | M 01:25 PM - 02:40 PM      | Dav\      |
+|         |                                |                            | Lisa      |
++---------+--------------------------------+----------------------------+-----------+
+| Lab 07  | Perkins LINK 071 (Classroom 5) | M 01:25 PM - 02:40 PM      | Eduardo\  |
+|         |                                |                            | Arijit    |
++---------+--------------------------------+----------------------------+-----------+
+| Lab 08  | Perkins LINK 087 (Classroom 3) | M 03:05 PM - 04:20 PM      | Federico\ |
+|         |                                |                            | Sarah     |
++---------+--------------------------------+----------------------------+-----------+
+| Lab 09  | Perkins LINK 071 (Classroom 5) | M 03:05 PM - 04:20 PM      | Li\       |
+|         |                                |                            | Devarpita |
++---------+--------------------------------+----------------------------+-----------+
+| Lab 10  | Perkins LINK 087 (Classroom 3) | M 04:40 PM - 05:55 PM      | Netra\    |
+|         |                                |                            | Natasha   |
++---------+--------------------------------+----------------------------+-----------+

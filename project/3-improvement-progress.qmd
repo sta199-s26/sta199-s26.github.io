@@ -1,0 +1,41 @@
+---
+title: "Improvement and progress"
+subtitle: "Milestone 3"
+categories: "Project"
+execute:
+  echo: false
+---
+
+By this point you've received feedback on your proposal and you should be working on incorporating that feedback to improve your project and making further progress on it. This milestone ensures you're keeping on task and doing these things.
+
+# Goals
+
+The goals of this milestone are as follows:
+
+-   Incorporate feedback from your proposal
+-   Make progress on your project prior to the peer review
+
+# Instructions
+
+Everybody on the team should have at least one commit to the project repo since milestone 2 was submitted. At the very least, these commits should:
+
+-   explicitly closing issues opened as proposal feedback;
+-   load the data into the main project QMD file;
+-   generate one visualization of the data.
+
+
+# Grading
+
+This milestone will be graded for completion, not accuracy. We will check to see if the team has made commits to their repo since project milestone 2 and closed all issues that were opened as part of proposal feedback.
+
+-   0 points: No commits since project milestone 2
+
+-   1 point: not everyone has committed
+
+-   2-4 points: not all issues closed, no visualization, etc
+
+-   5 points: everyone committed, all issues closed, one figure generated.
+
+::: callout-note
+There won't be a lab session dedicated to this milestone. You are to work with your team outside of class time to complete this task.
+:::

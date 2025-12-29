@@ -1,0 +1,36 @@
+---
+title: "Teaching team"
+listing:
+  id: ta-listing
+  contents: ta
+  sort: title
+  sort-ui: [image, title, categories, description, subtitle]
+  filter-ui: [categories, description]
+  type: table
+  fields: [image, title, categories, description, subtitle]
+  field-display-names:
+    image: Mug
+    title: Name
+    categories: "Role(s)"
+    description: "Lab Section"
+    subtitle: Office hours
+---
+
+## Instructor
+
+![](ta/headshots/zito.jpg){.circular-portrait-mine style="float:right;padding: 0 0 0 10px;" fig-alt="Headshot of John Zito"}
+
+John Zito is Assistant Research Professor of Statistical Science at Duke University. He came to Duke in August 2024 after completing his PhD in statistics at Rice University. Prior to that he received a BA in mathematics from Kenyon College and spent a few years working in the Federal Reserve system.
+
+**Office Hours**: ???
+
+## Teaching assistants {#teaching-assistants}
+
+::: {#ta-listing}
+:::
+
+## Course coordinator
+
+![](ta/headshots/mary.png){.circular-portrait-mary style="float:right;" fig-alt="Headshot of Dr. Mary Knox"}
+
+Dr. Mary Knox (she/her) is the course coordinator for this course. You can contact her (at [mary.knox\@duke.edu](mailto:mary.knox@duke.edu)) with any questions regarding accommodations, missed work, extensions, registration, etc.
