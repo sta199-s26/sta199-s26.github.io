@@ -9,6 +9,7 @@ Go to your *Files* tab, check the box next to the file you want to download, the
 ```{=html}
 <iframe width="700" height="394" src="https://www.youtube.com/embed/cAHCMpPJx3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
+
 ## How can I submit my assignment to Gradescope?
 
 The instructions for submitting your assignment to Gradescope can be found [here](https://help.gradescope.com/article/ccbpppziu9-student-submit-work#submitting_a_pdf). In a nutshell, you'll upload your PDF and them mark the page(s) where each question can be found. It's OK if a question spans multiple pages, just mark them all. It's also OK if a page includes multiple questions.
