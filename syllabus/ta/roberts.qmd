@@ -1,5 +1,9 @@
 ---
-title: "roberts"
-format: html
+title: Roberts, Kenna
+categories: 
+  - ???
+description: "???"
+subtitle: "[🔗](https://www.nytimes.com)"
+image: headshots/kenna.jpg
+image-alt: Headshot of TA
 ---
-

@@ -1,5 +1,9 @@
 ---
-title: "nguyen"
-format: html
+title: Nguyen, Chelsea
+categories: 
+  - ???
+description: "???"
+subtitle: "[🔗](https://www.nytimes.com)"
+image: headshots/chelsea.png
+image-alt: Headshot of TA
 ---
-

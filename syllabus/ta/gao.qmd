@@ -1,5 +1,9 @@
 ---
-title: "gao"
-format: html
+title: Gao, Oliver
+categories: 
+  - ???
+description: "???"
+subtitle: "[🔗](https://www.nytimes.com)"
+image: headshots/gao.png
+image-alt: Headshot of TA
 ---
-

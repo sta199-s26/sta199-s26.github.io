@@ -1,5 +1,9 @@
 ---
-title: "kakkad"
-format: html
+title: Kakkad, Dwija
+categories: 
+  - ???
+description: "???"
+subtitle: "[🔗](https://www.nytimes.com)"
+image: headshots/kakkad.jpg
+image-alt: Headshot of TA
 ---
-

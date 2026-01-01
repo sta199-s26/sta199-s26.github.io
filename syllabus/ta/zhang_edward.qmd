@@ -1,5 +1,9 @@
 ---
-title: "zhang_edward"
-format: html
+title: Zhang, Edward
+categories: 
+  - ???
+description: "???"
+subtitle: "[🔗](https://www.nytimes.com)"
+image: headshots/edward.png
+image-alt: Headshot of TA
 ---
-

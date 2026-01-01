@@ -1,5 +1,9 @@
 ---
-title: "akinola"
-format: html
+title: Akinola, Bethany
+categories: 
+  - ???
+description: "???"
+subtitle: "[🔗](https://www.nytimes.com)"
+image: headshots/bethany.png
+image-alt: Headshot of TA
 ---
-

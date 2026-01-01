@@ -1,5 +1,9 @@
 ---
-title: "elmore"
-format: html
+title: Elmore, Cael
+categories: 
+  - ???
+description: "???"
+subtitle: "[🔗](https://www.nytimes.com)"
+image: headshots/elmore.jpeg
+image-alt: Headshot of TA
 ---
-

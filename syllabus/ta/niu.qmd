@@ -1,5 +1,9 @@
 ---
-title: "niu"
-format: html
+title: Niu, Max
+categories: 
+  - ???
+description: "???"
+subtitle: "[🔗](https://www.nytimes.com)"
+image: headshots/max.png
+image-alt: Headshot of TA
 ---
-

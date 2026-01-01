@@ -1,9 +1,9 @@
 ---
 title: Wu, Sarah
 categories: 
-  - Lab Helper
-description: "M 3:05PM - 4:20PM (Sec 8)"
-subtitle: "[🔗](https://docs.google.com/spreadsheets/d/1Bft17R-KHqjK3LlK8aRUEQCGmtnFaH0BgVX830SysOE/edit?usp=sharing)"
-image: headshots/sarah.png
+  - Lab leader
+description: "???"
+subtitle: "[🔗](https://www.nytimes.com)"
+image: headshots/wu.png
 image-alt: Headshot of TA
 ---

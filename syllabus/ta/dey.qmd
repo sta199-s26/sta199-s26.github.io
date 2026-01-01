@@ -1,9 +1,9 @@
 ---
 title: Dey, Arijit
 categories: 
-  - Lab Helper
-description: "M 1:25PM - 2:40PM (Sec 7)"
-subtitle: "[🔗](https://docs.google.com/spreadsheets/d/1Bft17R-KHqjK3LlK8aRUEQCGmtnFaH0BgVX830SysOE/edit?usp=sharing)"
-image: headshots/dey.jpg
+  - Lab leader
+description: "???"
+subtitle: "[🔗](https://www.nytimes.com)"
+image: headshots/arijit.png
 image-alt: Headshot of TA
 ---

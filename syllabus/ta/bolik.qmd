@@ -1,5 +1,9 @@
 ---
-title: "bolik"
-format: html
+title: Bolik, Jannis
+categories: 
+  - ???
+description: "???"
+subtitle: "[🔗](https://www.nytimes.com)"
+image: headshots/bolik.jpg
+image-alt: Headshot of TA
 ---
-

@@ -1,5 +1,9 @@
 ---
-title: "khudaverdiyeva"
-format: html
+title: Khudaverdiyeva, Abuzar
+categories: 
+  - ???
+description: "???"
+subtitle: "[🔗](https://www.nytimes.com)"
+image: headshots/abuzar.png
+image-alt: Headshot of TA
 ---
-
