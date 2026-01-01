@@ -1,9 +1,0 @@
----
-title: Chen, Han
-categories: 
-  - Lab Helper
-description: "M 8:30AM - 9:45AM (Sec 1)"
-subtitle: "[🔗](https://docs.google.com/spreadsheets/d/1Bft17R-KHqjK3LlK8aRUEQCGmtnFaH0BgVX830SysOE/edit?usp=sharing)"
-image: headshots/chen.jpg
-image-alt: Headshot of TA
----

@@ -1,9 +1,0 @@
----
-title: Vasquez Tapia, Eduardo Alfonso
-categories: 
-  - Lab Leader
-description: "M 1:25PM - 2:40PM (Sec 7)"
-subtitle: "[🔗](https://docs.google.com/spreadsheets/d/1Bft17R-KHqjK3LlK8aRUEQCGmtnFaH0BgVX830SysOE/edit?usp=sharing)"
-image: headshots/tapia.jpg
-image-alt: Headshot of TA
----

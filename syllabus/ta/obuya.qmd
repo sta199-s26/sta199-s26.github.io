@@ -1,9 +1,0 @@
----
-title: Obuya, Noah
-categories: 
-  - Lecture Helper
-description: ""
-subtitle: "[🔗](https://docs.google.com/spreadsheets/d/1Bft17R-KHqjK3LlK8aRUEQCGmtnFaH0BgVX830SysOE/edit?usp=sharing)"
-image: headshots/noah.png
-image-alt: Headshot of TA
----
