@@ -1,9 +1,0 @@
----
-title: Fernandez, Sara
-categories: 
-  - ???
-description: "???"
-subtitle: "[🔗](https://www.nytimes.com)"
-image: headshots/fernandez.jpg
-image-alt: Headshot of TA
----
