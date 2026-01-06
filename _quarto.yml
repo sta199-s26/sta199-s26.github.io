@@ -71,6 +71,10 @@ website:
             text: Schedule
           - href: syllabus/syllabus-faq.qmd
             text: FAQ
+      - section: "Lab"
+        contents:
+          - href: lab/lab-0.qmd
+            text: Lab 0
       - section: "Computing"
         contents:
           - href: computing/coding-access.qmd
