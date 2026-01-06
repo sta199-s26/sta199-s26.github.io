@@ -16,7 +16,7 @@ library(googlesheets4)
 library(gt)
 library(tidyverse)
 gs4_deauth()
-d <- read_sheet("https://docs.google.com/spreadsheets/d/1B8CJi-NkiYoOgtpIqvlpZpuvb9ETSE1i2RVYf_aeiu0/edit?usp=sharing")
+d <- read_sheet("https://docs.google.com/spreadsheets/d/1B8CJi-NkiYoOgtpIqvlpZpuvb9ETSE1i2RVYf_aeiu0/edit?usp=sharing", sheet = "199")
 prepare_cutoff_date <- as.Date("2026-5-1")
 ```
 
@@ -98,10 +98,10 @@ d |>
   cols_width(
     week ~ pct(2),
     date ~ pct(9), 
-    prepare ~ pct(20),
+    prepare ~ pct(27),
     topic ~ pct(22),
-    materials ~ pct(15),
-    due ~ pct(12)
+    materials ~ pct(10),
+    due ~ pct(10)
   ) |>
   cols_label_with(fn = function(x) {
       janitor::make_clean_names(x, case = "title") |>
