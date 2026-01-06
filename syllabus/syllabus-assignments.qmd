@@ -4,17 +4,21 @@ title: "Assignments and grading"
 
 Your final course grade will be calculated as follows:
 
+::: {.center-table}
 | Category              | Percentage |
 |-----------------------|------------|
-| Application exercises | 5%         |
-| Labs                  | 15%        |
-| Midterm Exam 1        | 20%        |
-| Midterm Exam 2        | 20%        |
+| Lecture attendance    | 5%         |
+| Labs                  | 8%         |
+| Homework              | 12%        |
+| Final project         | 15%        |
+| Midterm exam 1        | 20%        |
+| Midterm exam 2        | 20%        |
 | Final exam            | 20%        |
-| Final project         | 20%        |
+:::
 
 Your final letter grade will be determined based on these thresholds:
 
+::: {.center-table}
 | Letter Grade | Final Course Grade |
 |--------------|--------------------|
 | A            | \>= 93             |
@@ -29,10 +33,43 @@ Your final letter grade will be determined based on these thresholds:
 | D            | 63 - 66.99         |
 | D-           | 60 - 62.99         |
 | F            | \< 60              |
+:::
 
 ::: callout-warning
 These thresholds will not change, and they will be applied exactly. This means that the final grades will not be curved, and a 92.99, for example, will not be rounded up to an A.
 :::
+
+
+## Lecture attendance (5%)
+
+XXX
+
+## Labs (8%)
+
+XXX
+
+## Homework (12%)
+
+XXX
+
+## Project (15%)
+
+XXX
+
+## Midterm exams (20% each)
+
+XXX
+
+## Final exam (20%)
+
+XXX
+
+
+
+
+
+
+
 
 ## Application exercises (5%)
 
