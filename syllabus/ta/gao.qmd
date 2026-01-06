@@ -4,6 +4,6 @@ categories:
   - ???
 description: "???"
 subtitle: "[🔗](https://www.nytimes.com)"
-image: headshots/gao.png
+image: headshots/gao.jpeg
 image-alt: Headshot of TA
 ---
