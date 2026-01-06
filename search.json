@@ -113,6 +113,446 @@
     "text": "Grading\nThe presentation is worth 25 points, broken down as follows:\n\n\n\nTotal\n25 pts\n\n\n\n\nSlides\n10 pts\n\n\nPresentation\n15 pts\n\n\n\n\nSlides\nAre the slides well organized, readable, not full of text, featuring figures with legible labels, legends, etc.?\n\n\nPresentation\n\nTime management: Did the team divide the time well amongst themselves or got cut off going over time?\nProfessionalism: How well did the team present? Does the presentation appear to be well practiced? Did everyone get a chance to say something meaningful about the project?\nTeamwork: Did the team present a unified story, or did it seem like independent pieces of work patched together?\nCreativity and critical thought: Is the project carefully thought out? Does it appear that time and effort went into the planning and implementation of the project?\nContent: Including, but not limited to the following:\n\nIs the question well articulated in the presentation?\nCan the question be answered with the data?\nDoes the analysis answer the question?\nAre the conclusion(s) made based on the analysis justifiable?\nAre the limitations carefully considered and articulated?"
   },
   {
+    "objectID": "syllabus/syllabus-overview.html",
+    "href": "syllabus/syllabus-overview.html",
+    "title": "Course overview",
+    "section": "",
+    "text": "Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. Gain experience in data wrangling and munging, exploratory data analysis, predictive modeling, data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language.\nPrerequisites: none.",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-overview.html#description",
+    "href": "syllabus/syllabus-overview.html#description",
+    "title": "Course overview",
+    "section": "",
+    "text": "Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. Gain experience in data wrangling and munging, exploratory data analysis, predictive modeling, data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language.\nPrerequisites: none.",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-overview.html#meetings",
+    "href": "syllabus/syllabus-overview.html#meetings",
+    "title": "Course overview",
+    "section": "Meetings",
+    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLecture\nBryan Center Griffith Theater\nMoWe 11:45 AM - 01:00 PM\nJohn Z\nTBD\nTBD\n\n\nLab 01\nPerkins LINK 087 (Classroom 3)\nTh 08:30 AM - 09:45 AM\nTBD\nTBD\n\n\nLab 02\nPerkins LINK 087 (Classroom 3)\nTh 10:05 AM - 11:20 AM\nTBD\nTBD\n\n\nLab 03\nPerkins LINK 071 (Classroom 5)\nTh 10:05 AM - 11:20 AM\nTBD\nTBD\n\n\nLab 04\nPerkins LINK 087 (Classroom 3)\nTh 11:45 AM - 01:00 PM\nTBD\nTBD\n\n\nLab 05\nPerkins LINK 071 (Classroom 5)\nTh 11:45 AM - 01:00 PM\nTBD\nTBD\n\n\nLab 06\nPerkins LINK 087 (Classroom 3)\nTh 01:25 PM - 02:40 PM\nTBD\nTBD\n\n\nLab 07\nPerkins LINK 071 (Classroom 5)\nTh 01:25 PM - 02:40 PM\nTBD\nTBD\n\n\nLab 08\nPerkins LINK 087 (Classroom 3)\nTh 03:05 PM - 04:20 PM\nTBD\nTBD\n\n\nLab 09\nPerkins LINK 071 (Classroom 5)\nTh 03:05 PM - 04:20 PM\nTBD\nTBD\n\n\nLab 10\nPerkins LINK 071 (Classroom 5)\nTh 04:40 PM - 05:55 PM\nTBD\nTBD",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-resources.html",
+    "href": "syllabus/syllabus-resources.html",
+    "title": "University resources",
+    "section": "",
+    "text": "If you are having difficulty with the costs associated with this course (obtaining a laptop, mostly), here are some resources:\n\nKarsh Office of Undergraduate Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students, including through the LIFE Loaner Laptop Program. Students who are eligible for DukeLIFE benefits are notified before the start of the semester; program resources are limited.\nDuke Link: They have a small supply of laptops that can be rented out for five days at a time.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-resources.html#course-costs",
+    "href": "syllabus/syllabus-resources.html#course-costs",
+    "title": "University resources",
+    "section": "",
+    "text": "If you are having difficulty with the costs associated with this course (obtaining a laptop, mostly), here are some resources:\n\nKarsh Office of Undergraduate Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students, including through the LIFE Loaner Laptop Program. Students who are eligible for DukeLIFE benefits are notified before the start of the semester; program resources are limited.\nDuke Link: They have a small supply of laptops that can be rented out for five days at a time.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-resources.html#tech-support",
+    "href": "syllabus/syllabus-resources.html#tech-support",
+    "title": "University resources",
+    "section": "Tech support",
+    "text": "Tech support\nContact the Duke OIT Service Desk at oit.duke.edu/help.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-resources.html#academic-support",
+    "href": "syllabus/syllabus-resources.html#academic-support",
+    "title": "University resources",
+    "section": "Academic support",
+    "text": "Academic support\nThere are times you may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke. Services include Learning Consultations, Peer Tutoring and Study Groups, ADHD/LD Coaching, Outreach Workshops, and more. Because learning is a process unique to every individual, they work with each student to discover and develop their own academic strategy for success at Duke. Contact the ARC to schedule an appointment. Undergraduates in any year, studying any discipline can benefit! Contact ARC@duke.edu, 919-684-5917.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-resources.html#accessibility",
+    "href": "syllabus/syllabus-resources.html#accessibility",
+    "title": "University resources",
+    "section": "Accessibility",
+    "text": "Accessibility\nIf any portion of the course is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations.\nThe Student Disability Access Office (SDAO) is available to ensure that students can engage with their courses and related assignments. Students should contact the SDAO to request or update accommodations under these circumstances.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-resources.html#mental-health-and-well-being",
+    "href": "syllabus/syllabus-resources.html#mental-health-and-well-being",
+    "title": "University resources",
+    "section": "Mental health and well-being",
+    "text": "Mental health and well-being\nDuke is committed to holistic student well-being, including mental, emotional, and physical health. The university offers resources to help students manage daily stress, encourage intentional self-care, and access just-in-time support. If you find you need support, your mental and/or emotional health concerns are impacting your day-to-day activities and your academic performance, or you need someone to talk to, the resources below are available to you:\n\nDukeReach: DukeReach provides comprehensive outreach services to support students in managing all aspects of well-being, including referrals and follow-up services for students who are experiencing significant challenges related to mental health, physical health, social adjustment, and/or a variety of other stressors. You can reach the DukeReach team at dukereach@duke.edu.\nCounseling and Psychological Services (CAPS): CAPS services include individual and group counseling services, psychiatric services, and workshops. CAPS also provides referrals to off-campus resources for specialized care. You can reach CAPS at (919) 660-1000.\nTimelyCare: TimelyCare is an online platform that is a convenient, confidential, and free way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling.\nBC Fellows for Healthy Relationship: The BC Fellows meet with students individually and in groups, supporting the development of healthy relationships and building meaningful community in all areas of a student’s life.\nDukeLine: Students who want to connect anonymously with a Peer Coach can text 984-230-4888 from 5 to 11 p.m. daily. DukeLine offers in-the-moment anonymous, non-emergency text support from a peer.\nDuWell: DuWell provides Moments of Mindfulness (stress management and resilience building) and meditation programming (Koru workshop) to assist students in developing a daily emotional well-being practice. All are welcome, and no experience is necessary. You can reach DuWell at (919) 681-8421.",
+    "crumbs": [
+      "Syllabus",
+      "University resources"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-team.html",
+    "href": "syllabus/syllabus-team.html",
+    "title": "Teaching team",
+    "section": "",
+    "text": "John Zito is Assistant Research Professor of Statistical Science at Duke University. He came to Duke in August 2024 after completing his PhD in statistics at Rice University. Prior to that he received a BA in mathematics from Kenyon College and spent a few years working in the Federal Reserve system.\nOffice Hours: ???",
+    "crumbs": [
+      "Syllabus",
+      "Teaching team"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-team.html#instructor",
+    "href": "syllabus/syllabus-team.html#instructor",
+    "title": "Teaching team",
+    "section": "",
+    "text": "John Zito is Assistant Research Professor of Statistical Science at Duke University. He came to Duke in August 2024 after completing his PhD in statistics at Rice University. Prior to that he received a BA in mathematics from Kenyon College and spent a few years working in the Federal Reserve system.\nOffice Hours: ???",
+    "crumbs": [
+      "Syllabus",
+      "Teaching team"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-team.html#teaching-assistants",
+    "href": "syllabus/syllabus-team.html#teaching-assistants",
+    "title": "Teaching team",
+    "section": "Teaching assistants",
+    "text": "Teaching assistants\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Mug\n      \n      \n        Name\n      \n      \n        Role(s)\n      \n      \n        Lab Section\n      \n      \n        Office hours\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nMug\n\n\n\nName\n\n\n\nRole(s)\n\n\n\nLab Section\n\n\n\nOffice hours\n\n\n\n\n\n\n\n\n\n\n\nAkinola, Bethany\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nArboleda, Federico\n\n\nLab leader\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nBolik, Jannis\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nDey, Arijit\n\n\nLab leader\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nElmore, Cael\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nGao, Oliver\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nHarris, Natasha\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nKakkad, Dwija\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nKhudaverdiyeva, Abuzar\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nLee, Hyunjin\n\n\nLab leader\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nMa, Liane\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nNguyen, Chelsea\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nNiu, Max\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nNorton, Tory\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nPatrick, Pham\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nRoberts, Kenna\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nSolarz, Katie\n\n\nLab leader\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nWu, Sarah\n\n\nLab leader\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nZhang, Edward\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nZhang, Lisa\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Syllabus",
+      "Teaching team"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-team.html#course-coordinator",
+    "href": "syllabus/syllabus-team.html#course-coordinator",
+    "title": "Teaching team",
+    "section": "Course coordinator",
+    "text": "Course coordinator\n\nDr. Mary Knox (she/her) is the course coordinator for this course. You can contact her (at mary.knox@duke.edu) with any questions regarding accommodations, missed work, extensions, registration, etc.",
+    "crumbs": [
+      "Syllabus",
+      "Teaching team"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-materials.html",
+    "href": "syllabus/syllabus-materials.html",
+    "title": "Course materials",
+    "section": "",
+    "text": "All books are freely available online:\n\n[ims]: Mine Çetinkaya-Rundel and Jo Hardin. Introduction to Modern Statistics. 2nd edition. OpenIntro, 2024.\n[r4ds]: Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund. R for Data Science. 2nd edition. O’Reilly, 2022.",
+    "crumbs": [
+      "Syllabus",
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-materials.html#textbooks",
+    "href": "syllabus/syllabus-materials.html#textbooks",
+    "title": "Course materials",
+    "section": "",
+    "text": "All books are freely available online:\n\n[ims]: Mine Çetinkaya-Rundel and Jo Hardin. Introduction to Modern Statistics. 2nd edition. OpenIntro, 2024.\n[r4ds]: Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund. R for Data Science. 2nd edition. O’Reilly, 2022.",
+    "crumbs": [
+      "Syllabus",
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-materials.html#technology",
+    "href": "syllabus/syllabus-materials.html#technology",
+    "title": "Course materials",
+    "section": "Technology",
+    "text": "Technology\nYou will need to bring a laptop to all lectures and labs. Options for obtaining a laptop through the university are described here. Armed with your trusty laptop, you must be able to access the following:\n\nThis course page that you are on right now;\nR/RStudio as provided by the Duke Container Manager;\nCanvas, through which you can access…\n\nGradescope;\nEd Discussion;\n\nPanopto (for the lecture recordings);\nZoom (e.g. for remote office hours).\n\nIf access to technology becomes a concern for you during the semester, contact the instructor immediately to discuss options.",
+    "crumbs": [
+      "Syllabus",
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "lab/lab-0.html",
+    "href": "lab/lab-0.html",
+    "title": "Lab 0",
+    "section": "",
+    "text": "This lab will walk you through setting up the course technology, which consists of the following:\nVersion control software like Git and GitHub is indispensable in modern data science practice, and learning how to use it is one of the things that distinguishes STA 199 from a similar course like STA 101. At a minimum, version control helps prevent your files from looking like this:\nWe’ve all been there, but it’s time to kick the habit.",
+    "crumbs": [
+      "Lab",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "lab/lab-0.html#access-r-and-rstudio",
+    "href": "lab/lab-0.html#access-r-and-rstudio",
+    "title": "Lab 0",
+    "section": "1. Access R and RStudio",
+    "text": "1. Access R and RStudio\nInstead of asking you to download any new programs onto your computer, we host everything pre-packaged for you in the cloud. You just have to login through your web browser, and you’re ready to go:\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA199 to log into the Docker container. You should now see the RStudio environment.\n\nGo to https://cmgr.oit.duke.edu/containers and under Reservations available click on reserve STA199 to reserve a container for yourself.\n\n\n\n\n\n\nNote\n\n\n\nA container is a self-contained instance of RStudio for you, and you alone. You will do all of your computing in your container.\n\n\nOnce you’ve reserved the container you’ll see that it will show up under My reservations.\nTo launch your container click on it under My reservations, then click Login, and then Start.1\n\n\n\n\n\n\nWarning\n\n\n\nPlease double and triple check that you have reserved the STA199 container and not some other. The various containers differ in the software they include, so if you reserve something else, you may be missing something we need.",
+    "crumbs": [
+      "Lab",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "lab/lab-0.html#create-a-github-account",
+    "href": "lab/lab-0.html#create-a-github-account",
+    "title": "Lab 0",
+    "section": "2. Create a GitHub account",
+    "text": "2. Create a GitHub account\nGo to https://github.com/ and walk through the steps for creating an account. You do not have to use your Duke email address, but I recommend doing so.2\n\n\n\n\n\n\nNote\n\n\n\nYou’ll need to choose a user name. I recommend reviewing the user name advice at https://happygitwithr.com/github-acct#username-advice before choosing a username.\n\n\n\n\n\n\n\n\nWhat if I already have a GitHub account?\n\n\n\n\n\nIf you already have a GitHub account, you do not need to create a new one for this course. Just log in to that account to make sure you still remember your username and password. If you are unsure of your login credentials, carefully follow GitHub’s instructions for recovering this information. If you accumulate too many failed login attempts, you will be locked out of your account for the day, which will make it difficult for you to complete the rest of this lab.",
+    "crumbs": [
+      "Lab",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "lab/lab-0.html#set-up-your-ssh-key",
+    "href": "lab/lab-0.html#set-up-your-ssh-key",
+    "title": "Lab 0",
+    "section": "3. Set up your SSH key",
+    "text": "3. Set up your SSH key\nYou will authenticate GitHub using SSH (Secure Shell Protocol – it doesn’t really matter what this means for the purpose of this course). Below is an outline of the authentication steps; you are encouraged to follow along as your TA demonstrates the steps.\n\n\n\n\n\n\nNote\n\n\n\nYou only need to do this authentication process one time on a single system.\n\n\n\nGo back to your RStudio container, copy this command into the console, and hit enter:\n\n\ncredentials::ssh_setup_github()\n\n\nR will ask “No SSH key found. Generate one now?” You should click 1 for yes.\nYou will generate a key. R will then ask “Would you like to open a browser now?” You should click 1 for yes.\nYou may be asked to provide your GitHub username and password to log into GitHub. After entering this information, you should paste the key in and give it a name. You might name it in a way that indicates where the key will be used, e.g., sta199).\n\nYou can find more detailed instructions here if you’re interested.",
+    "crumbs": [
+      "Lab",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "lab/lab-0.html#configure-git-to-introduce-yourself",
+    "href": "lab/lab-0.html#configure-git-to-introduce-yourself",
+    "title": "Lab 0",
+    "section": "4. Configure Git to introduce yourself",
+    "text": "4. Configure Git to introduce yourself\nNext, you need to configure your git so that RStudio can communicate with GitHub. This requires two pieces of information: your name and email address.\nTo do so, you will use the use_git_config() function from the usethis package.\n\n\n\n\n\n\nNote\n\n\n\nYou’ll hear about 📦 packages a lot in the context of R – basically they’re how developers write functions and bundle them to distribute to the community (and more on this later too!).\n\n\nType the following lines of code in the console in RStudio filling in your name and the address associated with your GitHub account.\n\nusethis::use_git_config(\n  user.name = \"Your name\", \n  user.email = \"Email associated with your GitHub account\"\n)\n\nFor example, mine would be\n\nusethis::use_git_config(\n  user.name = \"John Zito\", \n  user.email = \"johnczito@gmail.com\"\n)\n\nI used my gmail because that is the one I used to create my GitHub account. You must use the exact same email address that you used to create your GitHub account.\n\n\n\n\n\n\nHow do I know if I did it right?\n\n\n\n\n\nWhen you input the usethis::use_git_config(...) command into the console and hit enter/return, it will appear as if nothing happened. To verify that everything worked, you can briefly switch over to the Terminal tab (should be to the right of Console) and type the commands git config user.name and git config user.email. If all is well, these will return whatever text you originally provided. If you notice a mistake or typo, you can just go back to the Console and rerun usethis::use_git_config(...) with modified inputs.\n\n\n\n\n\n\n\n\n\nNeed a recap? Watch this video!\n\n\n\n\n\nThe following video walks you through the steps outlined in the SSH key generation and Git configuration sections above.",
+    "crumbs": [
+      "Lab",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "lab/lab-0.html#babys-first-repo",
+    "href": "lab/lab-0.html#babys-first-repo",
+    "title": "Lab 0",
+    "section": "5. Baby’s first repo",
+    "text": "5. Baby’s first repo\nA GitHub repository (repo) is a collection of files hosted on GitHub. Repos are the main way we will distribute files to you during the semester. When you copy the files in a repo to your local computing environment (your container, in this case), that’s called “cloning”. So, let’s clone our first repo:\n\nGo to the repository for lab-0 in the course GitHub organization: https://github.com/sta199-s26/lab-0.\n\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\n\n\n\n\n\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\n\nClick Create Project.\n\n\n\n\n\n\nSince this is the first time you are connecting to GitHub from this RStudio instance, you will be asked to confirm the authenticity of the host. This will happen in a pop-up window like the one below. Type yes in the box and hit Enter.\n\n\n\n\n\nRStudio will now clone the repo and create a new RStudio project for you. This might take a few seconds. Once done, the files from your GitHub repo will be displayed in the Files pane in RStudio.\n\nYou will need to get used to these steps, because you’ll probably clone at least one new repo every week.",
+    "crumbs": [
+      "Lab",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "lab/lab-0.html#hello-sta-199",
+    "href": "lab/lab-0.html#hello-sta-199",
+    "title": "Lab 0",
+    "section": "6. Hello STA 199!",
+    "text": "6. Hello STA 199!\nFill out the course “Getting to know you” survey on Canvas: ADD LINK LATER.\nWe will use the information collected in this survey for a variety of goals, from inviting you to the course GitHub organization (more on that later) to getting to know you as a person and your course goals and concerns.",
+    "crumbs": [
+      "Lab",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "lab/lab-0.html#footnotes",
+    "href": "lab/lab-0.html#footnotes",
+    "title": "Lab 0",
+    "section": "Footnotes",
+    "text": "Footnotes\n\nYes, it’s too many steps. I don’t know why! But it works, and you’ll get used to it. Trust me, it beats downloading and installing everything you need on your computers!↩︎\nGitHub has some perks for students you can take advantage of later in the course or in your future work, and it helps to have a .edu address to get verified as a student.↩︎",
+    "crumbs": [
+      "Lab",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STA 199 Introduction to Data Science and Statistical Thinking",
+    "section": "",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\nX11\nX12\nX13\nX14\nX15\nX16\nX17\nX18\nX19\nX20\nX21\nX22\nX23\n\n\n\n0\nWed, Jan 7\n\n🧑‍🏫 Welcome!\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nThu, Jan 8\n\n💻 Lab 0\nlab 0\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n1\nMon, Jan 12\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\n🧑‍🏫 Meet the toolkit\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nWed, Jan 14\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\n🧑‍🏫 Grammar of data visualization\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nThu, Jan 15\n\n💻 Lab 1\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n2\nMon, Jan 19\n\n❌ MLK Day - No Lecture\n\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nWed, Jan 21\n📗 r4ds - chp 2  📗 r4ds - chp 3.1-3.5  🎥 Grammar of data transformation  🎥 Code along :: Flights and pipes\n\n🧑‍🏫 Grammar of data transformation\n\nHW 1\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nThu, Jan 22\n\n💻 Lab 2\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n3\nMon, Jan 26\n📗 r4ds - chp 3.6-3.7  🎥 Visualizing and summarizing categorical data  🎥 Visualizing and summarizing numerical data  🎥 Visualizing and summarizing relationships  🎥 Code along :: Star Wars characters\n\n🧑‍🏫 Exploratory Data Analysis I\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nWed, Jan 28\n📘 ims - chp 5  📘 ims - chp 6  🎥 Code along :: Diving deeper with Palmer Penguins\n\n🧑‍🏫 Exploratory Data Analysis II\n\nHW 2\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nThu, Jan 29\n\n💻 Lab 3\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n4\nMon, Feb 2\n🎥 Tidy data  🎥 Tidying data  🎥 Code along :: Country populations over time  📗 r4ds - chp 5\n\n🧑‍🏫 Tidying data\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nWed, Feb 4\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\n🧑‍🏫 Joining data\n\nHW 3\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nThu, Feb 5\n\n💻 Lab 4\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n5\nMon, Feb 9\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\n🧑‍🏫 Data types and classes\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nWed, Feb 11\n🎥 Importing data  🎥 Code along :: Halving CO2 emissions  🎥 Code along :: Student survey  📗 r4ds - chp 7  📗 r4ds - chp 17.1 - 17.3\n\n🧑‍🏫 Importing and recoding data\n\nHW 4\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nThu, Feb 12\n\n💻 Lab 5\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n6\nMon, Feb 16\n🎥 Web scraping basics  🎥 Code along :: Scraping an eCommerce page  📗 r4ds - chp 24.1 - 24.6\n\n🧑‍🏫 Webscraping I\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nWed, Feb 18\n🎥 Code along :: Scraping many eCommerce pages  🎥 Web scraping considerations  📗 r4ds - chp 25.1 - 25.2\n\n🧑‍🏫 Webscraping II\n\nHW 5\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nThu, Feb 19\n\n💻 project milestone 1 &2\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n7\nMon, Feb 23\n\n🧑‍🏫 Data science wrap-up\n\nmilestone 2 (sunday midnight) TAs need to grade proposals between Sunday night and Thursday morning\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nWed, Feb 25\n\n📝 Midterm 1\n\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nThu, Feb 26\n\n💻 Project – milestone 3 (make progress)\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n8\nMon, Mar 2\n📘 ims - chp 6  📗 r4ds - chp 10\n\n🧑‍🏫 Communicating results\n\ntake-home due Sunday\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nWed, Mar 4\n🎥 Misrepresentation  🎥 Data privacy  🎥 Algorithmic bias  🎥 Code along :: Sectors and services\n\n🧑‍🏫 Data science ethics\n\nmilestone 4 deadline (have to have at least one or two figures)\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nThu, Mar 5\n\n💻 project (first half peer review/second half make progress)\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n9\nMon, Mar 9\n\n❌ Spring Break - No Lecture\n\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nWed, Mar 11\n\n❌ Spring Break - No Lecture\n\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nThu, Mar 12\n\n❌ Spring Break - No Lab\n\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n10\nMon, Mar 16\n🎥 The language of models  🎥 Linear regression with a numerical predictor  📘 ims - chp 7.1\n\n🧑‍🏫 The language of models\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nWed, Mar 18\n🎥 Linear regression with a categorical predictor  🎥 Outliers in linear regression  🎥 Code along :: Modeling fish  📘 ims - chp 7.2\n\n🧑‍🏫 Simple linear regression\n\nproject due (or push deadline to sunday night)\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nThu, Mar 19\n\n💻 Lab 6\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n11\nMon, Mar 23\n🎥 Linear regression with multiple predictors  🎥 Main and interaction effects  📘 ims - chp 8.1-8.2  📘 ims - chp 8.3-8.5\n\n🧑‍🏫 Multiple linear regression I\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nWed, Mar 25\n🎥 Code along :: Modeling interest rates\n\n🧑‍🏫 Multiple linear regression II\n\nHW 6\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nThu, Mar 26\n\n💻 Lab 7 (make this peer review/maybe presentations?) + have HW (even if no lab)\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n12\nMon, Mar 30\n🎥 Logistic regression  🎥 Code along :: Building a spam filter  📘 ims - chp 9\n\n🧑‍🏫 Logistic regression I\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nWed, Apr 1\n🎥 Clasification and decision errors  🎥 Overfitting and spending your data\n\n🧑‍🏫 Logistic regression II\n\nHW 7\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nget back HW 6 feedback\n\n\n\nThu, Apr 2\n\n💻 PROJECT DUE\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n13\nMon, Apr 6\n🎥 Code along :: Forest classification\n\n🧑‍🏫 Modeling wrap-up\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nWed, Apr 8\n\n📝 Midterm 2\n\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nThu, Apr 9\n\n❌ We’re all tired - No lab!\n\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n14\nMon, Apr 13\n🎥 Quantifying uncertainty  🎥 Bootstrapping  🎥 Code along :: Bootstrapping Duke Forest houses  📘 ims - chp 11  📘 ims - chp 12\n\n🧑‍🏫 Interval estimation\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nWed, Apr 15\n🎥 Hypothesis testing  📘 ims - chp 11\n\n🧑‍🏫 Hypothesis testing\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nThu, Apr 16\n\n💻 Lab 8\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n15\nMon, Apr 20\n\n🧑‍🏫 More inference\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nWed, Apr 22\n\n🧑‍🏫 Farewell!\n\nHW 8\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\nThu, Apr 23\n\n❌ Reading Days - No Lab\n\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n16\nFri, May 1\n\n📝 Final (2pm - 5pm)\n\n\n\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA",
+    "crumbs": [
+      "Syllabus",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-assignments.html",
+    "href": "syllabus/syllabus-assignments.html",
+    "title": "Assignments and grading",
+    "section": "",
+    "text": "Your final course grade will be calculated as follows:\nYour final letter grade will be determined based on these thresholds:",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-assignments.html#lecture-attendance-5",
+    "href": "syllabus/syllabus-assignments.html#lecture-attendance-5",
+    "title": "Assignments and grading",
+    "section": "Lecture attendance (5%)",
+    "text": "Lecture attendance (5%)\nXXX",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-assignments.html#labs-8",
+    "href": "syllabus/syllabus-assignments.html#labs-8",
+    "title": "Assignments and grading",
+    "section": "Labs (8%)",
+    "text": "Labs (8%)\nXXX",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-assignments.html#homework-12",
+    "href": "syllabus/syllabus-assignments.html#homework-12",
+    "title": "Assignments and grading",
+    "section": "Homework (12%)",
+    "text": "Homework (12%)\nXXX",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-assignments.html#project-15",
+    "href": "syllabus/syllabus-assignments.html#project-15",
+    "title": "Assignments and grading",
+    "section": "Project (15%)",
+    "text": "Project (15%)\nXXX",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-assignments.html#midterm-exams-20-each",
+    "href": "syllabus/syllabus-assignments.html#midterm-exams-20-each",
+    "title": "Assignments and grading",
+    "section": "Midterm exams (20% each)",
+    "text": "Midterm exams (20% each)\nXXX",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-assignments.html#final-exam-20",
+    "href": "syllabus/syllabus-assignments.html#final-exam-20",
+    "title": "Assignments and grading",
+    "section": "Final exam (20%)",
+    "text": "Final exam (20%)\nXXX",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-assignments.html#application-exercises-5",
+    "href": "syllabus/syllabus-assignments.html#application-exercises-5",
+    "title": "Assignments and grading",
+    "section": "Application exercises (5%)",
+    "text": "Application exercises (5%)\nDuring most lectures, we will work through an application exercise (AE) together. This is essentially a guided mini-lab that shows you how to implement the concepts introduced that day. On-time completion of at least 70% of AEs will result in full credit for the AE component of the final course grade. Here is what that means:\n\nAEs are due at 2PM ET on the day they are introduced;\nSubmit an AE by pushing your work to your GitHub repo;\nAEs are graded for completion; if you make a good faith attempt at all parts of the exercisem you get the credit.\n\n\n\n\n\n\n\nNote\n\n\n\nYou can miss 30% of AEs before it starts affecting your final grade. This policy is meant to smooth over technical mishaps, absences due to illness, athletics, etc. So we generally will not grant extensions or exemptions for AEs. We just let the 30% policy do its thing;",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-assignments.html#labs-15",
+    "href": "syllabus/syllabus-assignments.html#labs-15",
+    "title": "Assignments and grading",
+    "section": "Labs (15%)",
+    "text": "Labs (15%)\nIn labs, you will apply what you have learned in the videos and during lectures to complete data analysis tasks. You may discuss lab assignments with other students; however, the lab should be completed and submitted individually. Lab assignments must be typed up using Quarto, all work must be pushed to your GitHub repository for the lab, and the lab’s PDF output must be submitted on Gradescope by the deadline. Labs are due at 8:30 am ET on the indicated due date (generally the Monday after the lab is first introduced).\n\n\n\n\n\n\nNote\n\n\n\nYour lowest lab score will be dropped. This policy will be applied to the gradebook at the end of the semester, after all labs have been graded/regraded, and before the final exam.",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-assignments.html#midterm-exams-20-each-1",
+    "href": "syllabus/syllabus-assignments.html#midterm-exams-20-each-1",
+    "title": "Assignments and grading",
+    "section": "Midterm Exams (20% each)",
+    "text": "Midterm Exams (20% each)\nThere will be two midterm exams, each with two components:\n\nIn-class (70% of the grade): sit-down, in-person, “pencil-and-paper,” with no technology, and with no outside resources apart from a note sheet that you and only you have prepared (both sides of an 8.5” x 11” piece of paper);\nTake-home (30% of the grade): each in-class exam will end at 1:00 PM ET on a Thursday. You will then have until 8:00 AM ET the following Monday to work independently on the take-home. This will consist of a data analysis in R, and submission will be identical to our usual labs (Quarto &gt; PDF &gt; Gradescope). The take-home portion of the midterms is completely open resource, but the citation policies of the course still apply, and you are forbidden from discussing the exam with your peers in any way.\n\nUnless we indicate otherwise, you should assume that all course content and materials (videos, readings, lectures, labs, AEs, etc) are testable.\n\n\n\n\n\n\nWarning\n\n\n\nSee the course schedule for dates and times of the exams. Exam dates cannot be changed and no make-up exams will be given. If you cannot take the exams on these dates, you should drop this class.",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-assignments.html#final-exam-20-1",
+    "href": "syllabus/syllabus-assignments.html#final-exam-20-1",
+    "title": "Assignments and grading",
+    "section": "Final Exam (20%)",
+    "text": "Final Exam (20%)\nOn Tuesday April 29 we have our final exam from 9AM ET to 12PM ET. This exam will be cumulative, and it will have the same format as the in-class components of the midterm exams. The final exam does not have a take-home portion.\n\n\n\n\n\n\nNote\n\n\n\nIf you do better on the final exam than you did on the in-class component of a midterm, we will replace your lowest in-class midterm exam score with your final exam score.",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-assignments.html#final-project-20",
+    "href": "syllabus/syllabus-assignments.html#final-project-20",
+    "title": "Assignments and grading",
+    "section": "Final project (20%)",
+    "text": "Final project (20%)\nAfter the first midterm exam, we will assign you to teams of four or five within your lab section. Teams will select a dataset and conduct an original data analysis using the tools from the course. The project has various intermediate deadlines (“Milestones”) that contribute to the project grade, and on the last day of the semester (Wednesday April 23) teams will submit a final written report and a five minute video presentation summarizing the results of the analysis.\n\n\n\n\n\n\nWarning\n\n\n\nIf you do not complete the project, you will not receive a passing grade in this course.",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-faq.html",
+    "href": "syllabus/syllabus-faq.html",
+    "title": "FAQ",
+    "section": "",
+    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder).",
+    "crumbs": [
+      "Syllabus",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-faq.html#how-do-i-export-my-assignment-pdf-from-rstudio-to-upload-to-gradescope",
+    "href": "syllabus/syllabus-faq.html#how-do-i-export-my-assignment-pdf-from-rstudio-to-upload-to-gradescope",
+    "title": "FAQ",
+    "section": "",
+    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder).",
+    "crumbs": [
+      "Syllabus",
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus-faq.html#how-can-i-submit-my-assignment-to-gradescope",
+    "href": "syllabus/syllabus-faq.html#how-can-i-submit-my-assignment-to-gradescope",
+    "title": "FAQ",
+    "section": "How can I submit my assignment to Gradescope?",
+    "text": "How can I submit my assignment to Gradescope?\nThe instructions for submitting your assignment to Gradescope can be found here. In a nutshell, you’ll upload your PDF and them mark the page(s) where each question can be found. It’s OK if a question spans multiple pages, just mark them all. It’s also OK if a page includes multiple questions.",
+    "crumbs": [
+      "Syllabus",
+      "FAQ"
+    ]
+  },
+  {
     "objectID": "syllabus/syllabus-policies.html",
     "href": "syllabus/syllabus-policies.html",
     "title": "Policies",
@@ -209,292 +649,6 @@
     "crumbs": [
       "Syllabus",
       "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-faq.html",
-    "href": "syllabus/syllabus-faq.html",
-    "title": "FAQ",
-    "section": "",
-    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder).",
-    "crumbs": [
-      "Syllabus",
-      "FAQ"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-faq.html#how-do-i-export-my-assignment-pdf-from-rstudio-to-upload-to-gradescope",
-    "href": "syllabus/syllabus-faq.html#how-do-i-export-my-assignment-pdf-from-rstudio-to-upload-to-gradescope",
-    "title": "FAQ",
-    "section": "",
-    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder).",
-    "crumbs": [
-      "Syllabus",
-      "FAQ"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-faq.html#how-can-i-submit-my-assignment-to-gradescope",
-    "href": "syllabus/syllabus-faq.html#how-can-i-submit-my-assignment-to-gradescope",
-    "title": "FAQ",
-    "section": "How can I submit my assignment to Gradescope?",
-    "text": "How can I submit my assignment to Gradescope?\nThe instructions for submitting your assignment to Gradescope can be found here. In a nutshell, you’ll upload your PDF and them mark the page(s) where each question can be found. It’s OK if a question spans multiple pages, just mark them all. It’s also OK if a page includes multiple questions.",
-    "crumbs": [
-      "Syllabus",
-      "FAQ"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-assignments.html",
-    "href": "syllabus/syllabus-assignments.html",
-    "title": "Assignments and grading",
-    "section": "",
-    "text": "Your final course grade will be calculated as follows:\nYour final letter grade will be determined based on these thresholds:",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-assignments.html#application-exercises-5",
-    "href": "syllabus/syllabus-assignments.html#application-exercises-5",
-    "title": "Assignments and grading",
-    "section": "Application exercises (5%)",
-    "text": "Application exercises (5%)\nDuring most lectures, we will work through an application exercise (AE) together. This is essentially a guided mini-lab that shows you how to implement the concepts introduced that day. On-time completion of at least 70% of AEs will result in full credit for the AE component of the final course grade. Here is what that means:\n\nAEs are due at 2PM ET on the day they are introduced;\nSubmit an AE by pushing your work to your GitHub repo;\nAEs are graded for completion; if you make a good faith attempt at all parts of the exercisem you get the credit.\n\n\n\n\n\n\n\nNote\n\n\n\nYou can miss 30% of AEs before it starts affecting your final grade. This policy is meant to smooth over technical mishaps, absences due to illness, athletics, etc. So we generally will not grant extensions or exemptions for AEs. We just let the 30% policy do its thing;",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-assignments.html#labs-15",
-    "href": "syllabus/syllabus-assignments.html#labs-15",
-    "title": "Assignments and grading",
-    "section": "Labs (15%)",
-    "text": "Labs (15%)\nIn labs, you will apply what you have learned in the videos and during lectures to complete data analysis tasks. You may discuss lab assignments with other students; however, the lab should be completed and submitted individually. Lab assignments must be typed up using Quarto, all work must be pushed to your GitHub repository for the lab, and the lab’s PDF output must be submitted on Gradescope by the deadline. Labs are due at 8:30 am ET on the indicated due date (generally the Monday after the lab is first introduced).\n\n\n\n\n\n\nNote\n\n\n\nYour lowest lab score will be dropped. This policy will be applied to the gradebook at the end of the semester, after all labs have been graded/regraded, and before the final exam.",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-assignments.html#midterm-exams-20-each",
-    "href": "syllabus/syllabus-assignments.html#midterm-exams-20-each",
-    "title": "Assignments and grading",
-    "section": "Midterm Exams (20% each)",
-    "text": "Midterm Exams (20% each)\nThere will be two midterm exams, each with two components:\n\nIn-class (70% of the grade): sit-down, in-person, “pencil-and-paper,” with no technology, and with no outside resources apart from a note sheet that you and only you have prepared (both sides of an 8.5” x 11” piece of paper);\nTake-home (30% of the grade): each in-class exam will end at 1:00 PM ET on a Thursday. You will then have until 8:00 AM ET the following Monday to work independently on the take-home. This will consist of a data analysis in R, and submission will be identical to our usual labs (Quarto &gt; PDF &gt; Gradescope). The take-home portion of the midterms is completely open resource, but the citation policies of the course still apply, and you are forbidden from discussing the exam with your peers in any way.\n\nUnless we indicate otherwise, you should assume that all course content and materials (videos, readings, lectures, labs, AEs, etc) are testable.\n\n\n\n\n\n\nWarning\n\n\n\nSee the course schedule for dates and times of the exams. Exam dates cannot be changed and no make-up exams will be given. If you cannot take the exams on these dates, you should drop this class.",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-assignments.html#final-exam-20",
-    "href": "syllabus/syllabus-assignments.html#final-exam-20",
-    "title": "Assignments and grading",
-    "section": "Final Exam (20%)",
-    "text": "Final Exam (20%)\nOn Tuesday April 29 we have our final exam from 9AM ET to 12PM ET. This exam will be cumulative, and it will have the same format as the in-class components of the midterm exams. The final exam does not have a take-home portion.\n\n\n\n\n\n\nNote\n\n\n\nIf you do better on the final exam than you did on the in-class component of a midterm, we will replace your lowest in-class midterm exam score with your final exam score.",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-assignments.html#final-project-20",
-    "href": "syllabus/syllabus-assignments.html#final-project-20",
-    "title": "Assignments and grading",
-    "section": "Final project (20%)",
-    "text": "Final project (20%)\nAfter the first midterm exam, we will assign you to teams of four or five within your lab section. Teams will select a dataset and conduct an original data analysis using the tools from the course. The project has various intermediate deadlines (“Milestones”) that contribute to the project grade, and on the last day of the semester (Wednesday April 23) teams will submit a final written report and a five minute video presentation summarizing the results of the analysis.\n\n\n\n\n\n\nWarning\n\n\n\nIf you do not complete the project, you will not receive a passing grade in this course.",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "STA 199 Introduction to Data Science and Statistical Thinking",
-    "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 7\n\n🧑‍🏫 Welcome!\n\n\n\n\n\nThu, Jan 8\n\n💻 Lab 0\n\n\n\n\n1\nMon, Jan 12\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\n🧑‍🏫 Meet the toolkit\n\n\n\n\n\nWed, Jan 14\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\n🧑‍🏫 Grammar of data visualization\n\n\n\n\n\nThu, Jan 15\n\n💻 Lab 1\n\n\n\n\n2\nMon, Jan 19\n\n❌ MLK Day - No Lecture\n\n\n\n\n\n\nWed, Jan 21\n📗 r4ds - chp 2  📗 r4ds - chp 3.1-3.5  🎥 Grammar of data transformation  🎥 Code along :: Flights and pipes\n\n🧑‍🏫 Grammar of data transformation\n\nHW 1\n\n\n\nThu, Jan 22\n\n💻 Lab 2\n\n\n\n\n3\nMon, Jan 26\n📗 r4ds - chp 3.6-3.7  🎥 Visualizing and summarizing categorical data  🎥 Visualizing and summarizing numerical data  🎥 Visualizing and summarizing relationships  🎥 Code along :: Star Wars characters\n\n🧑‍🏫 Exploratory Data Analysis I\n\n\n\n\n\nWed, Jan 28\n📘 ims - chp 5  📘 ims - chp 6  🎥 Code along :: Diving deeper with Palmer Penguins\n\n🧑‍🏫 Exploratory Data Analysis II\n\nHW 2\n\n\n\nThu, Jan 29\n\n💻 Lab 3\n\n\n\n\n4\nMon, Feb 2\n🎥 Tidy data  🎥 Tidying data  🎥 Code along :: Country populations over time  📗 r4ds - chp 5\n\n🧑‍🏫 Tidying data\n\n\n\n\n\nWed, Feb 4\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\n🧑‍🏫 Joining data\n\nHW 3\n\n\n\nThu, Feb 5\n\n💻 Lab 4\n\n\n\n\n5\nMon, Feb 9\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\n🧑‍🏫 Data types and classes\n\n\n\n\n\nWed, Feb 11\n🎥 Importing data  🎥 Code along :: Halving CO2 emissions  🎥 Code along :: Student survey  📗 r4ds - chp 7  📗 r4ds - chp 17.1 - 17.3\n\n🧑‍🏫 Importing and recoding data\n\nHW 4\n\n\n\nThu, Feb 12\n\n💻 Lab 5\n\n\n\n\n6\nMon, Feb 16\n🎥 Web scraping basics  🎥 Code along :: Scraping an eCommerce page  📗 r4ds - chp 24.1 - 24.6\n\n🧑‍🏫 Webscraping I\n\n\n\n\n\nWed, Feb 18\n🎥 Code along :: Scraping many eCommerce pages  🎥 Web scraping considerations  📗 r4ds - chp 25.1 - 25.2\n\n🧑‍🏫 Webscraping II\n\nHW 5\n\n\n\nThu, Feb 19\n\n💻 Project shit\n\n\n\n\n7\nMon, Feb 23\n\n🧑‍🏫 Exam review\n\n\n\n\n\nWed, Feb 25\n\n📝 Midterm 1\n\n\n\n\n\n\nThu, Feb 26\n\n💻 Project shit\n\n\n\n\n8\nMon, Mar 2\n📘 ims - chp 6  📗 r4ds - chp 10\n\n🧑‍🏫 Communicating results\n\n\n\n\n\nWed, Mar 4\n🎥 Misrepresentation  🎥 Data privacy  🎥 Algorithmic bias  🎥 Code along :: Sectors and services\n\n🧑‍🏫 Data science ethics\n\n\n\n\n\nThu, Mar 5\n\n💻 Project shit\n\n\n\n\n9\nMon, Mar 9\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nWed, Mar 11\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nThu, Mar 12\n\n❌ Spring Break - No Lab\n\n\n\n\n\n10\nMon, Mar 16\n🎥 The language of models  🎥 Linear regression with a numerical predictor  📘 ims - chp 7.1\n\n🧑‍🏫 The language of models\n\n\n\n\n\nWed, Mar 18\n🎥 Linear regression with a categorical predictor  🎥 Outliers in linear regression  🎥 Code along :: Modeling fish  📘 ims - chp 7.2\n\n🧑‍🏫 Simple linear regression\n\n\n\n\n\nThu, Mar 19\n\n💻 Lab 6\n\n\n\n\n11\nMon, Mar 23\n🎥 Linear regression with multiple predictors  🎥 Main and interaction effects  📘 ims - chp 8.1-8.2  📘 ims - chp 8.3-8.5\n\n🧑‍🏫 Multiple linear regression I\n\n\n\n\n\nWed, Mar 25\n🎥 Code along :: Modeling interest rates\n\n🧑‍🏫 Multiple linear regression II\n\nHW 6\n\n\n\nThu, Mar 26\n\n💻 Lab 7\n\n\n\n\n12\nMon, Mar 30\n🎥 Logistic regression  🎥 Code along :: Building a spam filter  📘 ims - chp 9\n\n🧑‍🏫 Logistic regression I\n\n\n\n\n\nWed, Apr 1\n🎥 Clasification and decision errors  🎥 Overfitting and spending your data\n\n🧑‍🏫 Logistic regression II\n\nHW 7\n\n\n\nThu, Apr 2\n\n💻 Project shit\n\n\n\n\n13\nMon, Apr 6\n🎥 Code along :: Forest classification\n\n🧑‍🏫 Modeling wrap-up\n\n\n\n\n\nWed, Apr 8\n\n📝 Midterm 2\n\n\n\n\n\n\nThu, Apr 9\n\n💻 Project shit\n\n\n\n\n14\nMon, Apr 13\n🎥 Quantifying uncertainty  🎥 Bootstrapping  🎥 Code along :: Bootstrapping Duke Forest houses  📘 ims - chp 11  📘 ims - chp 12\n\n🧑‍🏫 Interval estimation\n\n\n\n\n\nWed, Apr 15\n🎥 Hypothesis testing  📘 ims - chp 11\n\n🧑‍🏫 Hypothesis testing\n\n\n\n\n\nThu, Apr 16\n\n💻 Lab 8\n\n\n\n\n15\nMon, Apr 20\n\n🧑‍🏫 More inference\n\n\n\n\n\nWed, Apr 22\n\n🧑‍🏫 Farewell!\n\nHW 8\n\n\n\nThu, Apr 23\n\n❌ Reading Days - No Lab\n\n\n\n\n\n16\nFri, May 1\n\n📝 Final (2pm - 5pm)",
-    "crumbs": [
-      "Syllabus",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-materials.html",
-    "href": "syllabus/syllabus-materials.html",
-    "title": "Course materials",
-    "section": "",
-    "text": "All books are freely available online:\n\n[ims]: Mine Çetinkaya-Rundel and Jo Hardin. Introduction to Modern Statistics. 2nd edition. OpenIntro, 2024.\n[r4ds]: Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund. R for Data Science. 2nd edition. O’Reilly, 2022.",
-    "crumbs": [
-      "Syllabus",
-      "Materials"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-materials.html#textbooks",
-    "href": "syllabus/syllabus-materials.html#textbooks",
-    "title": "Course materials",
-    "section": "",
-    "text": "All books are freely available online:\n\n[ims]: Mine Çetinkaya-Rundel and Jo Hardin. Introduction to Modern Statistics. 2nd edition. OpenIntro, 2024.\n[r4ds]: Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund. R for Data Science. 2nd edition. O’Reilly, 2022.",
-    "crumbs": [
-      "Syllabus",
-      "Materials"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-materials.html#technology",
-    "href": "syllabus/syllabus-materials.html#technology",
-    "title": "Course materials",
-    "section": "Technology",
-    "text": "Technology\nYou will need to bring a laptop to all lectures and labs. Options for obtaining a laptop through the university are described here. Armed with your trusty laptop, you must be able to access the following:\n\nThis course page that you are on right now;\nR/RStudio as provided by the Duke Container Manager;\nCanvas, through which you can access…\n\nGradescope;\nEd Discussion;\n\nPanopto (for the lecture recordings);\nZoom (e.g. for remote office hours).\n\nIf access to technology becomes a concern for you during the semester, contact the instructor immediately to discuss options.",
-    "crumbs": [
-      "Syllabus",
-      "Materials"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-team.html",
-    "href": "syllabus/syllabus-team.html",
-    "title": "Teaching team",
-    "section": "",
-    "text": "John Zito is Assistant Research Professor of Statistical Science at Duke University. He came to Duke in August 2024 after completing his PhD in statistics at Rice University. Prior to that he received a BA in mathematics from Kenyon College and spent a few years working in the Federal Reserve system.\nOffice Hours: ???",
-    "crumbs": [
-      "Syllabus",
-      "Teaching team"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-team.html#instructor",
-    "href": "syllabus/syllabus-team.html#instructor",
-    "title": "Teaching team",
-    "section": "",
-    "text": "John Zito is Assistant Research Professor of Statistical Science at Duke University. He came to Duke in August 2024 after completing his PhD in statistics at Rice University. Prior to that he received a BA in mathematics from Kenyon College and spent a few years working in the Federal Reserve system.\nOffice Hours: ???",
-    "crumbs": [
-      "Syllabus",
-      "Teaching team"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-team.html#teaching-assistants",
-    "href": "syllabus/syllabus-team.html#teaching-assistants",
-    "title": "Teaching team",
-    "section": "Teaching assistants",
-    "text": "Teaching assistants\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Mug\n      \n      \n        Name\n      \n      \n        Role(s)\n      \n      \n        Lab Section\n      \n      \n        Office hours\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nMug\n\n\n\nName\n\n\n\nRole(s)\n\n\n\nLab Section\n\n\n\nOffice hours\n\n\n\n\n\n\n\n\n\n\n\nAkinola, Bethany\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nArboleda, Federico\n\n\nLab leader\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nBolik, Jannis\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nDey, Arijit\n\n\nLab leader\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nElmore, Cael\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nFernandez, Sara\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nGao, Oliver\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nHarris, Natasha\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nKakkad, Dwija\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nKhudaverdiyeva, Abuzar\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nLee, Hyunjin\n\n\nLab leader\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nMa, Liane\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nNguyen, Chelsea\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nNiu, Max\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nNorton, Tory\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nPatrick, Pham\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nRoberts, Kenna\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nSolarz, Katie\n\n\nLab leader\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nWu, Sarah\n\n\nLab leader\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nZhang, Edward\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nZhang, Lisa\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Syllabus",
-      "Teaching team"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-team.html#course-coordinator",
-    "href": "syllabus/syllabus-team.html#course-coordinator",
-    "title": "Teaching team",
-    "section": "Course coordinator",
-    "text": "Course coordinator\n\nDr. Mary Knox (she/her) is the course coordinator for this course. You can contact her (at mary.knox@duke.edu) with any questions regarding accommodations, missed work, extensions, registration, etc.",
-    "crumbs": [
-      "Syllabus",
-      "Teaching team"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-resources.html",
-    "href": "syllabus/syllabus-resources.html",
-    "title": "University resources",
-    "section": "",
-    "text": "If you are having difficulty with the costs associated with this course (obtaining a laptop, mostly), here are some resources:\n\nKarsh Office of Undergraduate Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students, including through the LIFE Loaner Laptop Program. Students who are eligible for DukeLIFE benefits are notified before the start of the semester; program resources are limited.\nDuke Link: They have a small supply of laptops that can be rented out for five days at a time.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-resources.html#course-costs",
-    "href": "syllabus/syllabus-resources.html#course-costs",
-    "title": "University resources",
-    "section": "",
-    "text": "If you are having difficulty with the costs associated with this course (obtaining a laptop, mostly), here are some resources:\n\nKarsh Office of Undergraduate Support: Regardless of your aid package, Karsh offers loans and resources for connecting students with campus programs that might help alleviate course costs.\nDukeLIFE: The Course Material Assistance program offers assistance for eligible students, including through the LIFE Loaner Laptop Program. Students who are eligible for DukeLIFE benefits are notified before the start of the semester; program resources are limited.\nDuke Link: They have a small supply of laptops that can be rented out for five days at a time.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-resources.html#tech-support",
-    "href": "syllabus/syllabus-resources.html#tech-support",
-    "title": "University resources",
-    "section": "Tech support",
-    "text": "Tech support\nContact the Duke OIT Service Desk at oit.duke.edu/help.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-resources.html#academic-support",
-    "href": "syllabus/syllabus-resources.html#academic-support",
-    "title": "University resources",
-    "section": "Academic support",
-    "text": "Academic support\nThere are times you may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke. Services include Learning Consultations, Peer Tutoring and Study Groups, ADHD/LD Coaching, Outreach Workshops, and more. Because learning is a process unique to every individual, they work with each student to discover and develop their own academic strategy for success at Duke. Contact the ARC to schedule an appointment. Undergraduates in any year, studying any discipline can benefit! Contact ARC@duke.edu, 919-684-5917.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-resources.html#accessibility",
-    "href": "syllabus/syllabus-resources.html#accessibility",
-    "title": "University resources",
-    "section": "Accessibility",
-    "text": "Accessibility\nIf any portion of the course is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations.\nThe Student Disability Access Office (SDAO) is available to ensure that students can engage with their courses and related assignments. Students should contact the SDAO to request or update accommodations under these circumstances.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-resources.html#mental-health-and-well-being",
-    "href": "syllabus/syllabus-resources.html#mental-health-and-well-being",
-    "title": "University resources",
-    "section": "Mental health and well-being",
-    "text": "Mental health and well-being\nDuke is committed to holistic student well-being, including mental, emotional, and physical health. The university offers resources to help students manage daily stress, encourage intentional self-care, and access just-in-time support. If you find you need support, your mental and/or emotional health concerns are impacting your day-to-day activities and your academic performance, or you need someone to talk to, the resources below are available to you:\n\nDukeReach: DukeReach provides comprehensive outreach services to support students in managing all aspects of well-being, including referrals and follow-up services for students who are experiencing significant challenges related to mental health, physical health, social adjustment, and/or a variety of other stressors. You can reach the DukeReach team at dukereach@duke.edu.\nCounseling and Psychological Services (CAPS): CAPS services include individual and group counseling services, psychiatric services, and workshops. CAPS also provides referrals to off-campus resources for specialized care. You can reach CAPS at (919) 660-1000.\nTimelyCare: TimelyCare is an online platform that is a convenient, confidential, and free way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling.\nBC Fellows for Healthy Relationship: The BC Fellows meet with students individually and in groups, supporting the development of healthy relationships and building meaningful community in all areas of a student’s life.\nDukeLine: Students who want to connect anonymously with a Peer Coach can text 984-230-4888 from 5 to 11 p.m. daily. DukeLine offers in-the-moment anonymous, non-emergency text support from a peer.\nDuWell: DuWell provides Moments of Mindfulness (stress management and resilience building) and meditation programming (Koru workshop) to assist students in developing a daily emotional well-being practice. All are welcome, and no experience is necessary. You can reach DuWell at (919) 681-8421.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-overview.html",
-    "href": "syllabus/syllabus-overview.html",
-    "title": "Course overview",
-    "section": "",
-    "text": "Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. Gain experience in data wrangling and munging, exploratory data analysis, predictive modeling, data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language.\nPrerequisites: none.",
-    "crumbs": [
-      "Syllabus",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-overview.html#description",
-    "href": "syllabus/syllabus-overview.html#description",
-    "title": "Course overview",
-    "section": "",
-    "text": "Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. Gain experience in data wrangling and munging, exploratory data analysis, predictive modeling, data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language.\nPrerequisites: none.",
-    "crumbs": [
-      "Syllabus",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-overview.html#meetings",
-    "href": "syllabus/syllabus-overview.html#meetings",
-    "title": "Course overview",
-    "section": "Meetings",
-    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLecture\nBiological Sciences 111\nTu Thu 11:45 AM - 01:00 PM\nJohn Z\nSonya\nTBD\n\n\nLab 01\nPerkins LINK 087 (Classroom 3)\nM 08:30 AM - 09:45 AM\nCaitrin\nHan\n\n\nLab 02\nPerkins LINK 087 (Classroom 3)\nM 10:05 AM - 11:20 AM\nKatie\nHyunjin\n\n\nLab 03\nPerkins LINK 071 (Classroom 5)\nM 10:05 AM - 11:20 AM\nJasmine\nLiane\n\n\nLab 04\nPerkins LINK 087 (Classroom 3)\nM 11:45 AM - 01:00 PM\nAvery\nAlexa\n\n\nLab 05\nPerkins LINK 071 (Classroom 5)\nM 11:45 AM - 01:00 PM\nDom\nJulia\n\n\nLab 06\nPerkins LINK 087 (Classroom 3)\nM 01:25 PM - 02:40 PM\nDav\nLisa\n\n\nLab 07\nPerkins LINK 071 (Classroom 5)\nM 01:25 PM - 02:40 PM\nEduardo\nArijit\n\n\nLab 08\nPerkins LINK 087 (Classroom 3)\nM 03:05 PM - 04:20 PM\nFederico\nSarah\n\n\nLab 09\nPerkins LINK 071 (Classroom 5)\nM 03:05 PM - 04:20 PM\nLi\nDevarpita\n\n\nLab 10\nPerkins LINK 087 (Classroom 3)\nM 04:40 PM - 05:55 PM\nNetra\nNatasha",
-    "crumbs": [
-      "Syllabus",
-      "Overview"
     ]
   },
   {
