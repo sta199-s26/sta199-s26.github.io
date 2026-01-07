@@ -1,7 +1,7 @@
 ---
 title: Gao, Oliver
 categories: 
-  - ???
+  - Lab helper
 description: "???"
 subtitle: "[🔗](https://www.nytimes.com)"
 image: headshots/gao.jpeg

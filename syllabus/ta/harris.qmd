@@ -1,7 +1,7 @@
 ---
 title: Harris, Natasha
 categories: 
-  - ???
+  - Lab helper
 description: "???"
 subtitle: "[🔗](https://www.nytimes.com)"
 image: headshots/harris.jpeg

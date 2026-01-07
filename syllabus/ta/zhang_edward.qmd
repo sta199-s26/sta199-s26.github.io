@@ -1,9 +1,9 @@
 ---
 title: Zhang, Edward
 categories: 
-  - ???
+  - Lab helper
 description: "???"
 subtitle: "[🔗](https://www.nytimes.com)"
-image: headshots/edward.png
+image: headshots/ed.jpg
 image-alt: Headshot of TA
 ---

@@ -1,7 +1,7 @@
 ---
 title: Kakkad, Dwija
 categories: 
-  - ???
+  - Lab leader
 description: "???"
 subtitle: "[🔗](https://www.nytimes.com)"
 image: headshots/kakkad.jpg

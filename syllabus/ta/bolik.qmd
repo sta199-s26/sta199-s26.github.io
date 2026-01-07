@@ -1,7 +1,7 @@
 ---
 title: Bolik, Jannis
 categories: 
-  - ???
+  - Lab leader
 description: "???"
 subtitle: "[🔗](https://www.nytimes.com)"
 image: headshots/bolik.jpg

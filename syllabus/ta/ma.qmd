@@ -1,7 +1,7 @@
 ---
 title: Ma, Liane
 categories: 
-  - ???
+  - Lab helper
 description: "???"
 subtitle: "[🔗](https://www.nytimes.com)"
 image: headshots/liane.png
