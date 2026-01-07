@@ -13,7 +13,7 @@ website:
   open-graph: true
 
   sidebar:
-    background: "#D8A2FA"
+    background: "#ED5858"
     logo: "img/logo.png"
     pinned: true
     align: center
@@ -87,7 +87,7 @@ website:
   page-footer:
     right: 'This page is built with [Quarto](https://quarto.org/).'
     left: "&copy; Copyright 2026 Mine Çetinkaya-Rundel, Mary Knox, Marie Neubrander, John Zito"
-    background: "#D8A2FA"
+    background: "#ED5858"
 
 format: 
   html:
