@@ -4,9 +4,16 @@ title: "Course overview"
 
 ## Description
 
-Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. Gain experience in data wrangling and munging, exploratory data analysis, predictive modeling, data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language.
+Intro to data science and statistical thinking. Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. Gain experience in data wrangling and munging, exploratory data analysis, predictive modeling, and data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language. **No statistical or computing background is necessary**. Not open to students who have taken a 100-level Statistical Science course, Statistical Science 210, or a Statistical Science course numbered 300 or above.
 
-**Prerequisites:** none.
+By the end of the semester, you will…
+
+- learn to explore, visualize, and analyze data in a reproducible and shareable manner using R and RStudio;
+- gain experience in data wrangling and tidying, exploratory data analysis, data visualization, predictive and descriptive modeling, and statistical inference;
+- work on problems and case studies inspired by and based on real-world questions and data;
+- explore ethical considerations in data science, including issues of misrepresentation, privacy, and bias;
+- responsibly leverage AI tools within data science workflows while critically assessing the validity and potential biases in AI-generated insights;
+- learn to communicate results through written assignments and project presentation effectively.
 
 ## Meetings
 
@@ -14,36 +21,36 @@ Learn to explore, visualize, and analyze data to understand natural phenomena, i
 | Meeting | Location                       | Time                       | Staff     |
 +=========+================================+============================+===========+
 | Lecture | Bryan Center Griffith Theater  | MoWe 11:45 AM - 01:00 PM   | John Z\   |
-|         |                                |                            | TBD  \    |
+|         |                                |                            | Sarah  \  |
 |         |                                |                            | TBD       |
 +---------+--------------------------------+----------------------------+-----------+
-| Lab 01  | Perkins LINK 087 (Classroom 3) | Th 08:30 AM - 09:45 AM     | TBD\      |
+| Lab 01  | Perkins LINK 087 (Classroom 3) | Th 08:30 AM - 09:45 AM     | Abuzar\   |
+|         |                                |                            | Chelsea   |
++---------+--------------------------------+----------------------------+-----------+
+| Lab 02  | Perkins LINK 087 (Classroom 3) | Th 10:05 AM - 11:20 AM     | Federico\ |
+|         |                                |                            | Max       |
++---------+--------------------------------+----------------------------+-----------+
+| Lab 03  | Perkins LINK 071 (Classroom 5) | Th 10:05 AM - 11:20 AM     | Sarah\    |
+|         |                                |                            | Lisa      |
++---------+--------------------------------+----------------------------+-----------+
+| Lab 04  | Perkins LINK 087 (Classroom 3) | Th 11:45 AM - 01:00 PM     | Hyunjin\  |
+|         |                                |                            | Liane     |
++---------+--------------------------------+----------------------------+-----------+
+| Lab 05  | Perkins LINK 071 (Classroom 5) | Th 11:45 AM - 01:00 PM     | Kenna\    |
+|         |                                |                            | Edward    |
++---------+--------------------------------+----------------------------+-----------+
+| Lab 06  | Perkins LINK 087 (Classroom 3) | Th 01:25 PM - 02:40 PM     | Arijit\   |
+|         |                                |                            | Oliver    |
++---------+--------------------------------+----------------------------+-----------+
+| Lab 07  | Perkins LINK 071 (Classroom 5) | Th 01:25 PM - 02:40 PM     | Katie\    |
+|         |                                |                            | Bethany   |
++---------+--------------------------------+----------------------------+-----------+
+| Lab 08  | Perkins LINK 087 (Classroom 3) | Th 03:05 PM - 04:20 PM     | Cael\     |
 |         |                                |                            | TBD       |
 +---------+--------------------------------+----------------------------+-----------+
-| Lab 02  | Perkins LINK 087 (Classroom 3) | Th 10:05 AM - 11:20 AM     | TBD\      |
-|         |                                |                            | TBD       |
+| Lab 09  | Perkins LINK 071 (Classroom 5) | Th 03:05 PM - 04:20 PM     | Jannis\   |
+|         |                                |                            | Patrick   |
 +---------+--------------------------------+----------------------------+-----------+
-| Lab 03  | Perkins LINK 071 (Classroom 5) | Th 10:05 AM - 11:20 AM     | TBD\      |
-|         |                                |                            | TBD       |
-+---------+--------------------------------+----------------------------+-----------+
-| Lab 04  | Perkins LINK 087 (Classroom 3) | Th 11:45 AM - 01:00 PM     | TBD\      |
-|         |                                |                            | TBD       |
-+---------+--------------------------------+----------------------------+-----------+
-| Lab 05  | Perkins LINK 071 (Classroom 5) | Th 11:45 AM - 01:00 PM     | TBD\      |
-|         |                                |                            | TBD       |
-+---------+--------------------------------+----------------------------+-----------+
-| Lab 06  | Perkins LINK 087 (Classroom 3) | Th 01:25 PM - 02:40 PM     | TBD\      |
-|         |                                |                            | TBD       |
-+---------+--------------------------------+----------------------------+-----------+
-| Lab 07  | Perkins LINK 071 (Classroom 5) | Th 01:25 PM - 02:40 PM     | TBD\      |
-|         |                                |                            | TBD       |
-+---------+--------------------------------+----------------------------+-----------+
-| Lab 08  | Perkins LINK 087 (Classroom 3) | Th 03:05 PM - 04:20 PM     | TBD\      |
-|         |                                |                            | TBD       |
-+---------+--------------------------------+----------------------------+-----------+
-| Lab 09  | Perkins LINK 071 (Classroom 5) | Th 03:05 PM - 04:20 PM     | TBD\      |
-|         |                                |                            | TBD       |
-+---------+--------------------------------+----------------------------+-----------+
-| Lab 10  | Perkins LINK 071 (Classroom 5) | Th 04:40 PM - 05:55 PM     | TBD\      |
-|         |                                |                            | TBD       |
+| Lab 10  | Perkins LINK 071 (Classroom 5) | Th 04:40 PM - 05:55 PM     | Dwija\    |
+|         |                                |                            | Natasha   |
 +---------+--------------------------------+----------------------------+-----------+
