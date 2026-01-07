@@ -51,15 +51,7 @@ If you submit a regrade request for part of an assignment, we reserve the right 
 
 ## Attendance
 
-Every student is expected to attend and participate in lecture and labs and a portion of your grade depends on this.
-There may be times, however, when you cannot attend class.
-Lecture recordings are available upon request for students who have an excused absence.
-See the [Lecture recording request](/course-syllabus.html#lecture-recording-request) policy for more detail.
-If you miss a lecture, make sure to review the material and complete the application exercise, if applicable, before the next lecture.
-Labs are dedicated to completing the lab assignment and collaborating with your lab team and there is no way to make up for missing a lab.
-
-More details on Trinity attendance policies are available [here](https://trinity.duke.edu/undergraduate/academic-policies/class-attendance-and-missed-work).
-
+Every student is expected to attend and participate in lecture and labs, and a portion of your grade depends on this. [We assess lecture attendance](https://sta199-s26.github.io/syllabus/syllabus-assignments.html#lecture-attendance-5) via Wooclap, and the TAs take attendance in lab. If you are not physically present, you cannot earn the points for the graded lab activities.
 
 ## Accommodations
 
