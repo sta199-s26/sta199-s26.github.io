@@ -14,11 +14,25 @@ You can ask questions anonymously on Ed. The teaching team will still know your 
 
 ## Late work and extensions
 
-No late work will be accepted for application exercises, exams, or projects. Labs may be submitted up to 3 days late. A 5% deduction will be applied for each 24-hour period during which the assignment is late.
+The due dates for homework assignments are there to help you keep up with the course material and to ensure the teaching team can provide feedback in a timely manner.
+We understand that things come up periodically that could make it difficult to submit an assignment by the deadline.
+Note that the lowest homework assignment and lowest 2 lab assignments will be dropped to accommodate such circumstances.
 
-If circumstances prevent you from completing a lab by the stated due date, you may email the course coordinator, Dr. Mary Knox, before the deadline to waive the late penalty. In your email, you only need to request the waiver; you do not need to provide an explanation. This waiver may only be used once a semester, so only use it for a truly extenuating circumstance.
+-   Homework assignments may be submitted up to 3 days late. A 5% deduction will be applied for each 24-hour period during which the assignment is late.
+-   No late work is accepted for labs since these are designed to be completed in class.
+-   No late work is accepted for exams.
+-   No late work is accepted for projects.
 
-If circumstances have a longer-term impact on your academic performance, please let your academic dean know. They can be a resource. Please let me know if you need help contacting your academic dean.
+::: callout-tip
+##  One-time late penalty waiver
+
+If circumstances prevent you from completing a homework by the stated due date, you may email the course coordinator, [Dr. Mary Knox](mailto:mary.knox@duke.edu), **before the deadline** to request to waive the late penalty.
+In your email, you only need to request the waiver; you do not need to provide an explanation.
+This waiver may only be used **once** in the semester, so only use it wisely.
+The waiver may only be used for homework assignments, not for attendance/participation, labs, exams, or the project.
+:::
+
+If circumstances have a longer-term impact on your academic performance, please let your Quad advisor or academic dean know. They can be a resource. Please let me know if you need help contacting them.
 
 ## Regrade requests
 
@@ -29,7 +43,7 @@ If you receive a graded assignment back, and you believe that some part of it wa
 -   Requests will be considered if there was an error in the grade calculation or if a correct answer was mistakenly marked as incorrect;
 -   Requests to dispute the number of points deducted for an incorrect response will not be considered;
 -   Regrade requests are not a mechanism for asking for clarification on feedback. Those questions should be brought to office hours;
--   **No grades will be changed after the final exam has been administered on Tuesday, April 29**;
+-   **No grades will be changed after the final exam has been administered on Friday, May 1**;
 
 ::: callout-warning
 If you submit a regrade request for part of an assignment, we reserve the right to regrade the entire assignment. As such, a regrade request can result in your grade going up, staying the same, or going down if we determine that, in fact, the original grader was too lenient.
@@ -37,56 +51,103 @@ If you submit a regrade request for part of an assignment, we reserve the right 
 
 ## Attendance
 
-We are not tracking attendance, but success in this class and regular attendance are probably highly positively correlated. Furthermore, regular lecture attendance is necessary if you wish to earn full credit for the application exercises. Lastly, some components of the final project require you to complete activities with your teammates during lab. If you do not attend, you will forfeit these points.
+Every student is expected to attend and participate in lecture and labs and a portion of your grade depends on this.
+There may be times, however, when you cannot attend class.
+Lecture recordings are available upon request for students who have an excused absence.
+See the [Lecture recording request](/course-syllabus.html#lecture-recording-request) policy for more detail.
+If you miss a lecture, make sure to review the material and complete the application exercise, if applicable, before the next lecture.
+Labs are dedicated to completing the lab assignment and collaborating with your lab team and there is no way to make up for missing a lab.
+
+More details on Trinity attendance policies are available [here](https://trinity.duke.edu/undergraduate/academic-policies/class-attendance-and-missed-work).
+
 
 ## Accommodations
 
+### Academic
+
 If you need accommodations for this class, you will need to register with the Student Disability Access Office (SDAO) and provide them with documentation related to your needs. SDAO will work with you to determine what accommodations are appropriate for your situation. Please note that accommodations are not retroactive and disability accommodations cannot be provided until a Faculty Accommodation Letter has been given to me. Please contact SDAO for more information: `sdao@duke.edu` or `access.duke.edu`.
 
-## Collaboration
-
-Only work that is clearly assigned as teamwork should be completed collaboratively.
-
--   You may discuss lab assignments with other students; however, you may not directly share (or copy) code or write-up with other students. For team assignments, you may collaborate freely within your team. You may discuss the assignment with other teams; however, you may not directly share (or copy) code or write-up with another team. Unauthorized sharing (or copying) of the code or write-up will be considered a violation for all students involved.
--   You may not discuss or otherwise work with others on the exams. Unauthorized collaboration or using unauthorized materials will be considered a violation for all students involved. More details will be given closer to the exam date.
--   Collaboration within teams is not only allowed but encouraged for the project. Communication between teams at a high level is also allowed; however, you may not share code or project components across teams.
--   On individual assignments, you may not directly share work (including code) with another student in this class; on team assignments, you may not directly share work (including code) with another team.
-
-## Use of outside resources, including AI
-
-You may make use of any online resources (e.g. `StackOverflow`) but you must explicitly cite where you obtained any code you directly use (or use as inspiration). Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.
-
-You should treat generative AI, such as ChatGPT, like other online resources. Two guiding principles govern how to use AI in this course:
-
-1.  *Cognitive dimension:* Working with AI should not reduce your thinking ability. We will practice using AI to facilitate—rather than hinder—learning.
-
-2.  *Ethical dimension***:** Students using AI should be transparent about their use and ensure it aligns with academic integrity.
-
--   {{< fa check >}} **AI tools for code:** You may use the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism. Furthermore, you should not directly copy-paste the prompt from an assignment into the chat. 
-
--   {{< fa ban >}} **AI tools for narrative:** Unless instructed otherwise, you may not use generative AI to generate a narrative that you then copy-paste verbatim into an assignment or edit and then insert into your assignment.
-
-In general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you. You are ultimately responsible for the work you turn in; it should reflect *your* understanding of the course content. Identifying AI-generated content is fairly straightforward. Any code identified as AI-generated but not cited as such and any narrative identified as AI-generated will be considered plagiarism and treated as such.
-
 ::: callout-tip
-## Citing an LLM like ChatGPT
-
-[Here](https://www.monash.edu/student-academic-success/build-digital-capabilities/create-online/acknowledging-the-use-of-generative-artificial-intelligence) are some general guidelines for citing AI-generated content. In this class, if you use something like ChatGPT to help you, you need to cite that by providing a direct link to the conversation you had with the bot, like this: <https://chatgpt.com/share/677c4060-1d58-8008-8e47-5caa5556a825>. You can generate such a link here:
-
-![](chatgpt_link.png){fig-align="center" width="80%"}
+## Make your appointments in the testing center now!
+As of FDOC on Wednesday January 7, the midterm and final exam dates are firm, so please make your [testing center](https://testingcenter.duke.edu) appointments ASAP.
 :::
+
+### Religious 
+
+Students are permitted by university policy to be absent from class to observe a religious holiday.
+Accordingly, Trinity College of Arts & Sciences and the Pratt School of Engineering have established procedures to be followed by students for notifying their instructors of an absence necessitated by the observance of a religious holiday.
+Please submit requests for religious accommodations at the beginning of the semester so that we can work to make suitable arrangements well ahead of time.
+You can find the policy and relevant notification form here: [trinity.duke.edu/undergraduate/academic-policies/religious-holidays](https://trinity.duke.edu/undergraduate/academic-policies/religious-holidays)
+
 
 ## Academic honesty
 
+### Duke Community Standard
+
 As a student in this course, you have agreed to uphold the [Duke Community Standard](https://trinity.duke.edu/undergraduate/academic-policies/community-standard-student-conduct) and the practices specific to this course.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_KN97j30ST4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_KN97j30ST4" title="Duke Community Standard" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 
 </iframe>
 
+### What is allowed and what is not?
+
+Please abide by the following as you work on assignments in this course:
+
+-   **Collaboration:** Only work that is clearly assigned as teamwork should be completed collaboratively. On individual assignments, you may not directly share work (including code) with another student in this class; on team assignments, you may not directly share work (including code) with another team. "Sharing" includes, but is not limited to, messaging, emailing, or otherwise providing your work to another student or team.
+
+    -   Labs: Collaboration in teams for lab assignments is not only allowed but expected.
+        You will work together with your lab team to complete the lab exercise.
+        However, each student must submit their own write-up of the lab exercise, which should reflect their understanding and ideas.
+        It's expected that lab submission will be similar across team members.
+
+    -   Project: Similarly, collaboration within teams is not only allowed but expected for the project.
+        The difference is that the project is a single, collaborative work developed by the entire team.
+        It is the team's responsibility to make sure all components of the project are vetted and revised by all team members, even if some division of labor takes place for first drafts of components.
+        Communication between teams at a high level is also allowed; however, you may not share code or project components across teams.
+
+    -   Homework: You may discuss homework assignments with other students; however, you may not directly share (or copy) code or write-up with other students.
+        For homework assignments, sharing (or copying) of the code or write-up will be considered a violation for all students involved, regardless of who initiated the sharing.
+
+    -   Exams: You may not discuss or otherwise work with others on the exams (in class and take home).
+        On exams, collaboration, sharing (or copying) of the code, or using unauthorized materials will be considered a violation for all students involved, regardless of who initiated the sharing.
+
+-   **Use of online resources:** I am well aware that a huge volume of code is available on the web to solve any number of problems.
+    Unless I explicitly tell you not to use something, the course’s policy is that you may make use of any online resources (e.g., StackOverflow), but you must explicitly cite where you obtained any code you directly use (or use as inspiration).
+    **Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism, resulting in an automatic 0 for the relevant portion of the assignment.**
+
+-   **Use of generative artificial intelligence (AI)**: You should treat generative AI, such as ChatGPT, like other online resources.
+    Two guiding principles govern how to use AI in this course:
+
+    1.  *Cognitive dimension:* Working with AI should not reduce your thinking ability.
+        We will practice using AI to facilitate—rather than hinder—learning.
+
+    2.  *Ethical dimension***:** Students using AI should be transparent about their use and ensure it aligns with academic integrity.
+
+    -   {{< fa check title="Checkmark" >}} **AI tools for code:** You may use generative AI tools when you need help with assignments. However you should first attempt to solve the problem yourself. Your submission should not be a copy-paste of AI-generated content -- you must edit the content to ensure it reflects your understanding, has your voice and intellectual input, and conforms with course materials, syntax, terminology, and style. Additionally, **the prompt you use cannot be copied and pasted directly from the assignment; you must create a prompt yourself.**
+
+    You must also explicitly cite work submitted that is based on AI-generated content.
+    You may use [these guidelines](https://guides.lib.monash.edu/c.php?g=219786&p=6972087) to cite AI-generated content.
+    **The bare minimum citation must include the AI tool you're using (e.g., ChatGPT), the model the tool uses, the date when you ran the prompt, and a link to the full transcript of the session starting with your prompt.** A new citation must be included for each exercise where you used AI tools, with a new link to the full transceript of the interaction.
+
+    -   {{< fa ban title="Ban">}} **AI tools for narrative:** Unless instructed otherwise, you may not use AI tools to generate a narrative that you then copy-paste verbatim into an assignment or edit and then insert into your assignment.
+
+    -   {{< fa check title="Checkmark">}} **AI tools for learning:** You're welcomed to ask AI tools questions that might help your learning and understanding in this course.
+        However you should be critical of the answers you receive, as AI-generated content may not always be accurate or reliable.
+        Use it to supplement your understanding, not as a substitute for learning.
+
+    In general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you.
+    You are ultimately responsible for the work you turn in; it should reflect *your* understanding of the course content.
+    Identifying AI-generated content is fairly straightforward.
+    **Any code identified as AI-generated but not cited as such and any narrative identified as AI-generated will be treated as plagiarism, resulting in an automatic 0 for the relevant portion of the assignment.**
+
+If you are unsure if using a particular resource complies with the academic honesty policy, please ask a teaching team member.
+
+### What happens if you violate the academic honesty policy?
+
 Any violations in academic honesty standards as outlined in the Duke Community Standard and those specific to this course will automatically results in a zero for the relevant portion or the entire assignment, and will be reported to the Office of Student Conduct & Community Standards for further action. Furthermore:
 
--   If a conduct violation results in a zero on a lab, that zero will not be dropped;
--   If a conduct violation results in a zero on the in-class portion of a midterm, that zero will not be replaced with your final exam score;
+-   If a conduct violation results in a zero on a lab or homework, that zero will not be dropped;
+-   If a conduct violation results in a zero on a midterm, that zero will not be replaced with your final exam score;
 -   If a conduct violation of any kind is discovered on any part of an exam, your final letter grade will be permanently reduced (A- down to B+, B+ down to B, etc);
 -   If we discover that students are sharing and copying assignment solutions, all students involved will be penalized equally, the sharer the same as the recipient.
