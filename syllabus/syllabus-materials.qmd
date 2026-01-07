@@ -16,7 +16,7 @@ You will need to bring a laptop to all lectures and labs. Options for obtaining 
 -   [This course page](https://sta199-s26.github.io/) that you are on right now;
 -   `R`/`RStudio` as provided by the [Duke Container Manager](https://cmgr.oit.duke.edu/containers);
 -   [Canvas](https://go.canvas.duke.edu/), through which you can access...
-    -   Gradescope;
+    -   [Gradescope](https://www.gradescope.com/courses/1211450);
     -   [Ed Discussion](https://edstem.org/us/courses/90224/discussion);
 -   [GitHub](https://github.com/sta199-s26);
 -   [Panopto](https://duke.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=7301f69f-7a4a-459f-b8b4-b3ca00ee0a71) (for the lecture recordings);
