@@ -41,13 +41,13 @@ website:
         menu:
           - icon: megaphone-fill
             text: Announcements
-            url: https://www.nytimes.com
+            url: https://canvas.duke.edu/courses/72135/announcements
           - icon: file-arrow-up-fill
             text: Gradescope
-            url: https://www.nytimes.com
+            url: https://www.gradescope.com/courses/1211450
           - icon: alphabet-uppercase
             text: Gradebook
-            url: https://www.nytimes.com
+            url: https://canvas.duke.edu/courses/72135/gradebook
 
     style: docked
     search: true
