@@ -2,7 +2,7 @@
 title: Arboleda, Federico
 categories: 
   - Lab leader
-description: "???"
+description: "Th 10:05AM - 11:20AM (Sec 2)"
 subtitle: "[🔗](https://www.nytimes.com)"
 image: headshots/arboleda.png
 image-alt: Headshot of TA

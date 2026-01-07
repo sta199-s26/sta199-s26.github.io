@@ -2,7 +2,8 @@
 title: Wu, Sarah
 categories: 
   - Lab leader
-description: "???"
+  - Lecture helper
+description: "Th 10:05AM - 11:20AM (Sec 3)"
 subtitle: "[🔗](https://www.nytimes.com)"
 image: headshots/wu.png
 image-alt: Headshot of TA

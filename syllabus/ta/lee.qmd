@@ -2,7 +2,7 @@
 title: Lee, Hyunjin
 categories: 
   - Lab leader
-description: "???"
+description: "Th 11:45AM - 1:00PM (Sec 4)"
 subtitle: "[🔗](https://www.nytimes.com)"
 image: headshots/hyunjin.png
 image-alt: Headshot of TA

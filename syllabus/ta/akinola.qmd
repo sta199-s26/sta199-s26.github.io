@@ -2,7 +2,7 @@
 title: Akinola, Bethany
 categories: 
   - Lab helper
-description: "???"
+description: "Th 1:25PM - 2:40PM (Sec 7)"
 subtitle: "[🔗](https://www.nytimes.com)"
 image: headshots/bethany.png
 image-alt: Headshot of TA

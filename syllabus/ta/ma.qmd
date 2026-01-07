@@ -2,7 +2,7 @@
 title: Ma, Liane
 categories: 
   - Lab helper
-description: "???"
+description: "Th 11:45AM - 1:00PM (Sec 4)"
 subtitle: "[🔗](https://www.nytimes.com)"
 image: headshots/liane.png
 image-alt: Headshot of TA

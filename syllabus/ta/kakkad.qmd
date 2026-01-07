@@ -2,7 +2,7 @@
 title: Kakkad, Dwija
 categories: 
   - Lab leader
-description: "???"
+description: "Th 4:40PM - 5:55PM (Sec 10)"
 subtitle: "[🔗](https://www.nytimes.com)"
 image: headshots/kakkad.jpg
 image-alt: Headshot of TA

@@ -2,7 +2,7 @@
 title: Elmore, Cael
 categories: 
   - Lab leader
-description: "???"
+description: "Th 3:05PM - 4:20PM (Sec 8)"
 subtitle: "[🔗](https://www.nytimes.com)"
 image: headshots/elmore.jpeg
 image-alt: Headshot of TA

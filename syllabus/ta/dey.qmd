@@ -2,7 +2,7 @@
 title: Dey, Arijit
 categories: 
   - Lab leader
-description: "???"
+description: "Th 1:25PM - 2:40PM (Sec 6)"
 subtitle: "[🔗](https://www.nytimes.com)"
 image: headshots/arijit.png
 image-alt: Headshot of TA

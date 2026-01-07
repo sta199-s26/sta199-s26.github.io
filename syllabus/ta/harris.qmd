@@ -2,7 +2,7 @@
 title: Harris, Natasha
 categories: 
   - Lab helper
-description: "???"
+description: "Th 4:40PM - 5:55PM (Sec 10)"
 subtitle: "[🔗](https://www.nytimes.com)"
 image: headshots/harris.jpeg
 image-alt: Headshot of TA

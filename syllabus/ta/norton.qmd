@@ -1,8 +1,8 @@
 ---
 title: Norton, Tory
 categories: 
-  - o
-description: "???"
+  - "-"
+description: "-"
 subtitle: "[🔗](https://www.nytimes.com)"
 image: headshots/norton.jpg
 image-alt: Headshot of TA

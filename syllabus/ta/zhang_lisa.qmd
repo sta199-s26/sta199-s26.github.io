@@ -2,7 +2,7 @@
 title: Zhang, Lisa
 categories: 
   - Lab helper
-description: "???"
+description: "Th 10:05AM - 11:20AM (Sec 3)"
 subtitle: "[🔗](https://www.nytimes.com)"
 image: headshots/lisa.png
 image-alt: Headshot of TA

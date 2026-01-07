@@ -2,7 +2,7 @@
 title: Roberts, Kenna
 categories: 
   - Lab leader
-description: "???"
+description: "Th 11:45AM - 1:00PM (Sec 5)"
 subtitle: "[🔗](https://www.nytimes.com)"
 image: headshots/kenna.jpg
 image-alt: Headshot of TA

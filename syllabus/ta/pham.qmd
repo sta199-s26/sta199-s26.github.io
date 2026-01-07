@@ -2,7 +2,7 @@
 title: Patrick, Pham
 categories: 
   - Lab leader
-description: "???"
+description: "Th 3:05PM - 4:20PM (Sec 9)"
 subtitle: "[🔗](https://www.nytimes.com)"
 image: headshots/pham.jpg
 image-alt: Headshot of TA
