@@ -83,7 +83,7 @@ You cannot pass this course if you have not completed the project.
 There will be two midterm exams, each with two components:
 
 -   **In-class** (70% of the grade): sit-down, in-person, "pencil-and-paper," with no technology, and with no outside resources apart from a note sheet that you and only you have prepared (both sides of a single 8.5" x 11" piece of paper);
--   **Take-home** (30% of the grade): each in-class exam will end at 1:00 PM ET on a Thursday. You will then have until 8:00 AM ET the following Monday to work independently on the take-home. This will consist of a data analysis in R, and submission will be identical to our usual labs (Quarto \> PDF \> Gradescope). The take-home portion of the midterms is completely open resource, but the citation policies of the course still apply, and you are forbidden from discussing the exam with your peers in any way.
+-   **Take-home** (30% of the grade): each in-class midterm exam takes place during lecture on Wednesday. After that, you have the following weekend to complete the take-home exam. This will consist of a data analysis in R, and submission will be identical to our usual labs (Quarto \> PDF \> Gradescope). The take-home portion of the midterms is completely open resource, but the citation policies of the course still apply, and you are forbidden from discussing the exam with your peers in any way.
 
 Unless we indicate otherwise, you should assume that all course content and materials (videos, readings, lectures, labs, AEs, etc) are testable.
 
