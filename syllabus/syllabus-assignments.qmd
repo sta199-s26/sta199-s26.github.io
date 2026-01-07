@@ -42,80 +42,76 @@ These thresholds will not change, and they will be applied exactly. This means t
 
 ## Lecture attendance (5%)
 
-XXX
+After Drop/Add ends on Wednesday January 21, lecture attendance and participation will be tracked through in-class questions via Wooclap, which you can access on your laptop or phone. You will earn points for answering questions during lecture, and these points will contribute to your attendance and participation grade.
+
+There are 22 lectures after Drop/Add ends. You must participate in Wooclap questions in at least 18 lectures to get full credit on this component. Otherwise your grade on this component will be calculated as the percentage of lectures you attended and participated, e.g., if you attend and participate in 19/22 lectures, you get the full 5% but if you attend and participate in 15/22 lectures, you get (15/22)5% = 3.41%.
 
 ## Labs (8%)
 
-XXX
+In the first few weeks of the semester, you will be randomly assigned to a team and work with your teammates on an exercise that is due at the end of the lab session. Once project teams are formed, you will work with that team on the lab exercises. You must be present in lab to complete the lab assignment. There is no way to make up for missing a lab.
+
+You will submit your lab assignments by pushing your work to your GitHub repository for the lab and submitting the PDF output on Gradescope by the end of your lab session.
+
+::: callout-note
+## Grace
+There will be eight graded labs in total. The lowest two lab grades will be dropped at the end of the semester, which means you can miss up to two lab sessions with no penalty.
+:::
 
 ## Homework (12%)
 
-XXX
+You will complete homework assignments individually. You may start working on your homeowork assignment during your lab session, once you complete your lab exercise, but you will need to finish it outside of class. Your homework will be comprised of some practice exercises where you can get immediate feedback from AI tools designed for this course and some graded exercises.
+
+You will submit your homework assignments by pushing your work to your GitHub repository for the homework and submitting the PDF output on Gradescope by 11:59pm on Wednesdays.
+
+::: callout-note
+## Grace
+There will be eight graded homework assignments in total. The lowest homework grade will be dropped at the end of the semester, which means you can miss one homework assignment with no penalty.
+:::
 
 ## Project (15%)
 
-XXX
+The project aims to apply what you’ve learned throughout the semester to analyze an interesting data-driven research question. The project will be completed in teams, and each team will present their work during a lab session in the latter part of the semester. The write-up will be due on the same day.
 
-## Midterm exams (20% each)
+More information about the project will be provided during the semester.
 
-XXX
-
-## Final exam (20%)
-
-XXX
-
-
-
-
-
-
-
-
-## Application exercises (5%)
-
-During most lectures, we will work through an *application exercise* (*AE*) together. This is essentially a guided mini-lab that shows you how to implement the concepts introduced that day. On-time completion of at least 70% of AEs will result in full credit for the AE component of the final course grade. Here is what that means:
-
--   AEs are due at 2PM ET on the day they are introduced;
--   Submit an AE by pushing your work to your GitHub repo;
--   AEs are graded for completion; if you make a good faith attempt at *all* parts of the exercisem you get the credit.
-
-::: callout-note
-You can miss 30% of AEs before it starts affecting your final grade. This policy is meant to smooth over technical mishaps, absences due to illness, athletics, etc. So we generally will not grant extensions or exemptions for AEs. We just let the 30% policy do its thing;
-:::
-
-## Labs (15%)
-
-In labs, you will apply what you have learned in the videos and during lectures to complete data analysis tasks. You may discuss lab assignments with other students; however, the lab should be completed and submitted individually. Lab assignments must be typed up using Quarto, all work must be pushed to your GitHub repository for the lab, and the lab’s PDF output must be submitted on Gradescope by the deadline. Labs are due at 8:30 am ET on the indicated due date (generally the Monday after the lab is first introduced).
-
-::: callout-note
-**Your lowest lab score will be dropped**. This policy will be applied to the gradebook at the end of the semester, after all labs have been graded/regraded, and before the final exam.
+::: callout-warning
+You cannot pass this course if you have not completed the project.
 :::
 
 ## Midterm Exams (20% each)
 
 There will be two midterm exams, each with two components:
 
--   **In-class** (70% of the grade): sit-down, in-person, "pencil-and-paper," with no technology, and with no outside resources apart from a note sheet that you and only you have prepared (both sides of an 8.5" x 11" piece of paper);
+-   **In-class** (70% of the grade): sit-down, in-person, "pencil-and-paper," with no technology, and with no outside resources apart from a note sheet that you and only you have prepared (both sides of a single 8.5" x 11" piece of paper);
 -   **Take-home** (30% of the grade): each in-class exam will end at 1:00 PM ET on a Thursday. You will then have until 8:00 AM ET the following Monday to work independently on the take-home. This will consist of a data analysis in R, and submission will be identical to our usual labs (Quarto \> PDF \> Gradescope). The take-home portion of the midterms is completely open resource, but the citation policies of the course still apply, and you are forbidden from discussing the exam with your peers in any way.
 
 Unless we indicate otherwise, you should assume that all course content and materials (videos, readings, lectures, labs, AEs, etc) are testable.
 
 ::: callout-warning
-See the [course schedule](https://sta199-s25.github.io/) for dates and times of the exams. Exam dates cannot be changed and no make-up exams will be given. If you cannot take the exams on these dates, you should drop this class.
+## Missing midterms
+See the [course schedule](https://sta199-s26.github.io/) for dates and times of the exams. Exam dates cannot be changed and no make-up exams will be given. 
+
+- If you already know that you cannot take the exams on these dates, you should drop this class;
+- If you miss Exam 1 or 2 due to an illness or similar documented with a Dean’s Excuse, your final exam score will replace the missed exam score.
 :::
 
 ## Final Exam (20%)
 
 On Tuesday April 29 we have our final exam from 9AM ET to 12PM ET. This exam will be cumulative, and it will have the same format as the in-class components of the midterm exams. The final exam does not have a take-home portion.
 
-::: callout-note
-If you do better on the final exam than you did on the in-class component of a midterm, we will replace your lowest in-class midterm exam score with your final exam score.
-:::
-
-## Final project (20%)
-
-After the first midterm exam, we will assign you to teams of four or five **within your lab section**. Teams will select a dataset and conduct an original data analysis using the tools from the course. The project has various intermediate deadlines ("Milestones") that contribute to the project grade, and on the last day of the semester (Wednesday April 23) teams will submit a final written report and a five minute video presentation summarizing the results of the analysis.
-
 ::: callout-warning
-If you do not complete the project, you will not receive a passing grade in this course.
+## Missing the final
+See [here](https://trinity.duke.edu/undergraduate/academic-policies/final-exams-scheduling-conflicts-and-absences) for the university's policies around missing a final exam. If you miss our Final Exam due to an illness or similar documented with a Dean’s Excuse, you will receive an Incomplete and can take the final exam later.
 :::
+
+::: callout-note
+## Grace
+For students who take all exams (Midterm 1, Midterm 2, and Final Exam), the final exam score will replace the lower of the two mid-semester exam scores, if the final exam score is higher.
+:::
+
+
+
+
+
+
+
