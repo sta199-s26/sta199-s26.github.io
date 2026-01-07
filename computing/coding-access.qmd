@@ -6,9 +6,9 @@ In this class, you will always and everywhere access `RStudio` through the [Duke
 
 1.  Go here: <https://cmgr.oit.duke.edu/containers>. You may have to log in with your NetID at some point;
 
-2.  (The first time you do this, you look for STA198-199 under "Reservations available" on the righthand side, and click "reserve STA198-199". After you do that once, STA198-199 will appear under "My reservations" on the lefthand side forever more)
+2.  (The first time you do this, you look for STA199 under "Reservations available" on the righthand side, and click "reserve STA199". After you do that once, STA199 will appear under "My reservations" on the lefthand side forever more)
 
-3.  Click STA198-199 under "My reservations";
+3.  Click STA199 under "My reservations";
 
 4.  Login;
 
