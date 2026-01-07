@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.34">
+<meta name="author" content="John Zito">
+<meta name="dcterms.date" content="2025-01-09">
+<title>STA 199 Spring 2026 – Welcome to STA 199!</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+<style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-d2f92f950cfb836260df0fbe54b25166.css">
+<link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+<style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+<meta property="og:title" content="Welcome to STA 199! – STA 199 Spring 2026">
+<meta property="og:description" content="Lecture 0">
+<meta property="og:site_name" content="STA 199 Spring 2026">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center"><h1 class="title">Welcome to STA 199!</h1>
+  <p class="subtitle">Lecture 0</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+John Zito 
+</div>
+        <p class="quarto-title-affiliation">
+            Duke University <br> STA 199 Spring 2025
+          </p>
+    </div>
+</div>
+
+  <p class="date">2025-01-09</p>
+</section><section id="teaching-team-a-glamorous-assemblage" class="slide level2 small"><h2>Teaching team: a glamorous assemblage</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Caitrin Murphy</p>
+<p>Han Chen</p>
+<p>Katie Solarz</p>
+<p>Hyunjin Lee</p>
+<p>Jasmine Wang</p>
+<p>Liane Ma</p>
+<p>Avery Hodges</p>
+<p>Alexa Fahrer</p>
+<p>Domenic Fenoglio</p>
+<p>Julia Healey-Parera</p>
+<p>David King</p>
+<p>Lisa Zhang</p>
+</div><div class="column" style="width:50%;">
+<p>Eduardo Vasquez</p>
+<p>Arijit Dey</p>
+<p>Federico Arboleda</p>
+<p>Sarah Wu</p>
+<p>Li Fan</p>
+<p>Devarpita Bag</p>
+<p>Netra Mittal</p>
+<p>Natasha Harris</p>
+<p>Sonya Eason</p>
+<p>Noah Obuya</p>
+<p>Mary Knox</p>
+<p>John Zito</p>
+</div></div>
+</section><section id="what-are-we-studying" class="slide level2 large"><h2>What are we studying?</h2>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Data science</strong></p>
+</div>
+<div class="callout-content">
+<p>Transforming messy, incomplete, imperfect data into knowledge.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Statistical thinking</strong></p>
+</div>
+<div class="callout-content">
+<p>Quantifying our uncertainty about that knowledge.</p>
+</div>
+</div>
+</div>
+</section><section id="the-data-science-life-cycle" class="slide level2"><h2>The data science life cycle</h2>
+<p><img data-src="images/00/data-science-cycle.001.png"></p>
+</section><section><section id="syllabus-highlights" class="title-slide slide level1 center"><h1>Syllabus highlights</h1>
+
+</section><section id="homepage" class="slide level2"><h2>Homepage</h2>
+<p><a href="https://sta199-s25.github.io/" class="uri">https://sta199-s25.github.io</a></p>
+<ul>
+<li>All course materials</li>
+<li>Links to Canvas, GitHub, RStudio containers, etc.</li>
+</ul></section><section id="course-toolkit" class="slide level2"><h2>Course toolkit</h2>
+<p>All linked from the course website:</p>
+<ul>
+<li>GitHub organization: <a href="https://github.com/sta199-f24">github.com/sta199-s25</a>
+</li>
+<li>RStudio containers: <a href="https://cmgr.oit.duke.edu/containers">cmgr.oit.duke.edu/containers</a>
+</li>
+<li>Communication: Ed Discussion</li>
+<li>Assignment submission and feedback: Gradescope</li>
+</ul></section><section id="activities" class="slide level2 smaller"><h2>Activities</h2>
+<ul>
+<li>Introduce new content and prepare for lectures by watching the videos and completing the readings</li>
+<li>Attend and actively participate in lectures and labs, office hours, team meetings</li>
+<li>Practice applying statistical concepts and computing with application exercises during lecture, graded for attempting</li>
+<li>Put together what you’ve learned to analyze real-world data
+<ul>
+<li>Lab assignments (7 or 8 throughout semester)</li>
+<li>Exams (midterm x 2 + final)</li>
+<li>Term project completed in teams</li>
+</ul>
+</li>
+</ul></section><section id="application-exercises" class="slide level2"><h2>Application exercises</h2>
+<ul>
+<li><p>Daily-ish in lecture</p></li>
+<li><p>“Graded” for attempt, not accuracy</p></li>
+<li><p>Practice Weeks 1 + 2, graded thereafter</p></li>
+<li><p>At least one commit by 2 pm of the day of lecture</p></li>
+<li><p>Turn in at least 70% for full credit</p></li>
+</ul></section><section id="labs" class="slide level2"><h2>Labs</h2>
+<ul>
+<li><p>Start in lab session</p></li>
+<li><p>Complete at home</p></li>
+<li><p>Due within a week</p></li>
+<li><p>Discussion with classmates ok, copying not ok!</p></li>
+<li><p>Lowest score dropped</p></li>
+</ul></section><section id="exams" class="slide level2 smaller"><h2>Exams</h2>
+<ul>
+<li><p>Three exams, each 20%</p></li>
+<li>
+<p>Midterm comprised of two parts:</p>
+<ul>
+<li><p>In-class: 75 minute in-class exam. Closed book, one sheet of notes (“cheat sheet”) – 70% of the grade.</p></li>
+<li><p>Take-home: Follow from the in class exam and focus on the analysis of a dataset introduced in the take home exam – 30% of the grade.</p></li>
+</ul>
+</li>
+<li><p>Final in-class only (Apr 29, 9am - 12pm): Closed book, one sheet of notes (“cheat sheet”).</p></li>
+<li><p>“Cheat sheet”: No larger than 8.5” x 11”, both sides, <strong>must be prepared by you</strong>.</p></li>
+</ul>
+<div class="callout callout-caution callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Caution</strong></p>
+</div>
+<div class="callout-content">
+<p>Exam dates cannot be changed and no make-up exams will be given. If you can’t take the exams on these dates, you should drop this class.</p>
+</div>
+</div>
+</div>
+</section><section id="project" class="slide level2 smaller"><h2>Project</h2>
+<ul>
+<li><p>Dataset of your choice, method of your choice</p></li>
+<li><p>Teamwork</p></li>
+<li><p>Five milestones, interim deadline throughout semester</p></li>
+<li><p>Final milestone: Presentation (video) and write-up</p></li>
+<li><p>Presentations submitted as videos</p></li>
+<li><p>Peer review between teams for content, peer evaluation within teams for contribution</p></li>
+<li><p>Some lab sessions allocated to project progress</p></li>
+</ul>
+<div class="callout callout-caution callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Caution</strong></p>
+</div>
+<div class="callout-content">
+<p>Project due date cannot be changed. You must complete the project to pass this class.</p>
+</div>
+</div>
+</div>
+</section><section id="teams-of-4---5" class="slide level2 smaller"><h2>Teams of 4 - 5</h2>
+<ul>
+<li>Assigned by us <em>within your lab section</em>
+</li>
+<li>Project</li>
+<li>Peer evaluation during teamwork and after completion</li>
+<li>Expectations and roles
+<ul>
+<li>Everyone is expected to contribute equal <em>effort</em>
+</li>
+<li>Everyone is expected to understand <em>all</em> code turned in</li>
+<li>Individual contribution evaluated by peer evaluation, commits, etc.</li>
+</ul>
+</li>
+</ul></section><section id="grading" class="slide level2"><h2>Grading</h2>
+<table class="caption-top">
+<thead><tr class="header">
+<th>Category</th>
+<th>Percentage</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Application Exercises</td>
+<td>5%</td>
+</tr>
+<tr class="even">
+<td>Labs</td>
+<td>15%</td>
+</tr>
+<tr class="odd">
+<td>Midterm 1</td>
+<td>20%</td>
+</tr>
+<tr class="even">
+<td>Midterm 2</td>
+<td>20%</td>
+</tr>
+<tr class="odd">
+<td>Final</td>
+<td>20%</td>
+</tr>
+<tr class="even">
+<td>Project</td>
+<td>20%</td>
+</tr>
+</tbody>
+</table>
+<p>No specific points allocated to attendance, but the application exercise score is implicitly tied to attendance.</p>
+<p>See course syllabus for how the final letter grade will be determined.</p>
+</section><section id="wiggle-room" class="slide level2"><h2>Wiggle room</h2>
+<ul>
+<li>You only have to complete 70% of the AEs to receive full credit;</li>
+<li>We drop the lowest lab score;</li>
+<li>We replace the lowest <em>in-class</em> midterm score with your final exam score (if it’s better).</li>
+</ul></section><section id="support" class="slide level2"><h2>Support</h2>
+<ul>
+<li>Help from humans:
+<ul>
+<li>Attend office hours</li>
+<li>Ask and answer questions on the discussion forum</li>
+</ul>
+</li>
+<li>Reserve email for questions on personal matters and/or grades</li>
+<li>Read the course support page</li>
+</ul></section><section id="announcements" class="slide level2"><h2>Announcements</h2>
+<ul>
+<li>Posted on Canvas (Announcements tool) and sent via email, be sure to check both regularly</li>
+<li>I’ll assume that you’ve read an announcement by the next “business” day</li>
+<li>I’ll (try my best to) send a weekly update announcement each Friday, outlining the plan for the following week and reminding you what you need to do to prepare, practice, and perform</li>
+</ul></section><section id="accessibility" class="slide level2"><h2>Accessibility</h2>
+<ul>
+<li><p>The <a href="https://access.duke.edu/students">Student Disability Access Office (SDAO)</a> is available to ensure that students are able to engage with their courses and related assignments.</p></li>
+<li><p>I am committed to making all course materials accessible and I’m always learning how to do this better. If any course component is not accessible to you in any way, please don’t hesitate to let me know.</p></li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>If you need testing accommodations</strong></p>
+</div>
+<div class="callout-content">
+<p>Make sure I get a letter, and make your appointments in the Testing Center now.</p>
+</div>
+</div>
+</div>
+</section><section id="late-work-waivers-lecture-recordings-regrades" class="slide level2"><h2>Late work, waivers, lecture recordings, regrades…</h2>
+<ul>
+<li>We have policies!</li>
+<li>Read about them on the <a href="https://sta199-s25.github.io/syllabus/syllabus_policies.html">course syllabus</a> and refer back to them when you need it</li>
+</ul></section><section id="collaboration" class="slide level2"><h2>Collaboration</h2>
+<ul>
+<li><p><strong>Labs</strong>: discussing and helping is fine. Sharing your solutions and copying others is not;</p></li>
+<li><p><strong>Exams</strong>: collaboration of any kind is completely forbidden on any part of any exam;</p></li>
+<li><p><strong>Projects</strong>: collaboration of any kind is enthusiastically encouraged <em>within your team</em>. Between teams, it’s the same as labs; do not directly share your stuff or copy off of others.</p></li>
+</ul></section><section id="use-of-ai-tools" class="slide level2"><h2>Use of AI tools</h2>
+<ul>
+<li>
+<p><i class="fa-solid fa-check" aria-label="check"></i> <strong>AI tools for code:</strong></p>
+<ul>
+<li>Sure, but be careful/critical! Working code <code>!=</code> correct/good code.</li>
+<li>Must explicitly cite with a direct url linking to the conversation you had.</li>
+</ul>
+</li>
+<li><p><i class="fa-solid fa-ban" aria-label="ban"></i> <strong>AI tools for narrative:</strong> Absolutely not!</p></li>
+<li><p><i class="fa-solid fa-check" aria-label="check"></i> <strong>AI tools for learning:</strong> Sure, but be careful/critical!</p></li>
+</ul></section><section id="academic-integrity" class="slide level2"><h2>Academic integrity</h2>
+<blockquote>
+<p>To uphold the Duke Community Standard:</p>
+<ul>
+<li><p>I will not lie, cheat, or steal in my academic endeavors;</p></li>
+<li><p>I will conduct myself honorably in all my endeavors; and</p></li>
+<li><p>I will act if the Standard is compromised.</p></li>
+</ul>
+</blockquote>
+<ul>
+<li><p>Zeros from conduct violations will not be dropped or replaced;</p></li>
+<li><p>If people are copying, sharer and recipients penalized equally. It does not matter how well-intentioned everyone was;</p></li>
+<li><p>If we discover violations, they go straight to the conduct office.</p></li>
+</ul></section></section><section><section id="a-game" class="title-slide slide level1 center"><h1>A game</h1>
+
+</section><section id="how-old-is-this-person" class="slide level2 larger"><h2>How old is this person?</h2>
+<div class="quarto-layout-panel" data-layout="[[-1], [1], [-1]]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>Ethel Merman</p>
+</div>
+</div>
+</div>
+</section><section id="ethel-merman" class="slide level2"><h2>Ethel Merman</h2>
+<div class="columns v-center-container">
+<div class="column" style="width:40%;">
+<p><img data-src="images/00/ethel_merman.jpg"></p>
+</div><div class="column" style="width:60%;">
+<table class="caption-top"><tbody>
+<tr class="odd">
+<td>Born</td>
+<td>January 16, 1908</td>
+</tr>
+<tr class="even">
+<td>Died</td>
+<td>February 15, 1984</td>
+</tr>
+<tr class="odd">
+<td>Age</td>
+<td>76</td>
+</tr>
+<tr class="even">
+<td>Claim to fame</td>
+<td><a href="https://youtu.be/s62MrU8mHx4?feature=shared">JZ’s favorite singer</a></td>
+</tr>
+</tbody></table>
+</div></div>
+</section><section id="how-old-is-this-person-1" class="slide level2 larger"><h2>How old is this person?</h2>
+<div class="quarto-layout-panel" data-layout="[[-1], [1], [-1]]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>Megan Pete</p>
+</div>
+</div>
+</div>
+</section><section id="megan-thee-stallion" class="slide level2"><h2>Megan Thee Stallion</h2>
+<div class="columns v-center-container">
+<div class="column" style="width:40%;">
+<p><img data-src="images/00/meghan_thee_stallion.jpg"></p>
+</div><div class="column" style="width:60%;">
+<table class="caption-top"><tbody>
+<tr class="odd">
+<td>Born</td>
+<td>February 15, 1995</td>
+</tr>
+<tr class="even">
+<td>Age</td>
+<td>29</td>
+</tr>
+<tr class="odd">
+<td>Claim to fame</td>
+<td><a href="https://youtu.be/4Fhm9ulCwUU?feature=shared">Rapper</a></td>
+</tr>
+</tbody></table>
+</div></div>
+</section><section id="how-old-is-this-person-2" class="slide level2 larger"><h2>How old is this person?</h2>
+<div class="quarto-layout-panel" data-layout="[[-1], [1], [-1]]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p>봉준호</p>
+</div>
+</div>
+</div>
+</section><section id="bong-joon-ho" class="slide level2"><h2>Bong Joon-ho</h2>
+<div class="columns v-center-container">
+<div class="column" style="width:40%;">
+<p><img data-src="images/00/bongjoonho.jpg"></p>
+</div><div class="column" style="width:60%;">
+<table class="caption-top"><tbody>
+<tr class="odd">
+<td>Born</td>
+<td>September 14, 1969</td>
+</tr>
+<tr class="even">
+<td>Age</td>
+<td>55</td>
+</tr>
+<tr class="odd">
+<td>Claim to fame</td>
+<td>Directed <em>Parasite</em>, <em>Snowpiercer</em>, etc</td>
+</tr>
+</tbody></table>
+</div></div>
+</section><section id="now-do-it-with-pictures" class="slide level2 large"><h2>Now do it with pictures…</h2>
+<div class="columns v-center-container">
+<div class="column" style="width:50%;">
+<p>When the picture was taken, how old was the person?</p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/00/age_qr.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
+</section><section id="managing-expectations" class="slide level2"><h2>Managing expectations</h2>
+<p>The stakes are low today. We’re just getting our feet wet and working out the kinks:</p>
+<ul>
+<li class="fragment"><p>It’s the first time all 300+ of us are attempting to access our containers simultaneously. It may choke;</p></li>
+<li class="fragment"><p>If you get stuck on a loading screen of some kind, be patient and let it do its thing. Refreshing, reloading, etc will just amplify our collective problem;</p></li>
+<li class="fragment"><p>If yours never loads, no big deal. Just sit back and watch me, or follow along on a neighbor’s screen;</p></li>
+<li class="fragment"><p>Even if yours <em>does</em> load, you’re welcome to just watch.</p></li>
+</ul></section><section id="yuja-wang" class="slide level2"><h2>Yuja Wang</h2>
+<div class="columns v-center-container">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/00/celeb-1.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+</figure>
+</div>
+</div><div class="column" style="width:60%;">
+<table class="caption-top"><tbody>
+<tr class="odd">
+<td>Born</td>
+<td>2/10/1987</td>
+</tr>
+<tr class="even">
+<td>Age in pic</td>
+<td>36</td>
+</tr>
+<tr class="odd">
+<td>Claim to fame</td>
+<td><a href="https://youtu.be/RGAPTRrAilY?feature=shared">Classical pianist</a></td>
+</tr>
+</tbody></table>
+</div></div>
+</section><section id="im-sure-shed-be-pleased" class="slide level2"><h2>I’m sure she’d be pleased</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="joan-crawford" class="slide level2"><h2>Joan Crawford</h2>
+<p>A secret she took to her grave:</p>
+<div class="columns v-center-container">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/00/celeb-2.jpg" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:60%;">
+<table class="caption-top"><tbody>
+<tr class="odd">
+<td>Born</td>
+<td>3/23/(1904 - 1908)</td>
+</tr>
+<tr class="even">
+<td>Died</td>
+<td>5/10/1977</td>
+</tr>
+<tr class="odd">
+<td>Age in pic</td>
+<td>38 - 42</td>
+</tr>
+<tr class="even">
+<td>Claim to fame</td>
+<td><a href="https://youtu.be/KoOr_OoHbv4?feature=shared">Oscar-winning actor</a></td>
+</tr>
+</tbody></table>
+</div></div>
+</section><section id="well-never-know" class="slide level2"><h2>We’ll never know…</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="eubie-blake" class="slide level2"><h2>Eubie Blake</h2>
+<p>His actual birthday was not known at the time:</p>
+<div class="columns v-center-container">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/00/celeb-3.jpg" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<table class="caption-top"><tbody>
+<tr class="odd">
+<td>Born</td>
+<td>2/7/1887</td>
+</tr>
+<tr class="even">
+<td>Died</td>
+<td>2/12/1983</td>
+</tr>
+<tr class="odd">
+<td>Age in pic</td>
+<td>82</td>
+</tr>
+<tr class="even">
+<td>Claim to fame</td>
+<td><a href="https://youtu.be/mN89vHZ414s?feature=shared">Composer</a></td>
+</tr>
+</tbody></table>
+</div></div>
+</section><section id="lol-that-bar-at-86" class="slide level2"><h2>lol that bar at 86</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="watch-out-for-data-quality" class="slide level2"><h2>Watch out for data quality!</h2>
+<div class="columns v-center-container">
+<div class="column" style="width:50%;">
+<p><img data-src="images/00/celeb-4-noisy.jpg" style="width:75.0%"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/00/celeb-4-original.jpg" style="width:75.0%"></p>
+</div></div>
+</section><section id="raghuram-rajan" class="slide level2"><h2>Raghuram Rajan</h2>
+<div class="columns v-center-container">
+<div class="column" style="width:35%;">
+<p><img data-src="images/00/celeb-4-original.jpg" style="width:90.0%"></p>
+</div><div class="column" style="width:65%;">
+<table class="caption-top"><tbody>
+<tr class="odd">
+<td>Born</td>
+<td>2/3/1963</td>
+</tr>
+<tr class="even">
+<td>Age in pic</td>
+<td>48</td>
+</tr>
+<tr class="odd">
+<td>Claim to fame</td>
+<td><a href="https://youtu.be/3rvUXmrv5Hk?feature=shared">UChicago economist</a></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><a href="https://en.wikipedia.org/wiki/Raghuram_Rajan">RBI governor</a></td>
+</tr>
+</tbody></table>
+</div></div>
+</section><section id="youre-natural-denoisers" class="slide level2"><h2>You’re natural denoisers!</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="james-gandolfini" class="slide level2"><h2>James Gandolfini</h2>
+<div class="columns v-center-container">
+<div class="column" style="width:39%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/00/celeb5.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:61%;">
+<table class="caption-top"><tbody>
+<tr class="odd">
+<td>Born</td>
+<td>9/18/1961</td>
+</tr>
+<tr class="even">
+<td>Died</td>
+<td>6/19/2013</td>
+</tr>
+<tr class="odd">
+<td>Age in pic</td>
+<td>51</td>
+</tr>
+<tr class="even">
+<td>Claim to fame</td>
+<td><a href="https://youtu.be/fOYJVL9bzk4?feature=shared">played Tony Soprano</a></td>
+</tr>
+</tbody></table>
+</div></div>
+</section><section id="the-wisdom-of-crowds" class="slide level2"><h2>The wisdom of crowds</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="celia-cruz" class="slide level2"><h2>Celia Cruz</h2>
+<div class="columns v-center-container">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure><p><img data-src="images/00/celeb6.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:60%;">
+<table class="caption-top"><tbody>
+<tr class="odd">
+<td>Born</td>
+<td>10/21/1925</td>
+</tr>
+<tr class="even">
+<td>Died</td>
+<td>7/16/2003</td>
+</tr>
+<tr class="odd">
+<td>Age in pic</td>
+<td>76</td>
+</tr>
+<tr class="even">
+<td>Claim to fame</td>
+<td><a href="https://youtu.be/AXN-_asIaYs?feature=shared">Queen of Salsa</a></td>
+</tr>
+</tbody></table>
+</div></div>
+</section><section id="azúcar" class="slide level2"><h2>¡Azúcar!</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="our-best-guessers" class="slide level2"><h2>Our best guessers</h2>
+<table class="caption-top">
+<thead><tr class="header">
+<th></th>
+<th>Truth</th>
+<th>No.&nbsp;1</th>
+<th>No.&nbsp;2</th>
+<th>No.&nbsp;4</th>
+<th>No.&nbsp;4</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Wang</td>
+<td><strong>36</strong></td>
+<td>34</td>
+<td>36</td>
+<td>27</td>
+<td>34</td>
+</tr>
+<tr class="even">
+<td>Crawford</td>
+<td><strong>40?</strong></td>
+<td>38</td>
+<td>42</td>
+<td>33</td>
+<td>40</td>
+</tr>
+<tr class="odd">
+<td>Blake</td>
+<td><strong>82</strong></td>
+<td>77</td>
+<td>74</td>
+<td>80</td>
+<td>72</td>
+</tr>
+<tr class="even">
+<td>Rajan</td>
+<td><strong>48</strong></td>
+<td>50</td>
+<td>50</td>
+<td>45</td>
+<td>53</td>
+</tr>
+<tr class="odd">
+<td>Gandolfini</td>
+<td><strong>51</strong></td>
+<td>58</td>
+<td>48</td>
+<td>50</td>
+<td>46</td>
+</tr>
+<tr class="even">
+<td>Cruz</td>
+<td><strong>76</strong></td>
+<td>72</td>
+<td>68</td>
+<td>73</td>
+<td>73</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>3.66</td>
+<td>3.83</td>
+<td>4.16</td>
+<td>4.16</td>
+</tr>
+</tbody>
+</table></section><section id="whence-ggplot" class="slide level2"><h2>Whence <code>ggplot</code>?</h2>
+<div class="columns v-center-container">
+<div class="column" style="width:50%;">
+<p><img data-src="images/00/gg.jpg" style="width:80.0%"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/00/cake.jpg" style="width:80.0%"></p>
+</div></div>
+</section></section><section><section id="silly-exercise-serious-themes" class="title-slide slide level1 center"><h1>Silly exercise, serious themes</h1>
+
+</section><section id="statistical-lessons" class="slide level2"><h2>Statistical lessons</h2>
+<ul>
+<li>
+<strong>Domain knowledge and modeling assumptions</strong>: data do not speak for themselves. You need some subject-matter expertise about what you’re studying, as well as an interpretive lens;</li>
+<li>Are you asking questions the data can actually answer?</li>
+<li>Uncertainty has many sources, and in some cases, it may be simply irreducible, no matter how hard you try;</li>
+<li>
+<strong>Data quality and data cleaning</strong>: Data are not gospel. There could be noise and mistakes. Then what?</li>
+<li>
+<strong>Wisdom of crowds</strong>: aggregating many imperfect guesses can do better than any one individual guess.</li>
+</ul></section><section id="hard-skills" class="slide level2"><h2>Hard skills</h2>
+<ul>
+<li>GitHub repositories: cloning and pulling;</li>
+<li>Working with data in CSV format;</li>
+<li>Rendering a Quarto document to get PDFs that seamlessly integrate written text, code, and output;</li>
+<li>Using <code>ggplot</code> to build up visualizations in layers, like a cake.</li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Get ready</strong></p>
+</div>
+<div class="callout-content">
+<p>You will do all of these things on a weekly basis in this course.</p>
+</div>
+</div>
+</div>
+</section></section><section><section id="wrap-up" class="title-slide slide level1 center"><h1>Wrap up</h1>
+
+</section><section id="this-weeks-tasks" class="slide level2"><h2>This week’s tasks</h2>
+<ul>
+<li>Complete Lab 0
+<ul>
+<li>Computational setup</li>
+<li>Getting to know you survey</li>
+</ul>
+</li>
+<li>Read the syllabus and ask questions on Ed</li>
+<li>Complete readings and videos for next class</li>
+<li>Accept your invitation to the GitHub organization pronto!</li>
+</ul>
+
+
+</section></section>
+</div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="../site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script><script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="../site_libs/revealjs/plugin/notes/notes.js"></script><script src="../site_libs/revealjs/plugin/search/search.js"></script><script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="../site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script><script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script><script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
+            }
+            return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/sta199-s26\.github\.io\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+
+
+</body></html>

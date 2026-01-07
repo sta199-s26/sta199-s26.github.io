@@ -117,7 +117,7 @@
     "href": "syllabus/syllabus-overview.html",
     "title": "Course overview",
     "section": "",
-    "text": "Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. Gain experience in data wrangling and munging, exploratory data analysis, predictive modeling, data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language.\nPrerequisites: none.",
+    "text": "Intro to data science and statistical thinking. Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. Gain experience in data wrangling and munging, exploratory data analysis, predictive modeling, and data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language. No statistical or computing background is necessary. Not open to students who have taken a 100-level Statistical Science course, Statistical Science 210, or a Statistical Science course numbered 300 or above.\nBy the end of the semester, you will…\n\nlearn to explore, visualize, and analyze data in a reproducible and shareable manner using R and RStudio;\ngain experience in data wrangling and tidying, exploratory data analysis, data visualization, predictive and descriptive modeling, and statistical inference;\nwork on problems and case studies inspired by and based on real-world questions and data;\nexplore ethical considerations in data science, including issues of misrepresentation, privacy, and bias;\nresponsibly leverage AI tools within data science workflows while critically assessing the validity and potential biases in AI-generated insights;\nlearn to communicate results through written assignments and project presentation effectively.",
     "crumbs": [
       "Syllabus",
       "Overview"
@@ -128,7 +128,7 @@
     "href": "syllabus/syllabus-overview.html#description",
     "title": "Course overview",
     "section": "",
-    "text": "Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. Gain experience in data wrangling and munging, exploratory data analysis, predictive modeling, data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language.\nPrerequisites: none.",
+    "text": "Intro to data science and statistical thinking. Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. Gain experience in data wrangling and munging, exploratory data analysis, predictive modeling, and data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language. No statistical or computing background is necessary. Not open to students who have taken a 100-level Statistical Science course, Statistical Science 210, or a Statistical Science course numbered 300 or above.\nBy the end of the semester, you will…\n\nlearn to explore, visualize, and analyze data in a reproducible and shareable manner using R and RStudio;\ngain experience in data wrangling and tidying, exploratory data analysis, data visualization, predictive and descriptive modeling, and statistical inference;\nwork on problems and case studies inspired by and based on real-world questions and data;\nexplore ethical considerations in data science, including issues of misrepresentation, privacy, and bias;\nresponsibly leverage AI tools within data science workflows while critically assessing the validity and potential biases in AI-generated insights;\nlearn to communicate results through written assignments and project presentation effectively.",
     "crumbs": [
       "Syllabus",
       "Overview"
@@ -139,7 +139,7 @@
     "href": "syllabus/syllabus-overview.html#meetings",
     "title": "Course overview",
     "section": "Meetings",
-    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLecture\nBryan Center Griffith Theater\nMoWe 11:45 AM - 01:00 PM\nJohn Z\nTBD\nTBD\n\n\nLab 01\nPerkins LINK 087 (Classroom 3)\nTh 08:30 AM - 09:45 AM\nTBD\nTBD\n\n\nLab 02\nPerkins LINK 087 (Classroom 3)\nTh 10:05 AM - 11:20 AM\nTBD\nTBD\n\n\nLab 03\nPerkins LINK 071 (Classroom 5)\nTh 10:05 AM - 11:20 AM\nTBD\nTBD\n\n\nLab 04\nPerkins LINK 087 (Classroom 3)\nTh 11:45 AM - 01:00 PM\nTBD\nTBD\n\n\nLab 05\nPerkins LINK 071 (Classroom 5)\nTh 11:45 AM - 01:00 PM\nTBD\nTBD\n\n\nLab 06\nPerkins LINK 087 (Classroom 3)\nTh 01:25 PM - 02:40 PM\nTBD\nTBD\n\n\nLab 07\nPerkins LINK 071 (Classroom 5)\nTh 01:25 PM - 02:40 PM\nTBD\nTBD\n\n\nLab 08\nPerkins LINK 087 (Classroom 3)\nTh 03:05 PM - 04:20 PM\nTBD\nTBD\n\n\nLab 09\nPerkins LINK 071 (Classroom 5)\nTh 03:05 PM - 04:20 PM\nTBD\nTBD\n\n\nLab 10\nPerkins LINK 071 (Classroom 5)\nTh 04:40 PM - 05:55 PM\nTBD\nTBD",
+    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLecture\nBryan Center Griffith Theater\nMoWe 11:45 AM - 01:00 PM\nJohn Z\nSarah\nTBD\n\n\nLab 01\nPerkins LINK 087 (Classroom 3)\nTh 08:30 AM - 09:45 AM\nAbuzar\nChelsea\n\n\nLab 02\nPerkins LINK 087 (Classroom 3)\nTh 10:05 AM - 11:20 AM\nFederico\nMax\n\n\nLab 03\nPerkins LINK 071 (Classroom 5)\nTh 10:05 AM - 11:20 AM\nSarah\nLisa\n\n\nLab 04\nPerkins LINK 087 (Classroom 3)\nTh 11:45 AM - 01:00 PM\nHyunjin\nLiane\n\n\nLab 05\nPerkins LINK 071 (Classroom 5)\nTh 11:45 AM - 01:00 PM\nKenna\nEdward\n\n\nLab 06\nPerkins LINK 087 (Classroom 3)\nTh 01:25 PM - 02:40 PM\nArijit\nOliver\n\n\nLab 07\nPerkins LINK 071 (Classroom 5)\nTh 01:25 PM - 02:40 PM\nKatie\nBethany\n\n\nLab 08\nPerkins LINK 087 (Classroom 3)\nTh 03:05 PM - 04:20 PM\nCael\nTBD\n\n\nLab 09\nPerkins LINK 071 (Classroom 5)\nTh 03:05 PM - 04:20 PM\nJannis\nPatrick\n\n\nLab 10\nPerkins LINK 071 (Classroom 5)\nTh 04:40 PM - 05:55 PM\nDwija\nNatasha",
     "crumbs": [
       "Syllabus",
       "Overview"
@@ -216,7 +216,7 @@
     "href": "syllabus/syllabus-team.html",
     "title": "Teaching team",
     "section": "",
-    "text": "John Zito is Assistant Research Professor of Statistical Science at Duke University. He came to Duke in August 2024 after completing his PhD in statistics at Rice University. Prior to that he received a BA in mathematics from Kenyon College and spent a few years working in the Federal Reserve system.\nOffice Hours: ???",
+    "text": "John Zito is Assistant Research Professor of Statistical Science at Duke University. He came to Duke in August 2024 after completing his PhD in statistics at Rice University. Prior to that he received a BA in mathematics from Kenyon College and spent a few years working in the Federal Reserve system.\nOffice Hours: Tuesday 3pm - 5pm in Old Chem 207.",
     "crumbs": [
       "Syllabus",
       "Teaching team"
@@ -227,7 +227,7 @@
     "href": "syllabus/syllabus-team.html#instructor",
     "title": "Teaching team",
     "section": "",
-    "text": "John Zito is Assistant Research Professor of Statistical Science at Duke University. He came to Duke in August 2024 after completing his PhD in statistics at Rice University. Prior to that he received a BA in mathematics from Kenyon College and spent a few years working in the Federal Reserve system.\nOffice Hours: ???",
+    "text": "John Zito is Assistant Research Professor of Statistical Science at Duke University. He came to Duke in August 2024 after completing his PhD in statistics at Rice University. Prior to that he received a BA in mathematics from Kenyon College and spent a few years working in the Federal Reserve system.\nOffice Hours: Tuesday 3pm - 5pm in Old Chem 207.",
     "crumbs": [
       "Syllabus",
       "Teaching team"
@@ -238,7 +238,7 @@
     "href": "syllabus/syllabus-team.html#teaching-assistants",
     "title": "Teaching team",
     "section": "Teaching assistants",
-    "text": "Teaching assistants\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Mug\n      \n      \n        Name\n      \n      \n        Role(s)\n      \n      \n        Lab Section\n      \n      \n        Office hours\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nMug\n\n\n\nName\n\n\n\nRole(s)\n\n\n\nLab Section\n\n\n\nOffice hours\n\n\n\n\n\n\n\n\n\n\n\nAkinola, Bethany\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nArboleda, Federico\n\n\nLab leader\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nBolik, Jannis\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nDey, Arijit\n\n\nLab leader\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nElmore, Cael\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nGao, Oliver\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nHarris, Natasha\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nKakkad, Dwija\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nKhudaverdiyeva, Abuzar\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nLee, Hyunjin\n\n\nLab leader\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nMa, Liane\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nNguyen, Chelsea\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nNiu, Max\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nNorton, Tory\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nPatrick, Pham\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nRoberts, Kenna\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nSolarz, Katie\n\n\nLab leader\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nWu, Sarah\n\n\nLab leader\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nZhang, Edward\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\n\n\n\nZhang, Lisa\n\n\n???\n\n\n???\n\n\n🔗\n\n\n\n\n\n\nNo matching items",
+    "text": "Teaching assistants\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Mug\n      \n      \n        Name\n      \n      \n        Role(s)\n      \n      \n        Lab Section\n      \n      \n        Office hours\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nMug\n\n\n\nName\n\n\n\nRole(s)\n\n\n\nLab Section\n\n\n\nOffice hours\n\n\n\n\n\n\n\n\n\n\n\nAkinola, Bethany\n\n\nLab helper\n\n\nTh 1:25PM - 2:40PM (Sec 7)\n\n\n🔗\n\n\n\n\n\n\n\n\n\nArboleda, Federico\n\n\nLab leader\n\n\nTh 10:05AM - 11:20AM (Sec 2)\n\n\n🔗\n\n\n\n\n\n\n\n\n\nBolik, Jannis\n\n\nLab leader\n\n\nTh 3:05PM - 4:20PM (Sec 9)\n\n\n🔗\n\n\n\n\n\n\n\n\n\nDey, Arijit\n\n\nLab leader\n\n\nTh 1:25PM - 2:40PM (Sec 6)\n\n\n🔗\n\n\n\n\n\n\n\n\n\nElmore, Cael\n\n\nLab leader\n\n\nTh 3:05PM - 4:20PM (Sec 8)\n\n\n🔗\n\n\n\n\n\n\n\n\n\nGao, Oliver\n\n\nLab helper\n\n\nTh 1:25PM - 2:40PM (Sec 6)\n\n\n🔗\n\n\n\n\n\n\n\n\n\nHarris, Natasha\n\n\nLab helper\n\n\nTh 4:40PM - 5:55PM (Sec 10)\n\n\n🔗\n\n\n\n\n\n\n\n\n\nKakkad, Dwija\n\n\nLab leader\n\n\nTh 4:40PM - 5:55PM (Sec 10)\n\n\n🔗\n\n\n\n\n\n\n\n\n\nKhudaverdiyeva, Abuzar\n\n\nLab leader\n\n\nTh 8:30AM - 9:45AM (Sec 1)\n\n\n🔗\n\n\n\n\n\n\n\n\n\nLee, Hyunjin\n\n\nLab leader\n\n\nTh 11:45AM - 1:00PM (Sec 4)\n\n\n🔗\n\n\n\n\n\n\n\n\n\nMa, Liane\n\n\nLab helper\n\n\nTh 11:45AM - 1:00PM (Sec 4)\n\n\n🔗\n\n\n\n\n\n\n\n\n\nNguyen, Chelsea\n\n\nLab helper\n\n\nTh 8:30AM - 9:45AM (Sec 1)\n\n\n🔗\n\n\n\n\n\n\n\n\n\nNiu, Max\n\n\nLab helper\n\n\nTh 10:05AM - 11:20AM (Sec 2)\n\n\n🔗\n\n\n\n\n\n\n\n\n\nNorton, Tory\n\n\n-\n\n\n-\n\n\n🔗\n\n\n\n\n\n\n\n\n\nPatrick, Pham\n\n\nLab leader\n\n\nTh 3:05PM - 4:20PM (Sec 9)\n\n\n🔗\n\n\n\n\n\n\n\n\n\nRoberts, Kenna\n\n\nLab leader\n\n\nTh 11:45AM - 1:00PM (Sec 5)\n\n\n🔗\n\n\n\n\n\n\n\n\n\nSolarz, Katie\n\n\nLab leader\n\n\nTh 1:25PM - 2:40PM (Sec 7)\n\n\n🔗\n\n\n\n\n\n\n\n\n\nWu, Sarah\n\n\nLab leader, Lecture helper\n\n\nTh 10:05AM - 11:20AM (Sec 3)\n\n\n🔗\n\n\n\n\n\n\n\n\n\nZhang, Edward\n\n\nLab helper\n\n\nTh 11:45AM - 1:00PM (Sec 5)\n\n\n🔗\n\n\n\n\n\n\n\n\n\nZhang, Lisa\n\n\nLab helper\n\n\nTh 10:05AM - 11:20AM (Sec 3)\n\n\n🔗\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Syllabus",
       "Teaching team"
@@ -282,10 +282,21 @@
     "href": "syllabus/syllabus-materials.html#technology",
     "title": "Course materials",
     "section": "Technology",
-    "text": "Technology\nYou will need to bring a laptop to all lectures and labs. Options for obtaining a laptop through the university are described here. Armed with your trusty laptop, you must be able to access the following:\n\nThis course page that you are on right now;\nR/RStudio as provided by the Duke Container Manager;\nCanvas, through which you can access…\n\nGradescope;\nEd Discussion;\n\nPanopto (for the lecture recordings);\nZoom (e.g. for remote office hours).\n\nIf access to technology becomes a concern for you during the semester, contact the instructor immediately to discuss options.",
+    "text": "Technology\nYou will need to bring a laptop to all lectures and labs. Options for obtaining a laptop through the university are described here. Armed with your trusty laptop, you must be able to access the following:\n\nThis course page that you are on right now;\nR/RStudio as provided by the Duke Container Manager;\nCanvas, through which you can access…\n\nGradescope;\nEd Discussion;\n\nGitHub;\nPanopto (for the lecture recordings);\nZoom (e.g. for remote office hours).\n\nIf access to technology becomes a concern for you during the semester, contact the instructor immediately to discuss options.",
     "crumbs": [
       "Syllabus",
       "Materials"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STA 199 Introduction to Data Science and Statistical Thinking",
+    "section": "",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 7\n\n🧑‍🏫 Welcome!\n\n\n\n\n\nThu, Jan 8\n\n💻 Lab 0\nlab 0\n\n\n\n1\nMon, Jan 12\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\n🧑‍🏫 Meet the toolkit\n\n\n\n\n\nWed, Jan 14\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\n🧑‍🏫 Grammar of data visualization\n\n\n\n\n\nThu, Jan 15\n\n💻 Lab 1\n\n\n\n\n2\nMon, Jan 19\n\n❌ MLK Day - No Lecture\n\n\n\n\n\n\nWed, Jan 21\n📗 r4ds - chp 2  📗 r4ds - chp 3.1-3.5  🎥 Grammar of data transformation  🎥 Code along :: Flights and pipes\n\n🧑‍🏫 Grammar of data transformation\n\nHW 1\n\n\n\nThu, Jan 22\n\n💻 Lab 2\n\n\n\n\n3\nMon, Jan 26\n📗 r4ds - chp 3.6-3.7  🎥 Visualizing and summarizing categorical data  🎥 Visualizing and summarizing numerical data  🎥 Visualizing and summarizing relationships  🎥 Code along :: Star Wars characters\n\n🧑‍🏫 Exploratory Data Analysis I\n\n\n\n\n\nWed, Jan 28\n📘 ims - chp 5  📘 ims - chp 6  🎥 Code along :: Diving deeper with Palmer Penguins\n\n🧑‍🏫 Exploratory Data Analysis II\n\nHW 2\n\n\n\nThu, Jan 29\n\n💻 Lab 3\n\n\n\n\n4\nMon, Feb 2\n🎥 Tidy data  🎥 Tidying data  🎥 Code along :: Country populations over time  📗 r4ds - chp 5\n\n🧑‍🏫 Tidying data\n\n\n\n\n\nWed, Feb 4\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\n🧑‍🏫 Joining data\n\nHW 3\n\n\n\nThu, Feb 5\n\n💻 Lab 4\n\n\n\n\n5\nMon, Feb 9\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\n🧑‍🏫 Data types and classes\n\n\n\n\n\nWed, Feb 11\n🎥 Importing data  🎥 Code along :: Halving CO2 emissions  🎥 Code along :: Student survey  📗 r4ds - chp 7  📗 r4ds - chp 17.1 - 17.3\n\n🧑‍🏫 Importing and recoding data\n\nHW 4\n\n\n\nThu, Feb 12\n\n💻 Lab 5\n\n\n\n\n6\nMon, Feb 16\n🎥 Web scraping basics  🎥 Code along :: Scraping an eCommerce page  📗 r4ds - chp 24.1 - 24.6\n\n🧑‍🏫 Webscraping I\n\n\n\n\n\nWed, Feb 18\n🎥 Code along :: Scraping many eCommerce pages  🎥 Web scraping considerations  📗 r4ds - chp 25.1 - 25.2\n\n🧑‍🏫 Webscraping II\n\nHW 5\n\n\n\nThu, Feb 19\n\n💻 project milestone 1 &2\n\n\n\n\n7\nMon, Feb 23\n\n🧑‍🏫 Data science wrap-up\n\nmilestone 2 (sunday midnight) TAs need to grade proposals between Sunday night and Thursday morning\n\n\n\nWed, Feb 25\n\n📝 Midterm 1\n\n\n\n\n\n\nThu, Feb 26\n\n💻 Project – milestone 3 (make progress)\n\n\n\n\n8\nMon, Mar 2\n📘 ims - chp 6  📗 r4ds - chp 10\n\n🧑‍🏫 Communicating results\n\ntake-home due Sunday\n\n\n\nWed, Mar 4\n🎥 Misrepresentation  🎥 Data privacy  🎥 Algorithmic bias  🎥 Code along :: Sectors and services\n\n🧑‍🏫 Data science ethics\n\nmilestone 4 deadline (have to have at least one or two figures)\n\n\n\nThu, Mar 5\n\n💻 project (first half peer review/second half make progress)\n\n\n\n\n9\nMon, Mar 9\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nWed, Mar 11\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nThu, Mar 12\n\n❌ Spring Break - No Lab\n\n\n\n\n\n10\nMon, Mar 16\n🎥 The language of models  🎥 Linear regression with a numerical predictor  📘 ims - chp 7.1\n\n🧑‍🏫 The language of models\n\n\n\n\n\nWed, Mar 18\n🎥 Linear regression with a categorical predictor  🎥 Outliers in linear regression  🎥 Code along :: Modeling fish  📘 ims - chp 7.2\n\n🧑‍🏫 Simple linear regression\n\nproject due (or push deadline to sunday night)\n\n\n\nThu, Mar 19\n\n💻 Lab 6\n\n\n\n\n11\nMon, Mar 23\n🎥 Linear regression with multiple predictors  🎥 Main and interaction effects  📘 ims - chp 8.1-8.2  📘 ims - chp 8.3-8.5\n\n🧑‍🏫 Multiple linear regression I\n\n\n\n\n\nWed, Mar 25\n🎥 Code along :: Modeling interest rates\n\n🧑‍🏫 Multiple linear regression II\n\nHW 6\n\n\n\nThu, Mar 26\n\n💻 Lab 7 (make this peer review/maybe presentations?) + have HW (even if no lab)\n\n\n\n\n12\nMon, Mar 30\n🎥 Logistic regression  🎥 Code along :: Building a spam filter  📘 ims - chp 9\n\n🧑‍🏫 Logistic regression I\n\n\n\n\n\nWed, Apr 1\n🎥 Clasification and decision errors  🎥 Overfitting and spending your data\n\n🧑‍🏫 Logistic regression II\n\nHW 7\n\n\n\nThu, Apr 2\n\n💻 PROJECT DUE\n\n\n\n\n13\nMon, Apr 6\n🎥 Code along :: Forest classification\n\n🧑‍🏫 Modeling wrap-up\n\n\n\n\n\nWed, Apr 8\n\n📝 Midterm 2\n\n\n\n\n\n\nThu, Apr 9\n\n❌ We’re all tired - No lab!\n\n\n\n\n\n14\nMon, Apr 13\n🎥 Quantifying uncertainty  🎥 Bootstrapping  🎥 Code along :: Bootstrapping Duke Forest houses  📘 ims - chp 11  📘 ims - chp 12\n\n🧑‍🏫 Interval estimation\n\n\n\n\n\nWed, Apr 15\n🎥 Hypothesis testing  📘 ims - chp 11\n\n🧑‍🏫 Hypothesis testing\n\n\n\n\n\nThu, Apr 16\n\n💻 Lab 8\n\n\n\n\n15\nMon, Apr 20\n\n🧑‍🏫 More inference\n\n\n\n\n\nWed, Apr 22\n\n🧑‍🏫 Farewell!\n\nHW 8\n\n\n\nThu, Apr 23\n\n❌ Reading Days - No Lab\n\n\n\n\n\n16\nFri, May 1\n\n📝 Final (2pm - 5pm)",
+    "crumbs": [
+      "Syllabus",
+      "Schedule"
     ]
   },
   {
@@ -377,15 +388,326 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "STA 199 Introduction to Data Science and Statistical Thinking",
-    "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 7\n\n🧑‍🏫 Welcome!\n\n\n\n\n\nThu, Jan 8\n\n💻 Lab 0\nlab 0\n\n\n\n1\nMon, Jan 12\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\n🧑‍🏫 Meet the toolkit\n\n\n\n\n\nWed, Jan 14\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\n🧑‍🏫 Grammar of data visualization\n\n\n\n\n\nThu, Jan 15\n\n💻 Lab 1\n\n\n\n\n2\nMon, Jan 19\n\n❌ MLK Day - No Lecture\n\n\n\n\n\n\nWed, Jan 21\n📗 r4ds - chp 2  📗 r4ds - chp 3.1-3.5  🎥 Grammar of data transformation  🎥 Code along :: Flights and pipes\n\n🧑‍🏫 Grammar of data transformation\n\nHW 1\n\n\n\nThu, Jan 22\n\n💻 Lab 2\n\n\n\n\n3\nMon, Jan 26\n📗 r4ds - chp 3.6-3.7  🎥 Visualizing and summarizing categorical data  🎥 Visualizing and summarizing numerical data  🎥 Visualizing and summarizing relationships  🎥 Code along :: Star Wars characters\n\n🧑‍🏫 Exploratory Data Analysis I\n\n\n\n\n\nWed, Jan 28\n📘 ims - chp 5  📘 ims - chp 6  🎥 Code along :: Diving deeper with Palmer Penguins\n\n🧑‍🏫 Exploratory Data Analysis II\n\nHW 2\n\n\n\nThu, Jan 29\n\n💻 Lab 3\n\n\n\n\n4\nMon, Feb 2\n🎥 Tidy data  🎥 Tidying data  🎥 Code along :: Country populations over time  📗 r4ds - chp 5\n\n🧑‍🏫 Tidying data\n\n\n\n\n\nWed, Feb 4\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\n🧑‍🏫 Joining data\n\nHW 3\n\n\n\nThu, Feb 5\n\n💻 Lab 4\n\n\n\n\n5\nMon, Feb 9\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\n🧑‍🏫 Data types and classes\n\n\n\n\n\nWed, Feb 11\n🎥 Importing data  🎥 Code along :: Halving CO2 emissions  🎥 Code along :: Student survey  📗 r4ds - chp 7  📗 r4ds - chp 17.1 - 17.3\n\n🧑‍🏫 Importing and recoding data\n\nHW 4\n\n\n\nThu, Feb 12\n\n💻 Lab 5\n\n\n\n\n6\nMon, Feb 16\n🎥 Web scraping basics  🎥 Code along :: Scraping an eCommerce page  📗 r4ds - chp 24.1 - 24.6\n\n🧑‍🏫 Webscraping I\n\n\n\n\n\nWed, Feb 18\n🎥 Code along :: Scraping many eCommerce pages  🎥 Web scraping considerations  📗 r4ds - chp 25.1 - 25.2\n\n🧑‍🏫 Webscraping II\n\nHW 5\n\n\n\nThu, Feb 19\n\n💻 project milestone 1 &2\n\n\n\n\n7\nMon, Feb 23\n\n🧑‍🏫 Data science wrap-up\n\nmilestone 2 (sunday midnight) TAs need to grade proposals between Sunday night and Thursday morning\n\n\n\nWed, Feb 25\n\n📝 Midterm 1\n\n\n\n\n\n\nThu, Feb 26\n\n💻 Project – milestone 3 (make progress)\n\n\n\n\n8\nMon, Mar 2\n📘 ims - chp 6  📗 r4ds - chp 10\n\n🧑‍🏫 Communicating results\n\ntake-home due Sunday\n\n\n\nWed, Mar 4\n🎥 Misrepresentation  🎥 Data privacy  🎥 Algorithmic bias  🎥 Code along :: Sectors and services\n\n🧑‍🏫 Data science ethics\n\nmilestone 4 deadline (have to have at least one or two figures)\n\n\n\nThu, Mar 5\n\n💻 project (first half peer review/second half make progress)\n\n\n\n\n9\nMon, Mar 9\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nWed, Mar 11\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nThu, Mar 12\n\n❌ Spring Break - No Lab\n\n\n\n\n\n10\nMon, Mar 16\n🎥 The language of models  🎥 Linear regression with a numerical predictor  📘 ims - chp 7.1\n\n🧑‍🏫 The language of models\n\n\n\n\n\nWed, Mar 18\n🎥 Linear regression with a categorical predictor  🎥 Outliers in linear regression  🎥 Code along :: Modeling fish  📘 ims - chp 7.2\n\n🧑‍🏫 Simple linear regression\n\nproject due (or push deadline to sunday night)\n\n\n\nThu, Mar 19\n\n💻 Lab 6\n\n\n\n\n11\nMon, Mar 23\n🎥 Linear regression with multiple predictors  🎥 Main and interaction effects  📘 ims - chp 8.1-8.2  📘 ims - chp 8.3-8.5\n\n🧑‍🏫 Multiple linear regression I\n\n\n\n\n\nWed, Mar 25\n🎥 Code along :: Modeling interest rates\n\n🧑‍🏫 Multiple linear regression II\n\nHW 6\n\n\n\nThu, Mar 26\n\n💻 Lab 7 (make this peer review/maybe presentations?) + have HW (even if no lab)\n\n\n\n\n12\nMon, Mar 30\n🎥 Logistic regression  🎥 Code along :: Building a spam filter  📘 ims - chp 9\n\n🧑‍🏫 Logistic regression I\n\n\n\n\n\nWed, Apr 1\n🎥 Clasification and decision errors  🎥 Overfitting and spending your data\n\n🧑‍🏫 Logistic regression II\n\nHW 7\n\n\n\nThu, Apr 2\n\n💻 PROJECT DUE\n\n\n\n\n13\nMon, Apr 6\n🎥 Code along :: Forest classification\n\n🧑‍🏫 Modeling wrap-up\n\n\n\n\n\nWed, Apr 8\n\n📝 Midterm 2\n\n\n\n\n\n\nThu, Apr 9\n\n❌ We’re all tired - No lab!\n\n\n\n\n\n14\nMon, Apr 13\n🎥 Quantifying uncertainty  🎥 Bootstrapping  🎥 Code along :: Bootstrapping Duke Forest houses  📘 ims - chp 11  📘 ims - chp 12\n\n🧑‍🏫 Interval estimation\n\n\n\n\n\nWed, Apr 15\n🎥 Hypothesis testing  📘 ims - chp 11\n\n🧑‍🏫 Hypothesis testing\n\n\n\n\n\nThu, Apr 16\n\n💻 Lab 8\n\n\n\n\n15\nMon, Apr 20\n\n🧑‍🏫 More inference\n\n\n\n\n\nWed, Apr 22\n\n🧑‍🏫 Farewell!\n\nHW 8\n\n\n\nThu, Apr 23\n\n❌ Reading Days - No Lab\n\n\n\n\n\n16\nFri, May 1\n\n📝 Final (2pm - 5pm)",
-    "crumbs": [
-      "Syllabus",
-      "Schedule"
-    ]
+    "objectID": "slides/00-welcome.html#teaching-team-a-glamorous-assemblage",
+    "href": "slides/00-welcome.html#teaching-team-a-glamorous-assemblage",
+    "title": "Welcome to STA 199!",
+    "section": "Teaching team: a glamorous assemblage",
+    "text": "Teaching team: a glamorous assemblage\n\n\nCaitrin Murphy\nHan Chen\nKatie Solarz\nHyunjin Lee\nJasmine Wang\nLiane Ma\nAvery Hodges\nAlexa Fahrer\nDomenic Fenoglio\nJulia Healey-Parera\nDavid King\nLisa Zhang\n\nEduardo Vasquez\nArijit Dey\nFederico Arboleda\nSarah Wu\nLi Fan\nDevarpita Bag\nNetra Mittal\nNatasha Harris\nSonya Eason\nNoah Obuya\nMary Knox\nJohn Zito"
+  },
+  {
+    "objectID": "slides/00-welcome.html#what-are-we-studying",
+    "href": "slides/00-welcome.html#what-are-we-studying",
+    "title": "Welcome to STA 199!",
+    "section": "What are we studying?",
+    "text": "What are we studying?\n\n\n\n\n\n\nData science\n\n\nTransforming messy, incomplete, imperfect data into knowledge.\n\n\n\n\n\n\n\n\n\nStatistical thinking\n\n\nQuantifying our uncertainty about that knowledge."
+  },
+  {
+    "objectID": "slides/00-welcome.html#the-data-science-life-cycle",
+    "href": "slides/00-welcome.html#the-data-science-life-cycle",
+    "title": "Welcome to STA 199!",
+    "section": "The data science life cycle",
+    "text": "The data science life cycle"
+  },
+  {
+    "objectID": "slides/00-welcome.html#homepage",
+    "href": "slides/00-welcome.html#homepage",
+    "title": "Welcome to STA 199!",
+    "section": "Homepage",
+    "text": "Homepage\nhttps://sta199-s25.github.io\n\nAll course materials\nLinks to Canvas, GitHub, RStudio containers, etc."
+  },
+  {
+    "objectID": "slides/00-welcome.html#course-toolkit",
+    "href": "slides/00-welcome.html#course-toolkit",
+    "title": "Welcome to STA 199!",
+    "section": "Course toolkit",
+    "text": "Course toolkit\nAll linked from the course website:\n\nGitHub organization: github.com/sta199-s25\n\nRStudio containers: cmgr.oit.duke.edu/containers\n\nCommunication: Ed Discussion\nAssignment submission and feedback: Gradescope"
+  },
+  {
+    "objectID": "slides/00-welcome.html#activities",
+    "href": "slides/00-welcome.html#activities",
+    "title": "Welcome to STA 199!",
+    "section": "Activities",
+    "text": "Activities\n\nIntroduce new content and prepare for lectures by watching the videos and completing the readings\nAttend and actively participate in lectures and labs, office hours, team meetings\nPractice applying statistical concepts and computing with application exercises during lecture, graded for attempting\nPut together what you’ve learned to analyze real-world data\n\nLab assignments (7 or 8 throughout semester)\nExams (midterm x 2 + final)\nTerm project completed in teams"
+  },
+  {
+    "objectID": "slides/00-welcome.html#application-exercises",
+    "href": "slides/00-welcome.html#application-exercises",
+    "title": "Welcome to STA 199!",
+    "section": "Application exercises",
+    "text": "Application exercises\n\nDaily-ish in lecture\n“Graded” for attempt, not accuracy\nPractice Weeks 1 + 2, graded thereafter\nAt least one commit by 2 pm of the day of lecture\nTurn in at least 70% for full credit"
+  },
+  {
+    "objectID": "slides/00-welcome.html#labs",
+    "href": "slides/00-welcome.html#labs",
+    "title": "Welcome to STA 199!",
+    "section": "Labs",
+    "text": "Labs\n\nStart in lab session\nComplete at home\nDue within a week\nDiscussion with classmates ok, copying not ok!\nLowest score dropped"
+  },
+  {
+    "objectID": "slides/00-welcome.html#exams",
+    "href": "slides/00-welcome.html#exams",
+    "title": "Welcome to STA 199!",
+    "section": "Exams",
+    "text": "Exams\n\nThree exams, each 20%\n\nMidterm comprised of two parts:\n\nIn-class: 75 minute in-class exam. Closed book, one sheet of notes (“cheat sheet”) – 70% of the grade.\nTake-home: Follow from the in class exam and focus on the analysis of a dataset introduced in the take home exam – 30% of the grade.\n\n\nFinal in-class only (Apr 29, 9am - 12pm): Closed book, one sheet of notes (“cheat sheet”).\n“Cheat sheet”: No larger than 8.5” x 11”, both sides, must be prepared by you.\n\n\n\n\n\n\n\nCaution\n\n\nExam dates cannot be changed and no make-up exams will be given. If you can’t take the exams on these dates, you should drop this class."
+  },
+  {
+    "objectID": "slides/00-welcome.html#project",
+    "href": "slides/00-welcome.html#project",
+    "title": "Welcome to STA 199!",
+    "section": "Project",
+    "text": "Project\n\nDataset of your choice, method of your choice\nTeamwork\nFive milestones, interim deadline throughout semester\nFinal milestone: Presentation (video) and write-up\nPresentations submitted as videos\nPeer review between teams for content, peer evaluation within teams for contribution\nSome lab sessions allocated to project progress\n\n\n\n\n\n\n\nCaution\n\n\nProject due date cannot be changed. You must complete the project to pass this class."
+  },
+  {
+    "objectID": "slides/00-welcome.html#teams-of-4---5",
+    "href": "slides/00-welcome.html#teams-of-4---5",
+    "title": "Welcome to STA 199!",
+    "section": "Teams of 4 - 5",
+    "text": "Teams of 4 - 5\n\nAssigned by us within your lab section\n\nProject\nPeer evaluation during teamwork and after completion\nExpectations and roles\n\nEveryone is expected to contribute equal effort\n\nEveryone is expected to understand all code turned in\nIndividual contribution evaluated by peer evaluation, commits, etc."
+  },
+  {
+    "objectID": "slides/00-welcome.html#grading",
+    "href": "slides/00-welcome.html#grading",
+    "title": "Welcome to STA 199!",
+    "section": "Grading",
+    "text": "Grading\n\n\nCategory\nPercentage\n\n\n\nApplication Exercises\n5%\n\n\nLabs\n15%\n\n\nMidterm 1\n20%\n\n\nMidterm 2\n20%\n\n\nFinal\n20%\n\n\nProject\n20%\n\n\n\nNo specific points allocated to attendance, but the application exercise score is implicitly tied to attendance.\nSee course syllabus for how the final letter grade will be determined."
+  },
+  {
+    "objectID": "slides/00-welcome.html#wiggle-room",
+    "href": "slides/00-welcome.html#wiggle-room",
+    "title": "Welcome to STA 199!",
+    "section": "Wiggle room",
+    "text": "Wiggle room\n\nYou only have to complete 70% of the AEs to receive full credit;\nWe drop the lowest lab score;\nWe replace the lowest in-class midterm score with your final exam score (if it’s better)."
+  },
+  {
+    "objectID": "slides/00-welcome.html#support",
+    "href": "slides/00-welcome.html#support",
+    "title": "Welcome to STA 199!",
+    "section": "Support",
+    "text": "Support\n\nHelp from humans:\n\nAttend office hours\nAsk and answer questions on the discussion forum\n\n\nReserve email for questions on personal matters and/or grades\nRead the course support page"
+  },
+  {
+    "objectID": "slides/00-welcome.html#announcements",
+    "href": "slides/00-welcome.html#announcements",
+    "title": "Welcome to STA 199!",
+    "section": "Announcements",
+    "text": "Announcements\n\nPosted on Canvas (Announcements tool) and sent via email, be sure to check both regularly\nI’ll assume that you’ve read an announcement by the next “business” day\nI’ll (try my best to) send a weekly update announcement each Friday, outlining the plan for the following week and reminding you what you need to do to prepare, practice, and perform"
+  },
+  {
+    "objectID": "slides/00-welcome.html#accessibility",
+    "href": "slides/00-welcome.html#accessibility",
+    "title": "Welcome to STA 199!",
+    "section": "Accessibility",
+    "text": "Accessibility\n\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments.\nI am committed to making all course materials accessible and I’m always learning how to do this better. If any course component is not accessible to you in any way, please don’t hesitate to let me know.\n\n\n\n\n\n\n\nIf you need testing accommodations\n\n\nMake sure I get a letter, and make your appointments in the Testing Center now."
+  },
+  {
+    "objectID": "slides/00-welcome.html#late-work-waivers-lecture-recordings-regrades",
+    "href": "slides/00-welcome.html#late-work-waivers-lecture-recordings-regrades",
+    "title": "Welcome to STA 199!",
+    "section": "Late work, waivers, lecture recordings, regrades…",
+    "text": "Late work, waivers, lecture recordings, regrades…\n\nWe have policies!\nRead about them on the course syllabus and refer back to them when you need it"
+  },
+  {
+    "objectID": "slides/00-welcome.html#collaboration",
+    "href": "slides/00-welcome.html#collaboration",
+    "title": "Welcome to STA 199!",
+    "section": "Collaboration",
+    "text": "Collaboration\n\nLabs: discussing and helping is fine. Sharing your solutions and copying others is not;\nExams: collaboration of any kind is completely forbidden on any part of any exam;\nProjects: collaboration of any kind is enthusiastically encouraged within your team. Between teams, it’s the same as labs; do not directly share your stuff or copy off of others."
+  },
+  {
+    "objectID": "slides/00-welcome.html#use-of-ai-tools",
+    "href": "slides/00-welcome.html#use-of-ai-tools",
+    "title": "Welcome to STA 199!",
+    "section": "Use of AI tools",
+    "text": "Use of AI tools\n\n\n AI tools for code:\n\nSure, but be careful/critical! Working code != correct/good code.\nMust explicitly cite with a direct url linking to the conversation you had.\n\n\n AI tools for narrative: Absolutely not!\n AI tools for learning: Sure, but be careful/critical!"
+  },
+  {
+    "objectID": "slides/00-welcome.html#academic-integrity",
+    "href": "slides/00-welcome.html#academic-integrity",
+    "title": "Welcome to STA 199!",
+    "section": "Academic integrity",
+    "text": "Academic integrity\n\nTo uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised.\n\n\n\nZeros from conduct violations will not be dropped or replaced;\nIf people are copying, sharer and recipients penalized equally. It does not matter how well-intentioned everyone was;\nIf we discover violations, they go straight to the conduct office."
+  },
+  {
+    "objectID": "slides/00-welcome.html#how-old-is-this-person",
+    "href": "slides/00-welcome.html#how-old-is-this-person",
+    "title": "Welcome to STA 199!",
+    "section": "How old is this person?",
+    "text": "How old is this person?\n\n\n\n \n\n\n\n\nEthel Merman"
+  },
+  {
+    "objectID": "slides/00-welcome.html#ethel-merman",
+    "href": "slides/00-welcome.html#ethel-merman",
+    "title": "Welcome to STA 199!",
+    "section": "Ethel Merman",
+    "text": "Ethel Merman\n\n\n\n\n\n\nBorn\nJanuary 16, 1908\n\n\nDied\nFebruary 15, 1984\n\n\nAge\n76\n\n\nClaim to fame\nJZ’s favorite singer"
+  },
+  {
+    "objectID": "slides/00-welcome.html#how-old-is-this-person-1",
+    "href": "slides/00-welcome.html#how-old-is-this-person-1",
+    "title": "Welcome to STA 199!",
+    "section": "How old is this person?",
+    "text": "How old is this person?\n\n\n\n \n\n\n\n\nMegan Pete"
+  },
+  {
+    "objectID": "slides/00-welcome.html#megan-thee-stallion",
+    "href": "slides/00-welcome.html#megan-thee-stallion",
+    "title": "Welcome to STA 199!",
+    "section": "Megan Thee Stallion",
+    "text": "Megan Thee Stallion\n\n\n\n\n\n\nBorn\nFebruary 15, 1995\n\n\nAge\n29\n\n\nClaim to fame\nRapper"
+  },
+  {
+    "objectID": "slides/00-welcome.html#how-old-is-this-person-2",
+    "href": "slides/00-welcome.html#how-old-is-this-person-2",
+    "title": "Welcome to STA 199!",
+    "section": "How old is this person?",
+    "text": "How old is this person?\n\n\n\n \n\n\n\n\n봉준호"
+  },
+  {
+    "objectID": "slides/00-welcome.html#bong-joon-ho",
+    "href": "slides/00-welcome.html#bong-joon-ho",
+    "title": "Welcome to STA 199!",
+    "section": "Bong Joon-ho",
+    "text": "Bong Joon-ho\n\n\n\n\n\n\nBorn\nSeptember 14, 1969\n\n\nAge\n55\n\n\nClaim to fame\nDirected Parasite, Snowpiercer, etc"
+  },
+  {
+    "objectID": "slides/00-welcome.html#now-do-it-with-pictures",
+    "href": "slides/00-welcome.html#now-do-it-with-pictures",
+    "title": "Welcome to STA 199!",
+    "section": "Now do it with pictures…",
+    "text": "Now do it with pictures…\n\n\nWhen the picture was taken, how old was the person?"
+  },
+  {
+    "objectID": "slides/00-welcome.html#managing-expectations",
+    "href": "slides/00-welcome.html#managing-expectations",
+    "title": "Welcome to STA 199!",
+    "section": "Managing expectations",
+    "text": "Managing expectations\nThe stakes are low today. We’re just getting our feet wet and working out the kinks:\n\nIt’s the first time all 300+ of us are attempting to access our containers simultaneously. It may choke;\nIf you get stuck on a loading screen of some kind, be patient and let it do its thing. Refreshing, reloading, etc will just amplify our collective problem;\nIf yours never loads, no big deal. Just sit back and watch me, or follow along on a neighbor’s screen;\nEven if yours does load, you’re welcome to just watch."
+  },
+  {
+    "objectID": "slides/00-welcome.html#yuja-wang",
+    "href": "slides/00-welcome.html#yuja-wang",
+    "title": "Welcome to STA 199!",
+    "section": "Yuja Wang",
+    "text": "Yuja Wang\n\n\n\n\n\n\n\n\n\nBorn\n2/10/1987\n\n\nAge in pic\n36\n\n\nClaim to fame\nClassical pianist"
+  },
+  {
+    "objectID": "slides/00-welcome.html#im-sure-shed-be-pleased",
+    "href": "slides/00-welcome.html#im-sure-shed-be-pleased",
+    "title": "Welcome to STA 199!",
+    "section": "I’m sure she’d be pleased",
+    "text": "I’m sure she’d be pleased"
+  },
+  {
+    "objectID": "slides/00-welcome.html#joan-crawford",
+    "href": "slides/00-welcome.html#joan-crawford",
+    "title": "Welcome to STA 199!",
+    "section": "Joan Crawford",
+    "text": "Joan Crawford\nA secret she took to her grave:\n\n\n\n\n\n\n\n\n\nBorn\n3/23/(1904 - 1908)\n\n\nDied\n5/10/1977\n\n\nAge in pic\n38 - 42\n\n\nClaim to fame\nOscar-winning actor"
+  },
+  {
+    "objectID": "slides/00-welcome.html#well-never-know",
+    "href": "slides/00-welcome.html#well-never-know",
+    "title": "Welcome to STA 199!",
+    "section": "We’ll never know…",
+    "text": "We’ll never know…"
+  },
+  {
+    "objectID": "slides/00-welcome.html#eubie-blake",
+    "href": "slides/00-welcome.html#eubie-blake",
+    "title": "Welcome to STA 199!",
+    "section": "Eubie Blake",
+    "text": "Eubie Blake\nHis actual birthday was not known at the time:\n\n\n\n\n\n\n\n\n\nBorn\n2/7/1887\n\n\nDied\n2/12/1983\n\n\nAge in pic\n82\n\n\nClaim to fame\nComposer"
+  },
+  {
+    "objectID": "slides/00-welcome.html#lol-that-bar-at-86",
+    "href": "slides/00-welcome.html#lol-that-bar-at-86",
+    "title": "Welcome to STA 199!",
+    "section": "lol that bar at 86",
+    "text": "lol that bar at 86"
+  },
+  {
+    "objectID": "slides/00-welcome.html#watch-out-for-data-quality",
+    "href": "slides/00-welcome.html#watch-out-for-data-quality",
+    "title": "Welcome to STA 199!",
+    "section": "Watch out for data quality!",
+    "text": "Watch out for data quality!"
+  },
+  {
+    "objectID": "slides/00-welcome.html#raghuram-rajan",
+    "href": "slides/00-welcome.html#raghuram-rajan",
+    "title": "Welcome to STA 199!",
+    "section": "Raghuram Rajan",
+    "text": "Raghuram Rajan\n\n\n\n\n\n\nBorn\n2/3/1963\n\n\nAge in pic\n48\n\n\nClaim to fame\nUChicago economist\n\n\n\nRBI governor"
+  },
+  {
+    "objectID": "slides/00-welcome.html#youre-natural-denoisers",
+    "href": "slides/00-welcome.html#youre-natural-denoisers",
+    "title": "Welcome to STA 199!",
+    "section": "You’re natural denoisers!",
+    "text": "You’re natural denoisers!"
+  },
+  {
+    "objectID": "slides/00-welcome.html#james-gandolfini",
+    "href": "slides/00-welcome.html#james-gandolfini",
+    "title": "Welcome to STA 199!",
+    "section": "James Gandolfini",
+    "text": "James Gandolfini\n\n\n\n\n\n\n\n\n\nBorn\n9/18/1961\n\n\nDied\n6/19/2013\n\n\nAge in pic\n51\n\n\nClaim to fame\nplayed Tony Soprano"
+  },
+  {
+    "objectID": "slides/00-welcome.html#the-wisdom-of-crowds",
+    "href": "slides/00-welcome.html#the-wisdom-of-crowds",
+    "title": "Welcome to STA 199!",
+    "section": "The wisdom of crowds",
+    "text": "The wisdom of crowds"
+  },
+  {
+    "objectID": "slides/00-welcome.html#celia-cruz",
+    "href": "slides/00-welcome.html#celia-cruz",
+    "title": "Welcome to STA 199!",
+    "section": "Celia Cruz",
+    "text": "Celia Cruz\n\n\n\n\n\n\n\n\n\nBorn\n10/21/1925\n\n\nDied\n7/16/2003\n\n\nAge in pic\n76\n\n\nClaim to fame\nQueen of Salsa"
+  },
+  {
+    "objectID": "slides/00-welcome.html#azúcar",
+    "href": "slides/00-welcome.html#azúcar",
+    "title": "Welcome to STA 199!",
+    "section": "¡Azúcar!",
+    "text": "¡Azúcar!"
+  },
+  {
+    "objectID": "slides/00-welcome.html#our-best-guessers",
+    "href": "slides/00-welcome.html#our-best-guessers",
+    "title": "Welcome to STA 199!",
+    "section": "Our best guessers",
+    "text": "Our best guessers\n\n\n\nTruth\nNo. 1\nNo. 2\nNo. 4\nNo. 4\n\n\n\nWang\n36\n34\n36\n27\n34\n\n\nCrawford\n40?\n38\n42\n33\n40\n\n\nBlake\n82\n77\n74\n80\n72\n\n\nRajan\n48\n50\n50\n45\n53\n\n\nGandolfini\n51\n58\n48\n50\n46\n\n\nCruz\n76\n72\n68\n73\n73\n\n\n\n\n3.66\n3.83\n4.16\n4.16"
+  },
+  {
+    "objectID": "slides/00-welcome.html#whence-ggplot",
+    "href": "slides/00-welcome.html#whence-ggplot",
+    "title": "Welcome to STA 199!",
+    "section": "Whence ggplot?",
+    "text": "Whence ggplot?"
+  },
+  {
+    "objectID": "slides/00-welcome.html#statistical-lessons",
+    "href": "slides/00-welcome.html#statistical-lessons",
+    "title": "Welcome to STA 199!",
+    "section": "Statistical lessons",
+    "text": "Statistical lessons\n\n\nDomain knowledge and modeling assumptions: data do not speak for themselves. You need some subject-matter expertise about what you’re studying, as well as an interpretive lens;\nAre you asking questions the data can actually answer?\nUncertainty has many sources, and in some cases, it may be simply irreducible, no matter how hard you try;\n\nData quality and data cleaning: Data are not gospel. There could be noise and mistakes. Then what?\n\nWisdom of crowds: aggregating many imperfect guesses can do better than any one individual guess."
+  },
+  {
+    "objectID": "slides/00-welcome.html#hard-skills",
+    "href": "slides/00-welcome.html#hard-skills",
+    "title": "Welcome to STA 199!",
+    "section": "Hard skills",
+    "text": "Hard skills\n\nGitHub repositories: cloning and pulling;\nWorking with data in CSV format;\nRendering a Quarto document to get PDFs that seamlessly integrate written text, code, and output;\nUsing ggplot to build up visualizations in layers, like a cake.\n\n\n\n\n\n\n\nGet ready\n\n\nYou will do all of these things on a weekly basis in this course."
+  },
+  {
+    "objectID": "slides/00-welcome.html#this-weeks-tasks",
+    "href": "slides/00-welcome.html#this-weeks-tasks",
+    "title": "Welcome to STA 199!",
+    "section": "This week’s tasks",
+    "text": "This week’s tasks\n\nComplete Lab 0\n\nComputational setup\nGetting to know you survey\n\n\nRead the syllabus and ask questions on Ed\nComplete readings and videos for next class\nAccept your invitation to the GitHub organization pronto!"
   },
   {
     "objectID": "syllabus/syllabus-assignments.html",
@@ -403,7 +725,7 @@
     "href": "syllabus/syllabus-assignments.html#lecture-attendance-5",
     "title": "Assignments and grading",
     "section": "Lecture attendance (5%)",
-    "text": "Lecture attendance (5%)\nXXX",
+    "text": "Lecture attendance (5%)\nAfter Drop/Add ends on Wednesday January 21, lecture attendance and participation will be tracked through in-class questions via Wooclap, which you can access on your laptop or phone. You will earn points for answering questions during lecture, and these points will contribute to your attendance and participation grade.\nThere are 22 lectures after Drop/Add ends. You must participate in Wooclap questions in at least 18 lectures to get full credit on this component. Otherwise your grade on this component will be calculated as the percentage of lectures you attended and participated, e.g., if you attend and participate in 19/22 lectures, you get the full 5% but if you attend and participate in 15/22 lectures, you get (15/22)5% = 3.41%.",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
@@ -414,7 +736,7 @@
     "href": "syllabus/syllabus-assignments.html#labs-8",
     "title": "Assignments and grading",
     "section": "Labs (8%)",
-    "text": "Labs (8%)\nXXX",
+    "text": "Labs (8%)\nIn the first few weeks of the semester, you will be randomly assigned to a team and work with your teammates on an exercise that is due at the end of the lab session. Once project teams are formed, you will work with that team on the lab exercises. You must be present in lab to complete the lab assignment. There is no way to make up for missing a lab.\nYou will submit your lab assignments by pushing your work to your GitHub repository for the lab and submitting the PDF output on Gradescope by the end of your lab session.\n\n\n\n\n\n\nGrace\n\n\n\nThere will be eight graded labs in total. The lowest two lab grades will be dropped at the end of the semester, which means you can miss up to two lab sessions with no penalty.",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
@@ -425,7 +747,7 @@
     "href": "syllabus/syllabus-assignments.html#homework-12",
     "title": "Assignments and grading",
     "section": "Homework (12%)",
-    "text": "Homework (12%)\nXXX",
+    "text": "Homework (12%)\nYou will complete homework assignments individually. You may start working on your homeowork assignment during your lab session, once you complete your lab exercise, but you will need to finish it outside of class. Your homework will be comprised of some practice exercises where you can get immediate feedback from AI tools designed for this course and some graded exercises.\nYou will submit your homework assignments by pushing your work to your GitHub repository for the homework and submitting the PDF output on Gradescope by 11:59pm on Wednesdays.\n\n\n\n\n\n\nGrace\n\n\n\nThere will be eight graded homework assignments in total. The lowest homework grade will be dropped at the end of the semester, which means you can miss one homework assignment with no penalty.",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
@@ -436,7 +758,7 @@
     "href": "syllabus/syllabus-assignments.html#project-15",
     "title": "Assignments and grading",
     "section": "Project (15%)",
-    "text": "Project (15%)\nXXX",
+    "text": "Project (15%)\nThe project aims to apply what you’ve learned throughout the semester to analyze an interesting data-driven research question. The project will be completed in teams, and each team will present their work during a lab session in the latter part of the semester. The write-up will be due on the same day.\nMore information about the project will be provided during the semester.\n\n\n\n\n\n\nWarning\n\n\n\nYou cannot pass this course if you have not completed the project.",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
@@ -446,8 +768,8 @@
     "objectID": "syllabus/syllabus-assignments.html#midterm-exams-20-each",
     "href": "syllabus/syllabus-assignments.html#midterm-exams-20-each",
     "title": "Assignments and grading",
-    "section": "Midterm exams (20% each)",
-    "text": "Midterm exams (20% each)\nXXX",
+    "section": "Midterm Exams (20% each)",
+    "text": "Midterm Exams (20% each)\nThere will be two midterm exams, each with two components:\n\nIn-class (70% of the grade): sit-down, in-person, “pencil-and-paper,” with no technology, and with no outside resources apart from a note sheet that you and only you have prepared (both sides of a single 8.5” x 11” piece of paper);\nTake-home (30% of the grade): each in-class exam will end at 1:00 PM ET on a Thursday. You will then have until 8:00 AM ET the following Monday to work independently on the take-home. This will consist of a data analysis in R, and submission will be identical to our usual labs (Quarto &gt; PDF &gt; Gradescope). The take-home portion of the midterms is completely open resource, but the citation policies of the course still apply, and you are forbidden from discussing the exam with your peers in any way.\n\nUnless we indicate otherwise, you should assume that all course content and materials (videos, readings, lectures, labs, AEs, etc) are testable.\n\n\n\n\n\n\nMissing midterms\n\n\n\nSee the course schedule for dates and times of the exams. Exam dates cannot be changed and no make-up exams will be given.\n\nIf you already know that you cannot take the exams on these dates, you should drop this class;\nIf you miss Exam 1 or 2 due to an illness or similar documented with a Dean’s Excuse, your final exam score will replace the missed exam score.",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
@@ -457,63 +779,8 @@
     "objectID": "syllabus/syllabus-assignments.html#final-exam-20",
     "href": "syllabus/syllabus-assignments.html#final-exam-20",
     "title": "Assignments and grading",
-    "section": "Final exam (20%)",
-    "text": "Final exam (20%)\nXXX",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-assignments.html#application-exercises-5",
-    "href": "syllabus/syllabus-assignments.html#application-exercises-5",
-    "title": "Assignments and grading",
-    "section": "Application exercises (5%)",
-    "text": "Application exercises (5%)\nDuring most lectures, we will work through an application exercise (AE) together. This is essentially a guided mini-lab that shows you how to implement the concepts introduced that day. On-time completion of at least 70% of AEs will result in full credit for the AE component of the final course grade. Here is what that means:\n\nAEs are due at 2PM ET on the day they are introduced;\nSubmit an AE by pushing your work to your GitHub repo;\nAEs are graded for completion; if you make a good faith attempt at all parts of the exercisem you get the credit.\n\n\n\n\n\n\n\nNote\n\n\n\nYou can miss 30% of AEs before it starts affecting your final grade. This policy is meant to smooth over technical mishaps, absences due to illness, athletics, etc. So we generally will not grant extensions or exemptions for AEs. We just let the 30% policy do its thing;",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-assignments.html#labs-15",
-    "href": "syllabus/syllabus-assignments.html#labs-15",
-    "title": "Assignments and grading",
-    "section": "Labs (15%)",
-    "text": "Labs (15%)\nIn labs, you will apply what you have learned in the videos and during lectures to complete data analysis tasks. You may discuss lab assignments with other students; however, the lab should be completed and submitted individually. Lab assignments must be typed up using Quarto, all work must be pushed to your GitHub repository for the lab, and the lab’s PDF output must be submitted on Gradescope by the deadline. Labs are due at 8:30 am ET on the indicated due date (generally the Monday after the lab is first introduced).\n\n\n\n\n\n\nNote\n\n\n\nYour lowest lab score will be dropped. This policy will be applied to the gradebook at the end of the semester, after all labs have been graded/regraded, and before the final exam.",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-assignments.html#midterm-exams-20-each-1",
-    "href": "syllabus/syllabus-assignments.html#midterm-exams-20-each-1",
-    "title": "Assignments and grading",
-    "section": "Midterm Exams (20% each)",
-    "text": "Midterm Exams (20% each)\nThere will be two midterm exams, each with two components:\n\nIn-class (70% of the grade): sit-down, in-person, “pencil-and-paper,” with no technology, and with no outside resources apart from a note sheet that you and only you have prepared (both sides of an 8.5” x 11” piece of paper);\nTake-home (30% of the grade): each in-class exam will end at 1:00 PM ET on a Thursday. You will then have until 8:00 AM ET the following Monday to work independently on the take-home. This will consist of a data analysis in R, and submission will be identical to our usual labs (Quarto &gt; PDF &gt; Gradescope). The take-home portion of the midterms is completely open resource, but the citation policies of the course still apply, and you are forbidden from discussing the exam with your peers in any way.\n\nUnless we indicate otherwise, you should assume that all course content and materials (videos, readings, lectures, labs, AEs, etc) are testable.\n\n\n\n\n\n\nWarning\n\n\n\nSee the course schedule for dates and times of the exams. Exam dates cannot be changed and no make-up exams will be given. If you cannot take the exams on these dates, you should drop this class.",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-assignments.html#final-exam-20-1",
-    "href": "syllabus/syllabus-assignments.html#final-exam-20-1",
-    "title": "Assignments and grading",
     "section": "Final Exam (20%)",
-    "text": "Final Exam (20%)\nOn Tuesday April 29 we have our final exam from 9AM ET to 12PM ET. This exam will be cumulative, and it will have the same format as the in-class components of the midterm exams. The final exam does not have a take-home portion.\n\n\n\n\n\n\nNote\n\n\n\nIf you do better on the final exam than you did on the in-class component of a midterm, we will replace your lowest in-class midterm exam score with your final exam score.",
-    "crumbs": [
-      "Syllabus",
-      "Assignments and grading"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-assignments.html#final-project-20",
-    "href": "syllabus/syllabus-assignments.html#final-project-20",
-    "title": "Assignments and grading",
-    "section": "Final project (20%)",
-    "text": "Final project (20%)\nAfter the first midterm exam, we will assign you to teams of four or five within your lab section. Teams will select a dataset and conduct an original data analysis using the tools from the course. The project has various intermediate deadlines (“Milestones”) that contribute to the project grade, and on the last day of the semester (Wednesday April 23) teams will submit a final written report and a five minute video presentation summarizing the results of the analysis.\n\n\n\n\n\n\nWarning\n\n\n\nIf you do not complete the project, you will not receive a passing grade in this course.",
+    "text": "Final Exam (20%)\nOn Tuesday April 29 we have our final exam from 9AM ET to 12PM ET. This exam will be cumulative, and it will have the same format as the in-class components of the midterm exams. The final exam does not have a take-home portion.\n\n\n\n\n\n\nMissing the final\n\n\n\nSee here for the university’s policies around missing a final exam. If you miss our Final Exam due to an illness or similar documented with a Dean’s Excuse, you will receive an Incomplete and can take the final exam later.\n\n\n\n\n\n\n\n\nGrace\n\n\n\nFor students who take all exams (Midterm 1, Midterm 2, and Final Exam), the final exam score will replace the lower of the two mid-semester exam scores, if the final exam score is higher.",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
@@ -579,7 +846,7 @@
     "href": "syllabus/syllabus-policies.html#late-work-and-extensions",
     "title": "Policies",
     "section": "Late work and extensions",
-    "text": "Late work and extensions\nNo late work will be accepted for application exercises, exams, or projects. Labs may be submitted up to 3 days late. A 5% deduction will be applied for each 24-hour period during which the assignment is late.\nIf circumstances prevent you from completing a lab by the stated due date, you may email the course coordinator, Dr. Mary Knox, before the deadline to waive the late penalty. In your email, you only need to request the waiver; you do not need to provide an explanation. This waiver may only be used once a semester, so only use it for a truly extenuating circumstance.\nIf circumstances have a longer-term impact on your academic performance, please let your academic dean know. They can be a resource. Please let me know if you need help contacting your academic dean.",
+    "text": "Late work and extensions\nThe due dates for homework assignments are there to help you keep up with the course material and to ensure the teaching team can provide feedback in a timely manner. We understand that things come up periodically that could make it difficult to submit an assignment by the deadline. Note that the lowest homework assignment and lowest 2 lab assignments will be dropped to accommodate such circumstances.\n\nHomework assignments may be submitted up to 3 days late. A 5% deduction will be applied for each 24-hour period during which the assignment is late.\nNo late work is accepted for labs since these are designed to be completed in class.\nNo late work is accepted for exams.\nNo late work is accepted for projects.\n\n\n\n\n\n\n\nOne-time late penalty waiver\n\n\n\nIf circumstances prevent you from completing a homework by the stated due date, you may email the course coordinator, Dr. Mary Knox, before the deadline to request to waive the late penalty. In your email, you only need to request the waiver; you do not need to provide an explanation. This waiver may only be used once in the semester, so only use it wisely. The waiver may only be used for homework assignments, not for attendance/participation, labs, exams, or the project.\n\n\nIf circumstances have a longer-term impact on your academic performance, please let your Quad advisor or academic dean know. They can be a resource. Please let me know if you need help contacting them.",
     "crumbs": [
       "Syllabus",
       "Policies"
@@ -590,7 +857,7 @@
     "href": "syllabus/syllabus-policies.html#regrade-requests",
     "title": "Policies",
     "section": "Regrade requests",
-    "text": "Regrade requests\nIf you receive a graded assignment back, and you believe that some part of it was graded incorrectly, you may dispute the grade by submitting a regrade request in Gradescope. Note the following:\n\nYou have one week after you receive a grade to submit a regrade request;\nYou should submit separate regrade requests for each question you wish to dispute, not a single catch-all request;\nRequests will be considered if there was an error in the grade calculation or if a correct answer was mistakenly marked as incorrect;\nRequests to dispute the number of points deducted for an incorrect response will not be considered;\nRegrade requests are not a mechanism for asking for clarification on feedback. Those questions should be brought to office hours;\nNo grades will be changed after the final exam has been administered on Tuesday, April 29;\n\n\n\n\n\n\n\nWarning\n\n\n\nIf you submit a regrade request for part of an assignment, we reserve the right to regrade the entire assignment. As such, a regrade request can result in your grade going up, staying the same, or going down if we determine that, in fact, the original grader was too lenient.",
+    "text": "Regrade requests\nIf you receive a graded assignment back, and you believe that some part of it was graded incorrectly, you may dispute the grade by submitting a regrade request in Gradescope. Note the following:\n\nYou have one week after you receive a grade to submit a regrade request;\nYou should submit separate regrade requests for each question you wish to dispute, not a single catch-all request;\nRequests will be considered if there was an error in the grade calculation or if a correct answer was mistakenly marked as incorrect;\nRequests to dispute the number of points deducted for an incorrect response will not be considered;\nRegrade requests are not a mechanism for asking for clarification on feedback. Those questions should be brought to office hours;\nNo grades will be changed after the final exam has been administered on Friday, May 1;\n\n\n\n\n\n\n\nWarning\n\n\n\nIf you submit a regrade request for part of an assignment, we reserve the right to regrade the entire assignment. As such, a regrade request can result in your grade going up, staying the same, or going down if we determine that, in fact, the original grader was too lenient.",
     "crumbs": [
       "Syllabus",
       "Policies"
@@ -601,7 +868,7 @@
     "href": "syllabus/syllabus-policies.html#attendance",
     "title": "Policies",
     "section": "Attendance",
-    "text": "Attendance\nWe are not tracking attendance, but success in this class and regular attendance are probably highly positively correlated. Furthermore, regular lecture attendance is necessary if you wish to earn full credit for the application exercises. Lastly, some components of the final project require you to complete activities with your teammates during lab. If you do not attend, you will forfeit these points.",
+    "text": "Attendance\nEvery student is expected to attend and participate in lecture and labs and a portion of your grade depends on this. There may be times, however, when you cannot attend class. Lecture recordings are available upon request for students who have an excused absence. See the Lecture recording request policy for more detail. If you miss a lecture, make sure to review the material and complete the application exercise, if applicable, before the next lecture. Labs are dedicated to completing the lab assignment and collaborating with your lab team and there is no way to make up for missing a lab.\nMore details on Trinity attendance policies are available here.",
     "crumbs": [
       "Syllabus",
       "Policies"
@@ -612,29 +879,7 @@
     "href": "syllabus/syllabus-policies.html#accommodations",
     "title": "Policies",
     "section": "Accommodations",
-    "text": "Accommodations\nIf you need accommodations for this class, you will need to register with the Student Disability Access Office (SDAO) and provide them with documentation related to your needs. SDAO will work with you to determine what accommodations are appropriate for your situation. Please note that accommodations are not retroactive and disability accommodations cannot be provided until a Faculty Accommodation Letter has been given to me. Please contact SDAO for more information: sdao@duke.edu or access.duke.edu.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-policies.html#collaboration",
-    "href": "syllabus/syllabus-policies.html#collaboration",
-    "title": "Policies",
-    "section": "Collaboration",
-    "text": "Collaboration\nOnly work that is clearly assigned as teamwork should be completed collaboratively.\n\nYou may discuss lab assignments with other students; however, you may not directly share (or copy) code or write-up with other students. For team assignments, you may collaborate freely within your team. You may discuss the assignment with other teams; however, you may not directly share (or copy) code or write-up with another team. Unauthorized sharing (or copying) of the code or write-up will be considered a violation for all students involved.\nYou may not discuss or otherwise work with others on the exams. Unauthorized collaboration or using unauthorized materials will be considered a violation for all students involved. More details will be given closer to the exam date.\nCollaboration within teams is not only allowed but encouraged for the project. Communication between teams at a high level is also allowed; however, you may not share code or project components across teams.\nOn individual assignments, you may not directly share work (including code) with another student in this class; on team assignments, you may not directly share work (including code) with another team.",
-    "crumbs": [
-      "Syllabus",
-      "Policies"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus-policies.html#use-of-outside-resources-including-ai",
-    "href": "syllabus/syllabus-policies.html#use-of-outside-resources-including-ai",
-    "title": "Policies",
-    "section": "Use of outside resources, including AI",
-    "text": "Use of outside resources, including AI\nYou may make use of any online resources (e.g. StackOverflow) but you must explicitly cite where you obtained any code you directly use (or use as inspiration). Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\nYou should treat generative AI, such as ChatGPT, like other online resources. Two guiding principles govern how to use AI in this course:\n\nCognitive dimension: Working with AI should not reduce your thinking ability. We will practice using AI to facilitate—rather than hinder—learning.\nEthical dimension: Students using AI should be transparent about their use and ensure it aligns with academic integrity.\n\n\n AI tools for code: You may use the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism. Furthermore, you should not directly copy-paste the prompt from an assignment into the chat.\n AI tools for narrative: Unless instructed otherwise, you may not use generative AI to generate a narrative that you then copy-paste verbatim into an assignment or edit and then insert into your assignment.\n\nIn general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you. You are ultimately responsible for the work you turn in; it should reflect your understanding of the course content. Identifying AI-generated content is fairly straightforward. Any code identified as AI-generated but not cited as such and any narrative identified as AI-generated will be considered plagiarism and treated as such.\n\n\n\n\n\n\nCiting an LLM like ChatGPT\n\n\n\nHere are some general guidelines for citing AI-generated content. In this class, if you use something like ChatGPT to help you, you need to cite that by providing a direct link to the conversation you had with the bot, like this: https://chatgpt.com/share/677c4060-1d58-8008-8e47-5caa5556a825. You can generate such a link here:",
+    "text": "Accommodations\n\nAcademic\nIf you need accommodations for this class, you will need to register with the Student Disability Access Office (SDAO) and provide them with documentation related to your needs. SDAO will work with you to determine what accommodations are appropriate for your situation. Please note that accommodations are not retroactive and disability accommodations cannot be provided until a Faculty Accommodation Letter has been given to me. Please contact SDAO for more information: sdao@duke.edu or access.duke.edu.\n\n\n\n\n\n\nMake your appointments in the testing center now!\n\n\n\nAs of FDOC on Wednesday January 7, the midterm and final exam dates are firm, so please make your testing center appointments ASAP.\n\n\n\n\nReligious\nStudents are permitted by university policy to be absent from class to observe a religious holiday. Accordingly, Trinity College of Arts & Sciences and the Pratt School of Engineering have established procedures to be followed by students for notifying their instructors of an absence necessitated by the observance of a religious holiday. Please submit requests for religious accommodations at the beginning of the semester so that we can work to make suitable arrangements well ahead of time. You can find the policy and relevant notification form here: trinity.duke.edu/undergraduate/academic-policies/religious-holidays",
     "crumbs": [
       "Syllabus",
       "Policies"
@@ -645,7 +890,7 @@
     "href": "syllabus/syllabus-policies.html#academic-honesty",
     "title": "Policies",
     "section": "Academic honesty",
-    "text": "Academic honesty\nAs a student in this course, you have agreed to uphold the Duke Community Standard and the practices specific to this course.\n\n\nAny violations in academic honesty standards as outlined in the Duke Community Standard and those specific to this course will automatically results in a zero for the relevant portion or the entire assignment, and will be reported to the Office of Student Conduct & Community Standards for further action. Furthermore:\n\nIf a conduct violation results in a zero on a lab, that zero will not be dropped;\nIf a conduct violation results in a zero on the in-class portion of a midterm, that zero will not be replaced with your final exam score;\nIf a conduct violation of any kind is discovered on any part of an exam, your final letter grade will be permanently reduced (A- down to B+, B+ down to B, etc);\nIf we discover that students are sharing and copying assignment solutions, all students involved will be penalized equally, the sharer the same as the recipient.",
+    "text": "Academic honesty\n\nDuke Community Standard\nAs a student in this course, you have agreed to uphold the Duke Community Standard and the practices specific to this course.\n\n\n\n\nWhat is allowed and what is not?\nPlease abide by the following as you work on assignments in this course:\n\nCollaboration: Only work that is clearly assigned as teamwork should be completed collaboratively. On individual assignments, you may not directly share work (including code) with another student in this class; on team assignments, you may not directly share work (including code) with another team. “Sharing” includes, but is not limited to, messaging, emailing, or otherwise providing your work to another student or team.\n\nLabs: Collaboration in teams for lab assignments is not only allowed but expected. You will work together with your lab team to complete the lab exercise. However, each student must submit their own write-up of the lab exercise, which should reflect their understanding and ideas. It’s expected that lab submission will be similar across team members.\nProject: Similarly, collaboration within teams is not only allowed but expected for the project. The difference is that the project is a single, collaborative work developed by the entire team. It is the team’s responsibility to make sure all components of the project are vetted and revised by all team members, even if some division of labor takes place for first drafts of components. Communication between teams at a high level is also allowed; however, you may not share code or project components across teams.\nHomework: You may discuss homework assignments with other students; however, you may not directly share (or copy) code or write-up with other students. For homework assignments, sharing (or copying) of the code or write-up will be considered a violation for all students involved, regardless of who initiated the sharing.\nExams: You may not discuss or otherwise work with others on the exams (in class and take home). On exams, collaboration, sharing (or copying) of the code, or using unauthorized materials will be considered a violation for all students involved, regardless of who initiated the sharing.\n\nUse of online resources: I am well aware that a huge volume of code is available on the web to solve any number of problems. Unless I explicitly tell you not to use something, the course’s policy is that you may make use of any online resources (e.g., StackOverflow), but you must explicitly cite where you obtained any code you directly use (or use as inspiration). Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism, resulting in an automatic 0 for the relevant portion of the assignment.\nUse of generative artificial intelligence (AI): You should treat generative AI, such as ChatGPT, like other online resources. Two guiding principles govern how to use AI in this course:\n\nCognitive dimension: Working with AI should not reduce your thinking ability. We will practice using AI to facilitate—rather than hinder—learning.\nEthical dimension: Students using AI should be transparent about their use and ensure it aligns with academic integrity.\n\n\n AI tools for code: You may use generative AI tools when you need help with assignments. However you should first attempt to solve the problem yourself. Your submission should not be a copy-paste of AI-generated content – you must edit the content to ensure it reflects your understanding, has your voice and intellectual input, and conforms with course materials, syntax, terminology, and style. Additionally, the prompt you use cannot be copied and pasted directly from the assignment; you must create a prompt yourself.\n\nYou must also explicitly cite work submitted that is based on AI-generated content. You may use these guidelines to cite AI-generated content. The bare minimum citation must include the AI tool you’re using (e.g., ChatGPT), the model the tool uses, the date when you ran the prompt, and a link to the full transcript of the session starting with your prompt. A new citation must be included for each exercise where you used AI tools, with a new link to the full transceript of the interaction.\n\n AI tools for narrative: Unless instructed otherwise, you may not use AI tools to generate a narrative that you then copy-paste verbatim into an assignment or edit and then insert into your assignment.\n AI tools for learning: You’re welcomed to ask AI tools questions that might help your learning and understanding in this course. However you should be critical of the answers you receive, as AI-generated content may not always be accurate or reliable. Use it to supplement your understanding, not as a substitute for learning.\n\nIn general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you. You are ultimately responsible for the work you turn in; it should reflect your understanding of the course content. Identifying AI-generated content is fairly straightforward. Any code identified as AI-generated but not cited as such and any narrative identified as AI-generated will be treated as plagiarism, resulting in an automatic 0 for the relevant portion of the assignment.\n\nIf you are unsure if using a particular resource complies with the academic honesty policy, please ask a teaching team member.\n\n\nWhat happens if you violate the academic honesty policy?\nAny violations in academic honesty standards as outlined in the Duke Community Standard and those specific to this course will automatically results in a zero for the relevant portion or the entire assignment, and will be reported to the Office of Student Conduct & Community Standards for further action. Furthermore:\n\nIf a conduct violation results in a zero on a lab or homework, that zero will not be dropped;\nIf a conduct violation results in a zero on a midterm, that zero will not be replaced with your final exam score;\nIf a conduct violation of any kind is discovered on any part of an exam, your final letter grade will be permanently reduced (A- down to B+, B+ down to B, etc);\nIf we discover that students are sharing and copying assignment solutions, all students involved will be penalized equally, the sharer the same as the recipient.",
     "crumbs": [
       "Syllabus",
       "Policies"
