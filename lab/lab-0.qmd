@@ -159,7 +159,7 @@ You will need to get used to these steps, because you'll probably clone at least
 
 ## 6. Hello STA 199!
 
-Fill out the course "Getting to know you" survey on Canvas: ADD LINK LATER.
+Fill out the course "Getting to know you" survey on Canvas: <https://canvas.duke.edu/courses/72135/quizzes/44911>.
 
 We will use the information collected in this survey for a variety of goals, from inviting you to the course GitHub organization (more on that later) to getting to know you as a person and your course goals and concerns.
 
