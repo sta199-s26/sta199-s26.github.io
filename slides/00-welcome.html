@@ -399,9 +399,9 @@ John Zito
 <ul>
 <li><p>Daily in lecture</p></li>
 <li><p>Tracked for credit, but not based on correctness, only participation (and often they will be questions designed to make you think that might not have a single right answer!)</p></li>
-</ul></section><section id="application-exercises" class="slide level2 smaller"><h2>Application exercises</h2>
+</ul></section><section id="application-exercises" class="slide level2"><h2>Application exercises</h2>
 <ul>
-<li><p>Daily-ish in lecture</p></li>
+<li><p>Lecture meetings will typically involve me babbling for 45 - 60 minutes, and then we work through a guided activity where you try out the latest material for yourself;</p></li>
 <li><p>Not graded, but tracked for feedback on workflow</p></li>
 </ul></section><section id="labs" class="slide level2 smaller"><h2>Labs</h2>
 <ul>
@@ -432,7 +432,7 @@ John Zito
 </ul>
 </li>
 <li><p>Final, in-class only: Closed book, one sheet of notes;</p></li>
-<li><p>Notes for exams: Both sides of a sinlge 8.5” x 11” sheet <strong>must be prepared by you</strong>;</p></li>
+<li><p>Notes for exams: Both sides of a single 8.5” x 11” sheet <strong>prepared by you and you alone</strong>;</p></li>
 <li><p>No extensions or make-ups.</p></li>
 </ul>
 <div class="callout callout-caution callout-titled callout-style-default">
@@ -628,23 +628,24 @@ John Zito
 </section><section id="load-the-data-in" class="slide level2"><h2>Load the data in</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a></a>age_guesses <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/age_guesses.csv"</span>)</span>
-<span id="cb1-3"><a></a>age_guesses</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a></a>age_guesses <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/age_guesses.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 317 × 6
+<pre><code># A tibble: 299 × 6
    celeb1 celeb2 celeb3 celeb4 celeb5 celeb6
     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
- 1     30     33     65     40     50     65
- 2     22     27     65     50     45     50
- 3     33     40     70     75     65     73
- 4     30     45     70     40     50     55
- 5     24     27     52     64     39     56
- 6     34     45     85     56     63     54
- 7     40     30     68     45     35     57
- 8     40     37     62     55     61     66
- 9     27     35     76     65     59     65
-10     30     30     65     40     45     55
-# ℹ 307 more rows</code></pre>
+ 1     32     26     73     68     50     78
+ 2     22     42     75     55     35     77
+ 3     22     31     79     40     43     68
+ 4     30     28     65     40     45     70
+ 5     35     39     67     54     49     60
+ 6     30     48     67     37     45     70
+ 7     49     42     78     47     62     75
+ 8     28     35     70     50     60     70
+ 9     31     36     62     43     41     68
+10     26     33     67     60     42     71
+# ℹ 289 more rows</code></pre>
 </div>
 </div>
 </section><section id="anyone-know-who-this-is" class="slide level2"><h2>Anyone know who this is?</h2>
@@ -687,7 +688,7 @@ John Zito
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">ggplot</span>(age_guesses, <span class="fu">aes</span>(<span class="at">x =</span> celeb1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -698,7 +699,7 @@ John Zito
 <span id="cb4-2"><a></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
+<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -711,7 +712,7 @@ John Zito
 <span id="cb5-4"><a></a>       <span class="at">x =</span> <span class="st">"Guess"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -725,7 +726,7 @@ John Zito
 <span id="cb6-5"><a></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">36</span>, <span class="at">color =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
+<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -741,7 +742,7 @@ John Zito
 <pre><code># A tibble: 1 × 2
   average  sdev
     &lt;dbl&gt; &lt;dbl&gt;
-1    28.4  4.59</code></pre>
+1    29.1  5.01</code></pre>
 </div>
 </div>
 </section><section id="anyone-know-who-this-is-1" class="slide level2"><h2>Anyone know who this is?</h2>
@@ -786,7 +787,7 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
+<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -833,7 +834,7 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
+<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -873,7 +874,7 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -919,7 +920,7 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
+<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -965,7 +966,7 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
+<figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
 </figure>
 </div>
 </div>
