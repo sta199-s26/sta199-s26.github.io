@@ -6,13 +6,6 @@ format: revealjs
 auto-stretch: false
 ---
 
-```{r}
-#| echo: false 
-#| message: false 
-#| warning: false
-library(tidyverse)
-age_guesses <- read_csv("data/age_guesses.csv")
-```
 
 ## Teaching team: a glamorous assemblage {.small}
 
@@ -67,23 +60,88 @@ John Zito
 :::
 :::
 
-## What are we studying? {.large}
+. . .
 
-::: callout-important
+**Office hours begin Monday January 12.**
+
+## What are we studying?
+
+First half:
+
+::: callout-note
 ## Data science
 
-Transforming messy, incomplete, imperfect data into knowledge.
+- Transforming messy, incomplete, imperfect data into *knowledge*;
+- *Knowledge* often takes the form of pictures and a concise set of numerical summaries.
 :::
 
-::: callout-important
+. . .
+
+Second half:
+
+::: callout-warning
 ## Statistical thinking
 
 Quantifying our uncertainty about that knowledge.
 :::
 
-## The data science life cycle
+## Imagine this dialog {.small}
 
-![](images/00/data-science-cycle.001.png)
+. . .
+
+[**Campaign manager**]{style="color:blue;"}: What is the probability that our candidate wins the election?
+
+. . .
+
+(A flurry of analysis takes place.)
+
+. . .
+
+[**Data scientist**]{style="color:red;"}: Our best guess is 54%.
+
+. . .
+
+[**Campaign manager**]{style="color:blue;"}: How reliable is that estimate? How confident are we in that? What's the margin of error?
+
+
+. . .
+
+::: columns
+::: {.column width="50%"}
+
+**Parallel Universe 1**
+
+[**Data scientist**]{style="color:red;"}: It's 54% give or take 3%.
+
+:::
+
+::: {.column width="50%"}
+
+:::  {.fragment}
+
+**Parallel Universe 2**
+
+[**Data scientist**]{style="color:red;"}: It's 54% give or take 20%.
+
+:::
+
+:::
+:::
+
+. . .
+
+::: callout-note
+## It's all about decision-making under uncertainty
+
+The manager is going to make wildly different decisions about campaign strategy and spending depending on how uncertain the environment is.
+:::
+
+
+## The shape of the course
+
+![](images/00/sta199-s26-shape.png){align="center"}
+
+## Questions? {.larger}
 
 # Syllabus highlights
 
@@ -106,53 +164,102 @@ All linked from the course website:
 ## Activities {.smaller}
 
 -   Introduce new content and prepare for lectures by watching the videos and completing the readings
--   Attend and actively participate in lectures and labs, office hours, team meetings
--   Practice applying statistical concepts and computing with application exercises during lecture, graded for attempting
+-   Attend and actively participate in lectures (and answer questions for participation credit) and labs, office hours, team meetings
+-   Practice applying statistical concepts and computing with application exercises during lecture
 -   Put together what you've learned to analyze real-world data
-    -   Lab assignments (7 or 8 throughout semester)
-    -   Exams (midterm x 2 + final)
+    -   Lab assignments
+    -   Homework assignments
+    -   Exams
     -   Term project completed in teams
+    
+## Grading {.smaller}
+
+| Category              | Percentage |
+|-----------------------|------------|
+| Lectures (attendance + participation) | 5%         |
+| Labs                  | 8%         |
+| HW                    | 12%         |
+| Project               | 15%        |
+| Midterm 1                | 20%        |
+| Midterm 2                | 20%        |
+| Final                 | 20%        |
+
+See course syllabus for how the final letter grade will be determined.
+
+## Wiggle room
+
+- After Drop/Add, you can miss 4 of 22 lectures and still receive full attendance credit;
+- We drop the two lowest labs;
+- We drop the lowest homework;
+- We replace the lowest midterm score with your final exam score (if it’s better).
+
+## Attendance and participation {.smaller}
+
+-   Daily in lecture
+
+-   Tracked for credit, but not based on correctness, only participation (and often they will be questions designed to make you think that might not have a single right answer!)
 
 ## Application exercises
 
--   Daily-ish in lecture
+-   Lecture meetings will typically involve me babbling for 45 - 60 minutes, and then we work through a guided activity where you try out the latest material for yourself;
 
--   "Graded" for attempt, not accuracy
+-   Not graded, but tracked for feedback on workflow
 
--   Practice Weeks 1 + 2, graded thereafter
+## Labs {.smaller}
 
--   At least one commit by 2 pm of the day of lecture
+-   Hands-on practice with data analysis
 
--   Turn in at least 70% for full credit
+-   A single exercise per lab, graded based on being there and turning in something reasonable + correctness
 
-## Labs
+-   Completed in-person, in lab, in teams
 
--   Start in lab session
+-   Teams randomized each week until project teams assigned
 
--   Complete at home
+-   Developed collaboratively, but turned in individually by the end of the lab session
 
--   Due within a week
+-   8 throughout semester, two lowest scores dropped
 
--   Discussion with classmates ok, copying not ok!
+-   No late work accepted
 
--   Lowest score dropped
+## Homework {.smaller}
+
+-   Hands-on practice with data analysis
+
+-   Some questions for practice with instant feedback by AI
+
+-   Some questions to be graded by humans for correctness
+
+-   Can start in lab if time permits, but completed at home
+
+-   Can consult with course team and peers, but completed and turned in individually by the end of the week
+
+-   8 throughout semester, lowest score dropped
+
+-   Up to 3 days late (-5% per day), no late work accepted after that
+
+-   One-time late penalty waiver: Can be used on any homework assignment, no questions asked, must be requested from Dr. Knox before the deadline
 
 ## Exams {.smaller}
 
--   Three exams, each 20%
+-   Two midterm exams during semester, comprised of two parts:
 
--   Midterm comprised of two parts:
+    -   (80%) In-class: 75 minute in-class exam. Closed book, one sheet of notes;
 
-    -   In-class: 75 minute in-class exam. Closed book, one sheet of notes (“cheat sheet”) – 70% of the grade.
+    -   (20%) Take-home: Follow from the in class exam and focus on the analysis of a dataset introduced in the take home exam.
 
-    -   Take-home: Follow from the in class exam and focus on the analysis of a dataset introduced in the take home exam – 30% of the grade.
+-   Final, in-class only: Closed book, one sheet of notes;
 
--   Final in-class only (Apr 29, 9am - 12pm): Closed book, one sheet of notes (“cheat sheet”).
+- Notes for exams: Both sides of a single 8.5" x 11" sheet **prepared by you and you alone**;
 
--   "Cheat sheet": No larger than 8.5" x 11", both sides, **must be prepared by you**.
+- No extensions or make-ups.
 
 ::: callout-caution
 Exam dates cannot be changed and no make-up exams will be given. If you can’t take the exams on these dates, you should drop this class.
+:::
+
+::: callout-note
+## If you need testing accomodations
+Make sure I get a letter, and make your appointments in the Testing Center now.
 :::
 
 ## Project {.smaller}
@@ -161,11 +268,11 @@ Exam dates cannot be changed and no make-up exams will be given. If you can’t 
 
 -   Teamwork
 
--   Five milestones, interim deadline throughout semester
+-   Interim deadlines throughout semester
 
--   Final milestone: Presentation (video) and write-up
+-   Final milestone: Presentation in lab and write-up
 
--   Presentations submitted as videos
+-   Must be in lab, in-person to present
 
 -   Peer review between teams for content, peer evaluation within teams for contribution
 
@@ -175,106 +282,24 @@ Exam dates cannot be changed and no make-up exams will be given. If you can’t 
 Project due date cannot be changed. You must complete the project to pass this class.
 :::
 
-## Teams of 4 - 5 {.smaller}
+## Teams {.smaller}
 
--   Assigned by us *within your lab section*
--   Project
--   Peer evaluation during teamwork and after completion
+-   Randomized at first for weekly labs
+
+-   Then selected by you or assigned by me if you don't express a preference for project and remaining labs
+
 -   Expectations and roles
     -   Everyone is expected to contribute equal *effort*
     -   Everyone is expected to understand *all* code turned in
     -   Individual contribution evaluated by peer evaluation, commits, etc.
 
-## Grading
+-   For the project: Peer evaluation during teamwork and after completion
 
-| Category              | Percentage |
-|-----------------------|------------|
-| Application Exercises | 5%         |
-| Labs                  | 15%        |
-| Midterm 1             | 20%        |
-| Midterm 2             | 20%        |
-| Final                 | 20%        |
-| Project               | 20%        |
-
-No specific points allocated to attendance, but the application exercise score is implicitly tied to attendance.
-
-See course syllabus for how the final letter grade will be determined.
-
-## Wiggle room
-
--   You only have to complete 70% of the AEs to receive full credit;
--   We drop the lowest lab score;
--   We replace the lowest *in-class* midterm score with your final exam score (if it's better).
-
-## Support
-
--   Help from humans:
-    -   Attend office hours
-    -   Ask and answer questions on the discussion forum
--   Reserve email for questions on personal matters and/or grades
--   Read the course support page
-
-## Announcements
-
--   Posted on Canvas (Announcements tool) and sent via email, be sure to check both regularly
--   I'll assume that you've read an announcement by the next "business" day
--   I'll (try my best to) send a weekly update announcement each Friday, outlining the plan for the following week and reminding you what you need to do to prepare, practice, and perform
-
-## Accessibility
-
--   The [Student Disability Access Office (SDAO)](https://access.duke.edu/students) is available to ensure that students are able to engage with their courses and related assignments.
-
--   I am committed to making all course materials accessible and I'm always learning how to do this better. If any course component is not accessible to you in any way, please don't hesitate to let me know.
-
-::: callout-note
-## If you need testing accommodations
-
-Make sure I get a letter, and make your appointments in the Testing Center now.
-:::
-
-## Late work, waivers, lecture recordings, regrades...
-
--   We have policies!
--   Read about them on the [course syllabus](https://sta199-s25.github.io/syllabus/syllabus_policies.html) and refer back to them when you need it
-
-## Collaboration
-
--   **Labs**: discussing and helping is fine. Sharing your solutions and copying others is not;
-
--   **Exams**: collaboration of any kind is completely forbidden on any part of any exam;
-
--   **Projects**: collaboration of any kind is enthusiastically encouraged *within your team*. Between teams, it's the same as labs; do not directly share your stuff or copy off of others.
-
-## Use of AI tools
-
--   {{< fa check >}} **AI tools for code:**
-
-    -   Sure, but be careful/critical! Working code `!=` correct/good code.
-    -   Must explicitly cite with a direct url linking to the conversation you had.
-
--   {{< fa ban >}} **AI tools for narrative:** Absolutely not!
-
--   {{< fa check >}} **AI tools for learning:** Sure, but be careful/critical!
-
-## Academic integrity
-
-> To uphold the Duke Community Standard:
->
-> -   I will not lie, cheat, or steal in my academic endeavors;
->
-> -   I will conduct myself honorably in all my endeavors; and
->
-> -   I will act if the Standard is compromised.
-
--   Zeros from conduct violations will not be dropped or replaced;
-
--   If people are copying, sharer and recipients penalized equally. It does not matter how well-intentioned everyone was;
-
--   If we discover violations, they go straight to the conduct office.
+## Questions? {.larger}
 
 # A game
 
-## How old is this person? {.larger}
+## How old is this person? {.large}
 
 ::: {layout="[[-1], [1], [-1]]"}
 Ethel Merman
@@ -297,7 +322,7 @@ Ethel Merman
 :::
 :::
 
-## How old is this person? {.larger}
+## How old is this person? {.large}
 
 ::: {layout="[[-1], [1], [-1]]"}
 Megan Pete
@@ -314,12 +339,12 @@ Megan Pete
 |               |                                                       |
 |---------------|-------------------------------------------------------|
 | Born          | February 15, 1995                                     |
-| Age           | 29                                                    |
+| Age           | 30                                                    |
 | Claim to fame | [Rapper](https://youtu.be/4Fhm9ulCwUU?feature=shared) |
 :::
 :::
 
-## How old is this person? {.larger}
+## How old is this person? {.large}
 
 ::: {layout="[[-1], [1], [-1]]"}
 봉준호
@@ -336,7 +361,7 @@ Megan Pete
 |               |                                         |
 |---------------|-----------------------------------------|
 | Born          | September 14, 1969                      |
-| Age           | 55                                      |
+| Age           | 56                                      |
 | Claim to fame | Directed *Parasite*, *Snowpiercer*, etc |
 :::
 :::
@@ -349,23 +374,49 @@ When the picture was taken, how old was the person?
 :::
 
 ::: {.column width="50%"}
-![](images/00/age_qr.png){fig-align="center"}
+{{< qrcode https://forms.gle/L7ZFfZ7gtSXehbMB8 width=300 height=300 >}}
 :::
 :::
 
-## Managing expectations
+# Let's see how you did
 
-The stakes are low today. We're just getting our feet wet and working out the kinks:
+## The data science life cycle
 
-::: incremental
--   It's the first time all 300+ of us are attempting to access our containers simultaneously. It may choke;
+![](images/00/data-science-cycle.001.png)
 
--   If you get stuck on a loading screen of some kind, be patient and let it do its thing. Refreshing, reloading, etc will just amplify our collective problem;
+## The data science life cycle
 
--   If yours never loads, no big deal. Just sit back and watch me, or follow along on a neighbor's screen;
+![](images/00/data-science-cycle-import.png)
 
--   Even if yours *does* load, you're welcome to just watch.
+
+## Load the data in 
+
+```{r}
+#| message: false 
+#| warning: false
+library(tidyverse)
+age_guesses <- read_csv("data/age_guesses.csv")
+```
+
+```{r}
+#| echo: false
+age_guesses |>
+  select(celeb1, celeb2, celeb3, celeb4, celeb5, celeb6)
+```
+
+
+## Anyone know who this is?
+
+::: {.columns .v-center-container}
+::: {.column width="40%"}
+![](images/00/celeb-1.png){fig-align="center" width="80%"}
 :::
+
+::: {.column width="60%"}
+
+:::
+:::
+
 
 ## Yuja Wang
 
@@ -383,20 +434,75 @@ The stakes are low today. We're just getting our feet wet and working out the ki
 :::
 :::
 
-## I'm sure she'd be pleased
+## The data science life cycle
+
+![](images/00/data-science-cycle-visualize.png)
+
+## Baby's first graphic {.medium}
 
 ```{r}
-#| echo: false
+#| warning: false
+#| message: false
+ggplot(age_guesses, aes(x = celeb1))
+```
+
+## Baby's first graphic {.medium}
+
+```{r}
+#| warning: false
+#| message: false
+ggplot(age_guesses, aes(x = celeb1)) + 
+  geom_histogram()
+```
+
+## Baby's first graphic {.medium}
+
+```{r}
+#| warning: false
+#| message: false
+ggplot(age_guesses, aes(x = celeb1)) + 
+  geom_histogram() + 
+  labs(title = "sta199-s26 students guess Yuja Wang's age",
+       x = "Guess")
+```
+
+## Baby's first graphic {.medium}
+
+```{r}
+#| warning: false
+#| message: false
+ggplot(age_guesses, aes(x = celeb1)) + 
+  geom_histogram() + 
+  labs(title = "sta199-s26 students guess Yuja Wang's age",
+       x = "Guess") + 
+  geom_vline(xintercept = 36, color = "red")
+```
+
+## Concise numerical summaries {.scrollable}
+
+```{r}
 #| warning: false
 #| message: false
 
-ggplot(age_guesses, aes(x = celeb1)) + 
-  geom_histogram() + 
-  labs(title = "199-s25 students guess Yuja Wang's age",
-       x = "Guess") + 
-  geom_vline(xintercept = 36, color = "red")
+age_guesses |>
+  summarize(
+    average = mean(celeb1),
+    sdev = sd(celeb1)
+  )
 
 ```
+
+## Anyone know who this is?
+
+::: {.columns .v-center-container}
+::: {.column width="40%"}
+![](images/00/celeb-2.jpg){fig-align="center"}
+:::
+
+::: {.column width="60%"}
+
+:::
+:::
 
 ## Joan Crawford
 
@@ -417,7 +523,7 @@ A secret she took to her grave:
 :::
 :::
 
-## We'll never know...
+## Joan Crawford
 
 ```{r}
 #| echo: false
@@ -426,12 +532,24 @@ A secret she took to her grave:
 
 ggplot() +
   geom_histogram(data = age_guesses, aes(x = celeb2)) + 
-  labs(title = "199-s25 students guess Joan Crawford's age",
+  labs(title = "sta199-s26 students guess Joan Crawford's age",
        x = "Guess") + 
   geom_rect(aes(xmin = 38, xmax = 42, ymin = 0, ymax = Inf), 
             alpha = 0.5, fill = "red")
 
 ```
+
+## Anyone know who this is?
+
+::: {.columns .v-center-container}
+::: {.column width="50%"}
+![](images/00/celeb-3.jpg){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+
+:::
+:::
 
 ## Eubie Blake
 
@@ -452,7 +570,7 @@ His actual birthday was not known at the time:
 :::
 :::
 
-## lol that bar at 86
+## Eubie Blake
 
 ```{r}
 #| echo: false
@@ -461,7 +579,7 @@ His actual birthday was not known at the time:
 
 ggplot(age_guesses, aes(x = celeb3)) + 
   geom_histogram() + 
-  labs(title = "199-s25 students guess Eubie Blake's age",
+  labs(title = "sta199-s26 students guess Eubie Blake's age",
        x = "Guess") + 
   geom_vline(xintercept = 82, color = "red")
 
@@ -496,7 +614,7 @@ ggplot(age_guesses, aes(x = celeb3)) +
 :::
 :::
 
-## You're natural denoisers!
+## Raghuram Rajan
 
 ```{r}
 #| echo: false
@@ -505,30 +623,42 @@ ggplot(age_guesses, aes(x = celeb3)) +
 
 ggplot(age_guesses, aes(x = celeb4)) + 
   geom_histogram() + 
-  labs(title = "199-s25 students guess Raghuram Rajan's age",
+  labs(title = "sta199-s26 students guess Raghuram Rajan's age",
        x = "Guess") + 
   geom_vline(xintercept = 48, color = "red")
 
 ```
 
-## James Gandolfini
+## Anyone know who this is?
 
 ::: {.columns .v-center-container}
 ::: {.column width="39%"}
-![](images/00/celeb5.png){fig-align="center"}
+![](images/00/celeb-5.png){fig-align="center"}
+:::
+
+::: {.column width="61%"}
+
+:::
+:::
+
+## Vincent Price
+
+::: {.columns .v-center-container}
+::: {.column width="39%"}
+![](images/00/celeb-5.png){fig-align="center"}
 :::
 
 ::: {.column width="61%"}
 |               |                                                                    |
 |------------------------------------|------------------------------------|
-| Born          | 9/18/1961                                                          |
-| Died          | 6/19/2013                                                          |
-| Age in pic    | 51                                                                 |
-| Claim to fame | [played Tony Soprano](https://youtu.be/fOYJVL9bzk4?feature=shared) |
+| Born          | 5/27/1911                                                          |
+| Died          | 10/25/1993                                                          |
+| Age in pic    | 38 - 39                                                                 |
+| Claim to fame | [Horror actor](https://youtu.be/RpEfX1IKEak?si=s7QEYjjqJj1smJSl) |
 :::
 :::
 
-## The wisdom of crowds
+## Vincent Price
 
 ```{r}
 #| echo: false
@@ -537,11 +667,23 @@ ggplot(age_guesses, aes(x = celeb4)) +
 
 ggplot(age_guesses, aes(x = celeb5)) + 
   geom_histogram() + 
-  labs(title = "199-s25 students guess James Gandolfini's age",
+  labs(title = "sta199-s26 students guess Vincent Price's age",
        x = "Guess") + 
-  geom_vline(xintercept = 51, color = "red")
+  geom_vline(xintercept = 38.5, color = "red")
 
 ```
+
+## Anyone know who this is?
+
+::: {.columns .v-center-container}
+::: {.column width="40%"}
+![](images/00/celeb6.png){fig-align="center"}
+:::
+
+::: {.column width="60%"}
+
+:::
+:::
 
 ## Celia Cruz
 
@@ -560,7 +702,7 @@ ggplot(age_guesses, aes(x = celeb5)) +
 :::
 :::
 
-## ¡Azúcar!
+## Celia Cruz
 
 ```{r}
 #| echo: false
@@ -569,69 +711,37 @@ ggplot(age_guesses, aes(x = celeb5)) +
 
 ggplot(age_guesses, aes(x = celeb6)) + 
   geom_histogram() + 
-  labs(title = "199-s25 students guess Celia Cruz's age",
+  labs(title = "sta199-s26 students guess Celia Cruz's age",
        x = "Guess") + 
   geom_vline(xintercept = 76, color = "red")
 
 ```
 
-## Our best guessers
 
-|            | Truth   | No. 1 | No. 2 | No. 4 | No. 4 |
-|------------|---------|-------|-------|-------|-------|
-| Wang       | **36**  | 34    | 36    | 27    | 34    |
-| Crawford   | **40?** | 38    | 42    | 33    | 40    |
-| Blake      | **82**  | 77    | 74    | 80    | 72    |
-| Rajan      | **48**  | 50    | 50    | 45    | 53    |
-| Gandolfini | **51**  | 58    | 48    | 50    | 46    |
-| Cruz       | **76**  | 72    | 68    | 73    | 73    |
-|            |         | 3.66  | 3.83  | 4.16  | 4.16  |
+# Wrap up
 
-## Whence `ggplot`?
+## Silly exercise, serious themes {.scrollable .medium}
 
-::: {.columns .v-center-container}
-::: {.column width="50%"}
-![](images/00/gg.jpg){width="80%"}
-:::
-
-::: {.column width="50%"}
-![](images/00/cake.jpg){width="80%"}
-:::
-:::
-
-# Silly exercise, serious themes
-
-## Statistical lessons
-
+::: incremental
 -   **Domain knowledge and modeling assumptions**: data do not speak for themselves. You need some subject-matter expertise about what you're studying, as well as an interpretive lens;
+
+    - Not all models or assumptions are created equal!
+
 -   Are you asking questions the data can actually answer?
 -   Uncertainty has many sources, and in some cases, it may be simply irreducible, no matter how hard you try;
 -   **Data quality and data cleaning**: Data are not gospel. There could be noise and mistakes. Then what?
 -   **Wisdom of crowds**: aggregating many imperfect guesses can do better than any one individual guess.
-
-## Hard skills
-
--   GitHub repositories: cloning and pulling;
--   Working with data in CSV format;
--   Rendering a Quarto document to get PDFs that seamlessly integrate written text, code, and output;
--   Using `ggplot` to build up visualizations in layers, like a cake.
-
-::: callout-note
-## Get ready
-
-You will do all of these things on a weekly basis in this course.
 :::
-
-# Wrap up
 
 ## This week's tasks
 
--   Complete Lab 0
-    -   Computational setup
-    -   Getting to know you survey
--   Read the syllabus and ask questions on Ed
--   Complete readings and videos for next class
--   Accept your invitation to the GitHub organization pronto!
+-   Attend Lab 0 tomorrow (**very important!**):
+    -   Computational setup;
+    -   Getting to know you survey;
+-   Read the syllabus and ask questions on Ed;
+-   Complete readings and videos for next class;
+-   Send me SDAO letters and schedule testing center appointments.
 
+## Questions? {.larger}
 
 
