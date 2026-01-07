@@ -414,21 +414,35 @@
     "href": "slides/00-welcome.html#teaching-team-a-glamorous-assemblage",
     "title": "Welcome to STA 199!",
     "section": "Teaching team: a glamorous assemblage",
-    "text": "Teaching team: a glamorous assemblage\n\n\nBethany Akinola\nFederico Arboleda\nJannis Bolik\nArijit Dey\nCael Elmore\nOliver Gao\nNatasha Harris\nDwija Kakkad\nAbuzar Khudaverdiyeva\nHyunjin Lee\nLiane Ma\n\nChelsea Nguyen\nMax Niu\nTory Norton\nPatrick Pham\nKenna Roberts\nKatie Solarz\nSarah Wu\nEdward Zhang\nLisa Zhang\nMary Knox\nJohn Zito"
+    "text": "Teaching team: a glamorous assemblage\n\n\nBethany Akinola\nFederico Arboleda\nJannis Bolik\nArijit Dey\nCael Elmore\nOliver Gao\nNatasha Harris\nDwija Kakkad\nAbuzar Khudaverdiyeva\nHyunjin Lee\nLiane Ma\n\nChelsea Nguyen\nMax Niu\nTory Norton\nPatrick Pham\nKenna Roberts\nKatie Solarz\nSarah Wu\nEdward Zhang\nLisa Zhang\nMary Knox\nJohn Zito\n\n\nOffice hours begin Monday January 12."
   },
   {
     "objectID": "slides/00-welcome.html#what-are-we-studying",
     "href": "slides/00-welcome.html#what-are-we-studying",
     "title": "Welcome to STA 199!",
     "section": "What are we studying?",
-    "text": "What are we studying?\n\n\n\n\n\n\nData science\n\n\nTransforming messy, incomplete, imperfect data into knowledge.\n\n\n\n\n\n\n\n\n\nStatistical thinking\n\n\nQuantifying our uncertainty about that knowledge."
+    "text": "What are we studying?\nFirst half:\n\n\n\n\n\n\nData science\n\n\n\nTransforming messy, incomplete, imperfect data into knowledge;\n\nKnowledge often takes the form of pictures and a concise set of numerical summaries.\n\n\n\n\n\nSecond half:\n\n\n\n\n\n\nStatistical thinking\n\n\nQuantifying our uncertainty about that knowledge."
   },
   {
-    "objectID": "slides/00-welcome.html#the-data-science-life-cycle",
-    "href": "slides/00-welcome.html#the-data-science-life-cycle",
+    "objectID": "slides/00-welcome.html#imagine-this-dialog",
+    "href": "slides/00-welcome.html#imagine-this-dialog",
     "title": "Welcome to STA 199!",
-    "section": "The data science life cycle",
-    "text": "The data science life cycle"
+    "section": "Imagine this dialog",
+    "text": "Imagine this dialog\n\nCampaign manager: What is the probability that our candidate wins the election?\n\n\n(A flurry of analysis takes place.)\n\n\nData scientist: Our best guess is 54%.\n\n\nCampaign manager: How reliable is that estimate? How confident are we in that? What’s the margin of error?\n\n\n\n\nParallel Universe 1\nData scientist: It’s 54% give or take 3%.\n\n\nParallel Universe 2\nData scientist: It’s 54% give or take 20%.\n\n\n\n\n\n\n\n\n\n\nIt’s all about decision-making under uncertainty\n\n\nThe manager is going to make wildly different decisions about campaign strategy and spending depending on how uncertain the environment is."
+  },
+  {
+    "objectID": "slides/00-welcome.html#the-shape-of-the-course",
+    "href": "slides/00-welcome.html#the-shape-of-the-course",
+    "title": "Welcome to STA 199!",
+    "section": "The shape of the course",
+    "text": "The shape of the course"
+  },
+  {
+    "objectID": "slides/00-welcome.html#questions",
+    "href": "slides/00-welcome.html#questions",
+    "title": "Welcome to STA 199!",
+    "section": "Questions?",
+    "text": "Questions?"
   },
   {
     "objectID": "slides/00-welcome.html#homepage",
@@ -442,112 +456,84 @@
     "href": "slides/00-welcome.html#course-toolkit",
     "title": "Welcome to STA 199!",
     "section": "Course toolkit",
-    "text": "Course toolkit\nAll linked from the course website:\n\nGitHub organization: github.com/sta199-s25\n\nRStudio containers: cmgr.oit.duke.edu/containers\n\nCommunication: Ed Discussion\nAssignment submission and feedback: Gradescope"
+    "text": "Course toolkit\nAll linked from the course website:\n\nGitHub organization: github.com/sta199-s26\n\nRStudio containers: cmgr.oit.duke.edu/containers\n\nCommunication: Ed Discussion\nAssignment submission and feedback: Gradescope"
   },
   {
     "objectID": "slides/00-welcome.html#activities",
     "href": "slides/00-welcome.html#activities",
     "title": "Welcome to STA 199!",
     "section": "Activities",
-    "text": "Activities\n\nIntroduce new content and prepare for lectures by watching the videos and completing the readings\nAttend and actively participate in lectures and labs, office hours, team meetings\nPractice applying statistical concepts and computing with application exercises during lecture, graded for attempting\nPut together what you’ve learned to analyze real-world data\n\nLab assignments (7 or 8 throughout semester)\nExams (midterm x 2 + final)\nTerm project completed in teams"
-  },
-  {
-    "objectID": "slides/00-welcome.html#application-exercises",
-    "href": "slides/00-welcome.html#application-exercises",
-    "title": "Welcome to STA 199!",
-    "section": "Application exercises",
-    "text": "Application exercises\n\nDaily-ish in lecture\n“Graded” for attempt, not accuracy\nPractice Weeks 1 + 2, graded thereafter\nAt least one commit by 2 pm of the day of lecture\nTurn in at least 70% for full credit"
-  },
-  {
-    "objectID": "slides/00-welcome.html#labs",
-    "href": "slides/00-welcome.html#labs",
-    "title": "Welcome to STA 199!",
-    "section": "Labs",
-    "text": "Labs\n\nStart in lab session\nComplete at home\nDue within a week\nDiscussion with classmates ok, copying not ok!\nLowest score dropped"
-  },
-  {
-    "objectID": "slides/00-welcome.html#exams",
-    "href": "slides/00-welcome.html#exams",
-    "title": "Welcome to STA 199!",
-    "section": "Exams",
-    "text": "Exams\n\nThree exams, each 20%\n\nMidterm comprised of two parts:\n\nIn-class: 75 minute in-class exam. Closed book, one sheet of notes (“cheat sheet”) – 70% of the grade.\nTake-home: Follow from the in class exam and focus on the analysis of a dataset introduced in the take home exam – 30% of the grade.\n\n\nFinal in-class only (Apr 29, 9am - 12pm): Closed book, one sheet of notes (“cheat sheet”).\n“Cheat sheet”: No larger than 8.5” x 11”, both sides, must be prepared by you.\n\n\n\n\n\n\n\nCaution\n\n\nExam dates cannot be changed and no make-up exams will be given. If you can’t take the exams on these dates, you should drop this class."
-  },
-  {
-    "objectID": "slides/00-welcome.html#project",
-    "href": "slides/00-welcome.html#project",
-    "title": "Welcome to STA 199!",
-    "section": "Project",
-    "text": "Project\n\nDataset of your choice, method of your choice\nTeamwork\nFive milestones, interim deadline throughout semester\nFinal milestone: Presentation (video) and write-up\nPresentations submitted as videos\nPeer review between teams for content, peer evaluation within teams for contribution\nSome lab sessions allocated to project progress\n\n\n\n\n\n\n\nCaution\n\n\nProject due date cannot be changed. You must complete the project to pass this class."
-  },
-  {
-    "objectID": "slides/00-welcome.html#teams-of-4---5",
-    "href": "slides/00-welcome.html#teams-of-4---5",
-    "title": "Welcome to STA 199!",
-    "section": "Teams of 4 - 5",
-    "text": "Teams of 4 - 5\n\nAssigned by us within your lab section\n\nProject\nPeer evaluation during teamwork and after completion\nExpectations and roles\n\nEveryone is expected to contribute equal effort\n\nEveryone is expected to understand all code turned in\nIndividual contribution evaluated by peer evaluation, commits, etc."
+    "text": "Activities\n\nIntroduce new content and prepare for lectures by watching the videos and completing the readings\nAttend and actively participate in lectures (and answer questions for participation credit) and labs, office hours, team meetings\nPractice applying statistical concepts and computing with application exercises during lecture\nPut together what you’ve learned to analyze real-world data\n\nLab assignments\nHomework assignments\nExams\nTerm project completed in teams"
   },
   {
     "objectID": "slides/00-welcome.html#grading",
     "href": "slides/00-welcome.html#grading",
     "title": "Welcome to STA 199!",
     "section": "Grading",
-    "text": "Grading\n\n\nCategory\nPercentage\n\n\n\nApplication Exercises\n5%\n\n\nLabs\n15%\n\n\nMidterm 1\n20%\n\n\nMidterm 2\n20%\n\n\nFinal\n20%\n\n\nProject\n20%\n\n\n\nNo specific points allocated to attendance, but the application exercise score is implicitly tied to attendance.\nSee course syllabus for how the final letter grade will be determined."
+    "text": "Grading\n\n\nCategory\nPercentage\n\n\n\nLectures (attendance + participation)\n5%\n\n\nLabs\n8%\n\n\nHW\n12%\n\n\nProject\n15%\n\n\nMidterm 1\n20%\n\n\nMidterm 2\n20%\n\n\nFinal\n20%\n\n\n\nSee course syllabus for how the final letter grade will be determined."
   },
   {
     "objectID": "slides/00-welcome.html#wiggle-room",
     "href": "slides/00-welcome.html#wiggle-room",
     "title": "Welcome to STA 199!",
     "section": "Wiggle room",
-    "text": "Wiggle room\n\nYou only have to complete 70% of the AEs to receive full credit;\nWe drop the lowest lab score;\nWe replace the lowest in-class midterm score with your final exam score (if it’s better)."
+    "text": "Wiggle room\n\nAfter Drop/Add, you can miss 4 of 22 lectures and still receive full attendance credit;\nWe drop the two lowest labs;\nWe drop the lowest homework;\nWe replace the lowest midterm score with your final exam score (if it’s better)."
   },
   {
-    "objectID": "slides/00-welcome.html#support",
-    "href": "slides/00-welcome.html#support",
+    "objectID": "slides/00-welcome.html#attendance-and-participation",
+    "href": "slides/00-welcome.html#attendance-and-participation",
     "title": "Welcome to STA 199!",
-    "section": "Support",
-    "text": "Support\n\nHelp from humans:\n\nAttend office hours\nAsk and answer questions on the discussion forum\n\n\nReserve email for questions on personal matters and/or grades\nRead the course support page"
+    "section": "Attendance and participation",
+    "text": "Attendance and participation\n\nDaily in lecture\nTracked for credit, but not based on correctness, only participation (and often they will be questions designed to make you think that might not have a single right answer!)"
   },
   {
-    "objectID": "slides/00-welcome.html#announcements",
-    "href": "slides/00-welcome.html#announcements",
+    "objectID": "slides/00-welcome.html#application-exercises",
+    "href": "slides/00-welcome.html#application-exercises",
     "title": "Welcome to STA 199!",
-    "section": "Announcements",
-    "text": "Announcements\n\nPosted on Canvas (Announcements tool) and sent via email, be sure to check both regularly\nI’ll assume that you’ve read an announcement by the next “business” day\nI’ll (try my best to) send a weekly update announcement each Friday, outlining the plan for the following week and reminding you what you need to do to prepare, practice, and perform"
+    "section": "Application exercises",
+    "text": "Application exercises\n\nDaily-ish in lecture\nNot graded, but tracked for feedback on workflow"
   },
   {
-    "objectID": "slides/00-welcome.html#accessibility",
-    "href": "slides/00-welcome.html#accessibility",
+    "objectID": "slides/00-welcome.html#labs",
+    "href": "slides/00-welcome.html#labs",
     "title": "Welcome to STA 199!",
-    "section": "Accessibility",
-    "text": "Accessibility\n\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments.\nI am committed to making all course materials accessible and I’m always learning how to do this better. If any course component is not accessible to you in any way, please don’t hesitate to let me know.\n\n\n\n\n\n\n\nIf you need testing accommodations\n\n\nMake sure I get a letter, and make your appointments in the Testing Center now."
+    "section": "Labs",
+    "text": "Labs\n\nHands-on practice with data analysis\nA single exercise per lab, graded based on being there and turning in something reasonable + correctness\nCompleted in-person, in lab, in teams\nTeams randomized each week until project teams assigned\nDeveloped collaboratively, but turned in individually by the end of the lab session\n8 throughout semester, two lowest scores dropped\nNo late work accepted"
   },
   {
-    "objectID": "slides/00-welcome.html#late-work-waivers-lecture-recordings-regrades",
-    "href": "slides/00-welcome.html#late-work-waivers-lecture-recordings-regrades",
+    "objectID": "slides/00-welcome.html#homework",
+    "href": "slides/00-welcome.html#homework",
     "title": "Welcome to STA 199!",
-    "section": "Late work, waivers, lecture recordings, regrades…",
-    "text": "Late work, waivers, lecture recordings, regrades…\n\nWe have policies!\nRead about them on the course syllabus and refer back to them when you need it"
+    "section": "Homework",
+    "text": "Homework\n\nHands-on practice with data analysis\nSome questions for practice with instant feedback by AI\nSome questions to be graded by humans for correctness\nCan start in lab if time permits, but completed at home\nCan consult with course team and peers, but completed and turned in individually by the end of the week\n8 throughout semester, lowest score dropped\nUp to 3 days late (-5% per day), no late work accepted after that\nOne-time late penalty waiver: Can be used on any homework assignment, no questions asked, must be requested from Dr. Knox before the deadline"
   },
   {
-    "objectID": "slides/00-welcome.html#collaboration",
-    "href": "slides/00-welcome.html#collaboration",
+    "objectID": "slides/00-welcome.html#exams",
+    "href": "slides/00-welcome.html#exams",
     "title": "Welcome to STA 199!",
-    "section": "Collaboration",
-    "text": "Collaboration\n\nLabs: discussing and helping is fine. Sharing your solutions and copying others is not;\nExams: collaboration of any kind is completely forbidden on any part of any exam;\nProjects: collaboration of any kind is enthusiastically encouraged within your team. Between teams, it’s the same as labs; do not directly share your stuff or copy off of others."
+    "section": "Exams",
+    "text": "Exams\n\n\nTwo midterm exams during semester, comprised of two parts:\n\n(80%) In-class: 75 minute in-class exam. Closed book, one sheet of notes;\n(20%) Take-home: Follow from the in class exam and focus on the analysis of a dataset introduced in the take home exam.\n\n\nFinal, in-class only: Closed book, one sheet of notes;\nNotes for exams: Both sides of a sinlge 8.5” x 11” sheet must be prepared by you;\nNo extensions or make-ups.\n\n\n\n\n\n\n\nCaution\n\n\nExam dates cannot be changed and no make-up exams will be given. If you can’t take the exams on these dates, you should drop this class.\n\n\n\n\n\n\n\n\n\nIf you need testing accomodations\n\n\nMake sure I get a letter, and make your appointments in the Testing Center now."
   },
   {
-    "objectID": "slides/00-welcome.html#use-of-ai-tools",
-    "href": "slides/00-welcome.html#use-of-ai-tools",
+    "objectID": "slides/00-welcome.html#project",
+    "href": "slides/00-welcome.html#project",
     "title": "Welcome to STA 199!",
-    "section": "Use of AI tools",
-    "text": "Use of AI tools\n\n\n AI tools for code:\n\nSure, but be careful/critical! Working code != correct/good code.\nMust explicitly cite with a direct url linking to the conversation you had.\n\n\n AI tools for narrative: Absolutely not!\n AI tools for learning: Sure, but be careful/critical!"
+    "section": "Project",
+    "text": "Project\n\nDataset of your choice, method of your choice\nTeamwork\nInterim deadlines throughout semester\nFinal milestone: Presentation in lab and write-up\nMust be in lab, in-person to present\nPeer review between teams for content, peer evaluation within teams for contribution\nSome lab sessions allocated to project progress\n\n\n\n\n\n\n\nCaution\n\n\nProject due date cannot be changed. You must complete the project to pass this class."
   },
   {
-    "objectID": "slides/00-welcome.html#academic-integrity",
-    "href": "slides/00-welcome.html#academic-integrity",
+    "objectID": "slides/00-welcome.html#teams",
+    "href": "slides/00-welcome.html#teams",
     "title": "Welcome to STA 199!",
-    "section": "Academic integrity",
-    "text": "Academic integrity\n\nTo uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised.\n\n\n\nZeros from conduct violations will not be dropped or replaced;\nIf people are copying, sharer and recipients penalized equally. It does not matter how well-intentioned everyone was;\nIf we discover violations, they go straight to the conduct office."
+    "section": "Teams",
+    "text": "Teams\n\nRandomized at first for weekly labs\nThen selected by you or assigned by me if you don’t express a preference for project and remaining labs\n\nExpectations and roles\n\nEveryone is expected to contribute equal effort\n\nEveryone is expected to understand all code turned in\nIndividual contribution evaluated by peer evaluation, commits, etc.\n\n\nFor the project: Peer evaluation during teamwork and after completion"
+  },
+  {
+    "objectID": "slides/00-welcome.html#questions-1",
+    "href": "slides/00-welcome.html#questions-1",
+    "title": "Welcome to STA 199!",
+    "section": "Questions?",
+    "text": "Questions?"
   },
   {
     "objectID": "slides/00-welcome.html#how-old-is-this-person",
@@ -575,7 +561,7 @@
     "href": "slides/00-welcome.html#megan-thee-stallion",
     "title": "Welcome to STA 199!",
     "section": "Megan Thee Stallion",
-    "text": "Megan Thee Stallion\n\n\n\n\n\n\nBorn\nFebruary 15, 1995\n\n\nAge\n29\n\n\nClaim to fame\nRapper"
+    "text": "Megan Thee Stallion\n\n\n\n\n\n\nBorn\nFebruary 15, 1995\n\n\nAge\n30\n\n\nClaim to fame\nRapper"
   },
   {
     "objectID": "slides/00-welcome.html#how-old-is-this-person-2",
@@ -589,7 +575,7 @@
     "href": "slides/00-welcome.html#bong-joon-ho",
     "title": "Welcome to STA 199!",
     "section": "Bong Joon-ho",
-    "text": "Bong Joon-ho\n\n\n\n\n\n\nBorn\nSeptember 14, 1969\n\n\nAge\n55\n\n\nClaim to fame\nDirected Parasite, Snowpiercer, etc"
+    "text": "Bong Joon-ho\n\n\n\n\n\n\nBorn\nSeptember 14, 1969\n\n\nAge\n56\n\n\nClaim to fame\nDirected Parasite, Snowpiercer, etc"
   },
   {
     "objectID": "slides/00-welcome.html#now-do-it-with-pictures",
@@ -599,11 +585,32 @@
     "text": "Now do it with pictures…\n\n\nWhen the picture was taken, how old was the person?"
   },
   {
-    "objectID": "slides/00-welcome.html#managing-expectations",
-    "href": "slides/00-welcome.html#managing-expectations",
+    "objectID": "slides/00-welcome.html#the-data-science-life-cycle",
+    "href": "slides/00-welcome.html#the-data-science-life-cycle",
     "title": "Welcome to STA 199!",
-    "section": "Managing expectations",
-    "text": "Managing expectations\nThe stakes are low today. We’re just getting our feet wet and working out the kinks:\n\nIt’s the first time all 300+ of us are attempting to access our containers simultaneously. It may choke;\nIf you get stuck on a loading screen of some kind, be patient and let it do its thing. Refreshing, reloading, etc will just amplify our collective problem;\nIf yours never loads, no big deal. Just sit back and watch me, or follow along on a neighbor’s screen;\nEven if yours does load, you’re welcome to just watch."
+    "section": "The data science life cycle",
+    "text": "The data science life cycle"
+  },
+  {
+    "objectID": "slides/00-welcome.html#the-data-science-life-cycle-1",
+    "href": "slides/00-welcome.html#the-data-science-life-cycle-1",
+    "title": "Welcome to STA 199!",
+    "section": "The data science life cycle",
+    "text": "The data science life cycle"
+  },
+  {
+    "objectID": "slides/00-welcome.html#load-the-data-in",
+    "href": "slides/00-welcome.html#load-the-data-in",
+    "title": "Welcome to STA 199!",
+    "section": "Load the data in",
+    "text": "Load the data in\n\nlibrary(tidyverse)\nage_guesses &lt;- read_csv(\"data/age_guesses.csv\")\nage_guesses\n\n# A tibble: 317 × 6\n   celeb1 celeb2 celeb3 celeb4 celeb5 celeb6\n    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n 1     30     33     65     40     50     65\n 2     22     27     65     50     45     50\n 3     33     40     70     75     65     73\n 4     30     45     70     40     50     55\n 5     24     27     52     64     39     56\n 6     34     45     85     56     63     54\n 7     40     30     68     45     35     57\n 8     40     37     62     55     61     66\n 9     27     35     76     65     59     65\n10     30     30     65     40     45     55\n# ℹ 307 more rows"
+  },
+  {
+    "objectID": "slides/00-welcome.html#anyone-know-who-this-is",
+    "href": "slides/00-welcome.html#anyone-know-who-this-is",
+    "title": "Welcome to STA 199!",
+    "section": "Anyone know who this is?",
+    "text": "Anyone know who this is?"
   },
   {
     "objectID": "slides/00-welcome.html#yuja-wang",
@@ -613,11 +620,53 @@
     "text": "Yuja Wang\n\n\n\n\n\n\n\n\n\nBorn\n2/10/1987\n\n\nAge in pic\n36\n\n\nClaim to fame\nClassical pianist"
   },
   {
-    "objectID": "slides/00-welcome.html#im-sure-shed-be-pleased",
-    "href": "slides/00-welcome.html#im-sure-shed-be-pleased",
+    "objectID": "slides/00-welcome.html#the-data-science-life-cycle-2",
+    "href": "slides/00-welcome.html#the-data-science-life-cycle-2",
     "title": "Welcome to STA 199!",
-    "section": "I’m sure she’d be pleased",
-    "text": "I’m sure she’d be pleased"
+    "section": "The data science life cycle",
+    "text": "The data science life cycle"
+  },
+  {
+    "objectID": "slides/00-welcome.html#babys-first-graphic",
+    "href": "slides/00-welcome.html#babys-first-graphic",
+    "title": "Welcome to STA 199!",
+    "section": "Baby’s first graphic",
+    "text": "Baby’s first graphic\n\nggplot(age_guesses, aes(x = celeb1))"
+  },
+  {
+    "objectID": "slides/00-welcome.html#babys-first-graphic-1",
+    "href": "slides/00-welcome.html#babys-first-graphic-1",
+    "title": "Welcome to STA 199!",
+    "section": "Baby’s first graphic",
+    "text": "Baby’s first graphic\n\nggplot(age_guesses, aes(x = celeb1)) + \n  geom_histogram()"
+  },
+  {
+    "objectID": "slides/00-welcome.html#babys-first-graphic-2",
+    "href": "slides/00-welcome.html#babys-first-graphic-2",
+    "title": "Welcome to STA 199!",
+    "section": "Baby’s first graphic",
+    "text": "Baby’s first graphic\n\nggplot(age_guesses, aes(x = celeb1)) + \n  geom_histogram() + \n  labs(title = \"sta199-s26 students guess Yuja Wang's age\",\n       x = \"Guess\")"
+  },
+  {
+    "objectID": "slides/00-welcome.html#babys-first-graphic-3",
+    "href": "slides/00-welcome.html#babys-first-graphic-3",
+    "title": "Welcome to STA 199!",
+    "section": "Baby’s first graphic",
+    "text": "Baby’s first graphic\n\nggplot(age_guesses, aes(x = celeb1)) + \n  geom_histogram() + \n  labs(title = \"sta199-s26 students guess Yuja Wang's age\",\n       x = \"Guess\") + \n  geom_vline(xintercept = 36, color = \"red\")"
+  },
+  {
+    "objectID": "slides/00-welcome.html#concise-numerical-summaries",
+    "href": "slides/00-welcome.html#concise-numerical-summaries",
+    "title": "Welcome to STA 199!",
+    "section": "Concise numerical summaries",
+    "text": "Concise numerical summaries\n\nage_guesses |&gt;\n  summarize(\n    average = mean(celeb1),\n    sdev = sd(celeb1)\n  )\n\n# A tibble: 1 × 2\n  average  sdev\n    &lt;dbl&gt; &lt;dbl&gt;\n1    28.4  4.59"
+  },
+  {
+    "objectID": "slides/00-welcome.html#anyone-know-who-this-is-1",
+    "href": "slides/00-welcome.html#anyone-know-who-this-is-1",
+    "title": "Welcome to STA 199!",
+    "section": "Anyone know who this is?",
+    "text": "Anyone know who this is?"
   },
   {
     "objectID": "slides/00-welcome.html#joan-crawford",
@@ -627,11 +676,18 @@
     "text": "Joan Crawford\nA secret she took to her grave:\n\n\n\n\n\n\n\n\n\nBorn\n3/23/(1904 - 1908)\n\n\nDied\n5/10/1977\n\n\nAge in pic\n38 - 42\n\n\nClaim to fame\nOscar-winning actor"
   },
   {
-    "objectID": "slides/00-welcome.html#well-never-know",
-    "href": "slides/00-welcome.html#well-never-know",
+    "objectID": "slides/00-welcome.html#joan-crawford-1",
+    "href": "slides/00-welcome.html#joan-crawford-1",
     "title": "Welcome to STA 199!",
-    "section": "We’ll never know…",
-    "text": "We’ll never know…"
+    "section": "Joan Crawford",
+    "text": "Joan Crawford"
+  },
+  {
+    "objectID": "slides/00-welcome.html#anyone-know-who-this-is-2",
+    "href": "slides/00-welcome.html#anyone-know-who-this-is-2",
+    "title": "Welcome to STA 199!",
+    "section": "Anyone know who this is?",
+    "text": "Anyone know who this is?"
   },
   {
     "objectID": "slides/00-welcome.html#eubie-blake",
@@ -641,11 +697,11 @@
     "text": "Eubie Blake\nHis actual birthday was not known at the time:\n\n\n\n\n\n\n\n\n\nBorn\n2/7/1887\n\n\nDied\n2/12/1983\n\n\nAge in pic\n82\n\n\nClaim to fame\nComposer"
   },
   {
-    "objectID": "slides/00-welcome.html#lol-that-bar-at-86",
-    "href": "slides/00-welcome.html#lol-that-bar-at-86",
+    "objectID": "slides/00-welcome.html#eubie-blake-1",
+    "href": "slides/00-welcome.html#eubie-blake-1",
     "title": "Welcome to STA 199!",
-    "section": "lol that bar at 86",
-    "text": "lol that bar at 86"
+    "section": "Eubie Blake",
+    "text": "Eubie Blake"
   },
   {
     "objectID": "slides/00-welcome.html#watch-out-for-data-quality",
@@ -662,25 +718,39 @@
     "text": "Raghuram Rajan\n\n\n\n\n\n\nBorn\n2/3/1963\n\n\nAge in pic\n48\n\n\nClaim to fame\nUChicago economist\n\n\n\nRBI governor"
   },
   {
-    "objectID": "slides/00-welcome.html#youre-natural-denoisers",
-    "href": "slides/00-welcome.html#youre-natural-denoisers",
+    "objectID": "slides/00-welcome.html#raghuram-rajan-1",
+    "href": "slides/00-welcome.html#raghuram-rajan-1",
     "title": "Welcome to STA 199!",
-    "section": "You’re natural denoisers!",
-    "text": "You’re natural denoisers!"
+    "section": "Raghuram Rajan",
+    "text": "Raghuram Rajan"
   },
   {
-    "objectID": "slides/00-welcome.html#james-gandolfini",
-    "href": "slides/00-welcome.html#james-gandolfini",
+    "objectID": "slides/00-welcome.html#anyone-know-who-this-is-3",
+    "href": "slides/00-welcome.html#anyone-know-who-this-is-3",
     "title": "Welcome to STA 199!",
-    "section": "James Gandolfini",
-    "text": "James Gandolfini\n\n\n\n\n\n\n\n\n\nBorn\n9/18/1961\n\n\nDied\n6/19/2013\n\n\nAge in pic\n51\n\n\nClaim to fame\nplayed Tony Soprano"
+    "section": "Anyone know who this is?",
+    "text": "Anyone know who this is?"
   },
   {
-    "objectID": "slides/00-welcome.html#the-wisdom-of-crowds",
-    "href": "slides/00-welcome.html#the-wisdom-of-crowds",
+    "objectID": "slides/00-welcome.html#vincent-price",
+    "href": "slides/00-welcome.html#vincent-price",
     "title": "Welcome to STA 199!",
-    "section": "The wisdom of crowds",
-    "text": "The wisdom of crowds"
+    "section": "Vincent Price",
+    "text": "Vincent Price\n\n\n\n\n\n\n\n\n\nBorn\n5/27/1911\n\n\nDied\n10/25/1993\n\n\nAge in pic\n38 - 39\n\n\nClaim to fame\nHorror actor"
+  },
+  {
+    "objectID": "slides/00-welcome.html#vincent-price-1",
+    "href": "slides/00-welcome.html#vincent-price-1",
+    "title": "Welcome to STA 199!",
+    "section": "Vincent Price",
+    "text": "Vincent Price"
+  },
+  {
+    "objectID": "slides/00-welcome.html#anyone-know-who-this-is-4",
+    "href": "slides/00-welcome.html#anyone-know-who-this-is-4",
+    "title": "Welcome to STA 199!",
+    "section": "Anyone know who this is?",
+    "text": "Anyone know who this is?"
   },
   {
     "objectID": "slides/00-welcome.html#celia-cruz",
@@ -690,46 +760,32 @@
     "text": "Celia Cruz\n\n\n\n\n\n\n\n\n\nBorn\n10/21/1925\n\n\nDied\n7/16/2003\n\n\nAge in pic\n76\n\n\nClaim to fame\nQueen of Salsa"
   },
   {
-    "objectID": "slides/00-welcome.html#azúcar",
-    "href": "slides/00-welcome.html#azúcar",
+    "objectID": "slides/00-welcome.html#celia-cruz-1",
+    "href": "slides/00-welcome.html#celia-cruz-1",
     "title": "Welcome to STA 199!",
-    "section": "¡Azúcar!",
-    "text": "¡Azúcar!"
+    "section": "Celia Cruz",
+    "text": "Celia Cruz"
   },
   {
-    "objectID": "slides/00-welcome.html#our-best-guessers",
-    "href": "slides/00-welcome.html#our-best-guessers",
+    "objectID": "slides/00-welcome.html#silly-exercise-serious-themes",
+    "href": "slides/00-welcome.html#silly-exercise-serious-themes",
     "title": "Welcome to STA 199!",
-    "section": "Our best guessers",
-    "text": "Our best guessers\n\n\n\nTruth\nNo. 1\nNo. 2\nNo. 4\nNo. 4\n\n\n\nWang\n36\n34\n36\n27\n34\n\n\nCrawford\n40?\n38\n42\n33\n40\n\n\nBlake\n82\n77\n74\n80\n72\n\n\nRajan\n48\n50\n50\n45\n53\n\n\nGandolfini\n51\n58\n48\n50\n46\n\n\nCruz\n76\n72\n68\n73\n73\n\n\n\n\n3.66\n3.83\n4.16\n4.16"
-  },
-  {
-    "objectID": "slides/00-welcome.html#whence-ggplot",
-    "href": "slides/00-welcome.html#whence-ggplot",
-    "title": "Welcome to STA 199!",
-    "section": "Whence ggplot?",
-    "text": "Whence ggplot?"
-  },
-  {
-    "objectID": "slides/00-welcome.html#statistical-lessons",
-    "href": "slides/00-welcome.html#statistical-lessons",
-    "title": "Welcome to STA 199!",
-    "section": "Statistical lessons",
-    "text": "Statistical lessons\n\n\nDomain knowledge and modeling assumptions: data do not speak for themselves. You need some subject-matter expertise about what you’re studying, as well as an interpretive lens;\nAre you asking questions the data can actually answer?\nUncertainty has many sources, and in some cases, it may be simply irreducible, no matter how hard you try;\n\nData quality and data cleaning: Data are not gospel. There could be noise and mistakes. Then what?\n\nWisdom of crowds: aggregating many imperfect guesses can do better than any one individual guess."
-  },
-  {
-    "objectID": "slides/00-welcome.html#hard-skills",
-    "href": "slides/00-welcome.html#hard-skills",
-    "title": "Welcome to STA 199!",
-    "section": "Hard skills",
-    "text": "Hard skills\n\nGitHub repositories: cloning and pulling;\nWorking with data in CSV format;\nRendering a Quarto document to get PDFs that seamlessly integrate written text, code, and output;\nUsing ggplot to build up visualizations in layers, like a cake.\n\n\n\n\n\n\n\nGet ready\n\n\nYou will do all of these things on a weekly basis in this course."
+    "section": "Silly exercise, serious themes",
+    "text": "Silly exercise, serious themes\n\n\nDomain knowledge and modeling assumptions: data do not speak for themselves. You need some subject-matter expertise about what you’re studying, as well as an interpretive lens;\n\nNot all models or assumptions are created equal!\n\n\nAre you asking questions the data can actually answer?\nUncertainty has many sources, and in some cases, it may be simply irreducible, no matter how hard you try;\nData quality and data cleaning: Data are not gospel. There could be noise and mistakes. Then what?\nWisdom of crowds: aggregating many imperfect guesses can do better than any one individual guess."
   },
   {
     "objectID": "slides/00-welcome.html#this-weeks-tasks",
     "href": "slides/00-welcome.html#this-weeks-tasks",
     "title": "Welcome to STA 199!",
     "section": "This week’s tasks",
-    "text": "This week’s tasks\n\nComplete Lab 0\n\nComputational setup\nGetting to know you survey\n\n\nRead the syllabus and ask questions on Ed\nComplete readings and videos for next class\nAccept your invitation to the GitHub organization pronto!"
+    "text": "This week’s tasks\n\nAttend Lab 0 tomorrow (very important!):\n\nComputational setup;\nGetting to know you survey;\n\n\nRead the syllabus and ask questions on Ed;\nComplete readings and videos for next class;\nSend me SDAO letters and schedule testing center appointments."
+  },
+  {
+    "objectID": "slides/00-welcome.html#questions-2",
+    "href": "slides/00-welcome.html#questions-2",
+    "title": "Welcome to STA 199!",
+    "section": "Questions?",
+    "text": "Questions?"
   },
   {
     "objectID": "syllabus/syllabus-assignments.html",
@@ -791,7 +847,7 @@
     "href": "syllabus/syllabus-assignments.html#midterm-exams-20-each",
     "title": "Assignments and grading",
     "section": "Midterm Exams (20% each)",
-    "text": "Midterm Exams (20% each)\nThere will be two midterm exams, each with two components:\n\nIn-class (70% of the grade): sit-down, in-person, “pencil-and-paper,” with no technology, and with no outside resources apart from a note sheet that you and only you have prepared (both sides of a single 8.5” x 11” piece of paper);\nTake-home (30% of the grade): each in-class midterm exam takes place during lecture on Wednesday. After that, you have the following weekend to complete the take-home exam. This will consist of a data analysis in R, and submission will be identical to our usual homeworks (Quarto &gt; PDF &gt; Gradescope). The take-home portion of the midterms is completely open resource, but the citation policies of the course still apply, and you are forbidden from discussing the exam with your peers in any way.\n\nUnless we indicate otherwise, you should assume that all course content and materials (videos, readings, lectures, labs, AEs, etc) are testable.\n\n\n\n\n\n\nMissing midterms\n\n\n\nSee the course schedule for dates and times of the exams. Exam dates cannot be changed and no make-up exams will be given.\n\nIf you already know that you cannot take the exams on these dates, you should drop this class;\nIf you miss Exam 1 or 2 due to an illness or similar documented with a Dean’s Excuse, your final exam score will replace the missed exam score.",
+    "text": "Midterm Exams (20% each)\nThere will be two midterm exams, each with two components:\n\nIn-class (80% of the grade): sit-down, in-person, “pencil-and-paper,” with no technology, and with no outside resources apart from a note sheet that you and only you have prepared (both sides of a single 8.5” x 11” piece of paper);\nTake-home (20% of the grade): each in-class midterm exam takes place during lecture on Wednesday. After that, you have the following weekend to complete the take-home exam. This will consist of a data analysis in R, and submission will be identical to our usual homeworks (Quarto &gt; PDF &gt; Gradescope). The take-home portion of the midterms is completely open resource, but the citation policies of the course still apply, and you are forbidden from discussing the exam with your peers in any way.\n\nUnless we indicate otherwise, you should assume that all course content and materials (videos, readings, lectures, labs, AEs, etc) are testable.\n\n\n\n\n\n\nMissing midterms\n\n\n\nSee the course schedule for dates and times of the exams. Exam dates cannot be changed and no make-up exams will be given.\n\nIf you already know that you cannot take the exams on these dates, you should drop this class;\nIf you miss Exam 1 or 2 due to an illness or similar documented with a Dean’s Excuse, your final exam score will replace the missed exam score.",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
