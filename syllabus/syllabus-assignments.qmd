@@ -97,7 +97,7 @@ See the [course schedule](https://sta199-s26.github.io/) for dates and times of 
 
 ## Final Exam (20%)
 
-On Tuesday April 29 we have our final exam from 9AM ET to 12PM ET. This exam will be cumulative, and it will have the same format as the in-class components of the midterm exams. The final exam does not have a take-home portion.
+On Friday May 1 we have our final exam from 2:00 pm  to 5:00 pm. This exam will be cumulative, and it will have the same format as the in-class components of the midterm exams. The final exam does not have a take-home portion.
 
 ::: callout-warning
 ## Missing the final
