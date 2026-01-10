@@ -1,8 +1,8 @@
 ---
 title: Norton, Tory
 categories: 
-  - "-"
-description: "-"
+  - Lab leader
+description: "Th 3:05PM - 4:20PM (Sec 8)"
 subtitle: "[🔗](https://www.nytimes.com)"
 image: headshots/norton.jpg
 image-alt: Headshot of TA
