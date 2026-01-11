@@ -3,7 +3,7 @@ title: Bolik, Jannis
 categories: 
   - Lab leader
 description: "Th 3:05PM - 4:20PM (Sec 9)"
-subtitle: "[🔗](https://www.nytimes.com)"
+subtitle: "[🔗](https://docs.google.com/spreadsheets/d/1bbCCaRtyUzPbB-SqcjseiwVLwFlgQbvCMaMWnvT3EG8/edit?usp=sharing)"
 image: headshots/bolik.jpg
 image-alt: Headshot of TA
 ---

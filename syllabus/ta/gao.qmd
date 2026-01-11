@@ -3,7 +3,7 @@ title: Gao, Oliver
 categories: 
   - Lab helper
 description: "Th 1:25PM - 2:40PM (Sec 6)"
-subtitle: "[🔗](https://www.nytimes.com)"
+subtitle: "[🔗](https://docs.google.com/spreadsheets/d/1bbCCaRtyUzPbB-SqcjseiwVLwFlgQbvCMaMWnvT3EG8/edit?usp=sharing)"
 image: headshots/gao.jpeg
 image-alt: Headshot of TA
 ---

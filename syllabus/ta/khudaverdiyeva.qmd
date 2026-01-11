@@ -3,7 +3,7 @@ title: Khudaverdiyeva, Abuzar
 categories: 
   - Lab leader
 description: "Th 8:30AM - 9:45AM (Sec 1)"
-subtitle: "[🔗](https://www.nytimes.com)"
+subtitle: "[🔗](https://docs.google.com/spreadsheets/d/1bbCCaRtyUzPbB-SqcjseiwVLwFlgQbvCMaMWnvT3EG8/edit?usp=sharing)"
 image: headshots/abuzar.png
 image-alt: Headshot of TA
 ---

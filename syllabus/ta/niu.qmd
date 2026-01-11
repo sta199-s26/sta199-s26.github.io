@@ -3,7 +3,7 @@ title: Niu, Max
 categories: 
   - Lab helper
 description: "Th 10:05AM - 11:20AM (Sec 2)"
-subtitle: "[🔗](https://www.nytimes.com)"
+subtitle: "[🔗](https://docs.google.com/spreadsheets/d/1bbCCaRtyUzPbB-SqcjseiwVLwFlgQbvCMaMWnvT3EG8/edit?usp=sharing)"
 image: headshots/max.png
 image-alt: Headshot of TA
 ---

@@ -3,7 +3,7 @@ title: Solarz, Katie
 categories: 
   - Lab leader
 description: "Th 1:25PM - 2:40PM (Sec 7)"
-subtitle: "[🔗](https://www.nytimes.com)"
+subtitle: "[🔗](https://docs.google.com/spreadsheets/d/1bbCCaRtyUzPbB-SqcjseiwVLwFlgQbvCMaMWnvT3EG8/edit?usp=sharing)"
 image: headshots/solarz.jpg
 image-alt: Headshot of TA
 ---
