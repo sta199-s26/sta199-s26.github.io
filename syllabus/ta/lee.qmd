@@ -2,6 +2,7 @@
 title: Lee, Hyunjin
 categories: 
   - Lab leader
+  - Lecture helper
 description: "Th 11:45AM - 1:00PM (Sec 4)"
 subtitle: "[🔗](https://docs.google.com/spreadsheets/d/1bbCCaRtyUzPbB-SqcjseiwVLwFlgQbvCMaMWnvT3EG8/edit?usp=sharing)"
 image: headshots/hyunjin.png
