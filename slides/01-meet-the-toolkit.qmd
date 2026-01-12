@@ -21,177 +21,76 @@ format:
 ggplot2::theme_set(ggplot2::theme_gray(base_size = 16))
 ```
 
-# From last time: Correction
+# Preliminaries
 
-## Setup
-
-- Load package we need for the analyis:
-
-```{r}
-#| label: load-tidyverse
-#| message: false
-library(tidyverse)
-```
-
-- Load the data:
-
-```{r}
-#| label: load-survey-data-display
-#| eval: false
-survey <- read_csv("data/survey-anonymized.csv")
-```
-
-```{r}
-#| label: load-survey-data-hide
-#| include: false
-survey <- read_csv(here::here("slides", "data/survey-anonymized.csv"))
-```
-
-## Revisit: Cleaning up programming languages with AI {.xsmall}
-
-```{r}
-#| eval: false
-#| code-fold: true
-library(ellmer)
-
-chat <- chat_openai()
-
-prompts <- survey |>
-  filter(!is.na(programming_languages)) |>
-  pull(programming_languages) |>
-  list()
-
-type_language <- type_object(
-  language = type_string(),
-  experience = type_string()
-)
-
-language_experience <- parallel_chat_structured(chat, prompts, type = type_language)
-language_experience
-```
-
-```         
-language
-1 Python, Java, R, C/C++, JavaScript, HTML/CSS, SQL, C#, VBA, MATLAB, Rust, Assembly, Swift, Stata, Bash, Typescript, Web3 Suite (HTML, CSS, JS), Nextflow, SAS, PsycoPy, Mathematica, React, Vue, Yaml, CourseKata, Flutter, Scratch
-
-experience
-1 Most students report a range of programming experience, from never having programmed before to being very comfortable in languages such as Python, Java, and R. Many took introductory courses (e.g., CS101, AP CS A) and are comfortable with basic programming constructs. Proficiency is generally highest in Python and Java, though some only have a little experience with languages like R, C/C++, and JavaScript. Quite a few have only used programming languages for specific classes or research projects and may not feel confident after a long break. Some students have experience with more niche or specialized tools such as MATLAB, SAS, and web technologies (HTML, CSS, JavaScript/JS frameworks). Many express a need for a refresher if not used recently. In summary, while a core group is comfortable with at least one language, especially Python or Java, many others have only basic to moderate experience and express the desire to gain more proficiency.
-```
-
-## Can it be trusted 100%? {.xxxsmall}
-
-**Nextflow** -- didn't show up before due to case mismatch (Netxflow vs. nextflow)
-
-```{r}
-survey |>
-  mutate(programming_languages = str_to_lower(programming_languages)) |>
-  filter(str_detect(programming_languages, "nextflow"))  |>
-  select(programming_languages)
-```
-
-**PsychoPy** -- misspelled by AI (PsycoPy vs. PsychoPy) + case mismatch
-
-```{r}
-survey |>
-  mutate(programming_languages = str_to_lower(programming_languages)) |>
-  filter(str_detect(programming_languages, "psychopy"))  |>
-  select(programming_languages)
-```
-
-**CourseKata** -- not a programming language but a learning platform
-
-```{r}
-survey |>
-  mutate(programming_languages = str_to_lower(programming_languages)) |>
-  filter(str_detect(programming_languages, "coursekata"))  |>
-  select(programming_languages)
-```
-
-# From last time: Course overview + policies
-
-## Tips for success
-
--   Prepare: Watch videos and read before class
--   Engage: Attend all lectures and labs actively
--   Ask questions: Use office hours and Ed Discussion forum
--   Start early: Don’t procrastinate on assignments
--   Stay current: Content builds progressively
-
-## Support
-
--   Help from humans:
-    -   Attend office hours
-    -   Ask and answer questions on the discussion forum
--   Help from AI: Use the course chatbot (in Canvas!)
--   Reserve email for questions on personal matters and/or grades
--   Read the course support page
-
-## Announcements
-
--   Posted on Canvas (Announcements tool) and sent via email, be sure to check both regularly
--   I'll assume that you've read an announcement by the next "business" day
--   I'll (try my best to) send a weekly update announcement each Friday, outlining the plan for the following week and reminding you what you need to do to prepare, practice, and perform
-
-## Diversity, inclusion, and belonging {.smaller}
-
-It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.
+## Reminders
 
 ::: incremental
-
--   Fill out the Getting to know you survey.
--   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your advisors, and deans are excellent resources.
--   I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it.
-
+- Complete Lab 0 ASAP;
+- Don't forget the `Getting to know you` survey;
+- Accept your GitHub invitation pronto;
+- Submit your SDAO letters and make testing center appointments now;
+- Start lurking on Ed. Questions are being answered!
 :::
 
-## Access and accommodations {.smaller}
+## Updates
 
--   The [Duke Access and Accommodation Services](https://access.duke.edu) is available to ensure that students are able to engage with their courses and related assignments.
+::: incremental
+- There will be ~~eight~~ seven homeworks. HW 1 appears next week;
+- Office hours are posted and begin today.
+:::
 
--   Accoomodations for exams must be arranged through Access and Accommodation Services and exams with accommodations must be taken in the testing center.
+## Questions?
 
--   I am committed to making all course materials accessible and I'm always learning how to do this better.
-    If any course component is not accessible to you in any way, please don't hesitate to let me know.
+## How do we pronounce this? {.large}
 
-## Late work, waivers, lecture recordings, regrades...
+<br>
 
--   We have policies!
--   Read about them on the [course syllabus](https://sta199-f25.github.io/course-syllabus.html) and refer back to them when you need it
+<br>
 
-## Participate 💻📱 {.smaller}
+STA 199
 
-{{< include _wooclap-slide.qmd >}}
+## Last time {.medium}
 
-## Use of AI tools {.smaller}
+Spring break splits the class into two parts:
 
--   {{< fa check >}} **AI tools for code:**
+::: incremental
+- Data science:
+  - convert data into knowledge;
+  - take a spreadsheet and compress it into pictures and a concise set of numerical summaries;
+  - try to teach a reader about the world or convince them of a claim;
+- Statistical thinking:
+  - quantify our uncertainty about the results produced above;
+  - use this to make tricky decisions.
+:::
 
-    -   Check your work after you've done it yourself, to polish and improve, not to do it for you from scratch.
-    -   Be careful/critical! Working code `!=` correct/good code.
-    -   **Must explicitly cite**, with at a minimum AI tool you're using (e.g., ChatGPT) and your prompt. More guidance to be provided with assignments.
+## The data science life cycle {.medium}
 
--   {{< fa ban >}} **AI tools for narrative:** Absolutely not!
+You will learn how to use a computer to actually *do* the following:
 
--   {{< fa check >}} **AI tools for learning:** Sure, but be careful/critical!
+. . .
 
-## Academic integrity
+![](images/00/data-science-cycle-cropped.png){fig-align="center"}
 
-> To uphold the Duke Community Standard:
->
-> -   I will not lie, cheat, or steal in my academic endeavors;
->
-> -   I will conduct myself honorably in all my endeavors; and
->
-> -   I will act if the Standard is compromised.
+. . .
 
-## A note on showing up and participating {.smaller}
+We emphasize *technique* (how do you make literally anything happen), but we also want you to develop *good taste* so that you can do these things well and convincingly.
 
--   This is a large "lecture" but with lots of opportunities and expectations for active learning, participation, and collaboration.
+## Managing expectations
 
--   You are expected to show up and participate in all lectures and labs, though there are a good number of each you can miss without penalty.
+- Today is the first time all 300+ of us are attempting to access our containers simultaneously;
+- I have yet to see this work the first time;
+- After we get over the hump: smooth sailing;
+- Until then: blood bath;
+- Raise your hand if you need anything;
+- If today is not your day, just sit back and watch.
 
--   It's possible to read the books and watch the videos and get an exposure to the material we cover in the course without showing up, but the experience will be much less rich and you will likely miss out on a lot of learning.
-    That's why the assessments and workflows are designed to reward and reinforce active participation.
+## Today and for forever {.large}
+
+Please ask questions!
+
+- Ask JZ: general interest questions about the presentation;
+- Ask TA: technical questions about your particular computer.
 
 # Course toolkit
 
@@ -203,28 +102,29 @@ It is my intent that students from all diverse backgrounds and perspectives be w
 
 **Course operation**
 
--   Materials: [sta199-f25.github.io](https://sta199-f25.github.io/)
+-   Materials: [sta199-s26.github.io](https://sta199-s26.github.io/)
 -   Submission: Gradescope (in Canvas)
--   Content Q&A:
-    -   Course chatbot (in Canvas)
-    -   Ed Discussion (in Canvas)
+-   Content Q&A: Ed Discussion (in Canvas)
 -   Grades: Gradebook (in Canvas)
 
 :::
 
 ::: {.column width="50%"}
 
-**Doing data science**
+::: {.fragment style="background-color:#f3e6ff; border-radius:10px; padding:10px;"}
+
+<strong>Doing data science</strong>
 
 -   Computing:
-    -   Language: R
-    -   IDE: RStudio
-    -   Packages: tidyverse (primarily), plus others
-    -   Authoring: Quarto
+    -   R
+    -   RStudio
+    -   `tidyverse` and friends
+    -   Quarto
 -   Version control:
-    -   Tracking: Git
-    -   Hosting and collaboration: GitHub
-
+    -   Git
+    -   GitHub
+    
+:::
 :::
 
 :::::
@@ -245,7 +145,30 @@ By the end of the course, you will be able to...
 
 :::
 
-# Reproducible data analysis
+## Two important concepts {.smaller}
+
+. . .
+
+Computational *reproducibility*:
+
+::: incremental
+- If you give me your code and your data and I hit "Run," do I get the same numbers and the same pictures that you published in your article? 
+- If so...phew!
+- If not...what the 🤬?
+:::
+
+. . .
+
+Scientific *replication*:
+
+. . .
+
+- Can new researchers conduct an independent analysis and reach the same substantive conclusions that you did?
+- Just because your analysis is computationally reproducible does not mean that you have a robust result that generalizes.
+
+. . .
+
+Our tools will help you achieve the first, which is necessary (but not sufficient!) for the second.
 
 ## Reproducibility checklist {.smaller}
 
@@ -274,11 +197,41 @@ What does it mean for a data analysis to be "reproducible"?
 
 ::: incremental
 
--   Scriptability -- Coding as opposed to using a point-and-click tool $\rightarrow$ R
--   Literate programming -- Code, narrative, output in one place, as opposed to copying and pasting code output into a document (e.g., Word or Google Doc) that contains the narrative $\rightarrow$ Quarto
+-   Scriptability -- Coding instead of point-and-click $\rightarrow$ R
+-   Literate programming -- code, written text, results all in one place instead of error-prone copy-paste $\rightarrow$ Quarto
 -   Version control -- Track changes with brief messages that describe those changes $\rightarrow$ Git / GitHub
 
 :::
+
+## Collaboration
+
+::: incremental
+- Collaboration doesn't just mean working with others. It also means collaborating with yourself *across time*;
+- Too often, I have set something aside only to return to it several weeks (or even days!) later and ask "who did this and what were they thinking?"
+- Our tools will make you an excellent collaborator with others, but they will also help you keep yourself organized.
+:::
+
+## An Analogy to English
+
+. . .
+
+![](images/01/1.jpg){fig-alt="R"}
+
+## An Analogy to English
+
+![](images/01/2.jpg){fig-alt="Rstudio"}
+
+## An Analogy to English
+
+![](images/01/3.jpg){fig-alt="Quarto"}
+
+## An Analogy to English
+
+![](images/01/4.jpg){fig-alt="git"}
+
+## An Analogy to English
+
+![](images/01/5.jpg){fig-alt="github"}
 
 # R and RStudio
 
@@ -361,8 +314,6 @@ Sit back and enjoy the show!
 
 Go to [your container](https://cmgr.oit.duke.edu/containers) and launch RStudio.
 
-![](images/01/container-link-from-course-website.png){width="310" fig-align="center"}
-
 :::
 
 ::::
@@ -399,6 +350,221 @@ We already pre-installed many of the package you'll need for this course, so you
 library(palmerpenguins)
 ```
 
+
+## Data frames and variables
+
+-   Each row of a data frame is an **observation**
+
+. . .
+
+-   Each column of a data frame is a **variable**
+
+. . .
+
+-   Columns (variables) in data frames can be accessed with `$`:
+
+```{r}
+#| eval: false
+dataframe$variable_name
+```
+
+## `penguins` data frame {.smaller}
+
+```{r}
+penguins
+```
+
+## `bill_length_mm`  {.smaller}
+
+```{r}
+penguins$bill_length_mm
+```
+
+## Why did the error occur?
+
+
+
+
+```{r}
+#| label: flipper-length-mm
+#| error: true
+flipper_length_mm
+```
+
+
+## `flipper_length_mm` {.smaller}
+
+This can be fixed by using `penguins$flipper_length_mm`.
+
+```{r}
+penguins$flipper_length_mm
+```
+
+## `function(argument)`
+
+Functions are (most often) verbs, followed by what they will be applied to in parentheses:
+
+```{r}
+#| eval: false
+do_this(to_this)
+do_that(to_this, to_that, with_those)
+```
+
+## `mean()`
+
+Let's compute the average of a set of numbers:
+
+```{r}
+x <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+x
+```
+
+. . .
+
+```{r}
+mean(x)
+```
+
+## `mean()`
+
+```{r}
+mean(penguins$flipper_length_mm)
+```
+
+. . .
+
+Wut?
+
+. . .
+
+```{r}
+head(penguins$flipper_length_mm)
+```
+
+. . .
+
+There's a *missing value* (`NA` stands for "not available").
+
+. . .
+
+
+```{r}
+mean(penguins$flipper_length_mm, na.rm = TRUE)
+```
+
+## Help
+
+Object documentation can be accessed with `?`
+
+::: columns
+
+::: {.column width="50%"}
+
+```{r}
+#| eval: false
+?mean
+```
+
+:::
+
+::: {.column width="50%"}
+
+![](images/01/mean-docs.mov){fig-alt="Documentation for mean function in R."}
+
+:::
+
+:::
+
+
+## Summary of R essentials {.smaller}
+
+-   Functions are (most often) verbs, followed by what they will be applied to in parentheses:
+
+```{r}
+#| eval: false
+
+do_this(to_this)
+do_that(to_this, to_that, with_those)
+```
+
+<br>
+
+-   Packages are installed with the `install.packages()` function and loaded with the `library` function, once per session:
+
+```{r}
+#| eval: false
+
+install.packages("package_name")
+library(package_name)
+```
+
+Your containers come "fully loaded," so you may not have to install any new packages.
+
+## Summary of R essentials (continued) {.smaller}
+
+Data frames: like the spreadsheets of R
+
+-   Each row of a data frame is an **observation**
+-   Each column of a data frame is a **variable**
+
+![](images/01/df.png)
+
+## Summary of R essentials (continued) {.smaller}
+
+-   Use the question mark `?` to get help with objects (like data frames and functions):
+
+```{r}
+#| eval: false
+
+?function_name
+
+```
+
+-   Use the dollar sign `$` to access columns
+
+```{r}
+#| eval: false
+
+dataframe$column
+
+```
+
+::: callout-note
+Generally, you need to use the `$` to tell R *where* to find that column.
+:::
+
+## Summary of R essentials (continued) {.smaller}
+
+-   Use the arrow `<-` or equals sign `=` to save objects
+
+```{r}
+#| eval: false
+
+x = some_thing
+y <- some_other_thing
+
+```
+
+::: callout-note
+Check your environment pane for the saved object!
+:::
+
+## Summary of R essentials (continued) {.smaller}
+
+-   Read your error messages!
+
+<br>
+
+-   These are essential for figuring out where your code is going wrong.
+
+<br><br>
+
+::: callout-note
+If you have trouble understanding what a message is saying, there is a high chance someone has explained the message online.
+:::
+
+
+
 ## Packages, an analogy
 
 If data analysis was cooking...
@@ -433,119 +599,6 @@ aka the package you'll hear about the most...
 
 -   The **tidyverse** is an opinionated collection of R packages designed for data science
 -   All packages share an underlying philosophy and a common grammar
-
-:::
-
-:::
-
-## Data frames and variables
-
--   Each row of a data frame is an **observation**
-
-. . .
-
--   Each column of a data frame is a **variable**
-
-. . .
-
--   Columns (variables) in data frames can be accessed with `$`:
-
-```{r}
-#| eval: false
-dataframe$variable_name
-```
-
-## `penguins` data frame {.smaller}
-
-```{r}
-penguins
-```
-
-## `bill_length_mm`  {.smaller}
-
-```{r}
-penguins$bill_length_mm
-```
-
-## Participate 💻📱 {.smaller}
-
-::: {.columns}
-
-::: {.column width="70%"}
-
-::: task
-
-Why did the error occur?
-
-:::
-
-```{r}
-#| label: flipper-length-mm
-#| error: true
-flipper_length_mm
-```
-
-:::
-
-::: {.column width="30%"}
-
-{{< include _wooclap-column.qmd >}}
-
-:::
-
-:::
-
-## `flipper_length_mm` {.smaller}
-
-This can be fixed by using `penguins$flipper_length_mm`.
-
-```{r}
-penguins$flipper_length_mm
-```
-
-## `function(argument)`
-
-Functions are (most often) verbs, followed by what they will be applied to in parentheses:
-
-```{r}
-#| eval: false
-do_this(to_this)
-do_that(to_this, to_that, with_those)
-```
-
-## `trim`med `mean()`
-
-```{r}
-x <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 100)
-x
-```
-
-```{r}
-mean(x)
-```
-
-```{r}
-mean(x, trim = 0.05)
-```
-
-## Help
-
-Object documentation can be accessed with `?`
-
-::: columns
-
-::: {.column width="50%"}
-
-```{r}
-#| eval: false
-?mean
-```
-
-:::
-
-::: {.column width="50%"}
-
-![](images/01/mean-docs.mov){fig-alt="Documentation for mean function in R."}
 
 :::
 
@@ -650,7 +703,7 @@ You'll need to stick to this option if you haven't yet accepted your GitHub invi
 
 **Option 2:**
 
-Go to the [course GitHub organization](https://github.com/sta199-f25) and clone `ae-YOUR-GITHUB-NAME` repo to [your container](https://cmgr.oit.duke.edu/containers).
+Go to the [course GitHub organization](https://github.com/sta199-s26) and clone `ae-YOUR-GITHUB-NAME` repo to [your container](https://cmgr.oit.duke.edu/containers).
 
 :::
 
@@ -663,7 +716,7 @@ Go to the [course GitHub organization](https://github.com/sta199-f25) and clone 
 <details>
 <summary>Tour recap: Git + GitHub</summary>
 
--   Find your application repo, that will always be named using the naming convention `assignment_title-YOUR-GITHUB-NAME`, e.g., `ae-mine-cetinkaya-rundel` or `lab-1-mine-cetinkaya-rundel`.
+-   Find your application repo, that will always be named using the naming convention `assignment_title-YOUR-GITHUB-NAME`, e.g., `ae-johnczito` or `lab-1-johnczito`.
 
 -   Click on the green "Code" button, make sure SSH is selected, copy the repo URL
 
@@ -693,8 +746,70 @@ Go to the [course GitHub organization](https://github.com/sta199-f25) and clone 
 
 ::: incremental
 
--   Fully reproducible reports -- each time you render the analysis is ran from the beginning
--   Code goes in cells narrative goes outside of cells
--   Optional: A visual editor for a familiar / Google docs-like editing experience
+-   Fully reproducible reports -- each time you render the analysis is run from the beginning;
+-   Code goes in cells (between the three back ticks);
+-   Written English goes outside cells, the same way you would write in Google Docs or MS Word.
 
 :::
+
+## Tour: Quarto {.smaller}
+
+::: columns
+::: {.column width="50%"}
+::: demo
+**Option 1:**
+
+Sit back and enjoy the show!
+:::
+
+::: callout-note
+If you chose (or had to choose) this option for the previous tour, or if you couldn't clone your repo for any reason, you'll need to stick to this option.
+:::
+:::
+
+::: {.column width="50%"}
+::: appex
+**Option 2:**
+
+Go to RStudio and open the document `ae-01-income-inequality.qmd`.
+:::
+:::
+:::
+
+## Tour: Quarto (and more Git + GitHub) {.smaller .scrollable}
+
+
+<details>
+<summary>Tour recap: Quarto</summary>
+
+![](images/02/tour-quarto.png){fig-alt="RStudio IDE with a Quarto document, source code on the left and output on the right. Annotated to show the YAML, a link, a header, and a code cell." fig-align="center"}
+
+</details>
+
+<br>
+
+<details>
+<summary>Tour recap: Git + GitHub</summary>
+
+Once we made changes to our Quarto document, we
+
+- went to the Git pane in RStudio
+
+- staged our changes by clicking the checkboxes next to the relevant files
+
+- committed our changes with an informative commit message
+
+- pulled from GitHub to make sure we had the latest version of our repo
+
+- pushed our changes to our application exercise repos
+
+- confirmed on GitHub that we could see our changes pushed from RStudio
+
+</details>
+
+## How will we use Quarto?
+
+-   Every application exercise, lab, project, etc. is an Quarto document
+-   You'll always have a template Quarto document to start with
+-   The amount of scaffolding in the template will decrease over the semester
+
