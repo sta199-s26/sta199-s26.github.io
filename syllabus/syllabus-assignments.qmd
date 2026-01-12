@@ -65,7 +65,7 @@ You will submit your homework assignments by pushing your work to your GitHub re
 
 ::: callout-note
 ## Grace
-There will be eight graded homework assignments in total. The lowest homework grade will be dropped at the end of the semester, which means you can miss one homework assignment with no penalty.
+There will be seven graded homework assignments in total. The lowest homework grade will be dropped at the end of the semester, which means you can miss one homework assignment with no penalty.
 :::
 
 ## Project (15%)
