@@ -4,15 +4,12 @@ subtitle: "Lecture 1"
 date: "2026-01-12"
 format: 
   revealjs: 
-    output-file: 02-meet-the-toolkit-slides.html
     footer: "[🔗 sta199-f26.github.io](https://sta199-f26.github.io/)"
     theme: slides.scss
     transition: fade
     slide-number: true
     logo: images/logo.png
     toc: false
-  html: 
-    code-link: true
 ---
 
 ```{r}
