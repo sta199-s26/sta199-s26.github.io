@@ -11,6 +11,8 @@ website:
   repo-actions: [edit, issue]
 
   open-graph: true
+  
+  draft-mode: unlinked
 
   sidebar:
     background: "#ED5858"
