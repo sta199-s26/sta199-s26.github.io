@@ -224,7 +224,7 @@ a. How many counties are in the dataset? How many variables are there?
 Use inline code to answer this question.
 
 ::: render-commit-push
-Render, commit, and push your changes to GitHub with the commit message "Added answer for Q1, part a".
+Render, commit, and push your changes to GitHub with the commit message "Added answer for Q1a".
 
 Make sure to commit and push all changed files so that your Git pane is empty afterward.
 :::
@@ -233,12 +233,20 @@ b. Make two plots: a histogram and a boxplot of the `pop_2020` variable.
 
 - Is the distribution of population in NC counties right-skewed, left-skewed, or approximately symmetric? Which plot(s) helped you determine this?
 
-- Is the distribution of population in NC counties unimodal, bimodal, multimodal or uniform? Which plot(s) helped you determine this?
-
-- In a single pipeline, identify the counties with unusually high populations (according to the boxplot) and display their names and populations in descending order of population.
+- Is the distribution of population in NC counties unimodal, bimodal, multimodal, or uniform? Which plot(s) helped you determine this?
 
 ::: render-commit-push
-Render, commit, and push your changes to GitHub with the commit message "Added answer for Q1, part b".
+Render, commit, and push your changes to GitHub with the commit message "Added answer for Q1b".
+
+Make sure to commit and push all changed files so that your Git pane is empty afterward.
+:::
+
+c. Make a scatter plot of population density (`density` on the y-axis) vs. land area in miles-squared (`land_area_mi2` on the x-axis). Make sure to set an informative title and axis labels for your plot.
+
+- Describe the relationship.
+
+::: render-commit-push
+Render, commit, and push your changes to GitHub with a triumphant commit message "Finished Lab 1!".
 
 Make sure to commit and push all changed files so that your Git pane is empty afterward.
 :::
