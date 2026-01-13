@@ -11,6 +11,8 @@ format:
     slide-number: true
     logo: images/logo.png
     toc: false
+  html: 
+    code-link: true
 ---
 
 ```{r}
