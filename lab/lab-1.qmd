@@ -247,7 +247,7 @@ a. Is the distribution of population in NC counties right-skewed, left-skewed, o
 b. Is the distribution of population in NC counties unimodal, bimodal, multimodal, or uniform? Which plot(s) helped you determine this?
 
 ::: render-commit-push
-Render, commit, and push your changes to GitHub with the commit message "Added answer for Q1".
+Render, commit, and push your changes to GitHub with the commit message "Added answer for Q3".
 
 Make sure to commit and push all changed files so that your Git pane is empty afterward.
 :::
