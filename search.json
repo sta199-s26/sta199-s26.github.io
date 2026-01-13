@@ -788,7 +788,7 @@
     "href": "lab/lab-1.html#question-1",
     "title": "Lab 1",
     "section": "Question 1",
-    "text": "Question 1\n\nHow many counties are in the dataset? How many variables are there? Use inline code to answer this question.\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Q1, part a”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\nMake two plots: a histogram and a boxplot of the pop_2020 variable.\n\n\nIs the distribution of population in NC counties right-skewed, left-skewed, or approximately symmetric? Which plot(s) helped you determine this?\nIs the distribution of population in NC counties unimodal, bimodal, multimodal or uniform? Which plot(s) helped you determine this?\nIn a single pipeline, identify the counties with unusually high populations (according to the boxplot) and display their names and populations in descending order of population.\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Q1, part b”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward."
+    "text": "Question 1\n\nHow many counties are in the dataset? How many variables are there? Use inline code to answer this question.\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Q1a”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\nMake two plots: a histogram and a boxplot of the pop_2020 variable.\n\n\nIs the distribution of population in NC counties right-skewed, left-skewed, or approximately symmetric? Which plot(s) helped you determine this?\nIs the distribution of population in NC counties unimodal, bimodal, multimodal, or uniform? Which plot(s) helped you determine this?\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Q1b”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\nMake a scatter plot of population density (density on the y-axis) vs. land area in miles-squared (land_area_mi2 on the x-axis). Make sure to set an informative title and axis labels for your plot.\n\n\nDescribe the relationship.\n\n\nRender, commit, and push your changes to GitHub with a triumphant commit message “Finished Lab 1!”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward."
   },
   {
     "objectID": "lab/lab-1.html#submission",
@@ -898,6 +898,398 @@
       "Lab",
       "Lab 0"
     ]
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html",
+    "href": "slides/01-meet-the-toolkit.html",
+    "title": "Meet the toolkit",
+    "section": "",
+    "text": "Complete Lab 0 ASAP;\nDon’t forget the Getting to know you survey;\nAccept your GitHub invitation pronto;\nSubmit your SDAO letters and make testing center appointments now;\nStart lurking on Ed. Questions are being answered!\n\n\n\n\n\nThere will be eight seven homeworks. HW 1 appears next week;\nOffice hours are posted and begin today.\n\n\n\n\n\n\nSTA 199\n\nSpring break splits the class into two parts:\n\n\nData science:\n\nconvert data into knowledge;\ntake a spreadsheet and compress it into pictures and a concise set of numerical summaries;\ntry to teach a reader about the world or convince them of a claim;\n\n\nStatistical thinking:\n\nquantify our uncertainty about the results produced above;\nuse this to make tricky decisions.\n\n\n\n\n\nYou will learn how to use a computer to actually do the following:\n. . .\n\n\n\n\n. . .\nWe emphasize technique (how do you make literally anything happen), but we also want you to develop good taste so that you can do these things well and convincingly.\n\n\nToday is the first time all 300+ of us are attempting to access our containers simultaneously;\nI have yet to see this work the first time;\nAfter we get over the hump: smooth sailing;\nUntil then: blood bath;\nRaise your hand if you need anything;\nIf today is not your day, just sit back and watch.\n\nPlease ask questions!\n\nAsk JZ: general interest questions about the presentation;\nAsk TA: technical questions about your particular computer."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#reminders",
+    "href": "slides/01-meet-the-toolkit.html#reminders",
+    "title": "Meet the toolkit",
+    "section": "",
+    "text": "Complete Lab 0 ASAP;\nDon’t forget the Getting to know you survey;\nAccept your GitHub invitation pronto;\nSubmit your SDAO letters and make testing center appointments now;\nStart lurking on Ed. Questions are being answered!"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#updates",
+    "href": "slides/01-meet-the-toolkit.html#updates",
+    "title": "Meet the toolkit",
+    "section": "",
+    "text": "There will be eight seven homeworks. HW 1 appears next week;\nOffice hours are posted and begin today."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#how-do-we-pronounce-this",
+    "href": "slides/01-meet-the-toolkit.html#how-do-we-pronounce-this",
+    "title": "Meet the toolkit",
+    "section": "",
+    "text": "STA 199"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#last-time",
+    "href": "slides/01-meet-the-toolkit.html#last-time",
+    "title": "Meet the toolkit",
+    "section": "",
+    "text": "Spring break splits the class into two parts:\n\n\nData science:\n\nconvert data into knowledge;\ntake a spreadsheet and compress it into pictures and a concise set of numerical summaries;\ntry to teach a reader about the world or convince them of a claim;\n\n\nStatistical thinking:\n\nquantify our uncertainty about the results produced above;\nuse this to make tricky decisions."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#the-data-science-life-cycle",
+    "href": "slides/01-meet-the-toolkit.html#the-data-science-life-cycle",
+    "title": "Meet the toolkit",
+    "section": "",
+    "text": "You will learn how to use a computer to actually do the following:\n. . .\n\n\n\n\n. . .\nWe emphasize technique (how do you make literally anything happen), but we also want you to develop good taste so that you can do these things well and convincingly."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#managing-expectations",
+    "href": "slides/01-meet-the-toolkit.html#managing-expectations",
+    "title": "Meet the toolkit",
+    "section": "",
+    "text": "Today is the first time all 300+ of us are attempting to access our containers simultaneously;\nI have yet to see this work the first time;\nAfter we get over the hump: smooth sailing;\nUntil then: blood bath;\nRaise your hand if you need anything;\nIf today is not your day, just sit back and watch."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#today-and-for-forever",
+    "href": "slides/01-meet-the-toolkit.html#today-and-for-forever",
+    "title": "Meet the toolkit",
+    "section": "",
+    "text": "Please ask questions!\n\nAsk JZ: general interest questions about the presentation;\nAsk TA: technical questions about your particular computer."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#course-toolkit-1",
+    "href": "slides/01-meet-the-toolkit.html#course-toolkit-1",
+    "title": "Meet the toolkit",
+    "section": "Course toolkit",
+    "text": "Course toolkit\n\n\nCourse operation\n\nMaterials: sta199-s26.github.io\n\nSubmission: Gradescope (in Canvas)\nContent Q&A: Ed Discussion (in Canvas)\nGrades: Gradebook (in Canvas)\n\n\n\nDoing data science\n\nComputing:\n\nR\nRStudio\n\ntidyverse and friends\nQuarto\n\n\nVersion control:\n\nGit\nGitHub"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#learning-goals",
+    "href": "slides/01-meet-the-toolkit.html#learning-goals",
+    "title": "Meet the toolkit",
+    "section": "Learning goals",
+    "text": "Learning goals\nBy the end of the course, you will be able to…\n\n\ngain insight from data\ngain insight from data, reproducibly\n\ngain insight from data, reproducibly, using modern programming tools and techniques\n\ngain insight from data, reproducibly and collaboratively, using modern programming tools and techniques\ngain insight from data, reproducibly (with literate programming and version control) and collaboratively, using modern programming tools and techniques"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#two-important-concepts",
+    "href": "slides/01-meet-the-toolkit.html#two-important-concepts",
+    "title": "Meet the toolkit",
+    "section": "Two important concepts",
+    "text": "Two important concepts\n. . .\nComputational reproducibility:\n\n\nIf you give me your code and your data and I hit “Run,” do I get the same numbers and the same pictures that you published in your article?\nIf so…phew!\nIf not…what the 🤬?\n\n\n. . .\nScientific replication:\n. . .\n\nCan new researchers conduct an independent analysis and reach the same substantive conclusions that you did?\nJust because your analysis is computationally reproducible does not mean that you have a robust result that generalizes.\n\n. . .\nOur tools will help you achieve the first, which is necessary (but not sufficient!) for the second."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#reproducibility-checklist",
+    "href": "slides/01-meet-the-toolkit.html#reproducibility-checklist",
+    "title": "Meet the toolkit",
+    "section": "Reproducibility checklist",
+    "text": "Reproducibility checklist\n\nWhat does it mean for a data analysis to be “reproducible”?\n\n. . .\nShort-term goals:\n\nAre the tables and figures reproducible from the code and data?\nDoes the code actually do what you think it does?\nIn addition to what was done, is it clear why it was done?\n\n. . .\nLong-term goals:\n\nCan the code be used for other data?\nCan you extend the code to do other things?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#toolkit-for-reproducibility",
+    "href": "slides/01-meet-the-toolkit.html#toolkit-for-reproducibility",
+    "title": "Meet the toolkit",
+    "section": "Toolkit for reproducibility",
+    "text": "Toolkit for reproducibility\n\n\nScriptability – Coding instead of point-and-click \\(\\rightarrow\\) R\nLiterate programming – code, written text, results all in one place instead of error-prone copy-paste \\(\\rightarrow\\) Quarto\nVersion control – Track changes with brief messages that describe those changes \\(\\rightarrow\\) Git / GitHub"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#collaboration",
+    "href": "slides/01-meet-the-toolkit.html#collaboration",
+    "title": "Meet the toolkit",
+    "section": "Collaboration",
+    "text": "Collaboration\n\n\nCollaboration doesn’t just mean working with others. It also means collaborating with yourself across time;\nToo often, I have set something aside only to return to it several weeks (or even days!) later and ask “who did this and what were they thinking?”\nOur tools will make you an excellent collaborator with others, but they will also help you keep yourself organized."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#an-analogy-to-english",
+    "href": "slides/01-meet-the-toolkit.html#an-analogy-to-english",
+    "title": "Meet the toolkit",
+    "section": "An Analogy to English",
+    "text": "An Analogy to English\n. . ."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#an-analogy-to-english-1",
+    "href": "slides/01-meet-the-toolkit.html#an-analogy-to-english-1",
+    "title": "Meet the toolkit",
+    "section": "An Analogy to English",
+    "text": "An Analogy to English"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#an-analogy-to-english-2",
+    "href": "slides/01-meet-the-toolkit.html#an-analogy-to-english-2",
+    "title": "Meet the toolkit",
+    "section": "An Analogy to English",
+    "text": "An Analogy to English"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#an-analogy-to-english-3",
+    "href": "slides/01-meet-the-toolkit.html#an-analogy-to-english-3",
+    "title": "Meet the toolkit",
+    "section": "An Analogy to English",
+    "text": "An Analogy to English"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#an-analogy-to-english-4",
+    "href": "slides/01-meet-the-toolkit.html#an-analogy-to-english-4",
+    "title": "Meet the toolkit",
+    "section": "An Analogy to English",
+    "text": "An Analogy to English"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#r-and-rstudio-1",
+    "href": "slides/01-meet-the-toolkit.html#r-and-rstudio-1",
+    "title": "Meet the toolkit",
+    "section": "R and RStudio",
+    "text": "R and RStudio\n\n\n\n\n\n\n\nR is an open-source statistical programming language\n\nR is also an environment for statistical computing and graphics\nIt’s easily extensible with packages\n\n\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\n\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#r-vs.-rstudio",
+    "href": "slides/01-meet-the-toolkit.html#r-vs.-rstudio",
+    "title": "Meet the toolkit",
+    "section": "R vs. RStudio",
+    "text": "R vs. RStudio\n\n\n\n\n\n\nSource: Modern Dive."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#r-packages",
+    "href": "slides/01-meet-the-toolkit.html#r-packages",
+    "title": "Meet the toolkit",
+    "section": "R packages",
+    "text": "R packages\n\n\nPackages: Fundamental units of reproducible R code, including reusable R functions, the documentation that describes how to use them, and sample data1\nAs of 27 August 2025, there are 22,578 R packages available on CRAN (the Comprehensive R Archive Network)2\nWe’re going to work with a small (but important) subset of these!\n\n\n\n\n1 Wickham and Bryan, R Packages.\n2CRAN contributed packages."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-r-rstudio",
+    "href": "slides/01-meet-the-toolkit.html#tour-r-rstudio",
+    "title": "Meet the toolkit",
+    "section": "Tour: R + RStudio",
+    "text": "Tour: R + RStudio\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\nGo to your container and launch RStudio."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-recap-r-rstudio",
+    "href": "slides/01-meet-the-toolkit.html#tour-recap-r-rstudio",
+    "title": "Meet the toolkit",
+    "section": "Tour recap: R + RStudio",
+    "text": "Tour recap: R + RStudio"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#packages",
+    "href": "slides/01-meet-the-toolkit.html#packages",
+    "title": "Meet the toolkit",
+    "section": "Packages",
+    "text": "Packages\n\nInstalled with install.packages(), once per system:\n\n\ninstall.packages(\"palmerpenguins\")\n\n\n\n\n\n\n\nNote\n\n\n\nWe already pre-installed many of the package you’ll need for this course, so you might go the whole semester without needing to run install.packages()!\n\n\n. . .\n\nLoaded with library(), once per session:\n\n\nlibrary(palmerpenguins)\n\n\nAttaching package: 'palmerpenguins'\n\n\nThe following objects are masked from 'package:datasets':\n\n    penguins, penguins_raw"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#data-frames-and-variables",
+    "href": "slides/01-meet-the-toolkit.html#data-frames-and-variables",
+    "title": "Meet the toolkit",
+    "section": "Data frames and variables",
+    "text": "Data frames and variables\n\nEach row of a data frame is an observation\n\n\n. . .\n\nEach column of a data frame is a variable\n\n\n. . .\n\nColumns (variables) in data frames can be accessed with $:\n\n\ndataframe$variable_name"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#penguins-data-frame",
+    "href": "slides/01-meet-the-toolkit.html#penguins-data-frame",
+    "title": "Meet the toolkit",
+    "section": "\npenguins data frame",
+    "text": "penguins data frame\n\npenguins\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#bill_length_mm",
+    "href": "slides/01-meet-the-toolkit.html#bill_length_mm",
+    "title": "Meet the toolkit",
+    "section": "bill_length_mm",
+    "text": "bill_length_mm\n\npenguins$bill_length_mm\n\n  [1] 39.1 39.5 40.3   NA 36.7 39.3 38.9 39.2 34.1 42.0 37.8 37.8 41.1 38.6 34.6\n [16] 36.6 38.7 42.5 34.4 46.0 37.8 37.7 35.9 38.2 38.8 35.3 40.6 40.5 37.9 40.5\n [31] 39.5 37.2 39.5 40.9 36.4 39.2 38.8 42.2 37.6 39.8 36.5 40.8 36.0 44.1 37.0\n [46] 39.6 41.1 37.5 36.0 42.3 39.6 40.1 35.0 42.0 34.5 41.4 39.0 40.6 36.5 37.6\n [61] 35.7 41.3 37.6 41.1 36.4 41.6 35.5 41.1 35.9 41.8 33.5 39.7 39.6 45.8 35.5\n [76] 42.8 40.9 37.2 36.2 42.1 34.6 42.9 36.7 35.1 37.3 41.3 36.3 36.9 38.3 38.9\n [91] 35.7 41.1 34.0 39.6 36.2 40.8 38.1 40.3 33.1 43.2 35.0 41.0 37.7 37.8 37.9\n[106] 39.7 38.6 38.2 38.1 43.2 38.1 45.6 39.7 42.2 39.6 42.7 38.6 37.3 35.7 41.1\n[121] 36.2 37.7 40.2 41.4 35.2 40.6 38.8 41.5 39.0 44.1 38.5 43.1 36.8 37.5 38.1\n[136] 41.1 35.6 40.2 37.0 39.7 40.2 40.6 32.1 40.7 37.3 39.0 39.2 36.6 36.0 37.8\n[151] 36.0 41.5 46.1 50.0 48.7 50.0 47.6 46.5 45.4 46.7 43.3 46.8 40.9 49.0 45.5\n[166] 48.4 45.8 49.3 42.0 49.2 46.2 48.7 50.2 45.1 46.5 46.3 42.9 46.1 44.5 47.8\n[181] 48.2 50.0 47.3 42.8 45.1 59.6 49.1 48.4 42.6 44.4 44.0 48.7 42.7 49.6 45.3\n[196] 49.6 50.5 43.6 45.5 50.5 44.9 45.2 46.6 48.5 45.1 50.1 46.5 45.0 43.8 45.5\n[211] 43.2 50.4 45.3 46.2 45.7 54.3 45.8 49.8 46.2 49.5 43.5 50.7 47.7 46.4 48.2\n[226] 46.5 46.4 48.6 47.5 51.1 45.2 45.2 49.1 52.5 47.4 50.0 44.9 50.8 43.4 51.3\n[241] 47.5 52.1 47.5 52.2 45.5 49.5 44.5 50.8 49.4 46.9 48.4 51.1 48.5 55.9 47.2\n[256] 49.1 47.3 46.8 41.7 53.4 43.3 48.1 50.5 49.8 43.5 51.5 46.2 55.1 44.5 48.8\n[271] 47.2   NA 46.8 50.4 45.2 49.9 46.5 50.0 51.3 45.4 52.7 45.2 46.1 51.3 46.0\n[286] 51.3 46.6 51.7 47.0 52.0 45.9 50.5 50.3 58.0 46.4 49.2 42.4 48.5 43.2 50.6\n[301] 46.7 52.0 50.5 49.5 46.4 52.8 40.9 54.2 42.5 51.0 49.7 47.5 47.6 52.0 46.9\n[316] 53.5 49.0 46.2 50.9 45.5 50.9 50.8 50.1 49.0 51.5 49.8 48.1 51.4 45.7 50.7\n[331] 42.5 52.2 45.2 49.3 50.2 45.6 51.9 46.8 45.7 55.8 43.5 49.6 50.8 50.2"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#why-did-the-error-occur",
+    "href": "slides/01-meet-the-toolkit.html#why-did-the-error-occur",
+    "title": "Meet the toolkit",
+    "section": "Why did the error occur?",
+    "text": "Why did the error occur?\n\nflipper_length_mm\n\nError: object 'flipper_length_mm' not found"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#flipper_length_mm",
+    "href": "slides/01-meet-the-toolkit.html#flipper_length_mm",
+    "title": "Meet the toolkit",
+    "section": "flipper_length_mm",
+    "text": "flipper_length_mm\nThis can be fixed by using penguins$flipper_length_mm.\n\npenguins$flipper_length_mm\n\n  [1] 181 186 195  NA 193 190 181 195 193 190 186 180 182 191 198 185 195 197\n [19] 184 194 174 180 189 185 180 187 183 187 172 180 178 178 188 184 195 196\n [37] 190 180 181 184 182 195 186 196 185 190 182 179 190 191 186 188 190 200\n [55] 187 191 186 193 181 194 185 195 185 192 184 192 195 188 190 198 190 190\n [73] 196 197 190 195 191 184 187 195 189 196 187 193 191 194 190 189 189 190\n [91] 202 205 185 186 187 208 190 196 178 192 192 203 183 190 193 184 199 190\n[109] 181 197 198 191 193 197 191 196 188 199 189 189 187 198 176 202 186 199\n[127] 191 195 191 210 190 197 193 199 187 190 191 200 185 193 193 187 188 190\n[145] 192 185 190 184 195 193 187 201 211 230 210 218 215 210 211 219 209 215\n[163] 214 216 214 213 210 217 210 221 209 222 218 215 213 215 215 215 216 215\n[181] 210 220 222 209 207 230 220 220 213 219 208 208 208 225 210 216 222 217\n[199] 210 225 213 215 210 220 210 225 217 220 208 220 208 224 208 221 214 231\n[217] 219 230 214 229 220 223 216 221 221 217 216 230 209 220 215 223 212 221\n[235] 212 224 212 228 218 218 212 230 218 228 212 224 214 226 216 222 203 225\n[253] 219 228 215 228 216 215 210 219 208 209 216 229 213 230 217 230 217 222\n[271] 214  NA 215 222 212 213 192 196 193 188 197 198 178 197 195 198 193 194\n[289] 185 201 190 201 197 181 190 195 181 191 187 193 195 197 200 200 191 205\n[307] 187 201 187 203 195 199 195 210 192 205 210 187 196 196 196 201 190 212\n[325] 187 198 199 201 193 203 187 197 191 203 202 194 206 189 195 207 202 193\n[343] 210 198"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#functionargument",
+    "href": "slides/01-meet-the-toolkit.html#functionargument",
+    "title": "Meet the toolkit",
+    "section": "function(argument)",
+    "text": "function(argument)\nFunctions are (most often) verbs, followed by what they will be applied to in parentheses:\n\ndo_this(to_this)\ndo_that(to_this, to_that, with_those)"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#mean",
+    "href": "slides/01-meet-the-toolkit.html#mean",
+    "title": "Meet the toolkit",
+    "section": "mean()",
+    "text": "mean()\nLet’s compute the average of a set of numbers:\n\nx &lt;- c(1, 2, 3, 4, 5, 6, 7, 8, 9)\nx\n\n[1] 1 2 3 4 5 6 7 8 9\n\n\n. . .\n\nmean(x)\n\n[1] 5"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#mean-1",
+    "href": "slides/01-meet-the-toolkit.html#mean-1",
+    "title": "Meet the toolkit",
+    "section": "mean()",
+    "text": "mean()\n\nmean(penguins$flipper_length_mm)\n\n[1] NA\n\n\n. . .\nWut?\n. . .\n\nhead(penguins$flipper_length_mm)\n\n[1] 181 186 195  NA 193 190\n\n\n. . .\nThere’s a missing value (NA stands for “not available”).\n. . .\n\nmean(penguins$flipper_length_mm, na.rm = TRUE)\n\n[1] 200.9152"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#help",
+    "href": "slides/01-meet-the-toolkit.html#help",
+    "title": "Meet the toolkit",
+    "section": "Help",
+    "text": "Help\nObject documentation can be accessed with ?\n\n\n\n?mean\n\n\nVideo"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#summary-of-r-essentials",
+    "href": "slides/01-meet-the-toolkit.html#summary-of-r-essentials",
+    "title": "Meet the toolkit",
+    "section": "Summary of R essentials",
+    "text": "Summary of R essentials\n\nFunctions are (most often) verbs, followed by what they will be applied to in parentheses:\n\n\ndo_this(to_this)\ndo_that(to_this, to_that, with_those)\n\n\n\nPackages are installed with the install.packages() function and loaded with the library function, once per session:\n\n\ninstall.packages(\"package_name\")\nlibrary(package_name)\n\nYour containers come “fully loaded,” so you may not have to install any new packages."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#summary-of-r-essentials-continued",
+    "href": "slides/01-meet-the-toolkit.html#summary-of-r-essentials-continued",
+    "title": "Meet the toolkit",
+    "section": "Summary of R essentials (continued)",
+    "text": "Summary of R essentials (continued)\nData frames: like the spreadsheets of R\n\nEach row of a data frame is an observation\n\nEach column of a data frame is a variable"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#summary-of-r-essentials-continued-1",
+    "href": "slides/01-meet-the-toolkit.html#summary-of-r-essentials-continued-1",
+    "title": "Meet the toolkit",
+    "section": "Summary of R essentials (continued)",
+    "text": "Summary of R essentials (continued)\n\nUse the question mark ? to get help with objects (like data frames and functions):\n\n\n?function_name\n\n\nUse the dollar sign $ to access columns\n\n\ndataframe$column\n\n\n\n\n\n\n\nNote\n\n\n\nGenerally, you need to use the $ to tell R where to find that column."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#summary-of-r-essentials-continued-2",
+    "href": "slides/01-meet-the-toolkit.html#summary-of-r-essentials-continued-2",
+    "title": "Meet the toolkit",
+    "section": "Summary of R essentials (continued)",
+    "text": "Summary of R essentials (continued)\n\nUse the arrow &lt;- or equals sign = to save objects\n\n\nx = some_thing\ny &lt;- some_other_thing\n\n\n\n\n\n\n\nNote\n\n\n\nCheck your environment pane for the saved object!"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#summary-of-r-essentials-continued-3",
+    "href": "slides/01-meet-the-toolkit.html#summary-of-r-essentials-continued-3",
+    "title": "Meet the toolkit",
+    "section": "Summary of R essentials (continued)",
+    "text": "Summary of R essentials (continued)\n\nRead your error messages!\n\n\n\nThese are essential for figuring out where your code is going wrong.\n\n\n\n\n\n\n\n\nNote\n\n\n\nIf you have trouble understanding what a message is saying, there is a high chance someone has explained the message online."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#packages-an-analogy",
+    "href": "slides/01-meet-the-toolkit.html#packages-an-analogy",
+    "title": "Meet the toolkit",
+    "section": "Packages, an analogy",
+    "text": "Packages, an analogy\nIf data analysis was cooking…\n\n\nInstalling a package would be like buying ingredients from the store\nLoading a package would be like getting the ingredients out of your pantry and setting them on your counter top to be used"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tidyverse",
+    "href": "slides/01-meet-the-toolkit.html#tidyverse",
+    "title": "Meet the toolkit",
+    "section": "tidyverse",
+    "text": "tidyverse\n\naka the package you’ll hear about the most…\n\n\n\n\n\n\ntidyverse.org\n\nThe tidyverse is an opinionated collection of R packages designed for data science\nAll packages share an underlying philosophy and a common grammar"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#git-and-github",
+    "href": "slides/01-meet-the-toolkit.html#git-and-github",
+    "title": "Meet the toolkit",
+    "section": "Git and GitHub",
+    "text": "Git and GitHub\n\n\n\n\n\n\n\nGit is a version control system – like “Track Changes” features from Microsoft Word, on steroids\nIt’s not the only version control system, but it’s a very popular one\n\n\n\n\n\n\n\n\nGitHub is the home for your Git-based projects on the internet – like DropBox but much, much better\nWe will use GitHub as a platform for web hosting and collaboration (and as our course management system!)"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#versioning---done-badly",
+    "href": "slides/01-meet-the-toolkit.html#versioning---done-badly",
+    "title": "Meet the toolkit",
+    "section": "Versioning - done badly",
+    "text": "Versioning - done badly"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#versioning---done-better",
+    "href": "slides/01-meet-the-toolkit.html#versioning---done-better",
+    "title": "Meet the toolkit",
+    "section": "Versioning - done better",
+    "text": "Versioning - done better"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#versioning---done-even-better",
+    "href": "slides/01-meet-the-toolkit.html#versioning---done-even-better",
+    "title": "Meet the toolkit",
+    "section": "Versioning - done even better",
+    "text": "Versioning - done even better\n\nwith human readable messages"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github",
+    "href": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github",
+    "title": "Meet the toolkit",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github-1",
+    "href": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github-1",
+    "title": "Meet the toolkit",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github-2",
+    "href": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github-2",
+    "title": "Meet the toolkit",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github-3",
+    "href": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github-3",
+    "title": "Meet the toolkit",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#git-and-github-tips",
+    "href": "slides/01-meet-the-toolkit.html#git-and-github-tips",
+    "title": "Meet the toolkit",
+    "section": "Git and GitHub tips",
+    "text": "Git and GitHub tips\n\n\nThere are millions of git commands – ok, that’s an exaggeration, but there are a lot of them – and very few people know them all. 99% of the time you will use git to add, commit, push, and pull.\nWe will be doing Git things and interfacing with GitHub through RStudio, but if you google for help you might come across methods for doing these things in the command line – skip that and move on to the next resource unless you feel comfortable trying it out.\nThere is a great resource for working with git and R: happygitwithr.com. Some of the content in there is beyond the scope of this course, but it’s a good place to look for help."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-git-github",
+    "href": "slides/01-meet-the-toolkit.html#tour-git-github",
+    "title": "Meet the toolkit",
+    "section": "Tour: Git + GitHub",
+    "text": "Tour: Git + GitHub\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\n\n\n\n\nNote\n\n\n\nYou’ll need to stick to this option if you haven’t yet accepted your GitHub invite and don’t have a repo created for you.\n\n\n\n\nOption 2:\nGo to the course GitHub organization and clone ae-YOUR-GITHUB-NAME repo to your container.\n\n\n\n\n\nTour recap: Git + GitHub\n\nFind your application repo, that will always be named using the naming convention assignment_title-YOUR-GITHUB-NAME, e.g., ae-johnczito or lab-1-johnczito.\nClick on the green “Code” button, make sure SSH is selected, copy the repo URL\n\n\n\n\n\n\nIn RStudio, File &gt; New Project &gt; From Version Control &gt; Git\nPaste repo URL copied in previous step, then click tab to auto-fill the project name, then click Create Project\nIf you haven’t done Lab 0, for one time only, type yes in the pop-up dialogue"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#what-could-have-gone-wrong",
+    "href": "slides/01-meet-the-toolkit.html#what-could-have-gone-wrong",
+    "title": "Meet the toolkit",
+    "section": "What could have gone wrong?",
+    "text": "What could have gone wrong?\n\nNever received GitHub invite \\(\\rightarrow\\) Fill out “Getting to know you survey\nNever accepted GitHub invite \\(\\rightarrow\\) Look for it in your email and accept it\nCloning repo fails \\(\\rightarrow\\) Review/redo Lab 0 steps for setting up SSH key\nStill no luck? Stay after class today or come by my office hours tomorrow or post on Ed for help"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#quarto-1",
+    "href": "slides/01-meet-the-toolkit.html#quarto-1",
+    "title": "Meet the toolkit",
+    "section": "Quarto",
+    "text": "Quarto\n\n\nFully reproducible reports – each time you render the analysis is run from the beginning;\nCode goes in cells (between the three back ticks);\nWritten English goes outside cells, the same way you would write in Google Docs or MS Word."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-quarto",
+    "href": "slides/01-meet-the-toolkit.html#tour-quarto",
+    "title": "Meet the toolkit",
+    "section": "Tour: Quarto",
+    "text": "Tour: Quarto\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\n\n\n\n\nNote\n\n\n\nIf you chose (or had to choose) this option for the previous tour, or if you couldn’t clone your repo for any reason, you’ll need to stick to this option.\n\n\n\n\nOption 2:\nGo to RStudio and open the document ae-01-income-inequality.qmd."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-quarto-and-more-git-github",
+    "href": "slides/01-meet-the-toolkit.html#tour-quarto-and-more-git-github",
+    "title": "Meet the toolkit",
+    "section": "Tour: Quarto (and more Git + GitHub)",
+    "text": "Tour: Quarto (and more Git + GitHub)\n\nTour recap: Quarto\n\n\n\n\n\n\nTour recap: Git + GitHub\nOnce we made changes to our Quarto document, we\n\nwent to the Git pane in RStudio\nstaged our changes by clicking the checkboxes next to the relevant files\ncommitted our changes with an informative commit message\npulled from GitHub to make sure we had the latest version of our repo\npushed our changes to our application exercise repos\nconfirmed on GitHub that we could see our changes pushed from RStudio"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#how-will-we-use-quarto",
+    "href": "slides/01-meet-the-toolkit.html#how-will-we-use-quarto",
+    "title": "Meet the toolkit",
+    "section": "How will we use Quarto?",
+    "text": "How will we use Quarto?\n\nEvery application exercise, lab, project, etc. is an Quarto document\nYou’ll always have a template Quarto document to start with\nThe amount of scaffolding in the template will decrease over the semester"
   },
   {
     "objectID": "slides/01-meet-the-toolkit-slides.html#reminders",
@@ -1072,7 +1464,7 @@
     "href": "slides/01-meet-the-toolkit-slides.html#packages",
     "title": "Meet the toolkit",
     "section": "Packages",
-    "text": "Packages\n\nInstalled with install.packages(), once per system:\n\n\ninstall.packages(\"palmerpenguins\")\n\n\n\n\n\n\n\nNote\n\n\nWe already pre-installed many of the package you’ll need for this course, so you might go the whole semester without needing to run install.packages()!\n\n\n\n\n\nLoaded with library(), once per session:\n\n\nlibrary(palmerpenguins)"
+    "text": "Packages\n\nInstalled with install.packages(), once per system:\n\n\ninstall.packages(\"palmerpenguins\")\n\n\n\n\n\n\n\nNote\n\n\nWe already pre-installed many of the package you’ll need for this course, so you might go the whole semester without needing to run install.packages()!\n\n\n\n\n\nLoaded with library(), once per session:\n\n\nlibrary(palmerpenguins)\n\n\nAttaching package: 'palmerpenguins'\n\n\nThe following objects are masked from 'package:datasets':\n\n    penguins, penguins_raw"
   },
   {
     "objectID": "slides/01-meet-the-toolkit-slides.html#data-frames-and-variables",
