@@ -1093,7 +1093,7 @@
     "href": "slides/01-meet-the-toolkit.html#packages",
     "title": "Meet the toolkit",
     "section": "Packages",
-    "text": "Packages\n\nInstalled with install.packages(), once per system:\n\n\ninstall.packages(\"palmerpenguins\")\n\n\n\n\n\n\n\nNote\n\n\n\nWe already pre-installed many of the package you’ll need for this course, so you might go the whole semester without needing to run install.packages()!\n\n\n. . .\n\nLoaded with library(), once per session:\n\n\nlibrary(palmerpenguins)\n\n\nAttaching package: 'palmerpenguins'\n\n\nThe following objects are masked from 'package:datasets':\n\n    penguins, penguins_raw"
+    "text": "Packages\n\nInstalled with install.packages(), once per system:\n\n\ninstall.packages(\"palmerpenguins\")\n\n\n\n\n\n\n\nNote\n\n\n\nWe already pre-installed many of the package you’ll need for this course, so you might go the whole semester without needing to run install.packages()!\n\n\n. . .\n\nLoaded with library(), once per session:\n\n\nlibrary(palmerpenguins)"
   },
   {
     "objectID": "slides/01-meet-the-toolkit.html#data-frames-and-variables",
@@ -1485,7 +1485,7 @@
     "href": "slides/01-meet-the-toolkit-slides.html#packages",
     "title": "Meet the toolkit",
     "section": "Packages",
-    "text": "Packages\n\nInstalled with install.packages(), once per system:\n\n\ninstall.packages(\"palmerpenguins\")\n\n\n\n\n\n\n\nNote\n\n\nWe already pre-installed many of the package you’ll need for this course, so you might go the whole semester without needing to run install.packages()!\n\n\n\n\n\nLoaded with library(), once per session:\n\n\nlibrary(palmerpenguins)\n\n\nAttaching package: 'palmerpenguins'\n\n\nThe following objects are masked from 'package:datasets':\n\n    penguins, penguins_raw"
+    "text": "Packages\n\nInstalled with install.packages(), once per system:\n\n\ninstall.packages(\"palmerpenguins\")\n\n\n\n\n\n\n\nNote\n\n\nWe already pre-installed many of the package you’ll need for this course, so you might go the whole semester without needing to run install.packages()!\n\n\n\n\n\nLoaded with library(), once per session:\n\n\nlibrary(palmerpenguins)"
   },
   {
     "objectID": "slides/01-meet-the-toolkit-slides.html#data-frames-and-variables",
