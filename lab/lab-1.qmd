@@ -1,9 +1,9 @@
 ---
 title: Lab 1
 subtitle: Exploring NC Counties
-description: "Due: End of lab on Mon, Sep 8"
+description: "Due: end of lab Thursday January 15"
 categories: Lab
-draft: true
+draft: false
 ---
 
 # Introduction
@@ -62,7 +62,7 @@ Below are the components of a Quarto (.qmd) file.
 
 ### Step 2: Clone the repo & start new RStudio project
 
--   Go to the course organization at [github.com/sta199-f25](https://github.com/sta199-f25) organization on GitHub.
+-   Go to the course organization at [github.com/sta199-s26](https://github.com/sta199-s26) organization on GitHub.
     Click on the repo with the prefix **lab-1**.
     It contains the starter documents you need to complete the lab.
 
@@ -241,37 +241,6 @@ b. Make two plots: a histogram and a boxplot of the `pop_2020` variable.
 Render, commit, and push your changes to GitHub with the commit message "Added answer for Q1, part b".
 
 Make sure to commit and push all changed files so that your Git pane is empty afterward.
-:::
-
-## Question 2
-
-a. Guess what the relationship between population density and land area might be – positive?
-negative?
-no relationship?
-Explain your reasoning.
-
-::: render-commit-push
-Render, commit, and push your changes to GitHub with a meaningful commit message.
-
-Make sure to commit and push all changed files so that your Git pane is empty afterward.
-:::
-
-b. Make a scatter plot of population density (`density` on the y-axis) vs. land area in miles-squared (`land_area_mi2` on the x-axis).
-Make sure to set an informative title and axis labels for your plot.
-Describe the relationship.
-Was your guess correct?
-
-::: render-commit-push
-Now is another good time to render, commit, and push your all your changes to GitHub with a meaningful commit message.
-:::
-
-c. Now make a scatter plot of population density (`density` on the y-axis) vs. land area in meters-squared (`land_area_m2` on the x-axis).
-Make sure to set an informative title and axis labels for your plot.
-Comment on how this scatterplot compares to the one in the previous part — is the relationship displayed same or different.
-Explain why.
-
-::: render-commit-push
-Render, commit, and push your all your changes to GitHub with the commit message with a meaningful commit message.
 :::
 
 # Wrap-up
