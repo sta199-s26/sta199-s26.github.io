@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="description" content="Due: End of lab on Mon, Sep 8">
+<meta name="description" content="Due: end of lab Thursday January 15">
 <title>Lab 1 – STA 199 Spring 2026</title>
 <style>
 code{white-space: pre-wrap;}
@@ -96,8 +96,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><meta name="quarto:status" content="draft">
-<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -124,7 +123,7 @@ window.Quarto = {
 };
 </script>
 <meta property="og:title" content="Lab 1 – STA 199 Spring 2026">
-<meta property="og:description" content="Due: End of lab on Mon, Sep 8">
+<meta property="og:description" content="Due: end of lab Thursday January 15">
 <meta property="og:image" content="https://sta199-s26.github.io/lab/images/lab-1/rstudio.png">
 <meta property="og:site_name" content="STA 199 Spring 2026">
 <meta property="og:image:alt" content="RStudio IDE">
@@ -134,7 +133,7 @@ window.Quarto = {
 <body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -345,7 +344,6 @@ window.Quarto = {
 <a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a>
   <ul class="collapse">
 <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
   </ul>
 </li>
   <li>
@@ -368,7 +366,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Due: End of lab on Mon, Sep 8
+    Due: end of lab Thursday January 15
   </div>
 </div>
 
@@ -459,7 +457,7 @@ Warning
 </div>
 </section></section><section id="step-2-clone-the-repo-start-new-rstudio-project" class="level3"><h3 class="anchored" data-anchor-id="step-2-clone-the-repo-start-new-rstudio-project">Step 2: Clone the repo &amp; start new RStudio project</h3>
 <ul>
-<li><p>Go to the course organization at <a href="https://github.com/sta199-f25">github.com/sta199-f25</a> organization on GitHub. Click on the repo with the prefix <strong>lab-1</strong>. It contains the starter documents you need to complete the lab.</p></li>
+<li><p>Go to the course organization at <a href="https://github.com/sta199-s26">github.com/sta199-s26</a> organization on GitHub. Click on the repo with the prefix <strong>lab-1</strong>. It contains the starter documents you need to complete the lab.</p></li>
 <li><p>Click on the green <strong>CODE</strong> button, select <strong>Use SSH</strong> (this might already be selected by default, and if it is, you’ll see the text <strong>Clone with SSH</strong>). Click on the clipboard icon to copy the repo URL.</p></li>
 <li><p>In RStudio, go to <em>File</em> ➛ <em>New Project</em> ➛<em>Version Control</em> ➛ <em>Git</em>.</p></li>
 <li><p>Copy and paste the URL of your assignment repo into the dialog box <em>Repository URL</em>. Again, please make sure to have <em>SSH</em> highlighted under <em>Clone</em> when you copy the address.</p></li>
@@ -649,26 +647,6 @@ Warning
 <div class="render-commit-push">
 <p>Render, commit, and push your changes to GitHub with the commit message “Added answer for Q1, part b”.</p>
 <p>Make sure to commit and push all changed files so that your Git pane is empty afterward.</p>
-</div>
-</section><section id="question-2" class="level2"><h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<ol type="a">
-<li>Guess what the relationship between population density and land area might be – positive? negative? no relationship? Explain your reasoning.</li>
-</ol>
-<div class="render-commit-push">
-<p>Render, commit, and push your changes to GitHub with a meaningful commit message.</p>
-<p>Make sure to commit and push all changed files so that your Git pane is empty afterward.</p>
-</div>
-<ol start="2" type="a">
-<li>Make a scatter plot of population density (<code>density</code> on the y-axis) vs.&nbsp;land area in miles-squared (<code>land_area_mi2</code> on the x-axis). Make sure to set an informative title and axis labels for your plot. Describe the relationship. Was your guess correct?</li>
-</ol>
-<div class="render-commit-push">
-<p>Now is another good time to render, commit, and push your all your changes to GitHub with a meaningful commit message.</p>
-</div>
-<ol start="3" type="a">
-<li>Now make a scatter plot of population density (<code>density</code> on the y-axis) vs.&nbsp;land area in meters-squared (<code>land_area_m2</code> on the x-axis). Make sure to set an informative title and axis labels for your plot. Comment on how this scatterplot compares to the one in the previous part — is the relationship displayed same or different. Explain why.</li>
-</ol>
-<div class="render-commit-push">
-<p>Render, commit, and push your all your changes to GitHub with the commit message with a meaningful commit message.</p>
 </div>
 </section></section><section id="wrap-up" class="level1"><h1>Wrap-up</h1>
 <div class="callout callout-style-default callout-warning callout-titled">
