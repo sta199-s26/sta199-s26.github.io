@@ -240,20 +240,6 @@ Make sure to commit and push all changed files so that your Git pane is empty af
 
 ## Question 3
 
-No code; just words:
-
-a. Is the distribution of population in NC counties right-skewed, left-skewed, or approximately symmetric? Which plot(s) helped you determine this?
-
-b. Is the distribution of population in NC counties unimodal, bimodal, multimodal, or uniform? Which plot(s) helped you determine this?
-
-::: render-commit-push
-Render, commit, and push your changes to GitHub with the commit message "Added answer for Q3".
-
-Make sure to commit and push all changed files so that your Git pane is empty afterward.
-:::
-
-## Question 4
-
 Make a scatter plot of population density (`density` on the y-axis) vs. land area in miles-squared (`land_area_mi2` on the x-axis). Make sure to set an informative title and axis labels for your plot. Then, describe the relationship.
 
 ::: render-commit-push
