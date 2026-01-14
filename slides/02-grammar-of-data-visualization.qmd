@@ -211,6 +211,31 @@ ggplot(
   theme_minimal()
 ```
 
+## The bottom line, at the top
+
+Each line of code adds an element to the plot. 
+
+```{r}
+#| label: full-monty
+#| eval: false
+ggplot(
+  us_uk_tr_votes, 
+  aes(x = year, y = percent_yes, color = country)
+  ) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(se = FALSE) +
+  facet_wrap(~issue) +
+  scale_color_colorblind() +
+  labs(
+    x = "Year", 
+    y = "% yes", 
+    color = "Country"
+  ) +
+  theme_minimal()
+```
+
+Let's take it one line at a time.
+
 ## Step 1. Prepare a canvas for plotting
 
 ```{r}
@@ -422,6 +447,43 @@ ggplot(us_uk_tr_votes, aes(x = year, y = percent_yes, color = country)) +
   theme_minimal() +
   labs(x = "Year", y = "% yes", color = "Country")
 ```
+
+## Data viz with ggplot is like building a cake
+
+::: columns
+::: {.column width="50%"}
+
+```{r}
+#| label: final
+#| eval: false
+ggplot(
+  us_uk_tr_votes, 
+  aes(x = year, y = percent_yes, color = country)
+  ) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(se = FALSE) +
+  facet_wrap(~issue) +
+  scale_color_colorblind() +
+  labs(
+    x = "Year", 
+    y = "% yes", 
+    color = "Country"
+  ) +
+  theme_minimal()
+```
+
+:::
+
+::: {.column width="50%"}
+
+![](images/02/cake.png)
+:::
+
+:::
+
+. . .
+
+The commands are the layers of sponge, and the plus signs are the icing. Don't forget the icing!
 
 ## Grammar of graphics {.smaller}
 
