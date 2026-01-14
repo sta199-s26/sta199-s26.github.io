@@ -366,21 +366,40 @@ Tour recap: Git + GitHub
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># code to visualize the data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
-<img data-src="02-grammar-of-data-visualization_files/figure-revealjs/un-data-viz-1.png" class="quarto-figure quarto-figure-center r-stretch" width="864"></section><section id="step-1.-prepare-a-canvas-for-plotting" class="slide level2"><h2>Step 1. Prepare a canvas for plotting</h2>
+<img data-src="02-grammar-of-data-visualization_files/figure-revealjs/un-data-viz-1.png" class="quarto-figure quarto-figure-center r-stretch" width="864"></section><section id="the-bottom-line-at-the-top" class="slide level2"><h2>The bottom line, at the top</h2>
+<p>Each line of code adds an element to the plot.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> us_uk_tr_votes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb6-2"><a></a>  us_uk_tr_votes, </span>
+<span id="cb6-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)</span>
+<span id="cb6-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb6-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb6-6"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb6-7"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>issue) <span class="sc">+</span></span>
+<span id="cb6-8"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb6-9"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb6-10"><a></a>    <span class="at">x =</span> <span class="st">"Year"</span>, </span>
+<span id="cb6-11"><a></a>    <span class="at">y =</span> <span class="st">"% yes"</span>, </span>
+<span id="cb6-12"><a></a>    <span class="at">color =</span> <span class="st">"Country"</span></span>
+<span id="cb6-13"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb6-14"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Let’s take it one line at a time.</p>
+</section><section id="step-1.-prepare-a-canvas-for-plotting" class="slide level2"><h2>Step 1. Prepare a canvas for plotting</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> us_uk_tr_votes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02-grammar-of-data-visualization_files/figure-revealjs/step-1-1.png" width="864" class="r-stretch"></section><section id="step-2.-map-variables-to-aesthetics" class="slide level2 smaller"><h2>Step 2. Map variables to aesthetics</h2>
 <p><em>Map</em> <code>year</code> to the <code>x</code> <em>aesthetic</em></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> us_uk_tr_votes, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> year))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> us_uk_tr_votes, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> year))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02-grammar-of-data-visualization_files/figure-revealjs/step-2-1.png" width="864" class="r-stretch"></section><section id="step-3.-map-variables-to-aesthetics" class="slide level2 smaller"><h2>Step 3. Map variables to aesthetics</h2>
 <p><em>Map</em> <code>percent_yes</code> to the <code>y</code> <em>aesthetic</em></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> us_uk_tr_votes, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> us_uk_tr_votes, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02-grammar-of-data-visualization_files/figure-revealjs/step-3-1.png" width="864" class="r-stretch"></section><section id="mapping-and-aesthetics" class="slide level2 smaller"><h2>Mapping and aesthetics</h2>
@@ -395,32 +414,32 @@ Tour recap: Git + GitHub
 <ul>
 <li>Instead of:</li>
 </ul>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> us_uk_tr_votes, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> us_uk_tr_votes, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>We usually write:</li>
 </ul>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="step-4.-represent-data-on-your-canvas" class="slide level2 smaller"><h2>Step 4. Represent data on your canvas</h2>
 <p>with a <code>geom</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11" data-code-line-numbers="|2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes)) <span class="sc">+</span></span>
-<span id="cb11-2"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12" data-code-line-numbers="|2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes)) <span class="sc">+</span></span>
+<span id="cb12-2"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02-grammar-of-data-visualization_files/figure-revealjs/step-4-1.png" width="864" class="r-stretch"></section><section id="step-5.-map-variables-to-aesthetics" class="slide level2 smaller"><h2>Step 5. Map variables to aesthetics</h2>
 <p><em>Map</em> <code>country</code> to the <code>color</code> <em>aesthetic</em></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb12-2"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb13-2"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02-grammar-of-data-visualization_files/figure-revealjs/step-5-1.png" width="864" class="r-stretch"></section><section id="step-6.-represent-data-on-your-canvas" class="slide level2 smaller"><h2>Step 6. Represent data on your canvas</h2>
 <p>with another <code>geom</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13" data-code-line-numbers="|3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb13-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb13-3"><a></a>  <span class="fu">geom_smooth</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14" data-code-line-numbers="|3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb14-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb14-3"><a></a>  <span class="fu">geom_smooth</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02-grammar-of-data-visualization_files/figure-revealjs/step-6-1.png" width="864" class="r-stretch"></section><section id="warnings-and-messages" class="slide level2"><h2>Warnings and messages</h2>
@@ -440,47 +459,35 @@ Tour recap: Git + GitHub
 </div>
 </section><section id="step-7.-split-plot-into-facets" class="slide level2"><h2>Step 7. Split plot into facets</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15" data-code-line-numbers="|4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb15-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb15-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb15-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>issue)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16" data-code-line-numbers="|4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb16-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb16-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb16-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>issue)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02-grammar-of-data-visualization_files/figure-revealjs/step-7-1.png" width="864" class="r-stretch"></section><section id="step-8.-use-a-different-color-scale" class="slide level2"><h2>Step 8. Use a different color scale</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16" data-code-line-numbers="|5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb16-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb16-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb16-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>issue) <span class="sc">+</span></span>
-<span id="cb16-5"><a></a>  <span class="fu">scale_color_colorblind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17" data-code-line-numbers="|5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb17-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb17-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb17-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>issue) <span class="sc">+</span></span>
+<span id="cb17-5"><a></a>  <span class="fu">scale_color_colorblind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="02-grammar-of-data-visualization_files/figure-revealjs/step-8-1.png" width="864" class="r-stretch"></section><section id="step-9.-apply-a-different-theme" class="slide level2"><h2>Step 9. Apply a different theme</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17" data-code-line-numbers="|6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb17-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb17-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb17-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>issue) <span class="sc">+</span></span>
-<span id="cb17-5"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb17-6"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="02-grammar-of-data-visualization_files/figure-revealjs/step-9-1.png" width="864" class="r-stretch"></section><section id="step-10.-add-labels" class="slide level2"><h2>Step 10. Add labels</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb18" data-code-line-numbers="|7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<div class="sourceCode cell-code" id="cb18" data-code-line-numbers="|6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
 <span id="cb18-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb18-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
 <span id="cb18-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>issue) <span class="sc">+</span></span>
 <span id="cb18-5"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb18-6"><a></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb18-7"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"% yes"</span>, <span class="at">color =</span> <span class="st">"Country"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-6"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="02-grammar-of-data-visualization_files/figure-revealjs/step-10-1.png" width="864" class="r-stretch"></section><section id="step-11.-set-transparency-of-points" class="slide level2"><h2>Step 11. Set transparency of points</h2>
-<p>with <code>alpha</code></p>
+<img data-src="02-grammar-of-data-visualization_files/figure-revealjs/step-9-1.png" width="864" class="r-stretch"></section><section id="step-10.-add-labels" class="slide level2"><h2>Step 10. Add labels</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19" data-code-line-numbers="|2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb19-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<div class="sourceCode cell-code" id="cb19" data-code-line-numbers="|7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb19-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb19-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
 <span id="cb19-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>issue) <span class="sc">+</span></span>
 <span id="cb19-5"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
@@ -488,19 +495,56 @@ Tour recap: Git + GitHub
 <span id="cb19-7"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"% yes"</span>, <span class="at">color =</span> <span class="st">"Country"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="02-grammar-of-data-visualization_files/figure-revealjs/step-11-1.png" width="864" class="r-stretch"></section><section id="step-12.-hide-standard-errors-of-curves" class="slide level2"><h2>Step 12. Hide standard errors of curves</h2>
-<p>with <code>se = FALSE</code></p>
+<img data-src="02-grammar-of-data-visualization_files/figure-revealjs/step-10-1.png" width="864" class="r-stretch"></section><section id="step-11.-set-transparency-of-points" class="slide level2"><h2>Step 11. Set transparency of points</h2>
+<p>with <code>alpha</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="|3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="|2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
 <span id="cb20-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb20-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb20-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
 <span id="cb20-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>issue) <span class="sc">+</span></span>
 <span id="cb20-5"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
 <span id="cb20-6"><a></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
 <span id="cb20-7"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"% yes"</span>, <span class="at">color =</span> <span class="st">"Country"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="02-grammar-of-data-visualization_files/figure-revealjs/step-12-1.png" width="864" class="r-stretch"></section><section id="grammar-of-graphics" class="slide level2 smaller"><h2>Grammar of graphics</h2>
+<img data-src="02-grammar-of-data-visualization_files/figure-revealjs/step-11-1.png" width="864" class="r-stretch"></section><section id="step-12.-hide-standard-errors-of-curves" class="slide level2"><h2>Step 12. Hide standard errors of curves</h2>
+<p>with <code>se = FALSE</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="|3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb21-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb21-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb21-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>issue) <span class="sc">+</span></span>
+<span id="cb21-5"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb21-6"><a></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb21-7"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"% yes"</span>, <span class="at">color =</span> <span class="st">"Country"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="02-grammar-of-data-visualization_files/figure-revealjs/step-12-1.png" width="864" class="r-stretch"></section><section id="data-viz-with-ggplot-is-like-building-a-cake" class="slide level2"><h2>Data viz with ggplot is like building a cake</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb22-2"><a></a>  us_uk_tr_votes, </span>
+<span id="cb22-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)</span>
+<span id="cb22-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb22-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb22-6"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb22-7"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>issue) <span class="sc">+</span></span>
+<span id="cb22-8"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb22-9"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb22-10"><a></a>    <span class="at">x =</span> <span class="st">"Year"</span>, </span>
+<span id="cb22-11"><a></a>    <span class="at">y =</span> <span class="st">"% yes"</span>, </span>
+<span id="cb22-12"><a></a>    <span class="at">color =</span> <span class="st">"Country"</span></span>
+<span id="cb22-13"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb22-14"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/02/cake.png"></p>
+</div></div>
+<div class="fragment">
+<p>The commands are the layers of sponge, and the plus signs are the icing. Don’t forget the icing!</p>
+</div>
+</section><section id="grammar-of-graphics" class="slide level2 smaller"><h2>Grammar of graphics</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>We built a plot layer-by-layer</p>

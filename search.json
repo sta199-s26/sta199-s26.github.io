@@ -402,6 +402,13 @@
     "text": "Visualize the data\n\n# code to visualize the data"
   },
   {
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#the-bottom-line-at-the-top",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#the-bottom-line-at-the-top",
+    "title": "Grammar of data visualization",
+    "section": "The bottom line, at the top",
+    "text": "The bottom line, at the top\nEach line of code adds an element to the plot.\n\nggplot(\n  us_uk_tr_votes, \n  aes(x = year, y = percent_yes, color = country)\n  ) +\n  geom_point(alpha = 0.5) +\n  geom_smooth(se = FALSE) +\n  facet_wrap(~issue) +\n  scale_color_colorblind() +\n  labs(\n    x = \"Year\", \n    y = \"% yes\", \n    color = \"Country\"\n  ) +\n  theme_minimal()\n\nLet’s take it one line at a time."
+  },
+  {
     "objectID": "slides/02-grammar-of-data-visualization-slides.html#step-1.-prepare-a-canvas-for-plotting",
     "href": "slides/02-grammar-of-data-visualization-slides.html#step-1.-prepare-a-canvas-for-plotting",
     "title": "Grammar of data visualization",
@@ -505,6 +512,13 @@
     "title": "Grammar of data visualization",
     "section": "Step 12. Hide standard errors of curves",
     "text": "Step 12. Hide standard errors of curves\nwith se = FALSE\n\nggplot(us_uk_tr_votes, aes(x = year, y = percent_yes, color = country)) +\n  geom_point(alpha = 0.5) +\n  geom_smooth(se = FALSE) +\n  facet_wrap(~issue) +\n  scale_color_colorblind() +\n  theme_minimal() +\n  labs(x = \"Year\", y = \"% yes\", color = \"Country\")"
+  },
+  {
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#data-viz-with-ggplot-is-like-building-a-cake",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#data-viz-with-ggplot-is-like-building-a-cake",
+    "title": "Grammar of data visualization",
+    "section": "Data viz with ggplot is like building a cake",
+    "text": "Data viz with ggplot is like building a cake\n\n\n\nggplot(\n  us_uk_tr_votes, \n  aes(x = year, y = percent_yes, color = country)\n  ) +\n  geom_point(alpha = 0.5) +\n  geom_smooth(se = FALSE) +\n  facet_wrap(~issue) +\n  scale_color_colorblind() +\n  labs(\n    x = \"Year\", \n    y = \"% yes\", \n    color = \"Country\"\n  ) +\n  theme_minimal()\n\n\n\n\n\nThe commands are the layers of sponge, and the plus signs are the icing. Don’t forget the icing!"
   },
   {
     "objectID": "slides/02-grammar-of-data-visualization-slides.html#grammar-of-graphics",
@@ -619,6 +633,13 @@
     "text": "Visualize the data\n\n# code to visualize the data"
   },
   {
+    "objectID": "slides/02-grammar-of-data-visualization.html#the-bottom-line-at-the-top",
+    "href": "slides/02-grammar-of-data-visualization.html#the-bottom-line-at-the-top",
+    "title": "Grammar of data visualization",
+    "section": "The bottom line, at the top",
+    "text": "The bottom line, at the top\nEach line of code adds an element to the plot.\n\nggplot(\n  us_uk_tr_votes, \n  aes(x = year, y = percent_yes, color = country)\n  ) +\n  geom_point(alpha = 0.5) +\n  geom_smooth(se = FALSE) +\n  facet_wrap(~issue) +\n  scale_color_colorblind() +\n  labs(\n    x = \"Year\", \n    y = \"% yes\", \n    color = \"Country\"\n  ) +\n  theme_minimal()\n\nLet’s take it one line at a time."
+  },
+  {
     "objectID": "slides/02-grammar-of-data-visualization.html#step-1.-prepare-a-canvas-for-plotting",
     "href": "slides/02-grammar-of-data-visualization.html#step-1.-prepare-a-canvas-for-plotting",
     "title": "Grammar of data visualization",
@@ -722,6 +743,13 @@
     "title": "Grammar of data visualization",
     "section": "Step 12. Hide standard errors of curves",
     "text": "Step 12. Hide standard errors of curves\nwith se = FALSE\n\nggplot(us_uk_tr_votes, aes(x = year, y = percent_yes, color = country)) +\n  geom_point(alpha = 0.5) +\n  geom_smooth(se = FALSE) +\n  facet_wrap(~issue) +\n  scale_color_colorblind() +\n  theme_minimal() +\n  labs(x = \"Year\", y = \"% yes\", color = \"Country\")"
+  },
+  {
+    "objectID": "slides/02-grammar-of-data-visualization.html#data-viz-with-ggplot-is-like-building-a-cake",
+    "href": "slides/02-grammar-of-data-visualization.html#data-viz-with-ggplot-is-like-building-a-cake",
+    "title": "Grammar of data visualization",
+    "section": "Data viz with ggplot is like building a cake",
+    "text": "Data viz with ggplot is like building a cake\n\n\n\nggplot(\n  us_uk_tr_votes, \n  aes(x = year, y = percent_yes, color = country)\n  ) +\n  geom_point(alpha = 0.5) +\n  geom_smooth(se = FALSE) +\n  facet_wrap(~issue) +\n  scale_color_colorblind() +\n  labs(\n    x = \"Year\", \n    y = \"% yes\", \n    color = \"Country\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n. . .\nThe commands are the layers of sponge, and the plus signs are the icing. Don’t forget the icing!"
   },
   {
     "objectID": "slides/02-grammar-of-data-visualization.html#grammar-of-graphics",
