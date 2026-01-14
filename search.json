@@ -311,242 +311,235 @@
     ]
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#announcements",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#announcements",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#lab-tomorrow",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#lab-tomorrow",
     "title": "Grammar of data visualization",
-    "section": "Announcements",
-    "text": "Announcements\n\nOffice hours are posted on the course website!\n\nIf you can follow along with today’s application exercise steps, great! If something doesn’t work as expected, ask me/TA during the exercise. We’ll either:\n\nhelp you on the spot and get you unstuck or\nidentify that you’re missing an earlier step, ask you to follow along with your neighbor, and visit office hours before Thursday for one-on-one help"
+    "section": "Lab tomorrow",
+    "text": "Lab tomorrow\nWhat to expect:\n\nYour first graded assignment;\nWe are taking attendance;\nYou will work in randomly-assigned teams;\nEach student submits their own work;\nAssignment due at the end of your lab;\nYou will have a new repo to clone;\nTA will review setup and workflow (same as we did in lecture this week);\nWe know it’s early days. Do not panic about your progress."
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#participate",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#participate",
-    "title": "Grammar of data visualization",
-    "section": "Participate 📱💻",
-    "text": "Participate 📱💻\n\n\n\nWhat is this a visualization of?\n\n\n\n\n\n\n\n\nScan the QR code or go to app.wooclap.com/sta199. Log in with your Duke NetID."
-  },
-  {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#outline",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#outline",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#outline",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#outline",
     "title": "Grammar of data visualization",
     "section": "Outline",
-    "text": "Outline\n\n\nLast time:\n\nWe introduced you to the course toolkit.\nYou cloned your ae repositories and started making some updates in your Quarto documents.\nYou committed and pushed your changes back – at least most of you did!\n\n\n\n\n\n\nToday:\n\nYou will wrap up that application exercis, and commit and push your final changes.\nWe will introduce data visualization.\nYou will pull to get today’s application exercise file.\nYou will work on the new application exercise on data visualization, commit your changes, and push them."
+    "text": "Outline\n\n\nLast time:\n\nWe introduced you to the course toolkit;\nYou cloned your ae repositories and rendered your first Quarto document;\n\n\n\n\n\n\nToday:\n\nWe will finish the application exercise, and get an introduction to Git, GitHub, and Quarto;\nWe will introduce data visualization;\nTime permitting, we’ll start a new AE to practice."
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#tour-quarto-and-more-git-github",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#tour-quarto-and-more-git-github",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#tour-quarto-and-more-git-github",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#tour-quarto-and-more-git-github",
     "title": "Grammar of data visualization",
     "section": "Tour: Quarto (and more Git + GitHub)",
     "text": "Tour: Quarto (and more Git + GitHub)\n\nOption 2:\nGo to RStudio and open the document ae-01-income-inequality.qmd.\n\n\n\nTour recap: Quarto\n\n\n\n\n\n\nTour recap: Git + GitHub\nOnce we made changes to our Quarto document, we\n\nwent to the Git pane in RStudio\nstaged our changes by clicking the checkboxes next to the relevant files\ncommitted our changes with an informative commit message\npulled from GitHub to make sure we had the latest version of our repo\npushed our changes to our application exercise repos\nconfirmed on GitHub that we could see our changes pushed from RStudio"
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#how-will-we-use-quarto",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#how-will-we-use-quarto",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#how-will-we-use-quarto",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#how-will-we-use-quarto",
     "title": "Grammar of data visualization",
     "section": "How will we use Quarto?",
-    "text": "How will we use Quarto?\n\nEvery application exercise, lab, project, etc. is an Quarto document\nYou’ll always have a template Quarto document to start with\nThe amount of scaffolding in the template will decrease over the semester"
+    "text": "How will we use Quarto?\n\nEvery application exercise, lab, HW, project, take-home, etc. is a Quarto document;\nYou’ll always have a template Quarto document to start with;\nThe amount of scaffolding in the template will decrease over the semester."
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#whats-with-all-the-hexes",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#whats-with-all-the-hexes",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#what-does-this-picture-communicate",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#what-does-this-picture-communicate",
     "title": "Grammar of data visualization",
-    "section": "What’s with all the hexes?",
-    "text": "What’s with all the hexes?"
+    "section": "What does this picture communicate?",
+    "text": "What does this picture communicate?\nRemember this visualization from the code along video – what was it about?"
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#we-have-hexes-too",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#we-have-hexes-too",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#data-science-lessons",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#data-science-lessons",
     "title": "Grammar of data visualization",
-    "section": "We have hexes too!",
-    "text": "We have hexes too!\n\nGrab one before you leave!"
+    "section": "Data science lessons",
+    "text": "Data science lessons\n\nAre you asking a question that your data could actually answer?\n\n\nA “Yes” vote is not necessarily an approving vote. It depends how the resolution was worded;\nIf your question is “where do countries stand on these issues, both relative to one another and over time,” the picture doesn’t actually have an answer;\nIt’s only useful for seeing if countries are in agreement with one another or not;\nPrecisely what they are agreeing about is ambiguous."
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#participate-1",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#participate-1",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#data-science-lessons-continued",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#data-science-lessons-continued",
     "title": "Grammar of data visualization",
-    "section": "Participate 📱💻",
-    "text": "Participate 📱💻\n\n\n\nRemember this visualization from the code along video – what was it about?\n\n\n\n\n\n\n\n\nScan the QR code or go to app.wooclap.com/sta199. Log in with your Duke NetID."
+    "section": "Data science lessons (continued)",
+    "text": "Data science lessons (continued)\n\nThis class is about technique bolstered by good taste.\n\n\nThe plot is fairly technically sophisticated (lots of moving parts), and it looks rather attractive;\nWe certainly want you to learn how to create something like that;\nBut after you’re done admiring it, your good taste should kick in;\nIs this picture actually communicating effectively."
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#let-see",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#let-see",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#data-science-lessons-continued-1",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#data-science-lessons-continued-1",
+    "title": "Grammar of data visualization",
+    "section": "Data science lessons (continued)",
+    "text": "Data science lessons (continued)\n\nIf a reader has to squint at your picture for more than 30 seconds (and that’s being generous) in order to understand it, you need to start over.\n\n\nIf you make the reader work too hard, they will take the path of least resistance: skip the picture altogether or default to the most facile interpretation;\nOn the UN pic, many reckless readers might assume Yes = Approve and misread."
+  },
+  {
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#let-see",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#let-see",
     "title": "Grammar of data visualization",
     "section": "Let’ see…",
     "text": "Let’ see…\n\nhow the sausage is made!"
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#load-packages",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#load-packages",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#load-packages",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#load-packages",
     "title": "Grammar of data visualization",
     "section": "Load packages",
     "text": "Load packages\n\nlibrary(unvotes)\nlibrary(tidyverse)\nlibrary(ggthemes)"
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#prepare-the-data",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#prepare-the-data",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#prepare-the-data",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#prepare-the-data",
     "title": "Grammar of data visualization",
     "section": "Prepare the data",
     "text": "Prepare the data\n\nus_uk_tr_votes &lt;- un_votes |&gt;\n  inner_join(un_roll_calls, by = \"rcid\") |&gt;\n  inner_join(un_roll_call_issues, by = \"rcid\", relationship = \"many-to-many\") |&gt;\n  filter(country %in% c(\"United Kingdom\", \"United States\", \"Turkey\")) |&gt;\n  mutate(year = year(date)) |&gt;\n  group_by(country, year, issue) |&gt;\n  summarize(percent_yes = mean(vote == \"yes\"), .groups = \"drop\")\n\n\n\n\n\n\n\nNote\n\n\nLet’s leave these details aside for a bit, we’ll revisit this code at a later point in the semester. For now, let’s agree that we need to do some “data wrangling” to get the data into the right format for the plot we want to create. Just note that we called the data frame we’ll visualize us_uk_tr_votes."
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#view-the-data",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#view-the-data",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#view-the-data",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#view-the-data",
     "title": "Grammar of data visualization",
     "section": "View the data",
     "text": "View the data\n\nus_uk_tr_votes\n\n# A tibble: 1,212 × 4\n   country  year issue                        percent_yes\n   &lt;chr&gt;   &lt;dbl&gt; &lt;fct&gt;                              &lt;dbl&gt;\n 1 Turkey   1946 Colonialism                        0.8  \n 2 Turkey   1946 Economic development               0.6  \n 3 Turkey   1946 Human rights                       0    \n 4 Turkey   1947 Colonialism                        0.222\n 5 Turkey   1947 Economic development               0.5  \n 6 Turkey   1947 Palestinian conflict               0.143\n 7 Turkey   1948 Colonialism                        0.417\n 8 Turkey   1948 Arms control and disarmament       0    \n 9 Turkey   1948 Economic development               0.375\n10 Turkey   1948 Human rights                       0.167\n# ℹ 1,202 more rows"
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#visualize-the-data",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#visualize-the-data",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#visualize-the-data",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#visualize-the-data",
     "title": "Grammar of data visualization",
     "section": "Visualize the data",
     "text": "Visualize the data\n\n# code to visualize the data"
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#step-1.-prepare-a-canvas-for-plotting",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#step-1.-prepare-a-canvas-for-plotting",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#step-1.-prepare-a-canvas-for-plotting",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#step-1.-prepare-a-canvas-for-plotting",
     "title": "Grammar of data visualization",
     "section": "Step 1. Prepare a canvas for plotting",
     "text": "Step 1. Prepare a canvas for plotting\n\nggplot(data = us_uk_tr_votes)"
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#step-2.-map-variables-to-aesthetics",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#step-2.-map-variables-to-aesthetics",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#step-2.-map-variables-to-aesthetics",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#step-2.-map-variables-to-aesthetics",
     "title": "Grammar of data visualization",
     "section": "Step 2. Map variables to aesthetics",
     "text": "Step 2. Map variables to aesthetics\nMap year to the x aesthetic\n\nggplot(data = us_uk_tr_votes, mapping = aes(x = year))"
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#step-3.-map-variables-to-aesthetics",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#step-3.-map-variables-to-aesthetics",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#step-3.-map-variables-to-aesthetics",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#step-3.-map-variables-to-aesthetics",
     "title": "Grammar of data visualization",
     "section": "Step 3. Map variables to aesthetics",
     "text": "Step 3. Map variables to aesthetics\nMap percent_yes to the y aesthetic\n\nggplot(data = us_uk_tr_votes, mapping = aes(x = year, y = percent_yes))"
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#mapping-and-aesthetics",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#mapping-and-aesthetics",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#mapping-and-aesthetics",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#mapping-and-aesthetics",
     "title": "Grammar of data visualization",
     "section": "Mapping and aesthetics",
     "text": "Mapping and aesthetics\n\nAesthetics are visual properties of a plot\nIn the grammar of graphics, variables from the data frame are mapped to aesthetics"
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#argument-names",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#argument-names",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#argument-names",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#argument-names",
     "title": "Grammar of data visualization",
     "section": "Argument names",
     "text": "Argument names\nIt’s common practice in R to omit the names of first two arguments of a function:\n\n\nInstead of:\n\nggplot(data = us_uk_tr_votes, mapping = aes(x = year, y = percent_yes))\n\nWe usually write:\n\nggplot(us_uk_tr_votes, aes(x = year, y = percent_yes))"
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#step-4.-represent-data-on-your-canvas",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#step-4.-represent-data-on-your-canvas",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#step-4.-represent-data-on-your-canvas",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#step-4.-represent-data-on-your-canvas",
     "title": "Grammar of data visualization",
     "section": "Step 4. Represent data on your canvas",
     "text": "Step 4. Represent data on your canvas\nwith a geom\n\nggplot(us_uk_tr_votes, aes(x = year, y = percent_yes)) +\n  geom_point()"
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#step-5.-map-variables-to-aesthetics",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#step-5.-map-variables-to-aesthetics",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#step-5.-map-variables-to-aesthetics",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#step-5.-map-variables-to-aesthetics",
     "title": "Grammar of data visualization",
     "section": "Step 5. Map variables to aesthetics",
     "text": "Step 5. Map variables to aesthetics\nMap country to the color aesthetic\n\nggplot(us_uk_tr_votes, aes(x = year, y = percent_yes, color = country)) +\n  geom_point()"
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#step-6.-represent-data-on-your-canvas",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#step-6.-represent-data-on-your-canvas",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#step-6.-represent-data-on-your-canvas",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#step-6.-represent-data-on-your-canvas",
     "title": "Grammar of data visualization",
     "section": "Step 6. Represent data on your canvas",
     "text": "Step 6. Represent data on your canvas\nwith another geom\n\nggplot(us_uk_tr_votes, aes(x = year, y = percent_yes, color = country)) +\n  geom_point() +\n  geom_smooth()"
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#warnings-and-messages",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#warnings-and-messages",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#warnings-and-messages",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#warnings-and-messages",
     "title": "Grammar of data visualization",
     "section": "Warnings and messages",
     "text": "Warnings and messages\n\nAdding geom_smooth() resulted in the following warning:\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\nIt tells us the type of smoothing ggplot2 does under the hood when drawing the smooth curves that represent trends for each country.\n\n\n\n\nGoing forward we’ll suppress this warning to save some space."
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#step-7.-split-plot-into-facets",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#step-7.-split-plot-into-facets",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#step-7.-split-plot-into-facets",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#step-7.-split-plot-into-facets",
     "title": "Grammar of data visualization",
     "section": "Step 7. Split plot into facets",
     "text": "Step 7. Split plot into facets\n\nggplot(us_uk_tr_votes, aes(x = year, y = percent_yes, color = country)) +\n  geom_point() +\n  geom_smooth() +\n  facet_wrap(~issue)"
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#step-8.-use-a-different-color-scale",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#step-8.-use-a-different-color-scale",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#step-8.-use-a-different-color-scale",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#step-8.-use-a-different-color-scale",
     "title": "Grammar of data visualization",
     "section": "Step 8. Use a different color scale",
     "text": "Step 8. Use a different color scale\n\nggplot(us_uk_tr_votes, aes(x = year, y = percent_yes, color = country)) +\n  geom_point() +\n  geom_smooth() +\n  facet_wrap(~issue) +\n  scale_color_colorblind()"
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#step-9.-apply-a-different-theme",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#step-9.-apply-a-different-theme",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#step-9.-apply-a-different-theme",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#step-9.-apply-a-different-theme",
     "title": "Grammar of data visualization",
     "section": "Step 9. Apply a different theme",
     "text": "Step 9. Apply a different theme\n\nggplot(us_uk_tr_votes, aes(x = year, y = percent_yes, color = country)) +\n  geom_point() +\n  geom_smooth() +\n  facet_wrap(~issue) +\n  scale_color_colorblind() +\n  theme_minimal()"
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#step-10.-add-labels",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#step-10.-add-labels",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#step-10.-add-labels",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#step-10.-add-labels",
     "title": "Grammar of data visualization",
     "section": "Step 10. Add labels",
     "text": "Step 10. Add labels\n\nggplot(us_uk_tr_votes, aes(x = year, y = percent_yes, color = country)) +\n  geom_point() +\n  geom_smooth() +\n  facet_wrap(~issue) +\n  scale_color_colorblind() +\n  theme_minimal() +\n  labs(x = \"Year\", y = \"% yes\", color = \"Country\")"
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#participate-2",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#participate-2",
-    "title": "Grammar of data visualization",
-    "section": "Participate 📱💻",
-    "text": "Participate 📱💻\n\n\n\nWhich of the following modifications will change the transparency of the points in the plot?\n\n\n\n\n\n\n\n\nScan the QR code or go to app.wooclap.com/sta199. Log in with your Duke NetID."
-  },
-  {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#step-11.-set-transparency-of-points",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#step-11.-set-transparency-of-points",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#step-11.-set-transparency-of-points",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#step-11.-set-transparency-of-points",
     "title": "Grammar of data visualization",
     "section": "Step 11. Set transparency of points",
     "text": "Step 11. Set transparency of points\nwith alpha\n\nggplot(us_uk_tr_votes, aes(x = year, y = percent_yes, color = country)) +\n  geom_point(alpha = 0.5) +\n  geom_smooth() +\n  facet_wrap(~issue) +\n  scale_color_colorblind() +\n  theme_minimal() +\n  labs(x = \"Year\", y = \"% yes\", color = \"Country\")"
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#step-12.-hide-standard-errors-of-curves",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#step-12.-hide-standard-errors-of-curves",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#step-12.-hide-standard-errors-of-curves",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#step-12.-hide-standard-errors-of-curves",
     "title": "Grammar of data visualization",
     "section": "Step 12. Hide standard errors of curves",
     "text": "Step 12. Hide standard errors of curves\nwith se = FALSE\n\nggplot(us_uk_tr_votes, aes(x = year, y = percent_yes, color = country)) +\n  geom_point(alpha = 0.5) +\n  geom_smooth(se = FALSE) +\n  facet_wrap(~issue) +\n  scale_color_colorblind() +\n  theme_minimal() +\n  labs(x = \"Year\", y = \"% yes\", color = \"Country\")"
   },
   {
-    "objectID": "slides/03-grammar-of-data-visualization-slides.html#grammar-of-graphics",
-    "href": "slides/03-grammar-of-data-visualization-slides.html#grammar-of-graphics",
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#grammar-of-graphics",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#grammar-of-graphics",
     "title": "Grammar of data visualization",
     "section": "Grammar of graphics",
     "text": "Grammar of graphics\n\n\nWe built a plot layer-by-layer\n\njust like described in the book The Grammar of Graphics and\nimplemented in the ggplot2 package, the data visualization package of the tidyverse."
+  },
+  {
+    "objectID": "slides/02-grammar-of-data-visualization-slides.html#now-you-try",
+    "href": "slides/02-grammar-of-data-visualization-slides.html#now-you-try",
+    "title": "Grammar of data visualization",
+    "section": "Now you try",
+    "text": "Now you try\n\nOn GitHub, your AE repo should now have a new file in it called ae-02-penguin-peekaboo.qmd;\nIn other words, the remote version of your repo in the cloud (GitHub) has updates that your local repo (container) does not yet have;\nSo pull them!"
   },
   {
     "objectID": "slides/02-grammar-of-data-visualization.html",
     "href": "slides/02-grammar-of-data-visualization.html",
     "title": "Grammar of data visualization",
     "section": "",
-    "text": "Office hours are posted on the course website!\n\nIf you can follow along with today’s application exercise steps, great! If something doesn’t work as expected, ask me/TA during the exercise. We’ll either:\n\nhelp you on the spot and get you unstuck or\nidentify that you’re missing an earlier step, ask you to follow along with your neighbor, and visit office hours before Thursday for one-on-one help\n\n\n\n\n\n\nWhat is this a visualization of?\n\n\n\n\n\n\n\n\nScan the QR code or go to app.wooclap.com/sta199. Log in with your Duke NetID.\n\n\n\n\n\n\nLast time:\n\nWe introduced you to the course toolkit.\nYou cloned your ae repositories and started making some updates in your Quarto documents.\nYou committed and pushed your changes back – at least most of you did!\n\n\n\n. . .\n\n\nToday:\n\nYou will wrap up that application exercis, and commit and push your final changes.\nWe will introduce data visualization.\nYou will pull to get today’s application exercise file.\nYou will work on the new application exercise on data visualization, commit your changes, and push them."
+    "text": "What to expect:\n\n\nYour first graded assignment;\nWe are taking attendance;\nYou will work in randomly-assigned teams;\nEach student submits their own work;\nAssignment due at the end of your lab;\nYou will have a new repo to clone;\nTA will review setup and workflow (same as we did in lecture this week);\nWe know it’s early days. Do not panic about your progress.\n\n\n\n\n\nLast time:\n\nWe introduced you to the course toolkit;\nYou cloned your ae repositories and rendered your first Quarto document;\n\n\n\n. . .\n\n\nToday:\n\nWe will finish the application exercise, and get an introduction to Git, GitHub, and Quarto;\nWe will introduce data visualization;\nTime permitting, we’ll start a new AE to practice."
   },
   {
-    "objectID": "slides/02-grammar-of-data-visualization.html#announcements",
-    "href": "slides/02-grammar-of-data-visualization.html#announcements",
+    "objectID": "slides/02-grammar-of-data-visualization.html#lab-tomorrow",
+    "href": "slides/02-grammar-of-data-visualization.html#lab-tomorrow",
     "title": "Grammar of data visualization",
     "section": "",
-    "text": "Office hours are posted on the course website!\n\nIf you can follow along with today’s application exercise steps, great! If something doesn’t work as expected, ask me/TA during the exercise. We’ll either:\n\nhelp you on the spot and get you unstuck or\nidentify that you’re missing an earlier step, ask you to follow along with your neighbor, and visit office hours before Thursday for one-on-one help"
-  },
-  {
-    "objectID": "slides/02-grammar-of-data-visualization.html#participate",
-    "href": "slides/02-grammar-of-data-visualization.html#participate",
-    "title": "Grammar of data visualization",
-    "section": "",
-    "text": "What is this a visualization of?\n\n\n\n\n\n\n\n\nScan the QR code or go to app.wooclap.com/sta199. Log in with your Duke NetID."
+    "text": "What to expect:\n\n\nYour first graded assignment;\nWe are taking attendance;\nYou will work in randomly-assigned teams;\nEach student submits their own work;\nAssignment due at the end of your lab;\nYou will have a new repo to clone;\nTA will review setup and workflow (same as we did in lecture this week);\nWe know it’s early days. Do not panic about your progress."
   },
   {
     "objectID": "slides/02-grammar-of-data-visualization.html#outline",
     "href": "slides/02-grammar-of-data-visualization.html#outline",
     "title": "Grammar of data visualization",
     "section": "",
-    "text": "Last time:\n\nWe introduced you to the course toolkit.\nYou cloned your ae repositories and started making some updates in your Quarto documents.\nYou committed and pushed your changes back – at least most of you did!\n\n\n\n. . .\n\n\nToday:\n\nYou will wrap up that application exercis, and commit and push your final changes.\nWe will introduce data visualization.\nYou will pull to get today’s application exercise file.\nYou will work on the new application exercise on data visualization, commit your changes, and push them."
+    "text": "Last time:\n\nWe introduced you to the course toolkit;\nYou cloned your ae repositories and rendered your first Quarto document;\n\n\n\n. . .\n\n\nToday:\n\nWe will finish the application exercise, and get an introduction to Git, GitHub, and Quarto;\nWe will introduce data visualization;\nTime permitting, we’ll start a new AE to practice."
   },
   {
     "objectID": "slides/02-grammar-of-data-visualization.html#tour-quarto-and-more-git-github",
@@ -560,28 +553,35 @@
     "href": "slides/02-grammar-of-data-visualization.html#how-will-we-use-quarto",
     "title": "Grammar of data visualization",
     "section": "How will we use Quarto?",
-    "text": "How will we use Quarto?\n\nEvery application exercise, lab, project, etc. is an Quarto document\nYou’ll always have a template Quarto document to start with\nThe amount of scaffolding in the template will decrease over the semester"
+    "text": "How will we use Quarto?\n\nEvery application exercise, lab, HW, project, take-home, etc. is a Quarto document;\nYou’ll always have a template Quarto document to start with;\nThe amount of scaffolding in the template will decrease over the semester."
   },
   {
-    "objectID": "slides/02-grammar-of-data-visualization.html#whats-with-all-the-hexes",
-    "href": "slides/02-grammar-of-data-visualization.html#whats-with-all-the-hexes",
+    "objectID": "slides/02-grammar-of-data-visualization.html#what-does-this-picture-communicate",
+    "href": "slides/02-grammar-of-data-visualization.html#what-does-this-picture-communicate",
     "title": "Grammar of data visualization",
-    "section": "What’s with all the hexes?",
-    "text": "What’s with all the hexes?"
+    "section": "What does this picture communicate?",
+    "text": "What does this picture communicate?\nRemember this visualization from the code along video – what was it about?"
   },
   {
-    "objectID": "slides/02-grammar-of-data-visualization.html#we-have-hexes-too",
-    "href": "slides/02-grammar-of-data-visualization.html#we-have-hexes-too",
+    "objectID": "slides/02-grammar-of-data-visualization.html#data-science-lessons",
+    "href": "slides/02-grammar-of-data-visualization.html#data-science-lessons",
     "title": "Grammar of data visualization",
-    "section": "We have hexes too!",
-    "text": "We have hexes too!\n\nGrab one before you leave!"
+    "section": "Data science lessons",
+    "text": "Data science lessons\n\nAre you asking a question that your data could actually answer?\n\n\nA “Yes” vote is not necessarily an approving vote. It depends how the resolution was worded;\nIf your question is “where do countries stand on these issues, both relative to one another and over time,” the picture doesn’t actually have an answer;\nIt’s only useful for seeing if countries are in agreement with one another or not;\nPrecisely what they are agreeing about is ambiguous."
   },
   {
-    "objectID": "slides/02-grammar-of-data-visualization.html#participate-1",
-    "href": "slides/02-grammar-of-data-visualization.html#participate-1",
+    "objectID": "slides/02-grammar-of-data-visualization.html#data-science-lessons-continued",
+    "href": "slides/02-grammar-of-data-visualization.html#data-science-lessons-continued",
     "title": "Grammar of data visualization",
-    "section": "Participate 📱💻",
-    "text": "Participate 📱💻\n\n\n\nRemember this visualization from the code along video – what was it about?\n\n\n\n\n\n\n\n\nScan the QR code or go to app.wooclap.com/sta199. Log in with your Duke NetID."
+    "section": "Data science lessons (continued)",
+    "text": "Data science lessons (continued)\n\nThis class is about technique bolstered by good taste.\n\n\nThe plot is fairly technically sophisticated (lots of moving parts), and it looks rather attractive;\nWe certainly want you to learn how to create something like that;\nBut after you’re done admiring it, your good taste should kick in;\nIs this picture actually communicating effectively."
+  },
+  {
+    "objectID": "slides/02-grammar-of-data-visualization.html#data-science-lessons-continued-1",
+    "href": "slides/02-grammar-of-data-visualization.html#data-science-lessons-continued-1",
+    "title": "Grammar of data visualization",
+    "section": "Data science lessons (continued)",
+    "text": "Data science lessons (continued)\n\nIf a reader has to squint at your picture for more than 30 seconds (and that’s being generous) in order to understand it, you need to start over.\n\n\nIf you make the reader work too hard, they will take the path of least resistance: skip the picture altogether or default to the most facile interpretation;\nOn the UN pic, many reckless readers might assume Yes = Approve and misread."
   },
   {
     "objectID": "slides/02-grammar-of-data-visualization.html#let-see",
@@ -710,13 +710,6 @@
     "text": "Step 10. Add labels\n\nggplot(us_uk_tr_votes, aes(x = year, y = percent_yes, color = country)) +\n  geom_point() +\n  geom_smooth() +\n  facet_wrap(~issue) +\n  scale_color_colorblind() +\n  theme_minimal() +\n  labs(x = \"Year\", y = \"% yes\", color = \"Country\")"
   },
   {
-    "objectID": "slides/02-grammar-of-data-visualization.html#participate-2",
-    "href": "slides/02-grammar-of-data-visualization.html#participate-2",
-    "title": "Grammar of data visualization",
-    "section": "Participate 📱💻",
-    "text": "Participate 📱💻\n\n\n\nWhich of the following modifications will change the transparency of the points in the plot?\n\n\n\n\n\n\n\n\nScan the QR code or go to app.wooclap.com/sta199. Log in with your Duke NetID."
-  },
-  {
     "objectID": "slides/02-grammar-of-data-visualization.html#step-11.-set-transparency-of-points",
     "href": "slides/02-grammar-of-data-visualization.html#step-11.-set-transparency-of-points",
     "title": "Grammar of data visualization",
@@ -738,11 +731,18 @@
     "text": "Grammar of graphics\n\n\nWe built a plot layer-by-layer\n\njust like described in the book The Grammar of Graphics and\nimplemented in the ggplot2 package, the data visualization package of the tidyverse."
   },
   {
+    "objectID": "slides/02-grammar-of-data-visualization.html#now-you-try",
+    "href": "slides/02-grammar-of-data-visualization.html#now-you-try",
+    "title": "Grammar of data visualization",
+    "section": "Now you try",
+    "text": "Now you try\n\nOn GitHub, your AE repo should now have a new file in it called ae-02-penguin-peekaboo.qmd;\nIn other words, the remote version of your repo in the cloud (GitHub) has updates that your local repo (container) does not yet have;\nSo pull them!"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "STA 199 Introduction to Data Science and Statistical Thinking",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 7\n\n🧑‍🏫 Welcome!\nslides 00\n\n\n\n\nThu, Jan 8\n\n💻 Lab 0\nlab 0\n\n\n\n1\nMon, Jan 12\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\n🧑‍🏫 Meet the toolkit\n\nslides 01 notes 01\n\n\n\n\n\nWed, Jan 14\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\n🧑‍🏫 Grammar of data visualization\n\n\n\n\n\nThu, Jan 15\n\n💻 Lab 1\n\n\n\n\n2\nMon, Jan 19\n\n❌ MLK Day - No Lecture\n\n\n\n\n\n\nWed, Jan 21\n📗 r4ds - chp 2  📗 r4ds - chp 3.1-3.5  🎥 Grammar of data transformation  🎥 Code along :: Flights and pipes\n\n🧑‍🏫 Grammar of data transformation\n\n\n\n\n\nThu, Jan 22\n\n💻 Lab 2\n\n\n\n\n3\nMon, Jan 26\n📗 r4ds - chp 3.6-3.7  🎥 Visualizing and summarizing categorical data  🎥 Visualizing and summarizing numerical data  🎥 Visualizing and summarizing relationships  🎥 Code along :: Star Wars characters\n\n🧑‍🏫 Exploratory Data Analysis I\n\n\n\n\n\nWed, Jan 28\n📘 ims - chp 5  📘 ims - chp 6  🎥 Code along :: Diving deeper with Palmer Penguins\n\n🧑‍🏫 Exploratory Data Analysis II\n\nHW 1 @ 11:59 pm\n\n\n\nThu, Jan 29\n\n💻 Lab 3\n\n\n\n\n4\nMon, Feb 2\n🎥 Tidy data  🎥 Tidying data  🎥 Code along :: Country populations over time  📗 r4ds - chp 5\n\n🧑‍🏫 Tidying data\n\n\n\n\n\nWed, Feb 4\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\n🧑‍🏫 Joining data\n\nHW 2 @ 11:59 pm\n\n\n\nThu, Feb 5\n\n💻 Lab 4\n\n\n\n\n5\nMon, Feb 9\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\n🧑‍🏫 Data types and classes\n\n\n\n\n\nWed, Feb 11\n🎥 Importing data  🎥 Code along :: Halving CO2 emissions  🎥 Code along :: Student survey  📗 r4ds - chp 7  📗 r4ds - chp 17.1 - 17.3\n\n🧑‍🏫 Importing and recoding data\n\nHW 3 @ 11:59 pm\n\n\n\nThu, Feb 12\n\n💻 Lab 5\n\n\n\n\n6\nMon, Feb 16\n🎥 Web scraping basics  🎥 Code along :: Scraping an eCommerce page  📗 r4ds - chp 24.1 - 24.6\n\n🧑‍🏫 Webscraping I\n\n\n\n\n\nWed, Feb 18\n🎥 Code along :: Scraping many eCommerce pages  🎥 Web scraping considerations  📗 r4ds - chp 25.1 - 25.2\n\n🧑‍🏫 Webscraping II\n\nHW 4 @ 11:59 pm\n\n\n\nThu, Feb 19\n\n💻 Project milestone\n\n\n\n\n7\nMon, Feb 23\n\n🧑‍🏫 Data science wrap-up\n\n\n\n\n\nWed, Feb 25\n\n📝 Midterm 1\n\n\n\n\n\n\nThu, Feb 26\n\n💻 Project milestone\n\n\n\n\n\nSun, Mar 1\n\n\n\nTake-home 1 @ 11:59 pm\n\n\n8\nMon, Mar 2\n📘 ims - chp 6  📗 r4ds - chp 10\n\n🧑‍🏫 Communicating results\n\n\n\n\n\nWed, Mar 4\n🎥 Misrepresentation  🎥 Data privacy  🎥 Algorithmic bias  🎥 Code along :: Sectors and services\n\n🧑‍🏫 Data science ethics\n\n\n\n\n\nThu, Mar 5\n\n💻 Project milestone\n\n\n\n\n9\nMon, Mar 9\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nWed, Mar 11\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nThu, Mar 12\n\n❌ Spring Break - No Lab\n\n\n\n\n\n10\nMon, Mar 16\n🎥 The language of models  🎥 Linear regression with a numerical predictor  📘 ims - chp 7.1\n\n🧑‍🏫 The language of models\n\n\n\n\n\nWed, Mar 18\n🎥 Linear regression with a categorical predictor  🎥 Outliers in linear regression  🎥 Code along :: Modeling fish  📘 ims - chp 7.2\n\n🧑‍🏫 Simple linear regression\n\n\n\n\n\nThu, Mar 19\n\n💻 Lab 6\n\n\n\n\n11\nMon, Mar 23\n🎥 Linear regression with multiple predictors  🎥 Main and interaction effects  📘 ims - chp 8.1-8.2  📘 ims - chp 8.3-8.5\n\n🧑‍🏫 Multiple linear regression I\n\n\n\n\n\nWed, Mar 25\n🎥 Code along :: Modeling interest rates\n\n🧑‍🏫 Multiple linear regression II\n\nHW 5 @ 11:59 pm\n\n\n\nThu, Mar 26\n\n💻 Lab 7\n\n\n\n\n12\nMon, Mar 30\n🎥 Logistic regression  🎥 Code along :: Building a spam filter  📘 ims - chp 9\n\n🧑‍🏫 Logistic regression I\n\n\n\n\n\nWed, Apr 1\n🎥 Clasification and decision errors  🎥 Overfitting and spending your data\n\n🧑‍🏫 Logistic regression II\n\nHW 6 @ 11:59 pm\n\n\n\nThu, Apr 2\n\n💻 Project presentations\n\n\n\n\n13\nMon, Apr 6\n🎥 Code along :: Forest classification\n\n🧑‍🏫 Modeling wrap-up\n\n\n\n\n\nWed, Apr 8\n\n📝 Midterm 2\n\n\n\n\n\n\nThu, Apr 9\n\n❌ We’re all tired - No lab!\n\n\n\n\n\n\nSun, Apr 12\n\n\n\nTake-home 2 @ 11:59 pm\n\n\n14\nMon, Apr 13\n🎥 Quantifying uncertainty  🎥 Bootstrapping  🎥 Code along :: Bootstrapping Duke Forest houses  📘 ims - chp 11  📘 ims - chp 12\n\n🧑‍🏫 Interval estimation\n\n\n\n\n\nWed, Apr 15\n🎥 Hypothesis testing  📘 ims - chp 11\n\n🧑‍🏫 Hypothesis testing\n\n\n\n\n\nThu, Apr 16\n\n💻 Lab 8\n\n\n\n\n15\nMon, Apr 20\n\n🧑‍🏫 More inference\n\n\n\n\n\nWed, Apr 22\n\n🧑‍🏫 Farewell!\n\nHW 7 @ 11:59 pm\n\n\n\nThu, Apr 23\n\n❌ Reading Days - No Lab\n\n\n\n\n\n16\nFri, May 1\n\n📝 Final (2pm - 5pm)",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 7\n\n🧑‍🏫 Welcome!\nslides 00\n\n\n\n\nThu, Jan 8\n\n💻 Lab 0\nlab 0\n\n\n\n1\nMon, Jan 12\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\n🧑‍🏫 Meet the toolkit\n\nslides 01 notes 01\n\n\n\n\n\nWed, Jan 14\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\n🧑‍🏫 Grammar of data visualization\n\nslides 02 notes 02\n\n\n\n\n\nThu, Jan 15\n\n💻 Lab 1\n\n\n\n\n2\nMon, Jan 19\n\n❌ MLK Day - No Lecture\n\n\n\n\n\n\nWed, Jan 21\n📗 r4ds - chp 2  📗 r4ds - chp 3.1-3.5  🎥 Grammar of data transformation  🎥 Code along :: Flights and pipes\n\n🧑‍🏫 Grammar of data transformation\n\n\n\n\n\nThu, Jan 22\n\n💻 Lab 2\n\n\n\n\n3\nMon, Jan 26\n📗 r4ds - chp 3.6-3.7  🎥 Visualizing and summarizing categorical data  🎥 Visualizing and summarizing numerical data  🎥 Visualizing and summarizing relationships  🎥 Code along :: Star Wars characters\n\n🧑‍🏫 Exploratory Data Analysis I\n\n\n\n\n\nWed, Jan 28\n📘 ims - chp 5  📘 ims - chp 6  🎥 Code along :: Diving deeper with Palmer Penguins\n\n🧑‍🏫 Exploratory Data Analysis II\n\nHW 1 @ 11:59 pm\n\n\n\nThu, Jan 29\n\n💻 Lab 3\n\n\n\n\n4\nMon, Feb 2\n🎥 Tidy data  🎥 Tidying data  🎥 Code along :: Country populations over time  📗 r4ds - chp 5\n\n🧑‍🏫 Tidying data\n\n\n\n\n\nWed, Feb 4\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\n🧑‍🏫 Joining data\n\nHW 2 @ 11:59 pm\n\n\n\nThu, Feb 5\n\n💻 Lab 4\n\n\n\n\n5\nMon, Feb 9\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\n🧑‍🏫 Data types and classes\n\n\n\n\n\nWed, Feb 11\n🎥 Importing data  🎥 Code along :: Halving CO2 emissions  🎥 Code along :: Student survey  📗 r4ds - chp 7  📗 r4ds - chp 17.1 - 17.3\n\n🧑‍🏫 Importing and recoding data\n\nHW 3 @ 11:59 pm\n\n\n\nThu, Feb 12\n\n💻 Lab 5\n\n\n\n\n6\nMon, Feb 16\n🎥 Web scraping basics  🎥 Code along :: Scraping an eCommerce page  📗 r4ds - chp 24.1 - 24.6\n\n🧑‍🏫 Webscraping I\n\n\n\n\n\nWed, Feb 18\n🎥 Code along :: Scraping many eCommerce pages  🎥 Web scraping considerations  📗 r4ds - chp 25.1 - 25.2\n\n🧑‍🏫 Webscraping II\n\nHW 4 @ 11:59 pm\n\n\n\nThu, Feb 19\n\n💻 Project milestone\n\n\n\n\n7\nMon, Feb 23\n\n🧑‍🏫 Data science wrap-up\n\n\n\n\n\nWed, Feb 25\n\n📝 Midterm 1\n\n\n\n\n\n\nThu, Feb 26\n\n💻 Project milestone\n\n\n\n\n\nSun, Mar 1\n\n\n\nTake-home 1 @ 11:59 pm\n\n\n8\nMon, Mar 2\n📘 ims - chp 6  📗 r4ds - chp 10\n\n🧑‍🏫 Communicating results\n\n\n\n\n\nWed, Mar 4\n🎥 Misrepresentation  🎥 Data privacy  🎥 Algorithmic bias  🎥 Code along :: Sectors and services\n\n🧑‍🏫 Data science ethics\n\n\n\n\n\nThu, Mar 5\n\n💻 Project milestone\n\n\n\n\n9\nMon, Mar 9\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nWed, Mar 11\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nThu, Mar 12\n\n❌ Spring Break - No Lab\n\n\n\n\n\n10\nMon, Mar 16\n🎥 The language of models  🎥 Linear regression with a numerical predictor  📘 ims - chp 7.1\n\n🧑‍🏫 The language of models\n\n\n\n\n\nWed, Mar 18\n🎥 Linear regression with a categorical predictor  🎥 Outliers in linear regression  🎥 Code along :: Modeling fish  📘 ims - chp 7.2\n\n🧑‍🏫 Simple linear regression\n\n\n\n\n\nThu, Mar 19\n\n💻 Lab 6\n\n\n\n\n11\nMon, Mar 23\n🎥 Linear regression with multiple predictors  🎥 Main and interaction effects  📘 ims - chp 8.1-8.2  📘 ims - chp 8.3-8.5\n\n🧑‍🏫 Multiple linear regression I\n\n\n\n\n\nWed, Mar 25\n🎥 Code along :: Modeling interest rates\n\n🧑‍🏫 Multiple linear regression II\n\nHW 5 @ 11:59 pm\n\n\n\nThu, Mar 26\n\n💻 Lab 7\n\n\n\n\n12\nMon, Mar 30\n🎥 Logistic regression  🎥 Code along :: Building a spam filter  📘 ims - chp 9\n\n🧑‍🏫 Logistic regression I\n\n\n\n\n\nWed, Apr 1\n🎥 Clasification and decision errors  🎥 Overfitting and spending your data\n\n🧑‍🏫 Logistic regression II\n\nHW 6 @ 11:59 pm\n\n\n\nThu, Apr 2\n\n💻 Project presentations\n\n\n\n\n13\nMon, Apr 6\n🎥 Code along :: Forest classification\n\n🧑‍🏫 Modeling wrap-up\n\n\n\n\n\nWed, Apr 8\n\n📝 Midterm 2\n\n\n\n\n\n\nThu, Apr 9\n\n❌ We’re all tired - No lab!\n\n\n\n\n\n\nSun, Apr 12\n\n\n\nTake-home 2 @ 11:59 pm\n\n\n14\nMon, Apr 13\n🎥 Quantifying uncertainty  🎥 Bootstrapping  🎥 Code along :: Bootstrapping Duke Forest houses  📘 ims - chp 11  📘 ims - chp 12\n\n🧑‍🏫 Interval estimation\n\n\n\n\n\nWed, Apr 15\n🎥 Hypothesis testing  📘 ims - chp 11\n\n🧑‍🏫 Hypothesis testing\n\n\n\n\n\nThu, Apr 16\n\n💻 Lab 8\n\n\n\n\n15\nMon, Apr 20\n\n🧑‍🏫 More inference\n\n\n\n\n\nWed, Apr 22\n\n🧑‍🏫 Farewell!\n\nHW 7 @ 11:59 pm\n\n\n\nThu, Apr 23\n\n❌ Reading Days - No Lab\n\n\n\n\n\n16\nFri, May 1\n\n📝 Final (2pm - 5pm)",
     "crumbs": [
       "Syllabus",
       "Schedule"

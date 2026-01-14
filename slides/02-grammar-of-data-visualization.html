@@ -5,7 +5,7 @@
 <meta name="generator" content="quarto-1.7.34">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="John Zito">
-<meta name="dcterms.date" content="2025-09-02">
+<meta name="dcterms.date" content="2026-01-14">
 <title>Grammar of data visualization – STA 199 Spring 2026</title>
 <style>
 code{white-space: pre-wrap;}
@@ -99,9 +99,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 <meta property="og:title" content="Grammar of data visualization – STA 199 Spring 2026">
-<meta property="og:description" content="Lecture 3">
-<meta property="og:image" content="https://sta199-s26.github.io/slides/images/02/unknown-plot.png">
+<meta property="og:description" content="Lecture 2">
+<meta property="og:image" content="https://sta199-s26.github.io/slides/images/02/tour-quarto.png">
 <meta property="og:site_name" content="STA 199 Spring 2026">
+<meta property="og:image:alt" content="RStudio IDE with a Quarto document, source code on the left and output on the right. Annotated to show the YAML, a link, a header, and a code cell.">
+<meta property="og:image:height" content="931">
+<meta property="og:image:width" content="1540">
 </head>
 <body class="nav-sidebar docked quarto-light">
 
@@ -285,8 +288,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>
 <a href="#warm-up" id="toc-warm-up" class="nav-link active" data-scroll-target="#warm-up">Warm-up</a>
   <ul class="collapse">
-<li><a href="#announcements" id="toc-announcements" class="nav-link" data-scroll-target="#announcements">Announcements</a></li>
-  <li><a href="#participate" id="toc-participate" class="nav-link" data-scroll-target="#participate">Participate 📱💻</a></li>
+<li><a href="#lab-tomorrow" id="toc-lab-tomorrow" class="nav-link" data-scroll-target="#lab-tomorrow">Lab tomorrow</a></li>
   <li><a href="#outline" id="toc-outline" class="nav-link" data-scroll-target="#outline">Outline</a></li>
   </ul>
 </li>
@@ -295,14 +297,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
 <li><a href="#tour-quarto-and-more-git-github" id="toc-tour-quarto-and-more-git-github" class="nav-link" data-scroll-target="#tour-quarto-and-more-git-github">Tour: Quarto (and more Git + GitHub)</a></li>
   <li><a href="#how-will-we-use-quarto" id="toc-how-will-we-use-quarto" class="nav-link" data-scroll-target="#how-will-we-use-quarto">How will we use Quarto?</a></li>
-  <li><a href="#whats-with-all-the-hexes" id="toc-whats-with-all-the-hexes" class="nav-link" data-scroll-target="#whats-with-all-the-hexes">What’s with all the hexes?</a></li>
-  <li><a href="#we-have-hexes-too" id="toc-we-have-hexes-too" class="nav-link" data-scroll-target="#we-have-hexes-too">We have hexes too!</a></li>
   </ul>
 </li>
   <li>
 <a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization">Data visualization</a>
   <ul class="collapse">
-<li><a href="#participate-1" id="toc-participate-1" class="nav-link" data-scroll-target="#participate-1">Participate 📱💻</a></li>
+<li><a href="#what-does-this-picture-communicate" id="toc-what-does-this-picture-communicate" class="nav-link" data-scroll-target="#what-does-this-picture-communicate">What does this picture communicate?</a></li>
+  <li><a href="#data-science-lessons" id="toc-data-science-lessons" class="nav-link" data-scroll-target="#data-science-lessons">Data science lessons</a></li>
+  <li><a href="#data-science-lessons-continued" id="toc-data-science-lessons-continued" class="nav-link" data-scroll-target="#data-science-lessons-continued">Data science lessons (continued)</a></li>
+  <li><a href="#data-science-lessons-continued-1" id="toc-data-science-lessons-continued-1" class="nav-link" data-scroll-target="#data-science-lessons-continued-1">Data science lessons (continued)</a></li>
   <li><a href="#let-see" id="toc-let-see" class="nav-link" data-scroll-target="#let-see">Let’ see…</a></li>
   <li><a href="#load-packages" id="toc-load-packages" class="nav-link" data-scroll-target="#load-packages">Load packages</a></li>
   <li><a href="#prepare-the-data" id="toc-prepare-the-data" class="nav-link" data-scroll-target="#prepare-the-data">Prepare the data</a></li>
@@ -321,18 +324,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#step-8.-use-a-different-color-scale" id="toc-step-8.-use-a-different-color-scale" class="nav-link" data-scroll-target="#step-8.-use-a-different-color-scale">Step 8. Use a different color scale</a></li>
   <li><a href="#step-9.-apply-a-different-theme" id="toc-step-9.-apply-a-different-theme" class="nav-link" data-scroll-target="#step-9.-apply-a-different-theme">Step 9. Apply a different theme</a></li>
   <li><a href="#step-10.-add-labels" id="toc-step-10.-add-labels" class="nav-link" data-scroll-target="#step-10.-add-labels">Step 10. Add labels</a></li>
-  <li><a href="#participate-2" id="toc-participate-2" class="nav-link" data-scroll-target="#participate-2">Participate 📱💻</a></li>
   <li><a href="#step-11.-set-transparency-of-points" id="toc-step-11.-set-transparency-of-points" class="nav-link" data-scroll-target="#step-11.-set-transparency-of-points">Step 11. Set transparency of points</a></li>
   <li><a href="#step-12.-hide-standard-errors-of-curves" id="toc-step-12.-hide-standard-errors-of-curves" class="nav-link" data-scroll-target="#step-12.-hide-standard-errors-of-curves">Step 12. Hide standard errors of curves</a></li>
   <li><a href="#grammar-of-graphics" id="toc-grammar-of-graphics" class="nav-link" data-scroll-target="#grammar-of-graphics">Grammar of graphics</a></li>
+  <li><a href="#now-you-try" id="toc-now-you-try" class="nav-link" data-scroll-target="#now-you-try">Now you try</a></li>
   </ul>
 </li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/slides/02-grammar-of-data-visualization.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="03-grammar-of-data-visualization-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/slides/02-grammar-of-data-visualization.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="02-grammar-of-data-visualization-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">Grammar of data visualization</h1>
-<p class="subtitle lead">Lecture 3</p>
+<p class="subtitle lead">Lecture 2</p>
 </div>
 
 
@@ -356,7 +359,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 2, 2025</p>
+      <p class="date">January 14, 2026</p>
     </div>
   </div>
   
@@ -366,41 +369,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 </header><section id="warm-up" class="level1"><h1>Warm-up</h1>
-<section id="announcements" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="announcements">Announcements</h2>
-<ul>
-<li><p>Office hours are posted on the course website!</p></li>
-<li>
-<p>If you can follow along with today’s application exercise steps, great! If something doesn’t work as expected, ask me/TA during the exercise. We’ll either:</p>
-<ul>
-<li>help you on the spot and get you unstuck or</li>
-<li>identify that you’re missing an earlier step, ask you to follow along with your neighbor, and visit office hours before Thursday for one-on-one help</li>
+<section id="lab-tomorrow" class="level2 medium"><h2 class="medium anchored" data-anchor-id="lab-tomorrow">Lab tomorrow</h2>
+<p>What to expect:</p>
+<div class="incremental">
+<ul class="incremental">
+<li>Your first graded assignment;</li>
+<li>We are taking attendance;</li>
+<li>You will work in randomly-assigned teams;</li>
+<li>Each student submits their own work;</li>
+<li>Assignment due <em>at the end of your lab</em>;</li>
+<li>You will have a new repo to clone;</li>
+<li>TA will review setup and workflow (same as we did in lecture this week);</li>
+<li>We know it’s early days. Do not panic about your progress.</li>
 </ul>
-</li>
-</ul></section><section id="participate" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="participate">Participate 📱💻</h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<div class="wooclap">
-<p>What is this a visualization of?</p>
 </div>
-<p><img src="images/02/unknown-plot.png" class="img-fluid"></p>
-</div><div class="column" style="width:30%;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/wooclap-qr.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="200"></p>
-</figure>
-</div>
-<div class="small">
-<p>Scan the QR code or go to <a href="https://app.wooclap.com/sta199">app.wooclap.com/sta199</a>. Log in with your Duke NetID.</p>
-</div>
-</div>
-</div>
-</section><section id="outline" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="outline">Outline</h2>
+</section><section id="outline" class="level2 medium"><h2 class="medium anchored" data-anchor-id="outline">Outline</h2>
 <ul>
 <li>
 <p>Last time:</p>
 <ul>
-<li><p>We introduced you to the course toolkit.</p></li>
-<li><p>You <strong>cloned</strong> your <code>ae</code> repositories and started making some updates in your Quarto documents.</p></li>
-<li><p>You <strong>committed and pushed</strong> your changes back – at least most of you did!</p></li>
+<li><p>We introduced you to the course toolkit;</p></li>
+<li><p>You <strong>cloned</strong> your <code>ae</code> repositories and rendered your first Quarto document;</p></li>
 </ul>
 </li>
 </ul>
@@ -409,10 +398,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>
 <p>Today:</p>
 <ul>
-<li><p>You will wrap up that application exercis, and commit and push your final changes.</p></li>
-<li><p>We will introduce data visualization.</p></li>
-<li><p>You will <strong>pull</strong> to get today’s application exercise file.</p></li>
-<li><p>You will work on the new application exercise on data visualization, <strong>commit</strong> your changes, and <strong>push</strong> them.</p></li>
+<li><p>We will finish the application exercise, and get an introduction to Git, GitHub, and Quarto;</p></li>
+<li><p>We will introduce data visualization;</p></li>
+<li><p>Time permitting, we’ll start a new AE to practice.</p></li>
 </ul>
 </li>
 </ul></section></section><section id="from-last-time" class="level1"><h1>From last time</h1>
@@ -441,40 +429,39 @@ Tour recap: Git + GitHub
 <li><p>confirmed on GitHub that we could see our changes pushed from RStudio</p></li>
 </ul></details></section><section id="how-will-we-use-quarto" class="level2"><h2 class="anchored" data-anchor-id="how-will-we-use-quarto">How will we use Quarto?</h2>
 <ul>
-<li>Every application exercise, lab, project, etc. is an Quarto document</li>
-<li>You’ll always have a template Quarto document to start with</li>
-<li>The amount of scaffolding in the template will decrease over the semester</li>
-</ul></section><section id="whats-with-all-the-hexes" class="level2"><h2 class="anchored" data-anchor-id="whats-with-all-the-hexes">What’s with all the hexes?</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/02/hexes.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Hex logos for many packages"></p>
-</figure>
-</div>
-</section><section id="we-have-hexes-too" class="level2"><h2 class="anchored" data-anchor-id="we-have-hexes-too">We have hexes too!</h2>
-<div class="task">
-<p>Grab one before you leave!</p>
-</div>
-<div class="center-align">
-<p><img src="images/logo.png" class="img-fluid" alt="STA 199 hex logo"></p>
-</div>
-</section></section><section id="data-visualization" class="level1"><h1>Data visualization</h1>
-<section id="participate-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="participate-1">Participate 📱💻</h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<div class="wooclap">
+<li>Every application exercise, lab, HW, project, take-home, etc. is a Quarto document;</li>
+<li>You’ll always have a template Quarto document to start with;</li>
+<li>The amount of scaffolding in the template will decrease over the semester.</li>
+</ul></section></section><section id="data-visualization" class="level1"><h1>Data visualization</h1>
+<section id="what-does-this-picture-communicate" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="what-does-this-picture-communicate">What does this picture communicate?</h2>
 <p>Remember this visualization from the code along video – what was it about?</p>
-</div>
 <p><img src="images/02/un-data-viz.png" class="img-fluid"></p>
-</div><div class="column" style="width:30%;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/wooclap-qr.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="200"></p>
-</figure>
+</section><section id="data-science-lessons" class="level2"><h2 class="anchored" data-anchor-id="data-science-lessons">Data science lessons</h2>
+<div class="question">
+<p>Are you asking a question that your data could actually answer?</p>
 </div>
-<div class="small">
-<p>Scan the QR code or go to <a href="https://app.wooclap.com/sta199">app.wooclap.com/sta199</a>. Log in with your Duke NetID.</p>
+<ul>
+<li>A “Yes” vote is not necessarily an <em>approving</em> vote. It depends how the resolution was worded;</li>
+<li>If your question is “where do countries stand on these issues, both relative to one another and over time,” the picture doesn’t actually have an answer;</li>
+<li>It’s only useful for seeing if countries are in agreement with one another or not;</li>
+<li>Precisely what they are agreeing <em>about</em> is ambiguous.</li>
+</ul></section><section id="data-science-lessons-continued" class="level2"><h2 class="anchored" data-anchor-id="data-science-lessons-continued">Data science lessons (continued)</h2>
+<div class="question">
+<p>This class is about technique bolstered by <em>good taste</em>.</p>
 </div>
+<ul>
+<li>The plot is fairly technically sophisticated (lots of moving parts), and it looks rather attractive;</li>
+<li>We certainly want you to learn how to create something like that;</li>
+<li>But after you’re done admiring it, your good taste should kick in;</li>
+<li>Is this picture <em>actually</em> communicating effectively.</li>
+</ul></section><section id="data-science-lessons-continued-1" class="level2"><h2 class="anchored" data-anchor-id="data-science-lessons-continued-1">Data science lessons (continued)</h2>
+<div class="question">
+<p>If a reader has to squint at your picture for more than 30 seconds (and that’s being generous) in order to understand it, you need to start over.</p>
 </div>
-</div>
-</section><section id="let-see" class="level2 center"><h2 class="center anchored" data-anchor-id="let-see">Let’ see…</h2>
+<ul>
+<li>If you make the reader work too hard, they will take the path of least resistance: skip the picture altogether or default to the most facile interpretation;</li>
+<li>On the UN pic, many reckless readers might assume Yes = Approve and misread.</li>
+</ul></section><section id="let-see" class="level2 center"><h2 class="center anchored" data-anchor-id="let-see">Let’ see…</h2>
 <div class="hand large">
 <p>how the sausage is made!</p>
 </div>
@@ -698,23 +685,6 @@ Note
 </div>
 </div>
 </div>
-</section><section id="participate-2" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="participate-2">Participate 📱💻</h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<div class="wooclap">
-<p>Which of the following modifications will change the transparency of the points in the plot?</p>
-</div>
-<p><img src="images/02/un-data-viz.png" class="img-fluid"></p>
-</div><div class="column" style="width:30%;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/wooclap-qr.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="200"></p>
-</figure>
-</div>
-<div class="small">
-<p>Scan the QR code or go to <a href="https://app.wooclap.com/sta199">app.wooclap.com/sta199</a>. Log in with your Duke NetID.</p>
-</div>
-</div>
-</div>
 </section><section id="step-11.-set-transparency-of-points" class="level2"><h2 class="anchored" data-anchor-id="step-11.-set-transparency-of-points">Step 11. Set transparency of points</h2>
 <p>with <code>alpha</code></p>
 <div class="cell">
@@ -763,6 +733,12 @@ Note
 <p><img src="images/02/gg-layers.png" class="img-fluid"></p>
 </div>
 </div>
+</section><section id="now-you-try" class="level2"><h2 class="anchored" data-anchor-id="now-you-try">Now you try</h2>
+<ul>
+<li>On GitHub, your AE repo should now have a new file in it called <code>ae-02-penguin-peekaboo.qmd</code>;</li>
+<li>In other words, the <em>remote</em> version of your repo in the cloud (GitHub) has updates that your local repo (container) does not yet have;</li>
+<li>So <em>pull</em> them!</li>
+</ul>
 
 
 </section></section></main><!-- /main --><script>
