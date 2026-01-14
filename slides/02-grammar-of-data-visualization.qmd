@@ -1,7 +1,7 @@
 ---
 title: "Grammar of data visualization"
-subtitle: "Lecture 3"
-date: "2025-09-02"
+subtitle: "Lecture 2"
+date: "2026-01-14"
 format: 
   revealjs: 
     output-file: 02-grammar-of-data-visualization-slides.html
@@ -17,60 +17,40 @@ format:
 
 # Warm-up
 
-## Announcements {.smaller}
+## Lab tomorrow {.medium}
 
--   Office hours are posted on the course website!
+What to expect:
 
--   If you can follow along with today's application exercise steps, great!
-    If something doesn't work as expected, ask me/TA during the exercise.
-    We'll either:
 
-    -   help you on the spot and get you unstuck or
-    -   identify that you're missing an earlier step, ask you to follow along with your neighbor, and visit office hours before Thursday for one-on-one help
-
-## Participate 📱💻 {.smaller}
-
-::: {.columns}
-
-::: {.column width="70%"}
-
-::: wooclap
-What is this a visualization of?
+::: incremental
+- Your first graded assignment;
+- We are taking attendance;
+- You will work in randomly-assigned teams;
+- Each student submits their own work;
+- Assignment due *at the end of your lab*;
+- You will have a new repo to clone;
+- TA will review setup and workflow (same as we did in lecture this week);
+- We know it's early days. Do not panic about your progress.
 :::
 
-![](images/02/unknown-plot.png)
 
-:::
-
-::: {.column width="30%"}
-
-{{< include _wooclap-column.qmd >}}
-
-:::
-
-::: 
-
-## Outline {.smaller}
+## Outline {.medium}
 
 -   Last time:
 
-    -   We introduced you to the course toolkit.
+    -   We introduced you to the course toolkit;
 
-    -   You **cloned** your `ae` repositories and started making some updates in your Quarto documents.
-
-    -   You **committed and pushed** your changes back -- at least most of you did!
+    -   You **cloned** your `ae` repositories and rendered your first Quarto document;
 
 . . .
 
 -   Today:
 
-    -   You will wrap up that application exercis, and commit and push your final changes.
+    -   We will finish the application exercise, and get an introduction to Git, GitHub, and Quarto;
 
-    -   We will introduce data visualization.
+    -   We will introduce data visualization;
 
-    -   You will **pull** to get today's application exercise file.
-
-    -   You will work on the new application exercise on data visualization, **commit** your changes, and **push** them.
+    -   Time permitting, we'll start a new AE to practice.
 
 # From last time
 
@@ -114,47 +94,50 @@ Once we made changes to our Quarto document, we
 
 ## How will we use Quarto?
 
--   Every application exercise, lab, project, etc. is an Quarto document
--   You'll always have a template Quarto document to start with
--   The amount of scaffolding in the template will decrease over the semester
-
-## What's with all the hexes?
-
-![](images/02/hexes.jpeg){fig-alt="Hex logos for many packages" fig-align="center"}
-
-## We have hexes too!
-
-::: task
-Grab one before you leave!
-:::
-
-::: center-align
-![](images/logo.png){fig-alt="STA 199 hex logo"}
-:::
+-   Every application exercise, lab, HW, project, take-home, etc. is a Quarto document;
+-   You'll always have a template Quarto document to start with;
+-   The amount of scaffolding in the template will decrease over the semester.
 
 # Data visualization
 
-## Participate 📱💻 {.smaller}
+## What does this picture communicate?  {.smaller}
 
-::: {.columns}
 
-::: {.column width="70%"}
-
-::: wooclap
 Remember this visualization from the code along video -- what was it about?
-:::
+
 
 ![](images/02/un-data-viz.png)
 
+## Data science lessons
+
+::: question
+Are you asking a question that your data could actually answer?
 :::
 
-::: {.column width="30%"}
+- A "Yes" vote is not necessarily an *approving* vote. It depends how the resolution was worded;
+- If your question is "where do countries stand on these issues, both relative to one another and over time," the picture doesn't actually have an answer;
+- It's only useful for seeing if countries are in agreement with one another or not;
+- Precisely what they are agreeing *about* is ambiguous.
 
-{{< include _wooclap-column.qmd >}}
+## Data science lessons (continued)
 
+::: question
+This class is about technique bolstered by *good taste*.
 :::
 
-::: 
+- The plot is fairly technically sophisticated (lots of moving parts), and it looks rather attractive;
+- We certainly want you to learn how to create something like that;
+- But after you're done admiring it, your good taste should kick in;
+- Is this picture *actually* communicating effectively.
+
+## Data science lessons (continued)
+
+::: question
+If a reader has to squint at your picture for more than 30 seconds (and that's being generous) in order to understand it, you need to start over.
+:::
+
+- If you make the reader work too hard, they will take the path of least resistance: skip the picture altogether or default to the most facile interpretation;
+- On the UN pic, many reckless readers might assume Yes = Approve and misread.
 
 ## Let' see... {.center}
 
@@ -402,28 +385,6 @@ ggplot(us_uk_tr_votes, aes(x = year, y = percent_yes, color = country)) +
   labs(x = "Year", y = "% yes", color = "Country")
 ```
 
-## Participate 📱💻 {.smaller}
-
-::: {.columns}
-
-::: {.column width="70%"}
-
-::: wooclap
-Which of the following modifications will change the transparency of the points in the plot?
-:::
-
-![](images/02/un-data-viz.png)
-
-:::
-
-::: {.column width="30%"}
-
-{{< include _wooclap-column.qmd >}}
-
-:::
-
-::: 
-
 ## Step 11. Set transparency of points
 
 with `alpha`
@@ -480,3 +441,10 @@ We built a plot layer-by-layer
 ![](images/02/gg-layers.png)
 :::
 :::
+
+
+## Now you try
+
+- On GitHub, your AE repo should now have a new file in it called `ae-02-penguin-peekaboo.qmd`;
+- In other words, the *remote* version of your repo in the cloud (GitHub) has updates that your local repo (container) does not yet have;
+- So *pull* them!
