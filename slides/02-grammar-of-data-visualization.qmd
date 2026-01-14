@@ -4,8 +4,8 @@ subtitle: "Lecture 3"
 date: "2025-09-02"
 format: 
   revealjs: 
-    output-file: 03-grammar-of-data-visualization-slides.html
-    footer: "[🔗 sta199-f25.github.io](https://sta199-f25.github.io/)"
+    output-file: 02-grammar-of-data-visualization-slides.html
+    footer: "[🔗 sta199-s26.github.io](https://sta199-s26.github.io/)"
     theme: slides.scss
     transition: fade
     slide-number: true
