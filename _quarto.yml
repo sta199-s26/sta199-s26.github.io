@@ -77,6 +77,8 @@ website:
         contents:
           - href: lab/lab-0.qmd
             text: Lab 0
+          - href: lab/lab-1.qmd
+            text: Lab 1
       - section: "Computing"
         contents:
           - href: computing/coding-access.qmd
