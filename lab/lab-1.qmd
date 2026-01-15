@@ -240,7 +240,7 @@ Make sure to commit and push all changed files so that your Git pane is empty af
 
 ## Question 3
 
-Make a scatter plot of population density (`density` on the y-axis) vs. land area in miles-squared (`land_area_mi2` on the x-axis). Make sure to set an informative title and axis labels for your plot. Then, describe the relationship.
+Make a scatter plot of population density (`pop_dens_2020` on the y-axis) vs. land area in miles-squared (`land_area_mi2` on the x-axis). Make sure to set an informative title and axis labels for your plot.
 
 ::: render-commit-push
 Render, commit, and push your changes to GitHub with a triumphant commit message "Finished Lab 1!".
