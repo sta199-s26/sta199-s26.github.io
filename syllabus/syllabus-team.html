@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,14 +35,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bb1cd4028f63a369ab283e072cb7d572.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-9f26b6341e16faa20df3ce7a36debf59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-cae6b10fd3a5258aed0f60bce2f7bd19.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -114,7 +115,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -161,7 +162,8 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../img/logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../img/logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/sta199-s26" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
@@ -424,7 +426,7 @@ window.Quarto = {
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-categories="TGFiJTIwaGVscGVy" data-listing-file-modified-sort="1768174319906" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Akinola, Bethany" data-listing-filename-sort="akinola.qmd">
+<tr data-index="0" data-categories="TGFiJTIwaGVscGVy" data-listing-file-modified-sort="1768502130899" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Akinola, Bethany" data-listing-filename-sort="akinola.qmd">
 <td>
 <span class="listing-image"><img loading="lazy" src="../syllabus/ta/headshots/bethany.png" style="height: 40px;" alt="Headshot of TA"></span>
 </td>
@@ -443,7 +445,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="1" data-categories="TGFiJTIwbGVhZGVy" data-listing-file-modified-sort="1768174372366" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Arboleda, Federico" data-listing-filename-sort="arboleda.qmd">
+<tr data-index="1" data-categories="TGFiJTIwbGVhZGVy" data-listing-file-modified-sort="1768502130899" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Arboleda, Federico" data-listing-filename-sort="arboleda.qmd">
 <td>
 <span class="listing-image"><img loading="lazy" src="../syllabus/ta/headshots/arboleda.png" style="height: 40px;" alt="Headshot of TA"></span>
 </td>
@@ -462,7 +464,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="2" data-categories="TGFiJTIwbGVhZGVy" data-listing-file-modified-sort="1768174376018" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Bolik, Jannis" data-listing-filename-sort="bolik.qmd">
+<tr data-index="2" data-categories="TGFiJTIwbGVhZGVy" data-listing-file-modified-sort="1768502130899" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Bolik, Jannis" data-listing-filename-sort="bolik.qmd">
 <td>
 <span class="listing-image"><img loading="lazy" src="../syllabus/ta/headshots/bolik.jpg" style="height: 40px;" alt="Headshot of TA"></span>
 </td>
@@ -481,7 +483,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="3" data-categories="TGFiJTIwbGVhZGVy" data-listing-file-modified-sort="1768174380213" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Dey, Arijit" data-listing-filename-sort="dey.qmd">
+<tr data-index="3" data-categories="TGFiJTIwbGVhZGVy" data-listing-file-modified-sort="1768502130899" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Dey, Arijit" data-listing-filename-sort="dey.qmd">
 <td>
 <span class="listing-image"><img loading="lazy" src="../syllabus/ta/headshots/arijit.png" style="height: 40px;" alt="Headshot of TA"></span>
 </td>
@@ -500,7 +502,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="4" data-categories="TGFiJTIwbGVhZGVy" data-listing-file-modified-sort="1768174384647" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Elmore, Cael" data-listing-filename-sort="elmore.qmd">
+<tr data-index="4" data-categories="TGFiJTIwbGVhZGVy" data-listing-file-modified-sort="1768502130899" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Elmore, Cael" data-listing-filename-sort="elmore.qmd">
 <td>
 <span class="listing-image"><img loading="lazy" src="../syllabus/ta/headshots/elmore.jpeg" style="height: 40px;" alt="Headshot of TA"></span>
 </td>
@@ -519,7 +521,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="5" data-categories="TGFiJTIwaGVscGVy" data-listing-file-modified-sort="1768174389739" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Gao, Oliver" data-listing-filename-sort="gao.qmd">
+<tr data-index="5" data-categories="TGFiJTIwaGVscGVy" data-listing-file-modified-sort="1768502130899" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Gao, Oliver" data-listing-filename-sort="gao.qmd">
 <td>
 <span class="listing-image"><img loading="lazy" src="../syllabus/ta/headshots/gao.jpeg" style="height: 40px;" alt="Headshot of TA"></span>
 </td>
@@ -538,7 +540,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="6" data-categories="TGFiJTIwaGVscGVy" data-listing-file-modified-sort="1768174394228" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Harris, Natasha" data-listing-filename-sort="harris.qmd">
+<tr data-index="6" data-categories="TGFiJTIwaGVscGVy" data-listing-file-modified-sort="1768502130899" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Harris, Natasha" data-listing-filename-sort="harris.qmd">
 <td>
 <span class="listing-image"><img loading="lazy" src="../syllabus/ta/headshots/harris.jpeg" style="height: 40px;" alt="Headshot of TA"></span>
 </td>
@@ -557,7 +559,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="7" data-categories="TGFiJTIwbGVhZGVy" data-listing-file-modified-sort="1768174398563" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Kakkad, Dwija" data-listing-filename-sort="kakkad.qmd">
+<tr data-index="7" data-categories="TGFiJTIwbGVhZGVy" data-listing-file-modified-sort="1768502130923" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Kakkad, Dwija" data-listing-filename-sort="kakkad.qmd">
 <td>
 <span class="listing-image"><img loading="lazy" src="../syllabus/ta/headshots/kakkad.jpg" style="height: 40px;" alt="Headshot of TA"></span>
 </td>
@@ -576,7 +578,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="8" data-categories="TGFiJTIwbGVhZGVy" data-listing-file-modified-sort="1768174403432" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Khudaverdiyeva, Abuzar" data-listing-filename-sort="khudaverdiyeva.qmd">
+<tr data-index="8" data-categories="TGFiJTIwbGVhZGVy" data-listing-file-modified-sort="1768502130923" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Khudaverdiyeva, Abuzar" data-listing-filename-sort="khudaverdiyeva.qmd">
 <td>
 <span class="listing-image"><img loading="lazy" src="../syllabus/ta/headshots/abuzar.png" style="height: 40px;" alt="Headshot of TA"></span>
 </td>
@@ -595,7 +597,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="9" data-categories="TGFiJTIwbGVhZGVyJTJDTGVjdHVyZSUyMGhlbHBlcg==" data-listing-file-modified-sort="1768233276055" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Lee, Hyunjin" data-listing-filename-sort="lee.qmd">
+<tr data-index="9" data-categories="TGFiJTIwbGVhZGVyJTJDTGVjdHVyZSUyMGhlbHBlcg==" data-listing-file-modified-sort="1768502130923" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Lee, Hyunjin" data-listing-filename-sort="lee.qmd">
 <td>
 <span class="listing-image"><img loading="lazy" src="../syllabus/ta/headshots/hyunjin.png" style="height: 40px;" alt="Headshot of TA"></span>
 </td>
@@ -614,7 +616,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="10" data-categories="TGFiJTIwaGVscGVy" data-listing-file-modified-sort="1768174426753" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Ma, Liane" data-listing-filename-sort="ma.qmd">
+<tr data-index="10" data-categories="TGFiJTIwaGVscGVy" data-listing-file-modified-sort="1768502130924" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Ma, Liane" data-listing-filename-sort="ma.qmd">
 <td>
 <span class="listing-image"><img loading="lazy" src="../syllabus/ta/headshots/liane.png" style="height: 40px;" alt="Headshot of TA"></span>
 </td>
@@ -633,7 +635,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="11" data-categories="TGFiJTIwaGVscGVy" data-listing-file-modified-sort="1768174435676" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Nguyen, Chelsea" data-listing-filename-sort="nguyen.qmd">
+<tr data-index="11" data-categories="TGFiJTIwaGVscGVy" data-listing-file-modified-sort="1768502130924" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Nguyen, Chelsea" data-listing-filename-sort="nguyen.qmd">
 <td>
 <span class="listing-image"><img loading="lazy" src="../syllabus/ta/headshots/nguyen.jpeg" style="height: 40px;" alt="Headshot of TA"></span>
 </td>
@@ -652,7 +654,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="12" data-categories="TGFiJTIwaGVscGVy" data-listing-file-modified-sort="1768174440975" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Niu, Max" data-listing-filename-sort="niu.qmd">
+<tr data-index="12" data-categories="TGFiJTIwaGVscGVy" data-listing-file-modified-sort="1768502130924" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Niu, Max" data-listing-filename-sort="niu.qmd">
 <td>
 <span class="listing-image"><img loading="lazy" src="../syllabus/ta/headshots/max.png" style="height: 40px;" alt="Headshot of TA"></span>
 </td>
@@ -671,7 +673,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="13" data-categories="TGFiJTIwbGVhZGVy" data-listing-file-modified-sort="1768174445335" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Norton, Tory" data-listing-filename-sort="norton.qmd">
+<tr data-index="13" data-categories="TGFiJTIwbGVhZGVy" data-listing-file-modified-sort="1768502130924" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Norton, Tory" data-listing-filename-sort="norton.qmd">
 <td>
 <span class="listing-image"><img loading="lazy" src="../syllabus/ta/headshots/norton.jpg" style="height: 40px;" alt="Headshot of TA"></span>
 </td>
@@ -690,7 +692,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="14" data-categories="TGFiJTIwbGVhZGVy" data-listing-file-modified-sort="1768174449542" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Patrick, Pham" data-listing-filename-sort="pham.qmd">
+<tr data-index="14" data-categories="TGFiJTIwbGVhZGVy" data-listing-file-modified-sort="1768502130924" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Patrick, Pham" data-listing-filename-sort="pham.qmd">
 <td>
 <span class="listing-image"><img loading="lazy" src="../syllabus/ta/headshots/pham.jpg" style="height: 40px;" alt="Headshot of TA"></span>
 </td>
@@ -709,7 +711,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="15" data-categories="TGFiJTIwbGVhZGVy" data-listing-file-modified-sort="1768174456600" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Roberts, Kenna" data-listing-filename-sort="roberts.qmd">
+<tr data-index="15" data-categories="TGFiJTIwbGVhZGVy" data-listing-file-modified-sort="1768502130924" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Roberts, Kenna" data-listing-filename-sort="roberts.qmd">
 <td>
 <span class="listing-image"><img loading="lazy" src="../syllabus/ta/headshots/kenna.jpg" style="height: 40px;" alt="Headshot of TA"></span>
 </td>
@@ -728,7 +730,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="16" data-categories="TGFiJTIwbGVhZGVyJTJDTGVjdHVyZSUyMGhlbHBlciUyQ0hlYWQlMjBUQQ==" data-listing-file-modified-sort="1768233284301" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Solarz, Katie" data-listing-filename-sort="solarz.qmd">
+<tr data-index="16" data-categories="TGFiJTIwbGVhZGVyJTJDTGVjdHVyZSUyMGhlbHBlciUyQ0hlYWQlMjBUQQ==" data-listing-file-modified-sort="1768502130924" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Solarz, Katie" data-listing-filename-sort="solarz.qmd">
 <td>
 <span class="listing-image"><img loading="lazy" src="../syllabus/ta/headshots/solarz.jpg" style="height: 40px;" alt="Headshot of TA"></span>
 </td>
@@ -747,7 +749,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="17" data-categories="TGFiJTIwbGVhZGVyJTJDTGVjdHVyZSUyMGhlbHBlcg==" data-listing-file-modified-sort="1768174468877" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Wu, Sarah" data-listing-filename-sort="wu.qmd">
+<tr data-index="17" data-categories="TGFiJTIwbGVhZGVyJTJDTGVjdHVyZSUyMGhlbHBlcg==" data-listing-file-modified-sort="1768502130924" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Wu, Sarah" data-listing-filename-sort="wu.qmd">
 <td>
 <span class="listing-image"><img loading="lazy" src="../syllabus/ta/headshots/wu.png" style="height: 40px;" alt="Headshot of TA"></span>
 </td>
@@ -766,7 +768,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="18" data-categories="TGFiJTIwaGVscGVy" data-listing-file-modified-sort="1768174473166" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Zhang, Edward" data-listing-filename-sort="zhang_edward.qmd">
+<tr data-index="18" data-categories="TGFiJTIwaGVscGVy" data-listing-file-modified-sort="1768502130925" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Zhang, Edward" data-listing-filename-sort="zhang_edward.qmd">
 <td>
 <span class="listing-image"><img loading="lazy" src="../syllabus/ta/headshots/ed.jpg" style="height: 40px;" alt="Headshot of TA"></span>
 </td>
@@ -785,7 +787,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="19" data-categories="TGFiJTIwaGVscGVy" data-listing-file-modified-sort="1768174478731" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Zhang, Lisa" data-listing-filename-sort="zhang_lisa.qmd">
+<tr data-index="19" data-categories="TGFiJTIwaGVscGVy" data-listing-file-modified-sort="1768502130925" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Zhang, Lisa" data-listing-filename-sort="zhang_lisa.qmd">
 <td>
 <span class="listing-image"><img loading="lazy" src="../syllabus/ta/headshots/lisa.png" style="height: 40px;" alt="Headshot of TA"></span>
 </td>
@@ -870,13 +872,14 @@ window.Quarto = {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
