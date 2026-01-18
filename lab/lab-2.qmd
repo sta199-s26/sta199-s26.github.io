@@ -1,9 +1,9 @@
 ---
 title: Lab 2
 subtitle: Get in teams then `group_by()`
-description: "Due: End of lab on Mon, Sep 15"
+description: "Due: End of lab on Thurs, Jan 22"
 categories: Lab
-draft: false
+draft: true
 ---
 
 # Introduction
@@ -18,7 +18,7 @@ To get started, follow the instructions below.
 
 -   Go to <https://cmgr.oit.duke.edu/containers> and login with your Duke NetID and Password.
 -   Click `STA199` under My reservations to log into your container. You should now see the RStudio environment.
--   Go to the course organization at [github.com/sta199-f25](https://github.com/sta199-f25) organization on GitHub.
+-   Go to the course organization at [github.com/sta199-s26](https://github.com/sta199-s26) organization on GitHub.
     Click on the repo with the prefix **lab-2**.
     It contains the starter documents you need to complete the homework.
 -   Click on the green **CODE** button, select **Use SSH**.
