@@ -21,8 +21,6 @@ library(tidyverse)
 bechdel <- read_csv("data/bechdel.csv")
 ```
 
-# Now, where was I?
-
 ## Alison Bechdel
 
 ::::: columns
@@ -51,9 +49,28 @@ Film passes if...
 :::
 :::::
 
+## What's the last movie you saw in a theater?
+
+```{r}
+#| code-fold: true
+films <- read_csv("data/films.csv")
+films |>
+  mutate(Films = if_else(is.na(Films), "(I can't recall)", Films)) |>
+  mutate(Films = fct_lump_min(Films, min = 6, other_level = "Other")) |> 
+  filter(Films != "Other") |>
+  mutate(Films = fct_infreq(Films)) |>
+  ggplot(aes(y = Films)) +
+  geom_bar(fill = "skyblue") +
+  theme_minimal() + 
+  labs(y = "",
+       title = "What's the last film you saw in a theater?",
+       subtitle = "From the s199-s26 survey",
+       caption = "(Films with fewer than 6 responses were omitted for readability.)")
+```
+
 ## The last ten movies I saw in a theater {.medium}
 
-| Film                    | Year | JZ's review | Bechdel |
+| Title                    | Year | JZ's review | Bechdel |
 |-------------------------|------|-------------|---------|
 | *Living*                | 2023 | ⭐⭐⭐⭐⭐  | ❌      |
 | *The Boy and the Heron* | 2023 | ⭐⭐⭐⭐⭐  | ❌      |
