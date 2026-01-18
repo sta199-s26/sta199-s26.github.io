@@ -64,11 +64,11 @@ films |>
   theme_minimal() + 
   labs(y = "",
        title = "What's the last film you saw in a theater?",
-       subtitle = "From the s199-s26 survey",
+       subtitle = "From the sta199-s26 survey",
        caption = "(Films with fewer than 6 responses were omitted for readability.)")
 ```
 
-## The last ten movies I saw in a theater {.medium}
+## The last ten new releases I saw in a theater {.medium}
 
 | Title                    | Year | JZ's review | Bechdel |
 |-------------------------|------|-------------|---------|
