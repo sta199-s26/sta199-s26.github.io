@@ -1,6 +1,6 @@
 ---
-title: Lab 1
-subtitle: Exploring NC Counties
+title: Lab 2
+subtitle: Continued Exploration of NC Counties
 description: "Due: End of lab on Thurs, Jan 22"
 categories: Lab
 draft: false
@@ -8,8 +8,8 @@ draft: false
 
 # Introduction
 
-This lab will introduce you to the course computing workflow.
-One of the mail goals of this lab is to reinforce our demo of R and RStudio, which we will be using throughout the course both to learn the statistical concepts discussed in the course and to analyze real data and come to informed conclusions.
+This lab is designed to increase your comfort with the course computing workflow.
+One of the main goals of this lab is to reinforce our demo of R and RStudio, which we will be using throughout the course to learn the statistical concepts discussed in the course, analyze real data, and make informed conclusions about said data.
 The other main goal is meet other students in the class, get to know them, and work together with them.
 
 ::: callout-note
@@ -220,30 +220,44 @@ The variables in the dataset and their descriptions are as follows:
 
 ## Question 1
 
-Make a well-labeled histogram of the `pop_2020` variable. 
+a. Make two well-labeled plots: a histogram and a boxplot of the `median_hh_income` variable.
 
 ::: render-commit-push
-Render, commit, and push your changes to GitHub with the commit message "Added answer for Q1".
+Render, commit, and push your changes to GitHub with the commit message "Added answer for Q1, part a".
+
+Make sure to commit and push all changed files so that your Git pane is empty afterward.
+:::
+
+b. Provide written responses to the following questions related to the plots created in part a: 
+
+- Is the distribution of median household income in NC counties right-skewed, left-skewed, or approximately symmetric? Which plot(s) helped you determine this?
+
+- Is the distribution of median household income in NC counties unimodal, bimodal, multimodal or uniform? Which plot(s) helped you determine this?
+
+c. In a single pipeline, identify the counties with unusually high median household income (according to the boxplot) and display their names and median household income in descending order of income
+
+::: render-commit-push
+Render, commit, and push your changes to GitHub with the commit message "Added answer for Q1, parts b & c".
 
 Make sure to commit and push all changed files so that your Git pane is empty afterward.
 :::
 
 ## Question 2
 
-Make a well-labeled boxplot of the `pop_2020` variable. 
+a. Guess what the relationship the percentage of 25-44-year-olds with a bachelor's degree and median household income might be – positive? negative? no relationship?
+Explain your reasoning.
+
+b. Make a scatter plot of median household income (`median_hh_income` on the y-axis) vs. percentage of 25-44-year-olds with a bachelor's degree (`p_edu_ba` on the x-axis).
+Make sure to set an informative title and axis labels for your plot.
+Describe the relationship.
+Was your guess correct?
+
+c. Again, make a scatter plot of median household income (`median_hh_income` on the y-axis) vs. percentage of 25-44-year-olds with a bachelor's degree (`p_edu_ba` on the x-axis), this time coloring the points by county type (`county_type`). Based on the resultant plot, does the relationship between these two variables appear to differ by county type? 
+
+d. In a single pipeline, compute the average percentage of 25-44-year-olds with a bachelor's degree and the average median household income across NC counties classified as "Suburban". Similarly, in a separate pipeline compute the average percentage of 25-44-year-olds with a bachelor's degree and the average median household income across NC counties classified as "Rural - Metro". Comment on whether the results are what you would have expected. 
 
 ::: render-commit-push
 Render, commit, and push your changes to GitHub with the commit message "Added answer for Q2".
-
-Make sure to commit and push all changed files so that your Git pane is empty afterward.
-:::
-
-## Question 3
-
-Make a scatter plot of population density (`pop_dens_2020` on the y-axis) vs. land area in miles-squared (`land_area_mi2` on the x-axis). Make sure to set an informative title and axis labels for your plot.
-
-::: render-commit-push
-Render, commit, and push your changes to GitHub with a triumphant commit message "Finished Lab 1!".
 
 Make sure to commit and push all changed files so that your Git pane is empty afterward.
 :::
@@ -274,4 +288,4 @@ We will be checking these to make sure you have been practicing how to commit an
 
 -   You'll receive feedback on your lab on Gradescope within a week.
 
-Good luck, and have fun with it!
+Good luck, and work together!
