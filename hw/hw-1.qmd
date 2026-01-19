@@ -1,7 +1,7 @@
 ---
 title: HW 1
 subtitle: Exploring Midwest and NC Counties
-description: "Due: Sun, Sep 14, 11:59 pm"
+description: "Due: Wed, Jan 28, 11:59 pm"
 categories: HW
 draft: true
 ---
@@ -18,7 +18,7 @@ To get started, follow the instructions below.
 
 -   Go to <https://cmgr.oit.duke.edu/containers> and login with your Duke NetID and Password.
 -   Click `STA199` under My reservations to log into your container. You should now see the RStudio environment.
--   Go to the course organization at [github.com/sta199-f25](https://github.com/sta199-f25) organization on GitHub.
+-   Go to the course organization at [github.com/sta199-s26](https://github.com/sta199-s26) organization on GitHub.
     Click on the repo with the prefix **hw-1**.
     It contains the starter documents you need to complete the homework.
 -   Click on the green **CODE** button, select **Use SSH**.
@@ -122,6 +122,10 @@ Make sure to set informative titles, axis, and legend labels for your plot.
 First, describe the overall relationship between percentage of people with a college degree and percentage below poverty in Midwestern states, making sure to identify at least one county that is a clear outlier by name in your narrative.
 You can use the data viewer to identify the outliers interactively, you do not have to write code to identify them.
 Then, comment on whether you can identify how this relationship varies across states.
+
+::: callout-important
+In describing a relationship, make sure to mention direction, shape, and strength.
+:::
 
 ::: render-commit-push
 Render, commit, and push your changes to GitHub with the commit message "Added answer for Question 3".
