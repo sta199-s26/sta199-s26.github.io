@@ -1,5 +1,5 @@
 ---
-title: "AE 02: Bechdel + data visualization"
+title: "AE 03: Bechdel + data visualization"
 categories: 
   - Application exercise
 draft: true
