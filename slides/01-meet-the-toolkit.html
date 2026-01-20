@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.4.555">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
 <meta name="author" content="John Zito">
 <meta name="dcterms.date" content="2026-01-12">
-<title>Meet the toolkit – STA 199 Spring 2026</title>
+
+<title>STA 199 Spring 2026 - Meet the toolkit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,9 +23,8 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -56,22 +58,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
+
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-9f26b6341e16faa20df3ce7a36debf59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -97,7 +100,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -123,76 +131,82 @@ window.Quarto = {
   typesetMath
 };
 </script>
-<meta property="og:title" content="Meet the toolkit – STA 199 Spring 2026">
+
+<meta property="og:title" content="STA 199 Spring 2026 - Meet the toolkit">
 <meta property="og:description" content="Lecture 1">
-<meta property="og:image" content="https://sta199-s26.github.io/slides/images/00/data-science-cycle-cropped.png">
 <meta property="og:site_name" content="STA 199 Spring 2026">
-<meta property="og:image:height" content="570">
-<meta property="og:image:width" content="1714">
 </head>
-<body class="nav-sidebar docked slimcontent quarto-light">
+
+<body class="nav-sidebar docked slimcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Meet the toolkit</li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/sta199-s26" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio containers" class="quarto-navigation-tool px-1" aria-label="RStudio containers"><i class="bi bi-code-square"></i></a>
     <a href="https://duke.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=7301f69f-7a4a-459f-b8b4-b3ca00ee0a71" title="Class recordings" class="quarto-navigation-tool px-1" aria-label="Class recordings"><i class="bi bi-camera-reels-fill"></i></a>
     <div class="dropdown">
-      <a href="" title="Support" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Support"><i class="bi bi-life-preserver"></i></a>
+      <a href="" title="Support" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Support"><i class="bi bi-life-preserver"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-<li>
+          <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://docs.google.com/spreadsheets/d/1bbCCaRtyUzPbB-SqcjseiwVLwFlgQbvCMaMWnvT3EG8/edit?usp=sharing">
-              <i class="bi bi-person-raised-hand pe-1"></i>
+              <i class="bi bi-bi-person-raised-hand pe-1"></i>
             Office hours
             </a>
           </li>
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://edstem.org/us/courses/90224/discussion">
-              <i class="bi bi-people-fill pe-1"></i>
+              <i class="bi bi-bi-people-fill pe-1"></i>
             Ed Discussion
             </a>
           </li>
       </ul>
-</div>
+    </div>
     <div class="dropdown">
-      <a href="" title="Canvas" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Canvas"><i class="bi bi-file-check-fill"></i></a>
+      <a href="" title="Canvas" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Canvas"><i class="bi bi-file-check-fill"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
-<li>
+          <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://canvas.duke.edu/courses/72135/announcements">
-              <i class="bi bi-megaphone-fill pe-1"></i>
+              <i class="bi bi-bi-megaphone-fill pe-1"></i>
             Announcements
             </a>
           </li>
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://www.gradescope.com/courses/1211450">
-              <i class="bi bi-file-arrow-up-fill pe-1"></i>
+              <i class="bi bi-bi-file-arrow-up-fill pe-1"></i>
             Gradescope
             </a>
           </li>
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://canvas.duke.edu/courses/72135/gradebook">
-              <i class="bi bi-alphabet-uppercase pe-1"></i>
+              <i class="bi bi-bi-alphabet-uppercase pe-1"></i>
             Gradebook
             </a>
           </li>
       </ul>
-</div>
+    </div>
 </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -202,16 +216,16 @@ window.Quarto = {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item sidebar-item-section">
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
  <span class="menu-text">Syllabus</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../syllabus/syllabus-overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
@@ -260,17 +274,17 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
  <span class="menu-text">Lab</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lab/lab-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 0</span></a>
@@ -283,17 +297,17 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
  <span class="menu-text">Computing</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../computing/coding-access.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Access</span></a>
@@ -306,19 +320,20 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
     </ul>
-</div>
-</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-<li>
-<a href="#preliminaries" id="toc-preliminaries" class="nav-link active" data-scroll-target="#preliminaries">Preliminaries</a>
+  <li><a href="#preliminaries" id="toc-preliminaries" class="nav-link active" data-scroll-target="#preliminaries">Preliminaries</a>
   <ul class="collapse">
-<li><a href="#reminders" id="toc-reminders" class="nav-link" data-scroll-target="#reminders">Reminders</a></li>
+  <li><a href="#reminders" id="toc-reminders" class="nav-link" data-scroll-target="#reminders">Reminders</a></li>
   <li><a href="#updates" id="toc-updates" class="nav-link" data-scroll-target="#updates">Updates</a></li>
   <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions?</a></li>
   <li><a href="#how-do-we-pronounce-this" id="toc-how-do-we-pronounce-this" class="nav-link" data-scroll-target="#how-do-we-pronounce-this">How do we pronounce this?</a></li>
@@ -326,18 +341,14 @@ window.Quarto = {
   <li><a href="#the-data-science-life-cycle" id="toc-the-data-science-life-cycle" class="nav-link" data-scroll-target="#the-data-science-life-cycle">The data science life cycle</a></li>
   <li><a href="#managing-expectations" id="toc-managing-expectations" class="nav-link" data-scroll-target="#managing-expectations">Managing expectations</a></li>
   <li><a href="#today-and-for-forever" id="toc-today-and-for-forever" class="nav-link" data-scroll-target="#today-and-for-forever">Today and for forever</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#course-toolkit" id="toc-course-toolkit" class="nav-link" data-scroll-target="#course-toolkit">Course toolkit</a>
+  </ul></li>
+  <li><a href="#course-toolkit" id="toc-course-toolkit" class="nav-link" data-scroll-target="#course-toolkit">Course toolkit</a>
   <ul class="collapse">
-<li><a href="#course-toolkit-1" id="toc-course-toolkit-1" class="nav-link" data-scroll-target="#course-toolkit-1">Course toolkit</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#toolkit-computing" id="toc-toolkit-computing" class="nav-link" data-scroll-target="#toolkit-computing">Toolkit: Computing</a>
+  <li><a href="#course-toolkit-1" id="toc-course-toolkit-1" class="nav-link" data-scroll-target="#course-toolkit-1">Course toolkit</a></li>
+  </ul></li>
+  <li><a href="#toolkit-computing" id="toc-toolkit-computing" class="nav-link" data-scroll-target="#toolkit-computing">Toolkit: Computing</a>
   <ul class="collapse">
-<li><a href="#learning-goals" id="toc-learning-goals" class="nav-link" data-scroll-target="#learning-goals">Learning goals</a></li>
+  <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link" data-scroll-target="#learning-goals">Learning goals</a></li>
   <li><a href="#two-important-concepts" id="toc-two-important-concepts" class="nav-link" data-scroll-target="#two-important-concepts">Two important concepts</a></li>
   <li><a href="#reproducibility-checklist" id="toc-reproducibility-checklist" class="nav-link" data-scroll-target="#reproducibility-checklist">Reproducibility checklist</a></li>
   <li><a href="#toolkit-for-reproducibility" id="toc-toolkit-for-reproducibility" class="nav-link" data-scroll-target="#toolkit-for-reproducibility">Toolkit for reproducibility</a></li>
@@ -347,22 +358,18 @@ window.Quarto = {
   <li><a href="#an-analogy-to-english-2" id="toc-an-analogy-to-english-2" class="nav-link" data-scroll-target="#an-analogy-to-english-2">An Analogy to English</a></li>
   <li><a href="#an-analogy-to-english-3" id="toc-an-analogy-to-english-3" class="nav-link" data-scroll-target="#an-analogy-to-english-3">An Analogy to English</a></li>
   <li><a href="#an-analogy-to-english-4" id="toc-an-analogy-to-english-4" class="nav-link" data-scroll-target="#an-analogy-to-english-4">An Analogy to English</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#r-and-rstudio" id="toc-r-and-rstudio" class="nav-link" data-scroll-target="#r-and-rstudio">R and RStudio</a>
+  </ul></li>
+  <li><a href="#r-and-rstudio" id="toc-r-and-rstudio" class="nav-link" data-scroll-target="#r-and-rstudio">R and RStudio</a>
   <ul class="collapse">
-<li><a href="#r-and-rstudio-1" id="toc-r-and-rstudio-1" class="nav-link" data-scroll-target="#r-and-rstudio-1">R and RStudio</a></li>
+  <li><a href="#r-and-rstudio-1" id="toc-r-and-rstudio-1" class="nav-link" data-scroll-target="#r-and-rstudio-1">R and RStudio</a></li>
   <li><a href="#r-vs.-rstudio" id="toc-r-vs.-rstudio" class="nav-link" data-scroll-target="#r-vs.-rstudio">R vs.&nbsp;RStudio</a></li>
   <li><a href="#r-packages" id="toc-r-packages" class="nav-link" data-scroll-target="#r-packages">R packages</a></li>
   <li><a href="#tour-r-rstudio" id="toc-tour-r-rstudio" class="nav-link" data-scroll-target="#tour-r-rstudio">Tour: R + RStudio</a></li>
   <li><a href="#tour-recap-r-rstudio" id="toc-tour-recap-r-rstudio" class="nav-link" data-scroll-target="#tour-recap-r-rstudio">Tour recap: R + RStudio</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#a-short-list-for-now-of-r-essentials" id="toc-a-short-list-for-now-of-r-essentials" class="nav-link" data-scroll-target="#a-short-list-for-now-of-r-essentials">A short list<br>(for now)<br>of R essentials</a>
+  </ul></li>
+  <li><a href="#a-short-list-for-now-of-r-essentials" id="toc-a-short-list-for-now-of-r-essentials" class="nav-link" data-scroll-target="#a-short-list-for-now-of-r-essentials">A short list<br>(for now)<br>of R essentials</a>
   <ul class="collapse">
-<li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
+  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
   <li><a href="#data-frames-and-variables" id="toc-data-frames-and-variables" class="nav-link" data-scroll-target="#data-frames-and-variables">Data frames and variables</a></li>
   <li><a href="#penguins-data-frame" id="toc-penguins-data-frame" class="nav-link" data-scroll-target="#penguins-data-frame"><code>penguins</code> data frame</a></li>
   <li><a href="#bill_length_mm" id="toc-bill_length_mm" class="nav-link" data-scroll-target="#bill_length_mm"><code>bill_length_mm</code></a></li>
@@ -379,12 +386,10 @@ window.Quarto = {
   <li><a href="#summary-of-r-essentials-continued-3" id="toc-summary-of-r-essentials-continued-3" class="nav-link" data-scroll-target="#summary-of-r-essentials-continued-3">Summary of R essentials (continued)</a></li>
   <li><a href="#packages-an-analogy" id="toc-packages-an-analogy" class="nav-link" data-scroll-target="#packages-an-analogy">Packages, an analogy</a></li>
   <li><a href="#tidyverse" id="toc-tidyverse" class="nav-link" data-scroll-target="#tidyverse">tidyverse</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#toolkit-version-control-and-collaboration" id="toc-toolkit-version-control-and-collaboration" class="nav-link" data-scroll-target="#toolkit-version-control-and-collaboration">Toolkit: Version control and collaboration</a>
+  </ul></li>
+  <li><a href="#toolkit-version-control-and-collaboration" id="toc-toolkit-version-control-and-collaboration" class="nav-link" data-scroll-target="#toolkit-version-control-and-collaboration">Toolkit: Version control and collaboration</a>
   <ul class="collapse">
-<li><a href="#git-and-github" id="toc-git-and-github" class="nav-link" data-scroll-target="#git-and-github">Git and GitHub</a></li>
+  <li><a href="#git-and-github" id="toc-git-and-github" class="nav-link" data-scroll-target="#git-and-github">Git and GitHub</a></li>
   <li><a href="#versioning---done-badly" id="toc-versioning---done-badly" class="nav-link" data-scroll-target="#versioning---done-badly">Versioning - done badly</a></li>
   <li><a href="#versioning---done-better" id="toc-versioning---done-better" class="nav-link" data-scroll-target="#versioning---done-better">Versioning - done better</a></li>
   <li><a href="#versioning---done-even-better" id="toc-versioning---done-even-better" class="nav-link" data-scroll-target="#versioning---done-even-better">Versioning - done even better</a></li>
@@ -395,21 +400,22 @@ window.Quarto = {
   <li><a href="#git-and-github-tips" id="toc-git-and-github-tips" class="nav-link" data-scroll-target="#git-and-github-tips">Git and GitHub tips</a></li>
   <li><a href="#tour-git-github" id="toc-tour-git-github" class="nav-link" data-scroll-target="#tour-git-github">Tour: Git + GitHub</a></li>
   <li><a href="#what-could-have-gone-wrong" id="toc-what-could-have-gone-wrong" class="nav-link" data-scroll-target="#what-could-have-gone-wrong">What could have gone wrong?</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a>
+  </ul></li>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a>
   <ul class="collapse">
-<li><a href="#quarto-1" id="toc-quarto-1" class="nav-link" data-scroll-target="#quarto-1">Quarto</a></li>
+  <li><a href="#quarto-1" id="toc-quarto-1" class="nav-link" data-scroll-target="#quarto-1">Quarto</a></li>
   <li><a href="#tour-quarto" id="toc-tour-quarto" class="nav-link" data-scroll-target="#tour-quarto">Tour: Quarto</a></li>
   <li><a href="#tour-quarto-and-more-git-github" id="toc-tour-quarto-and-more-git-github" class="nav-link" data-scroll-target="#tour-quarto-and-more-git-github">Tour: Quarto (and more Git + GitHub)</a></li>
   <li><a href="#how-will-we-use-quarto" id="toc-how-will-we-use-quarto" class="nav-link" data-scroll-target="#how-will-we-use-quarto">How will we use Quarto?</a></li>
+  </ul></li>
   </ul>
-</li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/slides/01-meet-the-toolkit.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="01-meet-the-toolkit-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/slides/01-meet-the-toolkit.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="01-meet-the-toolkit-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
 <h1 class="title">Meet the toolkit</h1>
 <p class="subtitle lead">Lecture 1</p>
 </div>
@@ -444,8 +450,13 @@ window.Quarto = {
   
 
 
-</header><section id="preliminaries" class="level1"><h1>Preliminaries</h1>
-<section id="reminders" class="level2"><h2 class="anchored" data-anchor-id="reminders">Reminders</h2>
+</header>
+
+
+<section id="preliminaries" class="level1">
+<h1>Preliminaries</h1>
+<section id="reminders" class="level2">
+<h2 class="anchored" data-anchor-id="reminders">Reminders</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>Complete Lab 0 ASAP;</li>
@@ -455,19 +466,27 @@ window.Quarto = {
 <li>Start lurking on Ed. Questions are being answered!</li>
 </ul>
 </div>
-</section><section id="updates" class="level2"><h2 class="anchored" data-anchor-id="updates">Updates</h2>
+</section>
+<section id="updates" class="level2">
+<h2 class="anchored" data-anchor-id="updates">Updates</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>There will be <del>eight</del> seven homeworks. HW 1 appears next week;</li>
 <li>Office hours are posted and begin today.</li>
 </ul>
 </div>
-</section><section id="questions" class="level2"><h2 class="anchored" data-anchor-id="questions">Questions?</h2>
-</section><section id="how-do-we-pronounce-this" class="level2 large"><h2 class="large anchored" data-anchor-id="how-do-we-pronounce-this">How do we pronounce this?</h2>
+</section>
+<section id="questions" class="level2">
+<h2 class="anchored" data-anchor-id="questions">Questions?</h2>
+</section>
+<section id="how-do-we-pronounce-this" class="level2 large">
+<h2 class="large anchored" data-anchor-id="how-do-we-pronounce-this">How do we pronounce this?</h2>
 <p><br></p>
 <p><br></p>
 <p>STA 199</p>
-</section><section id="last-time" class="level2 medium"><h2 class="medium anchored" data-anchor-id="last-time">Last time</h2>
+</section>
+<section id="last-time" class="level2 medium">
+<h2 class="medium anchored" data-anchor-id="last-time">Last time</h2>
 <p>Spring break splits the class into two parts:</p>
 <div class="incremental">
 <ul class="incremental">
@@ -476,26 +495,29 @@ window.Quarto = {
 <li>convert data into knowledge;</li>
 <li>take a spreadsheet and compress it into pictures and a concise set of numerical summaries;</li>
 <li>try to teach a reader about the world or convince them of a claim;</li>
-</ul>
-</li>
+</ul></li>
 <li>Statistical thinking:
 <ul class="incremental">
 <li>quantify our uncertainty about the results produced above;</li>
 <li>use this to make tricky decisions.</li>
-</ul>
-</li>
+</ul></li>
 </ul>
 </div>
-</section><section id="the-data-science-life-cycle" class="level2 medium"><h2 class="medium anchored" data-anchor-id="the-data-science-life-cycle">The data science life cycle</h2>
+</section>
+<section id="the-data-science-life-cycle" class="level2 medium">
+<h2 class="medium anchored" data-anchor-id="the-data-science-life-cycle">The data science life cycle</h2>
 <p>You will learn how to use a computer to actually <em>do</em> the following:</p>
 <p>. . .</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/00/data-science-cycle-cropped.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figure class="figure">
+<p><img src="images/00/data-science-cycle-cropped.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p>. . .</p>
 <p>We emphasize <em>technique</em> (how do you make literally anything happen), but we also want you to develop <em>good taste</em> so that you can do these things well and convincingly.</p>
-</section><section id="managing-expectations" class="level2"><h2 class="anchored" data-anchor-id="managing-expectations">Managing expectations</h2>
+</section>
+<section id="managing-expectations" class="level2">
+<h2 class="anchored" data-anchor-id="managing-expectations">Managing expectations</h2>
 <ul>
 <li>Today is the first time all 300+ of us are attempting to access our containers simultaneously;</li>
 <li>I have yet to see this work the first time;</li>
@@ -503,19 +525,26 @@ window.Quarto = {
 <li>Until then: blood bath;</li>
 <li>Raise your hand if you need anything;</li>
 <li>If today is not your day, just sit back and watch.</li>
-</ul></section><section id="today-and-for-forever" class="level2 large"><h2 class="large anchored" data-anchor-id="today-and-for-forever">Today and for forever</h2>
+</ul>
+</section>
+<section id="today-and-for-forever" class="level2 large">
+<h2 class="large anchored" data-anchor-id="today-and-for-forever">Today and for forever</h2>
 <p>Please ask questions!</p>
 <ul>
 <li>Ask JZ: general interest questions about the presentation;</li>
 <li>Ask TA: technical questions about your particular computer.</li>
-</ul></section></section><section id="course-toolkit" class="level1"><h1>Course toolkit</h1>
-<section id="course-toolkit-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="course-toolkit-1">Course toolkit</h2>
+</ul>
+</section>
+</section>
+<section id="course-toolkit" class="level1">
+<h1>Course toolkit</h1>
+<section id="course-toolkit-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="course-toolkit-1">Course toolkit</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>Course operation</strong></p>
 <ul>
-<li>Materials: <a href="https://sta199-s26.github.io/">sta199-s26.github.io</a>
-</li>
+<li>Materials: <a href="https://sta199-s26.github.io/">sta199-s26.github.io</a></li>
 <li>Submission: Gradescope (in Canvas)</li>
 <li>Content Q&amp;A: Ed Discussion (in Canvas)</li>
 <li>Grades: Gradebook (in Canvas)</li>
@@ -528,36 +557,37 @@ window.Quarto = {
 <ul>
 <li>R</li>
 <li>RStudio</li>
-<li>
-<code>tidyverse</code> and friends</li>
+<li><code>tidyverse</code> and friends</li>
 <li>Quarto</li>
-</ul>
-</li>
+</ul></li>
 <li>Version control:
 <ul>
 <li>Git</li>
 <li>GitHub</li>
+</ul></li>
 </ul>
-</li>
-</ul>
 </div>
 </div>
 </div>
-</section></section><section id="toolkit-computing" class="level1"><h1>Toolkit: Computing</h1>
-<section id="learning-goals" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="learning-goals">Learning goals</h2>
+</section>
+</section>
+<section id="toolkit-computing" class="level1">
+<h1>Toolkit: Computing</h1>
+<section id="learning-goals" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="learning-goals">Learning goals</h2>
 <p>By the end of the course, you will be able to…</p>
 <div class="incremental">
 <ul class="incremental">
 <li>gain insight from data</li>
-<li>gain insight from data, <strong>reproducibly</strong>
-</li>
-<li>gain insight from data, reproducibly, <strong>using modern programming tools and techniques</strong>
-</li>
+<li>gain insight from data, <strong>reproducibly</strong></li>
+<li>gain insight from data, reproducibly, <strong>using modern programming tools and techniques</strong></li>
 <li>gain insight from data, reproducibly <strong>and collaboratively</strong>, using modern programming tools and techniques</li>
 <li>gain insight from data, reproducibly <strong>(with literate programming and version control)</strong> and collaboratively, using modern programming tools and techniques</li>
 </ul>
 </div>
-</section><section id="two-important-concepts" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="two-important-concepts">Two important concepts</h2>
+</section>
+<section id="two-important-concepts" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="two-important-concepts">Two important concepts</h2>
 <p>. . .</p>
 <p>Computational <em>reproducibility</em>:</p>
 <div class="incremental">
@@ -576,7 +606,9 @@ window.Quarto = {
 </ul>
 <p>. . .</p>
 <p>Our tools will help you achieve the first, which is necessary (but not sufficient!) for the second.</p>
-</section><section id="reproducibility-checklist" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="reproducibility-checklist">Reproducibility checklist</h2>
+</section>
+<section id="reproducibility-checklist" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="reproducibility-checklist">Reproducibility checklist</h2>
 <div class="question">
 <p>What does it mean for a data analysis to be “reproducible”?</p>
 </div>
@@ -592,7 +624,10 @@ window.Quarto = {
 <ul>
 <li>Can the code be used for other data?</li>
 <li>Can you extend the code to do other things?</li>
-</ul></section><section id="toolkit-for-reproducibility" class="level2"><h2 class="anchored" data-anchor-id="toolkit-for-reproducibility">Toolkit for reproducibility</h2>
+</ul>
+</section>
+<section id="toolkit-for-reproducibility" class="level2">
+<h2 class="anchored" data-anchor-id="toolkit-for-reproducibility">Toolkit for reproducibility</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>Scriptability – Coding instead of point-and-click <span class="math inline">\(\rightarrow\)</span> R</li>
@@ -600,7 +635,9 @@ window.Quarto = {
 <li>Version control – Track changes with brief messages that describe those changes <span class="math inline">\(\rightarrow\)</span> Git / GitHub</li>
 </ul>
 </div>
-</section><section id="collaboration" class="level2"><h2 class="anchored" data-anchor-id="collaboration">Collaboration</h2>
+</section>
+<section id="collaboration" class="level2">
+<h2 class="anchored" data-anchor-id="collaboration">Collaboration</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>Collaboration doesn’t just mean working with others. It also means collaborating with yourself <em>across time</em>;</li>
@@ -608,51 +645,67 @@ window.Quarto = {
 <li>Our tools will make you an excellent collaborator with others, but they will also help you keep yourself organized.</li>
 </ul>
 </div>
-</section><section id="an-analogy-to-english" class="level2"><h2 class="anchored" data-anchor-id="an-analogy-to-english">An Analogy to English</h2>
+</section>
+<section id="an-analogy-to-english" class="level2">
+<h2 class="anchored" data-anchor-id="an-analogy-to-english">An Analogy to English</h2>
 <p>. . .</p>
 <p><img src="images/01/1.jpg" class="img-fluid" alt="R"></p>
-</section><section id="an-analogy-to-english-1" class="level2"><h2 class="anchored" data-anchor-id="an-analogy-to-english-1">An Analogy to English</h2>
+</section>
+<section id="an-analogy-to-english-1" class="level2">
+<h2 class="anchored" data-anchor-id="an-analogy-to-english-1">An Analogy to English</h2>
 <p><img src="images/01/2.jpg" class="img-fluid" alt="Rstudio"></p>
-</section><section id="an-analogy-to-english-2" class="level2"><h2 class="anchored" data-anchor-id="an-analogy-to-english-2">An Analogy to English</h2>
+</section>
+<section id="an-analogy-to-english-2" class="level2">
+<h2 class="anchored" data-anchor-id="an-analogy-to-english-2">An Analogy to English</h2>
 <p><img src="images/01/3.jpg" class="img-fluid" alt="Quarto"></p>
-</section><section id="an-analogy-to-english-3" class="level2"><h2 class="anchored" data-anchor-id="an-analogy-to-english-3">An Analogy to English</h2>
+</section>
+<section id="an-analogy-to-english-3" class="level2">
+<h2 class="anchored" data-anchor-id="an-analogy-to-english-3">An Analogy to English</h2>
 <p><img src="images/01/4.jpg" class="img-fluid" alt="git"></p>
-</section><section id="an-analogy-to-english-4" class="level2"><h2 class="anchored" data-anchor-id="an-analogy-to-english-4">An Analogy to English</h2>
+</section>
+<section id="an-analogy-to-english-4" class="level2">
+<h2 class="anchored" data-anchor-id="an-analogy-to-english-4">An Analogy to English</h2>
 <p><img src="images/01/5.jpg" class="img-fluid" alt="github"></p>
-</section></section><section id="r-and-rstudio" class="level1 page-columns page-full"><h1>R and RStudio</h1>
-<section id="r-and-rstudio-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="r-and-rstudio-1">R and RStudio</h2>
+</section>
+</section>
+<section id="r-and-rstudio" class="level1 page-columns page-full">
+<h1>R and RStudio</h1>
+<section id="r-and-rstudio-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="r-and-rstudio-1">R and RStudio</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/01/r-logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="R logo"></p>
+<figure class="figure">
+<p><img src="images/01/r-logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="R logo"></p>
 </figure>
 </div>
 <ul>
-<li>R is an open-source statistical <strong>programming language</strong>
-</li>
+<li>R is an open-source statistical <strong>programming language</strong></li>
 <li>R is also an environment for statistical computing and graphics</li>
-<li>It’s easily extensible with <em>packages</em>
-</li>
+<li>It’s easily extensible with <em>packages</em></li>
 </ul>
-</div>
-<div class="column fragment" style="width:50%;">
+</div><div class="column fragment" style="width:50%;">
 <p><img src="images/01/rstudio-logo.png" class="img-fluid" alt="RStudio logo"></p>
 <ul>
-<li>RStudio is a convenient interface for R called an <strong>IDE</strong> (integrated development environment), e.g.&nbsp;<em>“I write R code in the RStudio IDE”</em>
-</li>
+<li>RStudio is a convenient interface for R called an <strong>IDE</strong> (integrated development environment), e.g.&nbsp;<em>“I write R code in the RStudio IDE”</em></li>
 <li>RStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists</li>
 </ul>
 </div>
 </div>
-</section><section id="r-vs.-rstudio" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="r-vs.-rstudio">R vs.&nbsp;RStudio</h2>
+</section>
+<section id="r-vs.-rstudio" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="r-vs.-rstudio">R vs.&nbsp;RStudio</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="https://moderndive.com/1-getting-started.html"><img src="images/01/r_vs_rstudio.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="On the left: a car engine. On the right: a car dashboard. The engine is labelled R. The dashboard is labelled RStudio." width="1001"></a></p>
+<figure class="figure">
+<p><a href="https://moderndive.com/1-getting-started.html"><img src="images/01/r_vs_rstudio.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="On the left: a car engine. On the right: a car dashboard. The engine is labelled R. The dashboard is labelled RStudio." width="1001"></a></p>
 </figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p>Source: <a href="https://moderndive.com/1-getting-started.html">Modern Dive</a>.</p>
-</div></div></section><section id="r-packages" class="level2 smaller page-columns page-full"><h2 class="smaller anchored" data-anchor-id="r-packages">R packages</h2>
+</div></div></section>
+<section id="r-packages" class="level2 smaller page-columns page-full">
+<h2 class="smaller anchored" data-anchor-id="r-packages">R packages</h2>
 <div class="incremental">
 <ul class="incremental">
 <li><p><strong>Packages</strong>: Fundamental units of reproducible R code, including reusable R functions, the documentation that describes how to use them, and sample data<sup>1</sup></p></li>
@@ -663,8 +716,10 @@ window.Quarto = {
 
 <div class="no-row-height column-margin column-container"><div class="margin-aside">
 <p><sup>1</sup> Wickham and Bryan, <a href="https://r-pkgs.org/">R Packages</a>.</p>
-<p><sup>2</sup><a href="https://cran.r-project.org/web/packages/">CRAN contributed packages</a>.</p>
-</div></div></section><section id="tour-r-rstudio" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="tour-r-rstudio">Tour: R + RStudio</h2>
+<p><sup>2</sup> <a href="https://cran.r-project.org/web/packages/">CRAN contributed packages</a>.</p>
+</div></div></section>
+<section id="tour-r-rstudio" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="tour-r-rstudio">Tour: R + RStudio</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="demo">
@@ -678,15 +733,21 @@ window.Quarto = {
 </div>
 </div>
 </div>
-</section><section id="tour-recap-r-rstudio" class="level2"><h2 class="anchored" data-anchor-id="tour-recap-r-rstudio">Tour recap: R + RStudio</h2>
+</section>
+<section id="tour-recap-r-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="tour-recap-r-rstudio">Tour recap: R + RStudio</h2>
 <p><img src="images/01/tour-r-rstudio.png" class="img-fluid"></p>
-</section></section><section id="a-short-list-for-now-of-r-essentials" class="level1"><h1>A short list<br>(for now)<br>of R essentials</h1>
-<section id="packages" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="packages">Packages</h2>
+</section>
+</section>
+<section id="a-short-list-for-now-of-r-essentials" class="level1">
+<h1>A short list<br>(for now)<br>of R essentials</h1>
+<section id="packages" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="packages">Packages</h2>
 <ul>
-<li>Installed with <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages()</a></code>, once per system:</li>
+<li>Installed with <code>install.packages()</code>, once per system:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"palmerpenguins"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"palmerpenguins"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -698,37 +759,38 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>We already pre-installed many of the package you’ll need for this course, so you might go the whole semester without needing to run <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages()</a></code>!</p>
+<p>We already pre-installed many of the package you’ll need for this course, so you might go the whole semester without needing to run <code>install.packages()</code>!</p>
 </div>
 </div>
 <p>. . .</p>
 <ul>
-<li>Loaded with <code><a href="https://rdrr.io/r/base/library.html">library()</a></code>, once per session:</li>
+<li>Loaded with <code>library()</code>, once per session:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://allisonhorst.github.io/palmerpenguins/">palmerpenguins</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="data-frames-and-variables" class="level2"><h2 class="anchored" data-anchor-id="data-frames-and-variables">Data frames and variables</h2>
+</section>
+<section id="data-frames-and-variables" class="level2">
+<h2 class="anchored" data-anchor-id="data-frames-and-variables">Data frames and variables</h2>
 <ul>
-<li>Each row of a data frame is an <strong>observation</strong>
-</li>
+<li>Each row of a data frame is an <strong>observation</strong></li>
 </ul>
 <p>. . .</p>
 <ul>
-<li>Each column of a data frame is a <strong>variable</strong>
-</li>
+<li>Each column of a data frame is a <strong>variable</strong></li>
 </ul>
 <p>. . .</p>
 <ul>
 <li>Columns (variables) in data frames can be accessed with <code>$</code>:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dataframe</span><span class="op">$</span><span class="va">variable_name</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dataframe<span class="sc">$</span>variable_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="penguins-data-frame" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="penguins-data-frame">
-<code>penguins</code> data frame</h2>
+</section>
+<section id="penguins-data-frame" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="penguins-data-frame"><code>penguins</code> data frame</h2>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">penguins</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 344 × 8
    species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
@@ -747,9 +809,11 @@ Note
 # ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
 </div>
 </div>
-</section><section id="bill_length_mm" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="bill_length_mm"><code>bill_length_mm</code></h2>
+</section>
+<section id="bill_length_mm" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="bill_length_mm"><code>bill_length_mm</code></h2>
 <div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">penguins</span><span class="op">$</span><span class="va">bill_length_mm</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>penguins<span class="sc">$</span>bill_length_mm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  [1] 39.1 39.5 40.3   NA 36.7 39.3 38.9 39.2 34.1 42.0 37.8 37.8 41.1 38.6 34.6
  [16] 36.6 38.7 42.5 34.4 46.0 37.8 37.7 35.9 38.2 38.8 35.3 40.6 40.5 37.9 40.5
@@ -776,17 +840,21 @@ Note
 [331] 42.5 52.2 45.2 49.3 50.2 45.6 51.9 46.8 45.7 55.8 43.5 49.6 50.8 50.2</code></pre>
 </div>
 </div>
-</section><section id="why-did-the-error-occur" class="level2"><h2 class="anchored" data-anchor-id="why-did-the-error-occur">Why did the error occur?</h2>
+</section>
+<section id="why-did-the-error-occur" class="level2">
+<h2 class="anchored" data-anchor-id="why-did-the-error-occur">Why did the error occur?</h2>
 <div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flipper_length_mm</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>flipper_length_mm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
-<pre><code>Error: object 'flipper_length_mm' not found</code></pre>
+<pre><code>Error in eval(expr, envir, enclos): object 'flipper_length_mm' not found</code></pre>
 </div>
 </div>
-</section><section id="flipper_length_mm" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="flipper_length_mm"><code>flipper_length_mm</code></h2>
+</section>
+<section id="flipper_length_mm" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="flipper_length_mm"><code>flipper_length_mm</code></h2>
 <p>This can be fixed by using <code>penguins$flipper_length_mm</code>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">penguins</span><span class="op">$</span><span class="va">flipper_length_mm</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>penguins<span class="sc">$</span>flipper_length_mm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  [1] 181 186 195  NA 193 190 181 195 193 190 186 180 182 191 198 185 195 197
  [19] 184 194 174 180 189 185 180 187 183 187 172 180 178 178 188 184 195 196
@@ -810,31 +878,37 @@ Note
 [343] 210 198</code></pre>
 </div>
 </div>
-</section><section id="functionargument" class="level2"><h2 class="anchored" data-anchor-id="functionargument"><code>function(argument)</code></h2>
+</section>
+<section id="functionargument" class="level2">
+<h2 class="anchored" data-anchor-id="functionargument"><code>function(argument)</code></h2>
 <p>Functions are (most often) verbs, followed by what they will be applied to in parentheses:</p>
 <div class="cell">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">do_this</span><span class="op">(</span><span class="va">to_this</span><span class="op">)</span></span>
-<span><span class="fu">do_that</span><span class="op">(</span><span class="va">to_this</span>, <span class="va">to_that</span>, <span class="va">with_those</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">do_this</span>(to_this)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">do_that</span>(to_this, to_that, with_those)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="mean" class="level2"><h2 class="anchored" data-anchor-id="mean"><code>mean()</code></h2>
+</section>
+<section id="mean" class="level2">
+<h2 class="anchored" data-anchor-id="mean"><code>mean()</code></h2>
 <p>Let’s compute the average of a set of numbers:</p>
 <div class="cell">
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">5</span>, <span class="fl">6</span>, <span class="fl">7</span>, <span class="fl">8</span>, <span class="fl">9</span><span class="op">)</span></span>
-<span><span class="va">x</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1 2 3 4 5 6 7 8 9</code></pre>
 </div>
 </div>
 <p>. . .</p>
 <div class="cell">
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5</code></pre>
 </div>
 </div>
-</section><section id="mean-1" class="level2"><h2 class="anchored" data-anchor-id="mean-1"><code>mean()</code></h2>
+</section>
+<section id="mean-1" class="level2">
+<h2 class="anchored" data-anchor-id="mean-1"><code>mean()</code></h2>
 <div class="cell">
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">penguins</span><span class="op">$</span><span class="va">flipper_length_mm</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(penguins<span class="sc">$</span>flipper_length_mm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] NA</code></pre>
 </div>
@@ -843,7 +917,7 @@ Note
 <p>Wut?</p>
 <p>. . .</p>
 <div class="cell">
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">penguins</span><span class="op">$</span><span class="va">flipper_length_mm</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(penguins<span class="sc">$</span>flipper_length_mm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 181 186 195  NA 193 190</code></pre>
 </div>
@@ -852,60 +926,66 @@ Note
 <p>There’s a <em>missing value</em> (<code>NA</code> stands for “not available”).</p>
 <p>. . .</p>
 <div class="cell">
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">penguins</span><span class="op">$</span><span class="va">flipper_length_mm</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(penguins<span class="sc">$</span>flipper_length_mm, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 200.9152</code></pre>
 </div>
 </div>
-</section><section id="help" class="level2"><h2 class="anchored" data-anchor-id="help">Help</h2>
+</section>
+<section id="help" class="level2">
+<h2 class="anchored" data-anchor-id="help">Help</h2>
 <p>Object documentation can be accessed with <code>?</code></p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">?</span><span class="va">mean</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>?mean</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column" style="width:50%;">
 <p><video src="images/01/mean-docs.mov" class="img-fluid" alt="Documentation for mean function in R." controls=""><a href="images/01/mean-docs.mov">Video</a></video></p>
 </div>
 </div>
-</section><section id="summary-of-r-essentials" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="summary-of-r-essentials">Summary of R essentials</h2>
+</section>
+<section id="summary-of-r-essentials" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="summary-of-r-essentials">Summary of R essentials</h2>
 <ul>
 <li>Functions are (most often) verbs, followed by what they will be applied to in parentheses:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">do_this</span><span class="op">(</span><span class="va">to_this</span><span class="op">)</span></span>
-<span><span class="fu">do_that</span><span class="op">(</span><span class="va">to_this</span>, <span class="va">to_that</span>, <span class="va">with_those</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">do_this</span>(to_this)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">do_that</span>(to_this, to_that, with_those)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <ul>
-<li>Packages are installed with the <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages()</a></code> function and loaded with the <code>library</code> function, once per session:</li>
+<li>Packages are installed with the <code>install.packages()</code> function and loaded with the <code>library</code> function, once per session:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"package_name"</span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">package_name</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"package_name"</span>)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(package_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Your containers come “fully loaded,” so you may not have to install any new packages.</p>
-</section><section id="summary-of-r-essentials-continued" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="summary-of-r-essentials-continued">Summary of R essentials (continued)</h2>
+</section>
+<section id="summary-of-r-essentials-continued" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="summary-of-r-essentials-continued">Summary of R essentials (continued)</h2>
 <p>Data frames: like the spreadsheets of R</p>
 <ul>
-<li>Each row of a data frame is an <strong>observation</strong>
-</li>
-<li>Each column of a data frame is a <strong>variable</strong>
-</li>
+<li>Each row of a data frame is an <strong>observation</strong></li>
+<li>Each column of a data frame is a <strong>variable</strong></li>
 </ul>
 <p><img src="images/01/df.png" class="img-fluid"></p>
-</section><section id="summary-of-r-essentials-continued-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="summary-of-r-essentials-continued-1">Summary of R essentials (continued)</h2>
+</section>
+<section id="summary-of-r-essentials-continued-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="summary-of-r-essentials-continued-1">Summary of R essentials (continued)</h2>
 <ul>
 <li>Use the question mark <code>?</code> to get help with objects (like data frames and functions):</li>
 </ul>
 <div class="cell">
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="op">?</span><span class="va">function_name</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>?function_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Use the dollar sign <code>$</code> to access columns</li>
 </ul>
 <div class="cell">
-<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dataframe</span><span class="op">$</span><span class="va">column</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>dataframe<span class="sc">$</span>column</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -920,13 +1000,15 @@ Note
 <p>Generally, you need to use the <code>$</code> to tell R <em>where</em> to find that column.</p>
 </div>
 </div>
-</section><section id="summary-of-r-essentials-continued-2" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="summary-of-r-essentials-continued-2">Summary of R essentials (continued)</h2>
+</section>
+<section id="summary-of-r-essentials-continued-2" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="summary-of-r-essentials-continued-2">Summary of R essentials (continued)</h2>
 <ul>
 <li>Use the arrow <code>&lt;-</code> or equals sign <code>=</code> to save objects</li>
 </ul>
 <div class="cell">
-<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">=</span> <span class="va">some_thing</span></span>
-<span><span class="va">y</span> <span class="op">&lt;-</span> <span class="va">some_other_thing</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> some_thing</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> some_other_thing</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -941,7 +1023,9 @@ Note
 <p>Check your environment pane for the saved object!</p>
 </div>
 </div>
-</section><section id="summary-of-r-essentials-continued-3" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="summary-of-r-essentials-continued-3">Summary of R essentials (continued)</h2>
+</section>
+<section id="summary-of-r-essentials-continued-3" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="summary-of-r-essentials-continued-3">Summary of R essentials (continued)</h2>
 <ul>
 <li>Read your error messages!</li>
 </ul>
@@ -963,7 +1047,9 @@ Note
 <p>If you have trouble understanding what a message is saying, there is a high chance someone has explained the message online.</p>
 </div>
 </div>
-</section><section id="packages-an-analogy" class="level2"><h2 class="anchored" data-anchor-id="packages-an-analogy">Packages, an analogy</h2>
+</section>
+<section id="packages-an-analogy" class="level2">
+<h2 class="anchored" data-anchor-id="packages-an-analogy">Packages, an analogy</h2>
 <p>If data analysis was cooking…</p>
 <div class="incremental">
 <ul class="incremental">
@@ -971,15 +1057,16 @@ Note
 <li><p>Loading a package would be like getting the ingredients out of your pantry and setting them on your counter top to be used</p></li>
 </ul>
 </div>
-</section><section id="tidyverse" class="level2"><h2 class="anchored" data-anchor-id="tidyverse">tidyverse</h2>
+</section>
+<section id="tidyverse" class="level2">
+<h2 class="anchored" data-anchor-id="tidyverse">tidyverse</h2>
 <div class="hand">
 <p>aka the package you’ll hear about the most…</p>
 </div>
 <div class="columns">
 <div class="column" style="width:40%;">
 <p><a href="https://tidyverse.org"><img src="images/01/tidyverse.png" class="img-fluid" alt="Hex logos for dplyr, ggplot2, forcats, tibble, readr, stringr, tidyr, and purrr"></a></p>
-</div>
-<div class="column fragment" style="width:60%;">
+</div><div class="column fragment" style="width:60%;">
 <p><a href="https://www.tidyverse.org/">tidyverse.org</a></p>
 <ul>
 <li>The <strong>tidyverse</strong> is an opinionated collection of R packages designed for data science</li>
@@ -987,22 +1074,27 @@ Note
 </ul>
 </div>
 </div>
-</section></section><section id="toolkit-version-control-and-collaboration" class="level1"><h1>Toolkit: Version control and collaboration</h1>
-<section id="git-and-github" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="git-and-github">Git and GitHub</h2>
+</section>
+</section>
+<section id="toolkit-version-control-and-collaboration" class="level1">
+<h1>Toolkit: Version control and collaboration</h1>
+<section id="git-and-github" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="git-and-github">Git and GitHub</h2>
 <div class="columns">
 <div class="column fragment" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/01/git-logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Git logo" width="150"></p>
+<figure class="figure">
+<p><img src="images/01/git-logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Git logo" width="150"></p>
 </figure>
 </div>
 <ul>
 <li>Git is a version control system – like “Track Changes” features from Microsoft Word, on steroids</li>
 <li>It’s not the only version control system, but it’s a very popular one</li>
 </ul>
-</div>
-<div class="column fragment" style="width:50%;">
+</div><div class="column fragment" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/01/github-logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="GitHub logo" width="150"></p>
+<figure class="figure">
+<p><img src="images/01/github-logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="GitHub logo" width="150"></p>
 </figure>
 </div>
 <ul>
@@ -1011,45 +1103,68 @@ Note
 </ul>
 </div>
 </div>
-</section><section id="versioning---done-badly" class="level2"><h2 class="anchored" data-anchor-id="versioning---done-badly">Versioning - done badly</h2>
+</section>
+<section id="versioning---done-badly" class="level2">
+<h2 class="anchored" data-anchor-id="versioning---done-badly">Versioning - done badly</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/01/phd_comics_vc.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figure class="figure">
+<p><img src="images/01/phd_comics_vc.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-</section><section id="versioning---done-better" class="level2"><h2 class="anchored" data-anchor-id="versioning---done-better">Versioning - done better</h2>
+</section>
+<section id="versioning---done-better" class="level2">
+<h2 class="anchored" data-anchor-id="versioning---done-better">Versioning - done better</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/01/lego-steps.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figure class="figure">
+<p><img src="images/01/lego-steps.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-</section><section id="versioning---done-even-better" class="level2"><h2 class="anchored" data-anchor-id="versioning---done-even-better">Versioning - done even better</h2>
+</section>
+<section id="versioning---done-even-better" class="level2">
+<h2 class="anchored" data-anchor-id="versioning---done-even-better">Versioning - done even better</h2>
 <div class="hand">
 <p>with human readable messages</p>
 </div>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/01/lego-steps-commit-messages.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figure class="figure">
+<p><img src="images/01/lego-steps-commit-messages.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-</section><section id="how-will-we-use-git-and-github" class="level2"><h2 class="anchored" data-anchor-id="how-will-we-use-git-and-github">How will we use Git and GitHub?</h2>
+</section>
+<section id="how-will-we-use-git-and-github" class="level2">
+<h2 class="anchored" data-anchor-id="how-will-we-use-git-and-github">How will we use Git and GitHub?</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/01/whole-game-01.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figure class="figure">
+<p><img src="images/01/whole-game-01.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-</section><section id="how-will-we-use-git-and-github-1" class="level2"><h2 class="anchored" data-anchor-id="how-will-we-use-git-and-github-1">How will we use Git and GitHub?</h2>
+</section>
+<section id="how-will-we-use-git-and-github-1" class="level2">
+<h2 class="anchored" data-anchor-id="how-will-we-use-git-and-github-1">How will we use Git and GitHub?</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/01/whole-game-02.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figure class="figure">
+<p><img src="images/01/whole-game-02.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-</section><section id="how-will-we-use-git-and-github-2" class="level2"><h2 class="anchored" data-anchor-id="how-will-we-use-git-and-github-2">How will we use Git and GitHub?</h2>
+</section>
+<section id="how-will-we-use-git-and-github-2" class="level2">
+<h2 class="anchored" data-anchor-id="how-will-we-use-git-and-github-2">How will we use Git and GitHub?</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/01/whole-game-03.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figure class="figure">
+<p><img src="images/01/whole-game-03.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-</section><section id="how-will-we-use-git-and-github-3" class="level2"><h2 class="anchored" data-anchor-id="how-will-we-use-git-and-github-3">How will we use Git and GitHub?</h2>
+</section>
+<section id="how-will-we-use-git-and-github-3" class="level2">
+<h2 class="anchored" data-anchor-id="how-will-we-use-git-and-github-3">How will we use Git and GitHub?</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/01/whole-game-04.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figure class="figure">
+<p><img src="images/01/whole-game-04.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-</section><section id="git-and-github-tips" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="git-and-github-tips">Git and GitHub tips</h2>
+</section>
+<section id="git-and-github-tips" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="git-and-github-tips">Git and GitHub tips</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>There are millions of git commands – ok, that’s an exaggeration, but there are a lot of them – and very few people know them all. 99% of the time you will use git to add, commit, push, and pull.</li>
@@ -1057,7 +1172,9 @@ Note
 <li>There is a great resource for working with git and R: <a href="http://happygitwithr.com/">happygitwithr.com</a>. Some of the content in there is beyond the scope of this course, but it’s a good place to look for help.</li>
 </ul>
 </div>
-</section><section id="tour-git-github" class="level2 smaller scrollable"><h2 class="smaller scrollable anchored" data-anchor-id="tour-git-github">Tour: Git + GitHub</h2>
+</section>
+<section id="tour-git-github" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="tour-git-github">Tour: Git + GitHub</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="demo">
@@ -1085,28 +1202,40 @@ Note
 </div>
 </div>
 <p><br></p>
-<details><summary>
+<details>
+<summary>
 Tour recap: Git + GitHub
-</summary><ul>
+</summary>
+<ul>
 <li><p>Find your application repo, that will always be named using the naming convention <code>assignment_title-YOUR-GITHUB-NAME</code>, e.g., <code>ae-johnczito</code> or <code>lab-1-johnczito</code>.</p></li>
 <li><p>Click on the green “Code” button, make sure SSH is selected, copy the repo URL</p></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/01/tour-git-github-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+<figure class="figure">
+<p><img src="images/01/tour-git-github-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
 </figure>
 </div>
 <ul>
 <li><p>In RStudio, File &gt; New Project &gt; From Version Control &gt; Git</p></li>
 <li><p>Paste repo URL copied in previous step, then click tab to auto-fill the project name, then click Create Project</p></li>
 <li><p><strong>If you haven’t done Lab 0</strong>, <strong>for one time only</strong>, type <code>yes</code> in the pop-up dialogue</p></li>
-</ul></details></section><section id="what-could-have-gone-wrong" class="level2"><h2 class="anchored" data-anchor-id="what-could-have-gone-wrong">What could have gone wrong?</h2>
+</ul>
+</details>
+</section>
+<section id="what-could-have-gone-wrong" class="level2">
+<h2 class="anchored" data-anchor-id="what-could-have-gone-wrong">What could have gone wrong?</h2>
 <ul>
 <li><p>Never received GitHub invite <span class="math inline">\(\rightarrow\)</span> Fill out “Getting to know you survey</p></li>
 <li><p>Never accepted GitHub invite <span class="math inline">\(\rightarrow\)</span> Look for it in your email and accept it</p></li>
 <li><p>Cloning repo fails <span class="math inline">\(\rightarrow\)</span> Review/redo Lab 0 steps for setting up SSH key</p></li>
 <li><p>Still no luck? Stay after class today or come by my office hours tomorrow or post on Ed for help</p></li>
-</ul></section></section><section id="quarto" class="level1"><h1>Quarto</h1>
-<section id="quarto-1" class="level2"><h2 class="anchored" data-anchor-id="quarto-1">Quarto</h2>
+</ul>
+</section>
+</section>
+<section id="quarto" class="level1">
+<h1>Quarto</h1>
+<section id="quarto-1" class="level2">
+<h2 class="anchored" data-anchor-id="quarto-1">Quarto</h2>
 <div class="incremental">
 <ul class="incremental">
 <li>Fully reproducible reports – each time you render the analysis is run from the beginning;</li>
@@ -1114,7 +1243,9 @@ Tour recap: Git + GitHub
 <li>Written English goes outside cells, the same way you would write in Google Docs or MS Word.</li>
 </ul>
 </div>
-</section><section id="tour-quarto" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="tour-quarto">Tour: Quarto</h2>
+</section>
+<section id="tour-quarto" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="tour-quarto">Tour: Quarto</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="demo">
@@ -1141,17 +1272,25 @@ Note
 </div>
 </div>
 </div>
-</section><section id="tour-quarto-and-more-git-github" class="level2 smaller scrollable"><h2 class="smaller scrollable anchored" data-anchor-id="tour-quarto-and-more-git-github">Tour: Quarto (and more Git + GitHub)</h2>
-<details><summary>
+</section>
+<section id="tour-quarto-and-more-git-github" class="level2 smaller scrollable">
+<h2 class="smaller scrollable anchored" data-anchor-id="tour-quarto-and-more-git-github">Tour: Quarto (and more Git + GitHub)</h2>
+<details>
+<summary>
 Tour recap: Quarto
-</summary><div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/02/tour-quarto.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RStudio IDE with a Quarto document, source code on the left and output on the right. Annotated to show the YAML, a link, a header, and a code cell."></p>
+</summary>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/02/tour-quarto.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RStudio IDE with a Quarto document, source code on the left and output on the right. Annotated to show the YAML, a link, a header, and a code cell."></p>
 </figure>
 </div>
-</details><p><br></p>
-<details><summary>
+</details>
+<p><br></p>
+<details>
+<summary>
 Tour recap: Git + GitHub
-</summary><p>Once we made changes to our Quarto document, we</p>
+</summary>
+<p>Once we made changes to our Quarto document, we</p>
 <ul>
 <li><p>went to the Git pane in RStudio</p></li>
 <li><p>staged our changes by clicking the checkboxes next to the relevant files</p></li>
@@ -1159,7 +1298,11 @@ Tour recap: Git + GitHub
 <li><p>pulled from GitHub to make sure we had the latest version of our repo</p></li>
 <li><p>pushed our changes to our application exercise repos</p></li>
 <li><p>confirmed on GitHub that we could see our changes pushed from RStudio</p></li>
-</ul></details></section><section id="how-will-we-use-quarto" class="level2"><h2 class="anchored" data-anchor-id="how-will-we-use-quarto">How will we use Quarto?</h2>
+</ul>
+</details>
+</section>
+<section id="how-will-we-use-quarto" class="level2">
+<h2 class="anchored" data-anchor-id="how-will-we-use-quarto">How will we use Quarto?</h2>
 <ul>
 <li>Every application exercise, lab, project, etc. is an Quarto document</li>
 <li>You’ll always have a template Quarto document to start with</li>
@@ -1167,278 +1310,233 @@ Tour recap: Git + GitHub
 </ul>
 
 
-</section></section></main><!-- /main --><script>
-  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-  // slide changes (different for each slide format).
-  (function () {
-    // dispatch for htmlwidgets
-    function fireSlideEnter() {
-      const event = window.document.createEvent("Event");
-      event.initEvent("slideenter", true, true);
-      window.document.dispatchEvent(event);
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
     }
-
-    function fireSlideChanged(previousSlide, currentSlide) {
-      fireSlideEnter();
-
-      // dispatch for shiny
-      if (window.jQuery) {
-        if (previousSlide) {
-          window.jQuery(previousSlide).trigger("hidden");
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        if (currentSlide) {
-          window.jQuery(currentSlide).trigger("shown");
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/sta199-s26\.github\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
         }
       }
     }
-
-    // hookup for slidy
-    if (window.w3c_slidy) {
-      window.w3c_slidy.add_observer(function (slide_num) {
-        // slide_num starts at position 1
-        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-      });
-    }
-
-  })();
-</script><script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
     };
-    anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
-        }
-      }
-      return false;
+    if (contentFn) {
+      config.content = contentFn;
     }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
     }
-    const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
-        }
-        return codeEl.innerText;
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
     }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
-    });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
-    }
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/sta199-s26\.github\.io\/");
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-      }
-      // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
-        }
-      }
-    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-      const config = {
-        allowHTML: true,
-        maxWidth: 500,
-        delay: 100,
-        arrow: false,
-        appendTo: function(el) {
-            return el.parentElement;
-        },
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'quarto',
-        placement: 'bottom-start',
-      };
-      if (contentFn) {
-        config.content = contentFn;
-      }
-      if (onTriggerFn) {
-        config.onTrigger = onTriggerFn;
-      }
-      if (onUntriggerFn) {
-        config.onUntrigger = onUntriggerFn;
-      }
-      window.tippy(el, config); 
-    }
-    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-    for (var i=0; i<noterefs.length; i++) {
-      const ref = noterefs[i];
-      tippyHover(ref, function() {
-        // use id or data attribute instead here
-        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-        try { href = new URL(href).hash; } catch {}
-        const id = href.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note) {
-          return note.innerHTML;
-        } else {
-          return "";
-        }
-      });
-    }
-    const xrefs = window.document.querySelectorAll('a.quarto-xref');
-    const processXRef = (id, note) => {
-      // Strip column container classes
-      const stripColumnClz = (el) => {
-        el.classList.remove("page-full", "page-columns");
-        if (el.children) {
-          for (const child of el.children) {
-            stripColumnClz(child);
-          }
-        }
-      }
-      stripColumnClz(note)
-      if (id === null || id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children && note.children.length > 2) {
-          container.appendChild(note.children[0].cloneNode(true));
-          for (let i = 1; i < note.children.length; i++) {
-            const child = note.children[i];
-            if (child.tagName === "P" && child.innerText === "") {
-              continue;
-            } else {
-              container.appendChild(child.cloneNode(true));
-              break;
-            }
-          }
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(container);
-          }
-          return container.innerHTML
-        } else {
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(note);
-          }
-          return note.innerHTML;
-        }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
       } else {
-        // Remove any anchor links if they are present
-        const anchorLink = note.querySelector('a.anchorjs-link');
-        if (anchorLink) {
-          anchorLink.remove();
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
         }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        if (note.classList.contains("callout")) {
-          return note.outerHTML;
-        } else {
-          return note.innerHTML;
-        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
       }
     }
-    for (var i=0; i<xrefs.length; i++) {
-      const xref = xrefs[i];
-      tippyHover(xref, undefined, function(instance) {
-        instance.disable();
-        let url = xref.getAttribute('href');
-        let hash = undefined; 
-        if (url.startsWith('#')) {
-          hash = url;
-        } else {
-          try { hash = new URL(url).hash; } catch {}
-        }
-        if (hash) {
-          const id = hash.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note !== null) {
-            try {
-              const html = processXRef(id, note.cloneNode(true));
-              instance.setContent(html);
-            } finally {
-              instance.enable();
-              instance.show();
-            }
-          } else {
-            // See if we can fetch this
-            fetch(url.split('#')[0])
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const htmlDoc = parser.parseFromString(html, "text/html");
-              const note = htmlDoc.getElementById(id);
-              if (note !== null) {
-                const html = processXRef(id, note);
-                instance.setContent(html);
-              } 
-            }).finally(() => {
-              instance.enable();
-              instance.show();
-            });
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
           }
         } else {
-          // See if we can fetch a full url (with no hash to target)
-          // This is a special case and we should probably do some content thinning / targeting
-          fetch(url)
+          // See if we can fetch this
+          fetch(url.split('#')[0])
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.querySelector('main.content');
+            const note = htmlDoc.getElementById(id);
             if (note !== null) {
-              // This should only happen for chapter cross references
-              // (since there is no id in the URL)
-              // remove the first header
-              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-                note.children[0].remove();
-              }
-              const html = processXRef(null, note);
+              const html = processXRef(id, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -1446,163 +1544,188 @@ Tour recap: Git + GitHub
             instance.show();
           });
         }
-      }, function(instance) {
-      });
-    }
-        let selectedAnnoteEl;
-        const selectorForAnnotation = ( cell, annotation) => {
-          let cellAttr = 'data-code-cell="' + cell + '"';
-          let lineAttr = 'data-code-annotation="' +  annotation + '"';
-          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-          return selector;
-        }
-        const selectCodeLines = (annoteEl) => {
-          const doc = window.document;
-          const targetCell = annoteEl.getAttribute("data-target-cell");
-          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-          const lineIds = lines.map((line) => {
-            return targetCell + "-" + line;
-          })
-          let top = null;
-          let height = null;
-          let parent = null;
-          if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
-            }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
-            }
-            selectedAnnoteEl = annoteEl;
-          }
-        };
-        const unselectCodeLines = () => {
-          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-          elementsIds.forEach((elId) => {
-            const div = window.document.getElementById(elId);
-            if (div) {
-              div.remove();
-            }
-          });
-          selectedAnnoteEl = undefined;
-        };
-          // Handle positioning of the toggle
-      window.addEventListener(
-        "resize",
-        throttle(() => {
-          elRect = undefined;
-          if (selectedAnnoteEl) {
-            selectCodeLines(selectedAnnoteEl);
-          }
-        }, 10)
-      );
-      function throttle(fn, ms) {
-      let throttle = false;
-      let timer;
-        return (...args) => {
-          if(!throttle) { // first call gets through
-              fn.apply(this, args);
-              throttle = true;
-          } else { // all the others get throttled
-              if(timer) clearTimeout(timer); // cancel #2
-              timer = setTimeout(() => {
-                fn.apply(this, args);
-                timer = throttle = false;
-              }, ms);
-          }
-        };
-      }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
-            }
-          });
-        }
-    const findCites = (el) => {
-      const parentEl = el.parentElement;
-      if (parentEl) {
-        const cites = parentEl.dataset.cites;
-        if (cites) {
-          return {
-            el,
-            cites: cites.split(' ')
-          };
-        } else {
-          return findCites(el.parentElement)
-        }
       } else {
-        return undefined;
-      }
-    };
-    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-    for (var i=0; i<bibliorefs.length; i++) {
-      const ref = bibliorefs[i];
-      const citeInfo = findCites(ref);
-      if (citeInfo) {
-        tippyHover(citeInfo.el, function() {
-          var popup = window.document.createElement('div');
-          citeInfo.cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
             }
-            popup.appendChild(citeDiv);
-          });
-          return popup.innerHTML;
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
         });
       }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
     }
-  });
-  </script>
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2026 Mine Çetinkaya-Rundel, Mary Knox, Marie Neubrander, John Zito</p>
 </div>   
@@ -1614,6 +1737,8 @@ Tour recap: Git + GitHub
 </div>
   </div>
 </footer>
+
+
 
 
 </body></html>
