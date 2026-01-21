@@ -230,7 +230,7 @@ bechdel |>
     title = "Return on investment vs. Bechdel test result",
     x = "Return-on-investment (gross / budget)",
     y = "Detailed Bechdel result",
-    color = "Bechdel\nresult"
+    fill = "Bechdel\nresult"
   ) +
   coord_cartesian(xlim = c(0, 16))
 ```
