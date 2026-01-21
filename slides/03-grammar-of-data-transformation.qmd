@@ -83,7 +83,7 @@ films |>
 | *Wicked 2*              | 2025 | ⭐          | ✅      |
 | *Marty Supreme*         | 2026 | ⭐⭐⭐⭐    | ❌      |
 
-## Our starting point
+## Can we reproduce this claim?
 
 ::: callout-note
 ## From [FiveThirtyEight](https://fivethirtyeight.com/features/the-dollar-and-cents-case-against-hollywoods-exclusion-of-women/)
@@ -93,13 +93,21 @@ films |>
 
 "We did a statistical analysis of films to test two claims: first, that films that pass the Bechdel test — featuring women in stronger roles — see a lower return on investment, and second, that they see lower gross profits. We found no evidence to support either claim."
 
-## `ae-02-bechdel-dataviz`
+## `ae-03-bechdel-dataviz`
 
-::: appex
-Go to RStudio, confirm that you're in the `ae` project, and open the document ae-02-bechdel-dataviz`.qmd`.
-:::
+Let's go:
 
-## Recap: Code cells (aka code chunks) {.smaller}
+- Open your container;
+- Switch to your `ae-` project if you're not already there;
+- If there are any un-committed changes in the Git tab (upper right), commit them;
+- The Git tab should now be completely empty;
+- Lastly, **pull** the new files I've distributed to you.
+
+If that all went smoothly, open the new ae-03-bechdel-dataviz`.qmd` file.
+
+# Recap
+
+## Code cells (aka code chunks) {.smaller}
 
 ![](images/03/code-cell.png) . . .
 
@@ -184,7 +192,9 @@ ggplot(df, aes(x = x)) +
 :::
 :::::
 
-## ...but boxplots are nice for side-by-side comparisons
+Box plots hide multi-modality.
+
+## ...but boxplots are nicer for side-by-side comparisons, especially with many groups
 
 ```{r}
 #| echo: false
