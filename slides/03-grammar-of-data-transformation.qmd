@@ -117,7 +117,7 @@ If that all went smoothly, open the new ae-03-bechdel-dataviz`.qmd` file.
 
 # Describing distributions and relationships
 
-## Talking about one numerical variable
+## Talking about one numerical variable {.medium}
 
 ::::: columns
 ::: {.column width="50%"}
@@ -200,15 +200,39 @@ Box plots hide multi-modality.
 #| echo: false
 #| warning: false
 #| fig-align: center
-ggplot(bechdel, aes(x = clean_test, y = roi, color = binary)) +
+ggplot(bechdel, aes(x = roi, y = clean_test, color = binary)) +
   geom_boxplot() +
   labs(
     title = "Return on investment vs. Bechdel test result",
-    x = "Detailed Bechdel result",
-    y = "Return-on-investment (gross / budget)",
+    x = "Return-on-investment (gross / budget)",
+    y = "Detailed Bechdel result",
     color = "Bechdel\nresult"
   ) +
-  coord_cartesian(ylim = c(0, 16))
+  coord_cartesian(xlim = c(0, 16))
+```
+
+## This is a little too busy IMO
+
+```{r}
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-asp: 1
+
+bechdel |>
+  mutate(
+    clean_test = fct_rev(clean_test)
+  ) |>
+  ggplot(aes(x = roi, fill = binary)) +
+  geom_histogram(binwidth = 0.5) +
+  facet_wrap(~clean_test, nrow = 5) + 
+  labs(
+    title = "Return on investment vs. Bechdel test result",
+    x = "Return-on-investment (gross / budget)",
+    y = "Detailed Bechdel result",
+    color = "Bechdel\nresult"
+  ) +
+  coord_cartesian(xlim = c(0, 16))
 ```
 
 ## Talking about two numerical variables
