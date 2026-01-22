@@ -159,7 +159,11 @@ ggplot(bechdel, aes(x = budget_2013)) +
 
 ## Interaction between shape and center
 
+If there is only one peak:
+
 ![](images/03/mean_median_mode.png)
+
+
 
 ## Histograms provide more detail...
 
