@@ -1,6 +1,6 @@
 ---
 title: Lab 2
-subtitle: Continued Exploration of NC Counties
+subtitle: NC Counties...again!
 description: "Due: End of lab on Thurs, Jan 22"
 categories: Lab
 draft: false
@@ -8,31 +8,7 @@ draft: false
 
 # Introduction
 
-This lab is designed to increase your comfort with the course computing workflow.
-One of the main goals of this lab is to reinforce our demo of R and RStudio, which we will be using throughout the course to learn the statistical concepts discussed in the course, analyze real data, and make informed conclusions about said data.
-The other main goal is meet other students in the class, get to know them, and work together with them.
-
-::: callout-note
-R is the name of the programming language itself and RStudio is a convenient interface, commonly referred to as an integrated development environment or an IDE, for short.
-:::
-
-An additional goal is to reinforce Git and GitHub, the version control, web hosting, and collaboration systems that we will be using throughout the course.
-
-::: callout-note
-Git is a version control system (like "Track Changes" features from Microsoft Word but more powerful) and GitHub is the home for your Git-based projects on the internet (like DropBox but much better).
-:::
-
-As the labs progress, you are encouraged to explore beyond what the labs dictate; a willingness to experiment will make you a much better programmer.
-Before we get to that stage, however, you need to build some basic fluency in R.
-Today we begin with the fundamental building blocks of R and RStudio: the interface, reading in data, and basic commands.
-
-::: callout-warning
-This lab assumes that you have already completed [Lab 0](lab-0.html).
-If you have not, please
-
--   go back and do that first before proceeding and
--   let your TA know as they will need to set up a Lab 1 repository for you before you can complete this lab.
-:::
+Today you will double down on your data visualization skills, and you will also start playing with the pipe operator `|>`.
 
 ## Learning objectives
 
@@ -41,101 +17,29 @@ If you have not, please
     -  writing a reproducible report using Quarto, and
     -  version control using Git and GitHub.
 -   Create data visualizations with the `tidyverse`, specifically using `ggplot2`.
+- Describe in words what those visualizations teach us.
 -   Write a simple data transformation pipeline with the `tidyverse`, specifically using `dplyr`.
 
 ## Getting started
 
-### Step 1: Log in to RStudio
+To get started, follow the instructions below.
 
 -   Go to <https://cmgr.oit.duke.edu/containers> and login with your Duke NetID and Password.
 -   Click `STA199` under My reservations to log into your container. You should now see the RStudio environment.
-
-#### Refresher: R and R Studio
-
-Below are the components of the RStudio IDE.
-
-![](images/lab-1/rstudio.png){fig-alt="RStudio IDE" width="700" fig-align="center"}
-
-Below are the components of a Quarto (.qmd) file.
-
-![](images/lab-1/quarto.png){fig-alt="Quarto document" width="700" fig-align="center"}
-
-### Step 2: Clone the repo & start new RStudio project
-
 -   Go to the course organization at [github.com/sta199-s26](https://github.com/sta199-s26) organization on GitHub.
     Click on the repo with the prefix **lab-2**.
-    It contains the starter documents you need to complete the lab.
-
--   Click on the green **CODE** button, select **Use SSH** (this might already be selected by default, and if it is, you'll see the text **Clone with SSH**).
+    It contains the starter documents you need to complete the homework.
+-   Click on the green **CODE** button, select **Use SSH**.
     Click on the clipboard icon to copy the repo URL.
-
 -   In RStudio, go to *File* ➛ *New Project* ➛*Version Control* ➛ *Git*.
-
 -   Copy and paste the URL of your assignment repo into the dialog box *Repository URL*. Again, please make sure to have *SSH* highlighted under *Clone* when you copy the address.
-
 -   Click *Create Project*, and the files from your GitHub repo will be displayed in the *Files* pane in RStudio.
 
--   Click *lab-2.qmd* to open the template Quarto file.
-    This is where you will write up your code and narrative for the lab.
-
-### Step 3: Update the YAML
-
-The top portion of your Quarto file (between the three dashed lines) is called **YAML**.
-It stands for "YAML Ain't Markup Language".
-It is a human-friendly data representation for all programming languages.
-All you need to know is that this area is called the YAML (we will refer to it as such) and that it contains meta information about your document.
-
--   Open the Quarto (`.qmd`) file in your project, update the `authors` field to add your name first (first and last) and then your teammates' names (first and last). Then, render the document.
-
--   If you get a popup window error, click "Try again".
-
--   Examine the rendered document and make sure your name is updated in the document.
-
-### Step 4: Commit your changes
-
--   Go to the Git pane in RStudio.
-    This will be in the top right hand corner in a separate tab.
-
-    If you have made changes to your Quarto (.qmd) file, you should see it listed here.
-    If you have rendered the document, you should also see its output, a PDF file, listed there.
-
--   Click on it to select it in this list and then click on **Diff**.
-
-    This shows you the *diff*erence between the last committed state of the document and its current state including changes.
-    You should see deletions in red and additions in green.
-
--   If you're happy with these changes, prepare the changes to be pushed to your remote repository.
-
-    -   First, **stage** your changes by checking the appropriate box on the files you want to prepare.
-
-    -   Next, write a meaningful commit message (for instance, "Updated author name") in the **Commit message** box.
-
-    -   Finally, click **Commit**.
-        Note that every commit needs to have a commit message associated with it.
-
-::: callout-tip
-You don't have to commit after every change, as this would get quite tedious.
-You should commit states that are *meaningful to you* for inspection, comparison, or restoration (e.g., restoring a previous version of your document).
-
-In the first few assignments, we will tell you exactly when to commit and, in some cases, what commit message to use.
-As the semester progresses, we will let you make these decisions.
-:::
-
-### Step 5: Push your changes
-
-Now that you have made an update and committed this change, it's time to push these changes to your repo on GitHub.
-
--   In the Git pane, click on Push.
-
--   Then, make sure all the changes went to GitHub.
-    Go to your GitHub repo in your browser and refresh the page.
-    You should see your commit message next to the updated files.
-    If you see this, all your changes are on GitHub, and you're good to go!
-
-::: callout-warning
-If you don't see your update, go back to Step 4.
-Remember that in order to push your changes to GitHub, you must have **staged** (checked boxes) your **commit** (with a commit message) to be pushed and then click on **Push**.
-:::
+Then, click *lab-2.qmd* to open the template Quarto file and update the `authors` field to add your name first (first and last) and then your teammates' names (first and last).
+Render the document.
+If you get a popup window error, click "Try again".
+Examine the rendered document and make sure your name is updated in the document.
+Commit and push your changes with a meaningful commit message and push to GitHub.
 
 ## Guidelines
 
@@ -234,10 +138,16 @@ b. Provide written responses to the following questions related to the plots cre
 
 - Is the distribution of median household income in NC counties unimodal, bimodal, multimodal or uniform? Which plot(s) helped you determine this?
 
+::: render-commit-push
+Render, commit, and push your changes to GitHub with the commit message "Added answer for Q1, parts b".
+
+Make sure to commit and push all changed files so that your Git pane is empty afterward.
+:::
+
 c. In a single pipeline, identify the counties with unusually high median household income (according to the boxplot) and display their names and median household income in descending order of income
 
 ::: render-commit-push
-Render, commit, and push your changes to GitHub with the commit message "Added answer for Q1, parts b & c".
+Render, commit, and push your changes to GitHub with the commit message "Added answer for Q1, parts c".
 
 Make sure to commit and push all changed files so that your Git pane is empty afterward.
 :::
@@ -254,7 +164,7 @@ Was your guess correct?
 
 c. Again, make a scatter plot of median household income (`median_hh_income` on the y-axis) vs. percentage of 25-44-year-olds with a bachelor's degree (`p_edu_ba` on the x-axis), this time coloring the points by county type (`county_type`). Based on the resultant plot, does the relationship between these two variables appear to differ by county type? 
 
-d. In a single pipeline, compute the average percentage of 25-44-year-olds with a bachelor's degree and the average median household income across NC counties classified as "Suburban". Similarly, in a separate pipeline compute the average percentage of 25-44-year-olds with a bachelor's degree and the average median household income across NC counties classified as "Rural - Metro". Comment on whether the results are what you would have expected. 
+d. (**Optional**) In a single pipeline, compute the average percentage of 25-44-year-olds with a bachelor's degree and the average median household income across NC counties classified as "Suburban". Similarly, in a separate pipeline compute the average percentage of 25-44-year-olds with a bachelor's degree and the average median household income across NC counties classified as "Rural - Metro". Comment on whether the results are what you would have expected. 
 
 ::: render-commit-push
 Render, commit, and push your changes to GitHub with the commit message "Added answer for Q2".
