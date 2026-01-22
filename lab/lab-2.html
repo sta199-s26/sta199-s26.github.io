@@ -61,6 +61,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../hw/hw-1.html" rel="next">
+<link href="../lab/lab-1.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -124,11 +126,7 @@ window.Quarto = {
 </script>
 <meta property="og:title" content="Lab 2 – STA 199 Spring 2026">
 <meta property="og:description" content="Due: End of lab on Thurs, Jan 22">
-<meta property="og:image" content="https://sta199-s26.github.io/lab/images/lab-1/rstudio.png">
 <meta property="og:site_name" content="STA 199 Spring 2026">
-<meta property="og:image:alt" content="RStudio IDE">
-<meta property="og:image:height" content="1832">
-<meta property="og:image:width" content="3064">
 </head>
 <body class="nav-sidebar docked quarto-light">
 
@@ -137,7 +135,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Lab 2</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/lab-0.html">Lab</a></li><li class="breadcrumb-item"><a href="../lab/lab-2.html">Lab 2</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -263,13 +261,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Lab</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lab/lab-0.html" class="sidebar-item-text sidebar-link">
@@ -282,17 +280,33 @@ window.Quarto = {
  <span class="menu-text">Lab 1</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab-2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Lab 2</span></a>
+  </div>
+</li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
- <span class="menu-text">Computing</span></a>
+ <span class="menu-text">Homework</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 "></ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Computing</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../computing/coding-access.html" class="sidebar-item-text sidebar-link">
@@ -319,16 +333,7 @@ window.Quarto = {
 <a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
   <ul class="collapse">
 <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning objectives</a></li>
-  <li>
-<a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a>
-  <ul class="collapse">
-<li><a href="#step-1-log-in-to-rstudio" id="toc-step-1-log-in-to-rstudio" class="nav-link" data-scroll-target="#step-1-log-in-to-rstudio">Step 1: Log in to RStudio</a></li>
-  <li><a href="#step-2-clone-the-repo-start-new-rstudio-project" id="toc-step-2-clone-the-repo-start-new-rstudio-project" class="nav-link" data-scroll-target="#step-2-clone-the-repo-start-new-rstudio-project">Step 2: Clone the repo &amp; start new RStudio project</a></li>
-  <li><a href="#step-3-update-the-yaml" id="toc-step-3-update-the-yaml" class="nav-link" data-scroll-target="#step-3-update-the-yaml">Step 3: Update the YAML</a></li>
-  <li><a href="#step-4-commit-your-changes" id="toc-step-4-commit-your-changes" class="nav-link" data-scroll-target="#step-4-commit-your-changes">Step 4: Commit your changes</a></li>
-  <li><a href="#step-5-push-your-changes" id="toc-step-5-push-your-changes" class="nav-link" data-scroll-target="#step-5-push-your-changes">Step 5: Push your changes</a></li>
-  </ul>
-</li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a></li>
   <li>
 <a href="#guidelines" id="toc-guidelines" class="nav-link" data-scroll-target="#guidelines">Guidelines</a>
   <ul class="collapse">
@@ -363,9 +368,9 @@ window.Quarto = {
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/lab/lab-2.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/lab-0.html">Lab</a></li><li class="breadcrumb-item"><a href="../lab/lab-2.html">Lab 2</a></li></ol></nav><div class="quarto-title">
 <h1 class="title">Lab 2</h1>
-<p class="subtitle lead">Continued Exploration of NC Counties</p>
+<p class="subtitle lead">NC Counties…again!</p>
   <div class="quarto-categories">
     <div class="quarto-category">Lab</div>
   </div>
@@ -388,52 +393,7 @@ window.Quarto = {
 
 
 </header><section id="introduction" class="level1"><h1>Introduction</h1>
-<p>This lab is designed to increase your comfort with the course computing workflow. One of the main goals of this lab is to reinforce our demo of R and RStudio, which we will be using throughout the course to learn the statistical concepts discussed in the course, analyze real data, and make informed conclusions about said data. The other main goal is meet other students in the class, get to know them, and work together with them.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>R is the name of the programming language itself and RStudio is a convenient interface, commonly referred to as an integrated development environment or an IDE, for short.</p>
-</div>
-</div>
-<p>An additional goal is to reinforce Git and GitHub, the version control, web hosting, and collaboration systems that we will be using throughout the course.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Git is a version control system (like “Track Changes” features from Microsoft Word but more powerful) and GitHub is the home for your Git-based projects on the internet (like DropBox but much better).</p>
-</div>
-</div>
-<p>As the labs progress, you are encouraged to explore beyond what the labs dictate; a willingness to experiment will make you a much better programmer. Before we get to that stage, however, you need to build some basic fluency in R. Today we begin with the fundamental building blocks of R and RStudio: the interface, reading in data, and basic commands.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This lab assumes that you have already completed <a href="lab-0.html">Lab 0</a>. If you have not, please</p>
-<ul>
-<li>go back and do that first before proceeding and</li>
-<li>let your TA know as they will need to set up a Lab 1 repository for you before you can complete this lab.</li>
-</ul>
-</div>
-</div>
+<p>Today you will double down on your data visualization skills, and you will also start playing with the pipe operator <code>|&gt;</code>.</p>
 <section id="learning-objectives" class="level2"><h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
 <ul>
 <li>Gain practice with
@@ -444,91 +404,21 @@ Warning
 </ul>
 </li>
 <li>Create data visualizations with the <code>tidyverse</code>, specifically using <code>ggplot2</code>.</li>
+<li>Describe in words what those visualizations teach us.</li>
 <li>Write a simple data transformation pipeline with the <code>tidyverse</code>, specifically using <code>dplyr</code>.</li>
 </ul></section><section id="getting-started" class="level2"><h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
-<section id="step-1-log-in-to-rstudio" class="level3"><h3 class="anchored" data-anchor-id="step-1-log-in-to-rstudio">Step 1: Log in to RStudio</h3>
+<p>To get started, follow the instructions below.</p>
 <ul>
 <li>Go to <a href="https://cmgr.oit.duke.edu/containers" class="uri">https://cmgr.oit.duke.edu/containers</a> and login with your Duke NetID and Password.</li>
 <li>Click <code>STA199</code> under My reservations to log into your container. You should now see the RStudio environment.</li>
+<li>Go to the course organization at <a href="https://github.com/sta199-s26">github.com/sta199-s26</a> organization on GitHub. Click on the repo with the prefix <strong>lab-2</strong>. It contains the starter documents you need to complete the homework.</li>
+<li>Click on the green <strong>CODE</strong> button, select <strong>Use SSH</strong>. Click on the clipboard icon to copy the repo URL.</li>
+<li>In RStudio, go to <em>File</em> ➛ <em>New Project</em> ➛<em>Version Control</em> ➛ <em>Git</em>.</li>
+<li>Copy and paste the URL of your assignment repo into the dialog box <em>Repository URL</em>. Again, please make sure to have <em>SSH</em> highlighted under <em>Clone</em> when you copy the address.</li>
+<li>Click <em>Create Project</em>, and the files from your GitHub repo will be displayed in the <em>Files</em> pane in RStudio.</li>
 </ul>
-<section id="refresher-r-and-r-studio" class="level4"><h4 class="anchored" data-anchor-id="refresher-r-and-r-studio">Refresher: R and R Studio</h4>
-<p>Below are the components of the RStudio IDE.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/lab-1/rstudio.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="RStudio IDE" width="700"></p>
-</figure>
-</div>
-<p>Below are the components of a Quarto (.qmd) file.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/lab-1/quarto.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Quarto document" width="700"></p>
-</figure>
-</div>
-</section></section><section id="step-2-clone-the-repo-start-new-rstudio-project" class="level3"><h3 class="anchored" data-anchor-id="step-2-clone-the-repo-start-new-rstudio-project">Step 2: Clone the repo &amp; start new RStudio project</h3>
-<ul>
-<li><p>Go to the course organization at <a href="https://github.com/sta199-s26">github.com/sta199-s26</a> organization on GitHub. Click on the repo with the prefix <strong>lab-2</strong>. It contains the starter documents you need to complete the lab.</p></li>
-<li><p>Click on the green <strong>CODE</strong> button, select <strong>Use SSH</strong> (this might already be selected by default, and if it is, you’ll see the text <strong>Clone with SSH</strong>). Click on the clipboard icon to copy the repo URL.</p></li>
-<li><p>In RStudio, go to <em>File</em> ➛ <em>New Project</em> ➛<em>Version Control</em> ➛ <em>Git</em>.</p></li>
-<li><p>Copy and paste the URL of your assignment repo into the dialog box <em>Repository URL</em>. Again, please make sure to have <em>SSH</em> highlighted under <em>Clone</em> when you copy the address.</p></li>
-<li><p>Click <em>Create Project</em>, and the files from your GitHub repo will be displayed in the <em>Files</em> pane in RStudio.</p></li>
-<li><p>Click <em>lab-2.qmd</em> to open the template Quarto file. This is where you will write up your code and narrative for the lab.</p></li>
-</ul></section><section id="step-3-update-the-yaml" class="level3"><h3 class="anchored" data-anchor-id="step-3-update-the-yaml">Step 3: Update the YAML</h3>
-<p>The top portion of your Quarto file (between the three dashed lines) is called <strong>YAML</strong>. It stands for “YAML Ain’t Markup Language”. It is a human-friendly data representation for all programming languages. All you need to know is that this area is called the YAML (we will refer to it as such) and that it contains meta information about your document.</p>
-<ul>
-<li><p>Open the Quarto (<code>.qmd</code>) file in your project, update the <code>authors</code> field to add your name first (first and last) and then your teammates’ names (first and last). Then, render the document.</p></li>
-<li><p>If you get a popup window error, click “Try again”.</p></li>
-<li><p>Examine the rendered document and make sure your name is updated in the document.</p></li>
-</ul></section><section id="step-4-commit-your-changes" class="level3"><h3 class="anchored" data-anchor-id="step-4-commit-your-changes">Step 4: Commit your changes</h3>
-<ul>
-<li>
-<p>Go to the Git pane in RStudio. This will be in the top right hand corner in a separate tab.</p>
-<p>If you have made changes to your Quarto (.qmd) file, you should see it listed here. If you have rendered the document, you should also see its output, a PDF file, listed there.</p>
-</li>
-<li>
-<p>Click on it to select it in this list and then click on <strong>Diff</strong>.</p>
-<p>This shows you the <em>diff</em>erence between the last committed state of the document and its current state including changes. You should see deletions in red and additions in green.</p>
-</li>
-<li>
-<p>If you’re happy with these changes, prepare the changes to be pushed to your remote repository.</p>
-<ul>
-<li><p>First, <strong>stage</strong> your changes by checking the appropriate box on the files you want to prepare.</p></li>
-<li><p>Next, write a meaningful commit message (for instance, “Updated author name”) in the <strong>Commit message</strong> box.</p></li>
-<li><p>Finally, click <strong>Commit</strong>. Note that every commit needs to have a commit message associated with it.</p></li>
-</ul>
-</li>
-</ul>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You don’t have to commit after every change, as this would get quite tedious. You should commit states that are <em>meaningful to you</em> for inspection, comparison, or restoration (e.g., restoring a previous version of your document).</p>
-<p>In the first few assignments, we will tell you exactly when to commit and, in some cases, what commit message to use. As the semester progresses, we will let you make these decisions.</p>
-</div>
-</div>
-</section><section id="step-5-push-your-changes" class="level3"><h3 class="anchored" data-anchor-id="step-5-push-your-changes">Step 5: Push your changes</h3>
-<p>Now that you have made an update and committed this change, it’s time to push these changes to your repo on GitHub.</p>
-<ul>
-<li><p>In the Git pane, click on Push.</p></li>
-<li><p>Then, make sure all the changes went to GitHub. Go to your GitHub repo in your browser and refresh the page. You should see your commit message next to the updated files. If you see this, all your changes are on GitHub, and you’re good to go!</p></li>
-</ul>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you don’t see your update, go back to Step 4. Remember that in order to push your changes to GitHub, you must have <strong>staged</strong> (checked boxes) your <strong>commit</strong> (with a commit message) to be pushed and then click on <strong>Push</strong>.</p>
-</div>
-</div>
-</section></section><section id="guidelines" class="level2"><h2 class="anchored" data-anchor-id="guidelines">Guidelines</h2>
+<p>Then, click <em>lab-2.qmd</em> to open the template Quarto file and update the <code>authors</code> field to add your name first (first and last) and then your teammates’ names (first and last). Render the document. If you get a popup window error, click “Try again”. Examine the rendered document and make sure your name is updated in the document. Commit and push your changes with a meaningful commit message and push to GitHub.</p>
+</section><section id="guidelines" class="level2"><h2 class="anchored" data-anchor-id="guidelines">Guidelines</h2>
 <section id="code" class="level3"><h3 class="anchored" data-anchor-id="code">Code</h3>
 <p>Code should follow the <a href="https://style.tidyverse.org/">tidyverse style</a>. Particularly,</p>
 <ul>
@@ -650,11 +540,15 @@ Warning
 <li><p>Is the distribution of median household income in NC counties right-skewed, left-skewed, or approximately symmetric? Which plot(s) helped you determine this?</p></li>
 <li><p>Is the distribution of median household income in NC counties unimodal, bimodal, multimodal or uniform? Which plot(s) helped you determine this?</p></li>
 </ul>
+<div class="render-commit-push">
+<p>Render, commit, and push your changes to GitHub with the commit message “Added answer for Q1, parts b”.</p>
+<p>Make sure to commit and push all changed files so that your Git pane is empty afterward.</p>
+</div>
 <ol start="3" type="a">
 <li>In a single pipeline, identify the counties with unusually high median household income (according to the boxplot) and display their names and median household income in descending order of income</li>
 </ol>
 <div class="render-commit-push">
-<p>Render, commit, and push your changes to GitHub with the commit message “Added answer for Q1, parts b &amp; c”.</p>
+<p>Render, commit, and push your changes to GitHub with the commit message “Added answer for Q1, parts c”.</p>
 <p>Make sure to commit and push all changed files so that your Git pane is empty afterward.</p>
 </div>
 </section><section id="question-2" class="level2"><h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
@@ -662,7 +556,7 @@ Warning
 <li><p>Guess what the relationship the percentage of 25-44-year-olds with a bachelor’s degree and median household income might be – positive? negative? no relationship? Explain your reasoning.</p></li>
 <li><p>Make a scatter plot of median household income (<code>median_hh_income</code> on the y-axis) vs.&nbsp;percentage of 25-44-year-olds with a bachelor’s degree (<code>p_edu_ba</code> on the x-axis). Make sure to set an informative title and axis labels for your plot. Describe the relationship. Was your guess correct?</p></li>
 <li><p>Again, make a scatter plot of median household income (<code>median_hh_income</code> on the y-axis) vs.&nbsp;percentage of 25-44-year-olds with a bachelor’s degree (<code>p_edu_ba</code> on the x-axis), this time coloring the points by county type (<code>county_type</code>). Based on the resultant plot, does the relationship between these two variables appear to differ by county type?</p></li>
-<li><p>In a single pipeline, compute the average percentage of 25-44-year-olds with a bachelor’s degree and the average median household income across NC counties classified as “Suburban”. Similarly, in a separate pipeline compute the average percentage of 25-44-year-olds with a bachelor’s degree and the average median household income across NC counties classified as “Rural - Metro”. Comment on whether the results are what you would have expected.</p></li>
+<li><p>(<strong>Optional</strong>) In a single pipeline, compute the average percentage of 25-44-year-olds with a bachelor’s degree and the average median household income across NC counties classified as “Suburban”. Similarly, in a separate pipeline compute the average percentage of 25-44-year-olds with a bachelor’s degree and the average median household income across NC counties classified as “Rural - Metro”. Comment on whether the results are what you would have expected.</p></li>
 </ol>
 <div class="render-commit-push">
 <p>Render, commit, and push your changes to GitHub with the commit message “Added answer for Q2”.</p>
@@ -1136,7 +1030,17 @@ Checklist
       }
     }
   });
-  </script>
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="../lab/lab-1.html" class="pagination-link" aria-label="Lab 1">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lab 1</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../hw/hw-1.html" class="pagination-link" aria-label="Homework 1">
+        <span class="nav-page-text">Homework 1</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
