@@ -2,6 +2,14 @@
 title: "FAQ"
 ---
 
+## How do I code along with the code alongs?
+
+Here is a repo that has all of the files and data for you to follow along with the "Code along" videos:
+
+<https://github.com/sta199/code-alongs>
+
+You can [clone](https://sta199-s26.github.io/lab/lab-0.html#babys-first-repo) a copy of this repo into your container, but you will not be able to *push* your changes back. So it's just a sandbox for you to make a low-stakes mess.
+
 ## How do I export my assignment PDF from RStudio to upload to Gradescope?
 
 Go to your *Files* tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select *Export*... If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you've selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder).
