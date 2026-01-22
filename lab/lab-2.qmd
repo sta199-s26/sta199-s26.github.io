@@ -139,7 +139,7 @@ b. Provide written responses to the following questions related to the plots cre
 - Is the distribution of median household income in NC counties unimodal, bimodal, multimodal or uniform? Which plot(s) helped you determine this?
 
 ::: render-commit-push
-Render, commit, and push your changes to GitHub with the commit message "Added answer for Q1, parts b".
+Render, commit, and push your changes to GitHub with the commit message "Added answer for Q1, part b".
 
 Make sure to commit and push all changed files so that your Git pane is empty afterward.
 :::
@@ -147,7 +147,7 @@ Make sure to commit and push all changed files so that your Git pane is empty af
 c. In a single pipeline, identify the counties with unusually high median household income (according to the boxplot) and display their names and median household income in descending order of income
 
 ::: render-commit-push
-Render, commit, and push your changes to GitHub with the commit message "Added answer for Q1, parts c".
+Render, commit, and push your changes to GitHub with the commit message "Added answer for Q1, part c".
 
 Make sure to commit and push all changed files so that your Git pane is empty afterward.
 :::
