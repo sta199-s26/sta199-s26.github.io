@@ -86,8 +86,8 @@ ggplot(bechdel, aes(x = budget_2013)) +
 ```
 
 - shape: right skewed;
-- center: the mean budget is about `{r} mean(bechdel$budget_2013)`;
-- spread: the standard deviation is about `{r} sd(bechdel$budget_2013)`;
+- center: the mean budget is about $57,035,015.00;
+- spread: the standard deviation is $55,976,978.00;
 - modality: unimodal (one peak);
 
 **How are budget and earnings related?**
