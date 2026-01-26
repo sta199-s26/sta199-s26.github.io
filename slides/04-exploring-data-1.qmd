@@ -658,6 +658,135 @@ ggplot(gerrymander, aes(x = trump16)) +
   )
 ```
 
+## Whence the box? {.medium}
+
+The middle of the box is the **median**:
+
+```{r}
+#| echo: false
+
+df <- gerrymander
+
+df_long <- rbind(
+  transform(df, panel = "Histogram"),
+  transform(df, panel = "Box plot")
+)
+
+df_long$panel <- factor(df_long$panel, levels = c("Histogram", "Box plot"))
+
+med <- median(df$trump16)
+
+ggplot(df_long, aes(x = trump16)) +
+  # Histogram (top)
+  geom_histogram(
+    data = subset(df_long, panel == "Histogram"),
+    bins = 30, color = "white", fill = "grey70"
+  ) +
+  
+  # Boxplot (bottom)
+  geom_boxplot(
+    data = subset(df_long, panel == "Box plot"),
+    aes(y = 0),
+    width = 0.2,
+    outlier.shape = NA
+  ) +
+  
+  # Median line in both panels
+  geom_vline(xintercept = med, linetype = "dashed", color = "red", linewidth = 2) +
+  
+  facet_grid(rows = vars(panel), scales = "free_y") +
+  scale_y_continuous(NULL, breaks = NULL) +
+  labs(x = "x") +
+  theme_minimal()
+
+```
+
+## Whence the box? {.medium}
+
+The lower edge of the box is the **25% quantile**:
+
+```{r}
+#| echo: false
+
+df <- gerrymander
+
+df_long <- rbind(
+  transform(df, panel = "Histogram"),
+  transform(df, panel = "Box plot")
+)
+
+df_long$panel <- factor(df_long$panel, levels = c("Histogram", "Box plot"))
+
+med <- quantile(df$trump16, 0.25)
+
+ggplot(df_long, aes(x = trump16)) +
+  # Histogram (top)
+  geom_histogram(
+    data = subset(df_long, panel == "Histogram"),
+    bins = 30, color = "white", fill = "grey70"
+  ) +
+  
+  # Boxplot (bottom)
+  geom_boxplot(
+    data = subset(df_long, panel == "Box plot"),
+    aes(y = 0),
+    width = 0.2,
+    outlier.shape = NA
+  ) +
+  
+  # Median line in both panels
+  geom_vline(xintercept = med, linetype = "dashed", color = "red", linewidth = 2) +
+  
+  facet_grid(rows = vars(panel), scales = "free_y") +
+  scale_y_continuous(NULL, breaks = NULL) +
+  labs(x = "x") +
+  theme_minimal()
+
+```
+
+## Whence the box? {.medium}
+
+The upper edge of the box is the **75% quantile**:
+
+```{r}
+#| echo: false
+
+df <- gerrymander
+
+df_long <- rbind(
+  transform(df, panel = "Histogram"),
+  transform(df, panel = "Box plot")
+)
+
+df_long$panel <- factor(df_long$panel, levels = c("Histogram", "Box plot"))
+
+med <- quantile(df$trump16, 0.75)
+
+ggplot(df_long, aes(x = trump16)) +
+  # Histogram (top)
+  geom_histogram(
+    data = subset(df_long, panel == "Histogram"),
+    bins = 30, color = "white", fill = "grey70"
+  ) +
+  
+  # Boxplot (bottom)
+  geom_boxplot(
+    data = subset(df_long, panel == "Box plot"),
+    aes(y = 0),
+    width = 0.2,
+    outlier.shape = NA
+  ) +
+  
+  # Median line in both panels
+  geom_vline(xintercept = med, linetype = "dashed", color = "red", linewidth = 2) +
+  
+  facet_grid(rows = vars(panel), scales = "free_y") +
+  scale_y_continuous(NULL, breaks = NULL) +
+  labs(x = "x") +
+  theme_minimal()
+
+```
+
 ## Density plot - Step 1 {.smaller .scrollable}
 
 ```{r}
@@ -676,6 +805,13 @@ ggplot(gerrymander, aes(x = trump16))
 #| code-line-numbers: "2"
 ggplot(gerrymander, aes(x = trump16)) +
   geom_density()
+```
+
+## Contrast that with the histogram {.smaller .scrollable}
+
+```{r}
+ggplot(gerrymander, aes(x = trump16)) +
+  geom_histogram(aes(y = ..density..))
 ```
 
 ## Density plot - Step 4 {.smaller .scrollable}
