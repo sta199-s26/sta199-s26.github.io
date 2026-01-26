@@ -658,9 +658,9 @@ ggplot(gerrymander, aes(x = trump16)) +
   )
 ```
 
-## Whence the box? {.medium}
+## Whence the box? {.medium .scrollable}
 
-The middle of the box is the **median**:
+The middle of the box is the **median**. 50% of the data are below, and 50% are above:
 
 ```{r}
 #| echo: false
@@ -701,9 +701,9 @@ ggplot(df_long, aes(x = trump16)) +
 
 ```
 
-## Whence the box? {.medium}
+## Whence the box? {.medium .scrollable}
 
-The lower edge of the box is the **25% quantile**:
+The lower edge of the box is the **25% quantile**. 25% of the data are below, and 75% are above:
 
 ```{r}
 #| echo: false
@@ -744,9 +744,9 @@ ggplot(df_long, aes(x = trump16)) +
 
 ```
 
-## Whence the box? {.medium}
+## Whence the box? {.medium .scrollable}
 
-The upper edge of the box is the **75% quantile**:
+The upper edge of the box is the **75% quantile**. 75% of the data are below, and 25% are above:
 
 ```{r}
 #| echo: false
@@ -811,8 +811,12 @@ ggplot(gerrymander, aes(x = trump16)) +
 
 ```{r}
 ggplot(gerrymander, aes(x = trump16)) +
-  geom_histogram(aes(y = ..density..))
+  geom_histogram(aes(y = after_stat(density))) + 
+  geom_density(color = "red")
+  
 ```
+
+Prettier. Smooths out the lumps and bumps. There are still defaults you could learn to override.
 
 ## Density plot - Step 4 {.smaller .scrollable}
 
