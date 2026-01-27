@@ -6,9 +6,9 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.7.34">
 <meta name="author" content="John Zito">
 <meta name="dcterms.date" content="2026-01-26">
 <title>STA 199 Spring 2026 – Exploring data I</title>
@@ -96,7 +96,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-3332189d2173c7d81d71f033fd8116a0.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-6e51ad904291ad622da7d287747171b4.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -276,32 +276,20 @@ John Zito
 </li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(usdata)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(usdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>For the analysis: <a href="https://www.tidyverse.org/packages/"><strong>tidyverse</strong></a> and <a href="https://jrnold.github.io/ggthemes/"><strong>ggthemes</strong></a>
 </li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.1     ✔ stringr   1.5.2
-✔ ggplot2   4.0.0     ✔ tibble    3.3.0
-✔ lubridate 1.9.4     ✔ tidyr     1.3.1
-✔ purrr     1.1.0     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">library</span>(ggthemes)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-2"><a></a><span class="fu">library</span>(ggthemes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="data-gerrymander" class="slide level2 small"><h2>Data: <code>gerrymander</code>
 </h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>gerrymander</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>gerrymander</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 435 × 12
    district last_name first_name party16 clinton16 trump16 dem16 state party18
@@ -337,7 +325,7 @@ John Zito
 <p>What is a good first function to use to get to know a dataset?</p>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">glimpse</span>(gerrymander)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">glimpse</span>(gerrymander)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 435
 Columns: 12
@@ -432,8 +420,8 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 </div><div class="column small">
 <p>Congressional district:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
-<span id="cb9-2"><a></a>  <span class="fu">select</span>(district)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a></a>  <span class="fu">select</span>(district)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 435 × 1
    district
@@ -515,8 +503,8 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 </div><div class="column small">
 <p>Last name of 2016 election winner:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
-<span id="cb11-2"><a></a>  <span class="fu">select</span>(last_name)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a></a>  <span class="fu">select</span>(last_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 435 × 1
    last_name
@@ -598,8 +586,8 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 </div><div class="column small">
 <p>First name of 2016 election winner:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
-<span id="cb13-2"><a></a>  <span class="fu">select</span>(first_name)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a></a>  <span class="fu">select</span>(first_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 435 × 1
    first_name
@@ -681,8 +669,8 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 </div><div class="column small">
 <p>Political party of 2016 election winner:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
-<span id="cb15-2"><a></a>  <span class="fu">select</span>(party16)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
+<span id="cb13-2"><a></a>  <span class="fu">select</span>(party16)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 435 × 1
    party16
@@ -764,8 +752,8 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 </div><div class="column small">
 <p>Percent of vote received by Clinton in 2016 Presidential Election:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
-<span id="cb17-2"><a></a>  <span class="fu">select</span>(clinton16)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
+<span id="cb15-2"><a></a>  <span class="fu">select</span>(clinton16)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 435 × 1
    clinton16
@@ -847,8 +835,8 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 </div><div class="column small">
 <p>Percent of vote received by Trump in 2016 Presidential Election:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
-<span id="cb19-2"><a></a>  <span class="fu">select</span>(trump16)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
+<span id="cb17-2"><a></a>  <span class="fu">select</span>(trump16)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 435 × 1
    trump16
@@ -930,8 +918,8 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 </div><div class="column small">
 <p>Did a Democrat win the 2016 House election. Levels of 1 (yes) and 0 (no):</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
-<span id="cb21-2"><a></a>  <span class="fu">select</span>(dem16)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
+<span id="cb19-2"><a></a>  <span class="fu">select</span>(dem16)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 435 × 1
    dem16
@@ -1013,8 +1001,8 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 </div><div class="column small">
 <p>State the Representative is from:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
-<span id="cb23-2"><a></a>  <span class="fu">select</span>(state)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
+<span id="cb21-2"><a></a>  <span class="fu">select</span>(state)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 435 × 1
    state
@@ -1096,8 +1084,8 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 </div><div class="column small">
 <p>Political Party of the 2018 election winner:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
-<span id="cb25-2"><a></a>  <span class="fu">select</span>(party18)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
+<span id="cb23-2"><a></a>  <span class="fu">select</span>(party18)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 435 × 1
    party18
@@ -1179,8 +1167,8 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 </div><div class="column small">
 <p>Did a Democrat win the 2018 House election. Levels of 1 (yes) and 0 (no):</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
-<span id="cb27-2"><a></a>  <span class="fu">select</span>(dem18)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
+<span id="cb25-2"><a></a>  <span class="fu">select</span>(dem18)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 435 × 1
    dem18
@@ -1262,8 +1250,8 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 </div><div class="column small">
 <p>In the 2018 election, did the seat flip from D to R (-1), from R to D (1), or not change (0)?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
-<span id="cb29-2"><a></a>  <span class="fu">select</span>(flip18)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
+<span id="cb27-2"><a></a>  <span class="fu">select</span>(flip18)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 435 × 1
    flip18
@@ -1345,8 +1333,8 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 </div><div class="column small">
 <p>Categorical variable for prevalence of gerrymandering with levels of low, mid and high:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
-<span id="cb31-2"><a></a>  <span class="fu">select</span>(gerry)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
+<span id="cb29-2"><a></a>  <span class="fu">select</span>(gerry)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 435 × 1
    gerry
@@ -1374,190 +1362,198 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 <li class="fragment"><p>Categorical: bar plot, pie chart, etc.</p></li>
 </ul></section><section id="histogram---step-1" class="slide level2 smaller scrollable"><h2>Histogram - Step 1</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="fu">ggplot</span>(gerrymander)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">ggplot</span>(gerrymander)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-18-1.png" width="672" class="r-stretch"></section><section id="histogram---step-2" class="slide level2 smaller scrollable"><h2>Histogram - Step 2</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section><section id="histogram---step-2" class="slide level2 smaller scrollable"><h2>Histogram - Step 2</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-19-1.png" width="672" class="r-stretch"></section><section id="histogram---step-3" class="slide level2 smaller scrollable"><h2>Histogram - Step 3</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-19-1.png" width="960" class="r-stretch"></section><section id="histogram---step-3" class="slide level2 smaller scrollable"><h2>Histogram - Step 3</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
-<span id="cb35-2"><a></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb33" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
+<span id="cb33-2"><a></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-20-1.png" width="672" class="r-stretch"></section><section id="histogram---step-4" class="slide level2 smaller scrollable"><h2>Histogram - Step 4</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch"></section><section id="histogram---step-4" class="slide level2 smaller scrollable"><h2>Histogram - Step 4</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
-<span id="cb37-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
+<span id="cb34-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-21-1.png" width="672" class="r-stretch"></section><section id="histogram---step-4-1" class="slide level2 smaller scrollable"><h2>Histogram - Step 4</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-21-1.png" width="960" class="r-stretch"></section><section id="histogram---step-4-1" class="slide level2 smaller scrollable"><h2>Histogram - Step 4</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
-<span id="cb38-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">100</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
+<span id="cb35-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-22-1.png" width="672" class="r-stretch"></section><section id="histogram---step-4-2" class="slide level2 smaller scrollable"><h2>Histogram - Step 4</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-22-1.png" width="960" class="r-stretch"></section><section id="histogram---step-4-2" class="slide level2 smaller scrollable"><h2>Histogram - Step 4</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
-<span id="cb39-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
+<span id="cb36-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-23-1.png" width="672" class="r-stretch"></section><section id="histogram---step-4-3" class="slide level2 smaller scrollable"><h2>Histogram - Step 4</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-23-1.png" width="960" class="r-stretch"></section><section id="histogram---step-4-3" class="slide level2 smaller scrollable"><h2>Histogram - Step 4</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
-<span id="cb40-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
+<span id="cb37-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-24-1.png" width="672" class="r-stretch"></section><section id="histogram---step-5" class="slide level2 smaller scrollable"><h2>Histogram - Step 5</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-24-1.png" width="960" class="r-stretch"></section><section id="histogram---step-5" class="slide level2 smaller scrollable"><h2>Histogram - Step 5</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41" data-code-line-numbers="3-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
-<span id="cb41-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb41-3"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb41-4"><a></a>    <span class="at">title =</span> <span class="st">"Percent of vote received by Trump in 2016 Presidential Election"</span>,</span>
-<span id="cb41-5"><a></a>    <span class="at">subtitle =</span> <span class="st">"From each Congressional District"</span>,</span>
-<span id="cb41-6"><a></a>    <span class="at">x =</span> <span class="st">"Percent of vote"</span>,</span>
-<span id="cb41-7"><a></a>    <span class="at">y =</span> <span class="st">"Count"</span></span>
-<span id="cb41-8"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb38" data-code-line-numbers="3-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
+<span id="cb38-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb38-3"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb38-4"><a></a>    <span class="at">title =</span> <span class="st">"Percent of vote received by Trump in 2016 Presidential Election"</span>,</span>
+<span id="cb38-5"><a></a>    <span class="at">subtitle =</span> <span class="st">"From each Congressional District"</span>,</span>
+<span id="cb38-6"><a></a>    <span class="at">x =</span> <span class="st">"Percent of vote"</span>,</span>
+<span id="cb38-7"><a></a>    <span class="at">y =</span> <span class="st">"Count"</span></span>
+<span id="cb38-8"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-25-1.png" width="672" class="r-stretch"></section><section id="box-plot---step-1" class="slide level2 smaller scrollable"><h2>Box plot - Step 1</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-25-1.png" width="960" class="r-stretch"></section><section id="box-plot---step-1" class="slide level2 smaller scrollable"><h2>Box plot - Step 1</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a><span class="fu">ggplot</span>(gerrymander)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a><span class="fu">ggplot</span>(gerrymander)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-26-1.png" width="672" class="r-stretch"></section><section id="box-plot---step-2" class="slide level2 smaller scrollable"><h2>Box plot - Step 2</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-26-1.png" width="960" class="r-stretch"></section><section id="box-plot---step-2" class="slide level2 smaller scrollable"><h2>Box plot - Step 2</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-27-1.png" width="672" class="r-stretch"></section><section id="box-plot---step-3" class="slide level2 smaller scrollable"><h2>Box plot - Step 3</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-27-1.png" width="960" class="r-stretch"></section><section id="box-plot---step-3" class="slide level2 smaller scrollable"><h2>Box plot - Step 3</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
-<span id="cb44-2"><a></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb41" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
+<span id="cb41-2"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-28-1.png" width="672" class="r-stretch"></section><section id="box-plot---alternative-step-2-3" class="slide level2 smaller scrollable"><h2>Box plot - Alternative Step 2 + 3</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-28-1.png" width="960" class="r-stretch"></section><section id="box-plot---alternative-step-2-3" class="slide level2 smaller scrollable"><h2>Box plot - Alternative Step 2 + 3</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">y =</span> trump16)) <span class="sc">+</span></span>
-<span id="cb45-2"><a></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">y =</span> trump16)) <span class="sc">+</span></span>
+<span id="cb42-2"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-29-1.png" width="672" class="r-stretch"></section><section id="box-plot---step-4" class="slide level2 smaller scrollable"><h2>Box plot - Step 4</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-29-1.png" width="960" class="r-stretch"></section><section id="box-plot---step-4" class="slide level2 smaller scrollable"><h2>Box plot - Step 4</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46" data-code-line-numbers="3-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
-<span id="cb46-2"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb46-3"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb46-4"><a></a>    <span class="at">title =</span> <span class="st">"Percent of vote received by Trump in 2016 Presidential Election"</span>,</span>
-<span id="cb46-5"><a></a>    <span class="at">subtitle =</span> <span class="st">"From each Congressional District"</span>,</span>
-<span id="cb46-6"><a></a>    <span class="at">x =</span> <span class="st">"Percent of vote"</span>,</span>
-<span id="cb46-7"><a></a>    <span class="at">y =</span> <span class="cn">NULL</span></span>
-<span id="cb46-8"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb43" data-code-line-numbers="3-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
+<span id="cb43-2"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb43-3"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb43-4"><a></a>    <span class="at">title =</span> <span class="st">"Percent of vote received by Trump in 2016 Presidential Election"</span>,</span>
+<span id="cb43-5"><a></a>    <span class="at">subtitle =</span> <span class="st">"From each Congressional District"</span>,</span>
+<span id="cb43-6"><a></a>    <span class="at">x =</span> <span class="st">"Percent of vote"</span>,</span>
+<span id="cb43-7"><a></a>    <span class="at">y =</span> <span class="cn">NULL</span></span>
+<span id="cb43-8"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-30-1.png" width="672" class="r-stretch"></section><section id="whence-the-box" class="slide level2 medium"><h2>Whence the box?</h2>
-<p>The middle of the box is the <strong>median</strong>:</p>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-30-1.png" width="960" class="r-stretch"></section><section id="whence-the-box" class="slide level2 medium scrollable"><h2>Whence the box?</h2>
+<p>The middle of the box is the <strong>median</strong>. 50% of the data are below, and 50% are above:</p>
 
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-31-1.png" width="672" class="r-stretch"></section><section id="whence-the-box-1" class="slide level2 medium"><h2>Whence the box?</h2>
-<p>The lower edge of the box is the <strong>25% quantile</strong>:</p>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-31-1.png" width="960" class="r-stretch"></section><section id="whence-the-box-1" class="slide level2 medium scrollable"><h2>Whence the box?</h2>
+<p>The lower edge of the box is the <strong>25% quantile</strong>. 25% of the data are below, and 75% are above:</p>
 
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-32-1.png" width="672" class="r-stretch"></section><section id="whence-the-box-2" class="slide level2 medium"><h2>Whence the box?</h2>
-<p>The upper edge of the box is the <strong>75% quantile</strong>:</p>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-32-1.png" width="960" class="r-stretch"></section><section id="whence-the-box-2" class="slide level2 medium scrollable"><h2>Whence the box?</h2>
+<p>The upper edge of the box is the <strong>75% quantile</strong>. 75% of the data are below, and 25% are above:</p>
 
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-33-1.png" width="672" class="r-stretch"></section><section id="density-plot---step-1" class="slide level2 smaller scrollable"><h2>Density plot - Step 1</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-33-1.png" width="960" class="r-stretch"></section><section id="box-plot-facts" class="slide level2 small"><h2>Box plot facts</h2>
+<ul>
+<li>A box plot is easier to read quickly than a histogram because it eliminates clutter and immediately draws your eye to those main features: center, spread, and skew;</li>
+<li>The box spans the middle 50% of the data;</li>
+<li>The width of the box is called the inner quartile range (IQR) and it measures spread;</li>
+<li>From the docs (<code>?geom_boxplot</code>):</li>
+</ul>
+<blockquote>
+<p>The upper whisker extends from the hinge to the largest value no further than 1.5 * IQR from the hinge (where IQR is the inter-quartile range, or distance between the first and third quartiles). The lower whisker extends from the hinge to the smallest value at most 1.5 * IQR of the hinge. Data beyond the end of the whiskers are called “outlying” points and are plotted individually.</p>
+</blockquote>
+</section><section id="box-plots-obscure-modality" class="slide level2"><h2>Box plots obscure modality</h2>
+<p>Same box plot:</p>
+
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-34-1.png" width="960" class="r-stretch"></section><section id="box-plots-obscure-modality-1" class="slide level2"><h2>Box plots obscure modality</h2>
+<p>Very different distributions:</p>
+
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-35-1.png" width="960" class="r-stretch"></section><section id="density-plot---step-1" class="slide level2 smaller scrollable"><h2>Density plot - Step 1</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a><span class="fu">ggplot</span>(gerrymander)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a><span class="fu">ggplot</span>(gerrymander)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-34-1.png" width="672" class="r-stretch"></section><section id="density-plot---step-2" class="slide level2 smaller scrollable"><h2>Density plot - Step 2</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-36-1.png" width="960" class="r-stretch"></section><section id="density-plot---step-2" class="slide level2 smaller scrollable"><h2>Density plot - Step 2</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-35-1.png" width="672" class="r-stretch"></section><section id="density-plot---step-3" class="slide level2 smaller scrollable"><h2>Density plot - Step 3</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-37-1.png" width="960" class="r-stretch"></section><section id="density-plot---step-3" class="slide level2 smaller scrollable"><h2>Density plot - Step 3</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
-<span id="cb49-2"><a></a>  <span class="fu">geom_density</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb46" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
+<span id="cb46-2"><a></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-36-1.png" width="672" class="r-stretch"></section><section id="contrast-that-with-the-histogram" class="slide level2 smaller scrollable"><h2>Contrast that with the histogram</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-38-1.png" width="960" class="r-stretch"></section><section id="contrast-that-with-the-histogram" class="slide level2 smaller scrollable"><h2>Contrast that with the histogram</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
-<span id="cb50-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: The dot-dot notation (`..density..`) was deprecated in ggplot2 3.4.0.
-ℹ Please use `after_stat(density)` instead.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
+<span id="cb47-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">after_stat</span>(density))) <span class="sc">+</span> </span>
+<span id="cb47-3"><a></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-37-1.png" width="672" class="r-stretch"></section><section id="density-plot---step-4" class="slide level2 smaller scrollable"><h2>Density plot - Step 4</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-39-1.png" width="960" class="r-stretch"><p>Prettier. Smooths out the lumps and bumps. There are still defaults you could learn to override.</p>
+</section><section id="density-plot---step-4" class="slide level2 smaller scrollable"><h2>Density plot - Step 4</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
-<span id="cb53-2"><a></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"red"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
+<span id="cb48-2"><a></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-38-1.png" width="672" class="r-stretch"></section><section id="density-plot---step-5" class="slide level2 smaller scrollable"><h2>Density plot - Step 5</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-40-1.png" width="960" class="r-stretch"></section><section id="density-plot---step-5" class="slide level2 smaller scrollable"><h2>Density plot - Step 5</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
-<span id="cb54-2"><a></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"firebrick"</span>, <span class="at">fill =</span> <span class="st">"firebrick1"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
+<span id="cb49-2"><a></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"firebrick"</span>, <span class="at">fill =</span> <span class="st">"firebrick1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-39-1.png" width="672" class="r-stretch"></section><section id="density-plot---step-6" class="slide level2 smaller scrollable"><h2>Density plot - Step 6</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-41-1.png" width="960" class="r-stretch"></section><section id="density-plot---step-6" class="slide level2 smaller scrollable"><h2>Density plot - Step 6</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
-<span id="cb55-2"><a></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"firebrick"</span>, <span class="at">fill =</span> <span class="st">"firebrick1"</span>, <span class="at">alpha =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
+<span id="cb50-2"><a></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"firebrick"</span>, <span class="at">fill =</span> <span class="st">"firebrick1"</span>, <span class="at">alpha =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-40-1.png" width="672" class="r-stretch"></section><section id="density-plot---step-6-1" class="slide level2 smaller scrollable"><h2>Density plot - Step 6</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-42-1.png" width="960" class="r-stretch"></section><section id="density-plot---step-6-1" class="slide level2 smaller scrollable"><h2>Density plot - Step 6</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
-<span id="cb56-2"><a></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"firebrick"</span>, <span class="at">fill =</span> <span class="st">"firebrick1"</span>, <span class="at">alpha =</span> <span class="dv">0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
+<span id="cb51-2"><a></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"firebrick"</span>, <span class="at">fill =</span> <span class="st">"firebrick1"</span>, <span class="at">alpha =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-41-1.png" width="672" class="r-stretch"></section><section id="density-plot---step-6-2" class="slide level2 smaller scrollable"><h2>Density plot - Step 6</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-43-1.png" width="960" class="r-stretch"></section><section id="density-plot---step-6-2" class="slide level2 smaller scrollable"><h2>Density plot - Step 6</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
-<span id="cb57-2"><a></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"firebrick"</span>, <span class="at">fill =</span> <span class="st">"firebrick1"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
+<span id="cb52-2"><a></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"firebrick"</span>, <span class="at">fill =</span> <span class="st">"firebrick1"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-42-1.png" width="672" class="r-stretch"></section><section id="density-plot---step-7" class="slide level2 smaller scrollable"><h2>Density plot - Step 7</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-44-1.png" width="960" class="r-stretch"></section><section id="density-plot---step-7" class="slide level2 smaller scrollable"><h2>Density plot - Step 7</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
-<span id="cb58-2"><a></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"firebrick"</span>, <span class="at">fill =</span> <span class="st">"firebrick1"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">linewidth =</span> <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
+<span id="cb53-2"><a></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"firebrick"</span>, <span class="at">fill =</span> <span class="st">"firebrick1"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">linewidth =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-43-1.png" width="672" class="r-stretch"></section><section id="density-plot---step-8" class="slide level2 smaller scrollable"><h2>Density plot - Step 8</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-45-1.png" width="960" class="r-stretch"></section><section id="density-plot---step-8" class="slide level2 smaller scrollable"><h2>Density plot - Step 8</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59" data-code-line-numbers="3-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
-<span id="cb59-2"><a></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"firebrick"</span>, <span class="at">fill =</span> <span class="st">"firebrick1"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">linewidth =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb59-3"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb59-4"><a></a>    <span class="at">title =</span> <span class="st">"Percent of vote received by Trump in 2016 Presidential Election"</span>,</span>
-<span id="cb59-5"><a></a>    <span class="at">subtitle =</span> <span class="st">"From each Congressional District"</span>,</span>
-<span id="cb59-6"><a></a>    <span class="at">x =</span> <span class="st">"Percent of vote"</span>,</span>
-<span id="cb59-7"><a></a>    <span class="at">y =</span> <span class="st">"Density"</span></span>
-<span id="cb59-8"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb54" data-code-line-numbers="3-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a></a><span class="fu">ggplot</span>(gerrymander, <span class="fu">aes</span>(<span class="at">x =</span> trump16)) <span class="sc">+</span></span>
+<span id="cb54-2"><a></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"firebrick"</span>, <span class="at">fill =</span> <span class="st">"firebrick1"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">linewidth =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb54-3"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb54-4"><a></a>    <span class="at">title =</span> <span class="st">"Percent of vote received by Trump in 2016 Presidential Election"</span>,</span>
+<span id="cb54-5"><a></a>    <span class="at">subtitle =</span> <span class="st">"From each Congressional District"</span>,</span>
+<span id="cb54-6"><a></a>    <span class="at">x =</span> <span class="st">"Percent of vote"</span>,</span>
+<span id="cb54-7"><a></a>    <span class="at">y =</span> <span class="st">"Density"</span></span>
+<span id="cb54-8"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-44-1.png" width="672" class="r-stretch"></section><section id="summary-statistics" class="slide level2"><h2>Summary statistics</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-46-1.png" width="960" class="r-stretch"></section><section id="summary-statistics" class="slide level2"><h2>Summary statistics</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
-<span id="cb60-2"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb60-3"><a></a>    <span class="at">mean_trump_perc =</span> <span class="fu">mean</span>(trump16),</span>
-<span id="cb60-4"><a></a>    <span class="at">median_trump_perc =</span> <span class="fu">median</span>(trump16),</span>
-<span id="cb60-5"><a></a>    <span class="at">sd =</span> <span class="fu">sd</span>(trump16),</span>
-<span id="cb60-6"><a></a>    <span class="at">iqr =</span> <span class="fu">IQR</span>(trump16),</span>
-<span id="cb60-7"><a></a>    <span class="at">q25 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.25</span>),</span>
-<span id="cb60-8"><a></a>    <span class="at">q75 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.75</span>)</span>
-<span id="cb60-9"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
+<span id="cb55-2"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb55-3"><a></a>    <span class="at">mean_trump_perc =</span> <span class="fu">mean</span>(trump16),</span>
+<span id="cb55-4"><a></a>    <span class="at">median_trump_perc =</span> <span class="fu">median</span>(trump16),</span>
+<span id="cb55-5"><a></a>    <span class="at">sd =</span> <span class="fu">sd</span>(trump16),</span>
+<span id="cb55-6"><a></a>    <span class="at">iqr =</span> <span class="fu">IQR</span>(trump16),</span>
+<span id="cb55-7"><a></a>    <span class="at">q25 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.25</span>),</span>
+<span id="cb55-8"><a></a>    <span class="at">q75 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.75</span>)</span>
+<span id="cb55-9"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 6
   mean_trump_perc median_trump_perc    sd   iqr   q25   q75
@@ -1565,7 +1561,28 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 1            45.9              48.7  16.8  23.3  34.8  58.1</code></pre>
 </div>
 </div>
-</section><section id="distribution-of-votes-for-trump-in-the-2016-election" class="slide level2 medium"><h2>Distribution of votes for Trump in the 2016 election</h2>
+</section><section id="what-does-this-code-do" class="slide level2 small"><h2>What does this code do?</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
+<span id="cb57-2"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb57-3"><a></a>    <span class="at">gimme_my_mean =</span> <span class="fu">mean</span>(trump16),</span>
+<span id="cb57-4"><a></a>    <span class="at">gimme_my_median =</span> <span class="fu">median</span>(trump16)</span>
+<span id="cb57-5"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+  gimme_my_mean gimme_my_median
+          &lt;dbl&gt;           &lt;dbl&gt;
+1          45.9            48.7</code></pre>
+</div>
+</div>
+<ul>
+<li>
+<code>summarize</code> creates a <em>new</em> data frame that stores the summaries;</li>
+<li>You can compute as many summaries as you want;</li>
+<li>To the left of the equal signs are your choice of <em>column names</em> in the new data frame you are creating. You can type whatever you want here (within reason);</li>
+<li>To the right of the equal signs is <code>R</code> code that computes the summaries. You must use the correct command names (case sensitive): <code>mean</code>, <code>median</code>, <code>quantile</code>, <code>sd</code>, <code>var</code>, etc;</li>
+<li>If you want to learn what these do, read the documentation (eg <code><a href="https://rdrr.io/r/stats/quantile.html">?quantile</a></code>).</li>
+</ul></section><section id="distribution-of-votes-for-trump-in-the-2016-election" class="slide level2 medium"><h2>Distribution of votes for Trump in the 2016 election</h2>
 <div class="question">
 <p>Describe the distribution of percent of vote received by Trump in 2016 Presidential Election from Congressional Districts.</p>
 </div>
@@ -1586,33 +1603,33 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 </ul></section><section id="side-by-side-box-plots" class="slide level2"><h2>Side-by-side box plots</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62" data-code-line-numbers="|2|3-6|4|5|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb62-2"><a></a>  gerrymander, </span>
-<span id="cb62-3"><a></a>  <span class="fu">aes</span>(</span>
-<span id="cb62-4"><a></a>    <span class="at">x =</span> trump16, </span>
-<span id="cb62-5"><a></a>    <span class="at">y =</span> gerry</span>
-<span id="cb62-6"><a></a>    )</span>
-<span id="cb62-7"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb62-8"><a></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb59" data-code-line-numbers="|2|3-6|4|5|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb59-2"><a></a>  gerrymander, </span>
+<span id="cb59-3"><a></a>  <span class="fu">aes</span>(</span>
+<span id="cb59-4"><a></a>    <span class="at">x =</span> trump16, </span>
+<span id="cb59-5"><a></a>    <span class="at">y =</span> gerry</span>
+<span id="cb59-6"><a></a>    )</span>
+<span id="cb59-7"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb59-8"><a></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-46-1.png" width="672"></p>
+<figure><p><img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-49-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div></div>
 </section><section id="summary-statistics-1" class="slide level2"><h2>Summary statistics</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
-<span id="cb63-2"><a></a>  <span class="co"># do the following for each level of gerry</span></span>
-<span id="cb63-3"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb63-4"><a></a>    <span class="at">min =</span> <span class="fu">min</span>(trump16),</span>
-<span id="cb63-5"><a></a>    <span class="at">q25 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.25</span>),</span>
-<span id="cb63-6"><a></a>    <span class="at">median =</span> <span class="fu">median</span>(trump16),</span>
-<span id="cb63-7"><a></a>    <span class="at">q75 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.75</span>),</span>
-<span id="cb63-8"><a></a>    <span class="at">max =</span> <span class="fu">max</span>(trump16),</span>
-<span id="cb63-9"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
+<span id="cb60-2"><a></a>  <span class="co"># do the following for each level of gerry</span></span>
+<span id="cb60-3"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb60-4"><a></a>    <span class="at">min =</span> <span class="fu">min</span>(trump16),</span>
+<span id="cb60-5"><a></a>    <span class="at">q25 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.25</span>),</span>
+<span id="cb60-6"><a></a>    <span class="at">median =</span> <span class="fu">median</span>(trump16),</span>
+<span id="cb60-7"><a></a>    <span class="at">q75 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.75</span>),</span>
+<span id="cb60-8"><a></a>    <span class="at">max =</span> <span class="fu">max</span>(trump16),</span>
+<span id="cb60-9"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 5
     min   q25 median   q75   max
@@ -1622,15 +1639,15 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 </div>
 </section><section id="summary-statistics-2" class="slide level2"><h2>Summary statistics</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
-<span id="cb65-2"><a></a>  <span class="fu">filter</span>(gerry <span class="sc">==</span> <span class="st">"low"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb65-3"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb65-4"><a></a>    <span class="at">min =</span> <span class="fu">min</span>(trump16),</span>
-<span id="cb65-5"><a></a>    <span class="at">q25 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.25</span>),</span>
-<span id="cb65-6"><a></a>    <span class="at">median =</span> <span class="fu">median</span>(trump16),</span>
-<span id="cb65-7"><a></a>    <span class="at">q75 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.75</span>),</span>
-<span id="cb65-8"><a></a>    <span class="at">max =</span> <span class="fu">max</span>(trump16),</span>
-<span id="cb65-9"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
+<span id="cb62-2"><a></a>  <span class="fu">filter</span>(gerry <span class="sc">==</span> <span class="st">"low"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb62-3"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb62-4"><a></a>    <span class="at">min =</span> <span class="fu">min</span>(trump16),</span>
+<span id="cb62-5"><a></a>    <span class="at">q25 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.25</span>),</span>
+<span id="cb62-6"><a></a>    <span class="at">median =</span> <span class="fu">median</span>(trump16),</span>
+<span id="cb62-7"><a></a>    <span class="at">q75 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.75</span>),</span>
+<span id="cb62-8"><a></a>    <span class="at">max =</span> <span class="fu">max</span>(trump16),</span>
+<span id="cb62-9"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 5
     min   q25 median   q75   max
@@ -1640,15 +1657,15 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 </div>
 </section><section id="summary-statistics-3" class="slide level2"><h2>Summary statistics</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
-<span id="cb67-2"><a></a>  <span class="fu">filter</span>(gerry <span class="sc">==</span> <span class="st">"mid"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb67-3"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb67-4"><a></a>    <span class="at">min =</span> <span class="fu">min</span>(trump16),</span>
-<span id="cb67-5"><a></a>    <span class="at">q25 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.25</span>),</span>
-<span id="cb67-6"><a></a>    <span class="at">median =</span> <span class="fu">median</span>(trump16),</span>
-<span id="cb67-7"><a></a>    <span class="at">q75 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.75</span>),</span>
-<span id="cb67-8"><a></a>    <span class="at">max =</span> <span class="fu">max</span>(trump16),</span>
-<span id="cb67-9"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
+<span id="cb64-2"><a></a>  <span class="fu">filter</span>(gerry <span class="sc">==</span> <span class="st">"mid"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb64-3"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb64-4"><a></a>    <span class="at">min =</span> <span class="fu">min</span>(trump16),</span>
+<span id="cb64-5"><a></a>    <span class="at">q25 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.25</span>),</span>
+<span id="cb64-6"><a></a>    <span class="at">median =</span> <span class="fu">median</span>(trump16),</span>
+<span id="cb64-7"><a></a>    <span class="at">q75 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.75</span>),</span>
+<span id="cb64-8"><a></a>    <span class="at">max =</span> <span class="fu">max</span>(trump16),</span>
+<span id="cb64-9"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 5
     min   q25 median   q75   max
@@ -1658,15 +1675,15 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 </div>
 </section><section id="summary-statistics-4" class="slide level2"><h2>Summary statistics</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
-<span id="cb69-2"><a></a>  <span class="fu">filter</span>(gerry <span class="sc">==</span> <span class="st">"high"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb69-3"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb69-4"><a></a>    <span class="at">min =</span> <span class="fu">min</span>(trump16),</span>
-<span id="cb69-5"><a></a>    <span class="at">q25 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.25</span>),</span>
-<span id="cb69-6"><a></a>    <span class="at">median =</span> <span class="fu">median</span>(trump16),</span>
-<span id="cb69-7"><a></a>    <span class="at">q75 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.75</span>),</span>
-<span id="cb69-8"><a></a>    <span class="at">max =</span> <span class="fu">max</span>(trump16),</span>
-<span id="cb69-9"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
+<span id="cb66-2"><a></a>  <span class="fu">filter</span>(gerry <span class="sc">==</span> <span class="st">"high"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb66-3"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb66-4"><a></a>    <span class="at">min =</span> <span class="fu">min</span>(trump16),</span>
+<span id="cb66-5"><a></a>    <span class="at">q25 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.25</span>),</span>
+<span id="cb66-6"><a></a>    <span class="at">median =</span> <span class="fu">median</span>(trump16),</span>
+<span id="cb66-7"><a></a>    <span class="at">q75 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.75</span>),</span>
+<span id="cb66-8"><a></a>    <span class="at">max =</span> <span class="fu">max</span>(trump16),</span>
+<span id="cb66-9"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 5
     min   q25 median   q75   max
@@ -1676,15 +1693,15 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 </div>
 </section><section id="summary-statistics-5" class="slide level2"><h2>Summary statistics</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
-<span id="cb71-2"><a></a>  <span class="fu">group_by</span>(gerry) <span class="sc">|&gt;</span></span>
-<span id="cb71-3"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb71-4"><a></a>    <span class="at">min =</span> <span class="fu">min</span>(trump16),</span>
-<span id="cb71-5"><a></a>    <span class="at">q25 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.25</span>),</span>
-<span id="cb71-6"><a></a>    <span class="at">median =</span> <span class="fu">median</span>(trump16),</span>
-<span id="cb71-7"><a></a>    <span class="at">q75 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.75</span>),</span>
-<span id="cb71-8"><a></a>    <span class="at">max =</span> <span class="fu">max</span>(trump16),</span>
-<span id="cb71-9"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a></a>gerrymander <span class="sc">|&gt;</span></span>
+<span id="cb68-2"><a></a>  <span class="fu">group_by</span>(gerry) <span class="sc">|&gt;</span></span>
+<span id="cb68-3"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb68-4"><a></a>    <span class="at">min =</span> <span class="fu">min</span>(trump16),</span>
+<span id="cb68-5"><a></a>    <span class="at">q25 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.25</span>),</span>
+<span id="cb68-6"><a></a>    <span class="at">median =</span> <span class="fu">median</span>(trump16),</span>
+<span id="cb68-7"><a></a>    <span class="at">q75 =</span> <span class="fu">quantile</span>(trump16, <span class="fl">0.75</span>),</span>
+<span id="cb68-8"><a></a>    <span class="at">max =</span> <span class="fu">max</span>(trump16),</span>
+<span id="cb68-9"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 6
   gerry   min   q25 median   q75   max
@@ -1697,18 +1714,18 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 </section><section id="density-plots" class="slide level2"><h2>Density plots</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb73" data-code-line-numbers="|4|5|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb73-2"><a></a>  gerrymander, </span>
-<span id="cb73-3"><a></a>  <span class="fu">aes</span>(</span>
-<span id="cb73-4"><a></a>    <span class="at">x =</span> trump16, </span>
-<span id="cb73-5"><a></a>    <span class="at">color =</span> gerry</span>
-<span id="cb73-6"><a></a>    )</span>
-<span id="cb73-7"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb73-8"><a></a>  <span class="fu">geom_density</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb70" data-code-line-numbers="|4|5|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb70-2"><a></a>  gerrymander, </span>
+<span id="cb70-3"><a></a>  <span class="fu">aes</span>(</span>
+<span id="cb70-4"><a></a>    <span class="at">x =</span> trump16, </span>
+<span id="cb70-5"><a></a>    <span class="at">color =</span> gerry</span>
+<span id="cb70-6"><a></a>    )</span>
+<span id="cb70-7"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb70-8"><a></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-52-1.png" width="672"></p>
+<figure><p><img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-55-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1716,99 +1733,99 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 </section><section id="filled-density-plots" class="slide level2"><h2>Filled density plots</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb74" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb74-2"><a></a>  gerrymander, </span>
-<span id="cb74-3"><a></a>  <span class="fu">aes</span>(</span>
-<span id="cb74-4"><a></a>    <span class="at">x =</span> trump16, </span>
-<span id="cb74-5"><a></a>    <span class="at">color =</span> gerry,</span>
-<span id="cb74-6"><a></a>    <span class="at">fill =</span> gerry</span>
-<span id="cb74-7"><a></a>    )</span>
-<span id="cb74-8"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb74-9"><a></a>  <span class="fu">geom_density</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb71" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb71-2"><a></a>  gerrymander, </span>
+<span id="cb71-3"><a></a>  <span class="fu">aes</span>(</span>
+<span id="cb71-4"><a></a>    <span class="at">x =</span> trump16, </span>
+<span id="cb71-5"><a></a>    <span class="at">color =</span> gerry,</span>
+<span id="cb71-6"><a></a>    <span class="at">fill =</span> gerry</span>
+<span id="cb71-7"><a></a>    )</span>
+<span id="cb71-8"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb71-9"><a></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-53-1.png" width="672"></p>
+<figure><p><img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-56-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div></div>
 </section><section id="better-filled-density-plots" class="slide level2"><h2>Better filled density plots</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb75" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb75-2"><a></a>  gerrymander, </span>
-<span id="cb75-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> trump16, <span class="at">color =</span> gerry, <span class="at">fill =</span> gerry)</span>
-<span id="cb75-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb75-5"><a></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb72" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb72-2"><a></a>  gerrymander, </span>
+<span id="cb72-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> trump16, <span class="at">color =</span> gerry, <span class="at">fill =</span> gerry)</span>
+<span id="cb72-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb72-5"><a></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-54-1.png" width="672" class="r-stretch"></section><section id="better-colors" class="slide level2"><h2>Better colors</h2>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-57-1.png" width="960" class="r-stretch"></section><section id="better-colors" class="slide level2"><h2>Better colors</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb76" data-code-line-numbers="7-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb76-2"><a></a>  gerrymander, </span>
-<span id="cb76-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> trump16, <span class="at">color =</span> gerry, <span class="at">fill =</span> gerry)</span>
-<span id="cb76-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb76-5"><a></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb76-6"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb76-7"><a></a>  <span class="fu">scale_fill_colorblind</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb73" data-code-line-numbers="7-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb73-2"><a></a>  gerrymander, </span>
+<span id="cb73-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> trump16, <span class="at">color =</span> gerry, <span class="at">fill =</span> gerry)</span>
+<span id="cb73-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb73-5"><a></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb73-6"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb73-7"><a></a>  <span class="fu">scale_fill_colorblind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-55-1.png" width="672"></p>
+<figure><p><img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-58-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div></div>
 </section><section id="violin-plots" class="slide level2 scrollable"><h2>Violin plots</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb77" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="sourceCode cell-code" id="cb74" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb74-2"><a></a>  gerrymander, </span>
+<span id="cb74-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> trump16, <span class="at">y =</span> gerry, <span class="at">color =</span> gerry)</span>
+<span id="cb74-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb74-5"><a></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
+<span id="cb74-6"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb74-7"><a></a>  <span class="fu">scale_fill_colorblind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-59-1.png" width="960" class="r-stretch"></section><section id="multiple-geoms" class="slide level2 scrollable"><h2>Multiple geoms</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb75-2"><a></a>  gerrymander, </span>
+<span id="cb75-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> trump16, <span class="at">y =</span> gerry, <span class="at">color =</span> gerry)</span>
+<span id="cb75-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb75-5"><a></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
+<span id="cb75-6"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb75-7"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb75-8"><a></a>  <span class="fu">scale_fill_colorblind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-60-1.png" width="960" class="r-stretch"></section><section id="multiple-geoms-1" class="slide level2 scrollable"><h2>Multiple geoms</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb76" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb76-2"><a></a>  gerrymander, </span>
+<span id="cb76-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> trump16, <span class="at">y =</span> gerry, <span class="at">color =</span> gerry)</span>
+<span id="cb76-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb76-5"><a></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
+<span id="cb76-6"><a></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
+<span id="cb76-7"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb76-8"><a></a>  <span class="fu">scale_fill_colorblind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-61-1.png" width="960" class="r-stretch"></section><section id="remove-legend" class="slide level2 scrollable"><h2>Remove legend</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb77" data-code-line-numbers="9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb77-2"><a></a>  gerrymander, </span>
 <span id="cb77-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> trump16, <span class="at">y =</span> gerry, <span class="at">color =</span> gerry)</span>
 <span id="cb77-4"><a></a>  ) <span class="sc">+</span></span>
 <span id="cb77-5"><a></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
-<span id="cb77-6"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb77-7"><a></a>  <span class="fu">scale_fill_colorblind</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb77-6"><a></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
+<span id="cb77-7"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb77-8"><a></a>  <span class="fu">scale_fill_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb77-9"><a></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-56-1.png" width="672" class="r-stretch"></section><section id="multiple-geoms" class="slide level2 scrollable"><h2>Multiple geoms</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb78" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb78-2"><a></a>  gerrymander, </span>
-<span id="cb78-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> trump16, <span class="at">y =</span> gerry, <span class="at">color =</span> gerry)</span>
-<span id="cb78-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb78-5"><a></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
-<span id="cb78-6"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb78-7"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb78-8"><a></a>  <span class="fu">scale_fill_colorblind</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-</div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-57-1.png" width="672" class="r-stretch"></section><section id="multiple-geoms-1" class="slide level2 scrollable"><h2>Multiple geoms</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb79" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb79-2"><a></a>  gerrymander, </span>
-<span id="cb79-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> trump16, <span class="at">y =</span> gerry, <span class="at">color =</span> gerry)</span>
-<span id="cb79-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb79-5"><a></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
-<span id="cb79-6"><a></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
-<span id="cb79-7"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb79-8"><a></a>  <span class="fu">scale_fill_colorblind</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-</div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-58-1.png" width="672" class="r-stretch"></section><section id="remove-legend" class="slide level2 scrollable"><h2>Remove legend</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb80" data-code-line-numbers="9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb80-2"><a></a>  gerrymander, </span>
-<span id="cb80-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> trump16, <span class="at">y =</span> gerry, <span class="at">color =</span> gerry)</span>
-<span id="cb80-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb80-5"><a></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
-<span id="cb80-6"><a></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
-<span id="cb80-7"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb80-8"><a></a>  <span class="fu">scale_fill_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb80-9"><a></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-</div>
-<img data-src="04-exploring-data-1_files/figure-html/unnamed-chunk-59-1.png" width="672" class="r-stretch"></section></section><section><section id="multivariate-analysis" class="title-slide slide level1 center"><h1>Multivariate analysis</h1>
+<img data-src="04-exploring-data-1_files/figure-revealjs/unnamed-chunk-62-1.png" width="960" class="r-stretch"></section></section><section><section id="multivariate-analysis" class="title-slide slide level1 center"><h1>Multivariate analysis</h1>
 
 </section><section id="multivariate-analysis-1" class="slide level2 medium"><h2>Multivariate analysis</h2>
 <p>Analyzing the relationship between multiple variables:</p>
@@ -2041,6 +2058,41 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
           RevealZoom
         ]
       });
+    </script><script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
     </script><script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
@@ -2089,14 +2141,13 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-          const outerScaffold = trigger.parentElement.cloneNode(true);
-          const codeEl = outerScaffold.querySelector('code');
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
             }
-          }
-          return codeEl.innerText;
+            return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

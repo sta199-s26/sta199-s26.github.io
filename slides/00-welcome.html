@@ -6,10 +6,10 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.7.34">
 <meta name="author" content="John Zito">
 <meta name="dcterms.date" content="2026-01-07">
 <title>STA 199 Spring 2026 – Welcome to STA 199!</title>
@@ -97,7 +97,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-3332189d2173c7d81d71f033fd8116a0.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-6e51ad904291ad622da7d287747171b4.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -627,8 +627,8 @@ John Zito
 <p><img data-src="images/00/data-science-cycle-import.png"></p>
 </section><section id="load-the-data-in" class="slide level2"><h2>Load the data in</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a></a>age_guesses <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/age_guesses.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a></a>age_guesses <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/age_guesses.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -685,7 +685,7 @@ John Zito
 <p><img data-src="images/00/data-science-cycle-visualize.png"></p>
 </section><section id="babys-first-graphic" class="slide level2 medium"><h2>Baby’s first graphic</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">ggplot</span>(age_guesses, <span class="fu">aes</span>(<span class="at">x =</span> celeb1))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">ggplot</span>(age_guesses, <span class="fu">aes</span>(<span class="at">x =</span> celeb1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
@@ -695,8 +695,8 @@ John Zito
 </div>
 </section><section id="babys-first-graphic-1" class="slide level2 medium"><h2>Baby’s first graphic</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">ggplot</span>(age_guesses, <span class="fu">aes</span>(<span class="at">x =</span> celeb1)) <span class="sc">+</span> </span>
-<span id="cb4-2"><a></a>  <span class="fu">geom_histogram</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">ggplot</span>(age_guesses, <span class="fu">aes</span>(<span class="at">x =</span> celeb1)) <span class="sc">+</span> </span>
+<span id="cb4-2"><a></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
@@ -706,10 +706,10 @@ John Zito
 </div>
 </section><section id="babys-first-graphic-2" class="slide level2 medium"><h2>Baby’s first graphic</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">ggplot</span>(age_guesses, <span class="fu">aes</span>(<span class="at">x =</span> celeb1)) <span class="sc">+</span> </span>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">ggplot</span>(age_guesses, <span class="fu">aes</span>(<span class="at">x =</span> celeb1)) <span class="sc">+</span> </span>
 <span id="cb5-2"><a></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span> </span>
 <span id="cb5-3"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"sta199-s26 students guess Yuja Wang's age"</span>,</span>
-<span id="cb5-4"><a></a>       <span class="at">x =</span> <span class="st">"Guess"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-4"><a></a>       <span class="at">x =</span> <span class="st">"Guess"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
@@ -719,11 +719,11 @@ John Zito
 </div>
 </section><section id="babys-first-graphic-3" class="slide level2 medium"><h2>Baby’s first graphic</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">ggplot</span>(age_guesses, <span class="fu">aes</span>(<span class="at">x =</span> celeb1)) <span class="sc">+</span> </span>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">ggplot</span>(age_guesses, <span class="fu">aes</span>(<span class="at">x =</span> celeb1)) <span class="sc">+</span> </span>
 <span id="cb6-2"><a></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span> </span>
 <span id="cb6-3"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"sta199-s26 students guess Yuja Wang's age"</span>,</span>
 <span id="cb6-4"><a></a>       <span class="at">x =</span> <span class="st">"Guess"</span>) <span class="sc">+</span> </span>
-<span id="cb6-5"><a></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">36</span>, <span class="at">color =</span> <span class="st">"red"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-5"><a></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">36</span>, <span class="at">color =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure><p><img data-src="00-welcome_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
@@ -733,11 +733,11 @@ John Zito
 </div>
 </section><section id="concise-numerical-summaries" class="slide level2 scrollable"><h2>Concise numerical summaries</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>age_guesses <span class="sc">|&gt;</span></span>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>age_guesses <span class="sc">|&gt;</span></span>
 <span id="cb7-2"><a></a>  <span class="fu">summarize</span>(</span>
 <span id="cb7-3"><a></a>    <span class="at">average =</span> <span class="fu">mean</span>(celeb1),</span>
 <span id="cb7-4"><a></a>    <span class="at">sdev =</span> <span class="fu">sd</span>(celeb1)</span>
-<span id="cb7-5"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-5"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 2
   average  sdev
@@ -1282,14 +1282,13 @@ John Zito
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-          const outerScaffold = trigger.parentElement.cloneNode(true);
-          const codeEl = outerScaffold.querySelector('code');
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
             }
-          }
-          return codeEl.innerText;
+            return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
