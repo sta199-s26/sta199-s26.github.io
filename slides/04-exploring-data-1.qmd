@@ -787,6 +787,94 @@ ggplot(df_long, aes(x = trump16)) +
 
 ```
 
+## Box plot facts {.small}
+
+- A box plot is easier to read quickly than a histogram because it eliminates clutter and immediately draws your eye to those main features: center, spread, and skew;
+- The box spans the middle 50% of the data;
+- The width of the box is called the inner quartile range (IQR) and it measures spread;
+- From the docs (`?geom_boxplot`):
+
+> The upper whisker extends from the hinge to the largest value no further than 1.5 * IQR from the hinge (where IQR is the inter-quartile range, or distance between the first and third quartiles). The lower whisker extends from the hinge to the smallest value at most 1.5 * IQR of the hinge. Data beyond the end of the whiskers are called "outlying" points and are plotted individually.
+
+## Box plots obscure modality
+
+Same box plot:
+
+```{r}
+#| echo: false
+#| message: false 
+
+set.seed(23456)
+
+n <- 20000
+x <- rnorm(n)
+o <- 10
+y  <- c(
+  rnorm(o, -2, ),
+  rnorm((n - 2*o) / 2, mean = -0.7, 0.2),
+  rnorm((n - 2*o) / 2, mean =  0.7, 0.2),
+  rnorm(o, 2)
+)
+
+df <- tibble(x = x, y = y)
+
+df_long <- rbind(
+  transform(df, panel = "Histogram"),
+  transform(df, panel = "Box plot")
+)
+
+df_long$panel <- factor(df_long$panel, levels = c("Histogram", "Box plot"))
+
+ggplot(df_long, aes(x = x)) +
+  # Histogram (top)
+  geom_histogram(
+    data = subset(df_long, panel == "Histogram"),
+    bins = 30, color = "white", fill = "grey70"
+  ) +
+  
+  # Boxplot (bottom)
+  geom_boxplot(
+    data = subset(df_long, panel == "Box plot"),
+    aes(y = 0),
+    width = 0.2,
+    outlier.shape = NA
+  ) +
+  facet_grid(rows = vars(panel), scales = "free_y") +
+  scale_y_continuous(NULL, breaks = NULL) +
+  labs(x = "x") +
+  theme_minimal() + 
+  coord_cartesian(xlim = c(min(df), max(df)))
+```
+
+## Box plots obscure modality
+
+Very different distributions:
+
+```{r}
+#| echo: false
+#| message: false 
+
+ggplot(df_long, aes(x = y)) +
+  # Histogram (top)
+  geom_histogram(
+    data = subset(df_long, panel == "Histogram"),
+    bins = 30, color = "white", fill = "grey70"
+  ) +
+  
+  # Boxplot (bottom)
+  geom_boxplot(
+    data = subset(df_long, panel == "Box plot"),
+    aes(y = 0),
+    width = 0.2,
+    outlier.shape = NA
+  ) +
+  facet_grid(rows = vars(panel), scales = "free_y") +
+  scale_y_continuous(NULL, breaks = NULL) +
+  labs(x = "x") +
+  theme_minimal() + 
+  coord_cartesian(xlim = c(min(df), max(df)))
+```
+
 ## Density plot - Step 1 {.smaller .scrollable}
 
 ```{r}
@@ -887,6 +975,22 @@ gerrymander |>
     q75 = quantile(trump16, 0.75)
   )
 ```
+
+## What does this code do? {.small}
+
+```{r}
+gerrymander |>
+  summarize(
+    gimme_my_mean = mean(trump16),
+    gimme_my_median = median(trump16)
+  )
+```
+
+- `summarize` creates a *new* data frame that stores the summaries;
+- You can compute as many summaries as you want;
+- To the left of the equal signs are your choice of *column names* in the new data frame you are creating. You can type whatever you want here (within reason);
+- To the right of the equal signs is `R` code that computes the summaries. You must use the correct command names (case sensitive): `mean`, `median`, `quantile`, `sd`, `var`, etc;
+- If you want to learn what these do, read the documentation (eg `?quantile`).
 
 ## Distribution of votes for Trump in the 2016 election {.medium}
 
