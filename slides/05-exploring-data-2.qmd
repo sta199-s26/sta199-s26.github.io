@@ -326,7 +326,7 @@ For all you CS people and prospective stats majors:
 - There is more to `R` than ggplot and `|>`;
 - It's a proper programming language like Python, C++, Java, etc;
      - control flow, data structures, OOP, all that good stuff;
-- In STAWANANA, we suppress that and teach you a very specific *dialect* of `R` called the `tidyverse`;
+- In STAWANANA, we suppress all that and teach you a very specific *dialect* of `R` called the `tidyverse`;
 - Keep studying stats, and we show you how to use the whole language to do statistical *computing*, not just data science.
 :::
 
