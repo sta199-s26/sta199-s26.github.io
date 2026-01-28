@@ -40,15 +40,9 @@ Prepare for today's application exercise: **`{r} todays_ae`**
 -   Wait till the you're prompted to work on the application exercise during class before editing the file.
 :::
 
-## SUSAN ANNOUNCEMENT
+## Reminder: HW guidelines {.medium}
 
-## ASHLEY ANNOUNCEMENT
-
-## SOME OTHER THING
-
-## Reminder: Lab guidelines {.medium}
-
-::: {.incremental .xsmall}
+::: {.incremental }
 -   Plots should include an informative title, axes and legends should have human-readable labels, and careful consideration should be given to aesthetic choices.
 
 -   Code should follow the [tidyverse style](https://style.tidyverse.org/) ([style.tidyverse.org](https://style.tidyverse.org/)) Particularly,
@@ -71,7 +65,44 @@ Prepare for today's application exercise: **`{r} todays_ae`**
 
 -   Je voudrais un cafe [$\rightarrow$ Je voudrais un café]{.fragment}
 
-# `gerrymander`
+# Monday takeaways
+
+## What data viz should I use? {.medium}
+
+After a while this is more art than science, but you can narrow down the options based on the *number* and *type* of variables:
+
+. . .
+
+| Variable combo | Options |
+|------|------|
+| 1 numerical     |  histogram, density, box plot    |
+| 1 categorical     | bar chart, ~~pie chart~~     |
+| 2 numerical     | scatterplot |
+| numerical/categorical     | side-by-side box or violin plots, stacked densities or histograms     |
+| 2 categorical     | stacked bar plot (today)     |
+
+. . .
+
+For three or more variables, the human mind is limited, and you have to start getting creative (play with color, texture, etc).
+
+## Pics are nice, but what are the numbers? {.small}
+
+```{r}
+#| eval: false
+gerrymander |>
+  summarize(
+    gimme_my_mean = mean(trump16),
+    gimme_my_median = median(trump16)
+  )
+```
+
+- `summarize` creates a *new* data frame that stores the summaries;
+- You can compute as many summaries as you want;
+- To the left of the equal signs are your choice of *column names* in the new data frame you are creating. You can type whatever you want here (within reason);
+- To the right of the equal signs is `R` code that computes the summaries. You must use the correct command names (case sensitive): `mean`, `median`, `quantile`, `sd`, `var`, etc;
+- If you want to learn what these do, read the documentation (eg `?quantile`).
+
+# AE 4 speed run 
 
 ## Packages
 
@@ -88,32 +119,63 @@ library(tidyverse)
 library(ggthemes)
 ```
 
-## From last time {.scrollable .smaller}
+## `gerrymander` {.small}
+
+```{r}
+glimpse(gerrymander)
+```
+
+
+## Research question
 
 ::: question
 Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.
 :::
+
+## Step 1
+
+```{r}
+ggplot(gerrymander)
+```
+
+## Step 2
+
+```{r}
+ggplot(gerrymander, aes(x = flip18))
+```
+
+## Step 3
+
+```{r}
+ggplot(gerrymander, aes(x = flip18)) +
+  geom_bar()
+```
+
+## Step 4
 
 ```{r}
 ggplot(gerrymander, aes(x = flip18, fill = gerry)) +
   geom_bar()
 ```
 
-## From last time {.scrollable .smaller}
-
-::: question
-Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.
-:::
+## Step 5a
 
 ```{r}
 ggplot(gerrymander, aes(x = flip18, fill = gerry)) +
   geom_bar(position = "dodge")
 ```
 
-## From last time {.scrollable .smaller}
+## Step 5b
+
+```{r}
+ggplot(gerrymander, aes(x = flip18, fill = gerry)) +
+  geom_bar(position = "fill")
+```
+
+## What's the answer? {.small}
 
 ::: question
-Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.
+Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? 
 :::
 
 ```{r}
@@ -121,10 +183,10 @@ ggplot(gerrymander, aes(x = flip18, fill = gerry)) +
   geom_bar(position = "fill")
 ```
 
-## From last time {.scrollable .smaller}
+## What are the actual numbers? {.scrollable .smaller}
 
 ::: question
-Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.
+Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? 
 :::
 
 ```{r}
@@ -147,6 +209,13 @@ gerrymander |>
   count(flip18, gerry)
 ```
 
+## Recall
+
+```{r}
+ggplot(gerrymander, aes(x = flip18)) +
+  geom_bar()
+```
+
 ## Step 3 {.scrollable}
 
 ```{r}
@@ -164,7 +233,59 @@ gerrymander |>
   mutate(prop = n / sum(n))
 ```
 
-## Same thing, without the pipe {.scrollable .small}
+## The Full Monty {.smaller}
+
+::: question
+Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat flipped the seat in the 2018 election? (`flip18` = 1: Democrat flipped the seat, 0: No flip, -1: Republican flipped the seat.)
+:::
+
+::: {.columns}
+::: {.column}
+
+```{r}
+ggplot(
+  gerrymander, 
+  aes(x = flip18, fill = gerry)
+  ) +
+  geom_bar(position = "fill")
+```
+
+:::
+::: {.column}
+
+```{r}
+gerrymander |>
+  count(flip18, gerry) |>
+  group_by(flip18) |>
+  mutate(prop = n / sum(n))
+```
+
+:::
+:::
+
+## New commands
+
+- `count` creates a *new* data frame that tallies up the number of rows that fall into each bin;
+- `group_by` silently *groups* the rows according to bin, and all subsequent operations are done *within* group;
+- `mutate` either adds new columns that aren't already there, or modifies existing columns.
+
+    - we used it to add a `prop` column that wasn't there before;
+    - because the table of counts is *grouped*, the proportions were computed *within* each level of `flip18`.
+
+# That pesky pipe
+
+## We teach you to do this
+
+```{r}
+gerrymander |>
+  count(flip18, gerry) |>
+  group_by(flip18) |>
+  mutate(prop = n / sum(n))
+```
+
+## You could do this instead {.scrollable .small}
+
+Technically equivalent. Gives the same result. *Super* hard to read:
 
 ```{r}
 
@@ -173,15 +294,41 @@ gerrymander |>
 mutate(group_by(count(gerrymander, flip18, gerry), flip18), prop = n / sum(n))
 ```
 
-## With the pipe
-
-![](images/05/dolls_pipe.png)
-
 ## Without the pipe
 
 ![](images/05/dolls_nest.png)
 
-# `group_by()`, `summarize()`, `count()`
+## With the pipe
+
+![](images/05/dolls_pipe.png)
+
+## In this class, you will...
+
+::::: columns
+::: {.column width="35%"}
+Build cakes (`ggplot`) ![](images/03/cake.jpg)
+:::
+
+::: {.column width="65%"}
+Stack dolls (pipe `|>`) ![](images/03/matryoshka.jpg)
+:::
+:::::
+
+Master these constructs, and everything will be coming up roses!
+
+## (Secrets of the temple)
+
+For all you CS people and prospective stats majors:
+
+::: incremental
+- There is more to `R` than ggplot and `|>`;
+- It's a proper programming language like Python, C++, Java, etc;
+     - control flow, data structures, OOP, all that good stuff;
+- In STAWANANA, we suppress that and teach you a very specific *dialect* of `R` called the `tidyverse`;
+- Keep studying stats, and we show you how to use the whole language to do statistical *computing*, not just data science.
+:::
+
+# Drilling down: <br>`group_by()`, <br> `summarize()`, <br> `count()`
 
 ## What does `group_by()` do? {.scrollable}
 
@@ -304,7 +451,7 @@ gerrymander |>
 What's the difference between the following two pipelines?
 :::
 
-::: columns
+::::: columns
 ::: column
 ```{r}
 gerrymander |>
@@ -319,11 +466,11 @@ gerrymander |>
   count(state)
 ```
 :::
-:::
+:::::
 
 ## `count()`
 
-::: columns
+::::: columns
 ::: {.column width="40%"}
 ``` r
 ... |>
@@ -337,7 +484,7 @@ gerrymander |>
   count(variable1, variable2)
 ```
 :::
-:::
+:::::
 
 -   Count the number of observations in each level of variable(s)
 
@@ -399,7 +546,7 @@ Is a Congressional District more likely to be flipped to a Democratic seat if it
 The following code should produce a visualization that answers the question "Is a Congressional District more likely to be flipped to a Democratic seat if it has high prevalence of gerrymandering or low prevalence of gerrymandering?" However, it produces a `warning` and an unexpected plot. What's going on?
 :::
 
-::: columns
+::::: columns
 ::: column
 ```{r}
 #| label: fill-warning
@@ -420,7 +567,7 @@ ggplot(
 #| echo: false
 ```
 :::
-:::
+:::::
 
 ## Another glimpse at `gerrymander` {.smaller}
 
@@ -438,22 +585,24 @@ glimpse(gerrymander)
 
 -   The `mutate()` function transforms (*mutates*) a data frame by creating a new column or updating an existing one
 
+In this case, we want to use it to update an existing column, `flip18`.
+
 ## `mutate()` in action {.scrollable .small}
 
 ```{r}
 gerrymander |>
-  mutate(flip18 = as.factor(flip18))
+  mutate(flip18 = as_factor(flip18))
 ```
 
 ## `mutate()` in action {.scrollable .small}
 
 ```{r}
 gerrymander |>
-  mutate(flip18 = as.factor(flip18)) |>
+  mutate(flip18 = as_factor(flip18)) |>
   relocate(flip18)
 ```
 
-## Revisit the plot {.scrollable .medium}
+## Revisit the plot {.scrollable .small}
 
 ::: question
 "Is a Congressional District more likely to be flipped to a Democratic seat if it has high prevalence of gerrymandering or low prevalence of gerrymandering?"
@@ -461,10 +610,92 @@ gerrymander |>
 
 ```{r}
 gerrymander |>
-  mutate(flip18 = as.factor(flip18)) |>
+  mutate(flip18 = as_factor(flip18)) |>
   ggplot(aes(x = gerry, fill = flip18)) +
   geom_bar(position = "fill")
 ```
+
+## `mutate()` and overwrite
+
+You can overwrite an existing variable with `mutate()`:
+
+```{r}
+gerrymander |>
+  mutate(flip18 = as_factor(flip18)) |>
+  select(district, flip18)
+```
+
+## `mutate()` and `if_else()` {.smaller}
+
+Use `mutate()` with `if_else()` to recode with an either/or logic: 
+
+> If `party16` is "D", recode it as "Democrat", otherwise recode it as "Republican".
+
+```{r}
+#| code-line-numbers: "|2"
+gerrymander |>
+  mutate(party16_expanded = if_else(party16 == "D", "Democrat", "Republican")) |>
+  select(district, party16, party16_expanded)
+```
+
+## `mutate()` and `case_when()` {.smaller}
+
+Use `mutate()` with `case_when()` to recode with a more complex logic:
+
+> If `flip18` is 1, recode it as "Democrat flipped", if `flip18` is 0, recode it as "No flip", and if `flip18` is -1, recode it as "Republican flipped".
+
+```{r}
+gerrymander |>
+  mutate(
+    flip18_expanded = case_when(
+      flip18 == 1 ~ "Democrat flipped",
+      flip18 == 0 ~ "No flip",
+      flip18 == -1 ~ "Republican flipped"
+    )
+  ) |>
+  select(district, flip18, flip18_expanded) |>
+  group_by(flip18) |> # group by flip type
+  slice_head(n = 1) # show top row per group
+```
+
+## `mutate()` and store {.smaller}
+
+If you want to keep your changes, you need to store the data frame after `mutate()`:
+
+::: {.columns}
+::: {.column}
+
+```{r}
+#| error: true
+gerrymander |>
+  mutate(
+    p16 = if_else(party16 == "D", "Dem", "Rep")
+  ) |>
+  select(district, p16) |>
+  slice_head(n = 3) # show top 3 rows
+
+gerrymander |>
+  select(district, p16)
+```
+
+:::
+::: {.column .fragment}
+
+```{r}
+#| error: true
+gerrymander <- gerrymander |>
+  mutate(
+    p16 = if_else(party16 == "D", "Dem", "Rep")
+  ) |>
+  select(district, p16)
+
+gerrymander |>
+  select(district, p16)  |>
+  slice_head(n = 3) # show top 3 rows
+```
+
+:::
+:::
 
 # Application exercise
 
