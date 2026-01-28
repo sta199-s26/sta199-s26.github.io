@@ -125,7 +125,7 @@ window.Quarto = {
 </script>
 <meta property="og:title" content="Exploring data II – STA 199 Spring 2026">
 <meta property="og:description" content="Lecture 5">
-<meta property="og:image" content="https://sta199-s26.github.io/slides/05-exploring-data-2_files/figure-revealjs/unnamed-chunk-4-1.png">
+<meta property="og:image" content="https://sta199-s26.github.io/slides/05-exploring-data-2_files/figure-revealjs/unnamed-chunk-6-1.png">
 <meta property="og:site_name" content="STA 199 Spring 2026">
 <meta property="og:image:height" content="960">
 <meta property="og:image:width" content="1920">
@@ -342,32 +342,53 @@ window.Quarto = {
 <a href="#warm-up" id="toc-warm-up" class="nav-link active" data-scroll-target="#warm-up">Warm-up</a>
   <ul class="collapse">
 <li><a href="#while-you-wait" id="toc-while-you-wait" class="nav-link" data-scroll-target="#while-you-wait">While you wait…</a></li>
-  <li><a href="#susan-announcement" id="toc-susan-announcement" class="nav-link" data-scroll-target="#susan-announcement">SUSAN ANNOUNCEMENT</a></li>
-  <li><a href="#ashley-announcement" id="toc-ashley-announcement" class="nav-link" data-scroll-target="#ashley-announcement">ASHLEY ANNOUNCEMENT</a></li>
-  <li><a href="#some-other-thing" id="toc-some-other-thing" class="nav-link" data-scroll-target="#some-other-thing">SOME OTHER THING</a></li>
-  <li><a href="#reminder-lab-guidelines" id="toc-reminder-lab-guidelines" class="nav-link" data-scroll-target="#reminder-lab-guidelines">Reminder: Lab guidelines</a></li>
+  <li><a href="#reminder-hw-guidelines" id="toc-reminder-hw-guidelines" class="nav-link" data-scroll-target="#reminder-hw-guidelines">Reminder: HW guidelines</a></li>
   <li><a href="#code-style-and-readability" id="toc-code-style-and-readability" class="nav-link" data-scroll-target="#code-style-and-readability">Code style and readability</a></li>
   </ul>
 </li>
   <li>
-<a href="#gerrymander" id="toc-gerrymander" class="nav-link" data-scroll-target="#gerrymander"><code>gerrymander</code></a>
+<a href="#monday-takeaways" id="toc-monday-takeaways" class="nav-link" data-scroll-target="#monday-takeaways">Monday takeaways</a>
+  <ul class="collapse">
+<li><a href="#what-data-viz-should-i-use" id="toc-what-data-viz-should-i-use" class="nav-link" data-scroll-target="#what-data-viz-should-i-use">What data viz should I use?</a></li>
+  <li><a href="#pics-are-nice-but-what-are-the-numbers" id="toc-pics-are-nice-but-what-are-the-numbers" class="nav-link" data-scroll-target="#pics-are-nice-but-what-are-the-numbers">Pics are nice, but what are the numbers?</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#ae-4-speed-run" id="toc-ae-4-speed-run" class="nav-link" data-scroll-target="#ae-4-speed-run">AE 4 speed run</a>
   <ul class="collapse">
 <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
-  <li><a href="#from-last-time" id="toc-from-last-time" class="nav-link" data-scroll-target="#from-last-time">From last time</a></li>
-  <li><a href="#from-last-time-1" id="toc-from-last-time-1" class="nav-link" data-scroll-target="#from-last-time-1">From last time</a></li>
-  <li><a href="#from-last-time-2" id="toc-from-last-time-2" class="nav-link" data-scroll-target="#from-last-time-2">From last time</a></li>
-  <li><a href="#from-last-time-3" id="toc-from-last-time-3" class="nav-link" data-scroll-target="#from-last-time-3">From last time</a></li>
+  <li><a href="#gerrymander" id="toc-gerrymander" class="nav-link" data-scroll-target="#gerrymander"><code>gerrymander</code></a></li>
+  <li><a href="#research-question" id="toc-research-question" class="nav-link" data-scroll-target="#research-question">Research question</a></li>
   <li><a href="#step-1" id="toc-step-1" class="nav-link" data-scroll-target="#step-1">Step 1</a></li>
   <li><a href="#step-2" id="toc-step-2" class="nav-link" data-scroll-target="#step-2">Step 2</a></li>
   <li><a href="#step-3" id="toc-step-3" class="nav-link" data-scroll-target="#step-3">Step 3</a></li>
   <li><a href="#step-4" id="toc-step-4" class="nav-link" data-scroll-target="#step-4">Step 4</a></li>
-  <li><a href="#same-thing-without-the-pipe" id="toc-same-thing-without-the-pipe" class="nav-link" data-scroll-target="#same-thing-without-the-pipe">Same thing, without the pipe</a></li>
-  <li><a href="#with-the-pipe" id="toc-with-the-pipe" class="nav-link" data-scroll-target="#with-the-pipe">With the pipe</a></li>
-  <li><a href="#without-the-pipe" id="toc-without-the-pipe" class="nav-link" data-scroll-target="#without-the-pipe">Without the pipe</a></li>
+  <li><a href="#step-5a" id="toc-step-5a" class="nav-link" data-scroll-target="#step-5a">Step 5a</a></li>
+  <li><a href="#step-5b" id="toc-step-5b" class="nav-link" data-scroll-target="#step-5b">Step 5b</a></li>
+  <li><a href="#whats-the-answer" id="toc-whats-the-answer" class="nav-link" data-scroll-target="#whats-the-answer">What’s the answer?</a></li>
+  <li><a href="#what-are-the-actual-numbers" id="toc-what-are-the-actual-numbers" class="nav-link" data-scroll-target="#what-are-the-actual-numbers">What are the actual numbers?</a></li>
+  <li><a href="#step-1-1" id="toc-step-1-1" class="nav-link" data-scroll-target="#step-1-1">Step 1</a></li>
+  <li><a href="#step-2-1" id="toc-step-2-1" class="nav-link" data-scroll-target="#step-2-1">Step 2</a></li>
+  <li><a href="#recall" id="toc-recall" class="nav-link" data-scroll-target="#recall">Recall</a></li>
+  <li><a href="#step-3-1" id="toc-step-3-1" class="nav-link" data-scroll-target="#step-3-1">Step 3</a></li>
+  <li><a href="#step-4-1" id="toc-step-4-1" class="nav-link" data-scroll-target="#step-4-1">Step 4</a></li>
+  <li><a href="#the-full-monty" id="toc-the-full-monty" class="nav-link" data-scroll-target="#the-full-monty">The Full Monty</a></li>
+  <li><a href="#new-commands" id="toc-new-commands" class="nav-link" data-scroll-target="#new-commands">New commands</a></li>
   </ul>
 </li>
   <li>
-<a href="#group_by-summarize-count" id="toc-group_by-summarize-count" class="nav-link" data-scroll-target="#group_by-summarize-count"><code>group_by()</code>, <code>summarize()</code>, <code>count()</code></a>
+<a href="#that-pesky-pipe" id="toc-that-pesky-pipe" class="nav-link" data-scroll-target="#that-pesky-pipe">That pesky pipe</a>
+  <ul class="collapse">
+<li><a href="#we-teach-you-to-do-this" id="toc-we-teach-you-to-do-this" class="nav-link" data-scroll-target="#we-teach-you-to-do-this">We teach you to do this</a></li>
+  <li><a href="#you-could-do-this-instead" id="toc-you-could-do-this-instead" class="nav-link" data-scroll-target="#you-could-do-this-instead">You could do this instead</a></li>
+  <li><a href="#without-the-pipe" id="toc-without-the-pipe" class="nav-link" data-scroll-target="#without-the-pipe">Without the pipe</a></li>
+  <li><a href="#with-the-pipe" id="toc-with-the-pipe" class="nav-link" data-scroll-target="#with-the-pipe">With the pipe</a></li>
+  <li><a href="#in-this-class-you-will" id="toc-in-this-class-you-will" class="nav-link" data-scroll-target="#in-this-class-you-will">In this class, you will…</a></li>
+  <li><a href="#secrets-of-the-temple" id="toc-secrets-of-the-temple" class="nav-link" data-scroll-target="#secrets-of-the-temple">(Secrets of the temple)</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#drilling-down-group_by-summarize-count" id="toc-drilling-down-group_by-summarize-count" class="nav-link" data-scroll-target="#drilling-down-group_by-summarize-count">Drilling down: <br><code>group_by()</code>, <br><code>summarize()</code>, <br><code>count()</code></a>
   <ul class="collapse">
 <li><a href="#what-does-group_by-do" id="toc-what-does-group_by-do" class="nav-link" data-scroll-target="#what-does-group_by-do">What does <code>group_by()</code> do?</a></li>
   <li><a href="#what-does-group_by-do-1" id="toc-what-does-group_by-do-1" class="nav-link" data-scroll-target="#what-does-group_by-do-1">What does <code>group_by()</code> do?</a></li>
@@ -395,6 +416,10 @@ window.Quarto = {
   <li><a href="#mutate-in-action" id="toc-mutate-in-action" class="nav-link" data-scroll-target="#mutate-in-action"><code>mutate()</code> in action</a></li>
   <li><a href="#mutate-in-action-1" id="toc-mutate-in-action-1" class="nav-link" data-scroll-target="#mutate-in-action-1"><code>mutate()</code> in action</a></li>
   <li><a href="#revisit-the-plot" id="toc-revisit-the-plot" class="nav-link" data-scroll-target="#revisit-the-plot">Revisit the plot</a></li>
+  <li><a href="#mutate-and-overwrite" id="toc-mutate-and-overwrite" class="nav-link" data-scroll-target="#mutate-and-overwrite"><code>mutate()</code> and overwrite</a></li>
+  <li><a href="#mutate-and-if_else" id="toc-mutate-and-if_else" class="nav-link" data-scroll-target="#mutate-and-if_else"><code>mutate()</code> and <code>if_else()</code></a></li>
+  <li><a href="#mutate-and-case_when" id="toc-mutate-and-case_when" class="nav-link" data-scroll-target="#mutate-and-case_when"><code>mutate()</code> and <code>case_when()</code></a></li>
+  <li><a href="#mutate-and-store" id="toc-mutate-and-store" class="nav-link" data-scroll-target="#mutate-and-store"><code>mutate()</code> and store</a></li>
   </ul>
 </li>
   <li>
@@ -453,11 +478,8 @@ window.Quarto = {
 <li><p>Wait till the you’re prompted to work on the application exercise during class before editing the file.</p></li>
 </ul>
 </div>
-</section><section id="susan-announcement" class="level2"><h2 class="anchored" data-anchor-id="susan-announcement">SUSAN ANNOUNCEMENT</h2>
-</section><section id="ashley-announcement" class="level2"><h2 class="anchored" data-anchor-id="ashley-announcement">ASHLEY ANNOUNCEMENT</h2>
-</section><section id="some-other-thing" class="level2"><h2 class="anchored" data-anchor-id="some-other-thing">SOME OTHER THING</h2>
-</section><section id="reminder-lab-guidelines" class="level2 medium"><h2 class="medium anchored" data-anchor-id="reminder-lab-guidelines">Reminder: Lab guidelines</h2>
-<div class="incremental xsmall">
+</section><section id="reminder-hw-guidelines" class="level2 medium"><h2 class="medium anchored" data-anchor-id="reminder-hw-guidelines">Reminder: HW guidelines</h2>
+<div class="incremental">
 <ul class="incremental">
 <li><p>Plots should include an informative title, axes and legends should have human-readable labels, and careful consideration should be given to aesthetic choices.</p></li>
 <li>
@@ -483,58 +505,104 @@ window.Quarto = {
 <ul>
 <li>Je voudrais un cafe <span class="fragment"><span class="math inline">\(\rightarrow\)</span> Je voudrais un café</span>
 </li>
-</ul></section></section><section id="gerrymander" class="level1"><h1><code>gerrymander</code></h1>
+</ul></section></section><section id="monday-takeaways" class="level1"><h1>Monday takeaways</h1>
+<section id="what-data-viz-should-i-use" class="level2 medium"><h2 class="medium anchored" data-anchor-id="what-data-viz-should-i-use">What data viz should I use?</h2>
+<p>After a while this is more art than science, but you can narrow down the options based on the <em>number</em> and <em>type</em> of variables:</p>
+<p>. . .</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead><tr class="header">
+<th>Variable combo</th>
+<th>Options</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>1 numerical</td>
+<td>histogram, density, box plot</td>
+</tr>
+<tr class="even">
+<td>1 categorical</td>
+<td>bar chart, <del>pie chart</del>
+</td>
+</tr>
+<tr class="odd">
+<td>2 numerical</td>
+<td>scatterplot</td>
+</tr>
+<tr class="even">
+<td>numerical/categorical</td>
+<td>side-by-side box or violin plots, stacked densities or histograms</td>
+</tr>
+<tr class="odd">
+<td>2 categorical</td>
+<td>stacked bar plot (today)</td>
+</tr>
+</tbody>
+</table>
+<p>. . .</p>
+<p>For three or more variables, the human mind is limited, and you have to start getting creative (play with color, texture, etc).</p>
+</section><section id="pics-are-nice-but-what-are-the-numbers" class="level2 small"><h2 class="small anchored" data-anchor-id="pics-are-nice-but-what-are-the-numbers">Pics are nice, but what are the numbers?</h2>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">summarize</span><span class="op">(</span></span>
+<span>    gimme_my_mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">trump16</span><span class="op">)</span>,</span>
+<span>    gimme_my_median <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">trump16</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>
+<code>summarize</code> creates a <em>new</em> data frame that stores the summaries;</li>
+<li>You can compute as many summaries as you want;</li>
+<li>To the left of the equal signs are your choice of <em>column names</em> in the new data frame you are creating. You can type whatever you want here (within reason);</li>
+<li>To the right of the equal signs is <code>R</code> code that computes the summaries. You must use the correct command names (case sensitive): <code>mean</code>, <code>median</code>, <code>quantile</code>, <code>sd</code>, <code>var</code>, etc;</li>
+<li>If you want to learn what these do, read the documentation (eg <code><a href="https://rdrr.io/r/stats/quantile.html">?quantile</a></code>).</li>
+</ul></section></section><section id="ae-4-speed-run" class="level1"><h1>AE 4 speed run</h1>
 <section id="packages" class="level2"><h2 class="anchored" data-anchor-id="packages">Packages</h2>
 <ul>
 <li>For the data: <a href="https://openintrostat.github.io/usdata/"><strong>usdata</strong></a>
 </li>
 </ul>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/OpenIntroStat/usdata">usdata</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/OpenIntroStat/usdata">usdata</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>For the analysis: <a href="https://www.tidyverse.org/packages/"><strong>tidyverse</strong></a> and <a href="https://jrnold.github.io/ggthemes/"><strong>ggthemes</strong></a>
 </li>
 </ul>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://jrnold.github.io/ggthemes/">ggthemes</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="from-last-time" class="level2 scrollable smaller"><h2 class="scrollable smaller anchored" data-anchor-id="from-last-time">From last time</h2>
+</section><section id="gerrymander" class="level2 small"><h2 class="small anchored" data-anchor-id="gerrymander"><code>gerrymander</code></h2>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">gerrymander</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 435
+Columns: 12
+$ district   &lt;chr&gt; "AK-AL", "AL-01", "AL-02", "AL-03", "AL-04", "AL-05", "AL-0…
+$ last_name  &lt;chr&gt; "Young", "Byrne", "Roby", "Rogers", "Aderholt", "Brooks", "…
+$ first_name &lt;chr&gt; "Don", "Bradley", "Martha", "Mike D.", "Rob", "Mo", "Gary",…
+$ party16    &lt;chr&gt; "R", "R", "R", "R", "R", "R", "R", "D", "R", "R", "R", "R",…
+$ clinton16  &lt;dbl&gt; 37.6, 34.1, 33.0, 32.3, 17.4, 31.3, 26.1, 69.8, 30.2, 41.7,…
+$ trump16    &lt;dbl&gt; 52.8, 63.5, 64.9, 65.3, 80.4, 64.7, 70.8, 28.6, 65.0, 52.4,…
+$ dem16      &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0,…
+$ state      &lt;chr&gt; "AK", "AL", "AL", "AL", "AL", "AL", "AL", "AL", "AR", "AR",…
+$ party18    &lt;chr&gt; "R", "R", "R", "R", "R", "R", "R", "D", "R", "R", "R", "R",…
+$ dem18      &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0,…
+$ flip18     &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,…
+$ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid, mi…</code></pre>
+</div>
+</div>
+</section><section id="research-question" class="level2"><h2 class="anchored" data-anchor-id="research-question">Research question</h2>
 <div class="question">
 <p>Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.</p>
 </div>
+</section><section id="step-1" class="level2"><h2 class="anchored" data-anchor-id="step-1">Step 1</h2>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">gerrymander</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">flip18</span>, fill <span class="op">=</span> <span class="va">gerry</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="05-exploring-data-2_files/figure-revealjs/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="from-last-time-1" class="level2 scrollable smaller"><h2 class="scrollable smaller anchored" data-anchor-id="from-last-time-1">From last time</h2>
-<div class="question">
-<p>Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.</p>
-</div>
-<div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">gerrymander</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">flip18</span>, fill <span class="op">=</span> <span class="va">gerry</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"dodge"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="05-exploring-data-2_files/figure-revealjs/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="from-last-time-2" class="level2 scrollable smaller"><h2 class="scrollable smaller anchored" data-anchor-id="from-last-time-2">From last time</h2>
-<div class="question">
-<p>Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.</p>
-</div>
-<div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">gerrymander</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">flip18</span>, fill <span class="op">=</span> <span class="va">gerry</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"fill"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">gerrymander</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="05-exploring-data-2_files/figure-revealjs/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="960"></p>
@@ -542,12 +610,80 @@ window.Quarto = {
 </div>
 </div>
 </div>
-</section><section id="from-last-time-3" class="level2 scrollable smaller"><h2 class="scrollable smaller anchored" data-anchor-id="from-last-time-3">From last time</h2>
+</section><section id="step-2" class="level2"><h2 class="anchored" data-anchor-id="step-2">Step 2</h2>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">gerrymander</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">flip18</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-exploring-data-2_files/figure-revealjs/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="step-3" class="level2"><h2 class="anchored" data-anchor-id="step-3">Step 3</h2>
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">gerrymander</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">flip18</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-exploring-data-2_files/figure-revealjs/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="step-4" class="level2"><h2 class="anchored" data-anchor-id="step-4">Step 4</h2>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">gerrymander</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">flip18</span>, fill <span class="op">=</span> <span class="va">gerry</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-exploring-data-2_files/figure-revealjs/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="step-5a" class="level2"><h2 class="anchored" data-anchor-id="step-5a">Step 5a</h2>
+<div class="cell">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">gerrymander</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">flip18</span>, fill <span class="op">=</span> <span class="va">gerry</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"dodge"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-exploring-data-2_files/figure-revealjs/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="step-5b" class="level2"><h2 class="anchored" data-anchor-id="step-5b">Step 5b</h2>
+<div class="cell">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">gerrymander</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">flip18</span>, fill <span class="op">=</span> <span class="va">gerry</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"fill"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-exploring-data-2_files/figure-revealjs/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="whats-the-answer" class="level2 small"><h2 class="small anchored" data-anchor-id="whats-the-answer">What’s the answer?</h2>
 <div class="question">
-<p>Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.</p>
+<p>Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election?</p>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">gerrymander</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">flip18</span>, fill <span class="op">=</span> <span class="va">gerry</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"fill"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-exploring-data-2_files/figure-revealjs/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="what-are-the-actual-numbers" class="level2 scrollable smaller"><h2 class="scrollable smaller anchored" data-anchor-id="what-are-the-actual-numbers">What are the actual numbers?</h2>
+<div class="question">
+<p>Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election?</p>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">flip18</span>, <span class="va">gerry</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">flip18</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>prop <span class="op">=</span> <span class="va">n</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -566,9 +702,9 @@ window.Quarto = {
 8      1 high      5 0.132</code></pre>
 </div>
 </div>
-</section><section id="step-1" class="level2 scrollable medium"><h2 class="scrollable medium anchored" data-anchor-id="step-1">Step 1</h2>
+</section><section id="step-1-1" class="level2 scrollable medium"><h2 class="scrollable medium anchored" data-anchor-id="step-1-1">Step 1</h2>
 <div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 435 × 12
    district last_name first_name party16 clinton16 trump16 dem16 state party18
@@ -587,9 +723,9 @@ window.Quarto = {
 # ℹ 3 more variables: dem18 &lt;dbl&gt;, flip18 &lt;dbl&gt;, gerry &lt;fct&gt;</code></pre>
 </div>
 </div>
-</section><section id="step-2" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="step-2">Step 2</h2>
+</section><section id="step-2-1" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="step-2-1">Step 2</h2>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">flip18</span>, <span class="va">gerry</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 8 × 3
@@ -605,9 +741,20 @@ window.Quarto = {
 8      1 high      5</code></pre>
 </div>
 </div>
-</section><section id="step-3" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="step-3">Step 3</h2>
+</section><section id="recall" class="level2"><h2 class="anchored" data-anchor-id="recall">Recall</h2>
 <div class="cell">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">gerrymander</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">flip18</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-exploring-data-2_files/figure-revealjs/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="step-3-1" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="step-3-1">Step 3</h2>
+<div class="cell">
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">flip18</span>, <span class="va">gerry</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">flip18</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -625,9 +772,9 @@ window.Quarto = {
 8      1 high      5</code></pre>
 </div>
 </div>
-</section><section id="step-4" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="step-4">Step 4</h2>
+</section><section id="step-4-1" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="step-4-1">Step 4</h2>
 <div class="cell">
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">flip18</span>, <span class="va">gerry</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">flip18</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>prop <span class="op">=</span> <span class="va">n</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -646,9 +793,31 @@ window.Quarto = {
 8      1 high      5 0.132</code></pre>
 </div>
 </div>
-</section><section id="same-thing-without-the-pipe" class="level2 scrollable small"><h2 class="scrollable small anchored" data-anchor-id="same-thing-without-the-pipe">Same thing, without the pipe</h2>
+</section><section id="the-full-monty" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="the-full-monty">The Full Monty</h2>
+<div class="question">
+<p>Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat flipped the seat in the 2018 election? (<code>flip18</code> = 1: Democrat flipped the seat, 0: No flip, -1: Republican flipped the seat.)</p>
+</div>
+<div class="columns">
+<div class="column">
 <div class="cell">
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">gerrymander</span>, <span class="va">flip18</span>, <span class="va">gerry</span><span class="op">)</span>, <span class="va">flip18</span><span class="op">)</span>, prop <span class="op">=</span> <span class="va">n</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
+<span>  <span class="va">gerrymander</span>, </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">flip18</span>, fill <span class="op">=</span> <span class="va">gerry</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"fill"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="05-exploring-data-2_files/figure-revealjs/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column">
+<div class="cell">
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">flip18</span>, <span class="va">gerry</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">flip18</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>prop <span class="op">=</span> <span class="va">n</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 8 × 4
 # Groups:   flip18 [3]
@@ -664,19 +833,95 @@ window.Quarto = {
 8      1 high      5 0.132</code></pre>
 </div>
 </div>
-</section><section id="with-the-pipe" class="level2"><h2 class="anchored" data-anchor-id="with-the-pipe">With the pipe</h2>
-<p><img src="images/05/dolls_pipe.png" class="img-fluid"></p>
+</div>
+</div>
+</section><section id="new-commands" class="level2"><h2 class="anchored" data-anchor-id="new-commands">New commands</h2>
+<ul>
+<li><p><code>count</code> creates a <em>new</em> data frame that tallies up the number of rows that fall into each bin;</p></li>
+<li><p><code>group_by</code> silently <em>groups</em> the rows according to bin, and all subsequent operations are done <em>within</em> group;</p></li>
+<li>
+<p><code>mutate</code> either adds new columns that aren’t already there, or modifies existing columns.</p>
+<ul>
+<li>we used it to add a <code>prop</code> column that wasn’t there before;</li>
+<li>because the table of counts is <em>grouped</em>, the proportions were computed <em>within</em> each level of <code>flip18</code>.</li>
+</ul>
+</li>
+</ul></section></section><section id="that-pesky-pipe" class="level1"><h1>That pesky pipe</h1>
+<section id="we-teach-you-to-do-this" class="level2"><h2 class="anchored" data-anchor-id="we-teach-you-to-do-this">We teach you to do this</h2>
+<div class="cell">
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">flip18</span>, <span class="va">gerry</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">flip18</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>prop <span class="op">=</span> <span class="va">n</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 4
+# Groups:   flip18 [3]
+  flip18 gerry     n  prop
+   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt; &lt;dbl&gt;
+1     -1 low       2 0.4  
+2     -1 mid       3 0.6  
+3      0 low      52 0.133
+4      0 mid     242 0.617
+5      0 high     98 0.25 
+6      1 low       8 0.211
+7      1 mid      25 0.658
+8      1 high      5 0.132</code></pre>
+</div>
+</div>
+</section><section id="you-could-do-this-instead" class="level2 scrollable small"><h2 class="scrollable small anchored" data-anchor-id="you-could-do-this-instead">You could do this instead</h2>
+<p>Technically equivalent. Gives the same result. <em>Super</em> hard to read:</p>
+<div class="cell">
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">gerrymander</span>, <span class="va">flip18</span>, <span class="va">gerry</span><span class="op">)</span>, <span class="va">flip18</span><span class="op">)</span>, prop <span class="op">=</span> <span class="va">n</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 4
+# Groups:   flip18 [3]
+  flip18 gerry     n  prop
+   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt; &lt;dbl&gt;
+1     -1 low       2 0.4  
+2     -1 mid       3 0.6  
+3      0 low      52 0.133
+4      0 mid     242 0.617
+5      0 high     98 0.25 
+6      1 low       8 0.211
+7      1 mid      25 0.658
+8      1 high      5 0.132</code></pre>
+</div>
+</div>
 </section><section id="without-the-pipe" class="level2"><h2 class="anchored" data-anchor-id="without-the-pipe">Without the pipe</h2>
 <p><img src="images/05/dolls_nest.png" class="img-fluid"></p>
-</section></section><section id="group_by-summarize-count" class="level1"><h1>
-<code>group_by()</code>, <code>summarize()</code>, <code>count()</code>
+</section><section id="with-the-pipe" class="level2"><h2 class="anchored" data-anchor-id="with-the-pipe">With the pipe</h2>
+<p><img src="images/05/dolls_pipe.png" class="img-fluid"></p>
+</section><section id="in-this-class-you-will" class="level2"><h2 class="anchored" data-anchor-id="in-this-class-you-will">In this class, you will…</h2>
+<div class="columns">
+<div class="column" style="width:35%;">
+<p>Build cakes (<code>ggplot</code>) <img src="images/03/cake.jpg" class="img-fluid"></p>
+</div><div class="column" style="width:65%;">
+<p>Stack dolls (pipe <code>|&gt;</code>) <img src="images/03/matryoshka.jpg" class="img-fluid"></p>
+</div>
+</div>
+<p>Master these constructs, and everything will be coming up roses!</p>
+</section><section id="secrets-of-the-temple" class="level2"><h2 class="anchored" data-anchor-id="secrets-of-the-temple">(Secrets of the temple)</h2>
+<p>For all you CS people and prospective stats majors:</p>
+<div class="incremental">
+<ul class="incremental">
+<li>There is more to <code>R</code> than ggplot and <code>|&gt;</code>;</li>
+<li>It’s a proper programming language like Python, C++, Java, etc;
+<ul class="incremental">
+<li>control flow, data structures, OOP, all that good stuff;</li>
+</ul>
+</li>
+<li>In STAWANANA, we suppress that and teach you a very specific <em>dialect</em> of <code>R</code> called the <code>tidyverse</code>;</li>
+<li>Keep studying stats, and we show you how to use the whole language to do statistical <em>computing</em>, not just data science.</li>
+</ul>
+</div>
+</section></section><section id="drilling-down-group_by-summarize-count" class="level1"><h1>Drilling down: <br><code>group_by()</code>, <br><code>summarize()</code>, <br><code>count()</code>
 </h1>
 <section id="what-does-group_by-do" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="what-does-group_by-do">What does <code>group_by()</code> do?</h2>
 <div class="question">
 <p>What does <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code> do in the following pipeline?</p>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">flip18</span>, <span class="va">gerry</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">flip18</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>prop <span class="op">=</span> <span class="va">n</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -700,7 +945,7 @@ window.Quarto = {
 <p>What does <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code> do in the following pipeline?</p>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">flip18</span>, <span class="va">gerry</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="co">#group_by(flip18) |&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>prop <span class="op">=</span> <span class="va">n</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -723,7 +968,7 @@ window.Quarto = {
 <p>What does <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code> do in the following pipeline?</p>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">state</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>mean_trump16 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">trump16</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -748,7 +993,7 @@ window.Quarto = {
 <p>What does <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code> do in the following pipeline?</p>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
 <span>  <span class="co">#group_by(state) |&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>mean_trump16 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">trump16</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -764,7 +1009,7 @@ window.Quarto = {
 <li><p><code><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup()</a></code> removes grouping</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">state</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 435 × 12
@@ -791,7 +1036,7 @@ window.Quarto = {
 <li><p><code><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup()</a></code> removes grouping</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">state</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -815,7 +1060,7 @@ window.Quarto = {
 </section><section id="group_by-summarize" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="group_by-summarize"><code>group_by() |&gt; summarize()</code></h2>
 <p>A common pipeline is <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code> and then <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize()</a></code> to <strong>calculate</strong> summary statistics for each group:</p>
 <div class="cell">
-<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">state</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span></span>
 <span>    mean_trump16 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">trump16</span><span class="op">)</span>,</span>
@@ -841,7 +1086,7 @@ window.Quarto = {
 </section><section id="group_by-summarize-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="group_by-summarize-1"><code>group_by() |&gt; summarize()</code></h2>
 <p>This pipeline can also be used to <strong>count</strong> number of observations for each group:</p>
 <div class="cell">
-<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">state</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -862,7 +1107,7 @@ window.Quarto = {
 </div>
 </div>
 </section><section id="summarize" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="summarize"><code>summarize()</code></h2>
-<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">...</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">...</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span></span>
 <span>    name_of_summary_statistic <span class="op">=</span> <span class="fu">summary_function</span><span class="op">(</span><span class="va">variable</span><span class="op">)</span></span>
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -893,7 +1138,7 @@ window.Quarto = {
 <div class="columns">
 <div class="column">
 <div class="cell">
-<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb48"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">state</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -915,7 +1160,7 @@ window.Quarto = {
 </div>
 </div><div class="column">
 <div class="cell">
-<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb50"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">state</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 50 × 2
@@ -939,10 +1184,10 @@ window.Quarto = {
 </section><section id="count" class="level2"><h2 class="anchored" data-anchor-id="count"><code>count()</code></h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">...</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb52"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">...</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">variable</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:60%;">
-<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">...</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb53"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">...</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">variable1</span>, <span class="va">variable2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
@@ -956,7 +1201,7 @@ window.Quarto = {
 <p>What does the following pipeline do? Rewrite it with <code><a href="https://dplyr.tidyverse.org/reference/count.html">count()</a></code> instead.</p>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb54"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">state</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -984,7 +1229,7 @@ window.Quarto = {
 <p>What does the following pipeline do? Rewrite it with <code><a href="https://dplyr.tidyverse.org/reference/count.html">count()</a></code> instead.</p>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb56"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">state</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1011,7 +1256,7 @@ window.Quarto = {
 <p>What does the following pipeline do? Rewrite it with <code><a href="https://dplyr.tidyverse.org/reference/count.html">count()</a></code> instead.</p>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb58"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">state</span>, sort <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 50 × 2
@@ -1066,7 +1311,7 @@ Note
 <div class="columns">
 <div class="column">
 <div class="cell">
-<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb60"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span></span>
 <span>  <span class="va">gerrymander</span>, </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">gerry</span>, fill <span class="op">=</span> <span class="va">flip18</span><span class="op">)</span></span>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
@@ -1083,7 +1328,7 @@ Note
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="05-exploring-data-2_files/figure-revealjs/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="05-exploring-data-2_files/figure-revealjs/unnamed-chunk-36-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1093,7 +1338,7 @@ Note
 </section><section id="another-glimpse-at-gerrymander" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="another-glimpse-at-gerrymander">Another glimpse at <code>gerrymander</code>
 </h2>
 <div class="cell">
-<div class="sourceCode" id="cb49"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">gerrymander</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb62"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">gerrymander</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 435
 Columns: 12
@@ -1117,11 +1362,13 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 <li><p>But it’s stored as a numeric</p></li>
 <li><p>So we need to change its type first, before we can use it as a categorical variable</p></li>
 <li><p>The <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> function transforms (<em>mutates</em>) a data frame by creating a new column or updating an existing one</p></li>
-</ul></section><section id="mutate-in-action" class="level2 scrollable small"><h2 class="scrollable small anchored" data-anchor-id="mutate-in-action">
+</ul>
+<p>In this case, we want to use it to update an existing column, <code>flip18</code>.</p>
+</section><section id="mutate-in-action" class="level2 scrollable small"><h2 class="scrollable small anchored" data-anchor-id="mutate-in-action">
 <code>mutate()</code> in action</h2>
 <div class="cell">
-<div class="sourceCode" id="cb51"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>flip18 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">flip18</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb64"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>flip18 <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/as_factor.html">as_factor</a></span><span class="op">(</span><span class="va">flip18</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 435 × 12
    district last_name first_name party16 clinton16 trump16 dem16 state party18
@@ -1143,8 +1390,8 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 </section><section id="mutate-in-action-1" class="level2 scrollable small"><h2 class="scrollable small anchored" data-anchor-id="mutate-in-action-1">
 <code>mutate()</code> in action</h2>
 <div class="cell">
-<div class="sourceCode" id="cb53"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>flip18 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">flip18</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb66"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>flip18 <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/as_factor.html">as_factor</a></span><span class="op">(</span><span class="va">flip18</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/relocate.html">relocate</a></span><span class="op">(</span><span class="va">flip18</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 435 × 12
@@ -1164,19 +1411,151 @@ $ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid
 # ℹ 3 more variables: party18 &lt;chr&gt;, dem18 &lt;dbl&gt;, gerry &lt;fct&gt;</code></pre>
 </div>
 </div>
-</section><section id="revisit-the-plot" class="level2 scrollable medium"><h2 class="scrollable medium anchored" data-anchor-id="revisit-the-plot">Revisit the plot</h2>
+</section><section id="revisit-the-plot" class="level2 scrollable small"><h2 class="scrollable small anchored" data-anchor-id="revisit-the-plot">Revisit the plot</h2>
 <div class="question">
 <p>“Is a Congressional District more likely to be flipped to a Democratic seat if it has high prevalence of gerrymandering or low prevalence of gerrymandering?”</p>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb55"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>flip18 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">flip18</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb68"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>flip18 <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/as_factor.html">as_factor</a></span><span class="op">(</span><span class="va">flip18</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">gerry</span>, fill <span class="op">=</span> <span class="va">flip18</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"fill"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="05-exploring-data-2_files/figure-revealjs/unnamed-chunk-30-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="05-exploring-data-2_files/figure-revealjs/unnamed-chunk-40-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
+</div>
+</div>
+</div>
+</section><section id="mutate-and-overwrite" class="level2"><h2 class="anchored" data-anchor-id="mutate-and-overwrite">
+<code>mutate()</code> and overwrite</h2>
+<p>You can overwrite an existing variable with <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code>:</p>
+<div class="cell">
+<div class="sourceCode" id="cb69"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>flip18 <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/as_factor.html">as_factor</a></span><span class="op">(</span><span class="va">flip18</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">district</span>, <span class="va">flip18</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 435 × 2
+   district flip18
+   &lt;chr&gt;    &lt;fct&gt; 
+ 1 AK-AL    0     
+ 2 AL-01    0     
+ 3 AL-02    0     
+ 4 AL-03    0     
+ 5 AL-04    0     
+ 6 AL-05    0     
+ 7 AL-06    0     
+ 8 AL-07    0     
+ 9 AR-01    0     
+10 AR-02    0     
+# ℹ 425 more rows</code></pre>
+</div>
+</div>
+</section><section id="mutate-and-if_else" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="mutate-and-if_else">
+<code>mutate()</code> and <code>if_else()</code>
+</h2>
+<p>Use <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> with <code><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else()</a></code> to recode with an either/or logic:</p>
+<blockquote class="blockquote">
+<p>If <code>party16</code> is “D”, recode it as “Democrat”, otherwise recode it as “Republican”.</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1"></a>gerrymander <span class="sc">|&gt;</span></span>
+<span id="cb71-2"><a href="#cb71-2"></a>  <span class="fu">mutate</span>(<span class="at">party16_expanded =</span> <span class="fu">if_else</span>(party16 <span class="sc">==</span> <span class="st">"D"</span>, <span class="st">"Democrat"</span>, <span class="st">"Republican"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb71-3"><a href="#cb71-3"></a>  <span class="fu">select</span>(district, party16, party16_expanded)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 435 × 3
+   district party16 party16_expanded
+   &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;           
+ 1 AK-AL    R       Republican      
+ 2 AL-01    R       Republican      
+ 3 AL-02    R       Republican      
+ 4 AL-03    R       Republican      
+ 5 AL-04    R       Republican      
+ 6 AL-05    R       Republican      
+ 7 AL-06    R       Republican      
+ 8 AL-07    D       Democrat        
+ 9 AR-01    R       Republican      
+10 AR-02    R       Republican      
+# ℹ 425 more rows</code></pre>
+</div>
+</div>
+</section><section id="mutate-and-case_when" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="mutate-and-case_when">
+<code>mutate()</code> and <code>case_when()</code>
+</h2>
+<p>Use <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> with <code><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when()</a></code> to recode with a more complex logic:</p>
+<blockquote class="blockquote">
+<p>If <code>flip18</code> is 1, recode it as “Democrat flipped”, if <code>flip18</code> is 0, recode it as “No flip”, and if <code>flip18</code> is -1, recode it as “Republican flipped”.</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode" id="cb73"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    flip18_expanded <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
+<span>      <span class="va">flip18</span> <span class="op">==</span> <span class="fl">1</span> <span class="op">~</span> <span class="st">"Democrat flipped"</span>,</span>
+<span>      <span class="va">flip18</span> <span class="op">==</span> <span class="fl">0</span> <span class="op">~</span> <span class="st">"No flip"</span>,</span>
+<span>      <span class="va">flip18</span> <span class="op">==</span> <span class="op">-</span><span class="fl">1</span> <span class="op">~</span> <span class="st">"Republican flipped"</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">district</span>, <span class="va">flip18</span>, <span class="va">flip18_expanded</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">flip18</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="co"># group by flip type</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice_head</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="co"># show top row per group</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+# Groups:   flip18 [3]
+  district flip18 flip18_expanded   
+  &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;             
+1 MN-01        -1 Republican flipped
+2 AK-AL         0 No flip           
+3 AZ-02         1 Democrat flipped  </code></pre>
+</div>
+</div>
+</section><section id="mutate-and-store" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="mutate-and-store">
+<code>mutate()</code> and store</h2>
+<p>If you want to keep your changes, you need to store the data frame after <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code>:</p>
+<div class="columns">
+<div class="column">
+<div class="cell">
+<div class="sourceCode" id="cb75"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    p16 <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="va">party16</span> <span class="op">==</span> <span class="st">"D"</span>, <span class="st">"Dem"</span>, <span class="st">"Rep"</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">district</span>, <span class="va">p16</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice_head</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="co"># show top 3 rows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  district p16  
+  &lt;chr&gt;    &lt;chr&gt;
+1 AK-AL    Rep  
+2 AL-01    Rep  
+3 AL-02    Rep  </code></pre>
+</div>
+<div class="sourceCode" id="cb77"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">district</span>, <span class="va">p16</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `select()`:
+! Can't select columns that don't exist.
+✖ Column `p16` doesn't exist.</code></pre>
+</div>
+</div>
+</div>
+<div class="column fragment">
+<div class="cell">
+<div class="sourceCode" id="cb79"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gerrymander</span> <span class="op">&lt;-</span> <span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    p16 <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="va">party16</span> <span class="op">==</span> <span class="st">"D"</span>, <span class="st">"Dem"</span>, <span class="st">"Rep"</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">district</span>, <span class="va">p16</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">gerrymander</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">district</span>, <span class="va">p16</span><span class="op">)</span>  <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice_head</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="co"># show top 3 rows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  district p16  
+  &lt;chr&gt;    &lt;chr&gt;
+1 AK-AL    Rep  
+2 AL-01    Rep  
+3 AL-02    Rep  </code></pre>
+</div>
 </div>
 </div>
 </div>

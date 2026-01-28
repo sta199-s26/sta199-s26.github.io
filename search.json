@@ -139,7 +139,7 @@
     "href": "syllabus/syllabus-overview.html#meetings",
     "title": "Course overview",
     "section": "Meetings",
-    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLecture\nBryan Center Griffith Theater\nMoWe 11:45 AM - 01:00 PM\nJohn Z\nSarah\nTBD\n\n\nLab 01\nPerkins LINK 087 (Classroom 3)\nTh 08:30 AM - 09:45 AM\nAbuzar\nChelsea\n\n\nLab 02\nPerkins LINK 087 (Classroom 3)\nTh 10:05 AM - 11:20 AM\nFederico\nMax\n\n\nLab 03\nPerkins LINK 071 (Classroom 5)\nTh 10:05 AM - 11:20 AM\nSarah\nLisa\n\n\nLab 04\nPerkins LINK 087 (Classroom 3)\nTh 11:45 AM - 01:00 PM\nHyunjin\nLiane\n\n\nLab 05\nPerkins LINK 071 (Classroom 5)\nTh 11:45 AM - 01:00 PM\nKenna\nEdward\n\n\nLab 06\nPerkins LINK 087 (Classroom 3)\nTh 01:25 PM - 02:40 PM\nArijit\nOliver\n\n\nLab 07\nPerkins LINK 071 (Classroom 5)\nTh 01:25 PM - 02:40 PM\nKatie\nBethany\n\n\nLab 08\nPerkins LINK 087 (Classroom 3)\nTh 03:05 PM - 04:20 PM\nCael\nTBD\n\n\nLab 09\nPerkins LINK 071 (Classroom 5)\nTh 03:05 PM - 04:20 PM\nJannis\nPatrick\n\n\nLab 10\nPerkins LINK 071 (Classroom 5)\nTh 04:40 PM - 05:55 PM\nDwija\nNatasha",
+    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLecture\nBryan Center Griffith Theater\nMoWe 11:45 AM - 01:00 PM\nJohn Z\nSarah\nHyunjin\nKatie\n\n\nLab 01\nPerkins LINK 087 (Classroom 3)\nTh 08:30 AM - 09:45 AM\nAbuzar\nChelsea\n\n\nLab 02\nPerkins LINK 087 (Classroom 3)\nTh 10:05 AM - 11:20 AM\nFederico\nMax\n\n\nLab 03\nPerkins LINK 071 (Classroom 5)\nTh 10:05 AM - 11:20 AM\nSarah\nLisa\n\n\nLab 04\nPerkins LINK 087 (Classroom 3)\nTh 11:45 AM - 01:00 PM\nHyunjin\nLiane\n\n\nLab 05\nPerkins LINK 071 (Classroom 5)\nTh 11:45 AM - 01:00 PM\nKenna\nEdward\n\n\nLab 06\nPerkins LINK 087 (Classroom 3)\nTh 01:25 PM - 02:40 PM\nArijit\nOliver\n\n\nLab 07\nPerkins LINK 071 (Classroom 5)\nTh 01:25 PM - 02:40 PM\nKatie\nBethany\n\n\nLab 08\nPerkins LINK 087 (Classroom 3)\nTh 03:05 PM - 04:20 PM\nCael\nTBD\n\n\nLab 09\nPerkins LINK 071 (Classroom 5)\nTh 03:05 PM - 04:20 PM\nJannis\nPatrick\n\n\nLab 10\nPerkins LINK 071 (Classroom 5)\nTh 04:40 PM - 05:55 PM\nDwija\nNatasha",
     "crumbs": [
       "Syllabus",
       "Overview"
@@ -1088,32 +1088,11 @@
     "text": "While you wait…\nPrepare for today’s application exercise: ae-05-gerrymander-explore-II\n\n\nGo to your ae project in RStudio.\nMake sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.\nClick Pull to get today’s application exercise file: ae-05-gerrymander-explore-II.qmd.\nWait till the you’re prompted to work on the application exercise during class before editing the file."
   },
   {
-    "objectID": "slides/05-exploring-data-2-slides.html#susan-announcement",
-    "href": "slides/05-exploring-data-2-slides.html#susan-announcement",
+    "objectID": "slides/05-exploring-data-2-slides.html#reminder-hw-guidelines",
+    "href": "slides/05-exploring-data-2-slides.html#reminder-hw-guidelines",
     "title": "Exploring data II",
-    "section": "SUSAN ANNOUNCEMENT",
-    "text": "SUSAN ANNOUNCEMENT"
-  },
-  {
-    "objectID": "slides/05-exploring-data-2-slides.html#ashley-announcement",
-    "href": "slides/05-exploring-data-2-slides.html#ashley-announcement",
-    "title": "Exploring data II",
-    "section": "ASHLEY ANNOUNCEMENT",
-    "text": "ASHLEY ANNOUNCEMENT"
-  },
-  {
-    "objectID": "slides/05-exploring-data-2-slides.html#some-other-thing",
-    "href": "slides/05-exploring-data-2-slides.html#some-other-thing",
-    "title": "Exploring data II",
-    "section": "SOME OTHER THING",
-    "text": "SOME OTHER THING"
-  },
-  {
-    "objectID": "slides/05-exploring-data-2-slides.html#reminder-lab-guidelines",
-    "href": "slides/05-exploring-data-2-slides.html#reminder-lab-guidelines",
-    "title": "Exploring data II",
-    "section": "Reminder: Lab guidelines",
-    "text": "Reminder: Lab guidelines\n\n\nPlots should include an informative title, axes and legends should have human-readable labels, and careful consideration should be given to aesthetic choices.\n\nCode should follow the tidyverse style (style.tidyverse.org) Particularly,\n\nspace before and line breaks after each + when building a ggplot\n\nspace before and line breaks after each |&gt; in a data transformation pipeline\ncode should be properly indented\nspaces around = signs and spaces after commas\n\n\nProofread your rendered PDF before submission! We cannot give you points for stuff we cannot see, so make sure your code and output is not running off the page. Use line breaks.\nAt least three commits with meaningful commit messages."
+    "section": "Reminder: HW guidelines",
+    "text": "Reminder: HW guidelines\n\nPlots should include an informative title, axes and legends should have human-readable labels, and careful consideration should be given to aesthetic choices.\n\nCode should follow the tidyverse style (style.tidyverse.org) Particularly,\n\nspace before and line breaks after each + when building a ggplot\n\nspace before and line breaks after each |&gt; in a data transformation pipeline\ncode should be properly indented\nspaces around = signs and spaces after commas\n\n\nProofread your rendered PDF before submission! We cannot give you points for stuff we cannot see, so make sure your code and output is not running off the page. Use line breaks.\nAt least three commits with meaningful commit messages."
   },
   {
     "objectID": "slides/05-exploring-data-2-slides.html#code-style-and-readability",
@@ -1123,6 +1102,20 @@
     "text": "Code style and readability\n\nWhydowecareaboutthestyleandreadabilityofyourcode? \\(\\rightarrow\\) Why do we care about the style and readability of your code?\n\n\n\n\nJe voudrais un cafe \\(\\rightarrow\\) Je voudrais un café"
   },
   {
+    "objectID": "slides/05-exploring-data-2-slides.html#what-data-viz-should-i-use",
+    "href": "slides/05-exploring-data-2-slides.html#what-data-viz-should-i-use",
+    "title": "Exploring data II",
+    "section": "What data viz should I use?",
+    "text": "What data viz should I use?\nAfter a while this is more art than science, but you can narrow down the options based on the number and type of variables:\n\n\n\n\n\n\n\nVariable combo\nOptions\n\n\n\n1 numerical\nhistogram, density, box plot\n\n\n1 categorical\nbar chart, pie chart\n\n\n\n2 numerical\nscatterplot\n\n\nnumerical/categorical\nside-by-side box or violin plots, stacked densities or histograms\n\n\n2 categorical\nstacked bar plot (today)\n\n\n\n\n\nFor three or more variables, the human mind is limited, and you have to start getting creative (play with color, texture, etc)."
+  },
+  {
+    "objectID": "slides/05-exploring-data-2-slides.html#pics-are-nice-but-what-are-the-numbers",
+    "href": "slides/05-exploring-data-2-slides.html#pics-are-nice-but-what-are-the-numbers",
+    "title": "Exploring data II",
+    "section": "Pics are nice, but what are the numbers?",
+    "text": "Pics are nice, but what are the numbers?\n\ngerrymander |&gt;\n  summarize(\n    gimme_my_mean = mean(trump16),\n    gimme_my_median = median(trump16)\n  )\n\n\n\nsummarize creates a new data frame that stores the summaries;\nYou can compute as many summaries as you want;\nTo the left of the equal signs are your choice of column names in the new data frame you are creating. You can type whatever you want here (within reason);\nTo the right of the equal signs is R code that computes the summaries. You must use the correct command names (case sensitive): mean, median, quantile, sd, var, etc;\nIf you want to learn what these do, read the documentation (eg ?quantile)."
+  },
+  {
     "objectID": "slides/05-exploring-data-2-slides.html#packages",
     "href": "slides/05-exploring-data-2-slides.html#packages",
     "title": "Exploring data II",
@@ -1130,67 +1123,144 @@
     "text": "Packages\n\nFor the data: usdata\n\n\n\nlibrary(usdata)\n\n\nFor the analysis: tidyverse and ggthemes\n\n\n\nlibrary(tidyverse)\nlibrary(ggthemes)"
   },
   {
-    "objectID": "slides/05-exploring-data-2-slides.html#from-last-time",
-    "href": "slides/05-exploring-data-2-slides.html#from-last-time",
+    "objectID": "slides/05-exploring-data-2-slides.html#gerrymander",
+    "href": "slides/05-exploring-data-2-slides.html#gerrymander",
     "title": "Exploring data II",
-    "section": "From last time",
-    "text": "From last time\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.\n\n\nggplot(gerrymander, aes(x = flip18, fill = gerry)) +\n  geom_bar()"
+    "section": "gerrymander",
+    "text": "gerrymander\n\nglimpse(gerrymander)\n\nRows: 435\nColumns: 12\n$ district   &lt;chr&gt; \"AK-AL\", \"AL-01\", \"AL-02\", \"AL-03\", \"AL-04\", \"AL-05\", \"AL-0…\n$ last_name  &lt;chr&gt; \"Young\", \"Byrne\", \"Roby\", \"Rogers\", \"Aderholt\", \"Brooks\", \"…\n$ first_name &lt;chr&gt; \"Don\", \"Bradley\", \"Martha\", \"Mike D.\", \"Rob\", \"Mo\", \"Gary\",…\n$ party16    &lt;chr&gt; \"R\", \"R\", \"R\", \"R\", \"R\", \"R\", \"R\", \"D\", \"R\", \"R\", \"R\", \"R\",…\n$ clinton16  &lt;dbl&gt; 37.6, 34.1, 33.0, 32.3, 17.4, 31.3, 26.1, 69.8, 30.2, 41.7,…\n$ trump16    &lt;dbl&gt; 52.8, 63.5, 64.9, 65.3, 80.4, 64.7, 70.8, 28.6, 65.0, 52.4,…\n$ dem16      &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0,…\n$ state      &lt;chr&gt; \"AK\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AR\", \"AR\",…\n$ party18    &lt;chr&gt; \"R\", \"R\", \"R\", \"R\", \"R\", \"R\", \"R\", \"D\", \"R\", \"R\", \"R\", \"R\",…\n$ dem18      &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0,…\n$ flip18     &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,…\n$ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid, mi…"
   },
   {
-    "objectID": "slides/05-exploring-data-2-slides.html#from-last-time-1",
-    "href": "slides/05-exploring-data-2-slides.html#from-last-time-1",
+    "objectID": "slides/05-exploring-data-2-slides.html#research-question",
+    "href": "slides/05-exploring-data-2-slides.html#research-question",
     "title": "Exploring data II",
-    "section": "From last time",
-    "text": "From last time\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.\n\n\nggplot(gerrymander, aes(x = flip18, fill = gerry)) +\n  geom_bar(position = \"dodge\")"
-  },
-  {
-    "objectID": "slides/05-exploring-data-2-slides.html#from-last-time-2",
-    "href": "slides/05-exploring-data-2-slides.html#from-last-time-2",
-    "title": "Exploring data II",
-    "section": "From last time",
-    "text": "From last time\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.\n\n\nggplot(gerrymander, aes(x = flip18, fill = gerry)) +\n  geom_bar(position = \"fill\")"
-  },
-  {
-    "objectID": "slides/05-exploring-data-2-slides.html#from-last-time-3",
-    "href": "slides/05-exploring-data-2-slides.html#from-last-time-3",
-    "title": "Exploring data II",
-    "section": "From last time",
-    "text": "From last time\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.\n\n\ngerrymander |&gt;\n  count(flip18, gerry) |&gt;\n  group_by(flip18) |&gt;\n  mutate(prop = n / sum(n))\n\n# A tibble: 8 × 4\n# Groups:   flip18 [3]\n  flip18 gerry     n  prop\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt; &lt;dbl&gt;\n1     -1 low       2 0.4  \n2     -1 mid       3 0.6  \n3      0 low      52 0.133\n4      0 mid     242 0.617\n5      0 high     98 0.25 \n6      1 low       8 0.211\n7      1 mid      25 0.658\n8      1 high      5 0.132"
+    "section": "Research question",
+    "text": "Research question\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics."
   },
   {
     "objectID": "slides/05-exploring-data-2-slides.html#step-1",
     "href": "slides/05-exploring-data-2-slides.html#step-1",
     "title": "Exploring data II",
     "section": "Step 1",
-    "text": "Step 1\n\ngerrymander\n\n# A tibble: 435 × 12\n   district last_name first_name party16 clinton16 trump16 dem16 state party18\n   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  \n 1 AK-AL    Young     Don        R            37.6    52.8     0 AK    R      \n 2 AL-01    Byrne     Bradley    R            34.1    63.5     0 AL    R      \n 3 AL-02    Roby      Martha     R            33      64.9     0 AL    R      \n 4 AL-03    Rogers    Mike D.    R            32.3    65.3     0 AL    R      \n 5 AL-04    Aderholt  Rob        R            17.4    80.4     0 AL    R      \n 6 AL-05    Brooks    Mo         R            31.3    64.7     0 AL    R      \n 7 AL-06    Palmer    Gary       R            26.1    70.8     0 AL    R      \n 8 AL-07    Sewell    Terri      D            69.8    28.6     1 AL    D      \n 9 AR-01    Crawford  Rick       R            30.2    65       0 AR    R      \n10 AR-02    Hill      French     R            41.7    52.4     0 AR    R      \n# ℹ 425 more rows\n# ℹ 3 more variables: dem18 &lt;dbl&gt;, flip18 &lt;dbl&gt;, gerry &lt;fct&gt;"
+    "text": "Step 1\n\nggplot(gerrymander)"
   },
   {
     "objectID": "slides/05-exploring-data-2-slides.html#step-2",
     "href": "slides/05-exploring-data-2-slides.html#step-2",
     "title": "Exploring data II",
     "section": "Step 2",
-    "text": "Step 2\n\ngerrymander |&gt;\n  count(flip18, gerry)\n\n# A tibble: 8 × 3\n  flip18 gerry     n\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt;\n1     -1 low       2\n2     -1 mid       3\n3      0 low      52\n4      0 mid     242\n5      0 high     98\n6      1 low       8\n7      1 mid      25\n8      1 high      5"
+    "text": "Step 2\n\nggplot(gerrymander, aes(x = flip18))"
   },
   {
     "objectID": "slides/05-exploring-data-2-slides.html#step-3",
     "href": "slides/05-exploring-data-2-slides.html#step-3",
     "title": "Exploring data II",
     "section": "Step 3",
-    "text": "Step 3\n\ngerrymander |&gt;\n  count(flip18, gerry) |&gt;\n  group_by(flip18)\n\n# A tibble: 8 × 3\n# Groups:   flip18 [3]\n  flip18 gerry     n\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt;\n1     -1 low       2\n2     -1 mid       3\n3      0 low      52\n4      0 mid     242\n5      0 high     98\n6      1 low       8\n7      1 mid      25\n8      1 high      5"
+    "text": "Step 3\n\nggplot(gerrymander, aes(x = flip18)) +\n  geom_bar()"
   },
   {
     "objectID": "slides/05-exploring-data-2-slides.html#step-4",
     "href": "slides/05-exploring-data-2-slides.html#step-4",
     "title": "Exploring data II",
     "section": "Step 4",
+    "text": "Step 4\n\nggplot(gerrymander, aes(x = flip18, fill = gerry)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2-slides.html#step-5a",
+    "href": "slides/05-exploring-data-2-slides.html#step-5a",
+    "title": "Exploring data II",
+    "section": "Step 5a",
+    "text": "Step 5a\n\nggplot(gerrymander, aes(x = flip18, fill = gerry)) +\n  geom_bar(position = \"dodge\")"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2-slides.html#step-5b",
+    "href": "slides/05-exploring-data-2-slides.html#step-5b",
+    "title": "Exploring data II",
+    "section": "Step 5b",
+    "text": "Step 5b\n\nggplot(gerrymander, aes(x = flip18, fill = gerry)) +\n  geom_bar(position = \"fill\")"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2-slides.html#whats-the-answer",
+    "href": "slides/05-exploring-data-2-slides.html#whats-the-answer",
+    "title": "Exploring data II",
+    "section": "What’s the answer?",
+    "text": "What’s the answer?\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election?\n\n\nggplot(gerrymander, aes(x = flip18, fill = gerry)) +\n  geom_bar(position = \"fill\")"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2-slides.html#what-are-the-actual-numbers",
+    "href": "slides/05-exploring-data-2-slides.html#what-are-the-actual-numbers",
+    "title": "Exploring data II",
+    "section": "What are the actual numbers?",
+    "text": "What are the actual numbers?\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election?\n\n\ngerrymander |&gt;\n  count(flip18, gerry) |&gt;\n  group_by(flip18) |&gt;\n  mutate(prop = n / sum(n))\n\n# A tibble: 8 × 4\n# Groups:   flip18 [3]\n  flip18 gerry     n  prop\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt; &lt;dbl&gt;\n1     -1 low       2 0.4  \n2     -1 mid       3 0.6  \n3      0 low      52 0.133\n4      0 mid     242 0.617\n5      0 high     98 0.25 \n6      1 low       8 0.211\n7      1 mid      25 0.658\n8      1 high      5 0.132"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2-slides.html#step-1-1",
+    "href": "slides/05-exploring-data-2-slides.html#step-1-1",
+    "title": "Exploring data II",
+    "section": "Step 1",
+    "text": "Step 1\n\ngerrymander\n\n# A tibble: 435 × 12\n   district last_name first_name party16 clinton16 trump16 dem16 state party18\n   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  \n 1 AK-AL    Young     Don        R            37.6    52.8     0 AK    R      \n 2 AL-01    Byrne     Bradley    R            34.1    63.5     0 AL    R      \n 3 AL-02    Roby      Martha     R            33      64.9     0 AL    R      \n 4 AL-03    Rogers    Mike D.    R            32.3    65.3     0 AL    R      \n 5 AL-04    Aderholt  Rob        R            17.4    80.4     0 AL    R      \n 6 AL-05    Brooks    Mo         R            31.3    64.7     0 AL    R      \n 7 AL-06    Palmer    Gary       R            26.1    70.8     0 AL    R      \n 8 AL-07    Sewell    Terri      D            69.8    28.6     1 AL    D      \n 9 AR-01    Crawford  Rick       R            30.2    65       0 AR    R      \n10 AR-02    Hill      French     R            41.7    52.4     0 AR    R      \n# ℹ 425 more rows\n# ℹ 3 more variables: dem18 &lt;dbl&gt;, flip18 &lt;dbl&gt;, gerry &lt;fct&gt;"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2-slides.html#step-2-1",
+    "href": "slides/05-exploring-data-2-slides.html#step-2-1",
+    "title": "Exploring data II",
+    "section": "Step 2",
+    "text": "Step 2\n\ngerrymander |&gt;\n  count(flip18, gerry)\n\n# A tibble: 8 × 3\n  flip18 gerry     n\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt;\n1     -1 low       2\n2     -1 mid       3\n3      0 low      52\n4      0 mid     242\n5      0 high     98\n6      1 low       8\n7      1 mid      25\n8      1 high      5"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2-slides.html#recall",
+    "href": "slides/05-exploring-data-2-slides.html#recall",
+    "title": "Exploring data II",
+    "section": "Recall",
+    "text": "Recall\n\nggplot(gerrymander, aes(x = flip18)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2-slides.html#step-3-1",
+    "href": "slides/05-exploring-data-2-slides.html#step-3-1",
+    "title": "Exploring data II",
+    "section": "Step 3",
+    "text": "Step 3\n\ngerrymander |&gt;\n  count(flip18, gerry) |&gt;\n  group_by(flip18)\n\n# A tibble: 8 × 3\n# Groups:   flip18 [3]\n  flip18 gerry     n\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt;\n1     -1 low       2\n2     -1 mid       3\n3      0 low      52\n4      0 mid     242\n5      0 high     98\n6      1 low       8\n7      1 mid      25\n8      1 high      5"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2-slides.html#step-4-1",
+    "href": "slides/05-exploring-data-2-slides.html#step-4-1",
+    "title": "Exploring data II",
+    "section": "Step 4",
     "text": "Step 4\n\ngerrymander |&gt;\n  count(flip18, gerry) |&gt;\n  group_by(flip18) |&gt;\n  mutate(prop = n / sum(n))\n\n# A tibble: 8 × 4\n# Groups:   flip18 [3]\n  flip18 gerry     n  prop\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt; &lt;dbl&gt;\n1     -1 low       2 0.4  \n2     -1 mid       3 0.6  \n3      0 low      52 0.133\n4      0 mid     242 0.617\n5      0 high     98 0.25 \n6      1 low       8 0.211\n7      1 mid      25 0.658\n8      1 high      5 0.132"
   },
   {
-    "objectID": "slides/05-exploring-data-2-slides.html#same-thing-without-the-pipe",
-    "href": "slides/05-exploring-data-2-slides.html#same-thing-without-the-pipe",
+    "objectID": "slides/05-exploring-data-2-slides.html#the-full-monty",
+    "href": "slides/05-exploring-data-2-slides.html#the-full-monty",
     "title": "Exploring data II",
-    "section": "Same thing, without the pipe",
-    "text": "Same thing, without the pipe\n\nmutate(group_by(count(gerrymander, flip18, gerry), flip18), prop = n / sum(n))\n\n# A tibble: 8 × 4\n# Groups:   flip18 [3]\n  flip18 gerry     n  prop\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt; &lt;dbl&gt;\n1     -1 low       2 0.4  \n2     -1 mid       3 0.6  \n3      0 low      52 0.133\n4      0 mid     242 0.617\n5      0 high     98 0.25 \n6      1 low       8 0.211\n7      1 mid      25 0.658\n8      1 high      5 0.132"
+    "section": "The Full Monty",
+    "text": "The Full Monty\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat flipped the seat in the 2018 election? (flip18 = 1: Democrat flipped the seat, 0: No flip, -1: Republican flipped the seat.)\n\n\n\n\nggplot(\n  gerrymander, \n  aes(x = flip18, fill = gerry)\n  ) +\n  geom_bar(position = \"fill\")\n\n\n\n\n\n\n\n\n\ngerrymander |&gt;\n  count(flip18, gerry) |&gt;\n  group_by(flip18) |&gt;\n  mutate(prop = n / sum(n))\n\n# A tibble: 8 × 4\n# Groups:   flip18 [3]\n  flip18 gerry     n  prop\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt; &lt;dbl&gt;\n1     -1 low       2 0.4  \n2     -1 mid       3 0.6  \n3      0 low      52 0.133\n4      0 mid     242 0.617\n5      0 high     98 0.25 \n6      1 low       8 0.211\n7      1 mid      25 0.658\n8      1 high      5 0.132"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2-slides.html#new-commands",
+    "href": "slides/05-exploring-data-2-slides.html#new-commands",
+    "title": "Exploring data II",
+    "section": "New commands",
+    "text": "New commands\n\ncount creates a new data frame that tallies up the number of rows that fall into each bin;\ngroup_by silently groups the rows according to bin, and all subsequent operations are done within group;\n\nmutate either adds new columns that aren’t already there, or modifies existing columns.\n\nwe used it to add a prop column that wasn’t there before;\nbecause the table of counts is grouped, the proportions were computed within each level of flip18."
+  },
+  {
+    "objectID": "slides/05-exploring-data-2-slides.html#we-teach-you-to-do-this",
+    "href": "slides/05-exploring-data-2-slides.html#we-teach-you-to-do-this",
+    "title": "Exploring data II",
+    "section": "We teach you to do this",
+    "text": "We teach you to do this\n\ngerrymander |&gt;\n  count(flip18, gerry) |&gt;\n  group_by(flip18) |&gt;\n  mutate(prop = n / sum(n))\n\n# A tibble: 8 × 4\n# Groups:   flip18 [3]\n  flip18 gerry     n  prop\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt; &lt;dbl&gt;\n1     -1 low       2 0.4  \n2     -1 mid       3 0.6  \n3      0 low      52 0.133\n4      0 mid     242 0.617\n5      0 high     98 0.25 \n6      1 low       8 0.211\n7      1 mid      25 0.658\n8      1 high      5 0.132"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2-slides.html#you-could-do-this-instead",
+    "href": "slides/05-exploring-data-2-slides.html#you-could-do-this-instead",
+    "title": "Exploring data II",
+    "section": "You could do this instead",
+    "text": "You could do this instead\nTechnically equivalent. Gives the same result. Super hard to read:\n\nmutate(group_by(count(gerrymander, flip18, gerry), flip18), prop = n / sum(n))\n\n# A tibble: 8 × 4\n# Groups:   flip18 [3]\n  flip18 gerry     n  prop\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt; &lt;dbl&gt;\n1     -1 low       2 0.4  \n2     -1 mid       3 0.6  \n3      0 low      52 0.133\n4      0 mid     242 0.617\n5      0 high     98 0.25 \n6      1 low       8 0.211\n7      1 mid      25 0.658\n8      1 high      5 0.132"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2-slides.html#without-the-pipe",
+    "href": "slides/05-exploring-data-2-slides.html#without-the-pipe",
+    "title": "Exploring data II",
+    "section": "Without the pipe",
+    "text": "Without the pipe"
   },
   {
     "objectID": "slides/05-exploring-data-2-slides.html#with-the-pipe",
@@ -1200,11 +1270,18 @@
     "text": "With the pipe"
   },
   {
-    "objectID": "slides/05-exploring-data-2-slides.html#without-the-pipe",
-    "href": "slides/05-exploring-data-2-slides.html#without-the-pipe",
+    "objectID": "slides/05-exploring-data-2-slides.html#in-this-class-you-will",
+    "href": "slides/05-exploring-data-2-slides.html#in-this-class-you-will",
     "title": "Exploring data II",
-    "section": "Without the pipe",
-    "text": "Without the pipe"
+    "section": "In this class, you will…",
+    "text": "In this class, you will…\n\n\nBuild cakes (ggplot) \n\nStack dolls (pipe |&gt;) \n\nMaster these constructs, and everything will be coming up roses!"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2-slides.html#secrets-of-the-temple",
+    "href": "slides/05-exploring-data-2-slides.html#secrets-of-the-temple",
+    "title": "Exploring data II",
+    "section": "(Secrets of the temple)",
+    "text": "(Secrets of the temple)\nFor all you CS people and prospective stats majors:\n\nThere is more to R than ggplot and |&gt;;\nIt’s a proper programming language like Python, C++, Java, etc;\n\ncontrol flow, data structures, OOP, all that good stuff;\n\n\nIn STAWANANA, we suppress that and teach you a very specific dialect of R called the tidyverse;\nKeep studying stats, and we show you how to use the whole language to do statistical computing, not just data science."
   },
   {
     "objectID": "slides/05-exploring-data-2-slides.html#what-does-group_by-do",
@@ -1330,28 +1407,56 @@
     "href": "slides/05-exploring-data-2-slides.html#mutate-1",
     "title": "Exploring data II",
     "section": "mutate()",
-    "text": "mutate()\n\nWe want to use flip18 as a categorical variable\nBut it’s stored as a numeric\nSo we need to change its type first, before we can use it as a categorical variable\nThe mutate() function transforms (mutates) a data frame by creating a new column or updating an existing one"
+    "text": "mutate()\n\nWe want to use flip18 as a categorical variable\nBut it’s stored as a numeric\nSo we need to change its type first, before we can use it as a categorical variable\nThe mutate() function transforms (mutates) a data frame by creating a new column or updating an existing one\n\nIn this case, we want to use it to update an existing column, flip18."
   },
   {
     "objectID": "slides/05-exploring-data-2-slides.html#mutate-in-action",
     "href": "slides/05-exploring-data-2-slides.html#mutate-in-action",
     "title": "Exploring data II",
     "section": "\nmutate() in action",
-    "text": "mutate() in action\n\ngerrymander |&gt;\n  mutate(flip18 = as.factor(flip18))\n\n# A tibble: 435 × 12\n   district last_name first_name party16 clinton16 trump16 dem16 state party18\n   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  \n 1 AK-AL    Young     Don        R            37.6    52.8     0 AK    R      \n 2 AL-01    Byrne     Bradley    R            34.1    63.5     0 AL    R      \n 3 AL-02    Roby      Martha     R            33      64.9     0 AL    R      \n 4 AL-03    Rogers    Mike D.    R            32.3    65.3     0 AL    R      \n 5 AL-04    Aderholt  Rob        R            17.4    80.4     0 AL    R      \n 6 AL-05    Brooks    Mo         R            31.3    64.7     0 AL    R      \n 7 AL-06    Palmer    Gary       R            26.1    70.8     0 AL    R      \n 8 AL-07    Sewell    Terri      D            69.8    28.6     1 AL    D      \n 9 AR-01    Crawford  Rick       R            30.2    65       0 AR    R      \n10 AR-02    Hill      French     R            41.7    52.4     0 AR    R      \n# ℹ 425 more rows\n# ℹ 3 more variables: dem18 &lt;dbl&gt;, flip18 &lt;fct&gt;, gerry &lt;fct&gt;"
+    "text": "mutate() in action\n\ngerrymander |&gt;\n  mutate(flip18 = as_factor(flip18))\n\n# A tibble: 435 × 12\n   district last_name first_name party16 clinton16 trump16 dem16 state party18\n   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  \n 1 AK-AL    Young     Don        R            37.6    52.8     0 AK    R      \n 2 AL-01    Byrne     Bradley    R            34.1    63.5     0 AL    R      \n 3 AL-02    Roby      Martha     R            33      64.9     0 AL    R      \n 4 AL-03    Rogers    Mike D.    R            32.3    65.3     0 AL    R      \n 5 AL-04    Aderholt  Rob        R            17.4    80.4     0 AL    R      \n 6 AL-05    Brooks    Mo         R            31.3    64.7     0 AL    R      \n 7 AL-06    Palmer    Gary       R            26.1    70.8     0 AL    R      \n 8 AL-07    Sewell    Terri      D            69.8    28.6     1 AL    D      \n 9 AR-01    Crawford  Rick       R            30.2    65       0 AR    R      \n10 AR-02    Hill      French     R            41.7    52.4     0 AR    R      \n# ℹ 425 more rows\n# ℹ 3 more variables: dem18 &lt;dbl&gt;, flip18 &lt;fct&gt;, gerry &lt;fct&gt;"
   },
   {
     "objectID": "slides/05-exploring-data-2-slides.html#mutate-in-action-1",
     "href": "slides/05-exploring-data-2-slides.html#mutate-in-action-1",
     "title": "Exploring data II",
     "section": "\nmutate() in action",
-    "text": "mutate() in action\n\ngerrymander |&gt;\n  mutate(flip18 = as.factor(flip18)) |&gt;\n  relocate(flip18)\n\n# A tibble: 435 × 12\n   flip18 district last_name first_name party16 clinton16 trump16 dem16 state\n   &lt;fct&gt;  &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;\n 1 0      AK-AL    Young     Don        R            37.6    52.8     0 AK   \n 2 0      AL-01    Byrne     Bradley    R            34.1    63.5     0 AL   \n 3 0      AL-02    Roby      Martha     R            33      64.9     0 AL   \n 4 0      AL-03    Rogers    Mike D.    R            32.3    65.3     0 AL   \n 5 0      AL-04    Aderholt  Rob        R            17.4    80.4     0 AL   \n 6 0      AL-05    Brooks    Mo         R            31.3    64.7     0 AL   \n 7 0      AL-06    Palmer    Gary       R            26.1    70.8     0 AL   \n 8 0      AL-07    Sewell    Terri      D            69.8    28.6     1 AL   \n 9 0      AR-01    Crawford  Rick       R            30.2    65       0 AR   \n10 0      AR-02    Hill      French     R            41.7    52.4     0 AR   \n# ℹ 425 more rows\n# ℹ 3 more variables: party18 &lt;chr&gt;, dem18 &lt;dbl&gt;, gerry &lt;fct&gt;"
+    "text": "mutate() in action\n\ngerrymander |&gt;\n  mutate(flip18 = as_factor(flip18)) |&gt;\n  relocate(flip18)\n\n# A tibble: 435 × 12\n   flip18 district last_name first_name party16 clinton16 trump16 dem16 state\n   &lt;fct&gt;  &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;\n 1 0      AK-AL    Young     Don        R            37.6    52.8     0 AK   \n 2 0      AL-01    Byrne     Bradley    R            34.1    63.5     0 AL   \n 3 0      AL-02    Roby      Martha     R            33      64.9     0 AL   \n 4 0      AL-03    Rogers    Mike D.    R            32.3    65.3     0 AL   \n 5 0      AL-04    Aderholt  Rob        R            17.4    80.4     0 AL   \n 6 0      AL-05    Brooks    Mo         R            31.3    64.7     0 AL   \n 7 0      AL-06    Palmer    Gary       R            26.1    70.8     0 AL   \n 8 0      AL-07    Sewell    Terri      D            69.8    28.6     1 AL   \n 9 0      AR-01    Crawford  Rick       R            30.2    65       0 AR   \n10 0      AR-02    Hill      French     R            41.7    52.4     0 AR   \n# ℹ 425 more rows\n# ℹ 3 more variables: party18 &lt;chr&gt;, dem18 &lt;dbl&gt;, gerry &lt;fct&gt;"
   },
   {
     "objectID": "slides/05-exploring-data-2-slides.html#revisit-the-plot",
     "href": "slides/05-exploring-data-2-slides.html#revisit-the-plot",
     "title": "Exploring data II",
     "section": "Revisit the plot",
-    "text": "Revisit the plot\n\n“Is a Congressional District more likely to be flipped to a Democratic seat if it has high prevalence of gerrymandering or low prevalence of gerrymandering?”\n\n\ngerrymander |&gt;\n  mutate(flip18 = as.factor(flip18)) |&gt;\n  ggplot(aes(x = gerry, fill = flip18)) +\n  geom_bar(position = \"fill\")"
+    "text": "Revisit the plot\n\n“Is a Congressional District more likely to be flipped to a Democratic seat if it has high prevalence of gerrymandering or low prevalence of gerrymandering?”\n\n\ngerrymander |&gt;\n  mutate(flip18 = as_factor(flip18)) |&gt;\n  ggplot(aes(x = gerry, fill = flip18)) +\n  geom_bar(position = \"fill\")"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2-slides.html#mutate-and-overwrite",
+    "href": "slides/05-exploring-data-2-slides.html#mutate-and-overwrite",
+    "title": "Exploring data II",
+    "section": "\nmutate() and overwrite",
+    "text": "mutate() and overwrite\nYou can overwrite an existing variable with mutate():\n\ngerrymander |&gt;\n  mutate(flip18 = as_factor(flip18)) |&gt;\n  select(district, flip18)\n\n# A tibble: 435 × 2\n   district flip18\n   &lt;chr&gt;    &lt;fct&gt; \n 1 AK-AL    0     \n 2 AL-01    0     \n 3 AL-02    0     \n 4 AL-03    0     \n 5 AL-04    0     \n 6 AL-05    0     \n 7 AL-06    0     \n 8 AL-07    0     \n 9 AR-01    0     \n10 AR-02    0     \n# ℹ 425 more rows"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2-slides.html#mutate-and-if_else",
+    "href": "slides/05-exploring-data-2-slides.html#mutate-and-if_else",
+    "title": "Exploring data II",
+    "section": "\nmutate() and if_else()\n",
+    "text": "mutate() and if_else()\n\nUse mutate() with if_else() to recode with an either/or logic:\n\nIf party16 is “D”, recode it as “Democrat”, otherwise recode it as “Republican”.\n\n\ngerrymander |&gt;\n  mutate(party16_expanded = if_else(party16 == \"D\", \"Democrat\", \"Republican\")) |&gt;\n  select(district, party16, party16_expanded)\n\n# A tibble: 435 × 3\n   district party16 party16_expanded\n   &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;           \n 1 AK-AL    R       Republican      \n 2 AL-01    R       Republican      \n 3 AL-02    R       Republican      \n 4 AL-03    R       Republican      \n 5 AL-04    R       Republican      \n 6 AL-05    R       Republican      \n 7 AL-06    R       Republican      \n 8 AL-07    D       Democrat        \n 9 AR-01    R       Republican      \n10 AR-02    R       Republican      \n# ℹ 425 more rows"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2-slides.html#mutate-and-case_when",
+    "href": "slides/05-exploring-data-2-slides.html#mutate-and-case_when",
+    "title": "Exploring data II",
+    "section": "\nmutate() and case_when()\n",
+    "text": "mutate() and case_when()\n\nUse mutate() with case_when() to recode with a more complex logic:\n\nIf flip18 is 1, recode it as “Democrat flipped”, if flip18 is 0, recode it as “No flip”, and if flip18 is -1, recode it as “Republican flipped”.\n\n\ngerrymander |&gt;\n  mutate(\n    flip18_expanded = case_when(\n      flip18 == 1 ~ \"Democrat flipped\",\n      flip18 == 0 ~ \"No flip\",\n      flip18 == -1 ~ \"Republican flipped\"\n    )\n  ) |&gt;\n  select(district, flip18, flip18_expanded) |&gt;\n  group_by(flip18) |&gt; # group by flip type\n  slice_head(n = 1) # show top row per group\n\n# A tibble: 3 × 3\n# Groups:   flip18 [3]\n  district flip18 flip18_expanded   \n  &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;             \n1 MN-01        -1 Republican flipped\n2 AK-AL         0 No flip           \n3 AZ-02         1 Democrat flipped"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2-slides.html#mutate-and-store",
+    "href": "slides/05-exploring-data-2-slides.html#mutate-and-store",
+    "title": "Exploring data II",
+    "section": "\nmutate() and store",
+    "text": "mutate() and store\nIf you want to keep your changes, you need to store the data frame after mutate():\n\n\n\ngerrymander |&gt;\n  mutate(\n    p16 = if_else(party16 == \"D\", \"Dem\", \"Rep\")\n  ) |&gt;\n  select(district, p16) |&gt;\n  slice_head(n = 3) # show top 3 rows\n\n# A tibble: 3 × 2\n  district p16  \n  &lt;chr&gt;    &lt;chr&gt;\n1 AK-AL    Rep  \n2 AL-01    Rep  \n3 AL-02    Rep  \n\ngerrymander |&gt;\n  select(district, p16)\n\nError in `select()`:\n! Can't select columns that don't exist.\n✖ Column `p16` doesn't exist.\n\n\n\n\ngerrymander &lt;- gerrymander |&gt;\n  mutate(\n    p16 = if_else(party16 == \"D\", \"Dem\", \"Rep\")\n  ) |&gt;\n  select(district, p16)\n\ngerrymander |&gt;\n  select(district, p16)  |&gt;\n  slice_head(n = 3) # show top 3 rows\n\n# A tibble: 3 × 2\n  district p16  \n  &lt;chr&gt;    &lt;chr&gt;\n1 AK-AL    Rep  \n2 AL-01    Rep  \n3 AL-02    Rep"
   },
   {
     "objectID": "slides/05-exploring-data-2-slides.html#ae-05-gerrymander-explore-ii",
@@ -1372,7 +1477,7 @@
     "href": "slides/05-exploring-data-2.html",
     "title": "Exploring data II",
     "section": "",
-    "text": "Prepare for today’s application exercise: ae-05-gerrymander-explore-II\n\n\nGo to your ae project in RStudio.\nMake sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.\nClick Pull to get today’s application exercise file: ae-05-gerrymander-explore-II.qmd.\nWait till the you’re prompted to work on the application exercise during class before editing the file.\n\n\n\n\n\n\n\n\nPlots should include an informative title, axes and legends should have human-readable labels, and careful consideration should be given to aesthetic choices.\n\nCode should follow the tidyverse style (style.tidyverse.org) Particularly,\n\nspace before and line breaks after each + when building a ggplot\n\nspace before and line breaks after each |&gt; in a data transformation pipeline\ncode should be properly indented\nspaces around = signs and spaces after commas\n\n\nProofread your rendered PDF before submission! We cannot give you points for stuff we cannot see, so make sure your code and output is not running off the page. Use line breaks.\nAt least three commits with meaningful commit messages.\n\n\n\n\nWhydowecareaboutthestyleandreadabilityofyourcode? \\(\\rightarrow\\) Why do we care about the style and readability of your code?\n\n\n. . .\n\nJe voudrais un cafe \\(\\rightarrow\\) Je voudrais un café"
+    "text": "Prepare for today’s application exercise: ae-05-gerrymander-explore-II\n\n\nGo to your ae project in RStudio.\nMake sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.\nClick Pull to get today’s application exercise file: ae-05-gerrymander-explore-II.qmd.\nWait till the you’re prompted to work on the application exercise during class before editing the file.\n\n\n\n\n\nPlots should include an informative title, axes and legends should have human-readable labels, and careful consideration should be given to aesthetic choices.\n\nCode should follow the tidyverse style (style.tidyverse.org) Particularly,\n\nspace before and line breaks after each + when building a ggplot\n\nspace before and line breaks after each |&gt; in a data transformation pipeline\ncode should be properly indented\nspaces around = signs and spaces after commas\n\n\nProofread your rendered PDF before submission! We cannot give you points for stuff we cannot see, so make sure your code and output is not running off the page. Use line breaks.\nAt least three commits with meaningful commit messages.\n\n\n\n\nWhydowecareaboutthestyleandreadabilityofyourcode? \\(\\rightarrow\\) Why do we care about the style and readability of your code?\n\n\n. . .\n\nJe voudrais un cafe \\(\\rightarrow\\) Je voudrais un café"
   },
   {
     "objectID": "slides/05-exploring-data-2.html#while-you-wait",
@@ -1382,8 +1487,8 @@
     "text": "Prepare for today’s application exercise: ae-05-gerrymander-explore-II\n\n\nGo to your ae project in RStudio.\nMake sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.\nClick Pull to get today’s application exercise file: ae-05-gerrymander-explore-II.qmd.\nWait till the you’re prompted to work on the application exercise during class before editing the file."
   },
   {
-    "objectID": "slides/05-exploring-data-2.html#reminder-lab-guidelines",
-    "href": "slides/05-exploring-data-2.html#reminder-lab-guidelines",
+    "objectID": "slides/05-exploring-data-2.html#reminder-hw-guidelines",
+    "href": "slides/05-exploring-data-2.html#reminder-hw-guidelines",
     "title": "Exploring data II",
     "section": "",
     "text": "Plots should include an informative title, axes and legends should have human-readable labels, and careful consideration should be given to aesthetic choices.\n\nCode should follow the tidyverse style (style.tidyverse.org) Particularly,\n\nspace before and line breaks after each + when building a ggplot\n\nspace before and line breaks after each |&gt; in a data transformation pipeline\ncode should be properly indented\nspaces around = signs and spaces after commas\n\n\nProofread your rendered PDF before submission! We cannot give you points for stuff we cannot see, so make sure your code and output is not running off the page. Use line breaks.\nAt least three commits with meaningful commit messages."
@@ -1396,6 +1501,20 @@
     "text": "Whydowecareaboutthestyleandreadabilityofyourcode? \\(\\rightarrow\\) Why do we care about the style and readability of your code?\n\n\n. . .\n\nJe voudrais un cafe \\(\\rightarrow\\) Je voudrais un café"
   },
   {
+    "objectID": "slides/05-exploring-data-2.html#what-data-viz-should-i-use",
+    "href": "slides/05-exploring-data-2.html#what-data-viz-should-i-use",
+    "title": "Exploring data II",
+    "section": "What data viz should I use?",
+    "text": "What data viz should I use?\nAfter a while this is more art than science, but you can narrow down the options based on the number and type of variables:\n. . .\n\n\n\n\n\n\nVariable combo\nOptions\n\n\n\n1 numerical\nhistogram, density, box plot\n\n\n1 categorical\nbar chart, pie chart\n\n\n\n2 numerical\nscatterplot\n\n\nnumerical/categorical\nside-by-side box or violin plots, stacked densities or histograms\n\n\n2 categorical\nstacked bar plot (today)\n\n\n\n. . .\nFor three or more variables, the human mind is limited, and you have to start getting creative (play with color, texture, etc)."
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#pics-are-nice-but-what-are-the-numbers",
+    "href": "slides/05-exploring-data-2.html#pics-are-nice-but-what-are-the-numbers",
+    "title": "Exploring data II",
+    "section": "Pics are nice, but what are the numbers?",
+    "text": "Pics are nice, but what are the numbers?\n\ngerrymander |&gt;\n  summarize(\n    gimme_my_mean = mean(trump16),\n    gimme_my_median = median(trump16)\n  )\n\n\n\nsummarize creates a new data frame that stores the summaries;\nYou can compute as many summaries as you want;\nTo the left of the equal signs are your choice of column names in the new data frame you are creating. You can type whatever you want here (within reason);\nTo the right of the equal signs is R code that computes the summaries. You must use the correct command names (case sensitive): mean, median, quantile, sd, var, etc;\nIf you want to learn what these do, read the documentation (eg ?quantile)."
+  },
+  {
     "objectID": "slides/05-exploring-data-2.html#packages",
     "href": "slides/05-exploring-data-2.html#packages",
     "title": "Exploring data II",
@@ -1403,67 +1522,144 @@
     "text": "Packages\n\nFor the data: usdata\n\n\n\nlibrary(usdata)\n\n\nFor the analysis: tidyverse and ggthemes\n\n\n\nlibrary(tidyverse)\nlibrary(ggthemes)"
   },
   {
-    "objectID": "slides/05-exploring-data-2.html#from-last-time",
-    "href": "slides/05-exploring-data-2.html#from-last-time",
+    "objectID": "slides/05-exploring-data-2.html#gerrymander",
+    "href": "slides/05-exploring-data-2.html#gerrymander",
     "title": "Exploring data II",
-    "section": "From last time",
-    "text": "From last time\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.\n\n\nggplot(gerrymander, aes(x = flip18, fill = gerry)) +\n  geom_bar()"
+    "section": "gerrymander",
+    "text": "gerrymander\n\nglimpse(gerrymander)\n\nRows: 435\nColumns: 12\n$ district   &lt;chr&gt; \"AK-AL\", \"AL-01\", \"AL-02\", \"AL-03\", \"AL-04\", \"AL-05\", \"AL-0…\n$ last_name  &lt;chr&gt; \"Young\", \"Byrne\", \"Roby\", \"Rogers\", \"Aderholt\", \"Brooks\", \"…\n$ first_name &lt;chr&gt; \"Don\", \"Bradley\", \"Martha\", \"Mike D.\", \"Rob\", \"Mo\", \"Gary\",…\n$ party16    &lt;chr&gt; \"R\", \"R\", \"R\", \"R\", \"R\", \"R\", \"R\", \"D\", \"R\", \"R\", \"R\", \"R\",…\n$ clinton16  &lt;dbl&gt; 37.6, 34.1, 33.0, 32.3, 17.4, 31.3, 26.1, 69.8, 30.2, 41.7,…\n$ trump16    &lt;dbl&gt; 52.8, 63.5, 64.9, 65.3, 80.4, 64.7, 70.8, 28.6, 65.0, 52.4,…\n$ dem16      &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0,…\n$ state      &lt;chr&gt; \"AK\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AR\", \"AR\",…\n$ party18    &lt;chr&gt; \"R\", \"R\", \"R\", \"R\", \"R\", \"R\", \"R\", \"D\", \"R\", \"R\", \"R\", \"R\",…\n$ dem18      &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0,…\n$ flip18     &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,…\n$ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid, mi…"
   },
   {
-    "objectID": "slides/05-exploring-data-2.html#from-last-time-1",
-    "href": "slides/05-exploring-data-2.html#from-last-time-1",
+    "objectID": "slides/05-exploring-data-2.html#research-question",
+    "href": "slides/05-exploring-data-2.html#research-question",
     "title": "Exploring data II",
-    "section": "From last time",
-    "text": "From last time\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.\n\n\nggplot(gerrymander, aes(x = flip18, fill = gerry)) +\n  geom_bar(position = \"dodge\")"
-  },
-  {
-    "objectID": "slides/05-exploring-data-2.html#from-last-time-2",
-    "href": "slides/05-exploring-data-2.html#from-last-time-2",
-    "title": "Exploring data II",
-    "section": "From last time",
-    "text": "From last time\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.\n\n\nggplot(gerrymander, aes(x = flip18, fill = gerry)) +\n  geom_bar(position = \"fill\")"
-  },
-  {
-    "objectID": "slides/05-exploring-data-2.html#from-last-time-3",
-    "href": "slides/05-exploring-data-2.html#from-last-time-3",
-    "title": "Exploring data II",
-    "section": "From last time",
-    "text": "From last time\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.\n\n\ngerrymander |&gt;\n  count(flip18, gerry) |&gt;\n  group_by(flip18) |&gt;\n  mutate(prop = n / sum(n))\n\n# A tibble: 8 × 4\n# Groups:   flip18 [3]\n  flip18 gerry     n  prop\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt; &lt;dbl&gt;\n1     -1 low       2 0.4  \n2     -1 mid       3 0.6  \n3      0 low      52 0.133\n4      0 mid     242 0.617\n5      0 high     98 0.25 \n6      1 low       8 0.211\n7      1 mid      25 0.658\n8      1 high      5 0.132"
+    "section": "Research question",
+    "text": "Research question\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics."
   },
   {
     "objectID": "slides/05-exploring-data-2.html#step-1",
     "href": "slides/05-exploring-data-2.html#step-1",
     "title": "Exploring data II",
     "section": "Step 1",
-    "text": "Step 1\n\ngerrymander\n\n# A tibble: 435 × 12\n   district last_name first_name party16 clinton16 trump16 dem16 state party18\n   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  \n 1 AK-AL    Young     Don        R            37.6    52.8     0 AK    R      \n 2 AL-01    Byrne     Bradley    R            34.1    63.5     0 AL    R      \n 3 AL-02    Roby      Martha     R            33      64.9     0 AL    R      \n 4 AL-03    Rogers    Mike D.    R            32.3    65.3     0 AL    R      \n 5 AL-04    Aderholt  Rob        R            17.4    80.4     0 AL    R      \n 6 AL-05    Brooks    Mo         R            31.3    64.7     0 AL    R      \n 7 AL-06    Palmer    Gary       R            26.1    70.8     0 AL    R      \n 8 AL-07    Sewell    Terri      D            69.8    28.6     1 AL    D      \n 9 AR-01    Crawford  Rick       R            30.2    65       0 AR    R      \n10 AR-02    Hill      French     R            41.7    52.4     0 AR    R      \n# ℹ 425 more rows\n# ℹ 3 more variables: dem18 &lt;dbl&gt;, flip18 &lt;dbl&gt;, gerry &lt;fct&gt;"
+    "text": "Step 1\n\nggplot(gerrymander)"
   },
   {
     "objectID": "slides/05-exploring-data-2.html#step-2",
     "href": "slides/05-exploring-data-2.html#step-2",
     "title": "Exploring data II",
     "section": "Step 2",
-    "text": "Step 2\n\ngerrymander |&gt;\n  count(flip18, gerry)\n\n# A tibble: 8 × 3\n  flip18 gerry     n\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt;\n1     -1 low       2\n2     -1 mid       3\n3      0 low      52\n4      0 mid     242\n5      0 high     98\n6      1 low       8\n7      1 mid      25\n8      1 high      5"
+    "text": "Step 2\n\nggplot(gerrymander, aes(x = flip18))"
   },
   {
     "objectID": "slides/05-exploring-data-2.html#step-3",
     "href": "slides/05-exploring-data-2.html#step-3",
     "title": "Exploring data II",
     "section": "Step 3",
-    "text": "Step 3\n\ngerrymander |&gt;\n  count(flip18, gerry) |&gt;\n  group_by(flip18)\n\n# A tibble: 8 × 3\n# Groups:   flip18 [3]\n  flip18 gerry     n\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt;\n1     -1 low       2\n2     -1 mid       3\n3      0 low      52\n4      0 mid     242\n5      0 high     98\n6      1 low       8\n7      1 mid      25\n8      1 high      5"
+    "text": "Step 3\n\nggplot(gerrymander, aes(x = flip18)) +\n  geom_bar()"
   },
   {
     "objectID": "slides/05-exploring-data-2.html#step-4",
     "href": "slides/05-exploring-data-2.html#step-4",
     "title": "Exploring data II",
     "section": "Step 4",
+    "text": "Step 4\n\nggplot(gerrymander, aes(x = flip18, fill = gerry)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#step-5a",
+    "href": "slides/05-exploring-data-2.html#step-5a",
+    "title": "Exploring data II",
+    "section": "Step 5a",
+    "text": "Step 5a\n\nggplot(gerrymander, aes(x = flip18, fill = gerry)) +\n  geom_bar(position = \"dodge\")"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#step-5b",
+    "href": "slides/05-exploring-data-2.html#step-5b",
+    "title": "Exploring data II",
+    "section": "Step 5b",
+    "text": "Step 5b\n\nggplot(gerrymander, aes(x = flip18, fill = gerry)) +\n  geom_bar(position = \"fill\")"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#whats-the-answer",
+    "href": "slides/05-exploring-data-2.html#whats-the-answer",
+    "title": "Exploring data II",
+    "section": "What’s the answer?",
+    "text": "What’s the answer?\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election?\n\n\nggplot(gerrymander, aes(x = flip18, fill = gerry)) +\n  geom_bar(position = \"fill\")"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#what-are-the-actual-numbers",
+    "href": "slides/05-exploring-data-2.html#what-are-the-actual-numbers",
+    "title": "Exploring data II",
+    "section": "What are the actual numbers?",
+    "text": "What are the actual numbers?\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election?\n\n\ngerrymander |&gt;\n  count(flip18, gerry) |&gt;\n  group_by(flip18) |&gt;\n  mutate(prop = n / sum(n))\n\n# A tibble: 8 × 4\n# Groups:   flip18 [3]\n  flip18 gerry     n  prop\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt; &lt;dbl&gt;\n1     -1 low       2 0.4  \n2     -1 mid       3 0.6  \n3      0 low      52 0.133\n4      0 mid     242 0.617\n5      0 high     98 0.25 \n6      1 low       8 0.211\n7      1 mid      25 0.658\n8      1 high      5 0.132"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#step-1-1",
+    "href": "slides/05-exploring-data-2.html#step-1-1",
+    "title": "Exploring data II",
+    "section": "Step 1",
+    "text": "Step 1\n\ngerrymander\n\n# A tibble: 435 × 12\n   district last_name first_name party16 clinton16 trump16 dem16 state party18\n   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  \n 1 AK-AL    Young     Don        R            37.6    52.8     0 AK    R      \n 2 AL-01    Byrne     Bradley    R            34.1    63.5     0 AL    R      \n 3 AL-02    Roby      Martha     R            33      64.9     0 AL    R      \n 4 AL-03    Rogers    Mike D.    R            32.3    65.3     0 AL    R      \n 5 AL-04    Aderholt  Rob        R            17.4    80.4     0 AL    R      \n 6 AL-05    Brooks    Mo         R            31.3    64.7     0 AL    R      \n 7 AL-06    Palmer    Gary       R            26.1    70.8     0 AL    R      \n 8 AL-07    Sewell    Terri      D            69.8    28.6     1 AL    D      \n 9 AR-01    Crawford  Rick       R            30.2    65       0 AR    R      \n10 AR-02    Hill      French     R            41.7    52.4     0 AR    R      \n# ℹ 425 more rows\n# ℹ 3 more variables: dem18 &lt;dbl&gt;, flip18 &lt;dbl&gt;, gerry &lt;fct&gt;"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#step-2-1",
+    "href": "slides/05-exploring-data-2.html#step-2-1",
+    "title": "Exploring data II",
+    "section": "Step 2",
+    "text": "Step 2\n\ngerrymander |&gt;\n  count(flip18, gerry)\n\n# A tibble: 8 × 3\n  flip18 gerry     n\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt;\n1     -1 low       2\n2     -1 mid       3\n3      0 low      52\n4      0 mid     242\n5      0 high     98\n6      1 low       8\n7      1 mid      25\n8      1 high      5"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#recall",
+    "href": "slides/05-exploring-data-2.html#recall",
+    "title": "Exploring data II",
+    "section": "Recall",
+    "text": "Recall\n\nggplot(gerrymander, aes(x = flip18)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#step-3-1",
+    "href": "slides/05-exploring-data-2.html#step-3-1",
+    "title": "Exploring data II",
+    "section": "Step 3",
+    "text": "Step 3\n\ngerrymander |&gt;\n  count(flip18, gerry) |&gt;\n  group_by(flip18)\n\n# A tibble: 8 × 3\n# Groups:   flip18 [3]\n  flip18 gerry     n\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt;\n1     -1 low       2\n2     -1 mid       3\n3      0 low      52\n4      0 mid     242\n5      0 high     98\n6      1 low       8\n7      1 mid      25\n8      1 high      5"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#step-4-1",
+    "href": "slides/05-exploring-data-2.html#step-4-1",
+    "title": "Exploring data II",
+    "section": "Step 4",
     "text": "Step 4\n\ngerrymander |&gt;\n  count(flip18, gerry) |&gt;\n  group_by(flip18) |&gt;\n  mutate(prop = n / sum(n))\n\n# A tibble: 8 × 4\n# Groups:   flip18 [3]\n  flip18 gerry     n  prop\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt; &lt;dbl&gt;\n1     -1 low       2 0.4  \n2     -1 mid       3 0.6  \n3      0 low      52 0.133\n4      0 mid     242 0.617\n5      0 high     98 0.25 \n6      1 low       8 0.211\n7      1 mid      25 0.658\n8      1 high      5 0.132"
   },
   {
-    "objectID": "slides/05-exploring-data-2.html#same-thing-without-the-pipe",
-    "href": "slides/05-exploring-data-2.html#same-thing-without-the-pipe",
+    "objectID": "slides/05-exploring-data-2.html#the-full-monty",
+    "href": "slides/05-exploring-data-2.html#the-full-monty",
     "title": "Exploring data II",
-    "section": "Same thing, without the pipe",
-    "text": "Same thing, without the pipe\n\nmutate(group_by(count(gerrymander, flip18, gerry), flip18), prop = n / sum(n))\n\n# A tibble: 8 × 4\n# Groups:   flip18 [3]\n  flip18 gerry     n  prop\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt; &lt;dbl&gt;\n1     -1 low       2 0.4  \n2     -1 mid       3 0.6  \n3      0 low      52 0.133\n4      0 mid     242 0.617\n5      0 high     98 0.25 \n6      1 low       8 0.211\n7      1 mid      25 0.658\n8      1 high      5 0.132"
+    "section": "The Full Monty",
+    "text": "The Full Monty\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat flipped the seat in the 2018 election? (flip18 = 1: Democrat flipped the seat, 0: No flip, -1: Republican flipped the seat.)\n\n\n\n\nggplot(\n  gerrymander, \n  aes(x = flip18, fill = gerry)\n  ) +\n  geom_bar(position = \"fill\")\n\n\n\n\n\n\n\n\n\ngerrymander |&gt;\n  count(flip18, gerry) |&gt;\n  group_by(flip18) |&gt;\n  mutate(prop = n / sum(n))\n\n# A tibble: 8 × 4\n# Groups:   flip18 [3]\n  flip18 gerry     n  prop\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt; &lt;dbl&gt;\n1     -1 low       2 0.4  \n2     -1 mid       3 0.6  \n3      0 low      52 0.133\n4      0 mid     242 0.617\n5      0 high     98 0.25 \n6      1 low       8 0.211\n7      1 mid      25 0.658\n8      1 high      5 0.132"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#new-commands",
+    "href": "slides/05-exploring-data-2.html#new-commands",
+    "title": "Exploring data II",
+    "section": "New commands",
+    "text": "New commands\n\ncount creates a new data frame that tallies up the number of rows that fall into each bin;\ngroup_by silently groups the rows according to bin, and all subsequent operations are done within group;\n\nmutate either adds new columns that aren’t already there, or modifies existing columns.\n\nwe used it to add a prop column that wasn’t there before;\nbecause the table of counts is grouped, the proportions were computed within each level of flip18."
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#we-teach-you-to-do-this",
+    "href": "slides/05-exploring-data-2.html#we-teach-you-to-do-this",
+    "title": "Exploring data II",
+    "section": "We teach you to do this",
+    "text": "We teach you to do this\n\ngerrymander |&gt;\n  count(flip18, gerry) |&gt;\n  group_by(flip18) |&gt;\n  mutate(prop = n / sum(n))\n\n# A tibble: 8 × 4\n# Groups:   flip18 [3]\n  flip18 gerry     n  prop\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt; &lt;dbl&gt;\n1     -1 low       2 0.4  \n2     -1 mid       3 0.6  \n3      0 low      52 0.133\n4      0 mid     242 0.617\n5      0 high     98 0.25 \n6      1 low       8 0.211\n7      1 mid      25 0.658\n8      1 high      5 0.132"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#you-could-do-this-instead",
+    "href": "slides/05-exploring-data-2.html#you-could-do-this-instead",
+    "title": "Exploring data II",
+    "section": "You could do this instead",
+    "text": "You could do this instead\nTechnically equivalent. Gives the same result. Super hard to read:\n\nmutate(group_by(count(gerrymander, flip18, gerry), flip18), prop = n / sum(n))\n\n# A tibble: 8 × 4\n# Groups:   flip18 [3]\n  flip18 gerry     n  prop\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt; &lt;dbl&gt;\n1     -1 low       2 0.4  \n2     -1 mid       3 0.6  \n3      0 low      52 0.133\n4      0 mid     242 0.617\n5      0 high     98 0.25 \n6      1 low       8 0.211\n7      1 mid      25 0.658\n8      1 high      5 0.132"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#without-the-pipe",
+    "href": "slides/05-exploring-data-2.html#without-the-pipe",
+    "title": "Exploring data II",
+    "section": "Without the pipe",
+    "text": "Without the pipe"
   },
   {
     "objectID": "slides/05-exploring-data-2.html#with-the-pipe",
@@ -1473,11 +1669,18 @@
     "text": "With the pipe"
   },
   {
-    "objectID": "slides/05-exploring-data-2.html#without-the-pipe",
-    "href": "slides/05-exploring-data-2.html#without-the-pipe",
+    "objectID": "slides/05-exploring-data-2.html#in-this-class-you-will",
+    "href": "slides/05-exploring-data-2.html#in-this-class-you-will",
     "title": "Exploring data II",
-    "section": "Without the pipe",
-    "text": "Without the pipe"
+    "section": "In this class, you will…",
+    "text": "In this class, you will…\n\n\nBuild cakes (ggplot) \n\nStack dolls (pipe |&gt;) \n\n\nMaster these constructs, and everything will be coming up roses!"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#secrets-of-the-temple",
+    "href": "slides/05-exploring-data-2.html#secrets-of-the-temple",
+    "title": "Exploring data II",
+    "section": "(Secrets of the temple)",
+    "text": "(Secrets of the temple)\nFor all you CS people and prospective stats majors:\n\n\nThere is more to R than ggplot and |&gt;;\nIt’s a proper programming language like Python, C++, Java, etc;\n\ncontrol flow, data structures, OOP, all that good stuff;\n\n\nIn STAWANANA, we suppress that and teach you a very specific dialect of R called the tidyverse;\nKeep studying stats, and we show you how to use the whole language to do statistical computing, not just data science."
   },
   {
     "objectID": "slides/05-exploring-data-2.html#what-does-group_by-do",
@@ -1603,28 +1806,56 @@
     "href": "slides/05-exploring-data-2.html#mutate-1",
     "title": "Exploring data II",
     "section": "mutate()",
-    "text": "mutate()\n\nWe want to use flip18 as a categorical variable\nBut it’s stored as a numeric\nSo we need to change its type first, before we can use it as a categorical variable\nThe mutate() function transforms (mutates) a data frame by creating a new column or updating an existing one"
+    "text": "mutate()\n\nWe want to use flip18 as a categorical variable\nBut it’s stored as a numeric\nSo we need to change its type first, before we can use it as a categorical variable\nThe mutate() function transforms (mutates) a data frame by creating a new column or updating an existing one\n\nIn this case, we want to use it to update an existing column, flip18."
   },
   {
     "objectID": "slides/05-exploring-data-2.html#mutate-in-action",
     "href": "slides/05-exploring-data-2.html#mutate-in-action",
     "title": "Exploring data II",
     "section": "\nmutate() in action",
-    "text": "mutate() in action\n\ngerrymander |&gt;\n  mutate(flip18 = as.factor(flip18))\n\n# A tibble: 435 × 12\n   district last_name first_name party16 clinton16 trump16 dem16 state party18\n   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  \n 1 AK-AL    Young     Don        R            37.6    52.8     0 AK    R      \n 2 AL-01    Byrne     Bradley    R            34.1    63.5     0 AL    R      \n 3 AL-02    Roby      Martha     R            33      64.9     0 AL    R      \n 4 AL-03    Rogers    Mike D.    R            32.3    65.3     0 AL    R      \n 5 AL-04    Aderholt  Rob        R            17.4    80.4     0 AL    R      \n 6 AL-05    Brooks    Mo         R            31.3    64.7     0 AL    R      \n 7 AL-06    Palmer    Gary       R            26.1    70.8     0 AL    R      \n 8 AL-07    Sewell    Terri      D            69.8    28.6     1 AL    D      \n 9 AR-01    Crawford  Rick       R            30.2    65       0 AR    R      \n10 AR-02    Hill      French     R            41.7    52.4     0 AR    R      \n# ℹ 425 more rows\n# ℹ 3 more variables: dem18 &lt;dbl&gt;, flip18 &lt;fct&gt;, gerry &lt;fct&gt;"
+    "text": "mutate() in action\n\ngerrymander |&gt;\n  mutate(flip18 = as_factor(flip18))\n\n# A tibble: 435 × 12\n   district last_name first_name party16 clinton16 trump16 dem16 state party18\n   &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  \n 1 AK-AL    Young     Don        R            37.6    52.8     0 AK    R      \n 2 AL-01    Byrne     Bradley    R            34.1    63.5     0 AL    R      \n 3 AL-02    Roby      Martha     R            33      64.9     0 AL    R      \n 4 AL-03    Rogers    Mike D.    R            32.3    65.3     0 AL    R      \n 5 AL-04    Aderholt  Rob        R            17.4    80.4     0 AL    R      \n 6 AL-05    Brooks    Mo         R            31.3    64.7     0 AL    R      \n 7 AL-06    Palmer    Gary       R            26.1    70.8     0 AL    R      \n 8 AL-07    Sewell    Terri      D            69.8    28.6     1 AL    D      \n 9 AR-01    Crawford  Rick       R            30.2    65       0 AR    R      \n10 AR-02    Hill      French     R            41.7    52.4     0 AR    R      \n# ℹ 425 more rows\n# ℹ 3 more variables: dem18 &lt;dbl&gt;, flip18 &lt;fct&gt;, gerry &lt;fct&gt;"
   },
   {
     "objectID": "slides/05-exploring-data-2.html#mutate-in-action-1",
     "href": "slides/05-exploring-data-2.html#mutate-in-action-1",
     "title": "Exploring data II",
     "section": "\nmutate() in action",
-    "text": "mutate() in action\n\ngerrymander |&gt;\n  mutate(flip18 = as.factor(flip18)) |&gt;\n  relocate(flip18)\n\n# A tibble: 435 × 12\n   flip18 district last_name first_name party16 clinton16 trump16 dem16 state\n   &lt;fct&gt;  &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;\n 1 0      AK-AL    Young     Don        R            37.6    52.8     0 AK   \n 2 0      AL-01    Byrne     Bradley    R            34.1    63.5     0 AL   \n 3 0      AL-02    Roby      Martha     R            33      64.9     0 AL   \n 4 0      AL-03    Rogers    Mike D.    R            32.3    65.3     0 AL   \n 5 0      AL-04    Aderholt  Rob        R            17.4    80.4     0 AL   \n 6 0      AL-05    Brooks    Mo         R            31.3    64.7     0 AL   \n 7 0      AL-06    Palmer    Gary       R            26.1    70.8     0 AL   \n 8 0      AL-07    Sewell    Terri      D            69.8    28.6     1 AL   \n 9 0      AR-01    Crawford  Rick       R            30.2    65       0 AR   \n10 0      AR-02    Hill      French     R            41.7    52.4     0 AR   \n# ℹ 425 more rows\n# ℹ 3 more variables: party18 &lt;chr&gt;, dem18 &lt;dbl&gt;, gerry &lt;fct&gt;"
+    "text": "mutate() in action\n\ngerrymander |&gt;\n  mutate(flip18 = as_factor(flip18)) |&gt;\n  relocate(flip18)\n\n# A tibble: 435 × 12\n   flip18 district last_name first_name party16 clinton16 trump16 dem16 state\n   &lt;fct&gt;  &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;\n 1 0      AK-AL    Young     Don        R            37.6    52.8     0 AK   \n 2 0      AL-01    Byrne     Bradley    R            34.1    63.5     0 AL   \n 3 0      AL-02    Roby      Martha     R            33      64.9     0 AL   \n 4 0      AL-03    Rogers    Mike D.    R            32.3    65.3     0 AL   \n 5 0      AL-04    Aderholt  Rob        R            17.4    80.4     0 AL   \n 6 0      AL-05    Brooks    Mo         R            31.3    64.7     0 AL   \n 7 0      AL-06    Palmer    Gary       R            26.1    70.8     0 AL   \n 8 0      AL-07    Sewell    Terri      D            69.8    28.6     1 AL   \n 9 0      AR-01    Crawford  Rick       R            30.2    65       0 AR   \n10 0      AR-02    Hill      French     R            41.7    52.4     0 AR   \n# ℹ 425 more rows\n# ℹ 3 more variables: party18 &lt;chr&gt;, dem18 &lt;dbl&gt;, gerry &lt;fct&gt;"
   },
   {
     "objectID": "slides/05-exploring-data-2.html#revisit-the-plot",
     "href": "slides/05-exploring-data-2.html#revisit-the-plot",
     "title": "Exploring data II",
     "section": "Revisit the plot",
-    "text": "Revisit the plot\n\n“Is a Congressional District more likely to be flipped to a Democratic seat if it has high prevalence of gerrymandering or low prevalence of gerrymandering?”\n\n\ngerrymander |&gt;\n  mutate(flip18 = as.factor(flip18)) |&gt;\n  ggplot(aes(x = gerry, fill = flip18)) +\n  geom_bar(position = \"fill\")"
+    "text": "Revisit the plot\n\n“Is a Congressional District more likely to be flipped to a Democratic seat if it has high prevalence of gerrymandering or low prevalence of gerrymandering?”\n\n\ngerrymander |&gt;\n  mutate(flip18 = as_factor(flip18)) |&gt;\n  ggplot(aes(x = gerry, fill = flip18)) +\n  geom_bar(position = \"fill\")"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#mutate-and-overwrite",
+    "href": "slides/05-exploring-data-2.html#mutate-and-overwrite",
+    "title": "Exploring data II",
+    "section": "\nmutate() and overwrite",
+    "text": "mutate() and overwrite\nYou can overwrite an existing variable with mutate():\n\ngerrymander |&gt;\n  mutate(flip18 = as_factor(flip18)) |&gt;\n  select(district, flip18)\n\n# A tibble: 435 × 2\n   district flip18\n   &lt;chr&gt;    &lt;fct&gt; \n 1 AK-AL    0     \n 2 AL-01    0     \n 3 AL-02    0     \n 4 AL-03    0     \n 5 AL-04    0     \n 6 AL-05    0     \n 7 AL-06    0     \n 8 AL-07    0     \n 9 AR-01    0     \n10 AR-02    0     \n# ℹ 425 more rows"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#mutate-and-if_else",
+    "href": "slides/05-exploring-data-2.html#mutate-and-if_else",
+    "title": "Exploring data II",
+    "section": "\nmutate() and if_else()\n",
+    "text": "mutate() and if_else()\n\nUse mutate() with if_else() to recode with an either/or logic:\n\nIf party16 is “D”, recode it as “Democrat”, otherwise recode it as “Republican”.\n\n\ngerrymander |&gt;\n  mutate(party16_expanded = if_else(party16 == \"D\", \"Democrat\", \"Republican\")) |&gt;\n  select(district, party16, party16_expanded)\n\n# A tibble: 435 × 3\n   district party16 party16_expanded\n   &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;           \n 1 AK-AL    R       Republican      \n 2 AL-01    R       Republican      \n 3 AL-02    R       Republican      \n 4 AL-03    R       Republican      \n 5 AL-04    R       Republican      \n 6 AL-05    R       Republican      \n 7 AL-06    R       Republican      \n 8 AL-07    D       Democrat        \n 9 AR-01    R       Republican      \n10 AR-02    R       Republican      \n# ℹ 425 more rows"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#mutate-and-case_when",
+    "href": "slides/05-exploring-data-2.html#mutate-and-case_when",
+    "title": "Exploring data II",
+    "section": "\nmutate() and case_when()\n",
+    "text": "mutate() and case_when()\n\nUse mutate() with case_when() to recode with a more complex logic:\n\nIf flip18 is 1, recode it as “Democrat flipped”, if flip18 is 0, recode it as “No flip”, and if flip18 is -1, recode it as “Republican flipped”.\n\n\ngerrymander |&gt;\n  mutate(\n    flip18_expanded = case_when(\n      flip18 == 1 ~ \"Democrat flipped\",\n      flip18 == 0 ~ \"No flip\",\n      flip18 == -1 ~ \"Republican flipped\"\n    )\n  ) |&gt;\n  select(district, flip18, flip18_expanded) |&gt;\n  group_by(flip18) |&gt; # group by flip type\n  slice_head(n = 1) # show top row per group\n\n# A tibble: 3 × 3\n# Groups:   flip18 [3]\n  district flip18 flip18_expanded   \n  &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;             \n1 MN-01        -1 Republican flipped\n2 AK-AL         0 No flip           \n3 AZ-02         1 Democrat flipped"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#mutate-and-store",
+    "href": "slides/05-exploring-data-2.html#mutate-and-store",
+    "title": "Exploring data II",
+    "section": "\nmutate() and store",
+    "text": "mutate() and store\nIf you want to keep your changes, you need to store the data frame after mutate():\n\n\n\ngerrymander |&gt;\n  mutate(\n    p16 = if_else(party16 == \"D\", \"Dem\", \"Rep\")\n  ) |&gt;\n  select(district, p16) |&gt;\n  slice_head(n = 3) # show top 3 rows\n\n# A tibble: 3 × 2\n  district p16  \n  &lt;chr&gt;    &lt;chr&gt;\n1 AK-AL    Rep  \n2 AL-01    Rep  \n3 AL-02    Rep  \n\ngerrymander |&gt;\n  select(district, p16)\n\nError in `select()`:\n! Can't select columns that don't exist.\n✖ Column `p16` doesn't exist.\n\n\n\n\n\ngerrymander &lt;- gerrymander |&gt;\n  mutate(\n    p16 = if_else(party16 == \"D\", \"Dem\", \"Rep\")\n  ) |&gt;\n  select(district, p16)\n\ngerrymander |&gt;\n  select(district, p16)  |&gt;\n  slice_head(n = 3) # show top 3 rows\n\n# A tibble: 3 × 2\n  district p16  \n  &lt;chr&gt;    &lt;chr&gt;\n1 AK-AL    Rep  \n2 AL-01    Rep  \n3 AL-02    Rep"
   },
   {
     "objectID": "slides/05-exploring-data-2.html#ae-05-gerrymander-explore-ii",
@@ -2109,7 +2340,7 @@
     "href": "index.html",
     "title": "STA 199 Introduction to Data Science and Statistical Thinking",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 7\n\n🧑‍🏫 Welcome!\n🖥️ slides 00\n\n\n\n\n\nThu, Jan 8\n\n💻 Lab 0\nlab 0\n\n\n\n1\nMon, Jan 12\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\n🧑‍🏫 Meet the toolkit\n🖥️ slides 01  🗒️ notes 01\n\n\n\n\n\nWed, Jan 14\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\n🧑‍🏫 Grammar of data visualization\n🖥️ slides 02  🗒️ notes 02\n\n\n\n\n\nThu, Jan 15\n\n💻 Lab 1\nlab 1\nLab 1 @ end of section\n\n\n2\nMon, Jan 19\n\n❌ MLK Day - No Lecture\n\n\n\n\n\n\nWed, Jan 21\n📗 r4ds - chp 2  📗 r4ds - chp 3.1-3.5  🎥 Grammar of data transformation  🎥 Code along :: Flights and pipes\n\n🧑‍🏫 Grammar of data transformation\n🖥️ slides 03  🗒️ notes 03  💃 ae 03\n\n\n\n\n\nThu, Jan 22\n\n💻 Lab 2\n\nlab 2 hw 1\n\nLab 2 @ end of section\n\n\n3\nMon, Jan 26\n📗 r4ds - chp 3.6-3.7  🎥 Visualizing and summarizing categorical data  🎥 Visualizing and summarizing numerical data  🎥 Visualizing and summarizing relationships  🎥 Code along :: Star Wars characters\n\n🧑‍🏫 Exploratory Data Analysis I\n🖥️ slides 04  🗒️ notes 04\n\n\n\n\n\nWed, Jan 28\n📘 ims - chp 5  📘 ims - chp 6  🎥 Code along :: Diving deeper with Palmer Penguins\n\n🧑‍🏫 Exploratory Data Analysis II\n\nHW 1 @ 11:59 pm\n\n\n\nThu, Jan 29\n\n💻 Lab 3\n\n\n\n\n4\nMon, Feb 2\n🎥 Tidy data  🎥 Tidying data  🎥 Code along :: Country populations over time  📗 r4ds - chp 5\n\n🧑‍🏫 Tidying data\n\n\n\n\n\nWed, Feb 4\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\n🧑‍🏫 Joining data\n\nHW 2 @ 11:59 pm\n\n\n\nThu, Feb 5\n\n💻 Lab 4\n\n\n\n\n5\nMon, Feb 9\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\n🧑‍🏫 Data types and classes\n\n\n\n\n\nWed, Feb 11\n🎥 Importing data  🎥 Code along :: Halving CO2 emissions  🎥 Code along :: Student survey  📗 r4ds - chp 7  📗 r4ds - chp 17.1 - 17.3\n\n🧑‍🏫 Importing and recoding data\n\nHW 3 @ 11:59 pm\n\n\n\nThu, Feb 12\n\n💻 Lab 5\n\n\n\n\n6\nMon, Feb 16\n🎥 Web scraping basics  🎥 Code along :: Scraping an eCommerce page  📗 r4ds - chp 24.1 - 24.6\n\n🧑‍🏫 Webscraping I\n\n\n\n\n\nWed, Feb 18\n🎥 Code along :: Scraping many eCommerce pages  🎥 Web scraping considerations  📗 r4ds - chp 25.1 - 25.2\n\n🧑‍🏫 Webscraping II\n\nHW 4 @ 11:59 pm\n\n\n\nThu, Feb 19\n\n💻 Project milestone\n\n\n\n\n7\nMon, Feb 23\n\n🧑‍🏫 Data science wrap-up\n\n\n\n\n\nWed, Feb 25\n\n📝 Midterm 1\n\n\n\n\n\n\nThu, Feb 26\n\n💻 Project milestone\n\n\n\n\n\nSun, Mar 1\n\n\n\nTake-home 1 @ 11:59 pm\n\n\n8\nMon, Mar 2\n📘 ims - chp 6  📗 r4ds - chp 10\n\n🧑‍🏫 Communicating results\n\n\n\n\n\nWed, Mar 4\n🎥 Misrepresentation  🎥 Data privacy  🎥 Algorithmic bias  🎥 Code along :: Sectors and services\n\n🧑‍🏫 Data science ethics\n\n\n\n\n\nThu, Mar 5\n\n💻 Project milestone\n\n\n\n\n9\nMon, Mar 9\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nWed, Mar 11\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nThu, Mar 12\n\n❌ Spring Break - No Lab\n\n\n\n\n\n10\nMon, Mar 16\n🎥 The language of models  🎥 Linear regression with a numerical predictor  📘 ims - chp 7.1\n\n🧑‍🏫 The language of models\n\n\n\n\n\nWed, Mar 18\n🎥 Linear regression with a categorical predictor  🎥 Outliers in linear regression  🎥 Code along :: Modeling fish  📘 ims - chp 7.2\n\n🧑‍🏫 Simple linear regression\n\n\n\n\n\nThu, Mar 19\n\n💻 Lab 6\n\n\n\n\n11\nMon, Mar 23\n🎥 Linear regression with multiple predictors  🎥 Main and interaction effects  📘 ims - chp 8.1-8.2  📘 ims - chp 8.3-8.5\n\n🧑‍🏫 Multiple linear regression I\n\n\n\n\n\nWed, Mar 25\n🎥 Code along :: Modeling interest rates\n\n🧑‍🏫 Multiple linear regression II\n\nHW 5 @ 11:59 pm\n\n\n\nThu, Mar 26\n\n💻 Lab 7\n\n\n\n\n12\nMon, Mar 30\n🎥 Logistic regression  🎥 Code along :: Building a spam filter  📘 ims - chp 9\n\n🧑‍🏫 Logistic regression I\n\n\n\n\n\nWed, Apr 1\n🎥 Clasification and decision errors  🎥 Overfitting and spending your data\n\n🧑‍🏫 Logistic regression II\n\nHW 6 @ 11:59 pm\n\n\n\nThu, Apr 2\n\n💻 Project presentations\n\n\n\n\n13\nMon, Apr 6\n🎥 Code along :: Forest classification\n\n🧑‍🏫 Modeling wrap-up\n\n\n\n\n\nWed, Apr 8\n\n📝 Midterm 2\n\n\n\n\n\n\nThu, Apr 9\n\n❌ We’re all tired - No lab!\n\n\n\n\n\n\nSun, Apr 12\n\n\n\nTake-home 2 @ 11:59 pm\n\n\n14\nMon, Apr 13\n🎥 Quantifying uncertainty  🎥 Bootstrapping  🎥 Code along :: Bootstrapping Duke Forest houses  📘 ims - chp 11  📘 ims - chp 12\n\n🧑‍🏫 Interval estimation\n\n\n\n\n\nWed, Apr 15\n🎥 Hypothesis testing  📘 ims - chp 11\n\n🧑‍🏫 Hypothesis testing\n\n\n\n\n\nThu, Apr 16\n\n💻 Lab 8\n\n\n\n\n15\nMon, Apr 20\n\n🧑‍🏫 More inference\n\n\n\n\n\nWed, Apr 22\n\n🧑‍🏫 Farewell!\n\nHW 7 @ 11:59 pm\n\n\n\nThu, Apr 23\n\n❌ Reading Days - No Lab\n\n\n\n\n\n16\nFri, May 1\n\n📝 Final (2pm - 5pm)",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 7\n\n🧑‍🏫 Welcome!\n🖥️ slides 00\n\n\n\n\n\nThu, Jan 8\n\n💻 Lab 0\nlab 0\n\n\n\n1\nMon, Jan 12\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\n🧑‍🏫 Meet the toolkit\n🖥️ slides 01  🗒️ notes 01\n\n\n\n\n\nWed, Jan 14\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\n🧑‍🏫 Grammar of data visualization\n🖥️ slides 02  🗒️ notes 02\n\n\n\n\n\nThu, Jan 15\n\n💻 Lab 1\nlab 1\nLab 1 @ end of section\n\n\n2\nMon, Jan 19\n\n❌ MLK Day - No Lecture\n\n\n\n\n\n\nWed, Jan 21\n📗 r4ds - chp 2  📗 r4ds - chp 3.1-3.5  🎥 Grammar of data transformation  🎥 Code along :: Flights and pipes\n\n🧑‍🏫 Grammar of data transformation\n🖥️ slides 03  🗒️ notes 03  💃 ae 03\n\n\n\n\n\nThu, Jan 22\n\n💻 Lab 2\n\nlab 2 hw 1\n\nLab 2 @ end of section\n\n\n3\nMon, Jan 26\n📗 r4ds - chp 3.6-3.7  🎥 Visualizing and summarizing categorical data  🎥 Visualizing and summarizing numerical data  🎥 Visualizing and summarizing relationships  🎥 Code along :: Star Wars characters\n\n🧑‍🏫 Exploratory Data Analysis I\n🖥️ slides 04  🗒️ notes 04\n\n\n\n\n\nWed, Jan 28\n📘 ims - chp 5  📘 ims - chp 6  🎥 Code along :: Diving deeper with Palmer Penguins\n\n🧑‍🏫 Exploratory Data Analysis II\n🖥️ slides 05  🗒️ notes 05\n\nHW 1 @ 11:59 pm\n\n\n\nThu, Jan 29\n\n💻 Lab 3\n\n\n\n\n4\nMon, Feb 2\n🎥 Tidy data  🎥 Tidying data  🎥 Code along :: Country populations over time  📗 r4ds - chp 5\n\n🧑‍🏫 Tidying data\n\n\n\n\n\nWed, Feb 4\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\n🧑‍🏫 Joining data\n\nHW 2 @ 11:59 pm\n\n\n\nThu, Feb 5\n\n💻 Lab 4\n\n\n\n\n5\nMon, Feb 9\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\n🧑‍🏫 Data types and classes\n\n\n\n\n\nWed, Feb 11\n🎥 Importing data  🎥 Code along :: Halving CO2 emissions  🎥 Code along :: Student survey  📗 r4ds - chp 7  📗 r4ds - chp 17.1 - 17.3\n\n🧑‍🏫 Importing and recoding data\n\nHW 3 @ 11:59 pm\n\n\n\nThu, Feb 12\n\n💻 Lab 5\n\n\n\n\n6\nMon, Feb 16\n🎥 Web scraping basics  🎥 Code along :: Scraping an eCommerce page  📗 r4ds - chp 24.1 - 24.6\n\n🧑‍🏫 Webscraping I\n\n\n\n\n\nWed, Feb 18\n🎥 Code along :: Scraping many eCommerce pages  🎥 Web scraping considerations  📗 r4ds - chp 25.1 - 25.2\n\n🧑‍🏫 Webscraping II\n\nHW 4 @ 11:59 pm\n\n\n\nThu, Feb 19\n\n💻 Project milestone\n\n\n\n\n7\nMon, Feb 23\n\n🧑‍🏫 Data science wrap-up\n\n\n\n\n\nWed, Feb 25\n\n📝 Midterm 1\n\n\n\n\n\n\nThu, Feb 26\n\n💻 Project milestone\n\n\n\n\n\nSun, Mar 1\n\n\n\nTake-home 1 @ 11:59 pm\n\n\n8\nMon, Mar 2\n📘 ims - chp 6  📗 r4ds - chp 10\n\n🧑‍🏫 Communicating results\n\n\n\n\n\nWed, Mar 4\n🎥 Misrepresentation  🎥 Data privacy  🎥 Algorithmic bias  🎥 Code along :: Sectors and services\n\n🧑‍🏫 Data science ethics\n\n\n\n\n\nThu, Mar 5\n\n💻 Project milestone\n\n\n\n\n9\nMon, Mar 9\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nWed, Mar 11\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nThu, Mar 12\n\n❌ Spring Break - No Lab\n\n\n\n\n\n10\nMon, Mar 16\n🎥 The language of models  🎥 Linear regression with a numerical predictor  📘 ims - chp 7.1\n\n🧑‍🏫 The language of models\n\n\n\n\n\nWed, Mar 18\n🎥 Linear regression with a categorical predictor  🎥 Outliers in linear regression  🎥 Code along :: Modeling fish  📘 ims - chp 7.2\n\n🧑‍🏫 Simple linear regression\n\n\n\n\n\nThu, Mar 19\n\n💻 Lab 6\n\n\n\n\n11\nMon, Mar 23\n🎥 Linear regression with multiple predictors  🎥 Main and interaction effects  📘 ims - chp 8.1-8.2  📘 ims - chp 8.3-8.5\n\n🧑‍🏫 Multiple linear regression I\n\n\n\n\n\nWed, Mar 25\n🎥 Code along :: Modeling interest rates\n\n🧑‍🏫 Multiple linear regression II\n\nHW 5 @ 11:59 pm\n\n\n\nThu, Mar 26\n\n💻 Lab 7\n\n\n\n\n12\nMon, Mar 30\n🎥 Logistic regression  🎥 Code along :: Building a spam filter  📘 ims - chp 9\n\n🧑‍🏫 Logistic regression I\n\n\n\n\n\nWed, Apr 1\n🎥 Clasification and decision errors  🎥 Overfitting and spending your data\n\n🧑‍🏫 Logistic regression II\n\nHW 6 @ 11:59 pm\n\n\n\nThu, Apr 2\n\n💻 Project presentations\n\n\n\n\n13\nMon, Apr 6\n🎥 Code along :: Forest classification\n\n🧑‍🏫 Modeling wrap-up\n\n\n\n\n\nWed, Apr 8\n\n📝 Midterm 2\n\n\n\n\n\n\nThu, Apr 9\n\n❌ We’re all tired - No lab!\n\n\n\n\n\n\nSun, Apr 12\n\n\n\nTake-home 2 @ 11:59 pm\n\n\n14\nMon, Apr 13\n🎥 Quantifying uncertainty  🎥 Bootstrapping  🎥 Code along :: Bootstrapping Duke Forest houses  📘 ims - chp 11  📘 ims - chp 12\n\n🧑‍🏫 Interval estimation\n\n\n\n\n\nWed, Apr 15\n🎥 Hypothesis testing  📘 ims - chp 11\n\n🧑‍🏫 Hypothesis testing\n\n\n\n\n\nThu, Apr 16\n\n💻 Lab 8\n\n\n\n\n15\nMon, Apr 20\n\n🧑‍🏫 More inference\n\n\n\n\n\nWed, Apr 22\n\n🧑‍🏫 Farewell!\n\nHW 7 @ 11:59 pm\n\n\n\nThu, Apr 23\n\n❌ Reading Days - No Lab\n\n\n\n\n\n16\nFri, May 1\n\n📝 Final (2pm - 5pm)",
     "crumbs": [
       "Syllabus",
       "Schedule"
