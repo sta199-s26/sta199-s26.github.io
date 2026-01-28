@@ -211,9 +211,11 @@ gerrymander |>
 
 ## Recall
 
+The heights of these bars are the counts in the table:
+
 ```{r}
-ggplot(gerrymander, aes(x = flip18)) +
-  geom_bar()
+ggplot(gerrymander, aes(x = flip18, fill = gerry)) +
+  geom_bar(position = "dodge")
 ```
 
 ## Step 3 {.scrollable}
