@@ -81,6 +81,12 @@ df_1 |>
   arrange(member)
 ```
 
+::: callout-tip
+
+Check out the R Documentation for `arrange()` by typing "?arrange" into the console. You should see the "Help" tab pop up in the bottom right pane of your RStudio environment. Read through the "Description" section to confirm your understanding of the function.
+
+:::
+
 b.  What does the following pipeline do? Run it and analyze the result and articulate in words what `group_by()` does.
 
 ```{r}
