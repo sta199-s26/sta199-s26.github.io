@@ -81,10 +81,14 @@ website:
             text: Lab 1
           - href: lab/lab-2.qmd
             text: Lab 2
+          - href: lab/lab-3.qmd
+            text: Lab 3
       - section: "Homework"
         contents:
           - href: hw/hw-1.qmd
             text: Homework 1
+          - href: hw/hw-2.qmd
+            text: Homework 2
       - section: "Computing"
         contents:
           - href: computing/coding-access.qmd
