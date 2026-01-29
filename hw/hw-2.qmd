@@ -342,7 +342,7 @@ Using the variable you created in Question 6, re-create the following plot that 
 ![](images/hw-2/plot-to-recreate.png)
 
 ::: callout-tip
-- x-axis: You learned how to format the x-axis as percentages in class and had a hint about it in your previous homework assignment. You can use the same approach here.
+- x-axis: HW 1 gave you a hint about how to format the x-axis as percentages. You can use the same approach here.
 
 - Points: The points are drawn with the `geom_beeswarm()` function from the **ggbeeswarm** package.
 
