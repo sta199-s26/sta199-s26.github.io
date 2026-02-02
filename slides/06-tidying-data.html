@@ -832,6 +832,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>Error in UseMethod("filter"): no applicable method for 'filter' applied to an object of class "c('gg', 'ggplot')"</code></pre>
 </div>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lesson
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can overwrite an object if its identity is preserved; if the rows or columns now mean something totally different, or if it’s an entirely different <em>class</em> of object, then give it a new name.</p>
+</div>
+</div>
 </section></section><section id="data-tidying" class="level1"><h1>Data tidying</h1>
 <section id="tidy-data" class="level2"><h2 class="anchored" data-anchor-id="tidy-data">Tidy data</h2>
 <blockquote class="blockquote">
@@ -861,7 +874,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <ul>
 <li><p>The first column (variable) is the <code>degree</code>, and there are 4 possible degrees: BS (Bachelor of Science), BS2 (Bachelor of Science, 2nd major), AB (Bachelor of Arts), AB2 (Bachelor of Arts, 2nd major).</p></li>
-<li><p>The remaining columns show the number of students graduating with that major in a given academic year from 2011 to 2024.</p></li>
+<li><p>The remaining columns show the number of students graduating with that major in a given academic year from 2011 to 2025.</p></li>
 </ul></section><section id="lets-plan" class="level2 smaller nostretch"><h2 class="smaller nostretch anchored" data-anchor-id="lets-plan">Let’s plan!</h2>
 <p>In a perfect world, how would our data be formatted to create this plot? What do the columns need to be? What would go inside <code>aes</code> when we call <code>ggplot</code>?</p>
 <p><img src="images/06/statsci-majors-2025.png" class="img-fluid"></p>
