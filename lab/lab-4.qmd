@@ -1,7 +1,7 @@
 ---
-title: Lab 3
+title: Lab 4
 subtitle: A pivot and a join walk into a pipe...
-description: "Due: End of lab on Mon, Sep 22"
+description: "Due: End of lab on Thurs, Feb 5"
 categories: Lab
 filters:
   - ../remove-fmt-skip.lua
@@ -23,8 +23,8 @@ By now you should be familiar with how to get started with a lab assignment by c
 
 -   Go to <https://cmgr.oit.duke.edu/containers> and login with your Duke NetID and Password.
 -   Click `STA199` under My reservations to log into your container. You should now see the RStudio environment.
--   Go to the course organization at [github.com/sta199-f25](https://github.com/sta199-f25) organization on GitHub.
-    Click on the repo with the prefix **lab-3**.
+-   Go to the course organization at [github.com/sta199-s26](https://github.com/sta199-s26) organization on GitHub.
+    Click on the repo with the prefix **lab-4**.
     It contains the starter documents you need to complete the homework.
 -   Click on the green **CODE** button, select **Use SSH**.
     Click on the clipboard icon to copy the repo URL.
@@ -33,7 +33,7 @@ By now you should be familiar with how to get started with a lab assignment by c
 -   Click *Create Project*, and the files from your GitHub repo will be displayed in the *Files* pane in RStudio.
 </details>
 
-Open the *lab-3.qmd* template Quarto file and update the `authors` field to add your name first (first and last) and then your teammates' names (first and last).
+Open the *lab-4.qmd* template Quarto file and update the `authors` field to add your name first (first and last) and then your teammates' names (first and last).
 Render the document.
 Examine the rendered document and make sure your and your teammates' names are updated in the document.
 Commit and push your changes with a meaningful commit message and push to GitHub.
@@ -161,7 +161,7 @@ scores |>
   left_join(grad_years)
 ```
 
-What does the error message mean and why does it occur? How would you fix the code?
+What does the error message mean and why does it occur? How would you fix the code? Supply the proposed fix and re-run the code chunk.
 
 b.  How many rows and columns does the resulting data frame from part(a) have? Explain why.
 
