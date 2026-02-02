@@ -108,6 +108,15 @@ details>summary {
   height: 90%;
 }
 
+.reveal .slide .task {
+  border-left: 3px solid #d1805f;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  background: #d1805f50;
+}
+
+
 .reveal .slide .question {
   border-left: 3px solid #5D737E;
   padding-left: 0.5em;
@@ -130,4 +139,9 @@ details>summary {
   margin-bottom: 0.5em;
   padding: 0.5em;
   background: #9AA06750;
+}
+
+.reveal pre code {
+  background-color: #e2e2e2;
+  margin-bottom: 10px;
 }
