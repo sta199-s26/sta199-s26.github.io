@@ -118,19 +118,20 @@ Column names that are numbers are not considered "proper" in R, therefore to sel
 
 ### Question 3
 
-In a single pipeline,
+a.  In a single pipeline,
 
--   calculate the ratio of the inflation in 2023 and inflation in 1993 for each country and store this information in a new column called `inf_ratio`,
--   select the variables `country` and `inf_ratio`, and
--   store the result in a new data frame called `country_inflation_ratios`.
+    -   calculate the ratio of the inflation in 2023 and inflation in 1993 for each country and store this information in a new column called `inf_ratio`,
+    -   select the variables `country` and `inf_ratio`, and
+    -   store the result in a new data frame called `country_inflation_ratios`.
 
-Then, in two separate pipelines,
+b.  Then, in two separate pipelines,
 
--   arrange `country_inflation_ratios` in increasing order of `inf_ratio` and
--   arrange `country_inflation_ratios` in decreasing order of `inf_ratio`.
+    -   arrange `country_inflation_ratios` in increasing order of `inf_ratio` and
 
-Which country’s inflation increase is the largest over this time period and by how much?
-Which country’s inflation decrease is the largest over this time period and by how much?
+    -   arrange `country_inflation_ratios` in decreasing order of `inf_ratio`.
+
+c.  Which country’s inflation increase is the largest over this time period and by how much?
+    Which country’s inflation decrease is the largest over this time period and by how much?
 
 ::: callout-tip
 For this question you'll once again need to use variables whose names are numbers (years) in your pipeline.
