@@ -1,10 +1,21 @@
 ---
 title: "Joining data"
 subtitle: "Lecture 7"
-date: "2025-02-04"
-format: revealjs
-auto-stretch: false
+date: "2026-02-04"
+format: 
+  revealjs: 
+    output-file: 07-joining-data-slides.html
+    footer: "[🔗 sta199-s26.github.io](https://sta199-s26.github.io/)"
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+    logo: images/logo.png
+    toc: false
+  html: 
+    code-link: true
 ---
+
+## While you wait... {.smaller}
 
 <!-- begin: ae definition -->
 
@@ -15,8 +26,6 @@ todays_ae <- "ae-07-taxes-join"
 ```
 
 <!-- end: ae definition -->
-
-## While you wait... {.smaller}
 
 Prepare for today's application exercise: **`{r} todays_ae`**
 
@@ -155,6 +164,30 @@ if_else(
 1.  Condition
 2.  Value if condition is `TRUE`
 3.  Value if condition is `FALSE`
+
+## Participate 📱💻 {.smaller}
+
+
+::: wooclap
+Fill in the blank to compare the average state sales tax rates of swing states vs. non-swing states.
+
+```{r}
+#| eval: false
+sales_taxes |>
+  __BLANK__ |>
+  summarize(mean_state_tax = mean(state_tax_rate))
+```
+
+::: wooclap-choices
+- `arrange(swing_state)`
+- `filter(swing_state == "Swing")`
+- `group_by(swing_state)`
+- `group_by(list_of_swing_states)`
+:::
+
+:::
+
+
 
 ## Sales tax in swing states {.smaller .scrollable}
 
