@@ -376,9 +376,10 @@ We would like to combine information from two datasets, `sales_taxes` and `us_re
 
 -   the state name,
 
--   the sales tax rate (`combined_tax_rate`), and
+-   the region the state belongs to, and
 
--   the region the state belongs to.
+-   the sales tax rate (`combined_tax_rate`).
+
 
 Note that while DC appears in the `sales_taxes` dataset, it does not appear in the `us_regions` dataset.
 As a result, after joining the datasets, DC will have an `NA` value for the `region` variable in the joined data frame.
@@ -388,7 +389,7 @@ a\.
 Using `read_csv()`, read in the two datasets, `sales-taxes-25.csv` and `us-regions.csv` as `sales_taxes` and `us_regions`, respectively.
 Both datasets are located in your `data` folder.
 Then, join the two datasets using the appropriate type of join so that you can later compute the average `combined_tax_rate` by region.
-The resulting data frame should contain 3 variables: the state name, `combined_tax_rate`, and the region the state belongs to.
+The resulting data frame should contain 3 variables: the state name, the region the state belongs to, and the `combined_tax_rate`.
 Do not overwrite either of the original data frames.
 At this stage, DC should have an `NA` value for `region` in the joined data frame.
 
