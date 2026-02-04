@@ -6,40 +6,46 @@ categories: HW
 filters:
   - ../remove-fmt-skip.lua
 draft: true
+editor: 
+  markdown: 
+    wrap: sentence
 ---
 
 # Introduction
 
 This is a two-part homework assignment:
 
-- **Part 1 -- 🤖 Feedback from AI:** Not graded, for practice, you get immediate feedback with AI, based on rubrics designed by the course instructor. Complete in `hw-3-part-1.qmd`, no submission required.
+-   **Part 1 -- 🤖 Feedback from AI:** Not graded, for practice, you get immediate feedback with AI, based on rubrics designed by the course instructor.
+    Complete in `hw-3-part-1.qmd`, no submission required.
 
-- **Part 2 -- 🧑🏽‍🏫 Feedback from Humans:** Graded, you get feedback from the course instructional team within a week. Complete in `hw-3-part-2.qmd`, submit on Gradescope.
+-   **Part 2 -- 🧑🏽‍🏫 Feedback from Humans:** Graded, you get feedback from the course instructional team within a week.
+    Complete in `hw-3-part-2.qmd`, submit on Gradescope.
 
 By now you should be familiar with how to get started with a homework assignment by cloning the GitHub repo for the assignment.
 
 <details>
+
 <summary>Click to expand if you need a refresher on how to get started with a homework assignment.</summary>
 
 -   Go to <https://cmgr.oit.duke.edu/containers> and login with your Duke NetID and Password.
 -   Click `STA199` under My reservations to log into your container. You should now see the RStudio environment.
--   Go to the course organization at [github.com/sta199-s26](https://github.com/sta199-s26) organization on GitHub.
-    Click on the repo with the prefix **hw-3**.
-    It contains the starter documents you need to complete the homework.
--   Click on the green **CODE** button, select **Use SSH**.
-    Click on the clipboard icon to copy the repo URL.
+-   Go to the course organization at [github.com/sta199-s26](https://github.com/sta199-s26) organization on GitHub. Click on the repo with the prefix **hw-3**. It contains the starter documents you need to complete the homework.
+-   Click on the green **CODE** button, select **Use SSH**. Click on the clipboard icon to copy the repo URL.
 -   In RStudio, go to *File* ➛ *New Project* ➛*Version Control* ➛ *Git*.
 -   Copy and paste the URL of your assignment repo into the dialog box *Repository URL*. Again, please make sure to have *SSH* highlighted under *Clone* when you copy the address.
 -   Click *Create Project*, and the files from your GitHub repo will be displayed in the *Files* pane in RStudio.
+
 </details>
 
 By now you should also be familiar with guidelines for formatting your code and plots as well as your Git and Gradescope workflow.
 
 <details>
-<summary>Click to expand if you need a refresher on assignment guidelines.</summary>
-{{< include _guidelines.qmd >}}
-</details>
 
+<summary>Click to expand if you need a refresher on assignment guidelines.</summary>
+
+{{< include _guidelines.qmd >}}
+
+</details>
 
 # Part 1 -- Feedback from AI
 
@@ -48,16 +54,19 @@ Your answers to the questions in this part should go in the file `hw-3-part-1.qm
 ## Instructions
 
 Write your answer to each question in the appropriate section of the `hw-3-part-1.qmd` file.
-Then, highlight your answer to a question, click on _Addins > AIFEEDR > Get feedback_.
+Then, highlight your answer to a question, click on *Addins \> AIFEEDR \> Get feedback*.
 In the app that opens, select the appropriate homework number (3) and question number.
-Then click on _Get Feedback_.
-Please be patient, feedback generation can take a few seconds. 
-Once you read the feedback, you can go back to your Quarto document to improve your answer based on the feedback. 
+Then click on *Get Feedback*.
+Please be patient, feedback generation can take a few seconds.
+Once you read the feedback, you can go back to your Quarto document to improve your answer based on the feedback.
 You will then need to click the red X on the top left corner of the Viewer pane to stop the feedback app from running before you can re-render your Quarto document.
 
 <details>
+
 <summary>Click to expand if you want to review the video that demonstrates how to use the AI feedback tool.</summary>
+
 {{< video https://www.youtube.com/embed/EyT6QQN1ouQ?si=DsG-laE30BykMJby title="aifeedr">}}
+
 </details>
 
 ## Packages
@@ -88,10 +97,9 @@ Make sure to commit and push all changed files so that your Git pane is empty af
 
 Get to know the data.
 
-a.  `glimpse()` at the `country_inflation` data frame and answer the following questions based on the output. 
-    - How many rows does `country_inflation` have and what does each row represent? 
-    - How many columns does `country_inflation` have and what does each column represent?
-
+a.  `glimpse()` at the `country_inflation` data frame and answer the following questions based on the output.
+    -   How many rows does `country_inflation` have and what does each row represent?
+    -   How many columns does `country_inflation` have and what does each column represent?
 b.  Display the names of the countries included in the dataset. How many distinct countries are there?
 
 ::: callout-tip
@@ -100,10 +108,12 @@ Find distinct countries with `distinct()` and print all countries with `print(n 
 
 ### Question 2
 
-Which countries had the top three highest inflation rates in 2023? Your output should be a data frame with two columns, `country` and `2023`, with inflation rates in descending order, and three rows for the top three countries. Briefly comment on how the inflation rates for these countries compare to the inflation rate for United States in that year.
+Which countries had the top three highest inflation rates in 2023?
+Your output should be a data frame with two columns, `country` and `2023`, with inflation rates in descending order, and three rows for the top three countries.
+Briefly comment on how the inflation rates for these countries compare to the inflation rate for United States in that year.
 
 ::: callout-tip
-Column names that are numbers are not considered "proper" in R, therefore to select them you’ll need to surround them with backticks (`).
+Column names that are numbers are not considered "proper" in R, therefore to select them you’ll need to surround them with backticks (\`).
 :::
 
 ### Question 3
@@ -172,9 +182,8 @@ This will allow you to save the pivoted data frame from Question 4 as a CSV (com
 
 You need to modify the code cell by doing the following two things:
 
-1. **fill in the blank** with the name of the pivoted data frame from Question 4 and 
-2. **change the value of the code cell option*** `eval` from `false` to `true` so that the code cell will run and save the CSV file when you render your Quarto document.
-
+1.  **fill in the blank** with the name of the pivoted data frame from Question 4 and
+2.  **change the value of the code cell option**\* `eval` from `false` to `true` so that the code cell will run and save the CSV file when you render your Quarto document.
 :::
 
 ::: render-commit-push
@@ -190,9 +199,9 @@ Your answers to the questions in this part should go in the file `hw-3-part-2.qm
 
 ## Packages
 
-You will use the **tidyverse** package for data wrangling and visualization, 
+You will use the **tidyverse** package for data wrangling and visualization,
 
-You may choose to load other packages as needed, particularly for improving your plots. 
+You may choose to load other packages as needed, particularly for improving your plots.
 If you do so, add the functions to load these packages in the code cell labeled `load-packages`.
 
 ```{r}
@@ -362,21 +371,29 @@ ggplot(...) +
 
 **Handling missing values after joins.**
 
-In class last week, we worked with the `sales_taxes` dataset and joined it to another dataset called `us_regions` so that we ended up with a data frame containing information on each state (plus DC), salex tax rate in that state, and the region the state is in. While DC was in our first dataset, it was not in the second, resulting in an `NA` value for the `region` variable in the joined dataset. We discussed that there are three approaches we could take to address this issue before calculating the average average sales tax of states in each region.
+We would like to combine information from two datasets, `sales_taxes` and `us_regions`, to create a data frame that includes, for each state (and DC), only the following variables:
+
+-   the state name,
+
+-   the sales tax rate (`combined_tax_rate`), and
+
+-   the region the state belongs to.
+
+Note that while DC appears in the `sales_taxes` dataset, it does not appear in the `us_regions` dataset.
+As a result, after joining the datasets, DC will have an `NA` value for the `region` variable in the joined data frame.
+To address this issue, you will recode DC as belonging to the `South` region before calculating the average `combined_tax_rate` by region.
 
 a\.
-Read in the two datasets, `sales-taxes-25.csv` and `us-regions.csv`, which are both in your `data` folder.
-Then, join the two datasets using the appropriate type of join to be able to calculate the average sales tax rate by region, not overwriting either data frame that goes into the join.
+Using `read_csv()`, read in the two datasets, `sales-taxes-25.csv` and `us-regions.csv` as `sales_taxes` and `us_regions`, respectively.
+Both datasets are located in your `data` folder.
+Then, join the two datasets using the appropriate type of join so that you can later compute the average `combined_tax_rate` by region.
+The resulting data frame should contain 3 variables: the state name, `combined_tax_rate`, and the region the state belongs to.
+Do not overwrite either of the original data frames.
+At this stage, DC should have an `NA` value for `region` in the joined data frame.
 
-b\. 
-Apply the three approaches we discussed in class to address the issue that DC has an `NA` value for `region` in the joined dataset, and then calculate the average average sales tax of states in each region.
-
-c\.
-Choose one of the three approaches as the "most appropriate" approach and provide a brief (1-2 sentences) rationale for your choice.
-
-::: callout-tip
-You can refer back to [AE 06: Sales taxes + data joining](../ae/ae-06-taxes-join-A.qmd) if you need a reminder of these data and how to join them.
-:::
+b\.
+Update the `region` value for DC to `South` (instead of `NA`).
+Then calculate the average `combined_tax_rate` for each region.
 
 # Wrap-up
 
@@ -394,9 +411,10 @@ We will be checking these to make sure you have been practicing how to commit an
 -   Questions 1-5 are not graded, but you should complete them to get practice.
 
 -   Questions 6-10 are graded, and you will receive feedback on Gradescope from the course instructional team within a week.
+
     -   Questions will be graded for accuracy and completeness.
     -   Partial credit will be given where appropriate.
     -   There are also workflow points for:
-        - committing at least three times as you work through your lab,
-        - having your final version of `.qmd` and `.pdf` files in your GitHub repository, and
-        - overall organization.
+        -   committing at least three times as you work through your lab,
+        -   having your final version of `.qmd` and `.pdf` files in your GitHub repository, and
+        -   overall organization.
