@@ -1,0 +1,163 @@
+---
+title: "AE 06: Sales taxes + data joining"
+subtitle: "Suggested answers"
+---
+
+::: callout-important
+These are suggested answers. This document should be used as a reference only; it's not designed to be an exhaustive key.
+:::
+
+## Getting started
+
+### Packages
+
+We'll use the **tidyverse** package for this analysis.
+
+```{r}
+#| label: load-packages
+#| message: false
+library(tidyverse)
+```
+
+### Data
+
+The data are available in the `data` folder:
+
+-   `sales-taxes.csv`
+
+-   `us-regions.csv`
+
+```{r}
+#| label: load-data
+#| message: false
+sales_taxes <- read_csv("data/sales-taxes-25.csv")
+us_regions <- read_csv("data/us-regions.csv")
+```
+
+And let's take a look at the data.
+
+```{r}
+#| label: glimpse
+glimpse(sales_taxes)
+glimpse(us_regions)
+```
+
+## Sales tax in swing states: `if_else`
+
+Create new `swing_state` variable using `if_else`:
+
+```{r}
+#| label: mutate-if_else
+list_of_swing_states <- c("Arizona", "Georgia", "Michigan", "Nevada", 
+                          "North Carolina", "Pennsylvania", "Wisconsin")
+
+sales_taxes <- sales_taxes |>
+  mutate(
+    swing_state = if_else(state %in% list_of_swing_states,
+                          "Swing",
+                          "Non-swing")) |>
+  relocate(swing_state)
+
+sales_taxes
+```
+
+Summarize to find the mean sales tax in each type of state:
+
+```{r}
+#| label: summarize-swing
+sales_taxes |>
+  group_by(swing_state) |>
+  summarize(mean_state_tax = mean(state_tax_rate))
+```
+
+## Sales tax in coastal states: `case_when`
+
+Create new `coast` variable using `case_when`:
+
+```{r}
+#| label: mutate-case_when
+
+pacific_coast <- c("Alaska", "Washington", "Oregon", "California", "Hawaii")
+
+atlantic_coast <- c(
+  "Connecticut", "Delaware", "Georgia", "Florida", "Maine", "Maryland", 
+  "Massachusetts", "New Hampshire", "New Jersey", "New York", 
+  "North Carolina", "Rhode Island", "South Carolina", "Virginia"
+)
+
+sales_taxes <- sales_taxes |>
+  mutate(
+    coast = case_when(
+      state %in% pacific_coast ~ "Pacific",
+      state %in% atlantic_coast ~ "Atlantic",
+      .default = "Neither"
+    )
+  ) |>
+  relocate(coast)
+
+sales_taxes
+```
+
+Summarize to find the mean sales tax in each type of state:
+
+```{r}
+#| label: summarize-coastal
+sales_taxes |>
+  group_by(coast) |>
+  summarize(mean_state_tax = mean(state_tax_rate))
+```
+
+## Sales tax in US regions: joining
+
+Join the sales tax data with region data and save the joined data frame as a new data frame, not overwriting either data frame that goes into the join.
+
+```{r}
+#| label: join
+sales_taxes_regions <- sales_taxes |>
+  full_join(us_regions, 
+            by = join_by(state == state_name)) |>
+  relocate(region)
+
+sales_taxes_regions
+```
+
+Calculate the average sales tax of states in each region. What is surprising in the output?
+
+```{r}
+#| label: region-means-take-1
+sales_taxes_regions |>
+  group_by(region) |>
+  summarize(mean_state_tax = mean(state_tax_rate))
+```
+
+Identify the state with `NA` for region.
+
+```{r}
+#| label: identify-na
+sales_taxes_regions |>
+  filter(is.na(region)) |>
+  select(state)
+```
+
+Apply a fix for the `NA` in region, and calculate the mean sales taxes for regions again. Display the results in ascending order of mean sales tax.
+
+```{r}
+#| label: region-means-take-2
+
+sales_taxes_regions |>
+  mutate(
+    region = if_else(state == "District of Columbia", "Northeast", region)
+  ) |>
+  group_by(region) |>
+  summarize(mean_state_tax = mean(state_tax_rate))
+```
+
+## Render, commit, and push
+
+1.  Render your Quarto document.
+
+2.  Go to the Git pane and check the box next to each file listed, i.e., stage your changes. Commit your staged changes using a simple and informative message.
+
+3.  Click on push (the green arrow) to push your changes to your application exercise repo on GitHub.
+
+4.  Go to your repo on GitHub and confirm that you can see the updated files. Once your updated files are in your repo on GitHub, you're good to go!
