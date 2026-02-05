@@ -5,7 +5,7 @@ description: "Due: Wed, Feb 11, 11:59 pm"
 categories: HW
 filters:
   - ../remove-fmt-skip.lua
-draft: true
+draft: false
 editor: 
   markdown: 
     wrap: sentence
