@@ -1,5 +1,5 @@
 ---
-title: "AE 06: Sales taxes + data joining"
+title: "AE 07: Sales taxes + data joining"
 subtitle: "Suggested answers"
 ---
 
