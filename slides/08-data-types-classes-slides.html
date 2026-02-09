@@ -251,20 +251,20 @@ Loading…
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>survey</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 209 × 3
+<pre><code># A tibble: 276 × 3
    Timestamp         How many classes do you have on Tues…¹ `What year are you?`
    &lt;chr&gt;             &lt;chr&gt;                                  &lt;chr&gt;               
- 1 2/6/2025 11:33:57 3                                      Sophomore           
- 2 2/6/2025 11:37:39 3                                      First-year          
- 3 2/6/2025 11:40:55 2                                      Senior              
- 4 2/6/2025 11:42:05 3                                      First-year          
- 5 2/6/2025 11:42:46 3                                      Senior              
- 6 2/6/2025 11:43:28 3                                      Senior              
- 7 2/6/2025 11:44:41 3                                      First-year          
- 8 2/6/2025 11:44:49 3                                      First-year          
- 9 2/6/2025 11:44:51 2                                      Sophomore           
-10 2/6/2025 11:44:51 3                                      Sophomore           
-# ℹ 199 more rows
+ 1 2/9/2026 11:03:46 3                                      First-year          
+ 2 2/9/2026 11:29:24 2                                      Sophomore           
+ 3 2/9/2026 11:33:44 2                                      Sophomore           
+ 4 2/9/2026 11:33:48 2                                      Sophomore           
+ 5 2/9/2026 11:33:56 1                                      First-year          
+ 6 2/9/2026 11:33:56 3                                      First-year          
+ 7 2/9/2026 11:33:58 3                                      Sophomore           
+ 8 2/9/2026 11:34:07 3                                      Sophomore           
+ 9 2/9/2026 11:34:13 2                                      First-year          
+10 2/9/2026 11:34:20 3                                      Junior              
+# ℹ 266 more rows
 # ℹ abbreviated name: ¹​`How many classes do you have on Tuesdays?`</code></pre>
 </div>
 </div>
@@ -285,20 +285,20 @@ Loading…
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>survey</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 209 × 3
+<pre><code># A tibble: 276 × 3
    Timestamp         tue_classes year      
    &lt;chr&gt;             &lt;chr&gt;       &lt;chr&gt;     
- 1 2/6/2025 11:33:57 3           Sophomore 
- 2 2/6/2025 11:37:39 3           First-year
- 3 2/6/2025 11:40:55 2           Senior    
- 4 2/6/2025 11:42:05 3           First-year
- 5 2/6/2025 11:42:46 3           Senior    
- 6 2/6/2025 11:43:28 3           Senior    
- 7 2/6/2025 11:44:41 3           First-year
- 8 2/6/2025 11:44:49 3           First-year
- 9 2/6/2025 11:44:51 2           Sophomore 
-10 2/6/2025 11:44:51 3           Sophomore 
-# ℹ 199 more rows</code></pre>
+ 1 2/9/2026 11:03:46 3           First-year
+ 2 2/9/2026 11:29:24 2           Sophomore 
+ 3 2/9/2026 11:33:44 2           Sophomore 
+ 4 2/9/2026 11:33:48 2           Sophomore 
+ 5 2/9/2026 11:33:56 1           First-year
+ 6 2/9/2026 11:33:56 3           First-year
+ 7 2/9/2026 11:33:58 3           Sophomore 
+ 8 2/9/2026 11:34:07 3           Sophomore 
+ 9 2/9/2026 11:34:13 2           First-year
+10 2/9/2026 11:34:20 3           Junior    
+# ℹ 266 more rows</code></pre>
 </div>
 </div>
 </section><section id="variable-types-1" class="slide level2"><h2>Variable types</h2>
@@ -309,22 +309,20 @@ Loading…
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>survey <span class="sc">|&gt;</span></span>
 <span id="cb6-2"><a></a>  <span class="fu">count</span>(tue_classes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 13 × 2
-   tue_classes                  n
-   &lt;chr&gt;                    &lt;int&gt;
- 1 1                           10
- 2 2                           53
- 3 2 -3                         1
- 4 3                          104
- 5 3 classes                    1
- 6 4                           28
- 7 5                            3
- 8 Four                         1
- 9 TWO MANY                     1
-10 Three                        2
-11 Two                          3
-12 Two plus a chemistry lab     1
-13 three                        1</code></pre>
+<pre><code># A tibble: 11 × 2
+   tue_classes                                n
+   &lt;chr&gt;                                  &lt;int&gt;
+ 1 0                                         13
+ 2 1                                         62
+ 3 1 class, 1 lab, 1 volunteering session     1
+ 4 2                                        118
+ 5 3                                         65
+ 6 4                                          7
+ 7 One                                        2
+ 8 Three                                      2
+ 9 Two                                        4
+10 Two in both days                           1
+11 two                                        1</code></pre>
 </div>
 </div>
 </section><section id="lets-clean-it-up" class="slide level2 scrollable"><h2>Let’s clean it up</h2>
@@ -333,35 +331,28 @@ Loading…
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>survey <span class="ot">&lt;-</span> survey <span class="sc">|&gt;</span></span>
 <span id="cb8-2"><a></a>  <span class="fu">mutate</span>(</span>
 <span id="cb8-3"><a></a>    <span class="at">tue_classes =</span> <span class="fu">case_when</span>(</span>
-<span id="cb8-4"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"2 -3"</span> <span class="sc">~</span> <span class="st">"3"</span>,</span>
-<span id="cb8-5"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"3 classes"</span> <span class="sc">~</span> <span class="st">"3"</span>,</span>
-<span id="cb8-6"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"Four"</span> <span class="sc">~</span> <span class="st">"4"</span>,</span>
-<span id="cb8-7"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"TWO MANY"</span> <span class="sc">~</span> <span class="st">"2"</span>,</span>
-<span id="cb8-8"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"Three"</span> <span class="sc">~</span> <span class="st">"3"</span>,</span>
-<span id="cb8-9"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"Two"</span> <span class="sc">~</span> <span class="st">"2"</span>,</span>
-<span id="cb8-10"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"Two plus a chemistry lab"</span> <span class="sc">~</span> <span class="st">"3"</span>,</span>
-<span id="cb8-11"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"three"</span> <span class="sc">~</span> <span class="st">"3"</span>,</span>
-<span id="cb8-12"><a></a>      <span class="at">.default =</span> tue_classes</span>
-<span id="cb8-13"><a></a>    ),</span>
-<span id="cb8-14"><a></a>    <span class="at">tue_classes =</span> <span class="fu">as.numeric</span>(tue_classes)</span>
-<span id="cb8-15"><a></a>  )</span>
-<span id="cb8-16"><a></a></span>
-<span id="cb8-17"><a></a>survey</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-4"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"1 class, 1 lab, 1 volunteering session"</span> <span class="sc">~</span> <span class="st">"2"</span>,</span>
+<span id="cb8-5"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"One"</span> <span class="sc">~</span> <span class="st">"1"</span>,</span>
+<span id="cb8-6"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"Three"</span> <span class="sc">~</span> <span class="st">"3"</span>,</span>
+<span id="cb8-7"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"Two"</span> <span class="sc">~</span> <span class="st">"2"</span>,</span>
+<span id="cb8-8"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"Two in both days"</span> <span class="sc">~</span> <span class="st">"2"</span>,</span>
+<span id="cb8-9"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"two"</span> <span class="sc">~</span> <span class="st">"2"</span>,</span>
+<span id="cb8-10"><a></a>      <span class="at">.default =</span> tue_classes</span>
+<span id="cb8-11"><a></a>    ),</span>
+<span id="cb8-12"><a></a>    <span class="at">tue_classes =</span> <span class="fu">as.numeric</span>(tue_classes)</span>
+<span id="cb8-13"><a></a>  )</span>
+<span id="cb8-14"><a></a></span>
+<span id="cb8-15"><a></a>survey <span class="sc">|&gt;</span></span>
+<span id="cb8-16"><a></a>  <span class="fu">count</span>(tue_classes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 209 × 3
-   Timestamp         tue_classes year      
-   &lt;chr&gt;                   &lt;dbl&gt; &lt;chr&gt;     
- 1 2/6/2025 11:33:57           3 Sophomore 
- 2 2/6/2025 11:37:39           3 First-year
- 3 2/6/2025 11:40:55           2 Senior    
- 4 2/6/2025 11:42:05           3 First-year
- 5 2/6/2025 11:42:46           3 Senior    
- 6 2/6/2025 11:43:28           3 Senior    
- 7 2/6/2025 11:44:41           3 First-year
- 8 2/6/2025 11:44:49           3 First-year
- 9 2/6/2025 11:44:51           2 Sophomore 
-10 2/6/2025 11:44:51           3 Sophomore 
-# ℹ 199 more rows</code></pre>
+<pre><code># A tibble: 5 × 2
+  tue_classes     n
+        &lt;dbl&gt; &lt;int&gt;
+1           0    13
+2           1    64
+3           2   125
+4           3    67
+5           4     7</code></pre>
 </div>
 </div>
 </section></section><section><section id="data-types-1" class="title-slide slide level1 center"><h1>Data types</h1>
@@ -784,20 +775,20 @@ $z
 <div class="cell">
 <div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a></a>survey</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 209 × 3
+<pre><code># A tibble: 276 × 3
    Timestamp         tue_classes year      
    &lt;chr&gt;                   &lt;dbl&gt; &lt;chr&gt;     
- 1 2/6/2025 11:33:57           3 Sophomore 
- 2 2/6/2025 11:37:39           3 First-year
- 3 2/6/2025 11:40:55           2 Senior    
- 4 2/6/2025 11:42:05           3 First-year
- 5 2/6/2025 11:42:46           3 Senior    
- 6 2/6/2025 11:43:28           3 Senior    
- 7 2/6/2025 11:44:41           3 First-year
- 8 2/6/2025 11:44:49           3 First-year
- 9 2/6/2025 11:44:51           2 Sophomore 
-10 2/6/2025 11:44:51           3 Sophomore 
-# ℹ 199 more rows</code></pre>
+ 1 2/9/2026 11:03:46           3 First-year
+ 2 2/9/2026 11:29:24           2 Sophomore 
+ 3 2/9/2026 11:33:44           2 Sophomore 
+ 4 2/9/2026 11:33:48           2 Sophomore 
+ 5 2/9/2026 11:33:56           1 First-year
+ 6 2/9/2026 11:33:56           3 First-year
+ 7 2/9/2026 11:33:58           3 Sophomore 
+ 8 2/9/2026 11:34:07           3 Sophomore 
+ 9 2/9/2026 11:34:13           2 First-year
+10 2/9/2026 11:34:20           3 Junior    
+# ℹ 266 more rows</code></pre>
 </div>
 </div>
 </section><section id="but-coerce-when-plotting" class="slide level2"><h2>But coerce when plotting</h2>
