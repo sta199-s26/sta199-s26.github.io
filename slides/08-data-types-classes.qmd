@@ -63,7 +63,8 @@ Prepare for today's application exercise: **`{r} todays_ae`**
 ```{r}
 #| include: false
 library(tidyverse)
-survey <- read_csv("data/survey-2025-02-06.csv")
+#survey <- read_csv("data/survey-2025-02-06.csv")
+survey <- read_csv("data/survey-2026-02-09.csv")
 ```
 
 ```{r}
@@ -111,20 +112,20 @@ It's a huge pain in the rear:
 survey <- survey |>
   mutate(
     tue_classes = case_when(
-      tue_classes == "2 -3" ~ "3",
-      tue_classes == "3 classes" ~ "3",
-      tue_classes == "Four" ~ "4",
-      tue_classes == "TWO MANY" ~ "2",
+      tue_classes == "1 class, 1 lab, 1 volunteering session" ~ "2",
+      tue_classes == "One" ~ "1",
       tue_classes == "Three" ~ "3",
       tue_classes == "Two" ~ "2",
-      tue_classes == "Two plus a chemistry lab" ~ "3",
-      tue_classes == "three" ~ "3",
+      tue_classes == "Two in both days" ~ "2",
+      tue_classes == "two" ~ "2",
       .default = tue_classes
     ),
     tue_classes = as.numeric(tue_classes)
   )
 
-survey
+survey |>
+  count(tue_classes)
+
 ```
 
 # Data types
