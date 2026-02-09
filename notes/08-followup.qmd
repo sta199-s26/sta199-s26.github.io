@@ -49,7 +49,7 @@ survey <- survey |>
   )
 ```
 
-That error message is actually pretty good. It's saying inside `mutate` and inside `case_when`, there was an error because you can't combine type `<double>` and type `character`. All true. The columns of a data frame are just *vectors* in `R`, and vectors need to contain values of all the same type. You can't mix and match. Our `case_when` statement is saying "in the six weird cases, make `tue_classes` and number(`1`, `2`, etc), and in all other cases (`.default`), keep it the way it is." Well, `tue_classes` comes to us as type `<character>`, so our original attempt at `case_when` is effectively asking the computer to mix and match types, which is forbidden. So we moved on...
+That error message is actually pretty good. It's saying inside `mutate` and inside `case_when`, there was an error because you can't combine type `<double>` and type `character`. All true. The columns of a data frame are just *vectors* in `R`, and vectors need to contain values of all the same type. You can't mix and match. Our `case_when` statement is saying "in the six weird cases, make `tue_classes` and number (`1`, `2`, etc), and in all other cases (`.default`), keep it the way it is." Well, `tue_classes` comes to us as type `<character>`, so our original attempt at `case_when` is effectively asking the computer to mix and match types, which is forbidden. So we moved on...
 
 ## The second thing I ran
 
@@ -112,7 +112,7 @@ survey |>
   count(tue_classes)
 ```
 
-...Okay. So why did JZ stand there for what felt like an eternity looking like a chinless fool? Because dear students, he made the mistake of running that same exact same chunk of (correct!) code again.
+...Okay. So why did JZ stand there for what felt like an eternity looking like a chinless fool? Because dear students, he made the mistake of running that exact same chunk of (correct!) code again.
 
 ## The fourth thing I (mistakenly) ran
 
