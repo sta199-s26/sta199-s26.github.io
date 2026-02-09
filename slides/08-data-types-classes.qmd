@@ -32,9 +32,9 @@ todays_ae <- "ae-08-durham-climate-factors"
 
 ::: columns
 ::: {.column width="35%"}
-{{< qrcode https://forms.gle/wgMtTHbAynjiX2bp6 >}}
+{{< qrcode https://forms.gle/qU63CmG9QtVthYVj9 >}}
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf0x7gOZY04c9vzdyIdm-v_vCqL0oFaQI9-LWB8Dt3uf3TriQ/viewform?embedded=true" width="350" height="400" frameborder="0" marginheight="0" marginwidth="0">
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSflj08LttBQIz9Qnn0nfKspnGsQesY1y-_xOqPahT7SxRfUAw/viewform?embedded=true" width="640" height="912" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 Loading…
 
@@ -54,23 +54,6 @@ Prepare for today's application exercise: **`{r} todays_ae`**
 -   Wait till the you're prompted to work on the application exercise during class before editing the file.
 :::
 :::
-:::
-
-## Regrade request policy {.smaller}
-
-::: incremental
--   Considered for errors in grade calculation or if a correct answer was mistakenly marked as incorrect
-
--   Not a mechanism for:
-
-    -   disputing the number of points deducted for an incorrect response
-    -   asking for clarification on feedback (come to office hours instead)
-
--   Due on Gradescope within a week after an assignment is returned
-
--   The entire assignment may be regraded, which could result in an adjustment in either direction
-
--   No regrade requests after the final exam has been administered
 :::
 
 # Data types
@@ -330,6 +313,42 @@ Happens when you use a vector in a specific context that expects a certain type 
 :::
 :::
 
+## You've seen explicit coercion before {.medium}
+
+```{r}
+#| include: false
+statsci <- read_csv("data/statsci_clean.csv")
+```
+
+
+::: columns
+::: {.column width="50%"}
+```{r}
+statsci |> 
+  pivot_longer(
+    cols = -degree_type,
+    values_to = "n",
+    names_to = "year"
+  )
+```
+:::
+
+::: {.column .fragment width="50%"}
+
+```{r}
+statsci |>
+  pivot_longer(
+    cols = -degree_type,
+    values_to = "n",
+    names_to = "year",
+    names_transform = as.numeric
+  )
+```
+
+:::
+:::
+
+
 # Data classes
 
 ## Data classes {.smaller}
@@ -410,7 +429,7 @@ as.integer(today) / 365 # roughly 55 yrs
 
 ## Data frames
 
-We can think of data frames like like vectors of equal length glued together
+We can think of data frames like vectors of equal length glued together
 
 ```{r}
 df <- data.frame(x = 1:2, y = 3:4)
