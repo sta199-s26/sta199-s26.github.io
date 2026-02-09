@@ -80,7 +80,7 @@ survey |>
   count(tue_classes)
 ```
 
-We've cleaned up all of those goofy cases. Everything appears as a numeral, but the column is still type `character`. To wrap up, we need to convert using `as.numeric`.
+We've cleaned up all of those goofy cases. Everything *appears* as a numeral, but the column is still type `character`. To wrap up, we need to convert using `as.numeric`.
 
 ## The third thing I ran
 
