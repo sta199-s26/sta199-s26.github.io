@@ -72,10 +72,6 @@ In this part you will work with the
 -   **tidyverse** package for doing data analysis in a "tidy" way and
 -   **datasauRus** package for a dataset
 
--   **readxl** package for reading in Excel files, (move to part 2)
--   **janitor** package for cleaning up variable names, and (move to part 2)
--   **palmerpenguins** and 
-
 ```{r}
 #| eval: true
 #| message: false
@@ -242,7 +238,6 @@ Add `error` as a code chunk option and set it to `false` and then set it to `tru
 ::: callout-tip
 Reading [the documentation](https://quarto.org/docs/reference/formats/pdf.html#execution) might also be helpful.
 :::
-
 
 ::: render-commit-push
 Now is another good time to render, commit, and push your changes to GitHub with an informative and concise commit message.
