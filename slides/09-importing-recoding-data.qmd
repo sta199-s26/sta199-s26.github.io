@@ -129,17 +129,19 @@ Follow the [Tidyverse style guide](https://style.tidyverse.org/):
 ```{r}
 df <- tibble(
   x = c(-2, -0.5, 0.5, 1, 2),
-  `2011` = c(-2, -0.5, 0.5, 1, 2)
+  `2011` = c(-2, -0.5, 0.5, 1, 2),
+  `my var` = c(-2, -1, 0, 1, 2)
 )
 df
 ```
 
-## Quotes VS no quotes VS backticks {.scrollable}
+## Quotes VS no quotes VS backticks {.small .scrollable}
 
 ```{r}
 df <- tibble(
   x = c(-2, -0.5, 0.5, 1, 2),
-  `2011` = c(-2, -0.5, 0.5, 1, 2)
+  `2011` = c(-2, -0.5, 0.5, 1, 2),
+  `my var` = c(-2, -1, 0, 1, 2)
 )
 ```
 
@@ -173,12 +175,13 @@ df |>
 
 :::
 
-## Quotes VS no quotes VS backticks {.medium .scrollable}
+## Quotes VS no quotes VS backticks {.small .scrollable}
 
 ```{r}
 df <- tibble(
   x = c(-2, -0.5, 0.5, 1, 2),
-  `2011` = c(-2, -0.5, 0.5, 1, 2)
+  `2011` = c(-2, -0.5, 0.5, 1, 2),
+  `my var` = c(-2, -1, 0, 1, 2)
 )
 ```
 
@@ -210,6 +213,47 @@ df |>
 :::
 
 :::
+
+## Quotes VS no quotes VS backticks {.small .scrollable}
+
+```{r}
+df <- tibble(
+  x = c(-2, -0.5, 0.5, 1, 2),
+  `2011` = c(-2, -0.5, 0.5, 1, 2),
+  `my var` = c(-2, -1, 0, 1, 2)
+)
+```
+
+Referencing a column in a pipeline:
+
+::: columns
+::: {.column .fragment width="33%"}
+```{r}
+df |>
+  filter("my var" > 0)
+```
+`"my var"` means the literal character string.
+:::
+
+::: {.column .fragment width="31%"}
+```{r}
+#| error: true
+df |>
+  filter(my var > 0)
+```
+`my var` means nothing.
+:::
+
+::: {.column .fragment width="33%"}
+```{r}
+df |>
+  filter(`my var` > 0)
+```
+``` `my var` ``` means the column name in `df`.
+:::
+
+:::
+
 
 
 ## Why `%in%` instead of `==`?
@@ -287,7 +331,7 @@ Inside `if_else` or `case_when` your condition needs to result in a single value
 
 # From last time
 
-## Picking up from last time: 
+## Picking up from last time
 
 AE 08: 
 
