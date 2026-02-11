@@ -1,5 +1,6 @@
-![](images/wooclap-qr.png){width="200" fig-align="center"}
+{{< qrcode https://app.wooclap.com/TNRPMB?from=instruction-slide width=300 height=300 >}}
+
 
 ::: small
-Scan the QR code or go to [app.wooclap.com/sta199](https://app.wooclap.com/sta199). Log in with your Duke NetID.
+Scan the QR code or go to [HERE](https://app.wooclap.com/TNRPMB?from=instruction-slide). Log in with your Duke NetID.
 :::
