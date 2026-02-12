@@ -5,7 +5,7 @@ description: "Due: End of lab on Thurs, Feb 12"
 categories: Lab
 filters:
   - ../remove-fmt-skip.lua
-draft: true
+draft: false
 ---
 
 # Introduction

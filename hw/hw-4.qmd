@@ -5,7 +5,7 @@ description: "Due: Wed, Feb 18, 11:59 pm"
 categories: HW
 filters:
   - ../remove-fmt-skip.lua
-draft: true
+draft: false
 ---
 
 # Introduction
