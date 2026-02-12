@@ -65,13 +65,12 @@ You will then need to click the red X on the top left corner of the Viewer pane 
 In this part you will work with the
 
 -   **tidyverse** package for doing data analysis in a "tidy" way and
--   **palmerpenguins** and **datasauRus** packages for some datasets
+-   **datasauRus** package for a dataset.
 
 ```{r}
 #| eval: true
 #| message: false
 library(tidyverse)
-library(palmerpenguins)
 library(datasauRus)
 ```
 
@@ -160,16 +159,18 @@ Your answers to the questions in this part should go in the file `hw-4-part-2.qm
 In this part you will work with the
 
 -   **tidyverse** package for doing data analysis in a "tidy" way,
--   **readxl** package for reading in Excel files, and
--   **janitor** package for cleaning up variable names.
+-   **readxl** package for reading in Excel files,
+-   **janitor** package for cleaning up variable names, and
+-   **palmerpenguins** package for a dataset.
 
 You may choose to load other packages as needed, particularly for improving your plots. 
-If you do so, add the functions to load these packages in the code cell labeled `load-packages`.
+If you do so, add the functions to load these packages in the code cell labeled `load-packages-data`.
 
 ```{r}
 library(tidyverse)
 library(readxl)
 library(janitor)
+library(palmerpenguins)
 ```
 
 ## Cars!
