@@ -6,9 +6,9 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.7.34">
 <meta name="author" content="John Zito">
 <meta name="dcterms.date" content="2026-02-11">
 <title>STA 199 Spring 2026 – Webscraping Part 1</title>
@@ -96,7 +96,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f1a2306d7f1ecadf2b6aaed2cf5d8945.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f0195dcd610196b9111c6e10e98695f4.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -265,7 +265,7 @@ John Zito
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>df</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 2
       x y      
@@ -280,9 +280,9 @@ John Zito
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>df <span class="sc">|&gt;</span></span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>df <span class="sc">|&gt;</span></span>
 <span id="cb3-2"><a></a>  <span class="fu">group_by</span>(y) <span class="sc">|&gt;</span></span>
-<span id="cb3-3"><a></a>  <span class="fu">summarize</span>(<span class="at">xbar =</span> <span class="fu">mean</span>(x))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-3"><a></a>  <span class="fu">summarize</span>(<span class="at">xbar =</span> <span class="fu">mean</span>(x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>How many rows will this output have?</p>
 <ol type="a">
@@ -416,8 +416,8 @@ John Zito
 </iframe>
 </div><div class="column" style="width:65%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>survey <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/survey-2025-02-06.csv"</span>)</span>
-<span id="cb4-2"><a></a>survey</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>survey <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/survey-2025-02-06.csv"</span>)</span>
+<span id="cb4-2"><a></a>survey</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 209 × 3
    Timestamp         How many classes do you have on Tues…¹ `What year are you?`
@@ -460,7 +460,7 @@ John Zito
 </li>
 </ol></section><section id="from-last-time-data-preparation" class="slide level2 scrollable"><h2>From last time: data preparation</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>survey <span class="ot">&lt;-</span> survey <span class="sc">|&gt;</span></span>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>survey <span class="ot">&lt;-</span> survey <span class="sc">|&gt;</span></span>
 <span id="cb6-2"><a></a>  <span class="fu">rename</span>(</span>
 <span id="cb6-3"><a></a>    <span class="at">tue_classes =</span> <span class="st">`</span><span class="at">How many classes do you have on Tuesdays?</span><span class="st">`</span>,</span>
 <span id="cb6-4"><a></a>    <span class="at">year =</span> <span class="st">`</span><span class="at">What year are you?</span><span class="st">`</span></span>
@@ -481,7 +481,7 @@ John Zito
 <span id="cb6-19"><a></a>    <span class="at">year =</span> <span class="fu">fct_relevel</span>(year, <span class="st">"First-year"</span>, <span class="st">"Sophomore"</span>, <span class="st">"Junior"</span>, <span class="st">"Senior"</span>)</span>
 <span id="cb6-20"><a></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb6-21"><a></a>  <span class="fu">select</span>(tue_classes, year)</span>
-<span id="cb6-22"><a></a>survey</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-22"><a></a>survey</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 209 × 2
    tue_classes year      
@@ -532,7 +532,7 @@ John Zito
 </ol></section><section id="from-last-time-data-analysis" class="slide level2"><h2>From last time: data analysis</h2>
 <p>A human being can learn nothing from staring at this box:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>survey</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>survey</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 209 × 2
    tue_classes year      
@@ -553,24 +553,24 @@ John Zito
 </section><section id="from-last-time-data-analysis-1" class="slide level2"><h2>From last time: data analysis</h2>
 <p>Picture!</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">ggplot</span>(survey, <span class="fu">aes</span>(<span class="at">x =</span> tue_classes, <span class="at">fill =</span> year)) <span class="sc">+</span> </span>
-<span id="cb10-2"><a></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">ggplot</span>(survey, <span class="fu">aes</span>(<span class="at">x =</span> tue_classes, <span class="at">fill =</span> year)) <span class="sc">+</span> </span>
+<span id="cb10-2"><a></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="10-web-scraping-single-page_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section><section id="from-last-time-data-analysis-2" class="slide level2"><h2>From last time: data analysis</h2>
 <p>Better picture?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">ggplot</span>(survey, <span class="fu">aes</span>(<span class="at">x =</span> tue_classes, <span class="at">fill =</span> year)) <span class="sc">+</span> </span>
-<span id="cb11-2"><a></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">ggplot</span>(survey, <span class="fu">aes</span>(<span class="at">x =</span> tue_classes, <span class="at">fill =</span> year)) <span class="sc">+</span> </span>
+<span id="cb11-2"><a></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="10-web-scraping-single-page_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section><section id="from-last-time-data-analysis-3" class="slide level2"><h2>From last time: data analysis</h2>
 <p>Numbers!</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>survey <span class="sc">|&gt;</span></span>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>survey <span class="sc">|&gt;</span></span>
 <span id="cb12-2"><a></a>  <span class="fu">count</span>(tue_classes, year) <span class="sc">|&gt;</span></span>
 <span id="cb12-3"><a></a>  <span class="fu">group_by</span>(tue_classes) <span class="sc">|&gt;</span></span>
-<span id="cb12-4"><a></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb12-4"><a></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 17 × 4
 # Groups:   tue_classes [5]
@@ -704,22 +704,22 @@ John Zito
 </div></div>
 </section><section id="a-cautionary-tale-anscombes-quartet-1" class="slide level2"><h2>A cautionary tale: Anscombe’s quartet</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">ggplot</span>(anscombe_tidy, <span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">ggplot</span>(anscombe_tidy, <span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
 <span id="cb18-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb18-3"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> set) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb18-3"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> set) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="10-web-scraping-single-page_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section><section id="a-cautionary-tale-anscombes-quartet-2" class="slide level2"><h2>A cautionary tale: Anscombe’s quartet</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(anscombe_tidy, <span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(anscombe_tidy, <span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
 <span id="cb19-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb19-3"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> set) <span class="sc">+</span></span>
-<span id="cb19-4"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb19-4"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="10-web-scraping-single-page_files/figure-revealjs/unnamed-chunk-19-1.png" width="960" class="r-stretch"></section><section id="if-you-only-looked-at-summary-statistics" class="slide level2"><h2>If you only looked at summary statistics…</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>anscombe_tidy <span class="sc">|&gt;</span></span>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>anscombe_tidy <span class="sc">|&gt;</span></span>
 <span id="cb20-2"><a></a>  <span class="fu">group_by</span>(set) <span class="sc">|&gt;</span></span>
 <span id="cb20-3"><a></a>  <span class="fu">summarize</span>(</span>
 <span id="cb20-4"><a></a>    <span class="at">xbar =</span> <span class="fu">mean</span>(x),</span>
@@ -727,7 +727,7 @@ John Zito
 <span id="cb20-6"><a></a>    <span class="at">sx =</span> <span class="fu">sd</span>(x),</span>
 <span id="cb20-7"><a></a>    <span class="at">sy =</span> <span class="fu">sd</span>(y),</span>
 <span id="cb20-8"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(x, y)</span>
-<span id="cb20-9"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb20-9"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 6
   set    xbar  ybar    sx    sy     r
@@ -1095,14 +1095,13 @@ John Zito
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-          const outerScaffold = trigger.parentElement.cloneNode(true);
-          const codeEl = outerScaffold.querySelector('code');
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
             }
-          }
-          return codeEl.innerText;
+            return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
