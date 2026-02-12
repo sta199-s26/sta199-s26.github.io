@@ -98,7 +98,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <meta property="og:title" content="Misadventures in overwriting – STA 199 Spring 2026">
 <meta property="og:description" content="Homepage for STA 199 Introduction to Data Science at Duke University, Spring 2026.">
-<meta property="og:image" content="https://sta199-s26.github.io/notes/images/08/south-park-2.gif">
+<meta property="og:image" content="https://sta199-s26.github.io/notes/images/south-park-2.gif">
 <meta property="og:site_name" content="STA 199 Spring 2026">
 </head>
 <body class="nav-sidebar docked quarto-light">
@@ -271,6 +271,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Lab 4</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 5</span></a>
+  </div>
+</li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -298,6 +304,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../hw/hw-3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homework 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homework 4</span></a>
   </div>
 </li>
       </ul>
@@ -430,7 +442,7 @@ Caused by error in `case_when()`:
 ! Can't combine `..1 (right)` &lt;double&gt; and `.default` &lt;character&gt;.</code></pre>
 </div>
 </div>
-<p>That error message is actually pretty good. It’s saying inside <code>mutate</code> and inside <code>case_when</code>, there was an error because you can’t combine type <code>&lt;double&gt;</code> and type <code>character</code>. All true. The columns of a data frame are just <em>vectors</em> in <code>R</code>, and vectors need to contain values of all the same type. You can’t mix and match. Our <code>case_when</code> statement is saying “in the six weird cases, make <code>tue_classes</code> and number(<code>1</code>, <code>2</code>, etc), and in all other cases (<code>.default</code>), keep it the way it is.” Well, <code>tue_classes</code> comes to us as type <code>&lt;character&gt;</code>, so our original attempt at <code>case_when</code> is effectively asking the computer to mix and match types, which is forbidden. So we moved on…</p>
+<p>That error message is actually pretty good. It’s saying inside <code>mutate</code> and inside <code>case_when</code>, there was an error because you can’t combine type <code>&lt;double&gt;</code> and type <code>character</code>. All true. The columns of a data frame are just <em>vectors</em> in <code>R</code>, and vectors need to contain values of all the same type. You can’t mix and match. Our <code>case_when</code> statement is saying “in the six weird cases, make <code>tue_classes</code> and number (<code>1</code>, <code>2</code>, etc), and in all other cases (<code>.default</code>), keep it the way it is.” Well, <code>tue_classes</code> comes to us as type <code>&lt;character&gt;</code>, so our original attempt at <code>case_when</code> is effectively asking the computer to mix and match types, which is forbidden. So we moved on…</p>
 </section><section id="the-second-thing-i-ran" class="level2"><h2 class="anchored" data-anchor-id="the-second-thing-i-ran">The second thing I ran</h2>
 <div class="cell">
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span> <span class="op">&lt;-</span> <span class="va">survey</span> <span class="op">|&gt;</span></span>
@@ -471,7 +483,7 @@ $ year        &lt;chr&gt; "First-year", "Sophomore", "Sophomore", "Sophomore", "
 5 4               7</code></pre>
 </div>
 </div>
-<p>We’ve cleaned up all of those goofy cases. Everything appears as a numeral, but the column is still type <code>character</code>. To wrap up, we need to convert using <code>as.numeric</code>.</p>
+<p>We’ve cleaned up all of those goofy cases. Everything <em>appears</em> as a numeral, but the column is still type <code>character</code>. To wrap up, we need to convert using <code>as.numeric</code>.</p>
 </section><section id="the-third-thing-i-ran" class="level2"><h2 class="anchored" data-anchor-id="the-third-thing-i-ran">The third thing I ran</h2>
 <div class="cell">
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span> <span class="op">&lt;-</span> <span class="va">survey</span> <span class="op">|&gt;</span></span>
@@ -513,7 +525,7 @@ $ year        &lt;chr&gt; "First-year", "Sophomore", "Sophomore", "Sophomore", "
 5           4     7</code></pre>
 </div>
 </div>
-<p>…Okay. So why did JZ stand there for what felt like an eternity looking like a chinless fool? Because dear students, he made the mistake of running that same exact same chunk of (correct!) code again.</p>
+<p>…Okay. So why did JZ stand there for what felt like an eternity looking like a chinless fool? Because dear students, he made the mistake of running that exact same chunk of (correct!) code again.</p>
 </section><section id="the-fourth-thing-i-mistakenly-ran" class="level2"><h2 class="anchored" data-anchor-id="the-fourth-thing-i-mistakenly-ran">The fourth thing I (mistakenly) ran</h2>
 <p>It’s the exact same code as before. I just hit “Run” on the code chunk a second time:</p>
 <div class="cell">
@@ -597,7 +609,7 @@ $ year        &lt;chr&gt; "First-year", "Sophomore", "Sophomore", "Sophomore", "
 </div>
 </section><section id="whats-it-all-about-alfie" class="level2"><h2 class="anchored" data-anchor-id="whats-it-all-about-alfie">What’s it all about, Alfie?</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/08/south-park-2.gif" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figure class="figure"><p><img src="images/south-park-2.gif" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <ul>
@@ -606,7 +618,7 @@ $ year        &lt;chr&gt; "First-year", "Sophomore", "Sophomore", "Sophomore", "
 <li>When in doubt, before (re)running a code chunk in isolation, run all of the code chunks above it, <em>in sequence</em>. That will often reset your environment to the state it will be in just before the code you are working on, and then you can see if it’s working how you want. To “run all code chunks above this one,” click the second button in the upper right of the current code chunk:</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/08/run-it-hot.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figure class="figure"><p><img src="images/run-it-hot.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 
