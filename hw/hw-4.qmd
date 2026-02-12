@@ -219,7 +219,7 @@ You must make at least 5 updates to the plot, and your answer must include:
 Did I mention that the plot should be bad? A prize will be awarded for the worst submission, so get crackin'!
 
 ::: callout-tip
-The tidyverse documentation on [themes](https://ggplot2.tidyverse.org/reference/theme.html) may give you ideas about how you can alter the various features of the plot. Furthermore, the solutions for AEs [5](https://sta199-s26.github.io/ae/ae-06-majors-tidy.html) and [7](https://sta199-s26.github.io/ae/ae-08-durham-climate-factors.html) demo some of the advanced layers you can add to tweak colors and positioning and so on.
+The tidyverse documentation on [themes](https://ggplot2.tidyverse.org/reference/theme.html) may give you ideas about how you can alter the various features of the plot. Furthermore, the solutions for AEs [6](https://sta199-s26.github.io/ae/ae-06-majors-tidy.html) and [8](https://sta199-s26.github.io/ae/ae-08-durham-climate-factors.html) demo some of the advanced layers you can add to tweak colors and positioning and so on.
 :::
 
 ::: render-commit-push
