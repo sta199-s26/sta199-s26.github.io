@@ -85,6 +85,8 @@ website:
             text: Lab 3
           - href: lab/lab-4.qmd
             text: Lab 4
+          - href: lab/lab-5.qmd
+            text: Lab 5
       - section: "Homework"
         contents:
           - href: hw/hw-1.qmd
@@ -93,6 +95,8 @@ website:
             text: Homework 2
           - href: hw/hw-3.qmd
             text: Homework 3
+          - href: hw/hw-4.qmd
+            text: Homework 4
       - section: "Computing"
         contents:
           - href: computing/coding-access.qmd
