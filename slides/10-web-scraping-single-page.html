@@ -373,6 +373,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#our-motto-abv" id="toc-our-motto-abv" class="nav-link" data-scroll-target="#our-motto-abv">Our motto: ABV!</a></li>
   </ul>
 </li>
+  <li>
+<a href="#reading-data-into-r" id="toc-reading-data-into-r" class="nav-link" data-scroll-target="#reading-data-into-r">Reading data into R</a>
+  <ul class="collapse">
+<li><a href="#reading-rectangular-data" id="toc-reading-rectangular-data" class="nav-link" data-scroll-target="#reading-rectangular-data">Reading rectangular data</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#application-exercise" id="toc-application-exercise" class="nav-link" data-scroll-target="#application-exercise">Application exercise</a>
+  <ul class="collapse">
+<li><a href="#reading-and-writing-csv-files" id="toc-reading-and-writing-csv-files" class="nav-link" data-scroll-target="#reading-and-writing-csv-files">Reading and writing CSV files</a></li>
+  <li><a href="#age-gap-in-hollywood-relationships" id="toc-age-gap-in-hollywood-relationships" class="nav-link" data-scroll-target="#age-gap-in-hollywood-relationships">Age gap in Hollywood relationships</a></li>
+  <li><a href="#ae-09-age-gaps-import" id="toc-ae-09-age-gaps-import" class="nav-link" data-scroll-target="#ae-09-age-gaps-import">ae-09-age-gaps-import</a></li>
+  </ul>
+</li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/slides/10-web-scraping-single-page.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="10-web-scraping-single-page-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
@@ -999,6 +1013,53 @@ It’s not personal.
 </figure>
 </div>
 </div>
+</div>
+</section></section><section id="reading-data-into-r" class="level1"><h1>Reading data into R</h1>
+<section id="reading-rectangular-data" class="level2"><h2 class="anchored" data-anchor-id="reading-rectangular-data">Reading rectangular data</h2>
+<ul>
+<li>Using <a href="https://readr.tidyverse.org/"><strong>readr</strong></a>:
+<ul>
+<li>Most commonly: <code>read_csv()</code>
+</li>
+<li>Maybe also: <code>read_tsv()</code>, <code>read_delim()</code>, etc.</li>
+</ul>
+</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>Using <a href="https://readxl.tidyverse.org/"><strong>readxl</strong></a>: <code>read_excel()</code>
+</li>
+</ul>
+<p>. . .</p>
+<ul>
+<li>Using <a href="https://googlesheets4.tidyverse.org/"><strong>googlesheets4</strong></a>: <code>read_sheet()</code> – We haven’t covered this in the videos, but might be useful for your projects</li>
+</ul></section></section><section id="application-exercise" class="level1"><h1>Application exercise</h1>
+<section id="reading-and-writing-csv-files" class="level2"><h2 class="anchored" data-anchor-id="reading-and-writing-csv-files">Reading and writing CSV files</h2>
+<ul>
+<li><p>Read a CSV file</p></li>
+<li><p>Split it into subsets based on features of the data</p></li>
+<li><p>Write out subsets as CSV files</p></li>
+</ul></section><section id="age-gap-in-hollywood-relationships" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="age-gap-in-hollywood-relationships">Age gap in Hollywood relationships</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<div class="question">
+<p>What is the story in this visualization?</p>
+</div>
+</div><div class="column" style="width:75%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/09/hollywood-ages.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="ae-09-age-gaps-import" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="ae-09-age-gaps-import">ae-09-age-gaps-import</h2>
+<div class="appex">
+<ul>
+<li><p>Go to your ae project in RStudio.</p></li>
+<li><p>If you haven’t yet done so, make sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.</p></li>
+<li><p>If you haven’t yet done so, click Pull to get today’s application exercise file: <em>ae-09-age-gaps-import.qmd</em>.</p></li>
+<li><p>Work through <strong>Part 1</strong> of the application exercise in class, and render, commit, and push your edits.</p></li>
+</ul>
 </div>
 
 
