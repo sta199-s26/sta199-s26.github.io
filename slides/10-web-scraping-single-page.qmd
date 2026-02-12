@@ -23,6 +23,7 @@ format:
 #| include: false
 
 library(tidyverse)
+todays_ae <- "ae-09-age-gaps-import"
 ```
 
 Worth 20% of your final grade; consists of two parts:
@@ -473,4 +474,58 @@ No, not alcohol by volume...
 ![](images/09/ggr.jpg){fig-align="right" width="80%"}
 :::
 :::
+
+
+# Reading data into R
+
+## Reading rectangular data
+
+-   Using [**readr**](https://readr.tidyverse.org/):
+    -   Most commonly: `read_csv()`
+    -   Maybe also: `read_tsv()`, `read_delim()`, etc.
+
+. . .
+
+-   Using [**readxl**](https://readxl.tidyverse.org/): `read_excel()`
+
+. . .
+
+-   Using [**googlesheets4**](https://googlesheets4.tidyverse.org/): `read_sheet()` -- We haven't covered this in the videos, but might be useful for your projects
+
+# Application exercise
+
+## Reading and writing CSV files
+
+-   Read a CSV file
+
+-   Split it into subsets based on features of the data
+
+-   Write out subsets as CSV files
+
+## Age gap in Hollywood relationships {.smaller}
+
+::: columns
+::: {.column width="25%"}
+::: question
+What is the story in this visualization?
+:::
+:::
+
+::: {.column width="75%"}
+![](images/09/hollywood-ages.jpeg){fig-align="center" width="600"}
+:::
+:::
+
+## `{r} todays_ae` {.smaller}
+
+::: appex
+-   Go to your ae project in RStudio.
+
+-   If you haven't yet done so, make sure all of your changes up to this point are committed and pushed, i.e., there's nothing left in your Git pane.
+
+-   If you haven't yet done so, click Pull to get today's application exercise file: *`{r} paste0(todays_ae, ".qmd")`*.
+
+-   Work through **Part 1** of the application exercise in class, and render, commit, and push your edits.
+:::
+
 
