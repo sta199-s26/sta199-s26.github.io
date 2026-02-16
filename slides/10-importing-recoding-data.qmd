@@ -15,6 +15,40 @@ format:
     code-link: true
 ---
 
+## While you wait: Participate 📱💻 {.small}
+
+```{r}
+#| include: false
+library(tidyverse)
+durham_climate <- read_csv("data/durham-climate.csv")
+```
+
+::: columns
+
+::: {.column width="70%"}
+
+::: wooclap
+
+To keep some rows in a data frame and discard others, I use BLANK. To keep some columns and discard others, I use BLANK.
+
+::: wooclap-choices
+- group_by; arrange;
+- filter; select;
+- bye row; seeya column;
+- a shovel; your bear hands;
+- select; filter
+:::
+
+:::
+
+:::
+
+::: {.column width="30%"}
+{{< include _wooclap-column.qmd >}}
+:::
+
+:::
+
 ## On the horizon {.small}
 
 Spring break is three weeks away. Here's what happens in the meantime:
