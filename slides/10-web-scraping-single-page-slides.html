@@ -301,7 +301,7 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="10-web-scraping-single-page_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
+<figure><p><img data-src="11-web-scraping-single-page_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -310,7 +310,7 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="10-web-scraping-single-page_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+<figure><p><img data-src="11-web-scraping-single-page_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -557,14 +557,14 @@ John Zito
 <span id="cb10-2"><a></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="10-web-scraping-single-page_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section><section id="from-last-time-data-analysis-2" class="slide level2"><h2>From last time: data analysis</h2>
+<img data-src="11-web-scraping-single-page_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section><section id="from-last-time-data-analysis-2" class="slide level2"><h2>From last time: data analysis</h2>
 <p>Better picture?</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">ggplot</span>(survey, <span class="fu">aes</span>(<span class="at">x =</span> tue_classes, <span class="at">fill =</span> year)) <span class="sc">+</span> </span>
 <span id="cb11-2"><a></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="10-web-scraping-single-page_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section><section id="from-last-time-data-analysis-3" class="slide level2"><h2>From last time: data analysis</h2>
+<img data-src="11-web-scraping-single-page_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section><section id="from-last-time-data-analysis-3" class="slide level2"><h2>From last time: data analysis</h2>
 <p>Numbers!</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>survey <span class="sc">|&gt;</span></span>
@@ -709,7 +709,7 @@ John Zito
 <span id="cb18-3"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> set) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="10-web-scraping-single-page_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section><section id="a-cautionary-tale-anscombes-quartet-2" class="slide level2"><h2>A cautionary tale: Anscombe’s quartet</h2>
+<img data-src="11-web-scraping-single-page_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section><section id="a-cautionary-tale-anscombes-quartet-2" class="slide level2"><h2>A cautionary tale: Anscombe’s quartet</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(anscombe_tidy, <span class="fu">aes</span>(x, y)) <span class="sc">+</span></span>
 <span id="cb19-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
@@ -717,7 +717,7 @@ John Zito
 <span id="cb19-4"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="10-web-scraping-single-page_files/figure-revealjs/unnamed-chunk-19-1.png" width="960" class="r-stretch"></section><section id="if-you-only-looked-at-summary-statistics" class="slide level2"><h2>If you only looked at summary statistics…</h2>
+<img data-src="11-web-scraping-single-page_files/figure-revealjs/unnamed-chunk-19-1.png" width="960" class="r-stretch"></section><section id="if-you-only-looked-at-summary-statistics" class="slide level2"><h2>If you only looked at summary statistics…</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>anscombe_tidy <span class="sc">|&gt;</span></span>
 <span id="cb20-2"><a></a>  <span class="fu">group_by</span>(set) <span class="sc">|&gt;</span></span>
