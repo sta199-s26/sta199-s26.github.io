@@ -1,5 +1,16 @@
 ---
-title: "10-importing-recoding-data"
-format: html
+title: "Importing and recoding data"
+subtitle: "Lecture 10"
+date: "2026-02-16"
+format: 
+  revealjs: 
+    output-file: 10-importing-recoding-data-slides.html
+    footer: "[🔗 sta199-s26.github.io](https://sta199-s26.github.io/)"
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+    logo: images/logo.png
+    toc: false
+  html: 
+    code-link: true
 ---
-
