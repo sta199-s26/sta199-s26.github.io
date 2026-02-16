@@ -6189,245 +6189,245 @@
   {
     "objectID": "slides/09-data-types-classes-2.html",
     "href": "slides/09-data-types-classes-2.html",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "",
     "text": "If you create a factor variable, but you do no explicitly give the levels of your factor an order, what default does R apply?\n\n\nchronological;\nthe order in which the levels first appear in the data frame;\nalphabetical;\nno default. it will throw an error.\n\n\n\n\n\n\nScan the QR code or go to HERE. Log in with your Duke NetID.\n\n\n\n\n. . .\nIt’s two weeks from today!\n. . .\nI’ll say more next week when I post the study guide.\n\n\n\n15% of your final course grade;\nInstructor randomly assign teams within lab, taking into account the domain interests (econ, health, sports, etc) you expressed on the “Getting to Know You” survey:\nImportant dates:\n\nThu Feb 19 - how to collaborate with git/github, start proposal;\nSun Feb 22 - submit proposal;\nThu Feb 26 - work period;\nThu Mar 5 - peer review, work period\nThu Mar 26 - final presentation;\nSun Mar 29 - final submission.\n\n\nYou will evaluate your peers throughout, and good collaboration is part of the project grade.\n\n\n\nRender, Commit, and Push early and often! We actually assign points to this on lab and HW:\n\nAt least 3 commits to .qmd file: (out of 3 points)\nAt least 1 commit to .pdf file: (out of 2 points)\nGit email correctly configured: (out of 2 points)\n\nAs a courtesy to your teammates, practice good habits!\n\n\nRender: make sure your stuff actually runs without error. People get mad if you send them errors;\nCommit: leave a well-documented trail of breadcrumbs so that teammates (and your future self!) know what you changed and why;\nPush: backup your work in the cloud (GitHub) so it isn’t lost.\n\n\n\n\nOne way to look at smells is with respect to principles and quality: “Smells are certain structures in the code that indicate violation of fundamental design principles and negatively impact design quality”. Code smells are usually not bugs; they are not technically incorrect and do not prevent the program from functioning. Instead, they indicate weaknesses in design that may slow down development or increase the risk of bugs or failures in the future.\n\n\n\n\nSource: Code smell on Wikipedia\n\nFollow the Tidyverse style guide:\n\nSpaces before and line breaks after each + when building a ggplot\nSpaces before and line breaks after each |&gt; in a data transformation pipeline,\nProper indentation\nSpaces around = signs and spaces after commas\nLines should not span more than 80 characters, long lines should be broken up with each argument on its own line"
   },
   {
     "objectID": "slides/09-data-types-classes-2.html#while-you-wait-participate",
     "href": "slides/09-data-types-classes-2.html#while-you-wait-participate",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "",
     "text": "If you create a factor variable, but you do no explicitly give the levels of your factor an order, what default does R apply?\n\n\nchronological;\nthe order in which the levels first appear in the data frame;\nalphabetical;\nno default. it will throw an error.\n\n\n\n\n\n\nScan the QR code or go to HERE. Log in with your Duke NetID."
   },
   {
     "objectID": "slides/09-data-types-classes-2.html#midterm-1",
     "href": "slides/09-data-types-classes-2.html#midterm-1",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "",
     "text": ". . .\nIt’s two weeks from today!\n. . .\nI’ll say more next week when I post the study guide."
   },
   {
     "objectID": "slides/09-data-types-classes-2.html#project-starts-next-thursday",
     "href": "slides/09-data-types-classes-2.html#project-starts-next-thursday",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "",
     "text": "15% of your final course grade;\nInstructor randomly assign teams within lab, taking into account the domain interests (econ, health, sports, etc) you expressed on the “Getting to Know You” survey:\nImportant dates:\n\nThu Feb 19 - how to collaborate with git/github, start proposal;\nSun Feb 22 - submit proposal;\nThu Feb 26 - work period;\nThu Mar 5 - peer review, work period\nThu Mar 26 - final presentation;\nSun Mar 29 - final submission.\n\n\nYou will evaluate your peers throughout, and good collaboration is part of the project grade."
   },
   {
     "objectID": "slides/09-data-types-classes-2.html#github-workflow",
     "href": "slides/09-data-types-classes-2.html#github-workflow",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "",
     "text": "Render, Commit, and Push early and often! We actually assign points to this on lab and HW:\n\nAt least 3 commits to .qmd file: (out of 3 points)\nAt least 1 commit to .pdf file: (out of 2 points)\nGit email correctly configured: (out of 2 points)"
   },
   {
     "objectID": "slides/09-data-types-classes-2.html#github-workflow-1",
     "href": "slides/09-data-types-classes-2.html#github-workflow-1",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "",
     "text": "As a courtesy to your teammates, practice good habits!\n\n\nRender: make sure your stuff actually runs without error. People get mad if you send them errors;\nCommit: leave a well-documented trail of breadcrumbs so that teammates (and your future self!) know what you changed and why;\nPush: backup your work in the cloud (GitHub) so it isn’t lost."
   },
   {
     "objectID": "slides/09-data-types-classes-2.html#code-smell",
     "href": "slides/09-data-types-classes-2.html#code-smell",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "",
     "text": "One way to look at smells is with respect to principles and quality: “Smells are certain structures in the code that indicate violation of fundamental design principles and negatively impact design quality”. Code smells are usually not bugs; they are not technically incorrect and do not prevent the program from functioning. Instead, they indicate weaknesses in design that may slow down development or increase the risk of bugs or failures in the future.\n\n\n\n\nSource: Code smell on Wikipedia"
   },
   {
     "objectID": "slides/09-data-types-classes-2.html#code-style",
     "href": "slides/09-data-types-classes-2.html#code-style",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "",
     "text": "Follow the Tidyverse style guide:\n\nSpaces before and line breaks after each + when building a ggplot\nSpaces before and line breaks after each |&gt; in a data transformation pipeline,\nProper indentation\nSpaces around = signs and spaces after commas\nLines should not span more than 80 characters, long lines should be broken up with each argument on its own line"
   },
   {
     "objectID": "slides/09-data-types-classes-2.html#quotes-vs-no-quotes-vs-backticks",
     "href": "slides/09-data-types-classes-2.html#quotes-vs-no-quotes-vs-backticks",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Quotes VS no quotes VS backticks",
     "text": "Quotes VS no quotes VS backticks\n. . .\n\ndf &lt;- tibble(\n  x = c(-2, -0.5, 0.5, 1, 2),\n  `2011` = c(-2, -0.5, 0.5, 1, 2),\n  `my var` = c(-2, -1, 0, 1, 2)\n)\ndf\n\n# A tibble: 5 × 3\n      x `2011` `my var`\n  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1  -2     -2         -2\n2  -0.5   -0.5       -1\n3   0.5    0.5        0\n4   1      1          1\n5   2      2          2"
   },
   {
     "objectID": "slides/09-data-types-classes-2.html#quotes-vs-no-quotes-vs-backticks-1",
     "href": "slides/09-data-types-classes-2.html#quotes-vs-no-quotes-vs-backticks-1",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Quotes VS no quotes VS backticks",
     "text": "Quotes VS no quotes VS backticks\n\ndf &lt;- tibble(\n  x = c(-2, -0.5, 0.5, 1, 2),\n  `2011` = c(-2, -0.5, 0.5, 1, 2),\n  `my var` = c(-2, -1, 0, 1, 2)\n)\n\nReferencing a column in a pipeline:\n\n\n\ndf |&gt;\n  filter(\"x\" &gt; 0)\n\n# A tibble: 5 × 3\n      x `2011` `my var`\n  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1  -2     -2         -2\n2  -0.5   -0.5       -1\n3   0.5    0.5        0\n4   1      1          1\n5   2      2          2\n\n\n\"x\" means the literal character string.\n\n\n\ndf |&gt;\n  filter(x &gt; 0)\n\n# A tibble: 3 × 3\n      x `2011` `my var`\n  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1   0.5    0.5        0\n2   1      1          1\n3   2      2          2\n\n\nx means the column name in df.\n\n\n\ndf |&gt;\n  filter(`x` &gt; 0)\n\n# A tibble: 3 × 3\n      x `2011` `my var`\n  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1   0.5    0.5        0\n2   1      1          1\n3   2      2          2\n\n\n`x` also means the column name in df."
   },
   {
     "objectID": "slides/09-data-types-classes-2.html#quotes-vs-no-quotes-vs-backticks-2",
     "href": "slides/09-data-types-classes-2.html#quotes-vs-no-quotes-vs-backticks-2",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Quotes VS no quotes VS backticks",
     "text": "Quotes VS no quotes VS backticks\n\ndf &lt;- tibble(\n  x = c(-2, -0.5, 0.5, 1, 2),\n  `2011` = c(-2, -0.5, 0.5, 1, 2),\n  `my var` = c(-2, -1, 0, 1, 2)\n)\n\nReferencing a column in a pipeline:\n\n\n\ndf |&gt;\n  filter(\"2011\" &gt; 0)\n\n# A tibble: 5 × 3\n      x `2011` `my var`\n  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1  -2     -2         -2\n2  -0.5   -0.5       -1\n3   0.5    0.5        0\n4   1      1          1\n5   2      2          2\n\n\n\"2011\" means the literal character string.\n\n\n\ndf |&gt;\n  filter(2011 &gt; 0)\n\n# A tibble: 5 × 3\n      x `2011` `my var`\n  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1  -2     -2         -2\n2  -0.5   -0.5       -1\n3   0.5    0.5        0\n4   1      1          1\n5   2      2          2\n\n\n2011 means the literal number.\n\n\n\ndf |&gt;\n  filter(`2011` &gt; 0)\n\n# A tibble: 3 × 3\n      x `2011` `my var`\n  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1   0.5    0.5        0\n2   1      1          1\n3   2      2          2\n\n\n`2011` means the column name in df."
   },
   {
     "objectID": "slides/09-data-types-classes-2.html#quotes-vs-no-quotes-vs-backticks-3",
     "href": "slides/09-data-types-classes-2.html#quotes-vs-no-quotes-vs-backticks-3",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Quotes VS no quotes VS backticks",
     "text": "Quotes VS no quotes VS backticks\n\ndf &lt;- tibble(\n  x = c(-2, -0.5, 0.5, 1, 2),\n  `2011` = c(-2, -0.5, 0.5, 1, 2),\n  `my var` = c(-2, -1, 0, 1, 2)\n)\n\nReferencing a column in a pipeline:\n\n\n\ndf |&gt;\n  filter(\"my var\" &gt; 0)\n\n# A tibble: 5 × 3\n      x `2011` `my var`\n  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1  -2     -2         -2\n2  -0.5   -0.5       -1\n3   0.5    0.5        0\n4   1      1          1\n5   2      2          2\n\n\n\"my var\" means the literal character string.\n\n\n\ndf |&gt;\n  filter(my var &gt; 0)\n\nError in parse(text = input): &lt;text&gt;:2:13: unexpected symbol\n1: df |&gt;\n2:   filter(my var\n               ^\n\n\nmy var means nothing.\n\n\n\ndf |&gt;\n  filter(`my var` &gt; 0)\n\n# A tibble: 2 × 3\n      x `2011` `my var`\n  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1     1      1        1\n2     2      2        2\n\n\n`my var` means the column name in df."
   },
   {
     "objectID": "slides/09-data-types-classes-2.html#why-in-instead-of",
     "href": "slides/09-data-types-classes-2.html#why-in-instead-of",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Why %in% instead of ==?",
     "text": "Why %in% instead of ==?\n. . .\nConsider adding a season column:\n\ndurham_climate\n\n# A tibble: 12 × 4\n   month     avg_high_f avg_low_f precipitation_in\n   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;            &lt;dbl&gt;\n 1 January           49        28             4.45\n 2 February          53        29             3.7 \n 3 March             62        37             4.69\n 4 April             71        46             3.43\n 5 May               79        56             4.61\n 6 June              85        65             4.02\n 7 July              89        70             3.94\n 8 August            87        68             4.37\n 9 September         81        60             4.37\n10 October           71        47             3.7 \n11 November          62        37             3.39\n12 December          53        30             3.43"
   },
   {
     "objectID": "slides/09-data-types-classes-2.html#why-in-instead-of-1",
     "href": "slides/09-data-types-classes-2.html#why-in-instead-of-1",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Why %in% instead of ==?",
     "text": "Why %in% instead of ==?\nConsider adding a season column:\n\ndurham_climate |&gt;\n  mutate(\n    season = if_else(\n      month ????? c(\"December\", \"January\", \"February\"),\n      \"Winter\",\n      \"Not Winter\"\n    )\n  )"
   },
   {
     "objectID": "slides/09-data-types-classes-2.html#why-in-instead-of-2",
     "href": "slides/09-data-types-classes-2.html#why-in-instead-of-2",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Why %in% instead of ==?",
     "text": "Why %in% instead of ==?\nConsider adding a season column:\n\ndurham_climate |&gt;\n  mutate(\n    season = if_else(\n      month %in% c(\"December\", \"January\", \"February\"),\n      \"Winter\",\n      \"Not Winter\"\n    )\n  )\n\n# A tibble: 12 × 5\n   month     avg_high_f avg_low_f precipitation_in season    \n   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;     \n 1 January           49        28             4.45 Winter    \n 2 February          53        29             3.7  Winter    \n 3 March             62        37             4.69 Not Winter\n 4 April             71        46             3.43 Not Winter\n 5 May               79        56             4.61 Not Winter\n 6 June              85        65             4.02 Not Winter\n 7 July              89        70             3.94 Not Winter\n 8 August            87        68             4.37 Not Winter\n 9 September         81        60             4.37 Not Winter\n10 October           71        47             3.7  Not Winter\n11 November          62        37             3.39 Not Winter\n12 December          53        30             3.43 Winter"
   },
   {
     "objectID": "slides/09-data-types-classes-2.html#why-in-instead-of-3",
     "href": "slides/09-data-types-classes-2.html#why-in-instead-of-3",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Why %in% instead of ==?",
     "text": "Why %in% instead of ==?\nConsider adding a season column:\n\ndurham_climate |&gt;\n  mutate(\n    season = if_else(\n      month == c(\"December\", \"January\", \"February\"),\n      \"Winter\",\n      \"Not Winter\"\n    )\n  )\n\n# A tibble: 12 × 5\n   month     avg_high_f avg_low_f precipitation_in season    \n   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;     \n 1 January           49        28             4.45 Not Winter\n 2 February          53        29             3.7  Not Winter\n 3 March             62        37             4.69 Not Winter\n 4 April             71        46             3.43 Not Winter\n 5 May               79        56             4.61 Not Winter\n 6 June              85        65             4.02 Not Winter\n 7 July              89        70             3.94 Not Winter\n 8 August            87        68             4.37 Not Winter\n 9 September         81        60             4.37 Not Winter\n10 October           71        47             3.7  Not Winter\n11 November          62        37             3.39 Not Winter\n12 December          53        30             3.43 Not Winter"
   },
   {
     "objectID": "slides/09-data-types-classes-2.html#why-in-instead-of-4",
     "href": "slides/09-data-types-classes-2.html#why-in-instead-of-4",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Why %in% instead of ==?",
     "text": "Why %in% instead of ==?\n\n\"January\" == c(\"December\", \"January\", \"February\")\n\n[1] FALSE  TRUE FALSE\n\n\"January\" %in% c(\"December\", \"January\", \"February\")\n\n[1] TRUE\n\n\n\n\n\n\n\n\nPunchline\n\n\n\nInside if_else or case_when your condition needs to result in a single value of TRUE or FALSE for each row. If it results in multiple values of TRUE/FALSE (a vector of TRUE/FALSE), you will not necessarily get an error or even a warning, but unexpected things could happen."
   },
   {
     "objectID": "slides/09-data-types-classes-2.html#picking-up-from-last-time",
     "href": "slides/09-data-types-classes-2.html#picking-up-from-last-time",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Picking up from last time",
     "text": "Picking up from last time\nAE 08:\n\n\nGo to your ae project in RStudio;\nOpen ae-08-durham-climate-factors.qmd."
   },
   {
     "objectID": "slides/09-data-types-classes-2-slides.html#while-you-wait-participate",
     "href": "slides/09-data-types-classes-2-slides.html#while-you-wait-participate",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "While you wait: Participate 📱💻",
     "text": "While you wait: Participate 📱💻\n\n\n\nIf you create a factor variable, but you do no explicitly give the levels of your factor an order, what default does R apply?\n\n\nchronological;\nthe order in which the levels first appear in the data frame;\nalphabetical;\nno default. it will throw an error.\n\n\n\n\n\n\nScan the QR code or go to HERE. Log in with your Duke NetID."
   },
   {
     "objectID": "slides/09-data-types-classes-2-slides.html#midterm-1",
     "href": "slides/09-data-types-classes-2-slides.html#midterm-1",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Midterm 1",
     "text": "Midterm 1\n\nIt’s two weeks from today!\n\n\nI’ll say more next week when I post the study guide."
   },
   {
     "objectID": "slides/09-data-types-classes-2-slides.html#project-starts-next-thursday",
     "href": "slides/09-data-types-classes-2-slides.html#project-starts-next-thursday",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Project starts next Thursday",
     "text": "Project starts next Thursday\n\n15% of your final course grade;\nInstructor randomly assign teams within lab, taking into account the domain interests (econ, health, sports, etc) you expressed on the “Getting to Know You” survey:\nImportant dates:\n\nThu Feb 19 - how to collaborate with git/github, start proposal;\nSun Feb 22 - submit proposal;\nThu Feb 26 - work period;\nThu Mar 5 - peer review, work period\nThu Mar 26 - final presentation;\nSun Mar 29 - final submission.\n\n\nYou will evaluate your peers throughout, and good collaboration is part of the project grade."
   },
   {
     "objectID": "slides/09-data-types-classes-2-slides.html#github-workflow",
     "href": "slides/09-data-types-classes-2-slides.html#github-workflow",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "GitHub workflow",
     "text": "GitHub workflow\nRender, Commit, and Push early and often! We actually assign points to this on lab and HW:\n\nAt least 3 commits to .qmd file: (out of 3 points)\nAt least 1 commit to .pdf file: (out of 2 points)\nGit email correctly configured: (out of 2 points)"
   },
   {
     "objectID": "slides/09-data-types-classes-2-slides.html#github-workflow-1",
     "href": "slides/09-data-types-classes-2-slides.html#github-workflow-1",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "GitHub workflow",
     "text": "GitHub workflow\nAs a courtesy to your teammates, practice good habits!\n\nRender: make sure your stuff actually runs without error. People get mad if you send them errors;\nCommit: leave a well-documented trail of breadcrumbs so that teammates (and your future self!) know what you changed and why;\nPush: backup your work in the cloud (GitHub) so it isn’t lost."
   },
   {
     "objectID": "slides/09-data-types-classes-2-slides.html#code-smell",
     "href": "slides/09-data-types-classes-2-slides.html#code-smell",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Code smell",
     "text": "Code smell\n\nOne way to look at smells is with respect to principles and quality: “Smells are certain structures in the code that indicate violation of fundamental design principles and negatively impact design quality”. Code smells are usually not bugs; they are not technically incorrect and do not prevent the program from functioning. Instead, they indicate weaknesses in design that may slow down development or increase the risk of bugs or failures in the future.\n\n\n\n\nSource: Code smell on Wikipedia"
   },
   {
     "objectID": "slides/09-data-types-classes-2-slides.html#code-style",
     "href": "slides/09-data-types-classes-2-slides.html#code-style",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Code style",
     "text": "Code style\nFollow the Tidyverse style guide:\n\nSpaces before and line breaks after each + when building a ggplot\nSpaces before and line breaks after each |&gt; in a data transformation pipeline,\nProper indentation\nSpaces around = signs and spaces after commas\nLines should not span more than 80 characters, long lines should be broken up with each argument on its own line"
   },
   {
     "objectID": "slides/09-data-types-classes-2-slides.html#quotes-vs-no-quotes-vs-backticks",
     "href": "slides/09-data-types-classes-2-slides.html#quotes-vs-no-quotes-vs-backticks",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Quotes VS no quotes VS backticks",
     "text": "Quotes VS no quotes VS backticks\n\n\ndf &lt;- tibble(\n  x = c(-2, -0.5, 0.5, 1, 2),\n  `2011` = c(-2, -0.5, 0.5, 1, 2),\n  `my var` = c(-2, -1, 0, 1, 2)\n)\ndf\n\n# A tibble: 5 × 3\n      x `2011` `my var`\n  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1  -2     -2         -2\n2  -0.5   -0.5       -1\n3   0.5    0.5        0\n4   1      1          1\n5   2      2          2"
   },
   {
     "objectID": "slides/09-data-types-classes-2-slides.html#quotes-vs-no-quotes-vs-backticks-1",
     "href": "slides/09-data-types-classes-2-slides.html#quotes-vs-no-quotes-vs-backticks-1",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Quotes VS no quotes VS backticks",
     "text": "Quotes VS no quotes VS backticks\n\ndf &lt;- tibble(\n  x = c(-2, -0.5, 0.5, 1, 2),\n  `2011` = c(-2, -0.5, 0.5, 1, 2),\n  `my var` = c(-2, -1, 0, 1, 2)\n)\n\nReferencing a column in a pipeline:\n\n\n\ndf |&gt;\n  filter(\"x\" &gt; 0)\n\n# A tibble: 5 × 3\n      x `2011` `my var`\n  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1  -2     -2         -2\n2  -0.5   -0.5       -1\n3   0.5    0.5        0\n4   1      1          1\n5   2      2          2\n\n\n\"x\" means the literal character string.\n\n\ndf |&gt;\n  filter(x &gt; 0)\n\n# A tibble: 3 × 3\n      x `2011` `my var`\n  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1   0.5    0.5        0\n2   1      1          1\n3   2      2          2\n\n\nx means the column name in df.\n\n\ndf |&gt;\n  filter(`x` &gt; 0)\n\n# A tibble: 3 × 3\n      x `2011` `my var`\n  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1   0.5    0.5        0\n2   1      1          1\n3   2      2          2\n\n\n`x` also means the column name in df."
   },
   {
     "objectID": "slides/09-data-types-classes-2-slides.html#quotes-vs-no-quotes-vs-backticks-2",
     "href": "slides/09-data-types-classes-2-slides.html#quotes-vs-no-quotes-vs-backticks-2",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Quotes VS no quotes VS backticks",
     "text": "Quotes VS no quotes VS backticks\n\ndf &lt;- tibble(\n  x = c(-2, -0.5, 0.5, 1, 2),\n  `2011` = c(-2, -0.5, 0.5, 1, 2),\n  `my var` = c(-2, -1, 0, 1, 2)\n)\n\nReferencing a column in a pipeline:\n\n\n\ndf |&gt;\n  filter(\"2011\" &gt; 0)\n\n# A tibble: 5 × 3\n      x `2011` `my var`\n  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1  -2     -2         -2\n2  -0.5   -0.5       -1\n3   0.5    0.5        0\n4   1      1          1\n5   2      2          2\n\n\n\"2011\" means the literal character string.\n\n\ndf |&gt;\n  filter(2011 &gt; 0)\n\n# A tibble: 5 × 3\n      x `2011` `my var`\n  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1  -2     -2         -2\n2  -0.5   -0.5       -1\n3   0.5    0.5        0\n4   1      1          1\n5   2      2          2\n\n\n2011 means the literal number.\n\n\ndf |&gt;\n  filter(`2011` &gt; 0)\n\n# A tibble: 3 × 3\n      x `2011` `my var`\n  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1   0.5    0.5        0\n2   1      1          1\n3   2      2          2\n\n\n`2011` means the column name in df."
   },
   {
     "objectID": "slides/09-data-types-classes-2-slides.html#quotes-vs-no-quotes-vs-backticks-3",
     "href": "slides/09-data-types-classes-2-slides.html#quotes-vs-no-quotes-vs-backticks-3",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Quotes VS no quotes VS backticks",
     "text": "Quotes VS no quotes VS backticks\n\ndf &lt;- tibble(\n  x = c(-2, -0.5, 0.5, 1, 2),\n  `2011` = c(-2, -0.5, 0.5, 1, 2),\n  `my var` = c(-2, -1, 0, 1, 2)\n)\n\nReferencing a column in a pipeline:\n\n\n\ndf |&gt;\n  filter(\"my var\" &gt; 0)\n\n# A tibble: 5 × 3\n      x `2011` `my var`\n  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1  -2     -2         -2\n2  -0.5   -0.5       -1\n3   0.5    0.5        0\n4   1      1          1\n5   2      2          2\n\n\n\"my var\" means the literal character string.\n\n\ndf |&gt;\n  filter(my var &gt; 0)\n\nError in parse(text = input): &lt;text&gt;:2:13: unexpected symbol\n1: df |&gt;\n2:   filter(my var\n               ^\n\n\nmy var means nothing.\n\n\ndf |&gt;\n  filter(`my var` &gt; 0)\n\n# A tibble: 2 × 3\n      x `2011` `my var`\n  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;\n1     1      1        1\n2     2      2        2\n\n\n`my var` means the column name in df."
   },
   {
     "objectID": "slides/09-data-types-classes-2-slides.html#why-in-instead-of",
     "href": "slides/09-data-types-classes-2-slides.html#why-in-instead-of",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Why %in% instead of ==?",
     "text": "Why %in% instead of ==?\n\nConsider adding a season column:\n\ndurham_climate\n\n# A tibble: 12 × 4\n   month     avg_high_f avg_low_f precipitation_in\n   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;            &lt;dbl&gt;\n 1 January           49        28             4.45\n 2 February          53        29             3.7 \n 3 March             62        37             4.69\n 4 April             71        46             3.43\n 5 May               79        56             4.61\n 6 June              85        65             4.02\n 7 July              89        70             3.94\n 8 August            87        68             4.37\n 9 September         81        60             4.37\n10 October           71        47             3.7 \n11 November          62        37             3.39\n12 December          53        30             3.43"
   },
   {
     "objectID": "slides/09-data-types-classes-2-slides.html#why-in-instead-of-1",
     "href": "slides/09-data-types-classes-2-slides.html#why-in-instead-of-1",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Why %in% instead of ==?",
     "text": "Why %in% instead of ==?\nConsider adding a season column:\n\ndurham_climate |&gt;\n  mutate(\n    season = if_else(\n      month ????? c(\"December\", \"January\", \"February\"),\n      \"Winter\",\n      \"Not Winter\"\n    )\n  )"
   },
   {
     "objectID": "slides/09-data-types-classes-2-slides.html#why-in-instead-of-2",
     "href": "slides/09-data-types-classes-2-slides.html#why-in-instead-of-2",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Why %in% instead of ==?",
     "text": "Why %in% instead of ==?\nConsider adding a season column:\n\ndurham_climate |&gt;\n  mutate(\n    season = if_else(\n      month %in% c(\"December\", \"January\", \"February\"),\n      \"Winter\",\n      \"Not Winter\"\n    )\n  )\n\n# A tibble: 12 × 5\n   month     avg_high_f avg_low_f precipitation_in season    \n   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;     \n 1 January           49        28             4.45 Winter    \n 2 February          53        29             3.7  Winter    \n 3 March             62        37             4.69 Not Winter\n 4 April             71        46             3.43 Not Winter\n 5 May               79        56             4.61 Not Winter\n 6 June              85        65             4.02 Not Winter\n 7 July              89        70             3.94 Not Winter\n 8 August            87        68             4.37 Not Winter\n 9 September         81        60             4.37 Not Winter\n10 October           71        47             3.7  Not Winter\n11 November          62        37             3.39 Not Winter\n12 December          53        30             3.43 Winter"
   },
   {
     "objectID": "slides/09-data-types-classes-2-slides.html#why-in-instead-of-3",
     "href": "slides/09-data-types-classes-2-slides.html#why-in-instead-of-3",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Why %in% instead of ==?",
     "text": "Why %in% instead of ==?\nConsider adding a season column:\n\ndurham_climate |&gt;\n  mutate(\n    season = if_else(\n      month == c(\"December\", \"January\", \"February\"),\n      \"Winter\",\n      \"Not Winter\"\n    )\n  )\n\n# A tibble: 12 × 5\n   month     avg_high_f avg_low_f precipitation_in season    \n   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;     \n 1 January           49        28             4.45 Not Winter\n 2 February          53        29             3.7  Not Winter\n 3 March             62        37             4.69 Not Winter\n 4 April             71        46             3.43 Not Winter\n 5 May               79        56             4.61 Not Winter\n 6 June              85        65             4.02 Not Winter\n 7 July              89        70             3.94 Not Winter\n 8 August            87        68             4.37 Not Winter\n 9 September         81        60             4.37 Not Winter\n10 October           71        47             3.7  Not Winter\n11 November          62        37             3.39 Not Winter\n12 December          53        30             3.43 Not Winter"
   },
   {
     "objectID": "slides/09-data-types-classes-2-slides.html#why-in-instead-of-4",
     "href": "slides/09-data-types-classes-2-slides.html#why-in-instead-of-4",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Why %in% instead of ==?",
     "text": "Why %in% instead of ==?\n\n\"January\" == c(\"December\", \"January\", \"February\")\n\n[1] FALSE  TRUE FALSE\n\n\"January\" %in% c(\"December\", \"January\", \"February\")\n\n[1] TRUE\n\n\n\n\n\n\n\n\nPunchline\n\n\nInside if_else or case_when your condition needs to result in a single value of TRUE or FALSE for each row. If it results in multiple values of TRUE/FALSE (a vector of TRUE/FALSE), you will not necessarily get an error or even a warning, but unexpected things could happen."
   },
   {
     "objectID": "slides/09-data-types-classes-2-slides.html#picking-up-from-last-time",
     "href": "slides/09-data-types-classes-2-slides.html#picking-up-from-last-time",
-    "title": "Importing and recoding data",
+    "title": "More data types and classes",
     "section": "Picking up from last time",
     "text": "Picking up from last time\nAE 08:\n\n\nGo to your ae project in RStudio;\nOpen ae-08-durham-climate-factors.qmd."
   },
@@ -7241,21 +7241,28 @@
     "href": "slides/10-importing-recoding-data.html",
     "title": "Importing and recoding data",
     "section": "",
-    "text": "Spring break is three weeks away. Here’s what happens in the meantime:\n\n\nWed Feb 18: submit HW 4;\nWed Feb 18: JZ posts Midterm 1 study-guide;\nThu Feb 19: meet project teams and start proposal;\nSun Feb 22: proposal due;\nWed Feb 25: Midterm 1 in-class;\nThu Feb 26: proposal feedback returned;\nThu Feb 26: Midterm 1 take-home posted;\nSun Mar 01: submit Midterm 1 take-home;\nThu Mar 05: make some major project progress.\n\n\n. . .\nAfter that, I forbid any of us from thinking about this class until March 16 at the earliest."
+    "text": "To keep some rows in a data frame and discard others, I use BLANK. To keep some columns and discard others, I use BLANK.\n\n\ngroup_by; arrange;\nfilter; select;\nbye row; seeya column;\na shovel; your bear hands;\nselect; filter\n\n\n\n\n\n\nScan the QR code or go to HERE. Log in with your Duke NetID."
+  },
+  {
+    "objectID": "slides/10-importing-recoding-data.html#while-you-wait-participate",
+    "href": "slides/10-importing-recoding-data.html#while-you-wait-participate",
+    "title": "Importing and recoding data",
+    "section": "",
+    "text": "To keep some rows in a data frame and discard others, I use BLANK. To keep some columns and discard others, I use BLANK.\n\n\ngroup_by; arrange;\nfilter; select;\nbye row; seeya column;\na shovel; your bear hands;\nselect; filter\n\n\n\n\n\n\nScan the QR code or go to HERE. Log in with your Duke NetID."
   },
   {
     "objectID": "slides/10-importing-recoding-data.html#on-the-horizon",
     "href": "slides/10-importing-recoding-data.html#on-the-horizon",
     "title": "Importing and recoding data",
-    "section": "",
-    "text": "Spring break is three weeks away. Here’s what happens in the meantime:\n\n\nWed Feb 18: submit HW 4;\nWed Feb 18: JZ posts Midterm 1 study-guide;\nThu Feb 19: meet project teams and start proposal;\nSun Feb 22: proposal due;\nWed Feb 25: Midterm 1 in-class;\nThu Feb 26: proposal feedback returned;\nThu Feb 26: Midterm 1 take-home posted;\nSun Mar 01: submit Midterm 1 take-home;\nThu Mar 05: make some major project progress.\n\n\n. . .\nAfter that, I forbid any of us from thinking about this class until March 16 at the earliest."
+    "section": "On the horizon",
+    "text": "On the horizon\nSpring break is three weeks away. Here’s what happens in the meantime:\n\n\nWed Feb 18: submit HW 4;\nWed Feb 18: JZ posts Midterm 1 study-guide;\nThu Feb 19: meet project teams and start proposal;\nSun Feb 22: proposal due;\nWed Feb 25: Midterm 1 in-class;\nThu Feb 26: proposal feedback returned;\nThu Feb 26: Midterm 1 take-home posted;\nSun Mar 01: submit Midterm 1 take-home;\nThu Mar 05: make some major project progress.\n\n\n. . .\nAfter that, I forbid any of us from thinking about this class until March 16 at the earliest."
   },
   {
     "objectID": "slides/10-importing-recoding-data.html#reading-rectangular-data",
     "href": "slides/10-importing-recoding-data.html#reading-rectangular-data",
     "title": "Importing and recoding data",
     "section": "Reading rectangular data",
-    "text": "Reading rectangular data\n\nUsing readr:\n\nMost commonly: read_csv()\nMaybe also: read_tsv(), read_delim(), etc.\n\n\n. . .\n\nUsing readxl: read_excel()\n\n. . .\n\nUsing googlesheets4: read_sheet() – We haven’t covered this in the videos, but might be useful for your projects"
+    "text": "Reading rectangular data\n\nUsing readr:\n\nMost commonly: read_csv()\n\nMaybe also: read_tsv(), read_delim(), etc.\n\n\n\n. . .\n\nUsing readxl: read_excel()\n\n\n. . .\n\nUsing googlesheets4: read_sheet() – We haven’t covered this in the videos, but might be useful for your projects"
   },
   {
     "objectID": "slides/10-importing-recoding-data.html#reading-and-writing-csv-files",
@@ -7272,6 +7279,13 @@
     "text": "Age gap in Hollywood relationships\n\n\n\nWhat is the story in this visualization?"
   },
   {
+    "objectID": "slides/10-importing-recoding-data-slides.html#while-you-wait-participate",
+    "href": "slides/10-importing-recoding-data-slides.html#while-you-wait-participate",
+    "title": "Importing and recoding data",
+    "section": "While you wait: Participate 📱💻",
+    "text": "While you wait: Participate 📱💻\n\n\n\nTo keep some rows in a data frame and discard others, I use BLANK. To keep some columns and discard others, I use BLANK.\n\n\ngroup_by; arrange;\nfilter; select;\nbye row; seeya column;\na shovel; your bear hands;\nselect; filter\n\n\n\n\n\n\nScan the QR code or go to HERE. Log in with your Duke NetID."
+  },
+  {
     "objectID": "slides/10-importing-recoding-data-slides.html#on-the-horizon",
     "href": "slides/10-importing-recoding-data-slides.html#on-the-horizon",
     "title": "Importing and recoding data",
@@ -7283,7 +7297,7 @@
     "href": "slides/10-importing-recoding-data-slides.html#reading-rectangular-data",
     "title": "Importing and recoding data",
     "section": "Reading rectangular data",
-    "text": "Reading rectangular data\n\nUsing readr:\n\nMost commonly: read_csv()\nMaybe also: read_tsv(), read_delim(), etc.\n\n\n\n\nUsing readxl: read_excel()\n\n\n\n\nUsing googlesheets4: read_sheet() – We haven’t covered this in the videos, but might be useful for your projects"
+    "text": "Reading rectangular data\n\nUsing readr:\n\nMost commonly: read_csv()\n\nMaybe also: read_tsv(), read_delim(), etc.\n\n\n\n\n\nUsing readxl: read_excel()\n\n\n\n\n\nUsing googlesheets4: read_sheet() – We haven’t covered this in the videos, but might be useful for your projects"
   },
   {
     "objectID": "slides/10-importing-recoding-data-slides.html#reading-and-writing-csv-files",

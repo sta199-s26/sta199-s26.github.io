@@ -6,18 +6,19 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.34">
-
-  <meta name="author" content="John Zito">
-  <meta name="dcterms.date" content="2026-02-16">
-  <title>STA 199 Spring 2026 – Importing and recoding data</title>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
-  <style>
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.34">
+<meta name="author" content="John Zito">
+<meta name="dcterms.date" content="2026-02-16">
+<title>STA 199 Spring 2026 – Importing and recoding data</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+<style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -30,14 +31,14 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f0195dcd610196b9111c6e10e98695f4.css">
-  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f0195dcd610196b9111c6e10e98695f4.css">
+<link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+<link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+<style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -132,8 +133,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Importing and recoding data</h1>
+<section id="title-slide" class="quarto-title-block center"><h1 class="title">Importing and recoding data</h1>
   <p class="subtitle">Lecture 10</p>
 
 <div class="quarto-title-authors">
@@ -148,9 +148,35 @@ John Zito
 </div>
 
   <p class="date">2026-02-16</p>
-</section>
-<section id="on-the-horizon" class="slide level2 small">
-<h2>On the horizon</h2>
+</section><section id="while-you-wait-participate" class="slide level2 small"><h2>While you wait: Participate 📱💻</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div class="wooclap">
+<p>To keep some rows in a data frame and discard others, I use BLANK. To keep some columns and discard others, I use BLANK.</p>
+<div class="wooclap-choices">
+<ul>
+<li>group_by; arrange;</li>
+<li>filter; select;</li>
+<li>bye row; seeya column;</li>
+<li>a shovel; your bear hands;</li>
+<li>select; filter</li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:30%;">
+<div id="" class="qrcode"></div>
+<script type="text/javascript">
+(function() {
+  var script = document.currentScript;
+  var qrcode = script.previousElementSibling;
+  qrcode.qrcode = new QRCode(qrcode, {"colorDark":"#000000","colorLight":"#ffffff","height":"300","text":"https://app.wooclap.com/TNRPMB?from=instruction-slide","width":"300"});
+  script.remove();
+})();
+</script><div class="small">
+<p>Scan the QR code or go to <a href="https://app.wooclap.com/TNRPMB?from=instruction-slide">HERE</a>. Log in with your Duke NetID.</p>
+</div>
+</div></div>
+</section><section id="on-the-horizon" class="slide level2 small"><h2>On the horizon</h2>
 <p>Spring break is three weeks away. Here’s what happens in the meantime:</p>
 <ul>
 <li class="fragment">Wed Feb 18: submit HW 4;</li>
@@ -166,24 +192,22 @@ John Zito
 <div class="fragment">
 <p>After that, I forbid any of us from thinking about this class until March 16 <em>at the earliest</em>.</p>
 </div>
-</section>
-<section>
-<section id="reading-data-into-r" class="title-slide slide level1 center">
-<h1>Reading data into R</h1>
+</section><section><section id="reading-data-into-r" class="title-slide slide level1 center"><h1>Reading data into R</h1>
 
-</section>
-<section id="reading-rectangular-data" class="slide level2">
-<h2>Reading rectangular data</h2>
+</section><section id="reading-rectangular-data" class="slide level2"><h2>Reading rectangular data</h2>
 <ul>
 <li>Using <a href="https://readr.tidyverse.org/"><strong>readr</strong></a>:
 <ul>
-<li>Most commonly: <code>read_csv()</code></li>
+<li>Most commonly: <code>read_csv()</code>
+</li>
 <li>Maybe also: <code>read_tsv()</code>, <code>read_delim()</code>, etc.</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 <div class="fragment">
 <ul>
-<li>Using <a href="https://readxl.tidyverse.org/"><strong>readxl</strong></a>: <code>read_excel()</code></li>
+<li>Using <a href="https://readxl.tidyverse.org/"><strong>readxl</strong></a>: <code>read_excel()</code>
+</li>
 </ul>
 </div>
 <div class="fragment">
@@ -191,22 +215,14 @@ John Zito
 <li>Using <a href="https://googlesheets4.tidyverse.org/"><strong>googlesheets4</strong></a>: <code>read_sheet()</code> – We haven’t covered this in the videos, but might be useful for your projects</li>
 </ul>
 </div>
-</section></section>
-<section>
-<section id="application-exercise" class="title-slide slide level1 center">
-<h1>Application exercise</h1>
+</section></section><section><section id="application-exercise" class="title-slide slide level1 center"><h1>Application exercise</h1>
 
-</section>
-<section id="reading-and-writing-csv-files" class="slide level2">
-<h2>Reading and writing CSV files</h2>
+</section><section id="reading-and-writing-csv-files" class="slide level2"><h2>Reading and writing CSV files</h2>
 <ul>
 <li><p>Read a CSV file</p></li>
 <li><p>Split it into subsets based on features of the data</p></li>
 <li><p>Write out subsets as CSV files</p></li>
-</ul>
-</section>
-<section id="age-gap-in-hollywood-relationships" class="slide level2 smaller">
-<h2>Age gap in Hollywood relationships</h2>
+</ul></section><section id="age-gap-in-hollywood-relationships" class="slide level2 smaller"><h2>Age gap in Hollywood relationships</h2>
 <div class="columns">
 <div class="column" style="width:25%;">
 <div class="question">
@@ -214,15 +230,14 @@ John Zito
 </div>
 </div><div class="column" style="width:75%;">
 <div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/09/hollywood-ages.jpeg" class="quarto-figure quarto-figure-center" width="600"></p>
+<figure><p><img data-src="images/09/hollywood-ages.jpeg" class="quarto-figure quarto-figure-center" width="600"></p>
 </figure>
 </div>
 
 
 </div></div>
 </section></section>
-    </div>
+</div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
@@ -230,24 +245,7 @@ John Zito
 </div>
 </div></div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="../site_libs/revealjs/dist/reveal.js"></script>
-  <!-- reveal.js plugins -->
-  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
-  
-
-  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
-
-  <script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="../site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script><script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="../site_libs/revealjs/plugin/notes/notes.js"></script><script src="../site_libs/revealjs/plugin/search/search.js"></script><script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="../site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -439,8 +437,42 @@ John Zito
           RevealZoom
         ]
       });
-    </script>
-    <script id="quarto-html-after-body" type="application/javascript">
+    </script><script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script><script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
         tabsets.forEach(function(tabset) {
@@ -607,6 +639,6 @@ John Zito
         }
       });
       </script>
-    
+
 
 </body></html>
