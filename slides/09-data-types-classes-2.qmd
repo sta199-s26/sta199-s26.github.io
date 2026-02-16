@@ -1,5 +1,5 @@
 ---
-title: "Importing and recoding data"
+title: "More data types and classes"
 subtitle: "Lecture 9"
 date: "2026-02-11"
 format: 
