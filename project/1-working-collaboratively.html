@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="author" content="John Zito">
-<meta name="dcterms.date" content="2026-02-16">
-<title>Importing and recoding data – STA 199 Spring 2026</title>
+
+
+<title>Working collaboratively – STA 199 Spring 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +21,7 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
+
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -37,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-9f26b6341e16faa20df3ce7a36debf59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script><script id="quarto-search-options" type="application/json">{
+<script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -64,30 +66,42 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<meta property="og:title" content="Importing and recoding data – STA 199 Spring 2026">
-<meta property="og:description" content="Lecture 10">
-<meta property="og:image" content="https://sta199-s26.github.io/slides/images/09/hollywood-ages.jpeg">
+
+
+<meta property="og:title" content="Working collaboratively – STA 199 Spring 2026">
+<meta property="og:description" content="Milestone 1">
+<meta property="og:image" content="https://sta199-s26.github.io/project/images/role-1-edit.png">
 <meta property="og:site_name" content="STA 199 Spring 2026">
+<meta property="og:image:height" content="2012">
+<meta property="og:image:width" content="3248">
 </head>
+
 <body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Importing and recoding data</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Working collaboratively</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/sta199-s26" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio containers" class="quarto-navigation-tool px-1" aria-label="RStudio containers"><i class="bi bi-code-square"></i></a>
@@ -95,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="dropdown">
       <a href="" title="Support" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Support"><i class="bi bi-life-preserver"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-<li>
+          <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://docs.google.com/spreadsheets/d/1bbCCaRtyUzPbB-SqcjseiwVLwFlgQbvCMaMWnvT3EG8/edit?usp=sharing">
               <i class="bi bi-person-raised-hand pe-1"></i>
             Office hours
@@ -108,11 +122,11 @@ ul.task-list li input[type="checkbox"] {
             </a>
           </li>
       </ul>
-</div>
+    </div>
     <div class="dropdown">
       <a href="" title="Canvas" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Canvas"><i class="bi bi-file-check-fill"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
-<li>
+          <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://canvas.duke.edu/courses/72135/announcements">
               <i class="bi bi-megaphone-fill pe-1"></i>
             Announcements
@@ -131,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
             </a>
           </li>
       </ul>
-</div>
+    </div>
 </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -141,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item sidebar-item-section">
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Syllabus</span></a>
@@ -149,8 +163,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../syllabus/syllabus-overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
@@ -199,7 +213,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
@@ -208,8 +222,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lab/lab-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 0</span></a>
@@ -246,7 +260,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -255,8 +269,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../hw/hw-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homework 1</span></a>
@@ -281,7 +295,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
@@ -290,8 +304,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../computing/coding-access.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Access</span></a>
@@ -304,190 +318,367 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-</li>
+  </li>
     </ul>
-</div>
-</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-<li><a href="#while-you-wait-participate" id="toc-while-you-wait-participate" class="nav-link active" data-scroll-target="#while-you-wait-participate">While you wait: Participate 📱💻</a></li>
-  <li><a href="#on-the-horizon" id="toc-on-the-horizon" class="nav-link" data-scroll-target="#on-the-horizon">On the horizon</a></li>
-  <li>
-<a href="#reading-data-into-r" id="toc-reading-data-into-r" class="nav-link" data-scroll-target="#reading-data-into-r">Reading data into R</a>
+  <li><a href="#goals" id="toc-goals" class="nav-link active" data-scroll-target="#goals">Goals</a></li>
+  <li><a href="#team-name" id="toc-team-name" class="nav-link" data-scroll-target="#team-name">Team name</a></li>
+  <li><a href="#activity" id="toc-activity" class="nav-link" data-scroll-target="#activity">Activity</a>
   <ul class="collapse">
-<li><a href="#reading-rectangular-data" id="toc-reading-rectangular-data" class="nav-link" data-scroll-target="#reading-rectangular-data">Reading rectangular data</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#application-exercise" id="toc-application-exercise" class="nav-link" data-scroll-target="#application-exercise">Application exercise</a>
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
+  <li><a href="#lets-cause-a-merge-conflict" id="toc-lets-cause-a-merge-conflict" class="nav-link" data-scroll-target="#lets-cause-a-merge-conflict">Let’s cause a merge conflict!</a>
   <ul class="collapse">
-<li><a href="#reading-and-writing-csv-files" id="toc-reading-and-writing-csv-files" class="nav-link" data-scroll-target="#reading-and-writing-csv-files">Reading and writing CSV files</a></li>
-  <li><a href="#age-gap-in-hollywood-relationships" id="toc-age-gap-in-hollywood-relationships" class="nav-link" data-scroll-target="#age-gap-in-hollywood-relationships">Age gap in Hollywood relationships</a></li>
+  <li><a href="#before-starting" id="toc-before-starting" class="nav-link" data-scroll-target="#before-starting">Before starting</a></li>
+  <li><a href="#role-1" id="toc-role-1" class="nav-link" data-scroll-target="#role-1">Role 1</a></li>
+  <li><a href="#role-2" id="toc-role-2" class="nav-link" data-scroll-target="#role-2">Role 2</a></li>
+  <li><a href="#role-3" id="toc-role-3" class="nav-link" data-scroll-target="#role-3">Role 3</a></li>
+  <li><a href="#role-4" id="toc-role-4" class="nav-link" data-scroll-target="#role-4">Role 4</a></li>
+  <li><a href="#role-5" id="toc-role-5" class="nav-link" data-scroll-target="#role-5">Role 5</a></li>
+  <li><a href="#everyone" id="toc-everyone" class="nav-link" data-scroll-target="#everyone">Everyone</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#tips-for-collaborating-via-github" id="toc-tips-for-collaborating-via-github" class="nav-link" data-scroll-target="#tips-for-collaborating-via-github">Tips for collaborating via GitHub</a></li>
+  <li><a href="#team-contract" id="toc-team-contract" class="nav-link" data-scroll-target="#team-contract">Team contract</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
   </ul>
-</li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/slides/10-importing-recoding-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="10-importing-recoding-data-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/project/1-working-collaboratively.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Importing and recoding data</h1>
-<p class="subtitle lead">Lecture 10</p>
-</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Working collaboratively</h1>
+<p class="subtitle lead">Milestone 1</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Project</div>
+  </div>
+  </div>
 
 
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Author</div>
-  <div class="quarto-title-meta-heading">Affiliation</div>
-  
-    <div class="quarto-title-meta-contents">
-    <p class="author">John Zito </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            Duke University <br> STA 199 Spring 2026
-          </p>
-      </div>
-  </div>
 
 <div class="quarto-title-meta">
 
-      
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">February 16, 2026</p>
-    </div>
-  </div>
+    
   
     
   </div>
   
 
 
-</header><section id="while-you-wait-participate" class="level2 small"><h2 class="small anchored" data-anchor-id="while-you-wait-participate">While you wait: Participate 📱💻</h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<div class="wooclap">
-<p>To keep some rows in a data frame and discard others, I use BLANK. To keep some columns and discard others, I use BLANK.</p>
-<div class="wooclap-choices">
+</header>
+
+
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You should have completed the <a href="../project/1-working-collaboratively-preread.html">pre-read</a> before starting this milestone.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You must attend this lab in person and participate in the merge conflict activity to be eligible for the points for this milestone. Team members who are not in lab in person for this activity will not be eligible for these points, regardless of their contribution throughout the rest of the project.</p>
+</div>
+</div>
+<p>Data science is a collaborative discipline. Pretty much no data scientist works alone, so neither should you! In this course you’ll collaborate with teammates on the project.</p>
+<p>The first milestone of the project, today’s activity, will introduce you to the technical aspects of collaborating on a reproducible data science project that is version controlled by Git and hosted on GitHub in a repository shared by all teammates.</p>
+<p>Yes, this means you and all of your teammates will be pushing to the same repository! Sometimes things will go swimmingly, and sometimes you’ll run into <strong>merge conflicts</strong>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The word “conflict” has a negative connotation. And, indeed, merge conflicts can be frustrating. But they serve to make sure no team member inadvertently writes another team member’s work. All changes that are in “conflict” with each other need to get resolved explicitly, with a commit message, which helps avoid haphazard overwriting.</p>
+</div>
+</div>
+<section id="goals" class="level1">
+<h1>Goals</h1>
+<p>The goals of this milestone are as follows:</p>
 <ul>
-<li>group_by; arrange;</li>
-<li>filter; select;</li>
-<li>bye row; seeya column;</li>
-<li>a shovel; your bear hands;</li>
-<li>select; filter</li>
+<li>Pick a team name</li>
+<li>Collaborate on GitHub with your teammates and resolve merge conflicts when they inevitably occur</li>
+<li>Discuss and write up your team contract</li>
 </ul>
-</div>
-</div>
-</div><div class="column" style="width:30%;">
-<div id="" class="qrcode"></div>
-<script type="text/javascript">
-(function() {
-  var script = document.currentScript;
-  var qrcode = script.previousElementSibling;
-  qrcode.qrcode = new QRCode(qrcode, {"colorDark":"#000000","colorLight":"#ffffff","height":"300","text":"https://app.wooclap.com/TNRPMB?from=instruction-slide","width":"300"});
-  script.remove();
-})();
-</script><div class="small">
-<p>Scan the QR code or go to <a href="https://app.wooclap.com/TNRPMB?from=instruction-slide">HERE</a>. Log in with your Duke NetID.</p>
-</div>
-</div>
-</div>
-</section><section id="on-the-horizon" class="level2 small"><h2 class="small anchored" data-anchor-id="on-the-horizon">On the horizon</h2>
-<p>Spring break is three weeks away. Here’s what happens in the meantime:</p>
-<div class="incremental">
-<ul class="incremental">
-<li>Wed Feb 18: submit HW 4;</li>
-<li>Wed Feb 18: JZ posts Midterm 1 study-guide;</li>
-<li>Thu Feb 19: meet project teams and start proposal;</li>
-<li>Sun Feb 22: proposal due;</li>
-<li>Wed Feb 25: Midterm 1 in-class;</li>
-<li>Thu Feb 26: proposal feedback returned;</li>
-<li>Thu Feb 26: Midterm 1 take-home posted;</li>
-<li>Sun Mar 01: submit Midterm 1 take-home;</li>
-<li>Thu Mar 05: make some major project progress.</li>
+</section>
+<section id="team-name" class="level1">
+<h1>Team name</h1>
+<p>Pick a team name. It can be straightforward, or it can be cheeky, but it must be <a href="https://www.merriam-webster.com/dictionary/SFW">SFW</a>. Let your TA know your team name asap. Once everyone’s team names are in, your project repos will be created (give your TA a couple of minutes), and then you can continue with the rest of your task.</p>
+</section>
+<section id="activity" class="level1">
+<h1>Activity</h1>
+<section id="setup" class="level2">
+<h2 class="anchored" data-anchor-id="setup">Setup</h2>
+<ul>
+<li>Clone the <code>project</code> repo and open the <code>about.qmd</code> file.</li>
+<li>Assign the numbers 1, 2, 3, and 4 to each of the team members. If your team has fewer than 4 people, some people will need to have multiple numbers.</li>
 </ul>
+</section>
+<section id="lets-cause-a-merge-conflict" class="level2">
+<h2 class="anchored" data-anchor-id="lets-cause-a-merge-conflict">Let’s cause a merge conflict!</h2>
+<p>Our goal is to see two different types of merges: first we’ll see a type of merge that git can’t figure out on its own how to do on its own (a <strong>merge conflict</strong>) and requires human intervention, then another type of where that git can figure out how to do without human intervention.</p>
+<p>Doing this will require some tight choreography, so pay attention!</p>
+<p>Take turns in completing the exercise, only one member at a time. <strong>Others should just watch, not doing anything on their own projects (this includes not even pulling changes!)</strong> until they are instructed to. If you feel like you won’t be able to resist the urge to touch your computer when it’s not your turn, we recommend putting your hands in your pockets or sitting on them!</p>
+<section id="before-starting" class="level3">
+<h3 class="anchored" data-anchor-id="before-starting">Before starting</h3>
+<p>Everyone should have the repo cloned and know which role number(s) they are.</p>
+</section>
+<section id="role-1" class="level3">
+<h3 class="anchored" data-anchor-id="role-1">Role 1</h3>
+<ul>
+<li>Go to <code>about.qmd</code> in your project repo. Change the <code>[team name]</code> to your actual team name.</li>
+<li>Render the project by clicking on Render in the Build tab, commit (all changed files), and push.</li>
+</ul>
+<div id="fig-role-1" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-role-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="images/role-1-edit.png" class="img-fluid figure-img" width="400"></p>
 </div>
-<p>. . .</p>
-<p>After that, I forbid any of us from thinking about this class until March 16 <em>at the earliest</em>.</p>
-</section><section id="reading-data-into-r" class="level1"><h1>Reading data into R</h1>
-<section id="reading-rectangular-data" class="level2"><h2 class="anchored" data-anchor-id="reading-rectangular-data">Reading rectangular data</h2>
-<ul>
-<li>Using <a href="https://readr.tidyverse.org/"><strong>readr</strong></a>:
-<ul>
-<li>Most commonly: <code>read_csv()</code>
-</li>
-<li>Maybe also: <code>read_tsv()</code>, <code>read_delim()</code>, etc.</li>
-</ul>
-</li>
-</ul>
-<p>. . .</p>
-<ul>
-<li>Using <a href="https://readxl.tidyverse.org/"><strong>readxl</strong></a>: <code>read_excel()</code>
-</li>
-</ul>
-<p>. . .</p>
-<ul>
-<li>Using <a href="https://googlesheets4.tidyverse.org/"><strong>googlesheets4</strong></a>: <code>read_sheet()</code> – We haven’t covered this in the videos, but might be useful for your projects</li>
-</ul></section></section><section id="application-exercise" class="level1"><h1>Application exercise</h1>
-<section id="reading-and-writing-csv-files" class="level2"><h2 class="anchored" data-anchor-id="reading-and-writing-csv-files">Reading and writing CSV files</h2>
-<ul>
-<li><p>Read a CSV file</p></li>
-<li><p>Split it into subsets based on features of the data</p></li>
-<li><p>Write out subsets as CSV files</p></li>
-</ul></section><section id="age-gap-in-hollywood-relationships" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="age-gap-in-hollywood-relationships">Age gap in Hollywood relationships</h2>
-<div class="columns">
-<div class="column" style="width:25%;">
-<div class="question">
-<p>What is the story in this visualization?</p>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="images/role-1-commit.png" class="img-fluid figure-img" width="400"></p>
 </div>
-</div><div class="column" style="width:75%;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/09/hollywood-ages.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-role-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Role 1 changes the team name to “Team Dialectic Blue” and renders the project, then commits and pushes the changes.
+</figcaption>
 </figure>
 </div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
 </div>
 </div>
+<div class="callout-body-container callout-body">
+<p>Make sure the previous role has finished before moving on to the next step.</p>
+</div>
+</div>
+</section>
+<section id="role-2" class="level3">
+<h3 class="anchored" data-anchor-id="role-2">Role 2</h3>
+<ul>
+<li>Change the team name to some other word. Then, render the project by clicking on Render in the Build tab and commit all changed files.</li>
+</ul>
+<div id="fig-role-2-1" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-role-2-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="images/role-2-edit.png" class="img-fluid figure-img" width="400"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="images/role-2-commit.png" class="img-fluid figure-img" width="400"></p>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-role-2-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Role 2 changes the team name to “Team Royal Blue” and renders the project, then commits the changes.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li>Now try to push your changes. You should get an error.</li>
+</ul>
+<div id="fig-role-2-2" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-role-2-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<img src="images/role-2-push-error.png" class="img-fluid figure-img" width="400">
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-role-2-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Role 2 tries to push the changes, but gets an error because Role 1 has already pushed changes to the remote repo.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li>Pull. Take a look at the document (<code>about.qmd</code>) with the merge conflict.</li>
+</ul>
+<div id="fig-role-2-3" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-role-2-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="images/role-2-pull.png" class="img-fluid figure-img" width="400"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="images/role-2-merge-conflict.png" class="img-fluid figure-img" width="400"></p>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-role-2-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Role 2 tries to pulls from the remote repo as the error instructed and views the merge conflict.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li>Resolve the merge conflict by editing the document to choose the correct/preferred change. Then, render the project by clicking on Render in the Build tab.</li>
+</ul>
+<div id="fig-role-2-4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-role-2-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/role-2-resolve-merge-conflict.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-role-2-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Role resolves the merge conflict by editing the <code>about.qmd</code> document to remove the merge conflict decorators (<code>&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>======</code>, and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 97e290f39f197467b5563ea8f81187b760c95aa2</code>, the commit hash). Since the team name is “Team Royal Blue”, Role 2 deletes Role 1’s edit and keeps their own. Then, Role 2 renders the project.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Click the Stage checkbox</strong> for all files in your Git tab. Make sure they all have check marks, not filled-in boxes.</li>
+</ul>
+<div id="fig-role-2-4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-role-2-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/role-2-commit-after-resolve-merge-conflict.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-role-2-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Role 2 stages all changed files and commits them with a message indicating that they resolved the merge conflict.
+</figcaption>
+</figure>
+</div>
+<ul>
+<li>Commit and push.</li>
+</ul>
+<div id="fig-role-2-5" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-role-2-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/role-2-push.png" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-role-2-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Role 2 successfully pushes their changes after resolving the merge conflict.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make sure the previous role has finished before moving on to the next step.</p>
+</div>
+</div>
+</section>
+<section id="role-3" class="level3">
+<h3 class="anchored" data-anchor-id="role-3">Role 3</h3>
+<ul>
+<li>Change the name of the first team member.</li>
+<li>Render the project by clicking on Render in the Build tab, commit, and push. You should get an error.</li>
+<li>Pull. No merge conflicts should occur, but you should see a message about merging.</li>
+<li>Now push.</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make sure the previous role has finished before moving on to the next step.</p>
+</div>
+</div>
+</section>
+<section id="role-4" class="level3">
+<h3 class="anchored" data-anchor-id="role-4">Role 4</h3>
+<ul>
+<li>Change the name of the first team member to something other than what the previous team member did.</li>
+<li>Render the project by clicking on Render in the Build tab, commit, and push. You should get an error.</li>
+<li>Pull. Take a look at the document with the merge conflict. Clear the merge conflict by choosing the correct/preferred change. Render the project by clicking on Render in the Build tab, commit, and push.</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make sure the previous role has finished before moving on to the next step.</p>
+</div>
+</div>
+</section>
+<section id="role-5" class="level3">
+<h3 class="anchored" data-anchor-id="role-5">Role 5</h3>
+<p>This role is optional, in case your team has 5 members.</p>
+<ul>
+<li>Pull all changes from the remote repo.</li>
+<li>Change the name of the second team member.</li>
+<li>Render the project by clicking on Render in the Build tab, commit, and push. You should not get an error because you pulled first. This models “good” collaborative behavior – start with pulling before doing any work.</li>
+</ul>
+</section>
+<section id="everyone" class="level3">
+<h3 class="anchored" data-anchor-id="everyone">Everyone</h3>
+<p>Pull, and observe the changes in your project.</p>
+</section>
+</section>
+</section>
+<section id="tips-for-collaborating-via-github" class="level1">
+<h1>Tips for collaborating via GitHub</h1>
+<ul>
+<li><strong>Always pull first before you start working.</strong></li>
+<li>Resolve a merge conflict (render and push) <em>before</em> continuing your work. Never do new work while resolving a merge conflict.</li>
+<li>Render, commit, and push often to minimize merge conflicts and/or to make merge conflicts easier to resolve.</li>
+<li>If you find yourself in a situation that is difficult to resolve, ask questions ASAP. Don’t let it linger and get bigger.</li>
+</ul>
+</section>
+<section id="team-contract" class="level1">
+<h1>Team contract</h1>
+<p>Go to your project repository and open <code>contract.qmd</code>. As the instructions suggest, pick a teammate to be the scribe. Discuss the prompts and write up your answers. Once done, click <em>Render</em> in the build tab, commit, and push.</p>
+</section>
+<section id="grading" class="level1">
+<h1>Grading</h1>
+<p>We will evaluate the first milestone of your project based on your participation in this activity. Each team member who participates in the activity in person during the lab session will earn 5 points towards their project.</p>
 
 
-</section></section></main><!-- /main --><script>
-  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-  // slide changes (different for each slide format).
-  (function () {
-    // dispatch for htmlwidgets
-    function fireSlideEnter() {
-      const event = window.document.createEvent("Event");
-      event.initEvent("slideenter", true, true);
-      window.document.dispatchEvent(event);
-    }
+</section>
 
-    function fireSlideChanged(previousSlide, currentSlide) {
-      fireSlideEnter();
-
-      // dispatch for shiny
-      if (window.jQuery) {
-        if (previousSlide) {
-          window.jQuery(previousSlide).trigger("hidden");
-        }
-        if (currentSlide) {
-          window.jQuery(currentSlide).trigger("shown");
-        }
-      }
-    }
-
-    // hookup for slidy
-    if (window.w3c_slidy) {
-      window.w3c_slidy.add_observer(function (slide_num) {
-        // slide_num starts at position 1
-        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-      });
-    }
-
-  })();
-</script><script id="quarto-html-after-body" type="application/javascript">
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -887,18 +1078,21 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2026 Mine Çetinkaya-Rundel, Mary Knox, Marie Neubrander, John Zito</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/slides/10-importing-recoding-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/project/1-working-collaboratively.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
   </div>
 </footer>
+
+
 
 
 </body></html>
