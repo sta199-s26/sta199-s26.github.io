@@ -1,0 +1,154 @@
+---
+title: "AE 10: sales + import"
+---
+
+## Getting started
+
+### Packages
+
+We will use the following two packages in this application exercise.
+
+-   **tidyverse**: For data import, wrangling, and visualization.
+-   **readxl:** For importing data from Excel.
+
+```{r}
+#| label: load-packages
+#| message: false
+library(tidyverse)
+library(readxl)
+```
+
+## Sales
+
+Sales data are stored in an Excel file that looks like the following:
+
+![](https://sta199-s24.github.io/images/sales-excel.png)
+
+**Task 1:** Read in the Excel file called `sales.xlsx` from the `data` folder such that it looks like the following.
+
+![](https://sta199-s24.github.io/images/sales-1.png){width="200"}
+
+```{r}
+#| label: sales-import
+sales_raw <- read_excel(
+  "data/sales.xlsx", 
+  skip = 3,
+  col_names = c("id", "n")
+  )
+
+sales_raw
+```
+
+**Task 2:** Manipulate the sales data such such that it looks like the following.
+
+![](https://sta199-s24.github.io/images/sales-2.png){width="200"}
+
+```{r}
+#| label: sales-cleanup
+sales <- sales_raw |>
+  mutate(
+    is_brand_name = str_detect(id, "Brand"),
+    brand = if_else(is_brand_name, id, NA)
+  ) |>
+  fill(brand) |>
+  filter(!is_brand_name) |>
+  select(brand, id, n) |>
+  mutate(
+    id = as.numeric(id),
+    n = as.numeric(n)
+  )
+
+sales
+```
+
+Why should we bother with writing code for reading the data in by skipping columns and assigning variable names as well as cleaning it up in multiple steps instead of opening the Excel file and editing the data in there to prepare it for a clean import?
+
+**Answer**: Because the code allows us to struggle once and re-use for future datasets and leaves a transparent trail of our modifications while manipulating the data in Excel directly is neither reproducible nor reusable.
+
+## Break it down
+
+The pipeline for Task 2 is subtle. Here is all of the intermediate output broken down step-by-step. Go through it and make sure you understand what each step did and why it was necessary.
+
+### 1. Which rows are the funky ones?
+
+```{r}
+sales <- sales_raw |>
+  mutate(
+    is_brand_name = str_detect(id, "Brand")
+  )
+
+sales
+```
+
+### 2. Initialize the brand column
+
+```{r}
+sales <- sales_raw |>
+  mutate(
+    is_brand_name = str_detect(id, "Brand"),
+    brand = if_else(is_brand_name, id, NA)
+  )
+
+sales
+```
+
+### 3. Fill empty cells with the value above
+
+```{r}
+sales <- sales_raw |>
+  mutate(
+    is_brand_name = str_detect(id, "Brand"),
+    brand = if_else(is_brand_name, id, NA)
+  ) |>
+  fill(brand)
+
+sales
+```
+
+### 4. Throw out the funky rows
+
+```{r}
+sales <- sales_raw |>
+  mutate(
+    is_brand_name = str_detect(id, "Brand"),
+    brand = if_else(is_brand_name, id, NA)
+  ) |>
+  fill(brand) |>
+  filter(!is_brand_name) 
+
+sales
+```
+
+### 5. Throw out the unnecessary columns (and re-order)
+
+```{r}
+sales <- sales_raw |>
+  mutate(
+    is_brand_name = str_detect(id, "Brand"),
+    brand = if_else(is_brand_name, id, NA)
+  ) |>
+  fill(brand) |>
+  filter(!is_brand_name) |>
+  select(brand, id, n) 
+
+sales
+```
+
+### 6. Make sure `id` and `n` are actually numbers
+
+```{r}
+sales <- sales_raw |>
+  mutate(
+    is_brand_name = str_detect(id, "Brand"),
+    brand = if_else(is_brand_name, id, NA)
+  ) |>
+  fill(brand) |>
+  filter(!is_brand_name) |>
+  select(brand, id, n) |>
+  mutate(
+    id = as.numeric(id),
+    n = as.numeric(n)
+  )
+
+sales
+```
