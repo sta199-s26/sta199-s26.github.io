@@ -107,3 +107,7 @@ What is the story in this visualization?
 
 ::: {.column width="75%"}
 ![](images/09/hollywood-ages.jpeg){fig-align="center" width="600"}
+
+
+
+
