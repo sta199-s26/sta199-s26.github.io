@@ -1,5 +1,5 @@
 ---
-title: "Webscraping"
+title: "Web scraping"
 subtitle: "Lecture 11"
 date: "2026-02-18"
 format: 
@@ -10,511 +10,565 @@ format:
     transition: fade
     slide-number: true
     logo: images/logo.png
+    pdf-separate-fragments: true
     toc: false
   html: 
     code-link: true
+filters: 
+  - ../remove-fmt-skip.lua
+editor_options: 
+  chunk_output_type: console
 ---
 
-# That pesky midterm...
-
-## Midterm Exam 1
-
 ```{r}
+#| label: setup
 #| include: false
-
-library(tidyverse)
-todays_ae <- "ae-09-age-gaps-import"
+ggplot2::theme_set(ggplot2::theme_gray(base_size = 24))
+todays_ae <- "ae-11-chronicle-scrape"
 ```
 
-Worth 20% of your final grade; consists of two parts:
+## While you wait: Participate 📱💻 
 
--   **In-class**: worth 70% of the Midterm 1 grade;
+::: columns
 
-    -   Thursday February 20 11:45 AM - 1:00 PM
+::: {.column width="70%"}
 
--   **Take-home**: worth 30% of the Midterm 1 grade.
+::: wooclap
 
-    -   Released Thursday February 20 at 1:00 PM;
-    -   Due Monday February 24 at 8:30 AM.
+How often do you read The Chronicle?
 
-## In-class
+::: wooclap-options
+-   Every day
+-   3-5 times a week
+-   Once a week
+-   Rarely
+-   Never
+:::
+
+:::
+
+:::
+
+::: {.column width="30%"}
+{{< include _wooclap-column.qmd >}}
+:::
+
+:::
+
+::: callout-important
+## For today!
+
+Download Chrome web browser if you don't have it already, and add the [SelectorGadget](https://selectorgadget.com) to the bookmarks bar.
+
+:::
+
+# Story time
+
+## Time-to-event data
+
+Measuring how long it takes for something to happen:
+
+::: incremental 
+- How long until the patient recovers from surgery?
+- How long until the patient dies?
+- How long until the lightbuld burns out?
+- How long until laptop battery dies?
+- How long after infection until symptoms kick in?
+- How long until next call in call center?
+- How long until you find your next job?
+- How long until volcano erupts again?
+:::
+
+
+
+## Participate 📱💻 
+
+::: columns
+
+::: {.column width="70%"}
+
+::: wooclap
+
+How old were you in 2013?
+
+:::
+
+:::
+
+::: {.column width="30%"}
+{{< include _wooclap-column.qmd >}}
+:::
+
+:::
+
+## A brief history of time {.medium}
 
 ::: incremental
--   All multiple choice;
+- Feb 11 2013: Pope Benedict announces resignation. JZ is a freshman in college;
+- Mar 13 2013: Pope Francis takes over;
+- Summer 2015: JZ's summer internship involves a ton of web scraping. He then forgets it all for ten years;
+- Apr 21 2025: Pope Francis dies;
+- May 05 2025: JZ submits last spring's final grades;
+- May 07 2025: Conclave begins;
+- May 08 2025: Habemus papam!
+:::
 
--   You will take it in Bio Sciences 111 (this room) or Physics 128;
+## How long do conclaves usually last?
 
--   You get both sides of one 8.5" x 11" note sheet that you and only you created (written, typed, iPad, etc);
+. . .
 
--   If you do better on the final than you do on this, the final exam score will replace this.
+<https://catholic-hierarchy.org/bishop/spope0.html>
+
+. . .
+
+![](images/11/catholic-hierarchy.png){width="80%"}
+
+. . .
+
+How do I...get this?
+
+## Scraping the web: what? why? {.smaller}
+
+-   Increasing amount of data is available on the web
+
+-   These data are provided in an unstructured format: you can always copy&paste, but it's time-consuming and prone to errors
+
+-   Web scraping is the process of extracting this information automatically and transform it into a structured dataset
+
+-   Two different scenarios:
+
+    -   Screen scraping: extract data from source code of website, with html parser (easy) or regular expression matching (less easy).
+
+    -   Web APIs (application programming interface): website offers a set of structured http requests that return JSON or XML files.
+
+## Hypertext Markup Language {.smaller}
+
+Most of the data on the web is still largely available as HTML - while it is structured (hierarchical) it often is not available in a form useful for analysis (flat / tidy).
+
+::: small
+``` html
+<html>
+  <head>
+    <title>This is a title</title>
+  </head>
+  <body>
+    <p align="center">Hello world!</p>
+    <br/>
+    <div class="name" id="first">John</div>
+    <div class="name" id="last">Doe</div>
+    <div class="contact">
+      <div class="home">555-555-1234</div>
+      <div class="home">555-555-2345</div>
+      <div class="work">555-555-9999</div>
+      <div class="fax">555-555-8888</div>
+    </div>
+  </body>
+</html>
+```
+:::
+
+## rvest {.smaller}
+
+::::: columns
+::: {.column width="50%"}
+-   The **rvest** package makes basic processing and manipulation of HTML data straight forward
+-   It's designed to work with pipelines built with `|>`
+-   [rvest.tidyverse.org](https://rvest.tidyverse.org)
+
+```{r}
+#| message: false
+library(rvest)
+```
+
+:::
+
+::: {.column width="50%"}
+[![](images/11/rvest.png){fig-alt="rvest hex logo" fig-align="right" width="400"}](https://rvest.tidyverse.org/)
+:::
+:::::
+
+## rvest {.smaller}
+
+Core functions:
+
+-   `read_html()` - read HTML data from a url or character string.
+
+-   `html_elements()` - select specified elements from the HTML document using CSS selectors (or xpath).
+
+-   `html_element()` - select a single element from the HTML document using CSS selectors (or xpath).
+
+-   `html_table()` - parse an HTML table into a data frame.
+
+-   `html_text()` / `html_text2()` - extract tag's text content.
+
+-   `html_name` - extract a tag/element's name(s).
+
+-   `html_attrs` - extract all attributes.
+
+-   `html_attr` - extract attribute value(s) by name.
+
+## html, rvest, & xml2 {.smaller}
+
+```{r}
+html <-
+  '<html>
+  <head>
+    <title>This is a title</title>
+  </head>
+  <body>
+    <p align="center">Hello world!</p>
+    <br/>
+    <div class="name" id="first">John</div>
+    <div class="name" id="last">Doe</div>
+    <div class="contact">
+      <div class="home">555-555-1234</div>
+      <div class="home">555-555-2345</div>
+      <div class="work">555-555-9999</div>
+      <div class="fax">555-555-8888</div>
+    </div>
+  </body>
+</html>'
+```
+
+. . .
+
+```{r}
+read_html(html)
+```
+
+## Selecting elements {.smaller}
+
+```{r}
+read_html(html) |> html_elements("p")
+```
+
+. . .
+
+```{r}
+read_html(html) |> html_elements("p") |> html_text()
+```
+
+. . .
+
+```{r}
+read_html(html) |> html_elements("p") |> html_name()
+```
+
+. . .
+
+```{r}
+read_html(html) |> html_elements("p") |> html_attrs()
+```
+
+. . .
+
+```{r}
+read_html(html) |> html_elements("p") |> html_attr("align")
+```
+
+## More selecting tags {.smaller}
+
+::: medium
+
+```{r}
+read_html(html) |> html_elements("div")
+```
+
 :::
 
 . . .
 
-::: callout-important
-If you have testing accommodations, make sure I get proper documentation from SDAO and make appointments in the Testing Center by Friday. The appointment should overlap substantially with our class time if possible.
-:::
-
-## Example in-class question
-
-Which command will replace a pre-existing column in a data frame with a new and improved version of itself?
-
-a.  `group_by`
-b.  `summarize`
-c.  `pivot_wider`
-d.  `geom_replace`
-e.  `mutate`
-
-## Example in-class question
+::: medium
 
 ```{r}
-#| echo: false
+read_html(html) |> html_elements("div") |> html_text()
+```
 
-df <- tibble(
-  x = c(1, 2, 3, 4, 5, 6),
-  y = c("John", "John", "Cameron", "Zito", "Zito", "Zito")
+:::
+
+## CSS selectors {.smaller}
+
+-   We will use a tool called SelectorGadget to help us identify the HTML elements of interest by constructing a CSS selector which can be used to subset the HTML document.
+
+. . .
+
+-   Some examples of basic selector syntax is below,
+
+::: small
+| Selector | Example | Description |
+|:-----------------|:-----------------|:-----------------------------------|
+| .class | `.title` | Select all elements with class="title" |
+| #id | `#name` | Select all elements with id="name" |
+| element | `p` | Select all \<p\> elements |
+| element element | `div p` | Select all \<p\> elements inside a \<div\> element |
+| element\>element | `div > p` | Select all \<p\> elements with \<div\> as a parent |
+| \[attribute\] | `[class]` | Select all elements with a class attribute |
+| \[attribute=value\] | `[class=title]` | Select all elements with class="title" |
+:::
+
+## CSS classes and ids
+
+```{r}
+read_html(html) |> html_elements(".name")
+```
+
+. . .
+
+```{r}
+read_html(html) |> html_elements("div.name")
+```
+
+. . .
+
+```{r}
+read_html(html) |> html_elements("#first")
+```
+
+## Text with `html_text()` vs. `html_text2()` {.smaller}
+
+```{r}
+html = read_html(
+  "<p>  
+    This is the first sentence in the paragraph.
+    This is the second sentence that should be on the same line as the first sentence.<br>This third sentence should start on a new line.
+  </p>"
 )
 ```
 
-::: columns
-::: {.column width="50%"}
-```{r}
-df
-```
-:::
-
-::: {.column width="50%"}
-```{r}
-#| eval: false 
-
-df |>
-  group_by(y) |>
-  summarize(xbar = mean(x))
-```
-
-How many rows will this output have?
-
-a.  1
-b.  2
-c.  3
-d.  6
-e.  11
-:::
-:::
-
-## Example in-class question {.scrollable}
-
-::: columns
-::: {.column width="50%"}
-Which box plot is visualizing the same data as the histogram?
-:::
-
-::: {.column width="50%"}
-```{r}
-#| echo: false
-#| warning: false
-set.seed(100)
-x <- c(rnorm(150), rnorm(350, mean = 2, sd = 0.5))
-df <- tibble(x = x)
-ggplot(df, aes(x = x)) +
-  geom_histogram() + 
-  theme(axis.text = element_text(size = 36)) + 
-  labs(x = NULL, y = NULL)
-```
-:::
-:::
+. . .
 
 ```{r}
-#| echo: false
-#| fig-asp: 0.33
-#| warning: false
-w <- rnorm(500)
-y <- c(pmax(rnorm(350, mean = -1), -2), rnorm(150, mean = 2, sd = 0.5))
-z <- x + 10
-X <- as_tibble(cbind(sort(rep(1:4, 500)), c(w, z, x, y))) |>
-  mutate(
-    V1 = case_when(
-      V1 == 1 ~ "a",
-      V1 == 2 ~ "b",
-      V1 == 3 ~ "c",
-      V1 == 4 ~ "d",
-    )
-  )
-ggplot(X, aes(x = V2)) + 
-  geom_boxplot() + 
-  facet_wrap(.~V1, scales = "free") + 
-  theme(axis.text = element_text(size = 18), 
-        axis.text.y = element_blank(),
-        axis.ticks.y = element_blank()) + 
-  labs(x = NULL, y = NULL)
+html |> html_text()
+html |> html_text2()
 ```
 
-## What should I put on my cheat sheet?
+## HTML tables with `html_table()` {.smaller}
+
+```{r}
+html_table =
+  '<html>
+  <head>
+    <title>This is a title</title>
+  </head>
+  <body>
+    <table>
+      <tr> <th>a</th> <th>b</th> <th>c</th> </tr>
+      <tr> <td>1</td> <td>2</td> <td>3</td> </tr>
+      <tr> <td>2</td> <td>3</td> <td>4</td> </tr>
+      <tr> <td>3</td> <td>4</td> <td>5</td> </tr>
+    </table>
+  </body>
+</html>'
+```
 
 . . .
 
-[**Ask one of our undergrad TAs!**](https://edstem.org/us/courses/70595/discussion/6137999) They took the class. I didn't.
-
-::: incremental
--   description of common functions;
--   description of different visualizations: how to interpret, and what to use when;
--   doodles;
--   cute words of affirmation.
-:::
-
-. . .
-
-::: callout-warning
-Don't waste space on the details of any specific applications or datasets we've seen (penguins, Bechdel, gerrymandering, midwest, etc). Anything we want you to know about a particular application will be introduced from scratch within the exam.
-:::
-
-## Take-home
-
-::: incremental
--   It will be just like a lab, only shorter;
--   Completely open-resource, but citation policies apply;
--   Absolutely no collaboration of any kind;
--   Seek help by posting *privately* on Ed;
--   Submit your final PDF to Gradescope in the usual way.
-:::
-
-## Reminder: conduct policies
-
-::: incremental
--   Uncited use of outside resources or inappropriate collaboration will result in a zero and be referred to the conduct office;
--   If a conduct violation of any kind is discovered, your final letter grade in the course will be permanently reduced (A- down to B+, B+ down to B, etc);
--   If folks share solutions, all students involved will be penalized equally, the sharer the same as the recipient.
-:::
-
-. . .
-
-::: callout-warning
-## It's not personal.
-
-These policies apply to everyone. I don't care who your parents are, or what medical schools you are applying to in the fall. Grow up and act right.
-:::
-
-## Things you can do to study
-
-::: incremental
--   **Practice problems**: released Thursday February 13;
--   **Attend lab**: review game on Monday February 17;
--   **Old labs**: correct parts where you lost points;
--   **Old AEs**: complete tasks we didn't get to and compare with key;
--   **Code along**: watch these videos specifically;
--   **Textbook**: odd-numbered exercises in the back of Chs. 1, 4, 5, 6.
-:::
-
-# Let's zoom out for a sec...
-
-## Data science and statistical thinking
-
-Before Midterm 1...
-
--   **Data science**: the real-world *art* of transforming messy, imperfect, incomplete data into knowledge;
-
-After Midterm 1...
-
--   **Statistics**: the mathematical discipline of quantifying our uncertainty about that knowledge.
-
-## Data science {.medium}
-
-![](images/00/data-science-cycle.001.png){fig-align="center"}
-
-## Data science {.medium}
-
-::: incremental
-1.  **Collection**: we won't seriously study this!
-
-    -   **for us**: data importing (`read_csv`), and webscraping (next time);
-    -   **but really**: domain-specific issues of measurement, survey design, experimental design, etc;
-:::
-
-## From last time: data collection
-
-I sent out my lil' survey with Google Forms, downloaded the responses in a CSV, and read that sucker in:
-
-::: columns
-::: {.column width="35%"}
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf0x7gOZY04c9vzdyIdm-v_vCqL0oFaQI9-LWB8Dt3uf3TriQ/viewform?embedded=true" width="350" height="400" frameborder="0" marginheight="0" marginwidth="0">
-
-Loading…
-
-</iframe>
-:::
-
-::: {.column width="65%"}
 ```{r}
-survey <- read_csv("data/survey-2025-02-06.csv")
-survey
+read_html(html_table) |>
+  html_elements("table") |>
+  html_table()
 ```
-:::
-:::
-
-## Data science {.medium}
-
-1.  **Collection**: we won't seriously study this!
-
-    -   **for us**: data importing (`read_csv`), and webscraping (next time);
-    -   **but really**: domain-specific issues of measurement, survey design, experimental design, etc;
-
-::: incremental
-2.  **Preparation**: cleaning, wrangling, and otherwise *tidying* the data so we can actually work with it.
-
-    -   **keywords**: `mutate`, `fct_relevel`, `pivot_*`, `*_join`
-:::
-
-## From last time: data preparation {.scrollable}
-
-```{r}
-survey <- survey |>
-  rename(
-    tue_classes = `How many classes do you have on Tuesdays?`,
-    year = `What year are you?`
-  ) |>
-  mutate(
-    tue_classes = case_when(
-      tue_classes == "2 -3" ~ "3",
-      tue_classes == "3 classes" ~ "3",
-      tue_classes == "Four" ~ "4",
-      tue_classes == "TWO MANY" ~ "2",
-      tue_classes == "Three" ~ "3",
-      tue_classes == "Two" ~ "2",
-      tue_classes == "Two plus a chemistry lab" ~ "3",
-      tue_classes == "three" ~ "3",
-      .default = tue_classes
-    ),
-    tue_classes = as.numeric(tue_classes),
-    year = fct_relevel(year, "First-year", "Sophomore", "Junior", "Senior")
-  ) |>
-  select(tue_classes, year)
-survey
-```
-
-## Data science {.medium}
-
-1.  **Collection**: we won't seriously study this!
-
-    -   **for us**: data importing (`read_csv`), and webscraping (next time);
-    -   **but really**: domain-specific issues of measurement, survey design, experimental design, etc;
-
-2.  **Preparation**: cleaning, wrangling, and otherwise *tidying* the data so we can actually work with it.
-
-    -   **keywords**: `mutate`, `fct_relevel`, `pivot_*`, `*_join`
-
-::: incremental
-3.  **Analysis**: finally transform the data into *knowledge*...
-
-    -   **pictures**: `ggplot`, `geom_*`, etc
-    -   **numerical summaries**: `summarize`, `group_by`, `count`, `mean`, `median`, `sd`, `quantile`, `IQR`, `cor`, etc
-:::
-
-## From last time: data analysis
-
-A human being can learn nothing from staring at this box:
-
-```{r}
-survey
-```
-
-## From last time: data analysis
-
-Picture!
-
-```{r}
-ggplot(survey, aes(x = tue_classes, fill = year)) + 
-  geom_bar(position = "dodge")
-```
-
-## From last time: data analysis
-
-Better picture?
-
-```{r}
-ggplot(survey, aes(x = tue_classes, fill = year)) + 
-  geom_bar(position = "fill")
-```
-
-## From last time: data analysis
-
-Numbers!
-
-```{r}
-survey |>
-  count(tue_classes, year) |>
-  group_by(tue_classes) |>
-  mutate(prop = n / sum(n))
-```
-
-## Data science {.medium}
-
-1.  **Collection**: we won't seriously study this!
-
-    -   **for us**: data importing (`read_csv`), and webscraping (next time);
-    -   **but really**: domain-specific issues of measurement, survey design, experimental design, etc;
-
-2.  **Preparation**: cleaning, wrangling, and otherwise *tidying* the data so we can actually work with it.
-
-    -   **keywords**: `mutate`, `fct_relevel`, `pivot_*`, `*_join`
-
-3.  **Analysis**: finally transform the data into *knowledge*...
-
-    -   **pictures**: `ggplot`, `geom_*`, etc
-    -   **numerical summaries**: `summarize`, `group_by`, `count`, `mean`, `median`, `sd`, `quantile`, `iqr`, `cor`, etc
-
-. . .
-
-The pictures and the summaries need to work together!
-
-## A cautionary tale: Anscombe's quartet
-
-```{r}
-#| echo: false
-anscombe_tidy <- anscombe |>
-    mutate(observation = seq_len(n())) |>
-    gather(key, value, -observation) |>
-    separate(key, c("variable", "set"), 1, convert = TRUE) |>
-    mutate(set = c("I", "II", "III", "IV")[set]) |>
-    spread(variable, value)
-```
-
-::: columns
-::: {.column width="25%"}
-Dataset I
-
-```{r}
-#| echo: false
-anscombe_tidy |>
-  filter(set == "I") |>
-  select(x, y)
-```
-:::
-
-::: {.column width="25%"}
-Dataset II
-
-```{r}
-#| echo: false
-anscombe_tidy |>
-  filter(set == "II") |>
-  select(x, y)
-```
-:::
-
-::: {.column width="25%"}
-Dataset III
-
-```{r}
-#| echo: false
-anscombe_tidy |>
-  filter(set == "III") |>
-  select(x, y)
-```
-:::
-
-::: {.column width="25%"}
-Dataset IV
-
-```{r}
-#| echo: false
-anscombe_tidy |>
-  filter(set == "IV") |>
-  select(x, y)
-```
-:::
-:::
-
-## A cautionary tale: Anscombe's quartet
-
-```{r}
-ggplot(anscombe_tidy, aes(x, y)) +
-  geom_point() +
-  facet_wrap(~ set) 
-```
-
-## A cautionary tale: Anscombe's quartet
-
-```{r}
-ggplot(anscombe_tidy, aes(x, y)) +
-  geom_point() +
-  facet_wrap(~ set) +
-  geom_smooth(method = "lm", se = FALSE)
-```
-
-## If you only looked at summary statistics...
-
-```{r}
-anscombe_tidy |>
-  group_by(set) |>
-  summarize(
-    xbar = mean(x),
-    ybar = mean(y),
-    sx = sd(x),
-    sy = sd(y),
-    r = cor(x, y)
-  )
-```
-
-## Our motto: ABV! {.large}
-
-. . .
-
-No, not alcohol by volume...
-
-::: columns
-::: {.column width="20%"}
-::: incremental
--   `A`lways!
--   `B`e!
--   `V`isualizing!
-:::
-:::
-
-::: {.column .fragment width="70%"}
-![](images/09/ggr.jpg){fig-align="right" width="80%"}
-:::
-:::
-
-
-# Reading data into R
-
-## Reading rectangular data
-
--   Using [**readr**](https://readr.tidyverse.org/):
-    -   Most commonly: `read_csv()`
-    -   Maybe also: `read_tsv()`, `read_delim()`, etc.
-
-. . .
-
--   Using [**readxl**](https://readxl.tidyverse.org/): `read_excel()`
-
-. . .
-
--   Using [**googlesheets4**](https://googlesheets4.tidyverse.org/): `read_sheet()` -- We haven't covered this in the videos, but might be useful for your projects
 
 # Application exercise
 
-## Reading and writing CSV files
+## Reading The Chronicle
 
--   Read a CSV file
-
--   Split it into subsets based on features of the data
-
--   Write out subsets as CSV files
-
-## Age gap in Hollywood relationships {.smaller}
-
-::: columns
-::: {.column width="25%"}
 ::: question
-What is the story in this visualization?
-:::
+What do you think is the most common word in the titles of The Chronicle opinion pieces?
 :::
 
-::: {.column width="75%"}
-![](images/09/hollywood-ages.jpeg){fig-align="center" width="600"}
+## Analyzing The Chronicle
+
+```{r}
+#| label: load-chronicle-data
+#| include: false
+library(tidyverse)
+chronicle <- read_csv("data/chronicle.csv")
+```
+
+```{r}
+#| label: chronicle-common-words
+#| echo: false
+#| message: false
+stop_words <- read_csv("data/stop-words.csv")
+chronicle |>
+  tidytext::unnest_tokens(word, title) |>
+  mutate(word = str_replace_all(word, "’", "'")) |>
+  anti_join(stop_words) |>
+  count(word, sort = TRUE) |>
+  filter(word != "duke's") |>
+  slice_head(n = 20) |>
+  mutate(word = fct_reorder(word, n)) |>
+  ggplot(aes(y = word, x = n, fill = log(n))) +
+  geom_col(show.legend = FALSE) +
+  theme_minimal(base_size = 16) +
+  labs(
+    x = "Number of mentions",
+    y = "Word",
+    title = "The Chronicle - Opinion pieces",
+    subtitle = "Common words in the 500 most recent opinion piece titles",
+    caption = "Source: Data scraped from The Chronicle on Oct 6, 2025"
+  ) +
+  theme(
+    plot.title.position = "plot",
+    plot.caption = element_text(color = "gray30")
+  )
+```
+
+## Reading The Chronicle
+
+::: question
+How do you think the sentiments in opinion pieces in The Chronicle compare across authors?
+Roughly the same?
+Wildly different?
+Somewhere in between?
 :::
+
+## Analyzing The Chronicle
+
+```{r}
+#| label: chronicle-sentiments
+#| echo: false
+#| message: false
+#| fig-asp: 0.75
+#| fig-width: 7
+#| fig-align: center
+afinn_sentiments <- read_csv("data/afinn-sentiments.csv")
+chronicle |>
+  tidytext::unnest_tokens(word, title, drop = FALSE) |>
+  mutate(word = str_replace_all(word, "’", "'")) |>
+  anti_join(stop_words) |>
+  left_join(afinn_sentiments) |>
+  group_by(author, title) |>
+  summarize(total_sentiment = sum(value, na.rm = TRUE), .groups = "drop") |>
+  group_by(author) |>
+  summarize(
+    n_articles = n(),
+    avg_sentiment = mean(total_sentiment, na.rm = TRUE),
+  ) |>
+  filter(n_articles > 2 & !is.na(author)) |>
+  arrange(desc(avg_sentiment)) |>
+  slice(c(1:10, 30:39)) |>
+  mutate(
+    author = fct_reorder(author, avg_sentiment),
+    neg_pos = if_else(avg_sentiment < 0, "neg", "pos"),
+    label_position = if_else(neg_pos == "neg", 0.25, -0.25)
+  ) |>
+  ggplot(aes(y = author, x = avg_sentiment)) +
+  geom_col(aes(fill = neg_pos), show.legend = FALSE) +
+  geom_text(
+    aes(x = label_position, label = author, color = neg_pos),
+    hjust = c(rep(1, 10), rep(0, 10)),
+    show.legend = FALSE,
+    fontface = "bold"
+  ) +
+  geom_text(
+    aes(label = round(avg_sentiment, 1)),
+    hjust = c(rep(1.25, 10), rep(-0.25, 10)),
+    color = "white",
+    fontface = "bold"
+  ) +
+  scale_fill_manual(values = c("neg" = "#4d4009", "pos" = "#FF4B91")) +
+  scale_color_manual(values = c("neg" = "#4d4009", "pos" = "#FF4B91")) +
+  coord_cartesian(xlim = c(-2, 2)) +
+  labs(
+    x = "negative  ←     Average sentiment score (AFINN)     →  positive",
+    y = NULL,
+    title = "The Chronicle - Opinion pieces\nAverage sentiment scores of titles by author",
+    subtitle = "Top 10 average positive and negative scores",
+    caption = "Source: Data scraped from The Chronicle on Sep 30, 2024"
+  ) +
+  theme_void(base_size = 16) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    plot.subtitle = element_text(
+      hjust = 0.5,
+      margin = unit(c(0.5, 0, 1, 0), "lines")
+    ),
+    axis.title.x = element_text(color = "gray30", size = 12),
+    plot.caption = element_text(color = "gray30", size = 10)
+  )
+```
+
+## All of this analysis is done in R! {.centered}
+
+::: hand
+(mostly) with tools you already know!
 :::
+
+## Common words in The Chronicle titles {.smaller}
+
+Code for the earlier plot:
+
+```{r}
+#| ref.label: chronicle-common-words
+#| fig-show: hide
+#| message: false
+#| code-line-numbers: "|2-3|5|6|8|9|10-23"
+```
+
+## Avg sentiment scores of titles {.smaller}
+
+Code for the earlier plot:
+
+```{r}
+#| ref.label: chronicle-sentiments
+#| fig-show: hide
+#| message: false
+#| code-line-numbers: "|2-3|5|6|7-8|9-13|22-55"
+```
+
+## Where is the data coming from? {.smaller}
+
+::: center
+<https://www.dukechronicle.com/section/opinion>
+:::
+
+[![](images/11/chronicle-opinion-page.png){fig-align="center" width="800"}](https://www.dukechronicle.com/section/opinion?page=1&per_page=500)
+
+## Where is the data coming from? {.smaller}
+
+::::: columns
+::: {.column width="20%"}
+[![](images/11/chronicle-opinion-page.png){fig-align="center" width="800"}](https://www.dukechronicle.com/section/opinion?page=1&per_page=500)
+:::
+
+::: {.column width="80%"}
+
+```{r}
+chronicle
+```
+
+:::
+:::::
+
+## SelectorGadget
+
+**SelectorGadget** ([selectorgadget.com](http://selectorgadget.com)) is a javascript based tool that helps you interactively build an appropriate CSS selector for the content you are interested in.
+
+![](images/11/selectorgadget.png){fig-align="center" width="1000"}
+
+## Opinion articles in The Chronicle
+
+Go to <https://www.dukechronicle.com/section/opinion?page=1&per_page=500>.
+
+::: question
+How many articles are on the page?
+:::
+
+## Goal
+
+::::: columns
+::: {.column width="50%"}
+-   Scrape data and organize it in a tidy format in R
+-   Perform light text parsing to clean data
+-   Summarize and visualze the data
+:::
+
+::: {.column width="50%"}
+![](images/11/chronicle-data.png){fig-align="center"}
+:::
+:::::
 
 ## `{r} todays_ae` {.smaller}
 
@@ -523,9 +577,5 @@ What is the story in this visualization?
 
 -   If you haven't yet done so, make sure all of your changes up to this point are committed and pushed, i.e., there's nothing left in your Git pane.
 
--   If you haven't yet done so, click Pull to get today's application exercise file: *`{r} paste0(todays_ae, ".qmd")`*.
-
--   Work through **Part 1** of the application exercise in class, and render, commit, and push your edits.
+-   If you haven't yet done so, click Pull to get today's application exercise file: *`{r} paste0(todays_ae, ".qmd")`* and *`chronicle-scrape.R`*.
 :::
-
-
