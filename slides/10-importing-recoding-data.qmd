@@ -55,7 +55,7 @@ Spring break is three weeks away. Here's what happens in the meantime:
 
 ::: incremental 
 - Wed Feb 18: submit HW 4;
-- Wed Feb 18: JZ posts Midterm 1 study-guide;
+- Thu Feb 19: JZ posts Midterm 1 study-guide;
 - Thu Feb 19: meet project teams and start proposal;
 - Sun Feb 22: proposal due;
 - Wed Feb 25: Midterm 1 in-class;
