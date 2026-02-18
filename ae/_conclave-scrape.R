@@ -12,14 +12,15 @@ library(tidyverse)
 url <- "https://catholic-hierarchy.org/bishop/spope0.html"
 page <- read_html(url)
 
-my_tables <- html_nodes(page, "table")
-
-popes_table <- html_table(my_tables[[1]], fill = TRUE)
-names(popes_table) <- make.unique(names(popes_table))
+popes_table <- page |>
+  html_element("table") |>
+  html_table(fill = TRUE)
 
 # ==============================================================================
 # clean
 # ==============================================================================
+
+names(popes_table) <- make.unique(names(popes_table))
 
 popes_clean <- popes_table |>
   rename(
