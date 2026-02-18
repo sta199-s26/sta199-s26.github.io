@@ -88,7 +88,7 @@ Measuring how long it takes for something to happen:
 - Apr 21 2025: Pope Francis dies;
 - May 05 2025: JZ submits last spring's final grades;
 - May 07 2025: Conclave begins;
-- May 08 2025: Habemus papam!
+- May 08 2025: Robert Prevost (Pope Leo XIV) elected;
     - JZ momentarily emerges from his end-of-semester stupor with a question.
 :::
 
@@ -578,6 +578,18 @@ How many articles are on the page?
 ![](images/11/chronicle-data.png){fig-align="center"}
 :::
 :::::
+
+## A new R workflow {.smaller}
+
+-   When working in a Quarto document, your analysis is re-run each time you knit
+
+-   If web scraping in a Quarto document, you'd be re-scraping the data each time you knit, which is undesirable (and not *nice*)!
+
+-   An alternative workflow:
+
+    -   Use an R script to save your code
+    -   Saving interim data scraped using the code in the script as CSV or RDS files
+    -   Use the saved data in your analysis in your Quarto document
 
 ## `{r} todays_ae` {.smaller}
 
