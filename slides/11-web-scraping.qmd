@@ -35,7 +35,7 @@ todays_ae <- "ae-11-chronicle-scrape"
 
 ::: wooclap
 
-How old were you in 2013?
+How old were you on February 11 2013?
 
 :::
 
@@ -64,7 +64,7 @@ Measuring how long it takes for something to happen:
 ::: incremental 
 - How long until the patient recovers from surgery?
 - How long until the patient dies?
-- How long until the lightbuld burns out?
+- How long until the lightbulb burns out?
 - How long until laptop battery dies?
 - How long after infection until symptoms kick in?
 - How long until next call in call center?
@@ -92,7 +92,7 @@ Measuring how long it takes for something to happen:
     - JZ momentarily emerges from his end-of-semester stupor with a question.
 :::
 
-## How long do conclaves usually last?
+## How long do conclaves usually last? {.medium}
 
 . . .
 
@@ -105,6 +105,15 @@ Measuring how long it takes for something to happen:
 . . .
 
 How do I...get this?
+
+## Reality check
+
+You can *absolutely* copy-paste this table into excel and clean it my hand. But:
+
+- It's tedious;
+- This is not reproducible;
+- The work you put in is not reusable;
+- This method will not generalize to harder tasks like you will see in the AE.
 
 # Web scraping
 
@@ -537,19 +546,11 @@ Code for the earlier plot:
 
 ## Where is the data coming from? {.smaller}
 
-::::: columns
-::: {.column width="20%"}
-[![](images/11/chronicle-opinion-page.png){fig-align="center" width="800"}](https://www.dukechronicle.com/section/opinion?page=1&per_page=500)
-:::
-
-::: {.column width="80%"}
 
 ```{r}
 chronicle
 ```
 
-:::
-:::::
 
 ## SelectorGadget
 
