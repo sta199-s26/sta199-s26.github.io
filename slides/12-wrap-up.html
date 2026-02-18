@@ -100,10 +100,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <meta property="og:title" content="Data Science Wrap-up – STA 199 Spring 2026">
 <meta property="og:description" content="Lecture 12">
-<meta property="og:image" content="https://sta199-s26.github.io/slides/12-wrap-up_files/figure-html/unnamed-chunk-5-1.png">
+<meta property="og:image" content="https://sta199-s26.github.io/slides/12-wrap-up_files/figure-revealjs/unnamed-chunk-5-1.png">
 <meta property="og:site_name" content="STA 199 Spring 2026">
 <meta property="og:image:height" content="960">
-<meta property="og:image:width" content="1344">
+<meta property="og:image:width" content="1920">
 </head>
 <body class="nav-sidebar docked quarto-light">
 
@@ -518,7 +518,7 @@ Important
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
@@ -528,7 +528,7 @@ Important
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
@@ -646,17 +646,8 @@ It’s not personal.
 </iframe>
 </div><div class="column" style="width:65%;">
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"data/survey-2025-02-06.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 209 Columns: 3
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (3): Timestamp, How many classes do you have on Tuesdays?, What year are...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"data/survey-2025-02-06.csv"</span><span class="op">)</span></span>
+<span><span class="va">survey</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 209 × 3
    Timestamp         How many classes do you have on Tues…¹ `What year are you?`
@@ -703,7 +694,7 @@ chr (3): Timestamp, How many classes do you have on Tuesdays?, What year are...
 </div>
 </section><section id="from-last-time-data-preparation" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="from-last-time-data-preparation">From last time: data preparation</h2>
 <div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span> <span class="op">&lt;-</span> <span class="va">survey</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span> <span class="op">&lt;-</span> <span class="va">survey</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">rename</span><span class="op">(</span></span>
 <span>    tue_classes <span class="op">=</span> <span class="va">`How many classes do you have on Tuesdays?`</span>,</span>
 <span>    year <span class="op">=</span> <span class="va">`What year are you?`</span></span>
@@ -778,7 +769,7 @@ chr (3): Timestamp, How many classes do you have on Tuesdays?, What year are...
 </section><section id="from-last-time-data-analysis" class="level2"><h2 class="anchored" data-anchor-id="from-last-time-data-analysis">From last time: data analysis</h2>
 <p>A human being can learn nothing from staring at this box:</p>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 209 × 2
    tue_classes year      
@@ -799,11 +790,11 @@ chr (3): Timestamp, How many classes do you have on Tuesdays?, What year are...
 </section><section id="from-last-time-data-analysis-1" class="level2"><h2 class="anchored" data-anchor-id="from-last-time-data-analysis-1">From last time: data analysis</h2>
 <p>Picture!</p>
 <div class="cell">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">survey</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">tue_classes</span>, fill <span class="op">=</span> <span class="va">year</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">survey</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">tue_classes</span>, fill <span class="op">=</span> <span class="va">year</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu">geom_bar</span><span class="op">(</span>position <span class="op">=</span> <span class="st">"dodge"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
@@ -811,11 +802,11 @@ chr (3): Timestamp, How many classes do you have on Tuesdays?, What year are...
 </section><section id="from-last-time-data-analysis-2" class="level2"><h2 class="anchored" data-anchor-id="from-last-time-data-analysis-2">From last time: data analysis</h2>
 <p>Better picture?</p>
 <div class="cell">
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">survey</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">tue_classes</span>, fill <span class="op">=</span> <span class="va">year</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">survey</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">tue_classes</span>, fill <span class="op">=</span> <span class="va">year</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu">geom_bar</span><span class="op">(</span>position <span class="op">=</span> <span class="st">"fill"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
@@ -823,7 +814,7 @@ chr (3): Timestamp, How many classes do you have on Tuesdays?, What year are...
 </section><section id="from-last-time-data-analysis-3" class="level2"><h2 class="anchored" data-anchor-id="from-last-time-data-analysis-3">From last time: data analysis</h2>
 <p>Numbers!</p>
 <div class="cell">
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">count</span><span class="op">(</span><span class="va">tue_classes</span>, <span class="va">year</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">tue_classes</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">mutate</span><span class="op">(</span>prop <span class="op">=</span> <span class="va">n</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -960,35 +951,32 @@ chr (3): Timestamp, How many classes do you have on Tuesdays?, What year are...
 </div>
 </section><section id="a-cautionary-tale-anscombes-quartet-1" class="level2"><h2 class="anchored" data-anchor-id="a-cautionary-tale-anscombes-quartet-1">A cautionary tale: Anscombe’s quartet</h2>
 <div class="cell">
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">anscombe_tidy</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">anscombe_tidy</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span> <span class="va">set</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </section><section id="a-cautionary-tale-anscombes-quartet-2" class="level2"><h2 class="anchored" data-anchor-id="a-cautionary-tale-anscombes-quartet-2">A cautionary tale: Anscombe’s quartet</h2>
 <div class="cell">
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">anscombe_tidy</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">anscombe_tidy</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span> <span class="va">set</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span>, se <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </section><section id="if-you-only-looked-at-summary-statistics" class="level2"><h2 class="anchored" data-anchor-id="if-you-only-looked-at-summary-statistics">If you only looked at summary statistics…</h2>
 <div class="cell">
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">anscombe_tidy</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">anscombe_tidy</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">set</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">summarize</span><span class="op">(</span></span>
 <span>    xbar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>,</span>
@@ -1032,7 +1020,42 @@ chr (3): Timestamp, How many classes do you have on Tuesdays?, What year are...
 </div>
 
 
-</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script>
+  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+  // slide changes (different for each slide format).
+  (function () {
+    // dispatch for htmlwidgets
+    function fireSlideEnter() {
+      const event = window.document.createEvent("Event");
+      event.initEvent("slideenter", true, true);
+      window.document.dispatchEvent(event);
+    }
+
+    function fireSlideChanged(previousSlide, currentSlide) {
+      fireSlideEnter();
+
+      // dispatch for shiny
+      if (window.jQuery) {
+        if (previousSlide) {
+          window.jQuery(previousSlide).trigger("hidden");
+        }
+        if (currentSlide) {
+          window.jQuery(currentSlide).trigger("shown");
+        }
+      }
+    }
+
+    // hookup for slidy
+    if (window.w3c_slidy) {
+      window.w3c_slidy.add_observer(function (slide_num) {
+        // slide_num starts at position 1
+        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+      });
+    }
+
+  })();
+</script><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();

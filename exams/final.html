@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="author" content="John Zito">
-<meta name="dcterms.date" content="2026-02-16">
-<title>Importing and recoding data – STA 199 Spring 2026</title>
+
+
+<title>final – STA 199 Spring 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +21,7 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
+
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -37,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-9f26b6341e16faa20df3ce7a36debf59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script><script id="quarto-search-options" type="application/json">{
+<script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -64,30 +66,38 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<meta property="og:title" content="Importing and recoding data – STA 199 Spring 2026">
-<meta property="og:description" content="Lecture 10">
-<meta property="og:image" content="https://sta199-s26.github.io/slides/images/09/hollywood-ages.jpeg">
+
+
+<meta property="og:title" content="final – STA 199 Spring 2026">
 <meta property="og:site_name" content="STA 199 Spring 2026">
 </head>
+
 <body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Importing and recoding data</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">final</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/sta199-s26" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio containers" class="quarto-navigation-tool px-1" aria-label="RStudio containers"><i class="bi bi-code-square"></i></a>
@@ -95,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="dropdown">
       <a href="" title="Support" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Support"><i class="bi bi-life-preserver"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-<li>
+          <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://docs.google.com/spreadsheets/d/1bbCCaRtyUzPbB-SqcjseiwVLwFlgQbvCMaMWnvT3EG8/edit?usp=sharing">
               <i class="bi bi-person-raised-hand pe-1"></i>
             Office hours
@@ -108,11 +118,11 @@ ul.task-list li input[type="checkbox"] {
             </a>
           </li>
       </ul>
-</div>
+    </div>
     <div class="dropdown">
       <a href="" title="Canvas" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Canvas"><i class="bi bi-file-check-fill"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
-<li>
+          <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://canvas.duke.edu/courses/72135/announcements">
               <i class="bi bi-megaphone-fill pe-1"></i>
             Announcements
@@ -131,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
             </a>
           </li>
       </ul>
-</div>
+    </div>
 </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -141,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item sidebar-item-section">
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Syllabus</span></a>
@@ -149,8 +159,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../syllabus/syllabus-overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
@@ -199,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
@@ -208,8 +218,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lab/lab-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 0</span></a>
@@ -246,7 +256,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -255,8 +265,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../hw/hw-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homework 1</span></a>
@@ -281,7 +291,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
@@ -290,8 +300,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../computing/coding-access.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Access</span></a>
@@ -304,190 +314,42 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-</li>
+  </li>
     </ul>
-</div>
-</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
-   
-  <ul>
-<li><a href="#while-you-wait-participate" id="toc-while-you-wait-participate" class="nav-link active" data-scroll-target="#while-you-wait-participate">While you wait: Participate 📱💻</a></li>
-  <li><a href="#on-the-horizon" id="toc-on-the-horizon" class="nav-link" data-scroll-target="#on-the-horizon">On the horizon</a></li>
-  <li>
-<a href="#reading-data-into-r" id="toc-reading-data-into-r" class="nav-link" data-scroll-target="#reading-data-into-r">Reading data into R</a>
-  <ul class="collapse">
-<li><a href="#reading-rectangular-data" id="toc-reading-rectangular-data" class="nav-link" data-scroll-target="#reading-rectangular-data">Reading rectangular data</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#application-exercise" id="toc-application-exercise" class="nav-link" data-scroll-target="#application-exercise">Application exercise</a>
-  <ul class="collapse">
-<li><a href="#reading-and-writing-csv-files" id="toc-reading-and-writing-csv-files" class="nav-link" data-scroll-target="#reading-and-writing-csv-files">Reading and writing CSV files</a></li>
-  <li><a href="#age-gap-in-hollywood-relationships" id="toc-age-gap-in-hollywood-relationships" class="nav-link" data-scroll-target="#age-gap-in-hollywood-relationships">Age gap in Hollywood relationships</a></li>
-  </ul>
-</li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/slides/10-importing-recoding-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="10-importing-recoding-data-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Importing and recoding data</h1>
-<p class="subtitle lead">Lecture 10</p>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">final</h1>
 </div>
 
 
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Author</div>
-  <div class="quarto-title-meta-heading">Affiliation</div>
-  
-    <div class="quarto-title-meta-contents">
-    <p class="author">John Zito </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            Duke University <br> STA 199 Spring 2026
-          </p>
-      </div>
-  </div>
 
 <div class="quarto-title-meta">
 
-      
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">February 16, 2026</p>
-    </div>
-  </div>
+    
   
     
   </div>
   
 
 
-</header><section id="while-you-wait-participate" class="level2 small"><h2 class="small anchored" data-anchor-id="while-you-wait-participate">While you wait: Participate 📱💻</h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<div class="wooclap">
-<p>To keep some rows in a data frame and discard others, I use BLANK. To keep some columns and discard others, I use BLANK.</p>
-<div class="wooclap-choices">
-<ul>
-<li>group_by; arrange;</li>
-<li>filter; select;</li>
-<li>bye row; seeya column;</li>
-<li>a shovel; your bear hands;</li>
-<li>select; filter</li>
-</ul>
-</div>
-</div>
-</div><div class="column" style="width:30%;">
-<div id="" class="qrcode"></div>
-<script type="text/javascript">
-(function() {
-  var script = document.currentScript;
-  var qrcode = script.previousElementSibling;
-  qrcode.qrcode = new QRCode(qrcode, {"colorDark":"#000000","colorLight":"#ffffff","height":"300","text":"https://app.wooclap.com/TNRPMB?from=instruction-slide","width":"300"});
-  script.remove();
-})();
-</script><div class="small">
-<p>Scan the QR code or go <a href="https://app.wooclap.com/TNRPMB?from=instruction-slide">HERE</a>. Log in with your Duke NetID.</p>
-</div>
-</div>
-</div>
-</section><section id="on-the-horizon" class="level2 small"><h2 class="small anchored" data-anchor-id="on-the-horizon">On the horizon</h2>
-<p>Spring break is three weeks away. Here’s what happens in the meantime:</p>
-<div class="incremental">
-<ul class="incremental">
-<li>Wed Feb 18: submit HW 4;</li>
-<li>Thu Feb 19: JZ posts Midterm 1 study-guide;</li>
-<li>Thu Feb 19: meet project teams and start proposal;</li>
-<li>Sun Feb 22: proposal due;</li>
-<li>Wed Feb 25: Midterm 1 in-class;</li>
-<li>Thu Feb 26: proposal feedback returned;</li>
-<li>Thu Feb 26: Midterm 1 take-home posted;</li>
-<li>Sun Mar 01: submit Midterm 1 take-home;</li>
-<li>Thu Mar 05: make some major project progress.</li>
-</ul>
-</div>
-<p>. . .</p>
-<p>After that, I forbid any of us from thinking about this class until March 16 <em>at the earliest</em>.</p>
-</section><section id="reading-data-into-r" class="level1"><h1>Reading data into R</h1>
-<section id="reading-rectangular-data" class="level2"><h2 class="anchored" data-anchor-id="reading-rectangular-data">Reading rectangular data</h2>
-<ul>
-<li>Using <a href="https://readr.tidyverse.org/"><strong>readr</strong></a>:
-<ul>
-<li>Most commonly: <code>read_csv()</code>
-</li>
-<li>Maybe also: <code>read_tsv()</code>, <code>read_delim()</code>, etc.</li>
-</ul>
-</li>
-</ul>
-<p>. . .</p>
-<ul>
-<li>Using <a href="https://readxl.tidyverse.org/"><strong>readxl</strong></a>: <code>read_excel()</code>
-</li>
-</ul>
-<p>. . .</p>
-<ul>
-<li>Using <a href="https://googlesheets4.tidyverse.org/"><strong>googlesheets4</strong></a>: <code>read_sheet()</code> – We haven’t covered this in the videos, but might be useful for your projects</li>
-</ul></section></section><section id="application-exercise" class="level1"><h1>Application exercise</h1>
-<section id="reading-and-writing-csv-files" class="level2"><h2 class="anchored" data-anchor-id="reading-and-writing-csv-files">Reading and writing CSV files</h2>
-<ul>
-<li><p>Read a CSV file</p></li>
-<li><p>Split it into subsets based on features of the data</p></li>
-<li><p>Write out subsets as CSV files</p></li>
-</ul></section><section id="age-gap-in-hollywood-relationships" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="age-gap-in-hollywood-relationships">Age gap in Hollywood relationships</h2>
-<div class="columns">
-<div class="column" style="width:25%;">
-<div class="question">
-<p>What is the story in this visualization?</p>
-</div>
-</div><div class="column" style="width:75%;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/09/hollywood-ages.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
-</figure>
-</div>
-</div>
-</div>
+</header>
 
 
-</section></section></main><!-- /main --><script>
-  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-  // slide changes (different for each slide format).
-  (function () {
-    // dispatch for htmlwidgets
-    function fireSlideEnter() {
-      const event = window.document.createEvent("Event");
-      event.initEvent("slideenter", true, true);
-      window.document.dispatchEvent(event);
-    }
 
-    function fireSlideChanged(previousSlide, currentSlide) {
-      fireSlideEnter();
 
-      // dispatch for shiny
-      if (window.jQuery) {
-        if (previousSlide) {
-          window.jQuery(previousSlide).trigger("hidden");
-        }
-        if (currentSlide) {
-          window.jQuery(currentSlide).trigger("shown");
-        }
-      }
-    }
 
-    // hookup for slidy
-    if (window.w3c_slidy) {
-      window.w3c_slidy.add_observer(function (slide_num) {
-        // slide_num starts at position 1
-        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-      });
-    }
-
-  })();
-</script><script id="quarto-html-after-body" type="application/javascript">
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -887,18 +749,21 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2026 Mine Çetinkaya-Rundel, Mary Knox, Marie Neubrander, John Zito</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/slides/10-importing-recoding-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/exams/final.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
   </div>
 </footer>
+
+
 
 
 </body></html>
