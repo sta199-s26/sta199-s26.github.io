@@ -2,5 +2,5 @@
 
 
 ::: small
-Scan the QR code or go to [HERE](https://app.wooclap.com/TNRPMB?from=instruction-slide). Log in with your Duke NetID.
+Scan the QR code or go [HERE](https://app.wooclap.com/TNRPMB?from=instruction-slide). Log in with your Duke NetID.
 :::
