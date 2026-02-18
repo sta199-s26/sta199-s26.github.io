@@ -108,7 +108,7 @@ How do I...get this?
 
 ## Reality check
 
-You can *absolutely* copy-paste this table into excel and clean it my hand. But:
+You can *absolutely* copy-paste this table into excel and clean it by hand. But:
 
 - It's tedious;
 - This is not reproducible;
