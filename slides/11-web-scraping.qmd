@@ -106,12 +106,12 @@ Measuring how long it takes for something to happen:
 
 How do I...get this?
 
-## Reality check
+## Reality check {.medium}
 
-You can *absolutely* copy-paste this table into excel and clean it by hand. But:
+Because the data are already formatted as an honest-to-goodness table, you *can* successfully highlight the whole table with your cursor, copy it, paste it into an empty Excel spreadsheet, and then clean it by hand. BUT:
 
-- It's tedious;
-- This is not reproducible;
+- That's tedious;
+- It's not reproducible;
 - The work you put in is not reusable;
 - This method will not generalize to harder tasks like you will see in the AE.
 
