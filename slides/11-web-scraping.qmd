@@ -35,15 +35,7 @@ todays_ae <- "ae-11-chronicle-scrape"
 
 ::: wooclap
 
-How often do you read The Chronicle?
-
-::: wooclap-options
--   Every day
--   3-5 times a week
--   Once a week
--   Rarely
--   Never
-:::
+How old were you in 2013?
 
 :::
 
@@ -54,6 +46,7 @@ How often do you read The Chronicle?
 :::
 
 :::
+
 
 ::: callout-important
 ## For today!
@@ -81,36 +74,22 @@ Measuring how long it takes for something to happen:
 
 
 
-## Participate 📱💻 
 
-::: columns
-
-::: {.column width="70%"}
-
-::: wooclap
-
-How old were you in 2013?
-
-:::
-
-:::
-
-::: {.column width="30%"}
-{{< include _wooclap-column.qmd >}}
-:::
-
-:::
-
-## A brief history of time {.medium}
+## A brief history of time {.small}
 
 ::: incremental
-- Feb 11 2013: Pope Benedict announces resignation. JZ is a freshman in college;
-- Mar 13 2013: Pope Francis takes over;
-- Summer 2015: JZ's summer internship involves a ton of web scraping. He then forgets it all for ten years;
+- Feb 11 2013: Pope Benedict announces resignation;
+    - JZ is a freshman in college;
+- Feb 28 2013: Pope Benedict resigns;
+- Mar 12 2013: Conclave begins;
+- Mar 13 2013: Jorge Bergolio (Pope Francis) elected;
+- Summer 2015: JZ's summer internship involves a ton of web scraping;
+    - He then forgets it all for ten years;
 - Apr 21 2025: Pope Francis dies;
 - May 05 2025: JZ submits last spring's final grades;
 - May 07 2025: Conclave begins;
 - May 08 2025: Habemus papam!
+    - JZ momentarily emerges from his end-of-semester stupor with a question.
 :::
 
 ## How long do conclaves usually last?
@@ -121,11 +100,13 @@ How old were you in 2013?
 
 . . .
 
-![](images/11/catholic-hierarchy.png){width="80%"}
+![](images/11/catholic-hierarchy.png){fig-align="center" width="70%"}
 
 . . .
 
 How do I...get this?
+
+# Web scraping
 
 ## Scraping the web: what? why? {.smaller}
 
@@ -370,6 +351,34 @@ read_html(html_table) |>
 ```
 
 # Application exercise
+
+## Participate 📱💻 
+
+::: columns
+
+::: {.column width="70%"}
+
+::: wooclap
+
+How often do you read The Chronicle?
+
+::: wooclap-options
+-   Every day
+-   3-5 times a week
+-   Once a week
+-   Rarely
+-   Never
+:::
+
+:::
+
+:::
+
+::: {.column width="30%"}
+{{< include _wooclap-column.qmd >}}
+:::
+
+:::
 
 ## Reading The Chronicle
 
