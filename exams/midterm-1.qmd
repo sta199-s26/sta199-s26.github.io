@@ -1,13 +1,1762 @@
 ---
 title: "Midterm 1 Study Guide"
 format: html
+execute:
+  echo: false
 ---
+
+```{r}
+#| label: load-packages
+#| message: false
+#| warning: false
+library(unvotes)
+library(tidyverse)
+library(ggthemes)
+library(openintro)
+library(scales)
+library(palmerpenguins)
+library(nycflights13)
+library(gt)
+library(janitor)
+library(knitr)
+
+library(MASS)
+library(knitr)
+library(scales)
+library(conflicted)
+library(distr)
+conflicts_prefer(
+  dplyr::select(),
+  dplyr::filter(),
+  dplyr::n(),
+  palmerpenguins::penguins
+)
+
+theme_set(theme_bw(base_size = 12))
+
+```
 
 Midterm Exam 1 consists of two parts:
 
 - In-class portion
-    - 
-    -
+    - Wednesday February 25 at 11:45 AM - 1:00 PM in Griffith Theater;
+    - Worth 80% of your Midterm 1 grade;
+    - All multiple choice;
+    - Your only resource is both sides of one 8.5" x 11" note sheet that you and only you created (written, typed, iPad, etc);
 - Take-home portion
-    - 
-    -
+    - Released Thursday February 26 at 6:00 PM;
+    - Due Sunday March 1 at 11:59 PM;
+    - Worth 20% of your Midterm 1 grade;
+    - Similar to a homework assignment, but shorter;
+    - Completely open resource (open note, open internet, open ChatGPT, open everything), but citation policies apply, and collaboration between students is forbidden.
+    
+[Here](https://edstem.org/us/courses/90224/discussion/7626328) is our advice about how you should prioritize your studying. Below are 52 practice questions to get your wheels spinning.
+
+
+
+
+# Concepts and main ideas
+
+### Question 1
+
+Can you answer each of these in one or two sentences?
+
+i. What does it mean for a dataset to be *tidy*?
+i. What does it mean for a data analysis to be *reproducible*?
+i. What is the difference between a *list* and a *vector* in `R`?
+i. How does one pronounce "STA 199"?
+i. What does the pipe operator `|>` do?
+i. Inside `ggplot` or `geom_xxx`, what does the aesthetic mapping `aes` do?
+i. What is the difference between `if_else` and `case_when`?
+i. What is the difference between `filter` and `select`?
+i. What does `group_by` do?
+i. If I have a column of numbers, what is the definition of the 38% quantile? 
+    - Could you sketch a cartoon of what this looks like? 
+    - Is the 38% quantile smaller than, bigger than, or equal to the median, or do you not have enough information to say?
+
+# Visual understanding
+
+### Questions 2 - 7: match scatterplots and histograms
+
+```{r}
+#| label: simulate-data
+#| echo: false
+set.seed(8675309)
+
+banana = function(A, B, C1, C2, N, keep = 10, init = 10)
+{
+  R=init*keep+N*keep
+  x1=x2=0
+  bimat=matrix(double(2*N),ncol=2)
+  for (r in 1:R) {
+    x1=rnorm(1,mean=(B*x2+C1)/(A*(x2^2)+1),sd=sqrt(1/(A*(x2^2)+1)))
+    x2=rnorm(1,mean=(B*x2+C2)/(A*(x1^2)+1),sd=sqrt(1/(A*(x1^2)+1)))
+    if (r>init*keep && r%%keep==0) {
+        mkeep=r/keep; bimat[mkeep-init,]=c(x1,x2)
+    }
+  }
+
+  return(bimat)
+}
+
+n <- 2500
+p <- rbinom(n, 1, 0.5)
+
+z1 <- mvrnorm(n, numeric(2), 0.1 * cbind(c(1, 0.5), c(0.5, 1)))
+
+z2 <- mvrnorm(n, c(-0.5, 0), 0.05 * cbind(c(1, 0), c(0, 2))) * p + 
+      mvrnorm(n, c(0.5, 0), 0.05 * cbind(c(1, 0), c(0, 2))) * (1 - p)
+z3 <- cbind(rnorm(n, mean = 0, sd = 0.35), 
+            0.5 * rexp(n) - 1)
+z4 <- 0.6 * scale(banana(A = 2, B = 0, C1 = 3, C2 = 3, n))
+z5 <- cbind(runif(n, -1, 1),
+            runif(n, -1, 1))
+z6 <- mvrnorm(n, c(-0.5, 0.5), 0.05 * cbind(c(1, 0), c(0, 1))) * p + 
+      mvrnorm(n, c(0.5, -0.5), 0.05 * cbind(c(1, 0), c(0, 1))) * (1 - p)
+
+
+
+z <- tibble(
+  plot_no = c(rep("4", n), rep("5", n), rep("6", n), 
+              rep("7", n), rep("8", n), rep("9", n)),
+  x = c(z1[,1], z2[,1], z3[,1], z4[,1], z5[,1], z6[,1]),
+  y = c(z1[,2], z2[,2], z3[,2], z4[,2], z5[,2], z6[,2])
+)
+```
+
+```{r}
+#| label: simulated-data-scatterplots
+#| echo: false
+#| warning: false
+#| fig-asp: 0.66
+#| fig-width: 8
+#| fig-align: center
+ggplot(z, aes(x = x, y = y)) +
+  geom_point(size = 0.25) +
+  facet_wrap(~plot_no) +
+  scale_x_continuous(limits = c(-1, 1)) +
+  scale_y_continuous(limits = c(-1, 1)) +
+  coord_fixed()
+```
+
+Match each scatterplot to the pair of histograms that displays the distributions of `x` and `y`. There is exactly one unique match for each.
+
+
+```{r}
+#| label: simulated-data-histograms
+#| echo: false
+#| warning: false
+#| fig-asp: 1.25
+#| fig-width: 8
+#| fig-align: center
+z |>
+  pivot_longer(
+    cols = c(x, y),
+    names_to = "variable",
+    values_to = "value"
+  ) |>
+  mutate(
+    plot_no = case_when(
+      plot_no == "2"   ~ "Histogram pair e",
+      plot_no == "3"  ~ "Histogram pair d",
+      plot_no == "4" ~ "Histogram pair b",
+      plot_no == "5"  ~ "Histogram pair a",
+      plot_no == "6"  ~ "Histogram pair c",
+      plot_no == "7"  ~ "Histogram pair f",
+    )
+  ) |>
+  ggplot(aes(x = value)) +
+  geom_histogram(bins = 30) +
+  facet_grid(
+    plot_no ~ variable, 
+    scales = "free_y",
+    switch = "y"
+  ) +
+  scale_x_continuous(limits = c(-1, 1)) +
+  labs(x = NULL, y = NULL) +
+  theme(
+    strip.placement = "outside",
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank()
+  )
+```
+
+### Questions 8 - 13: match densities and boxplots
+
+Match the density plot to the boxplot that visualizes the distribution of the same data. There is exactly one unique match for each.
+
+```{r}
+#| label: simulate-data-2
+#| echo: false
+set.seed(8675309)
+n <- 2500
+p <- rbinom(n, 1, 0.5)
+
+x1 <- r(UnivarMixingDistribution(Norm(mean = -2.5, sd = 0.1),
+                                 Norm(mean = -1.5, sd = 0.2), 
+                                 Norm(mean = -0, sd = 0.25),
+                                 Norm(mean = +1.5, sd = 0.2),
+                                 Norm(mean = +2.5, sd = 0.1),
+                                 mixCoeff = c(0.05, 0.2, .5, 0.2, 0.05))
+        )(n)
+x2 <- r(UnivarMixingDistribution(Norm(mean = -2, sd = 0.5), 
+                                 Norm(mean = -0, sd = 1.25),
+                                 mixCoeff = c(0.65, 0.35))
+        )(n)
+x3 <- runif(n, min = -4, max = 4)
+x4 <- -4 + 8 * rbeta(n, 0.1, 0.1)
+x5 <- rnorm(n, mean = -2, sd = 0.75)
+x6 <- r(UnivarMixingDistribution(Norm(mean = 2, sd = 0.75), 
+                                 Norm(mean = -0.5, sd = 1),
+                                 mixCoeff = c(0.65, 0.35))
+        )(n)
+
+z <- tibble(
+  plot_no = c(rep("08", n), rep("09", n), rep("10", n), 
+              rep("11", n), rep("12", n), rep("13", n)),
+  x = c(x1, x2, x3, x4, x5, x6)
+)
+```
+
+
+```{r}
+#| label: simulated-data-densities
+#| echo: false
+#| warning: false
+#| fig-align: center
+ggplot(z, aes(x = x)) +
+  geom_density(fill = "grey") +
+  facet_wrap(~plot_no) +
+  xlim(-4, 4)
+```
+
+```{r}
+#| label: simulated-data-boxes
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-asp: 0.5
+z |>
+  mutate(
+    plot_no = case_when(
+      plot_no == "08"   ~ "Boxplot f",
+      plot_no == "09"  ~ "Boxplot a",
+      plot_no == "10" ~ "Boxplot b",
+      plot_no == "11"  ~ "Boxplot e",
+      plot_no == "12"  ~ "Boxplot c",
+      plot_no == "13"  ~ "Boxplot d",
+    )
+  ) |>
+  ggplot(aes(x = x)) +
+  geom_boxplot(outlier.size = 0.1) +
+  facet_wrap(
+    ~plot_no
+  ) +
+  xlim(-4, 4) + 
+  #scale_x_continuous(limits = c(-1, 1)) +
+  #labs(x = NULL, y = NULL) +
+  theme(
+    axis.ticks.y = element_line(color = "white"),
+    axis.text.y = element_text(color = "white")
+  )
+  #theme(
+  #  strip.placement = "outside",
+  #  axis.text.y = element_blank(),
+  #  axis.ticks.y = element_blank()
+  #)
+```
+
+
+# Code doctor
+
+Below are ten examples of code that returns an error or a warning or otherwise behaves in a strange and unexpected way. In each case, identify the mistake and explain how it should be fixed.
+
+
+
+```{r}
+question <- 14
+```
+
+### Question `{r} question`
+
+Recall `mtcars`:
+
+```{r}
+glimpse(mtcars)
+```
+
+You try to produce a plot and you get this error. Why?
+
+```{r}
+#| eval: false
+#| echo: true
+ggplot(mtcars, aes(x = wt, y = mpg))
+  geom_point() + 
+  labs(
+    x = "Weight",
+    y = "Miles per gallon"
+  )
+```
+```
+Error in `+.gg`:
+! Cannot add <ggproto> objects together.
+ℹ Did you forget to add this object to a <ggplot> object?
+Run `rlang::last_trace()` to see where the error occurred.
+```
+
+```{r}
+question <- question + 1
+```
+
+### Question `{r} question`
+
+
+You try again and you get this error. Why?
+
+```{r}
+#| error: true
+#| echo: true
+ggplot(mtcars, aes(x = wt, y = mpg, shape = vs)) + 
+  geom_point() + 
+  labs(
+    x = "Weight",
+    y = "Miles per gallon"
+  )
+```
+
+
+```{r}
+question <- question + 1
+```
+
+### Question `{r} question`
+
+
+You want to color the points on your plot by whether or not the car's weight is above average. Why didn't this do the trick?
+
+```{r}
+#| error: true
+#| output: false
+#| echo: true
+mtcars |>
+  mutate(
+    heavy = if_else(wt > mean(wt),
+                    "heavy",
+                    "light")
+  )
+
+ggplot(mtcars, aes(x = wt, y = mpg, color = heavy)) + 
+  geom_point() + 
+  labs(
+    x = "Weight",
+    y = "Miles per gallon"
+  )
+```
+
+```{r}
+question <- question + 1
+```
+
+### Question `{r} question`
+
+Recall the penguins dataset:
+
+```{r}
+glimpse(penguins)
+```
+
+When creating a scatter plot and giving each species a custom color, why did I get an error?
+
+```{r}
+#| echo: true
+#| error: true
+
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) + 
+  geom_point() + 
+  scale_color_manual(
+    values = c(
+      "Adelie" = "purple",
+      "Gentoo" = "tan",
+      "Chinstrap" = "orange",
+    )
+  )
+```
+
+
+```{r}
+question <- question + 1
+```
+
+### Question `{r} question`
+
+When creating a scatter plot and giving each species a color and point shape, why did I get two legends?
+
+```{r}
+#| echo: true
+#| error: true
+#| warning: false
+
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, shape = species, color = species)) + 
+  geom_point() + 
+  labs(
+    title = "God I hate the penguins",
+    x = "Stupid flipper length",
+    y = "Bloody body mass",
+    color = "Species"
+  )
+```
+
+
+```{r}
+question <- question + 1
+```
+
+### Question `{r} question`
+
+Consider this dataset where people were surveyed on their views about marijuana legalization:
+
+```{r}
+#| echo: false
+rm(n)
+survey_counts <- tibble( 
+  age = c(
+    "18-49", "18-49", "18-49",
+    "50+", "50+", "50+"
+  ),
+  opinion = c(
+    "Remain Against The Law", "Be Made Legal", "Not Sure", 
+    "Remain Against The Law", "Be Made Legal", "Not Sure"
+  ),
+  n_people = c(
+    59, 292, (391 - (59 + 292)),
+    67, 245, ((771 - 391) - (67 + 245))
+  )
+)
+survey_counts
+```
+
+Why does this give an error?
+
+```{r}
+#| error: true
+#| echo: true
+survey_counts |>
+  group_by(age) |>
+  summarise(
+    age_sum = sum(n_people)
+  ) |> 
+  mutate(
+    prop = n_people / sum(n_people)
+  )
+```
+
+```{r}
+question <- question + 1
+```
+
+### Question `{r} question`
+
+What went wrong here?
+
+```{r}
+#| error: true
+#| echo: true
+survey_counts |>
+  pivot_wider( 
+    names_from = opinion,
+    values_from = n_people
+  ) |>
+  summarize(
+    total_remain = sum("Remain Against The Law")
+  )
+```
+
+```{r}
+question <- question + 1
+```
+
+### Question `{r} question`
+
+Earlier this year I surveyed you people about how many classes you have on Tuesdays, and you silly geese responded like this:
+
+```{r}
+#| echo: false
+#| message: false
+survey <- read_csv("data/survey-2025-02-06.csv") |>
+  rename(
+    tuesday = `How many classes do you have on Tuesdays?`,
+    year = `What year are you?`
+  ) |>
+  select(tuesday, year) |>
+  filter(
+    tuesday %in% c("2", "1", "Two")
+  )
+```
+
+```{r}
+survey |> 
+  count(tuesday)
+```
+
+Why did this throw an error?
+
+```{r}
+#| error: true
+#| echo: true
+survey |>
+  mutate(
+    tuesday = if_else(tuesday == "Two", 2, tuesday)
+  )
+```
+
+```{r}
+question <- question + 1
+```
+
+### Question `{r} question`
+
+
+In lecture we saw this data on UN votes:
+
+```{r}
+glimpse(un_votes)
+```
+
+This code does a bunch of cleaning and transformation, and then tries to create [this plot](https://sta199-s26.github.io/slides/02-grammar-of-data-visualization-slides.html#/what-does-this-picture-communicate) from class: 
+
+```{r}
+#| echo: true
+#| error: true
+un_votes |>
+  inner_join(un_roll_calls, by = "rcid") |>
+  inner_join(un_roll_call_issues, by = "rcid", relationship = "many-to-many") |>
+  filter(country %in% c("United Kingdom", "United States", "Turkey")) |>
+  mutate(year = year(date)) |>
+  group_by(country, year, issue) |>
+  summarize(percent_yes = mean(vote == "yes"), .groups = "drop") |>
+  ggplot(un_votes, aes(x = year, y = percent_yes, color = country)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(se = FALSE) +
+  facet_wrap(~issue) +
+  scale_color_colorblind() +
+  labs(
+    x = "Year", 
+    y = "% yes", 
+    color = "Country"
+  ) +
+  theme_minimal()
+```
+
+Why did it fail?
+
+
+```{r}
+question <- question + 1
+```
+
+### Question `{r} question`
+
+
+You decide you want to save all the transformations you performed for later and then take a peek at just the data for Turkey:
+
+```{r}
+#| echo: true
+#| error: true
+us_uk_tr_votes <- un_votes |>
+  inner_join(un_roll_calls, by = "rcid") |>
+  inner_join(un_roll_call_issues, by = "rcid", relationship = "many-to-many") |>
+  filter(country %in% c("United Kingdom", "United States", "Turkey")) |>
+  mutate(year = year(date)) |>
+  group_by(country, year, issue) |>
+  summarize(percent_yes = mean(vote == "yes"), .groups = "drop") |>
+  ggplot(aes(x = year, y = percent_yes, color = country)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(se = FALSE) +
+  facet_wrap(~issue) +
+  scale_color_colorblind() +
+  labs(
+    x = "Year", 
+    y = "% yes", 
+    color = "Country"
+  ) +
+  theme_minimal()
+
+us_uk_tr_votes |>
+  filter(country == "Turkey") |>
+  glimpse()
+```
+
+Wut?
+
+# Data analysis
+
+
+```{r}
+#| label: blizzard-data-prep
+blizzard_salary <- blizzard_salary |>
+  mutate(
+    annual_salary = case_when(
+      salary_type == "week" ~ current_salary * 52,
+      salary_type == "hour" ~ current_salary * 40 * 52,
+      TRUE ~ current_salary
+    ),
+    performance_rating = if_else(performance_rating == "Developing", "Poor", performance_rating)
+  ) |>
+  filter(salary_type != "week") |>
+  mutate(
+    salary_type = if_else(salary_type == "hour", "Hourly", "Salaried")
+  ) |>
+  filter(!is.na(annual_salary)) |>
+  select(percent_incr, salary_type, annual_salary, performance_rating)
+```
+
+## Blizzard salaries
+
+In 2020, employees of Blizzard Entertainment circulated a spreadsheet to anonymously share salaries and recent pay increases amidst rising tension in the video game industry over wage disparities and executive compensation.
+(Source: [Blizzard Workers Share Salaries in Revolt Over Pay](https://www.bloomberg.com/news/articles/2020-08-03/blizzard-workers-share-salaries-in-revolt-over-wage-disparities))
+
+The name of the data frame used for this analysis is `blizzard_salary` and the variables are:
+
+-   `percent_incr`: Raise given in July 2020, as percent increase with values ranging from 1 (1% increase) to 21.5 (21.5% increase)
+
+-   `salary_type`: Type of salary, with levels `Hourly` and `Salaried`
+
+-   `annual_salary`: Annual salary, in USD, with values ranging from \$50,939 to \$216,856.
+
+-   `performance_rating`: Most recent review performance rating, with levels `Poor`, `Successful`, `High`, and `Top`.
+    The `Poor` level is the lowest rating and the `Top` level is the highest rating.
+
+The first ten rows of `blizzard_salary` are shown below:
+
+```{r}
+blizzard_salary |>
+  select(percent_incr, salary_type, annual_salary, performance_rating)
+```
+
+```{r}
+question <- question + 1
+```
+
+### Question `{r} question`
+
+Which of the following is [**correct**]{.underline}?
+Choose all that apply.
+
+a.  The `blizzard_salary` dataset has 399 rows.
+
+b.  The `blizzard_salary` dataset has 4 columns.
+
+c.  Each row represents a Blizzard Entertainment worker who filled out the spreadsheet.
+
+d.  The `percent_incr` variable is numerical and discrete.
+
+e.  The `salary_type` variable is numerical.
+
+f.  The `annual_salary` variable is numerical.
+
+g.  The `performance_rating` variable is categorical and ordinal.
+
+::: {.content-visible when-format="pdf"}
+$\vspace{1cm}$
+:::
+
+```{r}
+question <- question + 1
+```
+
+### Question `{r} question`
+
+@fig-blizzard-hist-1 and @fig-blizzard-hist-2 show the distributions of annual salaries of hourly and salaried workers.
+The two figures show the same data, with the facets organized across rows and across columns.
+Which of the two figures is better for comparing the median annual salaries of hourly and salaried workers.
+Explain your reasoning.
+
+::: {#fig-blizzard-hist}
+```{r}
+#| label: fig-blizzard-hist-1
+#| fig-cap: Option 1
+#| fig-width: 8
+#| fig-asp: 0.5
+ggplot(blizzard_salary, aes(x = annual_salary)) +
+  geom_histogram(binwidth = 10000, color = "white") +
+  facet_wrap(~salary_type, ncol = 1) +
+  scale_x_continuous(labels = label_dollar(scale = 1/1000, suffix = "K"), breaks = seq(0, 250000, 25000)) +
+  labs(
+    x = "Annual salary (in USD)",
+    y = "Count"
+  )
+```
+
+```{r}
+#| label: fig-blizzard-hist-2
+#| fig-cap: Option 2
+#| fig-width: 8
+#| fig-asp: 0.3
+
+ggplot(blizzard_salary, aes(x = annual_salary)) +
+  geom_histogram(binwidth = 10000, color = "white") +
+  facet_wrap(~salary_type, nrow = 1) +
+  scale_x_continuous(labels = label_dollar(scale = 1/1000, suffix = "K"), breaks = seq(0, 250000, 25000)) +
+  labs(
+    x = "Annual salary (in USD)",
+    y = "Count"
+  )
+```
+
+Distribution of annual salaries of Blizzard employees
+:::
+
+```{r}
+question <- question + 1
+```
+
+### Question `{r} question`
+
+Suppose your teammate wrote the following code as part of their analysis of the data.
+
+```{r}
+#| label: blizzard-summarize
+#| results: false
+#| echo: true
+blizzard_salary |>
+  group_by(salary_type) |>
+  summarize(
+    mean_annual_salary = mean(annual_salary),
+    median_annual_salary = median(annual_salary)
+  )
+```
+
+They then printed out the results shown below.
+Unfortunately one of the numbers got erased from the printout.
+It's indicated with `_____` below.
+
+```         
+# A tibble: 2 × 3
+  salary_type mean_annual_salary median_annual_salary
+  <chr>                    <dbl>                <dbl>
+1 Hourly                  63003.               54246.
+2 Salaried                90183.               _____
+```
+
+Which of the following is the best estimate for that erased value?
+
+a.  30,000
+
+b.  50,000
+
+c.  80,000
+
+d.  100,000
+
+```{r}
+question <- question + 1
+```
+
+### Question `{r} question`
+
+Which distribution of annual salaries has a higher standard deviation?
+
+a.  Hourly workers
+
+b.  Salaried workers
+
+c.  Roughly the same
+
+```{r}
+question <- question + 1
+```
+
+### Question `{r} question`
+
+Which of the following alternate plots would also be useful for visualizing the distributions of annual salaries of hourly and salaried workers?
+Choose all that apply.
+
+a\.
+Box plots
+
+b\.
+Density plots
+
+c\.
+Pie charts
+
+d\.
+Waffle charts
+
+e\.
+Histograms
+
+f\.
+Scatterplots
+
+{{< pagebreak >}}
+
+```{r}
+question0 <- question + 1
+question <- question + 2
+```
+
+### Questions `{r} question0` and `{r} question`
+
+Suppose you made the bar plot shown in @fig-performance-rating-1 to visualize the distribution of `performance_rating` and your teammate made the bar plot shown in @fig-performance-rating-2.
+
+```{r}
+#| label: fig-performance-rating
+#| layout-ncol: 2
+#| fig-cap: Distribution of performance rating
+#| fig-width: 5
+#| fig-asp: 0.5
+#| fig-subcap: 
+#|   - Option 1
+#|   - Option 2
+
+ggplot(blizzard_salary, aes(x = performance_rating)) +
+  geom_bar() +
+  labs(
+    x = "Performance rating", y = "Count",
+    title = "Performance rating of Blizzard employees"
+  )
+
+blizzard_salary |>
+  mutate(performance_rating = fct_relevel(performance_rating, "Poor", "Successful", "High", "Top")) |>
+  ggplot(aes(x = performance_rating)) +
+  geom_bar() +
+  labs(
+    x = "Performance rating", y = "Count",
+    title = "Performance rating of Blizzard employees"
+  )
+```
+
+You made your bar plot without transforming the data in any way, while your friend did first transform the data with code like the following:
+
+```{r}
+#| eval: false
+#| echo: true
+
+blizzard_salary <- blizzard_salary |>
+  _(1)_(performance_rating = fct_relevel(performance_rating, _(2)_))
+```
+
+**Question `{r} question0`:** What goes in the blank (1)?
+
+a.  `arrange()`
+
+b.  `filter()`
+
+c.  `mutate()`
+
+d.  `summarize()`
+
+**Question `{r} question`:** What goes in the blank (2)?
+
+a.  `"Poor", "Successful", "High", "Top"`
+
+b.  `"Successful", "High", "Top"`
+
+c.  `"Top", "High", "Successful", "Poor"`
+
+d.  `Poor, Successful, High, Top`
+
+{{< pagebreak >}}
+
+### Questions 31 - 33
+
+Finally, another teammate creates the following two plots.
+
+```{r}
+#| label: fig-salary-performance-rating
+#| layout-ncol: 2
+#| fig-cap: Distribution of salary type by performance rating
+#| fig-width: 5
+#| fig-asp: 0.5
+#| fig-subcap: 
+#|   - Option 1
+#|   - Option 2
+
+blizzard_salary |>
+  drop_na(salary_type, performance_rating) |>
+  ggplot(aes(x = salary_type, fill = fct_rev(performance_rating))) +
+  geom_bar() +
+  scale_fill_viridis_d() +
+  labs(
+    x = "Salary type",
+    y = "Count",
+    fill = "Performance\nrating"
+  )
+
+blizzard_salary |>
+  drop_na(salary_type, performance_rating) |>
+  ggplot(aes(x = salary_type, fill = fct_rev(performance_rating))) +
+  geom_bar(position = "fill") +
+  scale_fill_viridis_d() +
+  labs(
+    x = "Salary type",
+    y = "Proportion",
+    fill = "Performance\nrating"
+  )
+```
+
+**Question 31:** Your teammate asks you for help deciding which one to use in the final report for visualizing the relationship between performance rating and salary type.
+In 1-3 sentences, can you help them make a decision, justify your choice, and write the narrative that should go with the plot?
+
+::: {.content-visible when-format="pdf"}
+$\vspace{2cm}$
+:::
+
+**Question 32:** A friend with a keen eye points out that the number of observations in @fig-salary-performance-rating-1 seems lower than the total number of observations in `blizzard_salary`.
+What might be going on here?
+Explain your reasoning.
+
+::: {.content-visible when-format="pdf"}
+$\vspace{2cm}$
+
+{{< pagebreak >}}
+:::
+
+**Question 33:** Below are the proportions of performance ratings for hourly and salaried workers.
+Place these values in the corresponding segments in @fig-salary-performance-rating-2.
+
+```{r}
+#| label: salary-type-perfecormance-table
+
+blizzard_salary |>
+  drop_na(salary_type, performance_rating) |>
+  count(salary_type, performance_rating) |>
+  pivot_wider(names_from = salary_type, values_from = n, values_fill = 0) |>
+  mutate(across(-performance_rating, ~ .x / sum(.x)))
+```
+
+::: {.content-visible when-format="pdf"}
+{{< pagebreak >}}
+:::
+
+### Questions 34 and 35
+
+The table below shows the distribution of `salary_type` and `performance_rating`.
+
+```{r}
+blizzard_salary |>
+  count(salary_type, performance_rating) |>
+  pivot_wider(names_from = performance_rating, values_from = n) |>
+  select(salary_type, Poor, Successful, High, Top, `NA`)
+```
+
+The pipeline below produces a data frame with a fewer number of rows than `blizzard_salary`.
+
+```{r}
+#| eval: false
+#| echo: true
+blizzard_salary |>
+  filter(salary_type _(1)_ "Hourly" _(2)_ performance_rating == "Poor") |>
+  _(3)_(annual_salary)
+```
+
+```{r}
+#| echo: false
+blizzard_salary |>
+  filter(salary_type != "Hourly" & performance_rating == "Poor") |>
+  arrange(annual_salary)
+```
+
+**Question 34:** Which of the following goes in blanks (1) and (2)?
+
+|     | \(1\) | \(2\) |
+|-----|:-----:|:-----:|
+| a\. | `!=`  |  `|`  |
+| b\. | `==`  |  `&`  |
+| c\. | `!=`  |  `&`  |
+| d\. | `==`  |  `|`  |
+
+::: {.content-visible when-format="pdf"}
+$\vspace{1cm}$
+:::
+
+**Question 35:** Which function or functions go into blank (3)?
+
+a.  `arrange()`
+
+b.  `mutate()`
+
+c.  `order()`
+
+d.  `sort()`
+
+::: {.content-visible when-format="pdf"}
+$\vspace{1cm}$
+:::
+
+### Question 36
+
+You're reviewing another team's work and they made the following visualization:
+
+```{r}
+#| warning: false
+#| fig-width: 10
+#| fig-asp: 0.5
+
+ggplot(blizzard_salary, aes(x = annual_salary, percent_incr)) +
+  geom_point() +
+  facet_wrap(~performance_rating)
+```
+
+And they wrote the following interpretation for the relationship between annual salary and percent increase for Top performers:
+
+> The relationship is positive, having a higher salary results in a higher percent increase.
+> There is one clear outlier.
+
+Which of the following is/are the most accurate and helpful) peer review note for this interpretation.
+Choose all that apply.
+
+a.  The interpretation is complete and perfect, no changes needed!
+
+b.  The interpretation doesn't mention the direction of the relationship.
+
+c.  The interpretation doesn't mention the form of the relationship, which is linear.
+
+d.  The interpretation doesn't mention the strength of the relationship, which is somewhat strong.
+
+e.  There isn't a clear outlier in the plot.
+    If any points stand out as potential outliers, more guidance should be given to the reader to identify them (e.g., salary and/or percent increase amount).
+
+f.  The interpretation is causal – we don't know if the cause of the high percent increase is higher annual salary based on observational data.
+    The causal direction might be the other way around, or there may be other factors contributing to the apparent relationship.
+
+
+
+### Question 37
+
+Below is some code and its output.
+
+```{{r}}
+# label=plot blizzard
+
+ggplot(blizzard_salary,aes(x=performance_rating,y=percent_incr))+geom_boxplot()
+labs(x="Performance rating", y = "Percent increase")
+```
+
+```{r}
+#| echo: false
+#| fig-width: 8
+#| fig-asp: 0.4
+
+ggplot(blizzard_salary,aes(x=performance_rating,y=percent_incr))+geom_boxplot()
+labs(x="Performance rating", y = "Percent increase")
+```
+
+Part 1: List at least 5 things that should be fixed or improved in the code.
+
+::: {.content-visible when-format="pdf"}
+$\vspace{5cm}$
+:::
+
+Part 2: What is the cause of the warning and what does it mean?
+
+
+
+### Question 38
+
+You're working on a data analysis on salaries of Blizzard employees in a Quarto document in a project version controlled by Git.
+You create a plot and write up a paragraph describing any patterns in it.
+Then, your teammate says "render, commit, and push".
+
+Part 1: What do they mean by each of these three steps.
+In 1-2 sentences for each, explain in your own words what they mean.
+
+1.  Render:
+
+::: {.content-visible when-format="pdf"}
+$\vspace{2cm}$
+:::
+
+2.  Commit:
+
+::: {.content-visible when-format="pdf"}
+$\vspace{2cm}$
+:::
+
+3.  Push:
+
+::: {.content-visible when-format="pdf"}
+$\vspace{2cm}$
+:::
+
+Part 2: Your teammate is getting impatient and they interrupt you after you rendered and committed and say "I still can't see your changes in our shared GitHub repo when I look at it in my web browser." Which of the following answers is the most accurate?
+
+a.  I rendered my document, you should be seeing my changes on GitHub when you look at it in your web browser.
+
+b.  I committed my changes, you should be seeing my changes on GitHub when you look at it in your web browser.
+
+c.  I didn't yet push my changes, it's expected that you are not seeing them on GitHub when you look at it in your web browser.
+    Wait until I push, and check again.
+
+d.  You need to pull to see my changes on GitHub in the web browser.
+
+## Penguins
+
+The `penguins` data set includes measurements for penguin species, including: flipper length, body mass, bill dimensions, and sex. The following table summarizes information on which species of penguins (Adelie, Gentoo, and Chinstrap) live on which islands (Biscoe, Dream, or Torgersen).
+
+```{r}
+#| label: penguins-species-island-table
+#| echo: false
+
+penguins |>
+  count(island, species) |>
+  pivot_wider(names_from = species, values_from = n, values_fill = 0) |>
+  rename(Island = island) |>
+  janitor::adorn_totals(where = c("row", "col")) |>
+  gt() |>
+  cols_align(align = "right")
+```
+
+### Question 39
+
+Which of the following plots is the result of the following code?
+
+```{r}
+#| label: penguins-species-island-bar-code
+#| fig-show: hide
+#| echo: true
+ggplot(penguins, aes(x = island, fill = species)) + 
+  geom_bar()
+```
+
+```{r}
+#| label: penguins-species-island-bar-plots
+#| layout-ncol: 2
+#| fig-width: 5
+#| fig-asp: 0.6
+#| echo: false
+
+ggplot(penguins, aes(x = island, fill = species)) + 
+  geom_bar(position = "fill", color = "black") +
+  labs(title = "(a)", x = "Island", y = "Proportion", fill = "Species") +
+  scale_fill_grey(start = 0.8, end = 0)
+
+ggplot(penguins, aes(fill = island, x = species)) + 
+  geom_bar(position = "fill", color = "black") +
+  labs(title = "(b)", fill = "Island", y = "Proportion", x = "Species") +
+  scale_fill_grey(start = 0.8, end = 0)
+
+ggplot(penguins, aes(fill = island, y = species)) + 
+  geom_bar(position = "fill", color = "black") +
+  labs(title = "(c)", fill = "Island", x = "Proportion", y = "Species") +
+  scale_fill_grey(start = 0.8, end = 0)
+
+ggplot(penguins, aes(x = island, fill = species)) + 
+  geom_bar(color = "black") +
+  labs(title = "(d)", x = "Island", fill = "Species", y = "Count") +
+  scale_fill_grey(start = 0.8, end = 0)
+
+ggplot(penguins, aes(fill = island, y = species)) + 
+  geom_bar(color = "black") +
+  labs(title = "(e)", fill = "Island", y = "Species", x = "Count") +
+  scale_fill_grey(start = 0.8, end = 0)
+```
+
+## NYC Flights
+
+The `flights` dataset includes characteristics of all flights departing from New York City airports (JFK, LGA, EWR) in 2013. Below is a peek at the first ten rows of the `flights` data.
+
+```{r}
+#| label: flights-glimpse
+
+flights |>
+  relocate(year, month, day, arr_delay, carrier)
+```
+
+### Question 40
+
+Based on this output, which of the following must be [**true**]{.underline} about the `flights` data frame? **Select all that are true.**
+
+a.  The `flights` data frame is a `tibble`.
+
+b.  The `flights` data frame has 10 rows.
+
+c.  The `flights` data frame has 8 columns.
+
+d.  The `carrier` variable in the `flights` data frame is a character variable.
+
+e.  There are no missing data in the `flights` data frame.
+
+### Question 41
+
+Which of the following pipelines produce(s) the output shown below? **Select all that apply.**
+
+```{r}
+#| label: flights-pipeline
+#| echo: false
+
+flights |>
+  select(arr_delay, carrier, year, month, day) |>
+  arrange(desc(arr_delay))
+```
+
+a\.
+
+```{r}
+#| echo: true
+#| eval: false
+flights |>
+  select(arr_delay, carrier, year, month, day) |>
+  arrange(desc(arr_delay))
+```
+
+b\.
+
+```{r}
+#| label: flights-pipeline-alt-1
+#| eval: false
+#| echo: true
+
+flights |>
+  select(arr_delay, carrier, year, month, day) |>
+  arrange(arr_delay)
+```
+
+c\.
+
+```{r}
+#| label: flights-pipeline-alt-2
+#| eval: false
+#| echo: true
+
+flights |>
+  select(arr_delay, carrier, year, month, day) |>
+  arrange(year)
+```
+
+d\.
+
+```{r}
+#| label: flights-pipeline-alt-3
+#| eval: false
+#| echo: true
+flights |>
+  arrange(desc(arr_delay)) |>
+  select(arr_delay, carrier, year, month, day)
+```
+
+e\.
+
+```{r}
+#| label: flights-pipeline-alt-4
+#| eval: false
+#| echo: true
+flights |>
+  arrange(desc(arr_delay)) |>
+  select(day, month, year, arr_delay, carrier)
+```
+
+## Countries and populations
+
+```{r}
+#| label: load-pop-data
+#| echo: false
+#| message: false
+
+population_raw <- read_csv("data/world-pop-2022.csv")
+continents_raw <- read_csv("data/continents.csv")
+```
+
+```{r}
+#| label: prep-pop-data
+#| echo: false
+
+set.seed(12345)
+population <- population_raw |>
+  sample_n(size = 6) |>
+  select(!year) |>
+  arrange(country)
+continents <- continents_raw |>
+  select(!year) |>
+  semi_join(population, join_by(entity == country)) |>
+  slice_head(n = 4) |>
+  bind_rows(tibble(entity = "Angola", code = "AGO", continent = "Africa")) |>
+  arrange(entity)
+```
+
+We have a small dataset of six countries and their populations:
+
+```{r}
+population
+```
+
+And another small dataset of five countries and the continent they're in:
+
+```{r}
+continents
+```
+
+You join the two datasets with the following:
+
+```{r}
+#| label: join-code
+#| results: hide
+#| echo: true
+population |>
+  left_join(continents, by = join_by(country == entity))
+```
+
+### Question 42
+
+How many rows will the resulting data frame have?
+
+a.  4
+b.  5
+c.  6
+d.  7
+e.  8
+
+### Question 43
+
+What will be the columns of the resulting data frame?
+
+a.  `country`, `population`
+
+b.  `country`, `population`, `code`, `continent`
+
+c.  `entity`, `code`, `continent`
+
+d.  `entity`, `population`, `code`, `continent`
+
+e.  `country`, `entity`, `population`, `code`, `continent`
+
+## Duke Forest houses
+
+The `duke_forest` dataset includes information on prices and various other features (number of bedrooms, bathrooms, area, year built, type of cooling, type of heating, etc.) of houses in the Duke Forest neighborhood of Durham, NC.
+
+```{r}
+glimpse(duke_forest)
+```
+
+The following summary table gives us some information about whether homes in this data set have garages and when they were built.
+
+```{r}
+#| label: duke-forest
+#| echo: false
+
+duke_forest <- duke_forest |>
+  mutate(
+    parking = if_else(str_detect(parking, "Garage"), "Garage", "No garage"),
+    year_built_cat = if_else(year_built < 1950, "Built earlier than 1950", "Built in 1950 or later")
+  )
+
+duke_forest |>
+  count(parking, year_built_cat) |>
+  pivot_wider(names_from = year_built_cat, values_from = n, values_fill = 0) |>
+  rename(" " = "parking") |>
+  gt()
+```
+
+The pipeline below produces a data frame with a fewer number of rows than `duke_forest`.
+
+```{r}
+#| label: duke-forest-pipeline-blanks
+#| eval: false
+#| echo: true
+duke_forest |>
+  filter(parking == "Garage" _(1)_ year_built _(2)_ 1950) |>
+  select(parking, year_built, price, area) |>
+  _(3)_(price_per_sqfeet = price / area)
+```
+
+```{r}
+#| label: duke-forest-pipeline
+#| echo: false
+duke_forest |>
+  filter(parking == "Garage" & year_built < 1950) |>
+  select(parking, year_built, price, area) |>
+  mutate(price_per_sqfeet = price / area)
+```
+
+### Question 44
+
+Which of the following goes in blanks (1) and (2)?
+
+|     | \(1\) | \(2\) |
+|-----|:-----:|:-----:|
+| a\. |  `&`  |  `<`  |
+| b\. |  `|`  |  `<`  |
+| c\. |  `&`  | `>=`  |
+| d\. |  `|`  | `>=`  |
+| e\. |  `&`  | `!=`  |
+
+### Question 45
+
+Which function or functions go into blank (3)? **Select all that apply.**
+
+a.  `arrange()`
+
+b.  `mutate()`
+
+c.  `filter()`
+
+d.  `summarize()`
+
+e.  `slice()`
+
+## Law & Order
+
+You've heard of the tidyverse, now let's visit the Law & Order-verse. Doink doink![^1]
+
+[^1]: "Doink doink" is the scene and episode introductory sound on the Law & Order series. If you've never heard it, you're not at any disadvantage for the exam. If you've ever heard it, good luck getting it out of your head!
+
+Law & Order is a police procedural and legal drama television series that has been running since the 1990s. The Law & Order franchise includes a number of series such as Law & Order, Law & Order: SVU, Law & Order: Criminal Intent, etc.
+
+You will work with data on average ratings for each season of three series from the Law & Order-verse – a subset of the data from the previous questions. Below is a peek at the first ten rows of the Law & Order data.
+
+```{r}
+#| echo: false
+#| message: false
+tv <- read_csv("data/tv.csv")
+law_and_order <- tv |>
+  filter(str_detect(title, "Law & Order"))
+```
+
+The plot below shows the distributions of average ratings of various Law & Order series across seasons.
+
+```{r}
+#| echo: false
+#| fig-asp: 0.35
+#| fig-width: 8
+
+law_and_order |>
+  mutate(title = str_replace(title, "Law & Order: ", "Law & Order:\n")) |>
+  ggplot(aes(x = av_rating, y = fct_rev(title))) +
+  geom_boxplot(alpha = 0.5, show.legend = FALSE, outlier.size = 2) +
+  labs(x = "Average rating", y = "Series title")
+```
+
+### Question 46
+
+Based on the information from the side-by-side box plots, fill in the legend of the plot below with Law & Order series titles.
+
+```{r}
+#| echo: false
+#| fig-asp: 0.35
+#| fig-width: 8
+#| warning: false
+
+ggplot(law_and_order, aes(x = season, y = av_rating, shape = title)) +
+  geom_line(linewidth = 0.3) +
+  geom_point(size = 3) +
+  scale_shape_manual(
+    values = c("Law & Order: SVU" = "triangle", 
+               "Law & Order: Criminal Intent" = "diamond", 
+               "Law & Order: True Crime" = "square", 
+               "Law & Order" = "asterisk", 
+               "Law & Order: LA" = "circle"), 
+    labels = c("__________________________________",
+               "__________________________________",
+               "__________________________________",
+               "__________________________________",
+               "__________________________________")
+  ) +
+  labs(
+    x = "Season",
+    y = "Average rating",
+    shape = "Series title"
+  ) +
+  theme(legend.key.height = unit(1.25, "cm"))
+```
+
+### Question 47
+
+The following code calculates the standard deviations of average season ratings of the five Law & Order series. Unfortunately, the output is partially erased and replaced with blanks.
+
+```{r}
+#| results: hide
+#| echo: true
+lo_titles <- c("Law & Order", "Law & Order: Criminal Intent", "Law & Order: SVU")
+
+law_and_order |>
+  filter(title %in% lo_titles) |>
+  group_by(title) |>
+  summarize(mean_av_rating = mean(av_rating), sd_av_rating = sd(av_rating))
+```
+
+```         
+# A tibble: 5 × 3
+  title                         mean_av_rating sd_av_rating
+  <chr>                                  <dbl>        <dbl>
+1 Law & Order                            _(1)_        0.106
+2 Law & Order: Criminal Intent            8.20        0.129
+4 Law & Order: SVU                        8.67        _(2)_
+```
+
+Based on the visualizations you've seen of these data so far, which of the following is [**true**]{.underline} about the blanks in the output? **Select all that are true.**
+
+a.  The **mean** of average ratings (Blank 1) of Law & Order seasons is **lower** than the other two means.
+
+b.  The **mean** of average ratings (Blank 1) of Law & Order seasons is **higher** than the other two means.
+
+c.  The **standard deviation** of average ratings of Law & Order: SVU seasons (Blank 2) is **lower** than the other two standard deviations.
+
+d.  The **standard deviation** of average ratings of Law & Order: SVU seasons (Blank 2) is **higher** than the other two standard deviations.
+
+e.  The **standard deviation** of average ratings of Law & Order: SVU seasons (Blank 2) is **between** the other two standard deviations.
+
+## Romance and comedy
+
+Finally, we focus on romance and comedy shows. We first filter the dataset for any shows that have romance or comedy as their genre (`genre_1`, `genre_2`, or `genre_3`) and then remove shows that have both of these genre labels. For the next two questions, we focus on these shows that we identify as either romance or comedy. We then calculate the mean of the average season ratings for each show, to obtain a single "mean average rating" value per show.
+
+```{r}
+#| echo: false
+
+romance_shows <- tv |>
+  filter(genre_1 == "Romance" | genre_2 == "Romance" | genre_3 == "Romance") |>
+  distinct(title) |>
+  pull()
+
+comedy_shows <- tv |>
+  filter(genre_1 == "Comedy" | genre_2 == "Comedy" | genre_3 == "Comedy") |>
+  distinct(title) |>
+  pull()
+
+romance_comedy <- tv |>
+  filter(title %in% c(romance_shows, comedy_shows)) |>
+  filter(!(title %in% romance_shows & title %in% comedy_shows)) |>
+  mutate(
+    genre = if_else(title %in% romance_shows, "Comedy", "Romance")
+  ) |>
+  select(-genre_1, -genre_2, -genre_3)
+
+romance_comedy_means <- romance_comedy |>
+  group_by(genre, title) |>
+  summarize(mean_av_rating = mean(av_rating), .groups = "drop")
+```
+
+The plot below shows the distributions of mean average ratings of seasons of comedy and romance shows.
+
+```{r}
+#| echo: false
+#| fig-asp: 0.6
+
+ggplot(romance_comedy_means, aes(x = mean_av_rating, fill = genre)) +
+  geom_histogram(binwidth = 0.25, show.legend = FALSE, color = "white") +
+  facet_wrap(~genre, nrow = 2) +
+  labs(x = "Mean average rating", y = "Count") +
+  scale_fill_grey(start = 0.2, end = 0.6)
+```
+
+### Question 48
+
+Which of the following statements is [**true**]{.underline} about these distributions? **Select all that are true.**
+
+a.  Mean average ratings of romance shows are bimodal.
+b.  Mean average ratings of comedy are unimodal.
+c.  Mean average ratings of romance shows is left skewed.
+d.  Mean average ratings of comedy shows is right skewed.
+e.  There are more romance shows than comedy shows.
+
+## IMDB
+
+The data for the next few questions come from the Internet Movie Database (IMDB). Specifically, the data are a random sample of movies released between 1980 and 2020.
+
+```{r}
+#| label: load-data
+#| message: false
+movies <- read_csv("data/movies.csv")
+```
+
+The name of the data frame used for this analysis is `movies`, and it contains the variables shown in @tbl-data-dictionary.
+
+\setcounter{table}{0}
+
+| Variable          | Description                                                             |
+|-------------------|-------------------------------------------------------------------------|
+| `name`            | name of the movie                                                       |
+| `rating`          | rating of the movie (R, PG, etc.)                                       |
+| `genre`           | main genre of the movie.                                                |
+| `runtime`         | duration of the movie                                                   |
+| `year`            | year of release                                                         |
+| `release_date`    | release date (YYYY-MM-DD)                                               |
+| `release_country` | release country                                                         |
+| `score`           | IMDB user rating                                                        |
+| `votes`           | number of user votes                                                    |
+| `director`        | the director                                                            |
+| `writer`          | writer of the movie                                                     |
+| `star`            | main actor/actress                                                      |
+| `country`         | country of origin                                                       |
+| `budget`          | the budget of a movie (some movies don't have this, so it appears as 0) |
+| `gross`           | revenue of the movie                                                    |
+| `company`         | the production company                                                  |
+
+: Data dictionary for `movies` {#tbl-data-dictionary tbl-colwidths="\[20,80\]"}
+
+The first thirty rows of the `movies` data frame are shown in @tbl-data, with variable types suppressed (since we'll ask about them later).
+
+```{r}
+#| echo: false
+movies_to_mark <- c("Blue City", "Rang De Basanti", "Winter Sleep")
+
+movies <- movies |>
+  mutate(
+    mark = if_else(name %in% movies_to_mark, TRUE, FALSE),
+    rating = case_when(
+      rating == "TV-PG" ~ "PG",
+      rating == "Unrated" ~ "Not Rated",
+      is.na(rating) ~ "Not Rated",
+      .default = rating
+    ),
+    rating = fct_relevel(rating, "G", "PG", "PG-13", "R", "NC-17", "Not Rated")
+  ) |>
+  arrange(desc(mark)) |>
+  relocate(name, score, runtime, genre, rating, release_country, release_date, budget, gross, votes, year, director, writer, star, company, country)
+```
+
+::: {#tbl-data}
+First 30 rows of `movies`, with variable types suppressed.
+
+```{r}
+#| echo: false
+options(
+  dplyr.print_min = 30,
+  pillar.min_chars = 13,
+  pillar.width = 110,
+  pillar.sigfig = 6
+)
+
+format(movies |> select(!c(mark)))[-3L] |>
+  str_remove_all(" <.*?>") |>
+  cat(sep = "\n")
+
+options(
+  dplyr.print_min = 10,
+  pillar.min_chars = 8,
+  pillar.width = 80,
+  pillar.sigfig = 3
+)
+```
+:::
+
+### Question 49
+
+The `name` and `runtime` variables are shown below, with the variable types suppressed.
+
+::: {layout="[0.5, 0.5]"}
+::: {#firstcol}
+```{r}
+#| eval: false
+movies |>
+  select(name, runtime)
+```
+
+```{r}
+#| echo: false
+
+options(dplyr.print_min = 6)
+
+format(as_tibble(movies |> select(name, runtime)))[-3L] |>
+  str_remove_all(" <.*?>") |>
+  cat(sep = "\n")
+
+options(dplyr.print_min = 10)
+```
+:::
+
+::: {#secondcol}
+What is the type of the `runtime` variable?
+
+a.  Character
+
+b.  Double
+
+c.  Factor
+
+d.  Integer
+
+e.  Logical
+:::
+:::
+
+\vspace{2cm}
+
+### Question 50
+
+The code below summarizes the data in a certain way.
+
+```{r}
+#| echo: true
+movies |>
+  summarize(sum(release_country == "United States"))
+```
+
+Which of the following is [**TRUE**]{.underline} about the code and its result? **Select all that are true.**
+
+a.  Evaluates whether each `release_country` is equal to `"United States"` or not, which results in a logical variable.
+
+b.  Filters out rows where `release_country` is not equal to `"United States"` and counts the remaining rows.
+
+c.  Sums the logical values, where each `TRUE` is considered a 1 and each `FALSE` is considered a 0.
+
+d.  Results in a character vector.
+
+e.  The result shows there are 435 movies released in the United States.
+
+### Question 51
+
+Suppose you want a visualization that shows the number of movies in the sample in each `genre`. Your first attempt is as follows.
+
+```{r}
+#| fig-width: 6
+#| fig-asp: 0.4
+ggplot(movies, aes(x = genre)) +
+  geom_bar()
+```
+
+A friend of yours says that the visualization is difficult to read and they suggest using the following visualization instead.
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-asp: 0.4
+movies <- movies |>
+  mutate(
+    genre = fct_other(genre, keep = c("Action", "Comedy", "Drama", "Horror")),
+    genre = fct_relevel(genre, "Other", "Horror", "Drama", "Action", "Comedy")
+  )
+
+ggplot(movies, aes(y = genre)) +
+  geom_bar(show.legend = FALSE) +
+  labs(
+    x = "Number of movies",
+    y = "Genre",
+    title = "Movies and genres",
+    caption = "Source: IMDB."
+  )
+```
+
+Which of the following modifications would your friend have made to your code to create their version? **Select all that apply.**
+
+a.  Combine movies in genres other than Comedy, Drama, Action, and Horror into a new level called `"Other"`.
+
+b.  Reorder the levels in descending order of numbers of observations, except for the `"Other"` level.
+
+c.  Map `genre` to the `y` aesthetic.
+
+d.  Add a title, x and y-axis labels, and a caption.
+
+e.  Filter out all moves in genres other than Comedy, Drama, Action, and Horror before plotting.
+
+### Question 52
+
+Which of the following is [**TRUE**]{.underline} about the code and its result? **Select all that are true.**
+
+```{r}
+#| echo: true
+movies |>
+  count(rating, genre) |>
+  pivot_wider(names_from = genre, values_from = n, values_fill = 0)
+```
+
+a.  The code counts how many movies are in each rating and genre combination.
+
+b.  The code sorts the results in descending order.
+
+c.  Each row of the output is a movie.
+
+d.  The output shows that there are six distinct ratings in the dataset.
+
+e.  The code reduces the number of variables and observations in the `movies` data frame to six.
+
