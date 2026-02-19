@@ -4,10 +4,6 @@ subtitle: "Milestone 1"
 categories: "Project"
 ---
 
-::: callout-warning
-You should have completed the [pre-read](1-working-collaboratively-preread.qmd) before starting this milestone.
-:::
-
 ::: callout-important
 You must attend this lab in person and participate in the merge conflict activity to be eligible for the points for this milestone.
 Team members who are not in lab in person for this activity will not be eligible for these points, regardless of their contribution throughout the rest of the project.
@@ -45,6 +41,8 @@ Let your TA know your team name asap.
 Once everyone's team names are in, your project repos will be created (give your TA a couple of minutes), and then you can continue with the rest of your task.
 
 # Activity
+
+This activity is about resolving *merge conflicts*, which can arise when multiple people are using Git and GitHub to collaborate on the same repository. The TA will demonstrate before you begin the activity, but you can also read more [here](1-working-collaboratively-preread.qmd).
 
 ## Setup
 
