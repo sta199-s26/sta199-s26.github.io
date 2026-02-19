@@ -1,6 +1,6 @@
 ---
 title: "Write-up and presentation"
-subtitle: "Milestone 6"
+subtitle: "Milestone 5"
 categories: "Project"
 ---
 
@@ -91,17 +91,16 @@ The main body of the written report (not including the appendix) is no longer th
 
 ## Grading
 
-The write-up is due on Thursday, November 13 at 11:59 pm. 
+The write-up is due on Sunday, March 29 at 11:59 pm. 
 
-It is worth 30 points, broken down as follows:
+It is worth 35 points, broken down as follows:
 
-| Total                         | 30 pts |
+| Total                         | 35 pts |
 |-------------------------------|--------|
-| **Introduction**              |  2 pts |
-| **Data**                      |  3 pts |
+| **Introduction/Data**         |  5 pts |
 | **Analysis**                  | 15 pts |
-| **Discussion**                |  3 pts |
-| **Organization + formatting** |  2 pts |
+| **Discussion**                |  5 pts |
+| **Organization + formatting** |  5 pts |
 | **Code style + smell**        |  5 pts |
 
 # Presentation + slides {#presentation-slides}
