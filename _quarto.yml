@@ -73,6 +73,12 @@ website:
             text: Schedule
           - href: syllabus/syllabus-faq.qmd
             text: FAQ
+      - section: "Computing"
+        contents:
+          - href: computing/coding-access.qmd
+            text: Access
+          - href: computing/coding-cheatsheets.qmd
+            text: Cheatsheets
       - section: "Lab"
         contents:
           - href: lab/lab-0.qmd
@@ -97,12 +103,10 @@ website:
             text: Homework 3
           - href: hw/hw-4.qmd
             text: Homework 4
-      - section: "Computing"
+      - section: "Exam Study Guides"
         contents:
-          - href: computing/coding-access.qmd
-            text: Access
-          - href: computing/coding-cheatsheets.qmd
-            text: Cheatsheets
+          - href: exams/midterm-1.qmd
+            text: Midterm 1
 
 
 
