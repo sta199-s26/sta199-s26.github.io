@@ -1,5 +1,5 @@
 ---
-title: "AE 09: Opinion articles in The Chronicle"
+title: "AE 11: Opinion articles in The Chronicle"
 subtitle: "Suggested answers"
 categories: 
   - Application exercise
