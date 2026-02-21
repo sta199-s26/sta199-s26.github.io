@@ -23,6 +23,8 @@ editor_options:
 ```{r}
 #| label: setup
 #| include: false
+library(tidyverse)
+library(rvest)
 ggplot2::theme_set(ggplot2::theme_gray(base_size = 24))
 todays_ae <- "ae-11-chronicle-scrape"
 ```
@@ -108,7 +110,9 @@ How do I...get this?
 
 ## Reality check {.medium}
 
-Because the data are already formatted as an honest-to-goodness table, you *can* successfully highlight the whole table with your cursor, copy it, paste it into an empty Excel spreadsheet, and then clean it by hand. BUT:
+Because the data are already formatted as an honest-to-goodness table, you *can* successfully highlight the whole table with your cursor, copy it, paste it into an empty Excel spreadsheet, and then clean it by hand. 
+
+BUT:
 
 - That's tedious;
 - It's not reproducible;
@@ -358,6 +362,142 @@ read_html(html_table) |>
   html_elements("table") |>
   html_table()
 ```
+
+# Back to my lil' project
+
+## Pull down the webpage {.small .scrollable}
+
+This is the easy part!
+
+```{r}
+url <- "https://catholic-hierarchy.org/bishop/spope0.html"
+page <- read_html(url)
+
+page
+```
+
+## Parse the table element {.small .scrollable}
+
+Already pretty good!
+
+```{r}
+popes_table <- page |>
+  html_element("table") |>
+  html_table(fill = TRUE)
+
+glimpse(popes_table)
+```
+
+## Let's clean the colum name {.small .scrollable}
+
+```{r}
+names(popes_table) <- make.unique(names(popes_table))
+
+popes_clean <- popes_table |>
+  rename(
+    papal_number = `#`,
+    papal_name = `PapalName`,
+    birth_date = `BirthDate`,
+    conclave_start = `ConclaveStart`,
+    date_elected = `Elected`,
+    age_elected = `Elected.1`,
+    date_installed = `Installed`,
+    age_installed = `Installed.1`,
+    date_end = `End of Reign`, 
+    age_end = `End of Reign.1`,
+    years_elected = `Length`,
+    years_installed = `Length.1`,
+  )
+
+glimpse(popes_clean)
+```
+
+## Discard that funky row at the top {.small .scrollable}
+
+```{r}
+popes_clean <- popes_clean |>
+  filter(papal_name != "PapalName")
+
+glimpse(popes_clean)
+```
+
+## Sort out the variable types {.small .scrollable}
+
+```{r}
+popes_clean <- popes_clean |>
+  mutate(
+    papal_number = as.integer(papal_number),
+    age_elected = as.numeric(age_elected),
+    age_installed = as.numeric(age_installed),
+    age_end = as.numeric(age_end),
+    years_elected = as.numeric(years_elected),
+    years_installed = as.numeric(years_installed),
+    conclave_start = as.Date(conclave_start, format = "%d %b %Y"),
+    date_elected = as.Date(date_elected, format = "%d %b %Y"),
+    birth_date = as.Date(birth_date, format = "%d %b %Y"),
+    date_end = ifelse(papal_name == "Leo XIV", NA, date_end),
+    resigned = str_detect(date_end, "#"),
+    date_end = str_remove_all(date_end, "#"),
+    date_end = as.Date(date_end, format = "%d %b %Y"),
+    not_bishop = str_detect(date_installed, "\\*"),
+    date_installed = str_remove_all(date_installed, "\\*"),
+    date_installed = as.Date(date_installed, format = "%d %b %Y")
+  )
+
+glimpse(popes_clean)
+```
+
+## Add new variable {.small .scrollable}
+
+Let's measure the length of each conclave in days:
+
+```{r}
+popes_clean <- popes_clean |>
+  mutate(
+    conclave_length_days = as.integer(date_elected - conclave_start)
+  ) |>
+  relocate(conclave_length_days)
+
+glimpse(popes_clean)
+```
+
+## Answer the question! {.small .scrollable}
+
+::: columns
+
+::: {.column width="50%"}
+
+```{r}
+ggplot(popes_clean, aes(x = conclave_length_days)) + 
+  geom_histogram() + 
+  labs(
+    x = "Days",
+    title = "Length of papal conclaves",
+    caption = "Source: scraped from catholic-hierarchy.org"
+  )
+```
+
+:::
+
+::: {.column width="50%"}
+```{r}
+popes_clean |>
+  summarize(
+    mean_length = mean(conclave_length_days, na.rm = T),
+    median_length = median(conclave_length_days, na.rm = T),
+    sd_length = sd(conclave_length_days, na.rm = T)
+  )
+```
+
+```{r}
+popes_clean |>
+  filter(!is.na(conclave_length_days)) |>
+  count(conclave_length_days) |>
+  mutate(prop = n / sum(n))
+```
+:::
+
+:::
 
 # Application exercise
 
