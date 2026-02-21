@@ -296,7 +296,8 @@ John Zito
 <p>How do I…get this?</p>
 </div>
 </section><section id="reality-check" class="slide level2 medium"><h2>Reality check</h2>
-<p>Because the data are already formatted as an honest-to-goodness table, you <em>can</em> successfully highlight the whole table with your cursor, copy it, paste it into an empty Excel spreadsheet, and then clean it by hand. BUT:</p>
+<p>Because the data are already formatted as an honest-to-goodness table, you <em>can</em> successfully highlight the whole table with your cursor, copy it, paste it into an empty Excel spreadsheet, and then clean it by hand.</p>
+<p>BUT:</p>
 <ul>
 <li>That’s tedious;</li>
 <li>It’s not reproducible;</li>
@@ -616,6 +617,237 @@ John Zito
 </div>
 </div>
 </div>
+</section></section><section><section id="back-to-my-lil-project" class="title-slide slide level1 center"><h1>Back to my lil’ project</h1>
+
+</section><section id="pull-down-the-webpage" class="slide level2 small scrollable"><h2>Pull down the webpage</h2>
+<p>This is the easy part!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>url <span class="ot">&lt;-</span> <span class="st">"https://catholic-hierarchy.org/bishop/spope0.html"</span></span>
+<span id="cb34-2"><a></a>page <span class="ot">&lt;-</span> <span class="fu">read_html</span>(url)</span>
+<span id="cb34-3"><a></a></span>
+<span id="cb34-4"><a></a>page</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{html_document}
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#"&gt;
+[1] &lt;head&gt;\n&lt;link rel="home" href="https://www.catholic-hierarchy.org/"&gt;\n&lt;me ...
+[2] &lt;script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.mi ...
+[3] &lt;body bgcolor="#DCFFFF" text="#000000" link="#0000FF" alink="#FF0000" vli ...</code></pre>
+</div>
+</div>
+</section><section id="parse-the-table-element" class="slide level2 small scrollable"><h2>Parse the table element</h2>
+<p>Already pretty good!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>popes_table <span class="ot">&lt;-</span> page <span class="sc">|&gt;</span></span>
+<span id="cb36-2"><a></a>  <span class="fu">html_element</span>(<span class="st">"table"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb36-3"><a></a>  <span class="fu">html_table</span>(<span class="at">fill =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb36-4"><a></a></span>
+<span id="cb36-5"><a></a><span class="fu">glimpse</span>(popes_table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 268
+Columns: 12
+$ `#`            &lt;chr&gt; "#", "267", "266", "265", "264", "263", "262", "261", "…
+$ PapalName      &lt;chr&gt; "PapalName", "Leo XIV", "Francis", "Benedict XVI", "Joh…
+$ BirthDate      &lt;chr&gt; "BirthDate", "14 Sep 1955", "17 Dec 1936", "16 Apr 1927…
+$ ConclaveStart  &lt;chr&gt; "ConclaveStart", "7 May 2025", "12 Mar 2013", "18 Apr 2…
+$ Elected        &lt;chr&gt; "Date", "8 May 2025", "13 Mar 2013", "19 Apr 2005", "16…
+$ Elected        &lt;chr&gt; "Age", "69.6", "76.2", "78.0", "58.4", "65.8", "65.7", …
+$ Installed      &lt;chr&gt; "Date", "18 May 2025", "19 Mar 2013", "24 Apr 2005", "2…
+$ Installed      &lt;chr&gt; "Age", "69.6", "76.2", "78.0", "58.4", "65.8", "65.7", …
+$ `End of Reign` &lt;chr&gt; "Date", "( Age: &lt;!--\r\nwriteage(1955,9,14);\r\n//--&gt;70…
+$ `End of Reign` &lt;chr&gt; "Age", "( Age: &lt;!--\r\nwriteage(1955,9,14);\r\n//--&gt;70.…
+$ Length         &lt;chr&gt; "Elected", "&lt;!--\r\nwriteage(2025,5,8);\r\n//--&gt;.7", "1…
+$ Length         &lt;chr&gt; "Installed", "&lt;!--\r\nwriteage(2025,5,18);\r\n//--&gt;.7",…</code></pre>
+</div>
+</div>
+</section><section id="lets-clean-the-colum-name" class="slide level2 small scrollable"><h2>Let’s clean the colum name</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a><span class="fu">names</span>(popes_table) <span class="ot">&lt;-</span> <span class="fu">make.unique</span>(<span class="fu">names</span>(popes_table))</span>
+<span id="cb38-2"><a></a></span>
+<span id="cb38-3"><a></a>popes_clean <span class="ot">&lt;-</span> popes_table <span class="sc">|&gt;</span></span>
+<span id="cb38-4"><a></a>  <span class="fu">rename</span>(</span>
+<span id="cb38-5"><a></a>    <span class="at">papal_number =</span> <span class="st">`</span><span class="at">#</span><span class="st">`</span>,</span>
+<span id="cb38-6"><a></a>    <span class="at">papal_name =</span> <span class="st">`</span><span class="at">PapalName</span><span class="st">`</span>,</span>
+<span id="cb38-7"><a></a>    <span class="at">birth_date =</span> <span class="st">`</span><span class="at">BirthDate</span><span class="st">`</span>,</span>
+<span id="cb38-8"><a></a>    <span class="at">conclave_start =</span> <span class="st">`</span><span class="at">ConclaveStart</span><span class="st">`</span>,</span>
+<span id="cb38-9"><a></a>    <span class="at">date_elected =</span> <span class="st">`</span><span class="at">Elected</span><span class="st">`</span>,</span>
+<span id="cb38-10"><a></a>    <span class="at">age_elected =</span> <span class="st">`</span><span class="at">Elected.1</span><span class="st">`</span>,</span>
+<span id="cb38-11"><a></a>    <span class="at">date_installed =</span> <span class="st">`</span><span class="at">Installed</span><span class="st">`</span>,</span>
+<span id="cb38-12"><a></a>    <span class="at">age_installed =</span> <span class="st">`</span><span class="at">Installed.1</span><span class="st">`</span>,</span>
+<span id="cb38-13"><a></a>    <span class="at">date_end =</span> <span class="st">`</span><span class="at">End of Reign</span><span class="st">`</span>, </span>
+<span id="cb38-14"><a></a>    <span class="at">age_end =</span> <span class="st">`</span><span class="at">End of Reign.1</span><span class="st">`</span>,</span>
+<span id="cb38-15"><a></a>    <span class="at">years_elected =</span> <span class="st">`</span><span class="at">Length</span><span class="st">`</span>,</span>
+<span id="cb38-16"><a></a>    <span class="at">years_installed =</span> <span class="st">`</span><span class="at">Length.1</span><span class="st">`</span>,</span>
+<span id="cb38-17"><a></a>  )</span>
+<span id="cb38-18"><a></a></span>
+<span id="cb38-19"><a></a><span class="fu">glimpse</span>(popes_clean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 268
+Columns: 12
+$ papal_number    &lt;chr&gt; "#", "267", "266", "265", "264", "263", "262", "261", …
+$ papal_name      &lt;chr&gt; "PapalName", "Leo XIV", "Francis", "Benedict XVI", "Jo…
+$ birth_date      &lt;chr&gt; "BirthDate", "14 Sep 1955", "17 Dec 1936", "16 Apr 192…
+$ conclave_start  &lt;chr&gt; "ConclaveStart", "7 May 2025", "12 Mar 2013", "18 Apr …
+$ date_elected    &lt;chr&gt; "Date", "8 May 2025", "13 Mar 2013", "19 Apr 2005", "1…
+$ age_elected     &lt;chr&gt; "Age", "69.6", "76.2", "78.0", "58.4", "65.8", "65.7",…
+$ date_installed  &lt;chr&gt; "Date", "18 May 2025", "19 Mar 2013", "24 Apr 2005", "…
+$ age_installed   &lt;chr&gt; "Age", "69.6", "76.2", "78.0", "58.4", "65.8", "65.7",…
+$ date_end        &lt;chr&gt; "Date", "( Age: &lt;!--\r\nwriteage(1955,9,14);\r\n//--&gt;7…
+$ age_end         &lt;chr&gt; "Age", "( Age: &lt;!--\r\nwriteage(1955,9,14);\r\n//--&gt;70…
+$ years_elected   &lt;chr&gt; "Elected", "&lt;!--\r\nwriteage(2025,5,8);\r\n//--&gt;.7", "…
+$ years_installed &lt;chr&gt; "Installed", "&lt;!--\r\nwriteage(2025,5,18);\r\n//--&gt;.7"…</code></pre>
+</div>
+</div>
+</section><section id="discard-that-funky-row-at-the-top" class="slide level2 small scrollable"><h2>Discard that funky row at the top</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a>popes_clean <span class="ot">&lt;-</span> popes_clean <span class="sc">|&gt;</span></span>
+<span id="cb40-2"><a></a>  <span class="fu">filter</span>(papal_name <span class="sc">!=</span> <span class="st">"PapalName"</span>)</span>
+<span id="cb40-3"><a></a></span>
+<span id="cb40-4"><a></a><span class="fu">glimpse</span>(popes_clean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 267
+Columns: 12
+$ papal_number    &lt;chr&gt; "267", "266", "265", "264", "263", "262", "261", "260"…
+$ papal_name      &lt;chr&gt; "Leo XIV", "Francis", "Benedict XVI", "John Paul II", …
+$ birth_date      &lt;chr&gt; "14 Sep 1955", "17 Dec 1936", "16 Apr 1927", "18 May 1…
+$ conclave_start  &lt;chr&gt; "7 May 2025", "12 Mar 2013", "18 Apr 2005", "14 Oct 19…
+$ date_elected    &lt;chr&gt; "8 May 2025", "13 Mar 2013", "19 Apr 2005", "16 Oct 19…
+$ age_elected     &lt;chr&gt; "69.6", "76.2", "78.0", "58.4", "65.8", "65.7", "76.9"…
+$ date_installed  &lt;chr&gt; "18 May 2025", "19 Mar 2013", "24 Apr 2005", "22 Oct 1…
+$ age_installed   &lt;chr&gt; "69.6", "76.2", "78.0", "58.4", "65.8", "65.7", "76.9"…
+$ date_end        &lt;chr&gt; "( Age: &lt;!--\r\nwriteage(1955,9,14);\r\n//--&gt;70.3\r\n)…
+$ age_end         &lt;chr&gt; "( Age: &lt;!--\r\nwriteage(1955,9,14);\r\n//--&gt;70.3\r\n)…
+$ years_elected   &lt;chr&gt; "&lt;!--\r\nwriteage(2025,5,8);\r\n//--&gt;.7", "12.1", "7.8…
+$ years_installed &lt;chr&gt; "&lt;!--\r\nwriteage(2025,5,18);\r\n//--&gt;.7", "12.0", "7.…</code></pre>
+</div>
+</div>
+</section><section id="sort-out-the-variable-types" class="slide level2 small scrollable"><h2>Sort out the variable types</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a>popes_clean <span class="ot">&lt;-</span> popes_clean <span class="sc">|&gt;</span></span>
+<span id="cb42-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb42-3"><a></a>    <span class="at">papal_number =</span> <span class="fu">as.integer</span>(papal_number),</span>
+<span id="cb42-4"><a></a>    <span class="at">age_elected =</span> <span class="fu">as.numeric</span>(age_elected),</span>
+<span id="cb42-5"><a></a>    <span class="at">age_installed =</span> <span class="fu">as.numeric</span>(age_installed),</span>
+<span id="cb42-6"><a></a>    <span class="at">age_end =</span> <span class="fu">as.numeric</span>(age_end),</span>
+<span id="cb42-7"><a></a>    <span class="at">years_elected =</span> <span class="fu">as.numeric</span>(years_elected),</span>
+<span id="cb42-8"><a></a>    <span class="at">years_installed =</span> <span class="fu">as.numeric</span>(years_installed),</span>
+<span id="cb42-9"><a></a>    <span class="at">conclave_start =</span> <span class="fu">as.Date</span>(conclave_start, <span class="at">format =</span> <span class="st">"%d %b %Y"</span>),</span>
+<span id="cb42-10"><a></a>    <span class="at">date_elected =</span> <span class="fu">as.Date</span>(date_elected, <span class="at">format =</span> <span class="st">"%d %b %Y"</span>),</span>
+<span id="cb42-11"><a></a>    <span class="at">birth_date =</span> <span class="fu">as.Date</span>(birth_date, <span class="at">format =</span> <span class="st">"%d %b %Y"</span>),</span>
+<span id="cb42-12"><a></a>    <span class="at">date_end =</span> <span class="fu">ifelse</span>(papal_name <span class="sc">==</span> <span class="st">"Leo XIV"</span>, <span class="cn">NA</span>, date_end),</span>
+<span id="cb42-13"><a></a>    <span class="at">resigned =</span> <span class="fu">str_detect</span>(date_end, <span class="st">"#"</span>),</span>
+<span id="cb42-14"><a></a>    <span class="at">date_end =</span> <span class="fu">str_remove_all</span>(date_end, <span class="st">"#"</span>),</span>
+<span id="cb42-15"><a></a>    <span class="at">date_end =</span> <span class="fu">as.Date</span>(date_end, <span class="at">format =</span> <span class="st">"%d %b %Y"</span>),</span>
+<span id="cb42-16"><a></a>    <span class="at">not_bishop =</span> <span class="fu">str_detect</span>(date_installed, <span class="st">"</span><span class="sc">\\</span><span class="st">*"</span>),</span>
+<span id="cb42-17"><a></a>    <span class="at">date_installed =</span> <span class="fu">str_remove_all</span>(date_installed, <span class="st">"</span><span class="sc">\\</span><span class="st">*"</span>),</span>
+<span id="cb42-18"><a></a>    <span class="at">date_installed =</span> <span class="fu">as.Date</span>(date_installed, <span class="at">format =</span> <span class="st">"%d %b %Y"</span>)</span>
+<span id="cb42-19"><a></a>  )</span>
+<span id="cb42-20"><a></a></span>
+<span id="cb42-21"><a></a><span class="fu">glimpse</span>(popes_clean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 267
+Columns: 14
+$ papal_number    &lt;int&gt; 267, 266, 265, 264, 263, 262, 261, 260, 259, 258, 257,…
+$ papal_name      &lt;chr&gt; "Leo XIV", "Francis", "Benedict XVI", "John Paul II", …
+$ birth_date      &lt;date&gt; 1955-09-14, 1936-12-17, 1927-04-16, 1920-05-18, 1912-…
+$ conclave_start  &lt;date&gt; 2025-05-07, 2013-03-12, 2005-04-18, 1978-10-14, 1978-…
+$ date_elected    &lt;date&gt; 2025-05-08, 2013-03-13, 2005-04-19, 1978-10-16, 1978-…
+$ age_elected     &lt;dbl&gt; 69.6, 76.2, 78.0, 58.4, 65.8, 65.7, 76.9, 63.0, 64.6, …
+$ date_installed  &lt;date&gt; 2025-05-18, 2013-03-19, 2005-04-24, 1978-10-22, 1978-…
+$ age_installed   &lt;dbl&gt; 69.6, 76.2, 78.0, 58.4, 65.8, 65.7, 76.9, 63.0, 64.6, …
+$ date_end        &lt;date&gt; NA, 2025-04-21, 2013-02-28, 2005-04-02, 1978-09-28, 1…
+$ age_end         &lt;dbl&gt; NA, 88.3, 85.8, 84.8, 65.9, 80.8, 81.5, 82.6, 81.6, 67…
+$ years_elected   &lt;dbl&gt; NA, 12.1, 7.8, 26.4, 0.0, 15.1, 4.5, 19.6, 17.0, 7.3, …
+$ years_installed &lt;dbl&gt; NA, 12.0, 7.8, 26.4, 0.0, 15.1, 4.5, 19.5, 16.9, 7.3, …
+$ resigned        &lt;lgl&gt; NA, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FA…
+$ not_bishop      &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE…</code></pre>
+</div>
+</div>
+</section><section id="add-new-variable" class="slide level2 small scrollable"><h2>Add new variable</h2>
+<p>Let’s measure the length of each conclave in days:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a>popes_clean <span class="ot">&lt;-</span> popes_clean <span class="sc">|&gt;</span></span>
+<span id="cb44-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb44-3"><a></a>    <span class="at">conclave_length_days =</span> <span class="fu">as.integer</span>(date_elected <span class="sc">-</span> conclave_start)</span>
+<span id="cb44-4"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb44-5"><a></a>  <span class="fu">relocate</span>(conclave_length_days)</span>
+<span id="cb44-6"><a></a></span>
+<span id="cb44-7"><a></a><span class="fu">glimpse</span>(popes_clean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 267
+Columns: 15
+$ conclave_length_days &lt;int&gt; 1, 1, 1, 2, 1, 2, 3, 1, 4, 3, 4, 2, 2, 50, 35, 26…
+$ papal_number         &lt;int&gt; 267, 266, 265, 264, 263, 262, 261, 260, 259, 258,…
+$ papal_name           &lt;chr&gt; "Leo XIV", "Francis", "Benedict XVI", "John Paul …
+$ birth_date           &lt;date&gt; 1955-09-14, 1936-12-17, 1927-04-16, 1920-05-18, …
+$ conclave_start       &lt;date&gt; 2025-05-07, 2013-03-12, 2005-04-18, 1978-10-14, …
+$ date_elected         &lt;date&gt; 2025-05-08, 2013-03-13, 2005-04-19, 1978-10-16, …
+$ age_elected          &lt;dbl&gt; 69.6, 76.2, 78.0, 58.4, 65.8, 65.7, 76.9, 63.0, 6…
+$ date_installed       &lt;date&gt; 2025-05-18, 2013-03-19, 2005-04-24, 1978-10-22, …
+$ age_installed        &lt;dbl&gt; 69.6, 76.2, 78.0, 58.4, 65.8, 65.7, 76.9, 63.0, 6…
+$ date_end             &lt;date&gt; NA, 2025-04-21, 2013-02-28, 2005-04-02, 1978-09-…
+$ age_end              &lt;dbl&gt; NA, 88.3, 85.8, 84.8, 65.9, 80.8, 81.5, 82.6, 81.…
+$ years_elected        &lt;dbl&gt; NA, 12.1, 7.8, 26.4, 0.0, 15.1, 4.5, 19.6, 17.0, …
+$ years_installed      &lt;dbl&gt; NA, 12.0, 7.8, 26.4, 0.0, 15.1, 4.5, 19.5, 16.9, …
+$ resigned             &lt;lgl&gt; NA, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE, FALS…
+$ not_bishop           &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, …</code></pre>
+</div>
+</div>
+</section><section id="answer-the-question" class="slide level2 small scrollable"><h2>Answer the question!</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a><span class="fu">ggplot</span>(popes_clean, <span class="fu">aes</span>(<span class="at">x =</span> conclave_length_days)) <span class="sc">+</span> </span>
+<span id="cb46-2"><a></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span> </span>
+<span id="cb46-3"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb46-4"><a></a>    <span class="at">x =</span> <span class="st">"Days"</span>,</span>
+<span id="cb46-5"><a></a>    <span class="at">title =</span> <span class="st">"Length of papal conclaves"</span>,</span>
+<span id="cb46-6"><a></a>    <span class="at">caption =</span> <span class="st">"Source: scraped from catholic-hierarchy.org"</span></span>
+<span id="cb46-7"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="11-web-scraping_files/figure-revealjs/unnamed-chunk-24-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a>popes_clean <span class="sc">|&gt;</span></span>
+<span id="cb47-2"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb47-3"><a></a>    <span class="at">mean_length =</span> <span class="fu">mean</span>(conclave_length_days, <span class="at">na.rm =</span> T),</span>
+<span id="cb47-4"><a></a>    <span class="at">median_length =</span> <span class="fu">median</span>(conclave_length_days, <span class="at">na.rm =</span> T),</span>
+<span id="cb47-5"><a></a>    <span class="at">sd_length =</span> <span class="fu">sd</span>(conclave_length_days, <span class="at">na.rm =</span> T)</span>
+<span id="cb47-6"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  mean_length median_length sd_length
+        &lt;dbl&gt;         &lt;dbl&gt;     &lt;dbl&gt;
+1        30.6           7.5      43.4</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a>popes_clean <span class="sc">|&gt;</span></span>
+<span id="cb49-2"><a></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(conclave_length_days)) <span class="sc">|&gt;</span></span>
+<span id="cb49-3"><a></a>  <span class="fu">count</span>(conclave_length_days) <span class="sc">|&gt;</span></span>
+<span id="cb49-4"><a></a>  <span class="fu">mutate</span>(<span class="at">prop =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 32 × 3
+   conclave_length_days     n   prop
+                  &lt;int&gt; &lt;int&gt;  &lt;dbl&gt;
+ 1                    1     9 0.141 
+ 2                    2     7 0.109 
+ 3                    3     8 0.125 
+ 4                    4     4 0.0625
+ 5                    5     2 0.0312
+ 6                    6     1 0.0156
+ 7                    7     1 0.0156
+ 8                    8     3 0.0469
+ 9                   12     1 0.0156
+10                   13     1 0.0156
+# ℹ 22 more rows</code></pre>
+</div>
+</div>
+</div></div>
 </section></section><section><section id="application-exercise" class="title-slide slide level1 center"><h1>Application exercise</h1>
 
 </section><section id="participate" class="slide level2"><h2>Participate 📱💻</h2>
@@ -665,88 +897,88 @@ John Zito
 </section><section id="common-words-in-the-chronicle-titles" class="slide level2 smaller"><h2>Common words in The Chronicle titles</h2>
 <p>Code for the earlier plot:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34" data-code-line-numbers="|2-3|5|6|8|9|10-23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>stop_words <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/stop-words.csv"</span>)</span>
-<span id="cb34-2"><a></a>chronicle <span class="sc">|&gt;</span></span>
-<span id="cb34-3"><a></a>  tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(word, title) <span class="sc">|&gt;</span></span>
-<span id="cb34-4"><a></a>  <span class="fu">mutate</span>(<span class="at">word =</span> <span class="fu">str_replace_all</span>(word, <span class="st">"’"</span>, <span class="st">"'"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb34-5"><a></a>  <span class="fu">anti_join</span>(stop_words) <span class="sc">|&gt;</span></span>
-<span id="cb34-6"><a></a>  <span class="fu">count</span>(word, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
-<span id="cb34-7"><a></a>  <span class="fu">filter</span>(word <span class="sc">!=</span> <span class="st">"duke's"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb34-8"><a></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">20</span>) <span class="sc">|&gt;</span></span>
-<span id="cb34-9"><a></a>  <span class="fu">mutate</span>(<span class="at">word =</span> <span class="fu">fct_reorder</span>(word, n)) <span class="sc">|&gt;</span></span>
-<span id="cb34-10"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> word, <span class="at">x =</span> n, <span class="at">fill =</span> <span class="fu">log</span>(n))) <span class="sc">+</span></span>
-<span id="cb34-11"><a></a>  <span class="fu">geom_col</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb34-12"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
-<span id="cb34-13"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb34-14"><a></a>    <span class="at">x =</span> <span class="st">"Number of mentions"</span>,</span>
-<span id="cb34-15"><a></a>    <span class="at">y =</span> <span class="st">"Word"</span>,</span>
-<span id="cb34-16"><a></a>    <span class="at">title =</span> <span class="st">"The Chronicle - Opinion pieces"</span>,</span>
-<span id="cb34-17"><a></a>    <span class="at">subtitle =</span> <span class="st">"Common words in the 500 most recent opinion piece titles"</span>,</span>
-<span id="cb34-18"><a></a>    <span class="at">caption =</span> <span class="st">"Source: Data scraped from The Chronicle on Oct 6, 2025"</span></span>
-<span id="cb34-19"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb34-20"><a></a>  <span class="fu">theme</span>(</span>
-<span id="cb34-21"><a></a>    <span class="at">plot.title.position =</span> <span class="st">"plot"</span>,</span>
-<span id="cb34-22"><a></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"gray30"</span>)</span>
-<span id="cb34-23"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51" data-code-line-numbers="|2-3|5|6|8|9|10-23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a></a>stop_words <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/stop-words.csv"</span>)</span>
+<span id="cb51-2"><a></a>chronicle <span class="sc">|&gt;</span></span>
+<span id="cb51-3"><a></a>  tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(word, title) <span class="sc">|&gt;</span></span>
+<span id="cb51-4"><a></a>  <span class="fu">mutate</span>(<span class="at">word =</span> <span class="fu">str_replace_all</span>(word, <span class="st">"’"</span>, <span class="st">"'"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb51-5"><a></a>  <span class="fu">anti_join</span>(stop_words) <span class="sc">|&gt;</span></span>
+<span id="cb51-6"><a></a>  <span class="fu">count</span>(word, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb51-7"><a></a>  <span class="fu">filter</span>(word <span class="sc">!=</span> <span class="st">"duke's"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb51-8"><a></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">20</span>) <span class="sc">|&gt;</span></span>
+<span id="cb51-9"><a></a>  <span class="fu">mutate</span>(<span class="at">word =</span> <span class="fu">fct_reorder</span>(word, n)) <span class="sc">|&gt;</span></span>
+<span id="cb51-10"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> word, <span class="at">x =</span> n, <span class="at">fill =</span> <span class="fu">log</span>(n))) <span class="sc">+</span></span>
+<span id="cb51-11"><a></a>  <span class="fu">geom_col</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb51-12"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb51-13"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb51-14"><a></a>    <span class="at">x =</span> <span class="st">"Number of mentions"</span>,</span>
+<span id="cb51-15"><a></a>    <span class="at">y =</span> <span class="st">"Word"</span>,</span>
+<span id="cb51-16"><a></a>    <span class="at">title =</span> <span class="st">"The Chronicle - Opinion pieces"</span>,</span>
+<span id="cb51-17"><a></a>    <span class="at">subtitle =</span> <span class="st">"Common words in the 500 most recent opinion piece titles"</span>,</span>
+<span id="cb51-18"><a></a>    <span class="at">caption =</span> <span class="st">"Source: Data scraped from The Chronicle on Oct 6, 2025"</span></span>
+<span id="cb51-19"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb51-20"><a></a>  <span class="fu">theme</span>(</span>
+<span id="cb51-21"><a></a>    <span class="at">plot.title.position =</span> <span class="st">"plot"</span>,</span>
+<span id="cb51-22"><a></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"gray30"</span>)</span>
+<span id="cb51-23"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="avg-sentiment-scores-of-titles" class="slide level2 smaller"><h2>Avg sentiment scores of titles</h2>
 <p>Code for the earlier plot:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35" data-code-line-numbers="|2-3|5|6|7-8|9-13|22-55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>afinn_sentiments <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/afinn-sentiments.csv"</span>)</span>
-<span id="cb35-2"><a></a>chronicle <span class="sc">|&gt;</span></span>
-<span id="cb35-3"><a></a>  tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(word, title, <span class="at">drop =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span></span>
-<span id="cb35-4"><a></a>  <span class="fu">mutate</span>(<span class="at">word =</span> <span class="fu">str_replace_all</span>(word, <span class="st">"’"</span>, <span class="st">"'"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb35-5"><a></a>  <span class="fu">anti_join</span>(stop_words) <span class="sc">|&gt;</span></span>
-<span id="cb35-6"><a></a>  <span class="fu">left_join</span>(afinn_sentiments) <span class="sc">|&gt;</span></span>
-<span id="cb35-7"><a></a>  <span class="fu">group_by</span>(author, title) <span class="sc">|&gt;</span></span>
-<span id="cb35-8"><a></a>  <span class="fu">summarize</span>(<span class="at">total_sentiment =</span> <span class="fu">sum</span>(value, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb35-9"><a></a>  <span class="fu">group_by</span>(author) <span class="sc">|&gt;</span></span>
-<span id="cb35-10"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb35-11"><a></a>    <span class="at">n_articles =</span> <span class="fu">n</span>(),</span>
-<span id="cb35-12"><a></a>    <span class="at">avg_sentiment =</span> <span class="fu">mean</span>(total_sentiment, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb35-13"><a></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb35-14"><a></a>  <span class="fu">filter</span>(n_articles <span class="sc">&gt;</span> <span class="dv">2</span> <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(author)) <span class="sc">|&gt;</span></span>
-<span id="cb35-15"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(avg_sentiment)) <span class="sc">|&gt;</span></span>
-<span id="cb35-16"><a></a>  <span class="fu">slice</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">30</span><span class="sc">:</span><span class="dv">39</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb35-17"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb35-18"><a></a>    <span class="at">author =</span> <span class="fu">fct_reorder</span>(author, avg_sentiment),</span>
-<span id="cb35-19"><a></a>    <span class="at">neg_pos =</span> <span class="fu">if_else</span>(avg_sentiment <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="st">"neg"</span>, <span class="st">"pos"</span>),</span>
-<span id="cb35-20"><a></a>    <span class="at">label_position =</span> <span class="fu">if_else</span>(neg_pos <span class="sc">==</span> <span class="st">"neg"</span>, <span class="fl">0.25</span>, <span class="sc">-</span><span class="fl">0.25</span>)</span>
-<span id="cb35-21"><a></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb35-22"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> author, <span class="at">x =</span> avg_sentiment)) <span class="sc">+</span></span>
-<span id="cb35-23"><a></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">fill =</span> neg_pos), <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb35-24"><a></a>  <span class="fu">geom_text</span>(</span>
-<span id="cb35-25"><a></a>    <span class="fu">aes</span>(<span class="at">x =</span> label_position, <span class="at">label =</span> author, <span class="at">color =</span> neg_pos),</span>
-<span id="cb35-26"><a></a>    <span class="at">hjust =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">10</span>), <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">10</span>)),</span>
-<span id="cb35-27"><a></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb35-28"><a></a>    <span class="at">fontface =</span> <span class="st">"bold"</span></span>
-<span id="cb35-29"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb35-30"><a></a>  <span class="fu">geom_text</span>(</span>
-<span id="cb35-31"><a></a>    <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">round</span>(avg_sentiment, <span class="dv">1</span>)),</span>
-<span id="cb35-32"><a></a>    <span class="at">hjust =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="fl">1.25</span>, <span class="dv">10</span>), <span class="fu">rep</span>(<span class="sc">-</span><span class="fl">0.25</span>, <span class="dv">10</span>)),</span>
-<span id="cb35-33"><a></a>    <span class="at">color =</span> <span class="st">"white"</span>,</span>
-<span id="cb35-34"><a></a>    <span class="at">fontface =</span> <span class="st">"bold"</span></span>
-<span id="cb35-35"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb35-36"><a></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"neg"</span> <span class="ot">=</span> <span class="st">"#4d4009"</span>, <span class="st">"pos"</span> <span class="ot">=</span> <span class="st">"#FF4B91"</span>)) <span class="sc">+</span></span>
-<span id="cb35-37"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"neg"</span> <span class="ot">=</span> <span class="st">"#4d4009"</span>, <span class="st">"pos"</span> <span class="ot">=</span> <span class="st">"#FF4B91"</span>)) <span class="sc">+</span></span>
-<span id="cb35-38"><a></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>)) <span class="sc">+</span></span>
-<span id="cb35-39"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb35-40"><a></a>    <span class="at">x =</span> <span class="st">"negative  ←     Average sentiment score (AFINN)     →  positive"</span>,</span>
-<span id="cb35-41"><a></a>    <span class="at">y =</span> <span class="cn">NULL</span>,</span>
-<span id="cb35-42"><a></a>    <span class="at">title =</span> <span class="st">"The Chronicle - Opinion pieces</span><span class="sc">\n</span><span class="st">Average sentiment scores of titles by author"</span>,</span>
-<span id="cb35-43"><a></a>    <span class="at">subtitle =</span> <span class="st">"Top 10 average positive and negative scores"</span>,</span>
-<span id="cb35-44"><a></a>    <span class="at">caption =</span> <span class="st">"Source: Data scraped from The Chronicle on Sep 30, 2024"</span></span>
-<span id="cb35-45"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb35-46"><a></a>  <span class="fu">theme_void</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
-<span id="cb35-47"><a></a>  <span class="fu">theme</span>(</span>
-<span id="cb35-48"><a></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
-<span id="cb35-49"><a></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(</span>
-<span id="cb35-50"><a></a>      <span class="at">hjust =</span> <span class="fl">0.5</span>,</span>
-<span id="cb35-51"><a></a>      <span class="at">margin =</span> <span class="fu">unit</span>(<span class="fu">c</span>(<span class="fl">0.5</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>), <span class="st">"lines"</span>)</span>
-<span id="cb35-52"><a></a>    ),</span>
-<span id="cb35-53"><a></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"gray30"</span>, <span class="at">size =</span> <span class="dv">12</span>),</span>
-<span id="cb35-54"><a></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"gray30"</span>, <span class="at">size =</span> <span class="dv">10</span>)</span>
-<span id="cb35-55"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb52" data-code-line-numbers="|2-3|5|6|7-8|9-13|22-55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a>afinn_sentiments <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/afinn-sentiments.csv"</span>)</span>
+<span id="cb52-2"><a></a>chronicle <span class="sc">|&gt;</span></span>
+<span id="cb52-3"><a></a>  tidytext<span class="sc">::</span><span class="fu">unnest_tokens</span>(word, title, <span class="at">drop =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb52-4"><a></a>  <span class="fu">mutate</span>(<span class="at">word =</span> <span class="fu">str_replace_all</span>(word, <span class="st">"’"</span>, <span class="st">"'"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb52-5"><a></a>  <span class="fu">anti_join</span>(stop_words) <span class="sc">|&gt;</span></span>
+<span id="cb52-6"><a></a>  <span class="fu">left_join</span>(afinn_sentiments) <span class="sc">|&gt;</span></span>
+<span id="cb52-7"><a></a>  <span class="fu">group_by</span>(author, title) <span class="sc">|&gt;</span></span>
+<span id="cb52-8"><a></a>  <span class="fu">summarize</span>(<span class="at">total_sentiment =</span> <span class="fu">sum</span>(value, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb52-9"><a></a>  <span class="fu">group_by</span>(author) <span class="sc">|&gt;</span></span>
+<span id="cb52-10"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb52-11"><a></a>    <span class="at">n_articles =</span> <span class="fu">n</span>(),</span>
+<span id="cb52-12"><a></a>    <span class="at">avg_sentiment =</span> <span class="fu">mean</span>(total_sentiment, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb52-13"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb52-14"><a></a>  <span class="fu">filter</span>(n_articles <span class="sc">&gt;</span> <span class="dv">2</span> <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(author)) <span class="sc">|&gt;</span></span>
+<span id="cb52-15"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(avg_sentiment)) <span class="sc">|&gt;</span></span>
+<span id="cb52-16"><a></a>  <span class="fu">slice</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">30</span><span class="sc">:</span><span class="dv">39</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb52-17"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb52-18"><a></a>    <span class="at">author =</span> <span class="fu">fct_reorder</span>(author, avg_sentiment),</span>
+<span id="cb52-19"><a></a>    <span class="at">neg_pos =</span> <span class="fu">if_else</span>(avg_sentiment <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="st">"neg"</span>, <span class="st">"pos"</span>),</span>
+<span id="cb52-20"><a></a>    <span class="at">label_position =</span> <span class="fu">if_else</span>(neg_pos <span class="sc">==</span> <span class="st">"neg"</span>, <span class="fl">0.25</span>, <span class="sc">-</span><span class="fl">0.25</span>)</span>
+<span id="cb52-21"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb52-22"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> author, <span class="at">x =</span> avg_sentiment)) <span class="sc">+</span></span>
+<span id="cb52-23"><a></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(<span class="at">fill =</span> neg_pos), <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb52-24"><a></a>  <span class="fu">geom_text</span>(</span>
+<span id="cb52-25"><a></a>    <span class="fu">aes</span>(<span class="at">x =</span> label_position, <span class="at">label =</span> author, <span class="at">color =</span> neg_pos),</span>
+<span id="cb52-26"><a></a>    <span class="at">hjust =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>, <span class="dv">10</span>), <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">10</span>)),</span>
+<span id="cb52-27"><a></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb52-28"><a></a>    <span class="at">fontface =</span> <span class="st">"bold"</span></span>
+<span id="cb52-29"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb52-30"><a></a>  <span class="fu">geom_text</span>(</span>
+<span id="cb52-31"><a></a>    <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">round</span>(avg_sentiment, <span class="dv">1</span>)),</span>
+<span id="cb52-32"><a></a>    <span class="at">hjust =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="fl">1.25</span>, <span class="dv">10</span>), <span class="fu">rep</span>(<span class="sc">-</span><span class="fl">0.25</span>, <span class="dv">10</span>)),</span>
+<span id="cb52-33"><a></a>    <span class="at">color =</span> <span class="st">"white"</span>,</span>
+<span id="cb52-34"><a></a>    <span class="at">fontface =</span> <span class="st">"bold"</span></span>
+<span id="cb52-35"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb52-36"><a></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"neg"</span> <span class="ot">=</span> <span class="st">"#4d4009"</span>, <span class="st">"pos"</span> <span class="ot">=</span> <span class="st">"#FF4B91"</span>)) <span class="sc">+</span></span>
+<span id="cb52-37"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"neg"</span> <span class="ot">=</span> <span class="st">"#4d4009"</span>, <span class="st">"pos"</span> <span class="ot">=</span> <span class="st">"#FF4B91"</span>)) <span class="sc">+</span></span>
+<span id="cb52-38"><a></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb52-39"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb52-40"><a></a>    <span class="at">x =</span> <span class="st">"negative  ←     Average sentiment score (AFINN)     →  positive"</span>,</span>
+<span id="cb52-41"><a></a>    <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb52-42"><a></a>    <span class="at">title =</span> <span class="st">"The Chronicle - Opinion pieces</span><span class="sc">\n</span><span class="st">Average sentiment scores of titles by author"</span>,</span>
+<span id="cb52-43"><a></a>    <span class="at">subtitle =</span> <span class="st">"Top 10 average positive and negative scores"</span>,</span>
+<span id="cb52-44"><a></a>    <span class="at">caption =</span> <span class="st">"Source: Data scraped from The Chronicle on Sep 30, 2024"</span></span>
+<span id="cb52-45"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb52-46"><a></a>  <span class="fu">theme_void</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb52-47"><a></a>  <span class="fu">theme</span>(</span>
+<span id="cb52-48"><a></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb52-49"><a></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(</span>
+<span id="cb52-50"><a></a>      <span class="at">hjust =</span> <span class="fl">0.5</span>,</span>
+<span id="cb52-51"><a></a>      <span class="at">margin =</span> <span class="fu">unit</span>(<span class="fu">c</span>(<span class="fl">0.5</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>), <span class="st">"lines"</span>)</span>
+<span id="cb52-52"><a></a>    ),</span>
+<span id="cb52-53"><a></a>    <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"gray30"</span>, <span class="at">size =</span> <span class="dv">12</span>),</span>
+<span id="cb52-54"><a></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"gray30"</span>, <span class="at">size =</span> <span class="dv">10</span>)</span>
+<span id="cb52-55"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="where-is-the-data-coming-from" class="slide level2 smaller"><h2>Where is the data coming from?</h2>
 <div class="center">
@@ -758,7 +990,7 @@ John Zito
 </div>
 </section><section id="where-is-the-data-coming-from-1" class="slide level2 smaller"><h2>Where is the data coming from?</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>chronicle</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a></a>chronicle</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 500 × 7
    title                     author date_time           month   day column url  
