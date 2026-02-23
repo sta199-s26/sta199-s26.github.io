@@ -1,0 +1,192 @@
+---
+title: "Midterm 1 Study Guide Solutions"
+format: html
+---
+
+1. Rapid-fire:
+
+    i. every row is an observation and every column is a variable;
+    i. given the data and the code, we can exactly reproduce all of the figures and tables in the analysis;
+    i. both lists and vector are ways of bundling together multiple values in R. But a vector consists of values of all the same type, whereas a list can bundle different types;
+    i. STAAAAAAAWANANAAAAA;
+    i. It takes the object on the left and feeds it forward as the first argument to the command on the right;
+    i. It tells the computer what columns in the data frame to use and how to use them;
+    i. `if_else` handles two conditions; `case_when` handles multiple conditions;
+    i. `filter` discards rows and `select` discards columns;
+    i. adds a "grouping" attribute to a data frame so that subsequent operations are performed *within* the levels of a categorical variable;
+    i. it's the cutoff point on the number line that has 38% of your data values below and 62% of the values above;
+        - yes I could;
+        - smaller than.
+    
+2. e
+
+3. d
+
+4. b
+
+5. a
+
+6. c
+
+7. f
+
+8. f
+
+9. a
+
+10. b
+
+11. e
+
+12. c
+
+13. d
+
+14. Missing `+` between `ggplot` and `geom_point`;
+
+15. `vs` is numeric type, but the `shape` aesthetic requires a factor;
+
+16. `mtcars` needs to be overwritten to save the new variable `heavy`;
+
+17. There's a hanging comma inside the `values` argument to `scale_color_manual`;
+
+18. `color` and `shape` have different labels. `shape` is defaulting to the column name "species", and `color` is using the user-specified "Species". It's case sensitive. Add `shape = "Species"` inside `labs`, and the legends are consolidated;
+
+19. `n_people` is not a column in the summary table. `age_sum` is a column in the summary table. 
+
+20. The wider data frame has a column titled `Remain Against The Law`, which is improper because of the spaces. To reference that column by name, you need to put it in back ticks, no quotes;
+
+21. Inside the `if_else`, we are mixing types: characters and numbers;
+
+22. We are supplying `ggplot` with the data twice, by piping it in and supplying the data frame directly. It needs to be one or the other;
+
+23. We are assigning *the entire pipeline* to the variable name `us_uk_tr_votes`. The pipeline ends with the creation of a plot, so this new variable is not a data frame, it's a plot object. You can't filter that;
+
+
+24.  b, c, f, g -
+
+    -   The `blizzard_salary` dataset has 409 rows.
+
+    -   The `percent_incr` variable is numerical and continuous.
+
+    -   The `salary_type` variable is categorical.
+
+25.  Figure 1 - A shared x-axis makes it easier to compare summary statistics for the variable on the x-axis.
+
+26.  c - It's a value higher than the median for hourly but lower than the mean for salaried.
+
+27.  b - There is more variability around the mean compared to the hourly distribution.
+
+28.  a, b, e - Pie charts and waffle charts are for visualizing distributions of categorical data only.
+    Scatterplots are for visualizing the relationship between two numerical variables.
+
+29.  c - `mutate()` is used to create or modify a variable.
+
+30.  a - `"Poor", "Successful", "High", "Top"`
+
+31.  b - Option 2.
+    The plot in Option 1 shows the number of employees with a given performance rating for each salary type while the plot in Option 2 gives the proportion of employees with a given performance rating for each salary type.
+    In order to assess the relationship between these variables (e.g., how much more likely is a Top rating among Salaried vs. Hourly workers), we need the proportions, not the counts.
+
+32.  There may be some `NA`s in these two variables that are not visible in the plot.
+
+33. The proportions under Hourly would go in the Hourly bar, and those under Salaried would go in the Salaried bar.
+
+34. c - `filter(salary_type != "Hourly" & performance_rating == "Poor")` - There are 5 observations for **"not Hourly"** **"and"** Poor.
+
+35. a - `arrange()` - The result is arranged in increasing order of `annual_salary`, which is the default for `arrange()`.
+
+36. c, d, e, f.
+
+37. Part 1: The following should be fixed:
+
+    -   There should be a `|` after `#` before `label`
+
+    -   There should be a `:` after label, not `=`
+
+    -   There shouldn't be a space in the chunk label, it should be `plot-blizzard`
+
+    -   There should be spaces after commas in the code
+
+    -   There should be spaces on both sides of `=` in the code
+
+    -   There should be a space before `+`
+
+    -   `geom_boxplot()` should be on the next line and indented
+
+    -   There should be a `+` at the end of the `geom_boxplot()` line
+
+    -   `labs()` should be indented
+
+    Part 2: The warning is caused by `NA` in the data.
+    It means that 39 observations were `NA`s and are not plotted/represented on the plot.
+
+38. Part 1:
+
+    1.  Render: Run all of the code and render all of the text in the document and produce an output.
+    2.  Commit: Take a snapshot of your changes in Git with an appropriate message.
+    3.  Push: Send your changes off to GitHub.
+
+    Part 2: c - Rendering or committing isn't sufficient to send your changes to your GitHub repository, a push is needed.
+    A pull is also not needed to view the changes in the browser.
+
+39.  d
+
+40.  a, d
+
+41.  a, d
+
+42.  c
+
+43.  b
+
+44.  a
+
+45.  b
+
+46.  
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-asp: 0.35
+#| fig-width: 7
+
+library(tidyverse)
+
+tv <- read_csv("data/tv.csv")
+law_and_order <- tv |>
+  filter(str_detect(title, "Law & Order"))
+
+ggplot(law_and_order, aes(x = season, y = av_rating, shape = title)) +
+  geom_line(linewidth = 0.3) +
+  geom_point(size = 3) +
+  scale_shape_manual(
+    values = c(
+      "Law & Order: SVU" = "triangle",
+      "Law & Order: Criminal Intent" = "diamond",
+      "Law & Order: True Crime" = "square",
+      "Law & Order" = "asterisk",
+      "Law & Order: LA" = "circle"
+    )
+  ) +
+  labs(
+    x = "Season",
+    y = "Average rating",
+    shape = "Series title"
+  ) +
+  theme(legend.key.height = unit(1.5, "cm"))
+```
+
+47.  a, d
+
+48. b, c, e
+
+49. a
+
+50. a, c, e
+
+51. a, b, c, d
+
+52. a, d
