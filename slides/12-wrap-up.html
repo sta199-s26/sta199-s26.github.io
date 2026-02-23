@@ -71,7 +71,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-9f26b6341e16faa20df3ce7a36debf59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap-9f26b6341e16faa20df3ce7a36debf59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -100,9 +101,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <meta property="og:title" content="Data Science Wrap-up – STA 199 Spring 2026">
 <meta property="og:description" content="Lecture 12">
-<meta property="og:image" content="https://sta199-s26.github.io/slides/12-wrap-up_files/figure-revealjs/unnamed-chunk-5-1.png">
+<meta property="og:image" content="https://sta199-s26.github.io/slides/images/00/data-science-cycle.001.png">
 <meta property="og:site_name" content="STA 199 Spring 2026">
-<meta property="og:image:height" content="960">
+<meta property="og:image:height" content="1080">
 <meta property="og:image:width" content="1920">
 </head>
 <body class="nav-sidebar docked quarto-light">
@@ -413,23 +414,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-<li>
-<a href="#that-pesky-midterm" id="toc-that-pesky-midterm" class="nav-link active" data-scroll-target="#that-pesky-midterm">That pesky midterm…</a>
-  <ul class="collapse">
-<li><a href="#midterm-exam-1" id="toc-midterm-exam-1" class="nav-link" data-scroll-target="#midterm-exam-1">Midterm Exam 1</a></li>
-  <li><a href="#in-class" id="toc-in-class" class="nav-link" data-scroll-target="#in-class">In-class</a></li>
-  </ul>
-</li>
+<li><a href="#while-you-wait-participate" id="toc-while-you-wait-participate" class="nav-link active" data-scroll-target="#while-you-wait-participate">While you wait: Participate 📱💻</a></li>
   <li>
-<a href="#misconduct" id="toc-misconduct" class="nav-link" data-scroll-target="#misconduct">MISCONDUCT</a>
+<a href="#reminders" id="toc-reminders" class="nav-link" data-scroll-target="#reminders">Reminders</a>
   <ul class="collapse">
-<li><a href="#example-in-class-question" id="toc-example-in-class-question" class="nav-link" data-scroll-target="#example-in-class-question">Example in-class question</a></li>
-  <li><a href="#example-in-class-question-1" id="toc-example-in-class-question-1" class="nav-link" data-scroll-target="#example-in-class-question-1">Example in-class question</a></li>
-  <li><a href="#example-in-class-question-2" id="toc-example-in-class-question-2" class="nav-link" data-scroll-target="#example-in-class-question-2">Example in-class question</a></li>
+<li><a href="#schedule-changes" id="toc-schedule-changes" class="nav-link" data-scroll-target="#schedule-changes">Schedule changes</a></li>
+  <li><a href="#midterm-exam-1" id="toc-midterm-exam-1" class="nav-link" data-scroll-target="#midterm-exam-1">Midterm Exam 1</a></li>
+  <li><a href="#in-class" id="toc-in-class" class="nav-link" data-scroll-target="#in-class">In-class</a></li>
   <li><a href="#what-should-i-put-on-my-cheat-sheet" id="toc-what-should-i-put-on-my-cheat-sheet" class="nav-link" data-scroll-target="#what-should-i-put-on-my-cheat-sheet">What should I put on my cheat sheet?</a></li>
   <li><a href="#take-home" id="toc-take-home" class="nav-link" data-scroll-target="#take-home">Take-home</a></li>
-  <li><a href="#reminder-conduct-policies" id="toc-reminder-conduct-policies" class="nav-link" data-scroll-target="#reminder-conduct-policies">Reminder: conduct policies</a></li>
   <li><a href="#things-you-can-do-to-study" id="toc-things-you-can-do-to-study" class="nav-link" data-scroll-target="#things-you-can-do-to-study">Things you can do to study</a></li>
+  <li><a href="#our-conduct-policies" id="toc-our-conduct-policies" class="nav-link" data-scroll-target="#our-conduct-policies">Our conduct policies</a></li>
+  <li><a href="#dukes-conduct-policies" id="toc-dukes-conduct-policies" class="nav-link" data-scroll-target="#dukes-conduct-policies">Duke’s conduct policies</a></li>
+  <li><a href="#except" id="toc-except" class="nav-link" data-scroll-target="#except">Except…</a></li>
   </ul>
 </li>
   <li>
@@ -438,20 +435,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="#data-science-and-statistical-thinking" id="toc-data-science-and-statistical-thinking" class="nav-link" data-scroll-target="#data-science-and-statistical-thinking">Data science and statistical thinking</a></li>
   <li><a href="#data-science" id="toc-data-science" class="nav-link" data-scroll-target="#data-science">Data science</a></li>
   <li><a href="#data-science-1" id="toc-data-science-1" class="nav-link" data-scroll-target="#data-science-1">Data science</a></li>
-  <li><a href="#from-last-time-data-collection" id="toc-from-last-time-data-collection" class="nav-link" data-scroll-target="#from-last-time-data-collection">From last time: data collection</a></li>
+  <li><a href="#data-collection" id="toc-data-collection" class="nav-link" data-scroll-target="#data-collection">Data collection</a></li>
   <li><a href="#data-science-2" id="toc-data-science-2" class="nav-link" data-scroll-target="#data-science-2">Data science</a></li>
-  <li><a href="#from-last-time-data-preparation" id="toc-from-last-time-data-preparation" class="nav-link" data-scroll-target="#from-last-time-data-preparation">From last time: data preparation</a></li>
+  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link" data-scroll-target="#data-preparation">Data preparation</a></li>
   <li><a href="#data-science-3" id="toc-data-science-3" class="nav-link" data-scroll-target="#data-science-3">Data science</a></li>
-  <li><a href="#from-last-time-data-analysis" id="toc-from-last-time-data-analysis" class="nav-link" data-scroll-target="#from-last-time-data-analysis">From last time: data analysis</a></li>
-  <li><a href="#from-last-time-data-analysis-1" id="toc-from-last-time-data-analysis-1" class="nav-link" data-scroll-target="#from-last-time-data-analysis-1">From last time: data analysis</a></li>
-  <li><a href="#from-last-time-data-analysis-2" id="toc-from-last-time-data-analysis-2" class="nav-link" data-scroll-target="#from-last-time-data-analysis-2">From last time: data analysis</a></li>
-  <li><a href="#from-last-time-data-analysis-3" id="toc-from-last-time-data-analysis-3" class="nav-link" data-scroll-target="#from-last-time-data-analysis-3">From last time: data analysis</a></li>
+  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis">Data analysis</a></li>
+  <li><a href="#data-analysis-1" id="toc-data-analysis-1" class="nav-link" data-scroll-target="#data-analysis-1">Data analysis</a></li>
+  <li><a href="#data-analysis-2" id="toc-data-analysis-2" class="nav-link" data-scroll-target="#data-analysis-2">Data analysis</a></li>
+  <li><a href="#data-analysis-3" id="toc-data-analysis-3" class="nav-link" data-scroll-target="#data-analysis-3">Data analysis</a></li>
   <li><a href="#data-science-4" id="toc-data-science-4" class="nav-link" data-scroll-target="#data-science-4">Data science</a></li>
   <li><a href="#a-cautionary-tale-anscombes-quartet" id="toc-a-cautionary-tale-anscombes-quartet" class="nav-link" data-scroll-target="#a-cautionary-tale-anscombes-quartet">A cautionary tale: Anscombe’s quartet</a></li>
   <li><a href="#a-cautionary-tale-anscombes-quartet-1" id="toc-a-cautionary-tale-anscombes-quartet-1" class="nav-link" data-scroll-target="#a-cautionary-tale-anscombes-quartet-1">A cautionary tale: Anscombe’s quartet</a></li>
   <li><a href="#a-cautionary-tale-anscombes-quartet-2" id="toc-a-cautionary-tale-anscombes-quartet-2" class="nav-link" data-scroll-target="#a-cautionary-tale-anscombes-quartet-2">A cautionary tale: Anscombe’s quartet</a></li>
   <li><a href="#if-you-only-looked-at-summary-statistics" id="toc-if-you-only-looked-at-summary-statistics" class="nav-link" data-scroll-target="#if-you-only-looked-at-summary-statistics">If you only looked at summary statistics…</a></li>
   <li><a href="#our-motto-abv" id="toc-our-motto-abv" class="nav-link" data-scroll-target="#our-motto-abv">Our motto: ABV!</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#study-guide" id="toc-study-guide" class="nav-link" data-scroll-target="#study-guide">Study guide</a>
+  <ul class="collapse">
+<li><a href="#can-you-match-these" id="toc-can-you-match-these" class="nav-link" data-scroll-target="#can-you-match-these">Can you match these…</a></li>
+  <li><a href="#with-these" id="toc-with-these" class="nav-link" data-scroll-target="#with-these">…with these?</a></li>
+  <li><a href="#matching-scatterplots-and-histograms" id="toc-matching-scatterplots-and-histograms" class="nav-link" data-scroll-target="#matching-scatterplots-and-histograms">Matching scatterplots and histograms</a></li>
+  <li><a href="#goes-with-e" id="toc-goes-with-e" class="nav-link" data-scroll-target="#goes-with-e">2 goes with e</a></li>
+  <li><a href="#goes-with-f" id="toc-goes-with-f" class="nav-link" data-scroll-target="#goes-with-f">7 goes with f</a></li>
+  <li><a href="#goes-with-d" id="toc-goes-with-d" class="nav-link" data-scroll-target="#goes-with-d">3 goes with d</a></li>
+  <li><a href="#goes-with-c" id="toc-goes-with-c" class="nav-link" data-scroll-target="#goes-with-c">6 goes with c</a></li>
+  <li><a href="#goes-with-b" id="toc-goes-with-b" class="nav-link" data-scroll-target="#goes-with-b">4 goes with b</a></li>
+  <li><a href="#goes-with-a" id="toc-goes-with-a" class="nav-link" data-scroll-target="#goes-with-a">5 goes with a</a></li>
+  <li><a href="#can-you-match-these-1" id="toc-can-you-match-these-1" class="nav-link" data-scroll-target="#can-you-match-these-1">Can you match these…</a></li>
+  <li><a href="#with-these-1" id="toc-with-these-1" class="nav-link" data-scroll-target="#with-these-1">…with these?</a></li>
+  <li><a href="#yes-you-can" id="toc-yes-you-can" class="nav-link" data-scroll-target="#yes-you-can">Yes you can</a></li>
+  <li><a href="#whence-the-box" id="toc-whence-the-box" class="nav-link" data-scroll-target="#whence-the-box">Whence the box?</a></li>
+  <li><a href="#whence-the-box-1" id="toc-whence-the-box-1" class="nav-link" data-scroll-target="#whence-the-box-1">Whence the box?</a></li>
+  <li><a href="#whence-the-box-2" id="toc-whence-the-box-2" class="nav-link" data-scroll-target="#whence-the-box-2">Whence the box?</a></li>
+  <li><a href="#goes-with-d-1" id="toc-goes-with-d-1" class="nav-link" data-scroll-target="#goes-with-d-1">13 goes with d</a></li>
+  <li><a href="#goes-with-c-1" id="toc-goes-with-c-1" class="nav-link" data-scroll-target="#goes-with-c-1">12 goes with c</a></li>
+  <li><a href="#goes-with-a-1" id="toc-goes-with-a-1" class="nav-link" data-scroll-target="#goes-with-a-1">9 goes with a</a></li>
+  <li><a href="#goes-with-f-1" id="toc-goes-with-f-1" class="nav-link" data-scroll-target="#goes-with-f-1">8 goes with f</a></li>
+  <li><a href="#goes-with-b-1" id="toc-goes-with-b-1" class="nav-link" data-scroll-target="#goes-with-b-1">10 goes with b</a></li>
+  <li><a href="#goes-with-e-1" id="toc-goes-with-e-1" class="nav-link" data-scroll-target="#goes-with-e-1">11 goes with e</a></li>
   </ul>
 </li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/slides/12-wrap-up.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="12-wrap-up-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
@@ -492,120 +515,87 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><section id="that-pesky-midterm" class="level1"><h1>That pesky midterm…</h1>
-<section id="midterm-exam-1" class="level2"><h2 class="anchored" data-anchor-id="midterm-exam-1">Midterm Exam 1</h2>
+</header><section id="while-you-wait-participate" class="level2"><h2 class="anchored" data-anchor-id="while-you-wait-participate">While you wait: Participate 📱💻</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div class="wooclap">
+<p>Did your container stop working over the weekend?</p>
+<div class="wooclap-choices">
+<ul>
+<li>Yes;</li>
+<li>No;</li>
+<li>idk. I didn’t use it this weekend.</li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:30%;">
+<div id="" class="qrcode"></div>
+<script type="text/javascript">
+(function() {
+  var script = document.currentScript;
+  var qrcode = script.previousElementSibling;
+  qrcode.qrcode = new QRCode(qrcode, {"colorDark":"#000000","colorLight":"#ffffff","height":"300","text":"https://app.wooclap.com/TNRPMB?from=instruction-slide","width":"300"});
+  script.remove();
+})();
+</script><div class="small">
+<p>Scan the QR code or go <a href="https://app.wooclap.com/TNRPMB?from=instruction-slide">HERE</a>. Log in with your Duke NetID.</p>
+</div>
+</div>
+</div>
+</section><section id="reminders" class="level1"><h1>Reminders</h1>
+<section id="schedule-changes" class="level2"><h2 class="anchored" data-anchor-id="schedule-changes">Schedule changes</h2>
+<p>All of the containers should be back online. Even so…</p>
+<div class="incremental">
+<ul class="incremental">
+<li>Project proposals due Tue Feb 24 @ 11:59 pm;</li>
+<li>No lab Thu Feb 26;</li>
+<li>Proposal feedback returned Mon Mar 2;</li>
+<li>Make progress by Wed March 4 @ 11:59 pm;</li>
+<li>Peer review in lab Thu Mar 5;</li>
+<li>Spring break!</li>
+</ul>
+</div>
+</section><section id="midterm-exam-1" class="level2"><h2 class="anchored" data-anchor-id="midterm-exam-1">Midterm Exam 1</h2>
 <p>Worth 20% of your final grade; consists of two parts:</p>
 <ul>
 <li>
-<p><strong>In-class</strong>: worth 70% of the Midterm 1 grade;</p>
+<p><strong>In-class</strong>: worth 80% of the Midterm 1 grade;</p>
 <ul>
-<li>Thursday February 20 11:45 AM - 1:00 PM</li>
+<li>Wednesday February 25 11:45 AM - 1:00 PM in this room;</li>
 </ul>
 </li>
 <li>
-<p><strong>Take-home</strong>: worth 30% of the Midterm 1 grade.</p>
+<p><strong>Take-home</strong>: worth 20% of the Midterm 1 grade.</p>
 <ul>
-<li>Released Thursday February 20 at 1:00 PM;</li>
-<li>Due Monday February 24 at 8:30 AM.</li>
+<li>Released Thursday February 26 at 6:00 pm;</li>
+<li>Due Sunday March 1 @ 11:59 pm.</li>
 </ul>
 </li>
-</ul></section><section id="in-class" class="level2"><h2 class="anchored" data-anchor-id="in-class">In-class</h2>
+</ul>
+<p>If you take every exam and do better on the final than you did on this, we replace it.</p>
+</section><section id="in-class" class="level2"><h2 class="anchored" data-anchor-id="in-class">In-class</h2>
 <div class="incremental">
 <ul class="incremental">
 <li><p>All multiple choice;</p></li>
-<li><p>You will take it in Bio Sciences 111 (this room) or Physics 128;</p></li>
-<li><p>You get both sides of one 8.5” x 11” note sheet that you and only you created (written, typed, iPad, etc);</p></li>
-<li><p>If you do better on the final than you do on this, the final exam score will replace this.</p></li>
+<li><p>There were 35 questions last spring, some of which I included on the study guide;</p></li>
+<li>
+<p>You get both sides of one 8.5” x 11” note sheet created by you and you alone;</p>
+<ul class="incremental">
+<li>You can create it however you want (written, typed, iPad, etc);</li>
 </ul>
-</div>
-<p>. . .</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you have testing accommodations, make sure I get proper documentation from SDAO and make appointments in the Testing Center by Friday. The appointment should overlap substantially with our class time if possible.</p>
-</div>
-</div>
-</section></section><section id="misconduct" class="level1"><h1>MISCONDUCT</h1>
-<section id="example-in-class-question" class="level2"><h2 class="anchored" data-anchor-id="example-in-class-question">Example in-class question</h2>
-<p>Which command will replace a pre-existing column in a data frame with a new and improved version of itself?</p>
-<ol type="a">
-<li><code>group_by</code></li>
-<li><code>summarize</code></li>
-<li><code>pivot_wider</code></li>
-<li><code>geom_replace</code></li>
-<li><code>mutate</code></li>
-</ol></section><section id="example-in-class-question-1" class="level2"><h2 class="anchored" data-anchor-id="example-in-class-question-1">Example in-class question</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 2
-      x y      
-  &lt;dbl&gt; &lt;chr&gt;  
-1     1 John   
-2     2 John   
-3     3 Cameron
-4     4 Zito   
-5     5 Zito   
-6     6 Zito   </code></pre>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">y</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">summarize</span><span class="op">(</span>xbar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>How many rows will this output have?</p>
-<ol type="a">
-<li>1</li>
-<li>2</li>
-<li>3</li>
-<li>6</li>
-<li>11</li>
-</ol>
-</div>
-</div>
-</section><section id="example-in-class-question-2" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="example-in-class-question-2">Example in-class question</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Which box plot is visualizing the same data as the histogram?</p>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="960"></p>
-</figure>
-</div>
-</div>
+</li>
+<li><p>If you seek testing accommodations but haven’t documented them with the SDAO and made a Testing Center appointment, it may be too late, but try ASAP.</p></li>
+</ul>
 </div>
 </section><section id="what-should-i-put-on-my-cheat-sheet" class="level2"><h2 class="anchored" data-anchor-id="what-should-i-put-on-my-cheat-sheet">What should I put on my cheat sheet?</h2>
 <p>. . .</p>
-<p><a href="https://edstem.org/us/courses/70595/discussion/6137999"><strong>Ask one of our undergrad TAs!</strong></a> They took the class. I didn’t.</p>
+<p><a href="https://edstem.org/us/courses/90224/discussion/7626328"><strong>Ask one of our undergrad TAs!</strong></a> They took the class. I didn’t.</p>
 <div class="incremental">
 <ul class="incremental">
 <li>description of common functions;</li>
 <li>description of different visualizations: how to interpret, and what to use when;</li>
-<li>doodles;</li>
-<li>cute words of affirmation.</li>
+<li>cute doodles;</li>
+<li>words of affirmation.</li>
 </ul>
 </div>
 <p>. . .</p>
@@ -625,60 +615,69 @@ Warning
 </section><section id="take-home" class="level2"><h2 class="anchored" data-anchor-id="take-home">Take-home</h2>
 <div class="incremental">
 <ul class="incremental">
-<li>It will be just like a lab, only shorter;</li>
+<li>It will be just like a homework, only shorter;</li>
 <li>Completely open-resource, but citation policies apply;</li>
 <li>Absolutely no collaboration of any kind;</li>
-<li>Seek help by posting <em>privately</em> on Ed;</li>
+<li>Seek help by posting <em>privately</em> on Ed;
+<ul class="incremental">
+<li>OH are canceled while tha take-home is live;</li>
+</ul>
+</li>
 <li>Submit your final PDF to Gradescope in the usual way.</li>
 </ul>
 </div>
-</section><section id="reminder-conduct-policies" class="level2"><h2 class="anchored" data-anchor-id="reminder-conduct-policies">Reminder: conduct policies</h2>
+</section><section id="things-you-can-do-to-study" class="level2"><h2 class="anchored" data-anchor-id="things-you-can-do-to-study">Things you can do to study</h2>
+<p>In order of importance:</p>
 <div class="incremental">
 <ul class="incremental">
-<li>Uncited use of outside resources or inappropriate collaboration will result in a zero and be referred to the conduct office;</li>
+<li>Study guide</li>
+<li>Work on your cheat sheet;</li>
+<li>Correct old labs and homeworks;</li>
+<li>Old AEs: complete tasks we didn’t get to and compare with key;</li>
+<li>Old HWs: complete any unfinished “Feedback from AI” problems;</li>
+<li>Code along: watch these videos specifically;</li>
+<li>Textbook: odd-numbered exercises in the back of Chs. 1, 4, 5, 6.</li>
+</ul>
+</div>
+</section><section id="our-conduct-policies" class="level2"><h2 class="anchored" data-anchor-id="our-conduct-policies">Our conduct policies</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Inappropriate collaboration will result in a zero on the entire take-home and be referred to the conduct office;</li>
+<li>That zero will not be dropped or replaced;</li>
 <li>If a conduct violation of any kind is discovered, your final letter grade in the course will be permanently reduced (A- down to B+, B+ down to B, etc);</li>
 <li>If folks share solutions, all students involved will be penalized equally, the sharer the same as the recipient.</li>
 </ul>
 </div>
-<p>. . .</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-It’s not personal.
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>These policies apply to everyone. I don’t care who your parents are, or what medical schools you are applying to in the fall. Grow up and act right.</p>
-</div>
-</div>
-</section><section id="things-you-can-do-to-study" class="level2"><h2 class="anchored" data-anchor-id="things-you-can-do-to-study">Things you can do to study</h2>
+</section><section id="dukes-conduct-policies" class="level2"><h2 class="anchored" data-anchor-id="dukes-conduct-policies">Duke’s conduct policies</h2>
+<p>Let’s say we catch you:</p>
 <div class="incremental">
 <ul class="incremental">
+<li>If you are a first-time offender, your case goes to “faculty-student resolution”;</li>
+<li>If you sign your name, you admit to wrongdoing, and agree to accept the policies outlined in my syllabus;</li>
+<li>If you do not re-offend, Duke promises that this first offense will not appear on your transcript and is not reportable outside the university.</li>
+</ul>
+</div>
+</section><section id="except" class="level2 medium"><h2 class="medium anchored" data-anchor-id="except">Except…</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>Medical school applicants are compelled to self-report any prior cases of misconduct, <em>even if</em> they are unreportable and do not appear on a transcript;</p></li>
 <li>
-<strong>Practice problems</strong>: released Thursday February 13;</li>
-<li>
-<strong>Attend lab</strong>: review game on Monday February 17;</li>
-<li>
-<strong>Old labs</strong>: correct parts where you lost points;</li>
-<li>
-<strong>Old AEs</strong>: complete tasks we didn’t get to and compare with key;</li>
-<li>
-<strong>Code along</strong>: watch these videos specifically;</li>
-<li>
-<strong>Textbook</strong>: odd-numbered exercises in the back of Chs. 1, 4, 5, 6.</li>
+<p>This is what the AAMC calls an “<a href="https://students-residents.aamc.org/applying-medical-school-amcas/publication-chapters/institutional-action">Institutional Action</a>:”</p>
+<blockquote class="blockquote">
+<p>If you were ever the recipient of any institutional action by any college or medical school for…a conduct violation, you must answer Yes…even if such action did not: interrupt your enrollment, require you to withdraw, or appear on your official transcripts.</p>
+</blockquote>
+</li>
+<li><p>Talk to Alyssa Perz if you don’t believe me! Prehealth advising has <a href="https://advising.duke.edu/prehealth/apply/comduct-violations/">a whole page</a> on this.</p></li>
 </ul>
 </div>
 </section></section><section id="lets-zoom-out-for-a-sec" class="level1"><h1>Let’s zoom out for a sec…</h1>
 <section id="data-science-and-statistical-thinking" class="level2"><h2 class="anchored" data-anchor-id="data-science-and-statistical-thinking">Data science and statistical thinking</h2>
-<p>Before Midterm 1…</p>
+<p>Before spring break…</p>
 <ul>
 <li>
 <strong>Data science</strong>: the real-world <em>art</em> of transforming messy, imperfect, incomplete data into knowledge;</li>
 </ul>
-<p>After Midterm 1…</p>
+<p>After spring break…</p>
 <ul>
 <li>
 <strong>Statistics</strong>: the mathematical discipline of quantifying our uncertainty about that knowledge.</li>
@@ -694,39 +693,39 @@ It’s not personal.
 <p><strong>Collection</strong>: we won’t seriously study this!</p>
 <ul class="incremental">
 <li>
-<strong>for us</strong>: data importing (<code>read_csv</code>), and webscraping (next time);</li>
+<strong>for us</strong>: data importing (<code>read_csv</code> etc) or webscraping;</li>
 <li>
 <strong>but really</strong>: domain-specific issues of measurement, survey design, experimental design, etc;</li>
 </ul>
 </li>
 </ol>
 </div>
-</section><section id="from-last-time-data-collection" class="level2"><h2 class="anchored" data-anchor-id="from-last-time-data-collection">From last time: data collection</h2>
+</section><section id="data-collection" class="level2 small"><h2 class="small anchored" data-anchor-id="data-collection">Data collection</h2>
 <p>I sent out my lil’ survey with Google Forms, downloaded the responses in a CSV, and read that sucker in:</p>
 <div class="columns">
 <div class="column" style="width:35%;">
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf0x7gOZY04c9vzdyIdm-v_vCqL0oFaQI9-LWB8Dt3uf3TriQ/viewform?embedded=true" width="350" height="400" frameborder="0" marginheight="0" marginwidth="0">
-<p>Loading…</p>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSflj08LttBQIz9Qnn0nfKspnGsQesY1y-_xOqPahT7SxRfUAw/viewform?embedded=true" width="640" height="912" frameborder="0" marginheight="0" marginwidth="0">
+Loading…
 </iframe>
 </div><div class="column" style="width:65%;">
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"data/survey-2025-02-06.csv"</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"data/survey-2026-02-09.csv"</span><span class="op">)</span></span>
 <span><span class="va">survey</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 209 × 3
+<pre><code># A tibble: 276 × 3
    Timestamp         How many classes do you have on Tues…¹ `What year are you?`
    &lt;chr&gt;             &lt;chr&gt;                                  &lt;chr&gt;               
- 1 2/6/2025 11:33:57 3                                      Sophomore           
- 2 2/6/2025 11:37:39 3                                      First-year          
- 3 2/6/2025 11:40:55 2                                      Senior              
- 4 2/6/2025 11:42:05 3                                      First-year          
- 5 2/6/2025 11:42:46 3                                      Senior              
- 6 2/6/2025 11:43:28 3                                      Senior              
- 7 2/6/2025 11:44:41 3                                      First-year          
- 8 2/6/2025 11:44:49 3                                      First-year          
- 9 2/6/2025 11:44:51 2                                      Sophomore           
-10 2/6/2025 11:44:51 3                                      Sophomore           
-# ℹ 199 more rows
+ 1 2/9/2026 11:03:46 3                                      First-year          
+ 2 2/9/2026 11:29:24 2                                      Sophomore           
+ 3 2/9/2026 11:33:44 2                                      Sophomore           
+ 4 2/9/2026 11:33:48 2                                      Sophomore           
+ 5 2/9/2026 11:33:56 1                                      First-year          
+ 6 2/9/2026 11:33:56 3                                      First-year          
+ 7 2/9/2026 11:33:58 3                                      Sophomore           
+ 8 2/9/2026 11:34:07 3                                      Sophomore           
+ 9 2/9/2026 11:34:13 2                                      First-year          
+10 2/9/2026 11:34:20 3                                      Junior              
+# ℹ 266 more rows
 # ℹ abbreviated name: ¹​`How many classes do you have on Tuesdays?`</code></pre>
 </div>
 </div>
@@ -738,7 +737,7 @@ It’s not personal.
 <p><strong>Collection</strong>: we won’t seriously study this!</p>
 <ul>
 <li>
-<strong>for us</strong>: data importing (<code>read_csv</code>), and webscraping (next time);</li>
+<strong>for us</strong>: data importing (<code>read_csv</code>) or webscraping;</li>
 <li>
 <strong>but really</strong>: domain-specific issues of measurement, survey design, experimental design, etc;</li>
 </ul>
@@ -756,23 +755,21 @@ It’s not personal.
 </li>
 </ol>
 </div>
-</section><section id="from-last-time-data-preparation" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="from-last-time-data-preparation">From last time: data preparation</h2>
+</section><section id="data-preparation" class="level2 scrollable small"><h2 class="scrollable small anchored" data-anchor-id="data-preparation">Data preparation</h2>
 <div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span> <span class="op">&lt;-</span> <span class="va">survey</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span> <span class="op">&lt;-</span> <span class="va">survey</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">rename</span><span class="op">(</span></span>
 <span>    tue_classes <span class="op">=</span> <span class="va">`How many classes do you have on Tuesdays?`</span>,</span>
 <span>    year <span class="op">=</span> <span class="va">`What year are you?`</span></span>
 <span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">mutate</span><span class="op">(</span></span>
 <span>    tue_classes <span class="op">=</span> <span class="fu">case_when</span><span class="op">(</span></span>
-<span>      <span class="va">tue_classes</span> <span class="op">==</span> <span class="st">"2 -3"</span> <span class="op">~</span> <span class="st">"3"</span>,</span>
-<span>      <span class="va">tue_classes</span> <span class="op">==</span> <span class="st">"3 classes"</span> <span class="op">~</span> <span class="st">"3"</span>,</span>
-<span>      <span class="va">tue_classes</span> <span class="op">==</span> <span class="st">"Four"</span> <span class="op">~</span> <span class="st">"4"</span>,</span>
-<span>      <span class="va">tue_classes</span> <span class="op">==</span> <span class="st">"TWO MANY"</span> <span class="op">~</span> <span class="st">"2"</span>,</span>
+<span>      <span class="va">tue_classes</span> <span class="op">==</span> <span class="st">"1 class, 1 lab, 1 volunteering session"</span> <span class="op">~</span> <span class="st">"2"</span>,</span>
+<span>      <span class="va">tue_classes</span> <span class="op">==</span> <span class="st">"One"</span> <span class="op">~</span> <span class="st">"1"</span>,</span>
 <span>      <span class="va">tue_classes</span> <span class="op">==</span> <span class="st">"Three"</span> <span class="op">~</span> <span class="st">"3"</span>,</span>
 <span>      <span class="va">tue_classes</span> <span class="op">==</span> <span class="st">"Two"</span> <span class="op">~</span> <span class="st">"2"</span>,</span>
-<span>      <span class="va">tue_classes</span> <span class="op">==</span> <span class="st">"Two plus a chemistry lab"</span> <span class="op">~</span> <span class="st">"3"</span>,</span>
-<span>      <span class="va">tue_classes</span> <span class="op">==</span> <span class="st">"three"</span> <span class="op">~</span> <span class="st">"3"</span>,</span>
+<span>      <span class="va">tue_classes</span> <span class="op">==</span> <span class="st">"Two in both days"</span> <span class="op">~</span> <span class="st">"2"</span>,</span>
+<span>      <span class="va">tue_classes</span> <span class="op">==</span> <span class="st">"two"</span> <span class="op">~</span> <span class="st">"2"</span>,</span>
 <span>      .default <span class="op">=</span> <span class="va">tue_classes</span></span>
 <span>    <span class="op">)</span>,</span>
 <span>    tue_classes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="va">tue_classes</span><span class="op">)</span>,</span>
@@ -781,20 +778,20 @@ It’s not personal.
 <span>  <span class="fu">select</span><span class="op">(</span><span class="va">tue_classes</span>, <span class="va">year</span><span class="op">)</span></span>
 <span><span class="va">survey</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 209 × 2
+<pre><code># A tibble: 276 × 2
    tue_classes year      
          &lt;dbl&gt; &lt;fct&gt;     
- 1           3 Sophomore 
- 2           3 First-year
- 3           2 Senior    
- 4           3 First-year
- 5           3 Senior    
- 6           3 Senior    
- 7           3 First-year
- 8           3 First-year
- 9           2 Sophomore 
-10           3 Sophomore 
-# ℹ 199 more rows</code></pre>
+ 1           3 First-year
+ 2           2 Sophomore 
+ 3           2 Sophomore 
+ 4           2 Sophomore 
+ 5           1 First-year
+ 6           3 First-year
+ 7           3 Sophomore 
+ 8           3 Sophomore 
+ 9           2 First-year
+10           3 Junior    
+# ℹ 266 more rows</code></pre>
 </div>
 </div>
 </section><section id="data-science-3" class="level2 medium"><h2 class="medium anchored" data-anchor-id="data-science-3">Data science</h2>
@@ -803,7 +800,7 @@ It’s not personal.
 <p><strong>Collection</strong>: we won’t seriously study this!</p>
 <ul>
 <li>
-<strong>for us</strong>: data importing (<code>read_csv</code>), and webscraping (next time);</li>
+<strong>for us</strong>: data importing (<code>read_csv</code>) or webscraping;</li>
 <li>
 <strong>but really</strong>: domain-specific issues of measurement, survey design, experimental design, etc;</li>
 </ul>
@@ -830,89 +827,91 @@ It’s not personal.
 </li>
 </ol>
 </div>
-</section><section id="from-last-time-data-analysis" class="level2"><h2 class="anchored" data-anchor-id="from-last-time-data-analysis">From last time: data analysis</h2>
+</section><section id="data-analysis" class="level2"><h2 class="anchored" data-anchor-id="data-analysis">Data analysis</h2>
 <p>A human being can learn nothing from staring at this box:</p>
 <div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 209 × 2
+<pre><code># A tibble: 276 × 2
    tue_classes year      
          &lt;dbl&gt; &lt;fct&gt;     
- 1           3 Sophomore 
- 2           3 First-year
- 3           2 Senior    
- 4           3 First-year
- 5           3 Senior    
- 6           3 Senior    
- 7           3 First-year
- 8           3 First-year
- 9           2 Sophomore 
-10           3 Sophomore 
-# ℹ 199 more rows</code></pre>
+ 1           3 First-year
+ 2           2 Sophomore 
+ 3           2 Sophomore 
+ 4           2 Sophomore 
+ 5           1 First-year
+ 6           3 First-year
+ 7           3 Sophomore 
+ 8           3 Sophomore 
+ 9           2 First-year
+10           3 Junior    
+# ℹ 266 more rows</code></pre>
 </div>
 </div>
-</section><section id="from-last-time-data-analysis-1" class="level2"><h2 class="anchored" data-anchor-id="from-last-time-data-analysis-1">From last time: data analysis</h2>
+</section><section id="data-analysis-1" class="level2"><h2 class="anchored" data-anchor-id="data-analysis-1">Data analysis</h2>
 <p>Picture!</p>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">survey</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">tue_classes</span>, fill <span class="op">=</span> <span class="va">year</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">survey</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">tue_classes</span>, fill <span class="op">=</span> <span class="va">year</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu">geom_bar</span><span class="op">(</span>position <span class="op">=</span> <span class="st">"dodge"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
-</section><section id="from-last-time-data-analysis-2" class="level2"><h2 class="anchored" data-anchor-id="from-last-time-data-analysis-2">From last time: data analysis</h2>
+</section><section id="data-analysis-2" class="level2"><h2 class="anchored" data-anchor-id="data-analysis-2">Data analysis</h2>
 <p>Better picture?</p>
 <div class="cell">
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">survey</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">tue_classes</span>, fill <span class="op">=</span> <span class="va">year</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">survey</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">tue_classes</span>, fill <span class="op">=</span> <span class="va">year</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu">geom_bar</span><span class="op">(</span>position <span class="op">=</span> <span class="st">"fill"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
-</section><section id="from-last-time-data-analysis-3" class="level2"><h2 class="anchored" data-anchor-id="from-last-time-data-analysis-3">From last time: data analysis</h2>
+</section><section id="data-analysis-3" class="level2"><h2 class="anchored" data-anchor-id="data-analysis-3">Data analysis</h2>
 <p>Numbers!</p>
 <div class="cell">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">count</span><span class="op">(</span><span class="va">tue_classes</span>, <span class="va">year</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">tue_classes</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">mutate</span><span class="op">(</span>prop <span class="op">=</span> <span class="va">n</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 17 × 4
+<pre><code># A tibble: 19 × 4
 # Groups:   tue_classes [5]
    tue_classes year           n   prop
          &lt;dbl&gt; &lt;fct&gt;      &lt;int&gt;  &lt;dbl&gt;
- 1           1 Sophomore      4 0.4   
- 2           1 Junior         4 0.4   
- 3           1 Senior         2 0.2   
- 4           2 First-year    25 0.439 
- 5           2 Sophomore     19 0.333 
- 6           2 Junior         9 0.158 
- 7           2 Senior         4 0.0702
- 8           3 First-year    47 0.427 
- 9           3 Sophomore     46 0.418 
-10           3 Junior         9 0.0818
-11           3 Senior         8 0.0727
-12           4 First-year    18 0.621 
-13           4 Sophomore      9 0.310 
-14           4 Junior         1 0.0345
-15           4 Senior         1 0.0345
-16           5 First-year     2 0.667 
-17           5 Sophomore      1 0.333 </code></pre>
+ 1           0 First-year     4 0.308 
+ 2           0 Sophomore      5 0.385 
+ 3           0 Junior         2 0.154 
+ 4           0 Senior         2 0.154 
+ 5           1 First-year    28 0.438 
+ 6           1 Sophomore     23 0.359 
+ 7           1 Junior        11 0.172 
+ 8           1 Senior         2 0.0312
+ 9           2 First-year    58 0.464 
+10           2 Sophomore     46 0.368 
+11           2 Junior        16 0.128 
+12           2 Senior         5 0.04  
+13           3 First-year    30 0.448 
+14           3 Sophomore     21 0.313 
+15           3 Junior        14 0.209 
+16           3 Senior         2 0.0299
+17           4 First-year     3 0.429 
+18           4 Sophomore      1 0.143 
+19           4 Junior         3 0.429 </code></pre>
 </div>
 </div>
-</section><section id="data-science-4" class="level2 medium"><h2 class="medium anchored" data-anchor-id="data-science-4">Data science</h2>
+</section><section id="data-science-4" class="level2 small"><h2 class="small anchored" data-anchor-id="data-science-4">Data science</h2>
 <ol type="1">
 <li>
 <p><strong>Collection</strong>: we won’t seriously study this!</p>
 <ul>
 <li>
-<strong>for us</strong>: data importing (<code>read_csv</code>), and webscraping (next time);</li>
+<strong>for us</strong>: data importing (<code>read_csv</code>) or webscraping;</li>
 <li>
 <strong>but really</strong>: domain-specific issues of measurement, survey design, experimental design, etc;</li>
 </ul>
@@ -1015,32 +1014,32 @@ It’s not personal.
 </div>
 </section><section id="a-cautionary-tale-anscombes-quartet-1" class="level2"><h2 class="anchored" data-anchor-id="a-cautionary-tale-anscombes-quartet-1">A cautionary tale: Anscombe’s quartet</h2>
 <div class="cell">
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">anscombe_tidy</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">anscombe_tidy</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span> <span class="va">set</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </section><section id="a-cautionary-tale-anscombes-quartet-2" class="level2"><h2 class="anchored" data-anchor-id="a-cautionary-tale-anscombes-quartet-2">A cautionary tale: Anscombe’s quartet</h2>
 <div class="cell">
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">anscombe_tidy</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">anscombe_tidy</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span> <span class="va">set</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span>, se <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </section><section id="if-you-only-looked-at-summary-statistics" class="level2"><h2 class="anchored" data-anchor-id="if-you-only-looked-at-summary-statistics">If you only looked at summary statistics…</h2>
 <div class="cell">
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">anscombe_tidy</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">anscombe_tidy</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">set</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">summarize</span><span class="op">(</span></span>
 <span>    xbar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>,</span>
@@ -1078,6 +1077,345 @@ It’s not personal.
 <div class="column fragment" style="width:70%;">
 <div class="quarto-figure quarto-figure-right">
 <figure class="figure"><p><img src="images/09/ggr.jpg" class="img-fluid quarto-figure quarto-figure-right figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section><section id="study-guide" class="level1"><h1>Study guide</h1>
+<section id="can-you-match-these" class="level2"><h2 class="anchored" data-anchor-id="can-you-match-these">Can you match these…</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/simulated-data-scatterplots-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="with-these" class="level2"><h2 class="anchored" data-anchor-id="with-these">…with these?</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/simulated-data-histograms-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="matching-scatterplots-and-histograms" class="level2 small scrollable"><h2 class="small scrollable anchored" data-anchor-id="matching-scatterplots-and-histograms">Matching scatterplots and histograms</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p>Dataframe with two numerical variables:</p>
+<div class="cell">
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 100 × 2
+        x       y
+    &lt;dbl&gt;   &lt;dbl&gt;
+ 1 -0.554 -0.885 
+ 2  1.58   0.497 
+ 3  1.68  -0.135 
+ 4  1.69  -0.175 
+ 5 -0.652  0.331 
+ 6  1.59   0.0341
+ 7 -2.23  -0.174 
+ 8  0.571 -1.00  
+ 9  1.30  -1.09  
+10  1.62   0.722 
+# ℹ 90 more rows</code></pre>
+</div>
+</div>
+</div>
+<div class="column fragment" style="width:35%;">
+<p>Histograms for each:</p>
+<div class="cell">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">df</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_histogram</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">df</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">y</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_histogram</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="column fragment" style="width:40%;">
+<p>Scatterplot for both:</p>
+<div class="cell">
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">df</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, y <span class="op">=</span> <span class="va">y</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="goes-with-e" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-e">2 goes with e</h2>
+<p>Everything is symmetric and concentrating in one place:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="goes-with-f" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-f">7 goes with f</h2>
+<p><code>x</code> and <code>y</code> each concentrate in <em>two</em> places:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="goes-with-d" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-d">3 goes with d</h2>
+<p><code>x</code> concentrates in two places, but <code>y</code> only concentrates in one:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="goes-with-c" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-c">6 goes with c</h2>
+<p>Points are evenly spread everywhere:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="goes-with-b" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-b">4 goes with b</h2>
+<p>Asymetry in <code>y</code> but not in <code>x</code>:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-29-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-30-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="goes-with-a" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-a">5 goes with a</h2>
+<p>This one’s just weird. By process of elimination…</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-31-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-32-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="can-you-match-these-1" class="level2"><h2 class="anchored" data-anchor-id="can-you-match-these-1">Can you match these…</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/simulated-data-densities-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="with-these-1" class="level2"><h2 class="anchored" data-anchor-id="with-these-1">…with these?</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/simulated-data-boxes-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="yes-you-can" class="level2"><h2 class="anchored" data-anchor-id="yes-you-can">Yes you can</h2>
+<p>If you know how the box is drawn:</p>
+<div class="incremental">
+<ul class="incremental">
+<li>The line inside the box is the median (50% quantile);</li>
+<li>The left edge is the 25% quantile;</li>
+<li>The right edge is the 75% quantile;</li>
+<li>The box spans the middle 50% of the data;</li>
+<li>The whiskers and dots span the entire range of the data;</li>
+</ul>
+</div>
+<p>. . .</p>
+<p>Boxplots display center, spread, and (a)symmetry, but <em>not</em> modality.</p>
+</section><section id="whence-the-box" class="level2 medium scrollable"><h2 class="medium scrollable anchored" data-anchor-id="whence-the-box">Whence the box?</h2>
+<p>The middle of the box is the <strong>median</strong>. 50% of the data are below, and 50% are above:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-33-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="whence-the-box-1" class="level2 medium scrollable"><h2 class="medium scrollable anchored" data-anchor-id="whence-the-box-1">Whence the box?</h2>
+<p>The lower edge of the box is the <strong>25% quantile</strong>. 25% of the data are below, and 75% are above:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-34-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="whence-the-box-2" class="level2 medium scrollable"><h2 class="medium scrollable anchored" data-anchor-id="whence-the-box-2">Whence the box?</h2>
+<p>The upper edge of the box is the <strong>75% quantile</strong>. 75% of the data are below, and 25% are above:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-35-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="goes-with-d-1" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-d-1">13 goes with d</h2>
+<p>The only one concentrating near 2:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-36-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="goes-with-c-1" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-c-1">12 goes with c</h2>
+<p>Concentrating around -2 and symmetric:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-37-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="goes-with-a-1" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-a-1">9 goes with a</h2>
+<p>Concentrating around -2 and asymmetric:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-38-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="goes-with-f-1" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-f-1">8 goes with f</h2>
+<p>Multimodality is a distraction. Pay attention to the whiskers.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-39-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="goes-with-b-1" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-b-1">10 goes with b</h2>
+<p>Also centered at 0, but more spread out than 8:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-40-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="goes-with-e-1" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-e-1">11 goes with e</h2>
+<p>Also centered at 0, but how wide must you make the box to swallow the middle 50%? Pretty darn wide:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-revealjs/unnamed-chunk-41-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
