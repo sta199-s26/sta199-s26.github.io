@@ -15,153 +15,115 @@ format:
     code-link: true
 ---
 
-# That pesky midterm...
+## While you wait: Participate 📱💻 
 
-## Midterm Exam 1
+::: columns
+
+::: {.column width="70%"}
+
+::: wooclap
+
+Did your container stop working over the weekend?
+
+::: wooclap-choices
+- Yes;
+- No; 
+- idk. I didn't use it this weekend.
+:::
+
+:::
+:::
+
+::: {.column width="30%"}
+{{< include _wooclap-column.qmd >}}
+:::
+
+:::
+
+
+# Reminders
+
+## Schedule changes
 
 ```{r}
 #| include: false
-
+library(usdata)
+library(unvotes)
 library(tidyverse)
-todays_ae <- "ae-09-age-gaps-import"
+library(ggthemes)
+library(openintro)
+library(scales)
+library(palmerpenguins)
+library(nycflights13)
+library(gt)
+library(janitor)
+library(knitr)
+
+library(MASS)
+library(knitr)
+library(scales)
+library(conflicted)
+library(distr)
+conflicts_prefer(
+  dplyr::select(),
+  dplyr::filter(),
+  dplyr::n(),
+  palmerpenguins::penguins
+)
 ```
+
+All of the containers should be back online. Even so...
+
+::: incremental
+- Project proposals due Tue Feb 24 @ 11:59 pm;
+- No lab Thu Feb 26;
+- Proposal feedback returned Mon Mar 2;
+- Make progress by Wed March 4 @ 11:59 pm;
+- Peer review in lab Thu Mar 5;
+- Spring break!
+:::
+
+## Midterm Exam 1
 
 Worth 20% of your final grade; consists of two parts:
 
--   **In-class**: worth 70% of the Midterm 1 grade;
+-   **In-class**: worth 80% of the Midterm 1 grade;
 
-    -   Thursday February 20 11:45 AM - 1:00 PM
+    -   Wednesday February 25 11:45 AM - 1:00 PM in this room;
 
--   **Take-home**: worth 30% of the Midterm 1 grade.
+-   **Take-home**: worth 20% of the Midterm 1 grade.
 
-    -   Released Thursday February 20 at 1:00 PM;
-    -   Due Monday February 24 at 8:30 AM.
+    -   Released Thursday February 26 at 6:00 pm;
+    -   Due Sunday March 1 @ 11:59 pm.
+
+If you take every exam and do better on the final than you did on this, we replace it.
 
 ## In-class
 
 ::: incremental
 -   All multiple choice;
 
--   You will take it in Bio Sciences 111 (this room) or Physics 128;
+-   There were 35 questions last spring, some of which I included on the study guide;
 
--   You get both sides of one 8.5" x 11" note sheet that you and only you created (written, typed, iPad, etc);
+-   You get both sides of one 8.5" x 11" note sheet created by you and you alone;
 
--   If you do better on the final than you do on this, the final exam score will replace this.
+    - You can create it however you want (written, typed, iPad, etc);
+
+-   If you seek testing accommodations but haven't documented them with the SDAO and made a Testing Center appointment, it may be too late, but try ASAP.
 :::
 
-. . .
-
-::: callout-important
-If you have testing accommodations, make sure I get proper documentation from SDAO and make appointments in the Testing Center by Friday. The appointment should overlap substantially with our class time if possible.
-:::
-
-# MISCONDUCT
-
-## Example in-class question
-
-Which command will replace a pre-existing column in a data frame with a new and improved version of itself?
-
-a.  `group_by`
-b.  `summarize`
-c.  `pivot_wider`
-d.  `geom_replace`
-e.  `mutate`
-
-## Example in-class question
-
-```{r}
-#| echo: false
-
-df <- tibble(
-  x = c(1, 2, 3, 4, 5, 6),
-  y = c("John", "John", "Cameron", "Zito", "Zito", "Zito")
-)
-```
-
-::: columns
-::: {.column width="50%"}
-```{r}
-df
-```
-:::
-
-::: {.column width="50%"}
-```{r}
-#| eval: false 
-
-df |>
-  group_by(y) |>
-  summarize(xbar = mean(x))
-```
-
-How many rows will this output have?
-
-a.  1
-b.  2
-c.  3
-d.  6
-e.  11
-:::
-:::
-
-## Example in-class question {.scrollable}
-
-::: columns
-::: {.column width="50%"}
-Which box plot is visualizing the same data as the histogram?
-:::
-
-::: {.column width="50%"}
-```{r}
-#| echo: false
-#| warning: false
-set.seed(100)
-x <- c(rnorm(150), rnorm(350, mean = 2, sd = 0.5))
-df <- tibble(x = x)
-ggplot(df, aes(x = x)) +
-  geom_histogram() + 
-  theme(axis.text = element_text(size = 36)) + 
-  labs(x = NULL, y = NULL)
-```
-:::
-:::
-
-```{r}
-#| echo: false
-#| fig-asp: 0.33
-#| warning: false
-w <- rnorm(500)
-y <- c(pmax(rnorm(350, mean = -1), -2), rnorm(150, mean = 2, sd = 0.5))
-z <- x + 10
-X <- as_tibble(cbind(sort(rep(1:4, 500)), c(w, z, x, y))) |>
-  mutate(
-    V1 = case_when(
-      V1 == 1 ~ "a",
-      V1 == 2 ~ "b",
-      V1 == 3 ~ "c",
-      V1 == 4 ~ "d",
-    )
-  )
-ggplot(X, aes(x = V2)) + 
-  geom_boxplot() + 
-  facet_wrap(.~V1, scales = "free") + 
-  theme(axis.text = element_text(size = 18), 
-        axis.text.y = element_blank(),
-        axis.ticks.y = element_blank()) + 
-  labs(x = NULL, y = NULL)
-```
 
 ## What should I put on my cheat sheet?
 
 . . .
 
-[**Ask one of our undergrad TAs!**](https://edstem.org/us/courses/70595/discussion/6137999) They took the class. I didn't.
+[**Ask one of our undergrad TAs!**](https://edstem.org/us/courses/90224/discussion/7626328) They took the class. I didn't.
 
 ::: incremental
 -   description of common functions;
 -   description of different visualizations: how to interpret, and what to use when;
--   doodles;
--   cute words of affirmation.
+-   cute doodles;
+-   words of affirmation.
 :::
 
 . . .
@@ -173,49 +135,68 @@ Don't waste space on the details of any specific applications or datasets we've 
 ## Take-home
 
 ::: incremental
--   It will be just like a lab, only shorter;
+-   It will be just like a homework, only shorter;
 -   Completely open-resource, but citation policies apply;
 -   Absolutely no collaboration of any kind;
 -   Seek help by posting *privately* on Ed;
+    - OH are canceled while tha take-home is live;
 -   Submit your final PDF to Gradescope in the usual way.
-:::
-
-## Reminder: conduct policies
-
-::: incremental
--   Uncited use of outside resources or inappropriate collaboration will result in a zero and be referred to the conduct office;
--   If a conduct violation of any kind is discovered, your final letter grade in the course will be permanently reduced (A- down to B+, B+ down to B, etc);
--   If folks share solutions, all students involved will be penalized equally, the sharer the same as the recipient.
-:::
-
-. . .
-
-::: callout-warning
-## It's not personal.
-
-These policies apply to everyone. I don't care who your parents are, or what medical schools you are applying to in the fall. Grow up and act right.
 :::
 
 ## Things you can do to study
 
+In order of importance:
+
 ::: incremental
--   **Practice problems**: released Thursday February 13;
--   **Attend lab**: review game on Monday February 17;
--   **Old labs**: correct parts where you lost points;
--   **Old AEs**: complete tasks we didn't get to and compare with key;
--   **Code along**: watch these videos specifically;
--   **Textbook**: odd-numbered exercises in the back of Chs. 1, 4, 5, 6.
+-   Study guide
+-   Work on your cheat sheet;
+-   Correct old labs and homeworks;
+-   Old AEs: complete tasks we didn't get to and compare with key;
+-   Old HWs: complete any unfinished "Feedback from AI" problems;
+-   Code along: watch these videos specifically;
+-   Textbook: odd-numbered exercises in the back of Chs. 1, 4, 5, 6.
+:::
+
+## Our conduct policies
+
+::: incremental
+-   Inappropriate collaboration will result in a zero on the entire take-home and be referred to the conduct office;
+- That zero will not be dropped or replaced;
+-   If a conduct violation of any kind is discovered, your final letter grade in the course will be permanently reduced (A- down to B+, B+ down to B, etc);
+-   If folks share solutions, all students involved will be penalized equally, the sharer the same as the recipient.
+:::
+
+## Duke's conduct policies
+
+Let's say we catch you:
+
+
+::: incremental 
+- If you are a first-time offender, your case goes to "faculty-student resolution";
+- If you sign your name, you admit to wrongdoing, and agree to accept the policies outlined in my syllabus;
+- If you do not re-offend, Duke promises that this first offense will not appear on your transcript and is not reportable outside the university.
+:::
+
+## Except... {.medium}
+
+::: incremental 
+- Medical school applicants are compelled to self-report any prior cases of misconduct, *even if* they are unreportable and do not appear on a transcript;
+- This is what the AAMC calls an "[Institutional Action](https://students-residents.aamc.org/applying-medical-school-amcas/publication-chapters/institutional-action):"
+
+    > If you were ever the recipient of any institutional action by any college or medical school for...a conduct violation, you must answer Yes...even if such action did not: interrupt your enrollment, require you to withdraw, or appear on your official transcripts.
+
+- Duke prehealth advising has [a whole page](https://advising.duke.edu/prehealth/apply/comduct-violations/) on this.
 :::
 
 # Let's zoom out for a sec...
 
 ## Data science and statistical thinking
 
-Before Midterm 1...
+Before spring break...
 
 -   **Data science**: the real-world *art* of transforming messy, imperfect, incomplete data into knowledge;
 
-After Midterm 1...
+After spring break...
 
 -   **Statistics**: the mathematical discipline of quantifying our uncertainty about that knowledge.
 
@@ -228,26 +209,22 @@ After Midterm 1...
 ::: incremental
 1.  **Collection**: we won't seriously study this!
 
-    -   **for us**: data importing (`read_csv`), and webscraping (next time);
+    -   **for us**: data importing (`read_csv` etc) or webscraping;
     -   **but really**: domain-specific issues of measurement, survey design, experimental design, etc;
 :::
 
-## From last time: data collection
+## Data collection {.small}
 
 I sent out my lil' survey with Google Forms, downloaded the responses in a CSV, and read that sucker in:
 
 ::: columns
 ::: {.column width="35%"}
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf0x7gOZY04c9vzdyIdm-v_vCqL0oFaQI9-LWB8Dt3uf3TriQ/viewform?embedded=true" width="350" height="400" frameborder="0" marginheight="0" marginwidth="0">
-
-Loading…
-
-</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSflj08LttBQIz9Qnn0nfKspnGsQesY1y-_xOqPahT7SxRfUAw/viewform?embedded=true" width="640" height="912" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 :::
 
 ::: {.column width="65%"}
 ```{r}
-survey <- read_csv("data/survey-2025-02-06.csv")
+survey <- read_csv("data/survey-2026-02-09.csv")
 survey
 ```
 :::
@@ -257,7 +234,7 @@ survey
 
 1.  **Collection**: we won't seriously study this!
 
-    -   **for us**: data importing (`read_csv`), and webscraping (next time);
+    -   **for us**: data importing (`read_csv`) or webscraping;
     -   **but really**: domain-specific issues of measurement, survey design, experimental design, etc;
 
 ::: incremental
@@ -266,7 +243,7 @@ survey
     -   **keywords**: `mutate`, `fct_relevel`, `pivot_*`, `*_join`
 :::
 
-## From last time: data preparation {.scrollable}
+## Data preparation {.scrollable .small}
 
 ```{r}
 survey <- survey |>
@@ -276,14 +253,12 @@ survey <- survey |>
   ) |>
   mutate(
     tue_classes = case_when(
-      tue_classes == "2 -3" ~ "3",
-      tue_classes == "3 classes" ~ "3",
-      tue_classes == "Four" ~ "4",
-      tue_classes == "TWO MANY" ~ "2",
+      tue_classes == "1 class, 1 lab, 1 volunteering session" ~ "2",
+      tue_classes == "One" ~ "1",
       tue_classes == "Three" ~ "3",
       tue_classes == "Two" ~ "2",
-      tue_classes == "Two plus a chemistry lab" ~ "3",
-      tue_classes == "three" ~ "3",
+      tue_classes == "Two in both days" ~ "2",
+      tue_classes == "two" ~ "2",
       .default = tue_classes
     ),
     tue_classes = as.numeric(tue_classes),
@@ -297,7 +272,7 @@ survey
 
 1.  **Collection**: we won't seriously study this!
 
-    -   **for us**: data importing (`read_csv`), and webscraping (next time);
+    -   **for us**: data importing (`read_csv`) or webscraping;
     -   **but really**: domain-specific issues of measurement, survey design, experimental design, etc;
 
 2.  **Preparation**: cleaning, wrangling, and otherwise *tidying* the data so we can actually work with it.
@@ -311,7 +286,7 @@ survey
     -   **numerical summaries**: `summarize`, `group_by`, `count`, `mean`, `median`, `sd`, `quantile`, `IQR`, `cor`, etc
 :::
 
-## From last time: data analysis
+## Data analysis
 
 A human being can learn nothing from staring at this box:
 
@@ -319,7 +294,7 @@ A human being can learn nothing from staring at this box:
 survey
 ```
 
-## From last time: data analysis
+## Data analysis
 
 Picture!
 
@@ -328,7 +303,7 @@ ggplot(survey, aes(x = tue_classes, fill = year)) +
   geom_bar(position = "dodge")
 ```
 
-## From last time: data analysis
+## Data analysis
 
 Better picture?
 
@@ -337,7 +312,7 @@ ggplot(survey, aes(x = tue_classes, fill = year)) +
   geom_bar(position = "fill")
 ```
 
-## From last time: data analysis
+## Data analysis
 
 Numbers!
 
@@ -348,11 +323,11 @@ survey |>
   mutate(prop = n / sum(n))
 ```
 
-## Data science {.medium}
+## Data science {.small}
 
 1.  **Collection**: we won't seriously study this!
 
-    -   **for us**: data importing (`read_csv`), and webscraping (next time);
+    -   **for us**: data importing (`read_csv`) or webscraping;
     -   **but really**: domain-specific issues of measurement, survey design, experimental design, etc;
 
 2.  **Preparation**: cleaning, wrangling, and otherwise *tidying* the data so we can actually work with it.
@@ -477,3 +452,905 @@ No, not alcohol by volume...
 :::
 :::
 
+
+
+# Study guide 
+
+## Can you match these...
+
+```{r}
+#| label: simulate-data
+#| echo: false
+set.seed(8675309)
+
+banana = function(A, B, C1, C2, N, keep = 10, init = 10)
+{
+  R=init*keep+N*keep
+  x1=x2=0
+  bimat=matrix(double(2*N),ncol=2)
+  for (r in 1:R) {
+    x1=rnorm(1,mean=(B*x2+C1)/(A*(x2^2)+1),sd=sqrt(1/(A*(x2^2)+1)))
+    x2=rnorm(1,mean=(B*x2+C2)/(A*(x1^2)+1),sd=sqrt(1/(A*(x1^2)+1)))
+    if (r>init*keep && r%%keep==0) {
+        mkeep=r/keep; bimat[mkeep-init,]=c(x1,x2)
+    }
+  }
+
+  return(bimat)
+}
+
+n <- 2500
+p <- rbinom(n, 1, 0.5)
+
+z1 <- mvrnorm(n, numeric(2), 0.1 * cbind(c(1, 0.5), c(0.5, 1)))
+
+z2 <- mvrnorm(n, c(-0.5, 0), 0.05 * cbind(c(1, 0), c(0, 2))) * p + 
+      mvrnorm(n, c(0.5, 0), 0.05 * cbind(c(1, 0), c(0, 2))) * (1 - p)
+z3 <- cbind(rnorm(n, mean = 0, sd = 0.35), 
+            0.5 * rexp(n) - 1)
+z4 <- 0.6 * scale(banana(A = 2, B = 0, C1 = 3, C2 = 3, n))
+z5 <- cbind(runif(n, -1, 1),
+            runif(n, -1, 1))
+z6 <- mvrnorm(n, c(-0.5, 0.5), 0.05 * cbind(c(1, 0), c(0, 1))) * p + 
+      mvrnorm(n, c(0.5, -0.5), 0.05 * cbind(c(1, 0), c(0, 1))) * (1 - p)
+
+
+
+z <- tibble(
+  plot_no = c(rep("2", n), rep("3", n), rep("4", n), 
+              rep("5", n), rep("6", n), rep("7", n)),
+  x = c(z1[,1], z2[,1], z3[,1], z4[,1], z5[,1], z6[,1]),
+  y = c(z1[,2], z2[,2], z3[,2], z4[,2], z5[,2], z6[,2])
+)
+```
+
+```{r}
+#| label: simulated-data-scatterplots
+#| echo: false
+#| warning: false
+#| fig-asp: 0.66
+#| fig-width: 8
+#| fig-align: center
+ggplot(z, aes(x = x, y = y)) +
+  geom_point(size = 0.25) +
+  facet_wrap(~plot_no) +
+  scale_x_continuous(limits = c(-1, 1)) +
+  scale_y_continuous(limits = c(-1, 1)) +
+  coord_fixed()
+```
+
+## ...with these?
+
+```{r}
+#| label: simulated-data-histograms
+#| echo: false
+#| warning: false
+#| fig-asp: 1.25
+#| fig-width: 8
+#| fig-align: center
+z_long <- z |>
+  pivot_longer(
+    cols = c(x, y),
+    names_to = "variable",
+    values_to = "value"
+  ) |>
+  mutate(
+    plot_no = case_when(
+      plot_no == "2"   ~ "Histogram pair e",
+      plot_no == "3"  ~ "Histogram pair d",
+      plot_no == "4" ~ "Histogram pair b",
+      plot_no == "5"  ~ "Histogram pair a",
+      plot_no == "6"  ~ "Histogram pair c",
+      plot_no == "7"  ~ "Histogram pair f",
+    )
+  )
+
+ggplot(z_long, aes(x = value)) +
+  geom_histogram(bins = 30) +
+  facet_grid(
+    plot_no ~ variable, 
+    scales = "free_y",
+    switch = "y"
+  ) +
+  scale_x_continuous(limits = c(-1, 1)) +
+  labs(x = NULL, y = NULL) +
+  theme(
+    strip.placement = "outside",
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank()
+  )
+```
+
+## Matching scatterplots and histograms {.small .scrollable}
+
+```{r}
+#| include: false
+df <- tibble(
+  x = rnorm(100),
+  y = rnorm(100)
+)
+```
+
+
+
+::: columns
+
+::: {.column width="25%"}
+
+Dataframe with two numerical variables:
+
+```{r}
+df
+```
+
+:::
+
+::: {.column .fragment width="35%"}
+
+Histograms for each:
+
+```{r}
+ggplot(df, aes(x = x)) + 
+  geom_histogram()
+```
+
+```{r}
+ggplot(df, aes(x = y)) + 
+  geom_histogram()
+```
+
+:::
+
+::: {.column .fragment width="40%"}
+
+Scatterplot for both:
+
+```{r}
+ggplot(df, aes(x = x, y = y)) + 
+  geom_point()
+```
+
+:::
+
+:::
+
+
+## 2 goes with e {.small}
+
+Everything is symmetric and concentrating in one place:
+
+::: columns
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+
+z |>
+  filter(plot_no == "2") |>
+  ggplot(aes(x = x, y = y)) +
+  geom_point() +
+  facet_wrap(~plot_no) +
+  scale_x_continuous(limits = c(-1, 1)) +
+  scale_y_continuous(limits = c(-1, 1))
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+z_long |>
+  filter(plot_no == "Histogram pair e") |>
+  ggplot(aes(x = value)) +
+  geom_histogram(bins = 30) +
+  facet_grid(
+    plot_no ~ variable, 
+    scales = "free_y",
+    switch = "y"
+  ) +
+  scale_x_continuous(limits = c(-1, 1)) +
+  labs(x = NULL, y = NULL) +
+  theme(
+    strip.placement = "outside",
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank()
+  )
+```
+
+:::
+
+:::
+
+## 7 goes with f {.small}
+
+`x` and `y` each concentrate in *two* places:
+
+::: columns
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+
+z |>
+  filter(plot_no == "7") |>
+  ggplot(aes(x = x, y = y)) +
+  geom_point() +
+  facet_wrap(~plot_no) +
+  scale_x_continuous(limits = c(-1, 1)) +
+  scale_y_continuous(limits = c(-1, 1))
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+z_long |>
+  filter(plot_no == "Histogram pair f") |>
+  ggplot(aes(x = value)) +
+  geom_histogram(bins = 30) +
+  facet_grid(
+    plot_no ~ variable, 
+    scales = "free_y",
+    switch = "y"
+  ) +
+  scale_x_continuous(limits = c(-1, 1)) +
+  labs(x = NULL, y = NULL) +
+  theme(
+    strip.placement = "outside",
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank()
+  )
+```
+
+:::
+
+:::
+
+## 3 goes with d {.small}
+
+`x` concentrates in two places, but `y` only concentrates in one:
+
+::: columns
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+
+z |>
+  filter(plot_no == "3") |>
+  ggplot(aes(x = x, y = y)) +
+  geom_point() +
+  facet_wrap(~plot_no) +
+  scale_x_continuous(limits = c(-1, 1)) +
+  scale_y_continuous(limits = c(-1, 1))
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+z_long |>
+  filter(plot_no == "Histogram pair d") |>
+  ggplot(aes(x = value)) +
+  geom_histogram(bins = 30) +
+  facet_grid(
+    plot_no ~ variable, 
+    scales = "free_y",
+    switch = "y"
+  ) +
+  scale_x_continuous(limits = c(-1, 1)) +
+  labs(x = NULL, y = NULL) +
+  theme(
+    strip.placement = "outside",
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank()
+  )
+```
+
+:::
+
+:::
+
+## 6 goes with c {.small}
+
+Points are evenly spread everywhere:
+
+::: columns
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+
+z |>
+  filter(plot_no == "6") |>
+  ggplot(aes(x = x, y = y)) +
+  geom_point() +
+  facet_wrap(~plot_no) +
+  scale_x_continuous(limits = c(-1, 1)) +
+  scale_y_continuous(limits = c(-1, 1))
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+z_long |>
+  filter(plot_no == "Histogram pair c") |>
+  ggplot(aes(x = value)) +
+  geom_histogram(bins = 30) +
+  facet_grid(
+    plot_no ~ variable, 
+    scales = "free_y",
+    switch = "y"
+  ) +
+  scale_x_continuous(limits = c(-1, 1)) +
+  labs(x = NULL, y = NULL) +
+  theme(
+    strip.placement = "outside",
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank()
+  )
+```
+
+:::
+
+:::
+
+## 4 goes with b {.small}
+
+Asymetry in `y` but not in `x`:
+
+::: columns
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+
+z |>
+  filter(plot_no == "4") |>
+  ggplot(aes(x = x, y = y)) +
+  geom_point() +
+  facet_wrap(~plot_no) +
+  scale_x_continuous(limits = c(-1, 1)) +
+  scale_y_continuous(limits = c(-1, 1))
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+z_long |>
+  filter(plot_no == "Histogram pair b") |>
+  ggplot(aes(x = value)) +
+  geom_histogram(bins = 30) +
+  facet_grid(
+    plot_no ~ variable, 
+    scales = "free_y",
+    switch = "y"
+  ) +
+  scale_x_continuous(limits = c(-1, 1)) +
+  labs(x = NULL, y = NULL) +
+  theme(
+    strip.placement = "outside",
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank()
+  )
+```
+
+:::
+
+:::
+
+## 5 goes with a {.small}
+
+This one's just weird. By process of elimination...
+
+::: columns
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+
+z |>
+  filter(plot_no == "5") |>
+  ggplot(aes(x = x, y = y)) +
+  geom_point() +
+  facet_wrap(~plot_no) +
+  scale_x_continuous(limits = c(-1, 1)) +
+  scale_y_continuous(limits = c(-1, 1))
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+z_long |>
+  filter(plot_no == "Histogram pair a") |>
+  ggplot(aes(x = value)) +
+  geom_histogram(bins = 30) +
+  facet_grid(
+    plot_no ~ variable, 
+    scales = "free_y",
+    switch = "y"
+  ) +
+  scale_x_continuous(limits = c(-1, 1)) +
+  labs(x = NULL, y = NULL) +
+  theme(
+    strip.placement = "outside",
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank()
+  )
+```
+
+:::
+
+:::
+
+## Can you match these...
+
+```{r}
+#| label: simulate-data-2
+#| echo: false
+set.seed(8675309)
+n <- 2500
+p <- rbinom(n, 1, 0.5)
+
+x1 <- r(UnivarMixingDistribution(Norm(mean = -2.5, sd = 0.1),
+                                 Norm(mean = -1.5, sd = 0.2), 
+                                 Norm(mean = -0, sd = 0.25),
+                                 Norm(mean = +1.5, sd = 0.2),
+                                 Norm(mean = +2.5, sd = 0.1),
+                                 mixCoeff = c(0.05, 0.2, .5, 0.2, 0.05))
+        )(n)
+x2 <- r(UnivarMixingDistribution(Norm(mean = -2, sd = 0.5), 
+                                 Norm(mean = -0, sd = 1.25),
+                                 mixCoeff = c(0.65, 0.35))
+        )(n)
+x3 <- runif(n, min = -4, max = 4)
+x4 <- -4 + 8 * rbeta(n, 0.1, 0.1)
+x5 <- rnorm(n, mean = -2, sd = 0.75)
+x6 <- r(UnivarMixingDistribution(Norm(mean = 2, sd = 0.75), 
+                                 Norm(mean = -0.5, sd = 1),
+                                 mixCoeff = c(0.65, 0.35))
+        )(n)
+
+z <- tibble(
+  plot_no = c(rep("08", n), rep("09", n), rep("10", n), 
+              rep("11", n), rep("12", n), rep("13", n)),
+  x = c(x1, x2, x3, x4, x5, x6)
+)
+```
+
+
+```{r}
+#| label: simulated-data-densities
+#| echo: false
+#| warning: false
+#| fig-align: center
+ggplot(z, aes(x = x)) +
+  geom_density(fill = "grey") +
+  facet_wrap(~plot_no) +
+  xlim(-4, 4)
+```
+
+## ...with these?
+
+```{r}
+#| label: simulated-data-boxes
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-asp: 0.5
+z |>
+  mutate(
+    plot_no = case_when(
+      plot_no == "08"   ~ "Boxplot f",
+      plot_no == "09"  ~ "Boxplot a",
+      plot_no == "10" ~ "Boxplot b",
+      plot_no == "11"  ~ "Boxplot e",
+      plot_no == "12"  ~ "Boxplot c",
+      plot_no == "13"  ~ "Boxplot d",
+    )
+  ) |>
+  ggplot(aes(x = x)) +
+  geom_boxplot(outlier.size = 0.1) +
+  facet_wrap(
+    ~plot_no
+  ) +
+  xlim(-4, 4) + 
+  #scale_x_continuous(limits = c(-1, 1)) +
+  #labs(x = NULL, y = NULL) +
+  theme(
+    axis.ticks.y = element_line(color = "white"),
+    axis.text.y = element_text(color = "white")
+  )
+  #theme(
+  #  strip.placement = "outside",
+  #  axis.text.y = element_blank(),
+  #  axis.ticks.y = element_blank()
+  #)
+```
+
+## Yes you can
+
+If you know how the box is drawn:
+
+::: incremental 
+- The line inside the box is the median (50% quantile);
+- The left edge is the 25% quantile;
+- The right edge is the 75% quantile;
+- The box spans the middle 50% of the data;
+- The whiskers and dots span the entire range of the data;
+:::
+
+. . .
+
+Boxplots display center, spread, and (a)symmetry, but *not* modality.
+
+## Whence the box? {.medium .scrollable}
+
+The middle of the box is the **median**. 50% of the data are below, and 50% are above:
+
+```{r}
+#| echo: false
+
+df <- gerrymander
+
+df_long <- rbind(
+  transform(df, panel = "Histogram"),
+  transform(df, panel = "Box plot")
+)
+
+df_long$panel <- factor(df_long$panel, levels = c("Histogram", "Box plot"))
+
+med <- median(df$trump16)
+
+ggplot(df_long, aes(x = trump16)) +
+  # Histogram (top)
+  geom_histogram(
+    data = subset(df_long, panel == "Histogram"),
+    bins = 30, color = "white", fill = "grey70"
+  ) +
+  
+  # Boxplot (bottom)
+  geom_boxplot(
+    data = subset(df_long, panel == "Box plot"),
+    aes(y = 0),
+    width = 0.2,
+    outlier.shape = NA
+  ) +
+  
+  # Median line in both panels
+  geom_vline(xintercept = med, linetype = "dashed", color = "red", linewidth = 2) +
+  
+  facet_grid(rows = vars(panel), scales = "free_y") +
+  scale_y_continuous(NULL, breaks = NULL) +
+  labs(x = "x") +
+  theme_minimal()
+
+```
+
+## Whence the box? {.medium .scrollable}
+
+The lower edge of the box is the **25% quantile**. 25% of the data are below, and 75% are above:
+
+```{r}
+#| echo: false
+
+df <- gerrymander
+
+df_long <- rbind(
+  transform(df, panel = "Histogram"),
+  transform(df, panel = "Box plot")
+)
+
+df_long$panel <- factor(df_long$panel, levels = c("Histogram", "Box plot"))
+
+med <- quantile(df$trump16, 0.25)
+
+ggplot(df_long, aes(x = trump16)) +
+  # Histogram (top)
+  geom_histogram(
+    data = subset(df_long, panel == "Histogram"),
+    bins = 30, color = "white", fill = "grey70"
+  ) +
+  
+  # Boxplot (bottom)
+  geom_boxplot(
+    data = subset(df_long, panel == "Box plot"),
+    aes(y = 0),
+    width = 0.2,
+    outlier.shape = NA
+  ) +
+  
+  # Median line in both panels
+  geom_vline(xintercept = med, linetype = "dashed", color = "red", linewidth = 2) +
+  
+  facet_grid(rows = vars(panel), scales = "free_y") +
+  scale_y_continuous(NULL, breaks = NULL) +
+  labs(x = "x") +
+  theme_minimal()
+
+```
+
+## Whence the box? {.medium .scrollable}
+
+The upper edge of the box is the **75% quantile**. 75% of the data are below, and 25% are above:
+
+```{r}
+#| echo: false
+
+df <- gerrymander
+
+df_long <- rbind(
+  transform(df, panel = "Histogram"),
+  transform(df, panel = "Box plot")
+)
+
+df_long$panel <- factor(df_long$panel, levels = c("Histogram", "Box plot"))
+
+med <- quantile(df$trump16, 0.75)
+
+ggplot(df_long, aes(x = trump16)) +
+  # Histogram (top)
+  geom_histogram(
+    data = subset(df_long, panel == "Histogram"),
+    bins = 30, color = "white", fill = "grey70"
+  ) +
+  
+  # Boxplot (bottom)
+  geom_boxplot(
+    data = subset(df_long, panel == "Box plot"),
+    aes(y = 0),
+    width = 0.2,
+    outlier.shape = NA
+  ) +
+  
+  # Median line in both panels
+  geom_vline(xintercept = med, linetype = "dashed", color = "red", linewidth = 2) +
+  
+  facet_grid(rows = vars(panel), scales = "free_y") +
+  scale_y_continuous(NULL, breaks = NULL) +
+  labs(x = "x") +
+  theme_minimal()
+
+```
+
+## 13 goes with d {.small}
+
+The only one concentrating near 2:
+
+```{r}
+#| echo: false
+#| warning: false
+
+df <- z |> 
+  filter(plot_no == "13")
+
+df_long <- rbind(
+  transform(df, panel = "Density"),
+  transform(df, panel = "Box plot")
+)
+
+df_long$panel <- factor(df_long$panel, levels = c("Density", "Box plot"))
+
+med <- median(df$x)
+
+ggplot(df_long, aes(x = x)) +
+  # Histogram (top)
+  geom_density(data = subset(df_long, panel == "Density"), fill = "grey") +
+  # Boxplot (bottom)
+  geom_boxplot(
+    data = subset(df_long, panel == "Box plot"),
+    aes(y = 0),
+    width = 0.2
+  ) +
+  facet_grid(rows = vars(panel), scales = "free_y") +
+  scale_y_continuous(NULL, breaks = NULL) +
+  labs(x = "x") +
+  xlim(-4, 4) + 
+  theme_minimal()
+
+```
+
+## 12 goes with c {.small}
+
+Concentrating around -2 and symmetric:
+
+```{r}
+#| echo: false
+#| warning: false
+
+df <- z |> 
+  filter(plot_no == "12")
+
+df_long <- rbind(
+  transform(df, panel = "Density"),
+  transform(df, panel = "Box plot")
+)
+
+df_long$panel <- factor(df_long$panel, levels = c("Density", "Box plot"))
+
+med <- median(df$x)
+
+ggplot(df_long, aes(x = x)) +
+  # Histogram (top)
+  geom_density(data = subset(df_long, panel == "Density"), fill = "grey") +
+  # Boxplot (bottom)
+  geom_boxplot(
+    data = subset(df_long, panel == "Box plot"),
+    aes(y = 0),
+    width = 0.2
+  ) +
+  facet_grid(rows = vars(panel), scales = "free_y") +
+  scale_y_continuous(NULL, breaks = NULL) +
+  labs(x = "x") +
+  xlim(-4, 4) + 
+  theme_minimal()
+
+```
+
+## 9 goes with a {.small}
+
+Concentrating around -2 and asymmetric:
+
+```{r}
+#| echo: false
+#| warning: false
+
+df <- z |> 
+  filter(plot_no == "09")
+
+df_long <- rbind(
+  transform(df, panel = "Density"),
+  transform(df, panel = "Box plot")
+)
+
+df_long$panel <- factor(df_long$panel, levels = c("Density", "Box plot"))
+
+med <- median(df$x)
+
+ggplot(df_long, aes(x = x)) +
+  # Histogram (top)
+  geom_density(data = subset(df_long, panel == "Density"), fill = "grey") +
+  # Boxplot (bottom)
+  geom_boxplot(
+    data = subset(df_long, panel == "Box plot"),
+    aes(y = 0),
+    width = 0.2
+  ) +
+  facet_grid(rows = vars(panel), scales = "free_y") +
+  scale_y_continuous(NULL, breaks = NULL) +
+  labs(x = "x") +
+  xlim(-4, 4) + 
+  theme_minimal()
+
+```
+
+## 8 goes with f {.small}
+
+Multimodality is a distraction. Pay attention to the whiskers.
+
+```{r}
+#| echo: false
+#| warning: false
+
+df <- z |> 
+  filter(plot_no == "08")
+
+df_long <- rbind(
+  transform(df, panel = "Density"),
+  transform(df, panel = "Box plot")
+)
+
+df_long$panel <- factor(df_long$panel, levels = c("Density", "Box plot"))
+
+med <- median(df$x)
+
+ggplot(df_long, aes(x = x)) +
+  # Histogram (top)
+  geom_density(data = subset(df_long, panel == "Density"), fill = "grey") +
+  # Boxplot (bottom)
+  geom_boxplot(
+    data = subset(df_long, panel == "Box plot"),
+    aes(y = 0),
+    width = 0.2
+  ) +
+  facet_grid(rows = vars(panel), scales = "free_y") +
+  scale_y_continuous(NULL, breaks = NULL) +
+  labs(x = "x") +
+  xlim(-4, 4) + 
+  theme_minimal()
+
+```
+
+## 10 goes with b {.small}
+
+Also centered at 0, but more spread out than 8:
+
+```{r}
+#| echo: false
+#| warning: false
+
+df <- z |> 
+  filter(plot_no == "10")
+
+df_long <- rbind(
+  transform(df, panel = "Density"),
+  transform(df, panel = "Box plot")
+)
+
+df_long$panel <- factor(df_long$panel, levels = c("Density", "Box plot"))
+
+med <- median(df$x)
+
+ggplot(df_long, aes(x = x)) +
+  # Histogram (top)
+  geom_density(data = subset(df_long, panel == "Density"), fill = "grey") +
+  # Boxplot (bottom)
+  geom_boxplot(
+    data = subset(df_long, panel == "Box plot"),
+    aes(y = 0),
+    width = 0.2
+  ) +
+  facet_grid(rows = vars(panel), scales = "free_y") +
+  scale_y_continuous(NULL, breaks = NULL) +
+  labs(x = "x") +
+  xlim(-4, 4) + 
+  theme_minimal()
+
+```
+
+## 11 goes with e {.small}
+
+Also centered at 0, but how wide must you make the box to swallow the middle 50%? Pretty darn wide:
+
+```{r}
+#| echo: false
+#| warning: false
+
+df <- z |> 
+  filter(plot_no == "11")
+
+df_long <- rbind(
+  transform(df, panel = "Density"),
+  transform(df, panel = "Box plot")
+)
+
+df_long$panel <- factor(df_long$panel, levels = c("Density", "Box plot"))
+
+med <- median(df$x)
+
+ggplot(df_long, aes(x = x)) +
+  # Histogram (top)
+  geom_density(data = subset(df_long, panel == "Density"), fill = "grey") +
+  # Boxplot (bottom)
+  geom_boxplot(
+    data = subset(df_long, panel == "Box plot"),
+    aes(y = 0),
+    width = 0.2
+  ) +
+  facet_grid(rows = vars(panel), scales = "free_y") +
+  scale_y_continuous(NULL, breaks = NULL) +
+  labs(x = "x") +
+  xlim(-4, 4) + 
+  theme_minimal()
+
+```
