@@ -5,6 +5,10 @@ execute:
   echo: false
 ---
 
+::: callout-note
+Answer are [here](https://sta199-s26.github.io/exams/midterm-1-answers.html).
+:::
+
 ```{r}
 #| label: load-packages
 #| message: false
