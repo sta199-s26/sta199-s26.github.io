@@ -1,0 +1,1273 @@
+---
+title: "Data science communication"
+subtitle: "Lecture 13"
+date: "2026-03-02"
+format: 
+  revealjs: 
+    output-file: 13-communication-slides.html
+    footer: "[🔗 sta199-s26.github.io](https://sta199-s26.github.io/)"
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+    logo: images/logo.png
+    toc: false
+  html: 
+    code-link: true
+---
+
+## While you wait: Participate 📱💻 
+
+```{r}
+#| label: load-packages
+#| message: false
+#| warning: false
+#| echo: false
+
+library(tidyverse)
+library(tidymodels)
+library(ggrepel)
+library(ggthemes)
+library(palmerpenguins)
+
+
+todays_ae <- "ae-14-effective-dataviz"
+
+```
+
+::: columns
+
+::: {.column width="70%"}
+
+::: wooclap
+
+XXX
+
+::: wooclap-choices
+- YYY
+- ZZZ
+:::
+
+:::
+:::
+
+::: {.column width="30%"}
+{{< include _wooclap-column.qmd >}}
+:::
+
+:::
+
+## Reminder
+
+XXX
+
+# Ugly plot 
+
+
+## Honorable mention: Ben Mei-Dan {.scrollable}
+
+```{r}
+#| code-fold: true
+#| warning: false
+mtcars |> 
+  mutate(am = factor(am,
+                       levels = c(1, 0),
+                       labels = c("Manual", "Automatic"))) |> 
+  mutate(vs = factor(vs, 
+                     levels = c(0,1),
+                     labels = c("V-shaped", "Straight"))) |> 
+  group_by(am, vs) |> 
+  summarize(mpg_total = sum(mpg), wt_total = sum(wt), .groups = "drop") |>
+  pivot_longer(
+    cols = c(mpg_total, wt_total),
+    names_to = "metric",
+    values_to = "value") |> 
+  ggplot(aes(x = "", y = value, fill = metric)) + 
+  geom_col(show.legend = TRUE) +
+  coord_polar(theta = "y") +
+  facet_grid(vs ~ am) +
+  labs(
+    title = "Faceted pie charts by am and vs",
+    fill = "What the slice is"
+  ) + 
+  scale_fill_manual(values = c("hotpink", "limegreen")) +
+  scale_y_reverse() +
+  scale_x_discrete(labels = c("???")) + 
+  theme_bw() +
+  theme(
+    legend.position = "bottom",
+    axis.text = element_text(angle = 90, size = 16, color = "purple"),
+    axis.title = element_text(size = 20, face = "bold.italic"),
+    panel.grid.major = element_line(color = "red", size = 2)
+  )
+```
+
+## Honorable mention: Celina Chen {.scrollable}
+
+```{r}
+#| code-fold: true
+#| message: false
+#| warning: false
+
+ggplot(
+  mtcars,
+  aes(
+    x = wt,
+    y = mpg,
+    color = factor(am, levels = c(1, 0)),
+    shape = factor(vs, levels = c(1, 0))
+  )
+) +
+  # Giant points + jitter = chaos
+  geom_point(
+    size = 9,
+    alpha = 0.95,
+    stroke = 2,
+    position = position_jitter(width = 0.25, height = 1.5)
+  ) +
+  # Overlapping labels for maximum visual pain
+  geom_text(
+    aes(label = row.names(mtcars)),
+    size = 3,
+    angle = 45,
+    vjust = -0.4,
+    show.legend = FALSE
+  ) +
+  # Fragment into panels
+  facet_wrap(~cyl, nrow = 1) +
+  # Reverse + weird limits + tons of minor breaks
+  scale_x_reverse(
+    limits = c(5.5, 1.5),
+    breaks = seq(5.5, 1.5, -0.5),
+    minor_breaks = seq(5.5, 1.5, -0.1)
+  ) +
+  # Reverse + log transform = extra confusing
+  scale_y_reverse(
+    trans = "log10",
+    limits = c(35, 8),
+    breaks = c(35, 30, 25, 20, 15, 10, 8)
+  ) +
+  # Weaponized color choices + misleading labels
+  scale_color_manual(
+    values = c("magenta2", "chartreuse3"),
+    labels = c("AUTO??", "MANUAL??"),
+    guide = guide_legend(reverse = TRUE, title.position = "top")
+  ) +
+  # Aggressive shapes that don’t help interpretation
+  scale_shape_manual(
+    values = c(8, 4),
+    labels = c("Vampire Engine", "Sauron Engine")
+  ) +
+  # Turn a scatterplot into a donut of confusion
+  coord_polar(theta = "x") +
+  labs(
+    title = "💀 MPG vs WT (but in a cursed universe) 💀",
+    subtitle = "Why read a scatterplot when you can suffer?",
+    x = "WEIGHT (1000 lbs)\n(reversed & spun into a donut)",
+    y = "Miles / gallon (log10, reversed, vibes only)",
+    color = "Transmission (maybe)",
+    shape = "Engine (definitely not)",
+    caption = "Data: mtcars • Design: pure spite"
+  ) +
+  theme(
+    # Use safe fonts so Quarto can render (no Comic Sans errors)
+    text = element_text(family = "sans"),
+
+    plot.background  = element_rect(fill = "hotpink", color = "limegreen", linewidth = 8),
+    panel.background = element_rect(fill = "yellow",  color = "cyan", linewidth = 6),
+    panel.grid.major = element_line(color = "red",  linewidth = 2, linetype = "dotdash"),
+    panel.grid.minor = element_line(color = "blue", linewidth = 1, linetype = "longdash"),
+    strip.background = element_rect(fill = "black", color = "white", linewidth = 3),
+
+    strip.text = element_text(color = "orange", size = 18, face = "bold.italic"),
+    axis.text  = element_text(color = "purple", size = 16, face = "bold", angle = 90, vjust = 0.5),
+    axis.title = element_text(color = "green4", size = 22, face = "bold"),
+    plot.title = element_text(color = "white", size = 28, face = "bold", hjust = 0),
+    plot.subtitle = element_text(color = "black", size = 14, face = "italic", hjust = 1),
+
+    legend.position = c(0.15, 0.85),
+    legend.background = element_rect(fill = "white", color = "black", linewidth = 2),
+    legend.key = element_rect(fill = "grey10"),
+    legend.text  = element_text(color = "dodgerblue", size = 14),
+    legend.title = element_text(color = "red", size = 16, face = "bold"),
+
+    plot.margin = margin(5, 60, 5, 60)
+  )
+```
+
+## Honorable mention: Lachlan Black {.scrollable}
+
+```{r}
+#| code-fold: true
+#| fig.width: 6
+#| fig.height: 6
+#| message: false
+#| warning: false
+
+
+library(showtext)
+
+showtext_auto()
+
+set.seed(1)
+
+bg_dots <- data.frame(
+  x = runif(6000, -20, 20),
+  y = runif(6000, -50, 100),
+  s = runif(6000, 1, 8)
+)
+
+bg_poly <- data.frame(
+  x = runif(4000, -20, 20),
+  y = runif(4000, -50, 100),
+  group = rep(1:400, each = 10)
+)
+
+bg_poly$fill_col <- rep(
+  sample(c("red", "darkred", "firebrick"), 400, replace = TRUE),
+  each = 10
+)
+
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+
+  # Background polygons
+  geom_polygon(
+    data = bg_poly,
+    aes(x = x, y = y, group = group, fill = fill_col),
+    inherit.aes = FALSE,
+    alpha = 0.7,
+    color = "black",
+    linewidth = 0.3,
+    show.legend = FALSE
+  ) +
+
+  # Background dots
+  geom_point(
+    data = bg_dots,
+    aes(x = x, y = y, size = s),
+    inherit.aes = FALSE,
+    color = "darkred",
+    alpha = 0.6,
+    show.legend = FALSE
+  ) +
+
+  scale_fill_identity() +
+
+  # Density layer (separate fill scale)
+  ggnewscale::new_scale_fill() +
+
+  stat_bin2d(
+    bins = 25,
+    aes(fill = after_stat(count)),
+    alpha = 0.4,
+    show.legend = FALSE
+  ) +
+
+  scale_fill_gradient(low = "red", high = "darkred") +
+
+  # Real data
+  geom_smooth(
+    aes(color = factor(am, levels = c(1, 0))),
+    se = FALSE,
+    method = "lm",
+    linetype = "dotted",
+    linewidth = 3
+  ) +
+
+  geom_jitter(
+    aes(
+      color = factor(am, levels = c(1, 0)),
+      shape = factor(vs),
+      size = hp
+    ),
+    width = 0.7,
+    height = 0.7,
+    stroke = 5,
+    alpha = 1
+  ) +
+
+  facet_wrap(~gear) +
+
+  labs(
+    title = "1974 Motor Trend UNITED STATES OF THE AMERICAS",
+    subtitle = "visually aesthetic plot!!!!!",
+    x = "WEIGHT?????????????????",
+    y = "MILES per GALLLOOOOONS",
+    color = "TRANSMISSION CHAOS",
+    shape = "ENGINE OR SOMETHING",
+    size = "HORSEPOWER???"
+  ) +
+
+  scale_color_manual(
+    values = c("cyan", "#39FF14"),
+    labels = c("Manual Mayhem", "Automatic Anarchy")
+  ) +
+
+  scale_x_reverse() +
+  scale_y_continuous(trans = "sqrt") +
+
+  coord_cartesian(
+    xlim = c(6, 1),
+    ylim = c(35, 10),
+    clip = "off"
+  ) +
+
+  theme(
+    legend.position = "right",
+    legend.background = element_rect(
+      fill = "black",
+      color = "chartreuse",
+      linewidth = 4
+    ),
+    legend.text = element_text(
+      family = "mono",
+      color = "white",
+      size = 16
+    ),
+    legend.key = element_rect(fill = "orange"),
+
+    text = element_text(
+      family = "Comic Sans MS",
+      size = 20,
+      face = "bold"
+    ),
+
+    plot.title = element_text(
+      size = 30,
+      color = "green",
+      face = "italic"
+    ),
+
+    plot.subtitle = element_text(
+      size = 25,
+      color = "yellow"
+    ),
+
+    panel.background = element_rect(fill = NA),
+    plot.background  = element_rect(fill = NA),
+    strip.background = element_rect(fill = NA),
+
+    strip.text = element_text(
+      size = 22,
+      color = "white",
+      face = "bold"
+    ),
+
+    panel.grid.major = element_line(
+      color = "yellow",
+      linewidth = 3,
+      linetype = "dotdash"
+    ),
+
+    panel.grid.minor = element_line(
+      color = "white",
+      linewidth = 2
+    ),
+
+    axis.text.x = element_text(
+      angle = 270,
+      color = "chartreuse",
+      size = 22
+    ),
+
+    axis.text.y = element_text(
+      angle = 180,
+      color = "gold",
+      size = 24
+    ),
+
+    axis.ticks = element_line(
+      linewidth = 3,
+      color = "purple"
+    ),
+
+    axis.ticks.length = unit(1.5, "cm"),
+
+    panel.spacing = unit(0.1, "cm")
+  ) +
+
+  guides(
+    size = guide_legend(
+      override.aes = list(
+        color = "cyan",
+        fill = "cyan1",
+        alpha = 1,
+        size = 3
+      )
+    )
+  )
+```
+
+## Honorable mentschen: Nicholas Wang {.scrollable}
+
+```{r}
+#| code-fold: true
+#| message: false
+#| warning: false
+
+mtcars |> 
+  mutate(
+    am = case_when(
+      am == 0 ~"ZiȚo",
+      am == 1 ~ "zĩtO"
+    ),
+    am = fct_relevel(am, "Manual"),
+    vs = case_when(
+      vs == 0 ~ "žITO",
+      vs == 1 ~ "zitö"
+    )
+  ) |> 
+  ggplot(
+    aes(y = wt, 
+        x = mpg, 
+        color = am)) +
+    geom_point(
+      aes(shape = vs)
+    ) +
+    labs(
+      x = "Weight (1000 lbs)",
+      y = "Fuel Efficiency (Miles / gallon)",
+      title = "RAHHHHHHHHHHHHHHHH",
+      color = "Informative Label",
+      shape = "sta1nana"
+    ) +
+    theme(legend.position = c(0.5,0.5),
+          legend.text = element_text(size = 40),
+          legend.direction = "horizontal",
+          panel.background = element_rect(fill = "chartreuse"))
+```
+
+## Honorable mentschen: Zachary Hyman {.scrollable}
+
+```{r}
+#| code-fold: true
+#| message: false
+#| warning: false
+#| fig-asp: 0.55
+#| fig-width: 8
+
+library(jpeg)
+library(grid)
+
+mt_clean <- mtcars |> 
+  mutate(
+    am = if_else(am == 0, "automatic", "manual"),
+    am = fct_relevel(am, "manual", "automatic")
+  )
+
+jcz_file <- "images/13/jcz.jpg" 
+image_data <- jpeg::readJPEG(jcz_file)
+grob_image <- rasterGrob(image_data, width = unit(1, "npc"), 
+                         height = unit(1, "npc"), interpolate = FALSE)
+
+ggplot(mt_clean, aes(x = wt, y = mpg, color = factor(carb), 
+                     shape = am, size = hp)) +
+  annotation_custom(grob_image, xmin = -Inf, xmax = Inf, ymin = -Inf, 
+                    ymax = Inf) +
+  geom_point(alpha = 0.6) +
+  labs(
+    x = "Your Negligence",
+    y = "Zito Anger Level",
+    color = "Carburetors",
+    shape = "AM",
+    size = "horsepower",
+    title = "Zito Owns Your Car",
+    subtitle = "And he wants it back."
+  ) +
+  theme_calc() +
+  theme(
+    legend.position = "bottom"
+  ) +
+  facet_wrap(~ carb) +
+  scale_color_economist() 
+```
+
+## Honorable mentschen: Parker Upton {.scrollable}
+
+```{r}
+#| code-fold: true
+#| message: false
+#| warning: false
+
+library(jpeg)
+
+mtcars_categorical <- mtcars |>
+  mutate(
+    transmission = case_when(
+      am == 0 ~ "Automatic",
+      am == 1 ~ "Manual"
+    ),
+      engine = case_when(
+        vs == 0 ~ "V-shaped",
+        vs == 1 ~ "straight"
+      )
+  )
+
+url <- "https://scholars.duke.edu/profile-images/thumbnail500/0935990.jpg"
+tmp <- tempfile(fileext = ".jpg")
+
+download.file(url, tmp, mode = "wb")
+img <- readJPEG(tmp)
+
+ggplot(mtcars_categorical, 
+       aes(x = wt, y = mpg, color = am)) +
+  annotation_raster(
+    img,
+    xmin = -Inf, xmax = Inf,
+    ymin = -Inf, ymax = Inf
+  ) +
+  geom_point(size = 10, shape = 14) +
+  scale_color_gradient(low = "yellow", high = "yellow") +
+  labs(
+    x = "Gallons Per Mileage",
+    y = "Weight in 1000 pounds (measured in thousands of pounds, not hundreds, 
+    not kilograms, not grams, not liters, not John Zitos, but most certainly 
+    thousands of pounds",
+    title = "CAr StUFf",
+    subtitle = "Idk what to put here"
+  ) +
+  coord_cartesian(xlim = c(0, 10), ylim = c(-1000, 500)) +
+  theme(
+    panel.background = element_rect(fill = "black"),
+    plot.background = element_rect(fill = "orange", color = "black"),
+    legend.position = c(0.85, 0.15)
+  )
+```
+
+
+## Third place: Henry O'Hara {.scrollable}
+
+"I know we are supposed to make 5 changes to the graph, but one main one was really all I needed. No need to explain why it's ugly."
+
+```{r}
+#| code-fold: true
+#| message: false
+#| warning: false
+
+#I used Google Gemini 3 to show me how to make the image the background.
+#The date was 2.15.26
+#The link was https://gemini.google.com/share/baddfa4f4e0e
+
+library(magick)
+library(ggpubr)
+
+unc_url <- "https://i.ytimg.com/vi/QGUKD_UgSmE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLADGSk5U3I0StJLmaxqeBIdd4AE-w"
+unc_img <- magick::image_read(unc_url)
+
+mtcars |> 
+  mutate(am = factor(am, levels = c(1,0), 
+                     labels = c("Manual", "Automatic")),
+         vs = factor(vs, levels = c(1,0),
+                     labels = c("Straight", "V-Shaped"))
+         ) |> 
+  ggplot(aes(x = wt, y = mpg, color = am, shape = vs)) +
+  background_image(unc_img) +
+  geom_point() +
+  labs(
+    x = "Weight (1000 lbs)",
+    y = "Miles / gallon",
+    color = "Transmission",
+    shape = "Engine",
+    title = "Weight vs. Fuel Efficiency (Ugly)",
+    subtitle = "By Transmission and Engine Type"
+  ) + 
+  theme_light() +
+  theme(legend.position = "right")
+```
+
+
+## First place: Sammy Ciuni {.scrollable}
+
+```{r}
+#| code-fold: true
+#| message: false
+#| warning: false
+
+library(jpeg)
+library(png)
+library(ggimage)
+library(ggpubr)
+library(systemfonts)
+
+long_live_sal <- readJPEG("images/13/download.jpg")
+left_eye <- "images/13/left-eye.png"
+right_eye <- "images/13/right-eye.png"
+
+mtcars |>
+  mutate(am = case_when(
+      am == 1 ~ "Manual", 
+      .default = "Automatic"),
+    vs = case_when(
+      vs == 1 ~ "Straight", 
+      .default = "V-shaped"),
+    img = if_else(
+      vs == "Straight", left_eye, right_eye
+     )) |>
+ggplot(aes(x = wt, 
+           y = mpg,
+           shape = factor(vs))) +
+  background_image(long_live_sal) +
+  geom_image(aes(
+    image = img), size = 0.1) +
+  geom_point(aes(color = am), size = 3, alpha = 0.3) +
+  labs(
+    x = "Weight (1000 lbs)",
+    y = "Miles / Gallon",
+    color = "Transmission Type",
+    shape = "Engine",
+    title = "Gas Mileage Compared to Vehicle Weight",
+    subtitle = "and Transmission Type"
+  ) +
+  scale_x_continuous(breaks = seq(0, 6, 0.09)) +
+  scale_color_discrete(limits = c("Manual", "Automatic")) +
+  scale_shape_discrete(limits = c("V-shaped", "Straight")) +
+  theme(legend.position = "right",
+        plot.title = element_text(size = 30))
+
+```
+
+
+## First place: Austin Rios {.scrollable}
+
+```{r}
+#| code-fold: true
+#| fig-width: 6
+#| fig-asp: 1.5
+#| message: false
+#| warning: false
+
+library(png)
+library(cowplot)
+library(magick)
+
+jackie_photo <- readPNG("images/13/jackie_o.png")
+
+theme_set(theme_cowplot())
+
+bad_graph <- mtcars |> 
+  mutate(am = if_else(am == 0, "manhandle it", "not freaky :("),
+         am = fct_relevel(am, "manhandle it", "not freaky :("), 
+         vs = if_else(vs == 0, "bella hadid", "straight")
+         ) |> 
+  ggplot(aes(x = wt, y = mpg, color = am, shape = vs)) +
+  geom_point(alpha = 1) +
+  theme(legend.position = "inside",
+        plot.title = element_text(size = 25, color = "lawngreen"),
+        plot.subtitle = element_text(size = 30, color = "mediumvioletred"),
+       # plot.background = element_rect(fill = "yellow3"),
+        text = element_text(color = "gold4", family = "serif")
+        ) + 
+  scale_color_manual(values = c("manhandle it" = "gray99", 
+                               "not freaky :(" = "gray98")) + 
+  labs(
+    x = "how much junk in the trunk",
+    y = "jackie kennedy miles per sheet metal eaten", 
+    title = "jackie want sheet metal",
+    subtitle = "omnomnom", 
+    color = "prindl",
+    shape = "engine size ?"
+  )
+
+ggdraw() +
+  draw_image(jackie_photo, scale = 1.2) + 
+  draw_plot(bad_graph)
+```
+
+
+# Telling a story
+
+## Setup
+
+```{r}
+#| message: false
+library(tidyverse)
+library(tidymodels)
+library(ggrepel)
+library(ggthemes)
+library(palmerpenguins)
+```
+
+
+## Multiple ways of telling a story
+
+-   Sequential reveal: Motivation, then resolution
+
+-   Instant reveal: Resolution, and hidden in it motivation
+
+## Simplicity vs. complexity {.smaller}
+
+> When you're trying to show too much data at once you may end up not showing anything.
+
+-   Never assume your audience can rapidly process complex visual displays
+
+-   Don't add variables to your plot that are tangential to your story
+
+-   Don't jump straight to a highly complex figure; first show an easily digestible subset (e.g., show one facet first)
+
+-   Aim for memorable, but clear
+
+::: {.callout-note appearance="minimal"}
+**Project note:** Make sure to leave time to iterate on your plots after you practice your presentation. If certain plots or outputs are getting too wordy to explain, take time to simplify them!
+:::
+
+## Consistency vs. repetitiveness
+
+> Be consistent but don't be repetitive.
+
+-   Use consistent features throughout plots (e.g., same color represents same level on all plots)
+
+-   Aim to use a different type of summary or visualization for each distinct analysis
+
+::: {.callout-note appearance="minimal"}
+**Project note:** If possible, ask a friend who is not in the class to listen to your presentation and then ask them what they remember. Then, ask yourself: is that what you wanted them to remember?
+:::
+
+## Participate 📱💻 
+
+::: columns
+
+::: {.column width="70%"}
+
+::: wooclap
+
+Which do you prefer as a reader? 
+
+::: wooclap-choices
+- Sequential reveal
+
+- Instant reveal
+
+- neither
+:::
+
+:::
+:::
+
+::: {.column width="30%"}
+{{< include _wooclap-column.qmd >}}
+:::
+
+:::
+
+# Designing effective visualizations
+
+## Data {.medium}
+
+
+
+```{r}
+#| output-location: column
+
+d <- tribble(
+  ~category,                     ~value,
+  "Cutting tools"                , 0.03,
+  "Buildings and administration" , 0.22,
+  "Labor"                        , 0.31,
+  "Machinery"                    , 0.27,
+  "Workplace materials"          , 0.17
+)
+d
+```
+
+## Keep it simple
+
+::: columns
+::: {.column width="40%"}
+![](images/13/pie.jpg)
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| out-width: "100%"
+#| fig-width: 4
+#| fig-asp: 0.5
+
+ggplot(d, aes(y = fct_reorder(category, value), x = value)) +
+  geom_col() +
+  labs(x = NULL, y = NULL)
+```
+:::
+:::
+
+## Judging relative area
+
+![](images/13/pie-areas.png){fig-align="center" width="800"}
+
+. . .
+
+![](images/13/bar-areas.png){fig-align="center" width="800"}
+
+::: aside
+From Data to Viz caveat collection - [The issue with pie chart](https://www.data-to-viz.com/caveat/pie.html)
+:::
+
+## Use color to draw attention
+
+<br/> <br/>
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| out-width: "100%"
+#| fig-width: 4
+#| fig-asp: 0.5
+
+ggplot(d, aes(x = category, y = value, fill = category)) +
+  geom_col(show.legend = FALSE) +
+  labs(x = NULL, y = NULL) +
+  scale_x_discrete(labels = label_wrap_gen(width = 20))
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| out-width: "100%"
+#| fig-width: 4
+#| fig-asp: 0.5
+
+p <- ggplot(d, aes(y = fct_reorder(category, value), x = value, fill = category)) +
+  geom_col(show.legend = FALSE) +
+  labs(x = NULL, y = NULL) +
+  scale_fill_manual(values = c("red", rep("gray", 4)))
+
+p
+```
+:::
+:::
+
+## Play with themes for a non-standard look {.smaller}
+
+```{r}
+#| out-width: "100%"
+#| fig-width: 4
+#| fig-asp: 0.5
+#| layout-ncol: 2
+#| echo: false
+
+p + theme_bw() + labs(title = "theme_bw()")
+p + theme_linedraw() + labs(title = "theme_linedraw()")
+p + theme_minimal() + labs(title = "theme_minimal()")
+p + theme_dark() + labs(title = "theme_dark()")
+```
+
+## Go beyond ggplot2 themes -- ggthemes {.smaller}
+
+```{r}
+#| out-width: "100%"
+#| fig-width: 5
+#| fig-asp: 0.5
+#| layout-ncol: 2
+#| echo: false
+
+p + theme_economist() + labs(title = "theme_economist()")
+p + theme_fivethirtyeight() + labs(title = "theme_fivethirtyeight()")
+p + theme_solarized() + labs(title = "theme_solarized()")
+p + theme_tufte() + labs(title = "theme_tufte()")
+```
+
+## Tell a story
+
+::: columns
+::: {.column width="50%"}
+![](images/13/duke-hires-1.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](images/13/duke-hires-2.png){fig-align="center"}
+:::
+:::
+
+::: aside
+*Credit*: Angela Zoss and Eric Monson, Duke DVS
+:::
+
+## Leave out non-story details
+
+::: columns
+::: {.column width="50%"}
+![](images/13/too-many-details.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](images/13/fewer-details.png){fig-align="center"}
+:::
+:::
+
+::: aside
+*Credit*: Angela Zoss and Eric Monson, Duke DVS
+:::
+
+## Order matters
+
+::: columns
+::: {.column width="50%"}
+![](images/13/unordered.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](images/13/ordered.png){fig-align="center"}
+:::
+:::
+
+::: aside
+*Credit*: Angela Zoss and Eric Monson, Duke DVS
+:::
+
+## Clearly indicate missing data
+
+![](images/13/missing-data.png){fig-align="center"}
+
+::: aside
+http://ivi.sagepub.com/content/10/4/271, Angela Zoss and Eric Monson, Duke DVS
+:::
+
+## Reduce cognitive load
+
+![](images/13/cognitive-load.png){fig-align="center"}
+
+::: aside
+http://www.storytellingwithdata.com/2012/09/some-finer-points-of-data-visualization.html
+:::
+
+## Use descriptive titles
+
+::: columns
+::: {.column width="50%"}
+![](images/13/title-non-descriptive.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](images/13/title-descriptive.png){fig-align="center"}
+:::
+:::
+
+::: aside
+*Credit*: Angela Zoss and Eric Monson, Duke DVS
+:::
+
+## Annotate figures
+
+![](images/13/annotate.png){fig-align="center"}
+
+::: aside
+https://bl.ocks.org/susielu/23dc3082669ee026c552b85081d90976
+:::
+
+# Plot sizing and layout
+
+## Sample plots
+
+```{r}
+#| fig-show: hide
+
+p_hist <- ggplot(mtcars, aes(x = mpg)) +
+  geom_histogram(binwidth = 2)
+
+p_text <- mtcars |>
+  rownames_to_column() |>
+  ggplot(aes(x = disp, y = mpg)) +
+  geom_text_repel(aes(label = rowname)) +
+  coord_cartesian(clip = "off")
+```
+
+## Small `fig-width`
+
+For a zoomed-in look
+
+```{r}
+#| echo: fenced
+#| fig-width: 3
+#| fig-asp: 0.618
+
+p_hist
+```
+
+## Large `fig-width`
+
+For a zoomed-out look
+
+```{r}
+#| echo: fenced
+#| fig-width: 6
+#| fig-asp: 0.618
+
+p_hist
+```
+
+## `fig-width` affects text size
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| warning: false
+#| fig-width: 5
+#| fig-asp: 0.618
+
+p_text +
+  labs(title = "fig.width = 5")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| fig-width: 10
+#| fig-asp: 0.618
+
+p_text +
+  labs(title = "fig.width = 10")
+```
+:::
+:::
+
+## Multiple plots on a slide
+
+::: {.callout-warning appearance="minimal"}
+First, ask yourself, must you include multiple plots on a slide? For example, is your narrative about comparing results from two plots?
+:::
+
+-   If no, then don't! Move the second plot to to the next slide!
+
+-   If yes, use columns and sequential reveal.
+
+# Quarto
+
+## Writing your project report with Quarto
+
+-   Figure sizing: `fig-width`, `fig-height`, etc. in code chunks.
+
+-   Figure layout: `layout-ncol` for placing multiple figures in a chunk.
+
+-   Further control over figure layout with the **patchwork** package.
+
+-   Chunk options around what makes it in your final report: `message`, `echo`, etc.
+
+-   Cross referencing figures and tables.
+
+-   Adding footnotes and citations.
+
+## Cross referencing figures {.smaller}
+
+::: panel-tabset
+## Output
+
+As seen in @fig-penguins, there is a positive and relatively strong relationship between body mass and flipper length of penguins.
+
+```{r}
+#| label: fig-penguins
+#| fig-cap: The relationship between body mass and flipper length of penguins.
+#| fig-width: 5
+#| fig-asp: 0.618
+#| fig-align: left
+
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point()
+```
+
+## Input
+
+````         
+As seen in @fig-penguins, there is a positive and relatively strong relationship between body mass and flipper length of penguins.
+
+```{{r}}
+#| label: fig-penguins
+
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point()
+```
+````
+:::
+
+## Cross referencing tables {.smaller}
+
+::: panel-tabset
+## Output
+
+The regression output is shown in @tbl-penguins-lm.
+
+```{r}
+#| label: tbl-penguins-lm
+#| tbl-cap: The regression output for predicting body mass from flipper length of penguins.
+
+penguins_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm, data = penguins)
+
+tidy(penguins_fit) |>
+  knitr::kable(digits = 3)
+```
+
+## Input
+
+````         
+The regression output is shown in @tbl-penguins-lm.
+
+```{{r}}
+#| label: tbl-penguins-lm
+#| tbl-cap: The regression output for predicting body mass from flipper length of penguins.
+
+penguins_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm, data = penguins)
+
+tidy(penguins_fit) |>
+  knitr::kable(digits = 3)
+```
+````
+:::
+
+# Take A Sad Plot & Make It Better 
+
+## Going the extra mile
+
+![](images/13/sad-plot-to-better.gif){width="50%"}
+
+## Trends instructional staff employees in universities {.smaller .scrollable}
+
+The American Association of University Professors (AAUP) is a nonprofit membership association of faculty and other academic professionals.
+[This report](https://www.aaup.org/sites/default/files/files/AAUP_Report_InstrStaff-75-11_apr2013.pdf) by the AAUP shows trends in instructional staff employees between 1975 and 2011, and contains the following image.
+What trends are apparent in this visualization?
+
+![](images/13/staff-employment.png){fig-align="center"}
+
+## `{r} todays_ae`
+
+::: appex
+-   Go to your ae project in RStudio.
+
+-   If you haven't yet done so, make sure all of your changes up to this point are committed and pushed, i.e., there's nothing left in your Git pane.
+
+-   If you haven't yet done so, click Pull to get today's application exercise file: *`{r} paste0(todays_ae, ".qmd")`*.
+
+-   Work through the application exercise in class, and render, commit, and push your edits.
+:::
+
+## Data prep
+
+```{r}
+#| label: load-data-staff
+#| message: false
+#| code-fold: true
+library(tidyverse)
+library(scales)
+
+staff <- read_csv("data/instructional-staff.csv")
+
+staff_long <- staff |>
+  pivot_longer(
+    cols = -faculty_type, names_to = "year",
+    values_to = "percentage"
+  ) |>
+  mutate(
+    percentage = as.numeric(percentage),
+    faculty_type = fct_relevel(
+      faculty_type,
+      "Full-Time Tenured Faculty",
+      "Full-Time Tenure-Track Faculty",
+      "Full-Time Non-Tenure-Track Faculty",
+      "Part-Time Faculty",
+      "Graduate Student Employees"
+    ),
+    year = as.numeric(year),
+    faculty_type_color = if_else(faculty_type == "Part-Time Faculty", "firebrick3", "gray40")
+  )
+```
+
+## Pick a purpose {.smaller}
+
+```{r}
+#| fig-asp: 0.5
+#| fig-width: 12.0
+#| code-fold: true
+p <- ggplot(
+  staff_long,
+  aes(
+    x = year,
+    y = percentage,
+    color = faculty_type_color, group = faculty_type
+    )
+  ) +
+  geom_line(linewidth = 1, show.legend = FALSE) +
+  labs(
+    x = NULL,
+    y = "Percent of Total Instructional Staff",
+    color = NULL,
+    title = "Trends in Instructional Staff Employment Status, 1975-2011",
+    subtitle = "All Institutions, National Totals",
+    caption = "Source: US Department of Education, IPEDS Fall Staff Survey"
+  ) +
+  scale_y_continuous(labels = label_percent(accuracy = 1, scale = 1)) +
+  scale_color_identity() +
+  theme(
+    plot.caption = element_text(size = 8, hjust = 0),
+    plot.margin = margin(0.1, 0.6, 0.1, 0.1, unit = "in")
+  ) +
+  coord_cartesian(clip = "off") +
+  annotate(
+    geom = "text",
+    x = 2012, y = 41, label = "Part-Time\nFaculty",
+    color = "firebrick3", hjust = "left", size = 5
+  ) +
+  annotate(
+    geom = "text",
+    x = 2012, y = 13.5, label = "Other\nFaculty",
+    color = "gray40", hjust = "left", size = 5
+  ) +
+  annotate(
+    geom = "segment",
+    x = 2011.5, xend = 2011.5,
+    y = 7, yend = 20,
+    color = "gray40", linetype = "dotted"
+  )
+
+p
+```
+
+## Use labels to communicate the message {.smaller}
+
+```{r}
+#| fig-asp: 0.5
+#| fig-width: 12.0
+#| code-fold: true
+p +
+  labs(
+    title = "Instruction by part-time faculty on a steady increase",
+    subtitle = "Trends in Instructional Staff Employment Status, 1975-2011\nAll Institutions, National Totals",
+    caption = "Source: US Department of Education, IPEDS Fall Staff Survey",
+    y = "Percent of Total Instructional Staff",
+    x = NULL
+  )
+```
+
+## Simplify {.smaller}
+
+```{r}
+#| fig-asp: 0.5
+#| fig-width: 12.0
+#| code-fold: true
+p +
+  labs(
+    title = "Instruction by part-time faculty on a steady increase",
+    subtitle = "Trends in Instructional Staff Employment Status, 1975-2011\nAll Institutions, National Totals",
+    caption = "Source: US Department of Education, IPEDS Fall Staff Survey",
+    y = "Percent of Total Instructional Staff",
+    x = NULL
+  ) +
+  theme(panel.grid.minor = element_blank())
+```
+
+## Summary {.smaller}
+
+-   Represent percentages as parts of a whole
+-   Place variables representing time on the x-axis when possible
+-   Pay attention to data types, e.g., represent time as time on a continuous scale, not years as levels of a categorical variable
+-   Prefer direct labeling over legends
+-   Use accessible colors
+-   Use color to draw attention
+-   Pick a purpose and label, color, annotate for that purpose
+-   Communicate your main message directly in the plot labels
+-   Simplify before you call it done (a.k.a. "Before you leave the house, look in the mirror and take one thing off")
+
+
+
