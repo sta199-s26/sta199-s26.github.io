@@ -58,7 +58,14 @@ XXX
 
 ## Reminder
 
-XXX
+::: incremental
+- Project feedback returned today;
+- Make progress (clean, plot, summarize) by Wednesday night;
+- Thursday lab: continue to work and give another team feedback;
+- Friday: Midterm 1 grades returned.
+:::
+
+Forget this class exists during spring break. Our last six weeks are about statistical modeling and inference. 
 
 # Ugly plot 
 
@@ -672,6 +679,16 @@ ggdraw() +
   draw_plot(bad_graph)
 ```
 
+# Project
+
+## The bottom line, at the top
+
+::: incremental 
+- Write an in-depth article that might appear in the popular press (NYT, Chronicle, etc);
+- Audience: intelligent but non-technical read that is unfamiliar with the domain;
+- Emphasize clear communication, attractive and informative graphics, and carefully chosen numerical summaries;
+- `R` code and raw output should not appear!
+:::
 
 # Telling a story
 
@@ -1086,32 +1103,38 @@ ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
 ::: panel-tabset
 ## Output
 
-The regression output is shown in @tbl-penguins-lm.
+@tbl-penguins displays summaries of flipper length by species.
 
 ```{r}
-#| label: tbl-penguins-lm
-#| tbl-cap: The regression output for predicting body mass from flipper length of penguins.
+#| label: tbl-penguins
+#| tbl-cap: Flipper length summaries by species
 
-penguins_fit <- linear_reg() |>
-  fit(body_mass_g ~ flipper_length_mm, data = penguins)
-
-tidy(penguins_fit) |>
+penguins |>
+  group_by(species) |>
+  summarize(
+    Mean = mean(flipper_length_mm, na.rm = TRUE),
+    Median = median(flipper_length_mm, na.rm = TRUE),
+    SD = sd(flipper_length_mm, na.rm = TRUE)
+  ) |>
   knitr::kable(digits = 3)
 ```
 
 ## Input
 
 ````         
-The regression output is shown in @tbl-penguins-lm.
+@tbl-penguins displays summaries of flipper length by species.
 
 ```{{r}}
-#| label: tbl-penguins-lm
-#| tbl-cap: The regression output for predicting body mass from flipper length of penguins.
+#| label: tbl-penguins
+#| tbl-cap: Flipper length summaries by species
 
-penguins_fit <- linear_reg() |>
-  fit(body_mass_g ~ flipper_length_mm, data = penguins)
-
-tidy(penguins_fit) |>
+penguins |>
+  group_by(species) |>
+  summarize(
+    Mean = mean(flipper_length_mm, na.rm = TRUE),
+    Median = median(flipper_length_mm, na.rm = TRUE),
+    SD = sd(flipper_length_mm, na.rm = TRUE)
+  ) |>
   knitr::kable(digits = 3)
 ```
 ````
