@@ -1276,8 +1276,8 @@ $ category             &lt;chr&gt; "AAR", "LHR", "AAR", "ALU", "AAR", "AAR", "LA
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span>position <span class="op">=</span> <span class="va">stack</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span> <span class="co"># STA 199 students are not allowed to do this</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
-<pre><code>Error in `check_subclass()`:
-! `x` must be either a string or a &lt;Position&gt; object, not a function.</code></pre>
+<pre><code>Error in `validate_subclass()`:
+! `position` must be either a string or a &lt;Position&gt; object, not a function.</code></pre>
 </div>
 </div>
 <p>The argument for <code>position</code> is looking for either a string or a <code>&lt;Position&gt;</code> object. Since we don’t know what <code>&lt;Position&gt;</code> objects are, it’s clear that we should be giving it a string. R needs to find this argument in a list: we could say <code>position = "dodge"</code> or <code>position = "fill"</code>, so long as we include quotation marks, since those are on the list of accepted arguments.</p>
@@ -1396,6 +1396,7 @@ What’s wrong with this code?
 <div class="cell-output cell-output-error">
 <pre><code>Error in `geom_point()`:
 ! `mapping` must be created by `aes()`.
+✖ You've supplied a &lt;ggplot2::ggplot&gt; object.
 ℹ Did you use `%&gt;%` or `|&gt;` instead of `+`?</code></pre>
 </div>
 </div>

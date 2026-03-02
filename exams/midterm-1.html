@@ -852,7 +852,7 @@ $ vote         &lt;fct&gt; yes, no, yes, yes, yes, yes, yes, yes, yes, yes, yes,
 <span>  <span class="fu">theme_minimal</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <pre><code>Error in `ggplot()`:
-! `mapping` must be created with `aes()`.
+! `mapping` must be created by `aes()`.
 ✖ You've supplied a tibble.</code></pre>
 </div>
 </div>
@@ -883,7 +883,7 @@ $ vote         &lt;fct&gt; yes, no, yes, yes, yes, yes, yes, yes, yes, yes, yes,
 <span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">country</span> <span class="op">==</span> <span class="st">"Turkey"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">glimpse</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
-<pre><code>Error in UseMethod("filter"): no applicable method for 'filter' applied to an object of class "c('gg', 'ggplot')"</code></pre>
+<pre><code>Error in UseMethod("filter"): no applicable method for 'filter' applied to an object of class "c('ggplot2::ggplot', 'ggplot', 'ggplot2::gg', 'S7_object', 'gg')"</code></pre>
 </div>
 </div>
 <p>Wut?</p>
@@ -1199,14 +1199,9 @@ Figure&nbsp;3: Distribution of salary type by performance rating
 </div>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>$x
-[1] "Performance rating"
-
-$y
-[1] "Percent increase"
-
-attr(,"class")
-[1] "labels"</code></pre>
+<pre><code>&lt;ggplot2::labels&gt; List of 2
+ $ x: chr "Performance rating"
+ $ y: chr "Percent increase"</code></pre>
 </div>
 </div>
 <p>Part 1: List at least 5 things that should be fixed or improved in the code.</p>
