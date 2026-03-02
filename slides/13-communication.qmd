@@ -67,7 +67,7 @@ Your first peer evaluation for your project is due at midnight tonight. You shou
 
 . . .
 
-Forget this class exists during spring break. After, our last six weeks are about statistical modeling and inference. 
+Forget this class exists during spring break. After we return, our last six weeks are about statistical modeling and inference. 
 
 # Ugly plot 
 
