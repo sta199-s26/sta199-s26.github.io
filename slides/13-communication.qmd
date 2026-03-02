@@ -690,7 +690,8 @@ ggdraw() +
 - Write an in-depth article that might appear in the popular press (NYT, Chronicle, etc);
 - Audience: intelligent but non-technical reader that is unfamiliar with the domain;
 - Emphasize clear communication, attractive and informative graphics, and carefully chosen numerical summaries;
-- `R` code and raw output should not appear!
+- `R` code and raw output should not appear;
+- All figures and tables should be labeled with captions.
 :::
 
 # Telling a story
