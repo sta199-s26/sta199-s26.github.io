@@ -65,7 +65,9 @@ XXX
 - Friday: Midterm 1 grades returned.
 :::
 
-Forget this class exists during spring break. Our last six weeks are about statistical modeling and inference. 
+. . .
+
+Forget this class exists during spring break. After, our last six weeks are about statistical modeling and inference. 
 
 # Ugly plot 
 
@@ -685,7 +687,7 @@ ggdraw() +
 
 ::: incremental 
 - Write an in-depth article that might appear in the popular press (NYT, Chronicle, etc);
-- Audience: intelligent but non-technical read that is unfamiliar with the domain;
+- Audience: intelligent but non-technical reader that is unfamiliar with the domain;
 - Emphasize clear communication, attractive and informative graphics, and carefully chosen numerical summaries;
 - `R` code and raw output should not appear!
 :::
