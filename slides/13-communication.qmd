@@ -40,11 +40,11 @@ todays_ae <- "ae-14-effective-dataviz"
 
 ::: wooclap
 
-XXX
+Your first peer evaluation for your project is due at midnight tonight. You should have received an e-mail from TEAMMATES about it (check your junk folder!). Did you complete it yet?
 
 ::: wooclap-choices
-- YYY
-- ZZZ
+- Yes
+- No
 :::
 
 :::
