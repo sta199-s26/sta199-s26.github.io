@@ -748,7 +748,7 @@ library(palmerpenguins)
 
 ::: wooclap
 
-Which do you prefer as a reader? 
+When you read an article, which style do you prefer?
 
 ::: wooclap-choices
 - Sequential reveal
