@@ -638,6 +638,8 @@ ggplot(aes(x = wt,
 
 ## First place: Austin Rios {.scrollable}
 
+[Know Your Meme](https://knowyourmeme.com/memes/jackie-kennedy-eats-sheet-metal).
+
 ```{r}
 #| code-fold: true
 #| fig-width: 6
