@@ -4,7 +4,7 @@ subtitle: "Milestone 4"
 categories: "Project"
 execute:
   echo: false
-  eval: false
+  eval: true
 ---
 
 ::: callout-important
