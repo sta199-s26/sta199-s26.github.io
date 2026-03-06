@@ -6,10 +6,10 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+  <meta name="generator" content="quarto-1.7.34">
 
   <meta name="author" content="John Zito">
   <meta name="dcterms.date" content="2026-01-21">
@@ -98,7 +98,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f1a2306d7f1ecadf2b6aaed2cf5d8945.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f0195dcd610196b9111c6e10e98695f4.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -253,7 +253,7 @@ John Zito
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>films <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/films.csv"</span>)</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>films <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/films.csv"</span>)</span>
 <span id="cb1-2"><a></a>films <span class="sc">|&gt;</span></span>
 <span id="cb1-3"><a></a>  <span class="fu">mutate</span>(<span class="at">Films =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(Films), <span class="st">"(I can't recall)"</span>, Films)) <span class="sc">|&gt;</span></span>
 <span id="cb1-4"><a></a>  <span class="fu">mutate</span>(<span class="at">Films =</span> <span class="fu">fct_lump_min</span>(Films, <span class="at">min =</span> <span class="dv">6</span>, <span class="at">other_level =</span> <span class="st">"Other"</span>)) <span class="sc">|&gt;</span> </span>
@@ -265,7 +265,7 @@ John Zito
 <span id="cb1-10"><a></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">""</span>,</span>
 <span id="cb1-11"><a></a>       <span class="at">title =</span> <span class="st">"What's the last film you saw in a theater?"</span>,</span>
 <span id="cb1-12"><a></a>       <span class="at">subtitle =</span> <span class="st">"From the sta199-s26 survey"</span>,</span>
-<span id="cb1-13"><a></a>       <span class="at">caption =</span> <span class="st">"(Films with fewer than 6 responses were omitted for readability.)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-13"><a></a>       <span class="at">caption =</span> <span class="st">"(Films with fewer than 6 responses were omitted for readability.)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>
@@ -490,9 +490,9 @@ John Zito
 <section id="a-quick-reminder" class="slide level2 smaller">
 <h2>A quick reminder</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-2"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-2-1" class="code-annotation-target"><a href="#annotated-cell-2-1"></a>bechdel <span class="sc">|&gt;</span></span>
+<div class="sourceCode cell-code" id="annotated-cell-2"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-2-1" class="code-annotation-target"><a href="#annotated-cell-2-1"></a>bechdel <span class="sc">|&gt;</span></span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-2-2" class="code-annotation-target"><a href="#annotated-cell-2-2"></a>  <span class="fu">filter</span>(roi <span class="sc">&gt;</span> <span class="dv">400</span>) <span class="sc">|&gt;</span></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-2-3" class="code-annotation-target"><a href="#annotated-cell-2-3"></a>  <span class="fu">select</span>(title, roi, budget_2013, gross_2013, year, clean_test)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-2-3" class="code-annotation-target"><a href="#annotated-cell-2-3"></a>  <span class="fu">select</span>(title, roi, budget_2013, gross_2013, year, clean_test)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
@@ -525,15 +525,15 @@ John Zito
 <div class="columns">
 <div class="column fragment" style="width:55%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">sum</span>(<span class="dv">1</span>, <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">sum</span>(<span class="dv">1</span>, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3</code></pre>
 </div>
 </div>
 </div><div class="column fragment" style="width:45%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="dv">1</span> <span class="sc">|&gt;</span> </span>
-<span id="cb5-2"><a></a>  <span class="fu">sum</span>(<span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="dv">1</span> <span class="sc">|&gt;</span> </span>
+<span id="cb5-2"><a></a>  <span class="fu">sum</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3</code></pre>
 </div>
@@ -543,7 +543,7 @@ John Zito
 <div class="columns">
 <div class="column fragment" style="width:55%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">select</span>(<span class="fu">filter</span>(bechdel, roi <span class="sc">&gt;</span> <span class="dv">400</span>), title)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">select</span>(<span class="fu">filter</span>(bechdel, roi <span class="sc">&gt;</span> <span class="dv">400</span>), title)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 1
   title                  
@@ -555,9 +555,9 @@ John Zito
 </div>
 </div><div class="column fragment" style="width:45%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>bechdel <span class="sc">|&gt;</span></span>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>bechdel <span class="sc">|&gt;</span></span>
 <span id="cb9-2"><a></a>  <span class="fu">filter</span>(roi <span class="sc">&gt;</span> <span class="dv">400</span>) <span class="sc">|&gt;</span></span>
-<span id="cb9-3"><a></a>  <span class="fu">select</span>(title)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb9-3"><a></a>  <span class="fu">select</span>(title)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 1
   title                  
@@ -598,7 +598,7 @@ John Zito
 <div class="fragment">
 <p>Start with the <code>bechdel</code> data frame:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>bechdel</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>bechdel</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1,615 × 7
    title                   year gross_2013 budget_2013    roi binary clean_test
@@ -625,8 +625,8 @@ John Zito
 </div>
 <p>Filter for rows where <code>binary</code> is equal to <code>"PASS"</code>:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>bechdel <span class="sc">|&gt;</span></span>
-<span id="cb13-2"><a></a>  <span class="fu">filter</span>(binary <span class="sc">==</span> <span class="st">"PASS"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>bechdel <span class="sc">|&gt;</span></span>
+<span id="cb13-2"><a></a>  <span class="fu">filter</span>(binary <span class="sc">==</span> <span class="st">"PASS"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 753 × 7
    title                 year gross_2013 budget_2013   roi binary clean_test
@@ -652,9 +652,9 @@ John Zito
 </div>
 <p>Arrange the rows in <code>desc</code>ending order of <code>roi</code>:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>bechdel <span class="sc">|&gt;</span></span>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>bechdel <span class="sc">|&gt;</span></span>
 <span id="cb15-2"><a></a>  <span class="fu">filter</span>(binary <span class="sc">==</span> <span class="st">"PASS"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb15-3"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(roi))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb15-3"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(roi))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 753 × 7
    title                     year gross_2013 budget_2013   roi binary clean_test
@@ -680,10 +680,10 @@ John Zito
 </div>
 <p>Select columns <code>title</code> and <code>roi</code>:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>bechdel <span class="sc">|&gt;</span></span>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>bechdel <span class="sc">|&gt;</span></span>
 <span id="cb17-2"><a></a>  <span class="fu">filter</span>(binary <span class="sc">==</span> <span class="st">"PASS"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb17-3"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(roi)) <span class="sc">|&gt;</span></span>
-<span id="cb17-4"><a></a>  <span class="fu">select</span>(title, roi)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb17-4"><a></a>  <span class="fu">select</span>(title, roi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 753 × 2
    title                      roi
@@ -1018,14 +1018,13 @@ John Zito
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-          const outerScaffold = trigger.parentElement.cloneNode(true);
-          const codeEl = outerScaffold.querySelector('code');
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
             }
-          }
-          return codeEl.innerText;
+            return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
