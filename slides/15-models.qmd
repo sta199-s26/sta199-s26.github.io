@@ -51,11 +51,14 @@ sta199_eval <- read_csv("data/sta199-s26-midsemester.csv") |>
 
 ::: wooclap
 
-XXX
+How often do you read a newspaper, such as NYT, WSJ, FT, WaPo, etc? 
 
 ::: wooclap-choices
-- x
-- x
+- Daily
+- Frequently
+- Occasionally
+- Rarely
+- Never
 :::
 
 :::
@@ -89,14 +92,6 @@ XXX
 
 
 # Midsemester evaluation
-
-## Data collection: the agony and the ecstasy
-
-- 176 / 329 (53.5%) responses as of 12:46 AM today;
-- This is *not* a random, representative sample!
-- Non-response bias: there are likely systematic differences in performance, engagement, attendance, etc between folks that choose to respond and those that don't;
-- Also, some responded before Midterm 1 grades were posted, and some after;
-- So we take the results with a grain of salt.
 
 ## The overall pace of the course is...
 
@@ -234,7 +229,41 @@ sta199_eval |>
   scale_x_discrete(labels = function(x) str_wrap(y, width = 22))
 ```
 
+## Participate 📱💻 {.medium}
 
+::: columns
+
+::: {.column width="70%"}
+
+::: wooclap
+
+176 / 329 (53.5%) of you responded to the midsemester eval. If the remaining 153 had also responded, how much do you think the results would change?
+
+::: wooclap-choices
+- Much more positive
+- A bit more positive
+- No change
+- A little more negative
+- Much more negative
+- Unsure
+:::
+
+:::
+:::
+
+::: {.column width="30%"}
+{{< include _wooclap-column.qmd >}}
+:::
+
+:::
+
+## Data collection: the agony and the ecstasy
+
+- 176 / 329 (53.5%) of you responded;
+- This is *not* a random, representative sample!
+- Non-response bias: there are likely systematic differences in performance, engagement, attendance, etc between folks that choose to respond and those that don't;
+- Also, some responded before Midterm 1 grades were posted, and some after;
+- So...how seriously should I take the results?
 
 # Modeling
 
