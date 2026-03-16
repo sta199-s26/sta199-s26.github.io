@@ -1,0 +1,906 @@
+---
+title: "The language of models"
+subtitle: "Lecture 15"
+date: "2026-03-16"
+format: 
+  revealjs: 
+    output-file: 15-models-slides.html
+    footer: "[🔗 sta199-s26.github.io](https://sta199-s26.github.io/)"
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+    logo: images/logo.png
+    toc: false
+  html: 
+    code-link: true
+---
+
+```{r}
+#| echo: false 
+#| message: false
+library(tidyverse)
+library(tidymodels)
+library(readxl)
+library(janitor)
+library(palmerpenguins)
+library(datasauRus)
+library(ggplot2)
+library(jpeg)
+library(glue)
+library(gt)
+todays_ae <- "ae-15-icecover-model"
+sta199_eval <- read_csv("data/sta199-s26-midsemester.csv") |>
+  mutate(
+    course_pace = fct_relevel(course_pace, "A little too slow", "About right", "A little too fast", "Much too fast"), 
+    lecture_pace = fct_relevel(lecture_pace, "A little too slow", "About right", "A little too fast", "Much too fast"),
+    engagement = fct_relevel(engagement, "Very low", "Low", "Moderate", "High", "Very high"), 
+    how_easy = fct_relevel(how_easy, 
+                           "Much easier than other courses", 
+                           "Somewhat easier than other courses", 
+                           "Same easiness/difficulty level as other courses", 
+                           "Somewhat more difficult than other courses", 
+                           "Much more difficult than other courses")
+  )
+```
+
+## While you wait: Participate 📱💻 
+
+::: columns
+
+::: {.column width="70%"}
+
+::: wooclap
+
+XXX
+
+::: wooclap-choices
+- x
+- x
+:::
+
+:::
+:::
+
+::: {.column width="30%"}
+{{< include _wooclap-column.qmd >}}
+:::
+
+:::
+
+
+## DataFest
+
+:::::: columns
+::: {.column width="50%"}
+![](images/15/datafest.png)
+:::
+
+::: {.column width="50%"}
+
+- Sign up [here](https://dukestatsci.github.io/datafest/)!
+- Teams of your choice explore a mystery dataset and blitz an analysis in two days;
+- Starts Friday March 20 @ 5PM;
+- Ends Sunday March 22 @ 5PM;
+- Free food!
+
+:::
+::::::
+
+
+
+# Midsemester evaluation
+
+## Data collection: the agony and the ecstasy
+
+- 176 / 329 (53.5%) responses as of 12:46 AM today;
+- This is *not* a random, representative sample!
+- Non-response bias: there are likely systematic differences in performance, engagement, attendance, etc between folks that choose to respond and those that don't;
+- Also, some responded before Midterm 1 grades were posted, and some after;
+- So we take the results with a grain of salt.
+
+## The overall pace of the course is...
+
+```{r}
+#| echo: false 
+
+sta199_eval |> 
+  drop_na(course_pace) |>
+  ggplot(aes(y = course_pace)) +
+  geom_bar() + 
+  labs(
+    title = "The overall pace of the course is:",
+    subtitle = glue("Number of responses: {nrow(sta199_eval)}"),
+    y = NULL
+  )
+```
+
+## The overall pace of lecture is...
+
+```{r}
+#| echo: false 
+
+sta199_eval |> 
+  drop_na(lecture_pace) |>
+  ggplot(aes(y = lecture_pace)) +
+  geom_bar() + 
+  labs(
+    title = "The overall pace of lecture is:",
+    subtitle = glue("Number of responses: {nrow(sta199_eval)}"),
+    y = NULL
+  )
+```
+
+## How would you rate your personal level of engagement with the course?
+
+```{r}
+#| echo: false 
+
+sta199_eval |>
+  drop_na(engagement) |>
+  ggplot(aes(y = engagement)) +
+  geom_bar() + 
+  labs(
+    title = "How would you rate your personal level of engagement with the course:",
+    subtitle = glue("Number of responses: {nrow(sta199_eval)}"),
+    y = NULL
+  )
+```
+
+## What resources have you used thus far to learn material in the course?
+
+```{r}
+#| echo: false 
+
+resources_list_all <- tibble(sta199_eval$resources) |>
+  rename(resources = `sta199_eval$resources`) |>
+  drop_na(resources) |>
+  separate_rows(resources, sep = ",") |>
+  mutate(resources = str_trim(resources))
+
+ggplot(resources_list_all, aes(y = fct_rev(fct_infreq(resources)))) +
+  geom_bar() + 
+  labs(
+    title = "What resources have you used thus far to learn material in \nthe course? Select all that apply.",
+    subtitle = glue("Number of responses: {nrow(sta199_eval)}"), 
+    y = NULL
+  ) +
+  scale_y_discrete(labels = function(x) str_wrap(x, width = 22))
+```
+
+## How have you learned the best so far in the class? 
+
+
+```{r}
+#| echo: false
+
+resources_list_best <- tibble(sta199_eval$learn_best) |>
+  rename(learn_best = `sta199_eval$learn_best`) |>
+  drop_na(learn_best) |>
+  separate_rows(learn_best, sep = ",") |>
+  mutate(learn_best = str_trim(learn_best))
+
+ggplot(resources_list_best, aes(y = fct_rev(fct_infreq(learn_best)))) +
+  geom_bar() + 
+  labs(
+    title = "How do you learn best?",
+    subtitle = glue("Number of responses: {nrow(sta199_eval)}"), 
+    y = NULL
+  ) +
+  scale_y_discrete(labels = function(x) str_wrap(x, width = 22))
+```
+
+## Do you have suggestions for how the lecture time should be split between different activities?
+
+```{r}
+#| echo: false 
+
+lecture_time_sugg_list <- tibble(sta199_eval$lecture_suggestion) |>
+  rename(lecture_suggestion = `sta199_eval$lecture_suggestion`) |>
+  drop_na(lecture_suggestion) |>
+  mutate(
+    lecture_suggestion = str_replace(lecture_suggestion, "\\\\, keep it as is", "; keep it as is"),
+    lecture_suggestion = str_replace(lecture_suggestion, "\\\\, TAs walking around and helping", "; TAs walking around and helping"),
+    lecture_suggestion = str_replace(lecture_suggestion, "\\\\, students following along in", "; students following along in")
+  ) |>
+  separate_rows(lecture_suggestion, sep = ",") |>
+  mutate(lecture_suggestion = str_trim(lecture_suggestion),
+         lecture_suggestion = str_replace(lecture_suggestion, ";", ",")
+         )
+
+ggplot(lecture_time_sugg_list, aes(y = fct_rev(fct_infreq(lecture_suggestion)))) +
+  geom_bar() + 
+  labs(
+    title = "Do you have suggestions for how the lecture time should be \nsplit between different activities?",
+    subtitle = glue("Number of responses: {nrow(sta199_eval)}"), 
+    y = NULL
+  ) +
+  scale_y_discrete(labels = function(x) str_wrap(x, width = 22))
+```
+
+## How easy is this course compared to your other courses?
+
+```{r}
+#| echo: false 
+
+sta199_eval |>
+  drop_na(how_easy) |>
+  ggplot(aes(y = how_easy)) +
+  geom_bar() + 
+  labs(
+    title = "How easy is wanana compared to your other courses?",
+    subtitle = glue("Number of responses: {nrow(sta199_eval)}"),
+    y = NULL
+  ) +
+  scale_x_discrete(labels = function(x) str_wrap(y, width = 22))
+```
+
+
+
+# Modeling
+
+## Agenda
+
+-   What is a model?
+-   Why do we model?
+-   What is correlation?
+
+## Two main goals
+
+- Prediction / classification
+
+- Description / explanation
+
+<br>
+
+::: question
+
+Can you think of examples of modeling for prediction vs. modeling for explanation?
+
+:::
+
+# Prediction
+
+## Let's drive a Tesla!
+
+{{< video https://www.youtube.com/embed/xvqQ4F7Yf2o start="150" width="900" height="600" >}}
+
+## Semi or garage? {.smaller}
+
+> i love how Tesla thinks the wall in my garage is a semi.
+> 😅
+
+![](images/15/tesla-get-wrong-1.png){fig-align="center" width="300"}
+
+::: aside
+Source: [Reddit](https://www.reddit.com/r/TeslaModelY/comments/vjcpte/i_love_how_tesla_thinks_the_wall_in_my_garage_is/)
+:::
+
+## Semi or garage? {.smaller}
+
+> New owner here.
+> Just parked in my garage.
+> Tesla thinks I crashed onto a semi.
+
+![](images/15/tesla-get-wrong-2.png){fig-align="center" width="300"}
+
+::: aside
+Source: [Reddit](https://www.reddit.com/r/TeslaModelY/comments/112520t/new_owner_here_just_parked_in_my_garage_tesla/)
+:::
+
+## Car or trash?
+
+> Tesla calls Mercedes trash
+
+![](images/15/tesla-get-wrong-3.png){fig-align="center" width="500"}
+
+::: aside
+Source: [Reddit](https://www.reddit.com/r/FUCKYOUINPARTICULAR/comments/hi5srx/tesla_calls_mercedes_trash/)
+:::
+
+# Description
+
+
+## Leisure, commute, physical activity and BP {.smaller}
+
+> [Relation Between Leisure Time, Commuting, and Occupational Physical Activity With Blood Pressure in 125,402 Adults: The Lifelines Cohort](https://www.ahajournals.org/doi/full/10.1161/JAHA.119.014313)
+>
+> Byambasukh, Oyuntugs, Harold Snieder, and Eva Corpeleijn.
+> "Relation between leisure time, commuting, and occupational physical activity with blood pressure in 125 402 adults: the lifelines cohort." *Journal of the American Heart Association* 9.4 (2020): e014313.
+
+## Leisure, commute, physical activity and BP {.smaller .scrollable}
+
+**Goal:** [To investigate the associations of different domains of daily‐life physical activity, such as commuting, leisure‐time, and occupational, with BP level and the risk of having hypertension.]{style="background-color: #fcefb3"}
+
+## Leisure, commute, physical activity and BP {.smaller .scrollable}
+
+**Goal:** To investigate the associations of different domains of daily-life physical activity, such as commuting, leisure-time, and occupational, with BP level and the risk of having hypertension.
+
+**Methods and Results**: [In the population-based Lifelines cohort (N=125,402), MVPA was assessed by the Short Questionnaire to Assess Health-Enhancing Physical Activity, a validated questionnaire in different domains such as commuting, leisure-time, and occupational PA.]{style="background-color: #fcefb3"}
+
+## Leisure, commute, physical activity and BP {.smaller .scrollable}
+
+**Goal:** To investigate the associations of different domains of daily-life physical activity, such as commuting, leisure-time, and occupational, with BP level and the risk of having hypertension.
+
+**Methods and Results**: In the population-based Lifelines cohort (N=125,402), MVPA was assessed by the Short Questionnaire to Assess Health-Enhancing Physical Activity, a validated questionnaire in different domains such as commuting, leisure-time, and occupational PA.
+[Commuting-and-leisure-time MVPA was associated with BP in a dose-dependent manner.]{style="background-color: #fcefb3"}
+
+## Leisure, commute, physical activity and BP {.smaller .scrollable}
+
+**Goal:** To investigate the associations of different domains of daily-life physical activity, such as commuting, leisure-time, and occupational, with BP level and the risk of having hypertension.
+
+**Methods and Results**: In the population-based Lifelines cohort (N=125,402), MVPA was assessed by the Short Questionnaire to Assess Health-Enhancing Physical Activity, a validated questionnaire in different domains such as commuting, leisure-time, and occupational PA.
+Commuting-and-leisure-time MVPA was associated with BP in a dose-dependent manner.
+[β Coefficients (95% CI) from linear regression analyses were −1.64 (−2.03 to −1.24), −2.29 (−2.68 to −1.90), and −2.90 (−3.29 to −2.50) mm Hg systolic BP for the low, middle, and highest tertile of MVPA compared with "No MVPA" as the reference group after adjusting for age, sex, education, smoking and alcohol use. Further adjustment for body mass index attenuated the associations by 30% to 50%, but more MVPA remained significantly associated with lower BP and lower risk of hypertension. This association was age dependent. β Coefficients (95% CI) for the highest tertiles of commuting-and-leisure-time MVPA were −1.67 (−2.20 to −1.15), −3.39 (−3.94 to −2.82) and −4.64 (−6.15 to −3.14) mm Hg systolic BP in adults \<40, 40 to 60, and \>60 years, respectively.]{style="background-color: #e5bef7"}
+
+## Leisure, commute, physical activity and BP {.smaller .scrollable}
+
+**Goal:** To investigate the associations of different domains of daily-life physical activity, such as commuting, leisure-time, and occupational, with BP level and the risk of having hypertension.
+
+**Methods and Results**: In the population-based Lifelines cohort (N=125,402), MVPA was assessed by the Short Questionnaire to Assess Health-Enhancing Physical Activity, a validated questionnaire in different domains such as commuting, leisure-time, and occupational PA.
+Commuting-and-leisure-time MVPA was associated with BP in a dose-dependent manner.
+β Coefficients (95% CI) from linear regression analyses were −1.64 (−2.03 to −1.24), −2.29 (−2.68 to −1.90), and −2.90 (−3.29 to −2.50) mm Hg systolic BP for the low, middle, and highest tertile of MVPA compared with "No MVPA" as the reference group after adjusting for age, sex, education, smoking and alcohol use.
+Further adjustment for body mass index attenuated the associations by 30% to 50%, but more MVPA remained significantly associated with lower BP and lower risk of hypertension.
+This association was age dependent.
+β Coefficients (95% CI) for the highest tertiles of commuting-and-leisure-time MVPA were −1.67 (−2.20 to −1.15), −3.39 (−3.94 to −2.82) and −4.64 (−6.15 to −3.14) mm Hg systolic BP in adults \<40, 40 to 60, and \>60 years, respectively.
+
+**Conclusions**: [Higher commuting and leisure-time but not occupational MVPA were significantly associated with lower BP and lower hypertension risk at all ages, but these associations were stronger in older adults.]{style="background-color: #fcefb3"}
+
+
+# Let's go
+
+## Modeling cars {.smaller}
+
+::: question
+-   What is the relationship between cars' weights and their mileage?
+-   What is your best guess for a car's MPG that weighs 4,500 pounds?
+:::
+
+```{r}
+#| echo: false
+
+base <- ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  labs(
+    x = "Weight (1,000 lbs)",
+    y = "Miles per gallon (MPG)",
+    title = "MPG vs. weights of cars"
+  ) +
+  coord_cartesian(xlim = c(1.5, 5.5), ylim = c(10, 35))
+
+base
+```
+
+## Modelling cars {.smaller}
+
+::: question
+**Describe:** What is the relationship between cars' weights and their mileage?
+:::
+
+```{r}
+#| echo: false
+#| message: false
+
+base +
+  geom_smooth(method = "lm", color = "#FE5D26")
+```
+
+## Modelling cars {.smaller}
+
+::: question
+**Predict:** What is your best guess for a car's MPG that weighs 4,500 pounds?
+:::
+
+```{r}
+#| echo: false
+#| message: false
+
+cars_model <- lm(mpg ~ wt, data = mtcars)
+new_mpg <- predict(cars_model, tibble(wt = 4.5))
+
+
+base +
+  geom_smooth(method = "lm", se = FALSE, color = "darkgray", linetype = "dashed") +
+  annotate(
+    "segment",
+    x = 4.5, xend = 4.5, y = -Inf, yend = new_mpg,
+    color = "#FE5D26"
+  ) +
+  annotate(
+    "segment",
+    x = -Inf, xend = 4.5, y = new_mpg, yend = new_mpg,
+    color = "#FE5D26"
+  )
+```
+
+## Modelling
+
+-   Use models to explain the relationship between variables and to make predictions
+-   For now we will focus on **linear** models (but there are *many* *many* other types of models too!)
+
+## What is a line?
+
+```{r}
+#| echo: false
+
+ggplot() +
+  xlim(c(0,2)) +
+  ylim(c(0,6)) +
+  geom_abline(slope = 2, intercept = 1) +
+  theme_void()
+```
+
+## But on a plot...
+
+```{r}
+#| echo: false
+
+ggplot() +
+  xlim(c(0,2)) +
+  ylim(c(0,6)) +
+  geom_abline(slope = 2, intercept = 1) 
+```
+
+## But in math terms...
+
+$$ 
+\begin{aligned}
+y &= mx + b \\
+\text{Output}&=\text{Slope}\times \text{Input} + \text{Intercept}
+\end{aligned}
+$$
+
+```{r}
+#| echo: false
+
+ggplot() +
+  xlim(c(0,2)) +
+  ylim(c(0,6)) +
+  geom_abline(slope = 2, intercept = 1) 
+```
+
+## Modelling vocabulary
+
+-   Predictor (explanatory variable)
+-   Outcome (response variable)
+-   Regression line
+    -   Slope
+    -   Intercept
+-   Correlation
+
+## Predictor (explanatory variable)
+
+```{r}
+#| echo: false
+
+base <- ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  labs(
+    x = "Weight (1000 lbs)",
+    y = "Miles per gallon (MPG)",
+    title = "MPG vs. weights of cars"
+  )
+```
+
+:::::: columns
+::: {.column width="25%"}
+```{r}
+#| echo: false
+
+mtcars |>
+  select(mpg, wt) |>
+  slice_head(n = 6) |>
+  mutate(across(where(is.numeric), as.character)) |>
+  bind_rows(c(mpg = "...", wt = "...")) |>
+  gt() |>
+  tab_style(
+    style = list(
+      cell_fill(color = "#FE5D26"),
+      cell_text(color = "white")
+      ),
+    locations = cells_body(columns = wt)
+  ) |>
+  tab_options(table.font.size = px(12))
+```
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="70%"}
+```{r}
+#| echo: false
+
+base +
+  theme(
+    axis.title.x = element_text(color = "#FE5D26", face = "bold", size = 16)
+  )
+```
+:::
+::::::
+
+## Outcome (response variable)
+
+:::::: columns
+::: {.column width="25%"}
+```{r}
+#| echo: false
+
+mtcars |>
+  select(mpg, wt) |>
+  slice_head(n = 6) |>
+  mutate(across(where(is.numeric), as.character)) |>
+  bind_rows(c(mpg = "...", wt = "...")) |>
+  gt() |>
+  tab_style(
+    style = list(
+      cell_fill(color = "#FE5D26"),
+      cell_text(color = "white")
+      ),
+    locations = cells_body(columns = mpg)
+  ) |>
+  tab_options(table.font.size = px(12))
+```
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="70%"}
+```{r}
+#| echo: false
+
+base +
+  theme(
+    axis.title.y = element_text(color = "#FE5D26", face = "bold", size = 16)
+  )
+```
+:::
+::::::
+
+## Regression line
+
+```{r}
+#| echo: false
+#| message: false
+
+base +
+  geom_smooth(method = "lm", color = "#FE5D26", linewidth = 1.5, se = FALSE)
+```
+
+## Regression line: slope
+
+```{r}
+#| echo: false
+#| message: false
+
+base +
+  geom_smooth(method = "lm", color = "black", se = FALSE) +
+  annotate(
+    geom = "segment",
+    x = 4, xend = 5, y = 16, yend = 16, 
+    linetype = "dashed", color = "#FE5D26"
+  ) +
+  annotate(
+    geom = "segment",
+    x = 5, xend = 5, y = 16, yend = 10.6, 
+    color = "#FE5D26"
+  ) +
+  annotate(
+    geom = "text",
+    x = 5.2, y = 13, label = "slope", 
+    color = "#FE5D26", size = 5, hjust = 0
+  )
+```
+
+## Regression line: intercept
+
+```{r}
+#| echo: false
+#| message: false
+
+base +
+  geom_smooth(method = "lm", color = "gray", se = FALSE, fullrange = TRUE, linetype = "dashed") +
+  geom_smooth(method = "lm", color = "black", se = FALSE) +
+  scale_x_continuous(limits = c(0, 5.5)) +
+  annotate(
+    geom = "point",
+    shape = 1, size = 4, stroke = 2,
+    x = 0, y = 37.4, 
+    color = "#FE5D26"
+  ) +
+  annotate(
+    geom = "text",
+    label = "intercept",
+    x = 0.5, y = 37.4, 
+    color = "#FE5D26", size = 5, hjust = 0
+  )
+```
+
+## Correlation
+
+```{r}
+#| echo: false
+
+r <- mtcars |>
+  summarize(cor = round(cor(mpg, wt), 2)) |>
+  pull()
+
+base +
+  stat_ellipse(geom = "polygon", color = "#FE5D26", fill = "#FE5D2630") +
+  annotate(
+    geom = "text",
+    x = 3.5, y = 27.5, 
+    label = paste("r =", r),
+    color = "#FE5D26", size = 5, hjust = 0
+  )
+```
+
+## Correlation
+
+-   Measures the strength and direction of the *linear* association between two numerical variables;
+-   Tells you how tightly the points cluster around a straight line;
+-   Ranges between -1 and 1;
+-   Same sign as the slope.
+
+```{r}
+#| fig-asp: 0.2
+#| echo: false
+set.seed(12345)
+df <- tibble(
+  x = 1:20,
+  y1 = 1:20 * 0.75,
+  y2 = 1:20 * 0.75 + rnorm(20, 0, 1),
+  y3 = 1:20 * 0.75 + rnorm(20, 0, 8),
+  y4 = 1:20 + rnorm(20, 0, 200),
+  y5 = -1 * y3,
+  y6 = -1 * y2,
+  y7 = -1 * y1
+) |>
+  pivot_longer(cols = starts_with("y"), names_to = "series", values_to = "y") |>
+  group_by(series) |>
+  mutate(r = paste("r =", round(cor(x, y), 2))) |>
+  ungroup() |>
+  arrange(series, x) |>
+  mutate(r = fct_inorder(r))
+
+ggplot(df, aes(x = x, y = y, color = r)) +
+  geom_point(show.legend = FALSE) +
+  facet_wrap(~r, ncol = 7, scales = "free") +
+  theme_bw(base_size = 16) +
+  labs(x = NULL, y = NULL) +
+  theme(
+    axis.text = element_blank(),
+    axis.ticks = element_blank()
+  ) +
+  scale_color_viridis_d(end = 0.9)
+```
+
+## Participate 📱💻 {.xsmall}
+
+:::::: columns
+:::: {.column width="70%"}
+::: wooclap
+
+Which of the following is the best guess for the correlation between the two variables on the plot below?
+
+```{r}
+#| echo: false
+#| fig-width: 3
+#| fig-asp: 1
+set.seed(54321)
+df <- tibble(
+  x = 1:20,
+  y = 1:20 + rnorm(20, 0, 200)
+)
+
+ggplot(df, aes(x = x, y = y)) +
+  geom_point() +
+  labs(x = NULL, y = NULL) +
+  theme(
+    axis.text = element_blank(),
+    axis.ticks = element_blank()
+  )
+```
+
+::: wooclap-choices
+
+- -0.95
+
+- -0.53
+
+- 0.00
+
+- 0.4
+
+- 0.80
+:::
+
+:::
+::::
+
+::: {.column width="30%"}
+{{< include _wooclap-column.qmd >}}
+:::
+::::::
+
+## New command: `cor`
+
+
+:::::: columns
+::: {.column width="50%"}
+```{r}
+df
+```
+:::
+::: {.column width="50%"}
+```{r}
+df |>
+  summarize(
+    r = cor(x, y)
+  )
+```
+:::
+::::::
+
+## Practice! {.small}
+
+<https://www.rossmanchance.com/applets/2021/guesscorrelation/GuessCorrelation.html>
+
+. . .
+
+(Just the sort of pain in the ass visual intuition crap that JZ is liable to put on an exam.)
+
+## Visualizing the model
+
+```{r}
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point()
+```
+
+## Visualizing the model
+
+```{r}
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() + 
+  geom_smooth()
+```
+
+## Visualizing the model
+
+```{r}
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() + 
+  geom_smooth(method = "loess")
+```
+
+## Visualizing the model
+
+```{r}
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
+
+# Don't forget: Always Be Visualizing!
+
+## Anscombe's Quartet
+
+```{r}
+#| echo: false
+anscombe_tidy <- anscombe |>
+    mutate(observation = seq_len(n())) |>
+    gather(key, value, -observation) |>
+    separate(key, c("variable", "set"), 1, convert = TRUE) |>
+    mutate(set = c("I", "II", "III", "IV")[set]) |>
+    spread(variable, value)
+```
+
+::: columns
+::: {.column width="25%"}
+Dataset I
+
+```{r}
+#| echo: false
+anscombe_tidy |>
+  filter(set == "I") |>
+  select(x, y)
+```
+:::
+
+::: {.column width="25%"}
+Dataset II
+
+```{r}
+#| echo: false
+anscombe_tidy |>
+  filter(set == "II") |>
+  select(x, y)
+```
+:::
+
+::: {.column width="25%"}
+Dataset III
+
+```{r}
+#| echo: false
+anscombe_tidy |>
+  filter(set == "III") |>
+  select(x, y)
+```
+:::
+
+::: {.column width="25%"}
+Dataset IV
+
+```{r}
+#| echo: false
+anscombe_tidy |>
+  filter(set == "IV") |>
+  select(x, y)
+```
+:::
+:::
+
+
+## Very different
+
+```{r}
+ggplot(anscombe_tidy, aes(x, y)) +
+  geom_point() +
+  facet_wrap(~ set) 
+```
+
+## But it's the same line...
+
+```{r}
+ggplot(anscombe_tidy, aes(x, y)) +
+  geom_point() +
+  facet_wrap(~ set) +
+  geom_smooth(method = "lm", se = FALSE)
+```
+
+## ...and the same summary statistics.
+
+```{r}
+anscombe_tidy |>
+  group_by(set) |>
+  summarize(
+    xbar = mean(x),
+    ybar = mean(y),
+    sx = sd(x),
+    sy = sd(y),
+    r = cor(x, y)
+  )
+```
+
+
+# Application exercise
+
+## `{r} todays_ae` 
+
+::: appex
+-   Go to your ae project in RStudio.
+
+-   If you haven't yet done so, make sure all of your changes up to this point are committed and pushed, i.e., there's nothing left in your Git pane.
+
+-   If you haven't yet done so, click Pull to get today's application exercise file: *`{r} paste0(todays_ae, ".qmd")`*.
+
+-   Work through the application exercise in class, and render, commit, and push your edits.
+:::
+
+
+## New commands introduced today
+
+In base `R`:
+
+- `cor`: compute correlation between two numerical variables;
+
+In `ggplot2`:
+
+- `geom_smooth`: add model fit to scatterplot;
+
+In the new package `tidymodels`:
+
+- `linear_reg` and `fit`: estimate linear model;
+- `tidy`: cute lil' summary table of model output
+- `predict`: use estimated model to predict.
