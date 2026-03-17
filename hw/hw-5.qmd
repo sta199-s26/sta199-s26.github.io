@@ -308,7 +308,7 @@ We will be checking these to make sure you have been practicing how to commit an
 
 -   Questions 1-5 are not graded, but you should complete them to get practice.
 
--   Questions 6-10 are graded, and you will receive feedback on Gradescope from the course instructional team within a week.
+-   Questions 6-10 are graded, and you will receive feedback on Gradescope from the course instructional team in about a week.
     -   Questions will be graded for accuracy and completeness.
     -   Partial credit will be given where appropriate.
     -   There are also workflow points for:
