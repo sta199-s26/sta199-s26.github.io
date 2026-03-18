@@ -105,7 +105,7 @@ ggplot(movie_scores, aes(x = critics, y = audience)) +
 
 ## Quick aside: which is which?
 
-How do we know which variable "should" be the response and which should be the predictor. This will depend on the domain and the research question, but in some cases there is a natural choice. In this example, the critic score for a film is typically available before the audience score. Critics can often screen the film in advance, and their reviews are published on opening day. By contrast, the audience score trickles in over the subsequent weeks. So it's more likely that we would already have the critics score already and use it to anticipate the audience score instead of the other way around. 
+How do we know which variable "should" be the response and which should be the predictor. This will depend on the domain and the research question, but in some cases there is a natural choice. In this example, the critic score for a film is typically available before the audience score. Critics can often screen the film in advance, and their reviews are published on opening day. By contrast, the audience score trickles in over the subsequent weeks. So it's more likely that we would already have the critics score and use it to anticipate the audience score, instead of the other way around. 
 
 
 ## Data visualization: linear model {.small}
@@ -323,7 +323,7 @@ You're already familiar with $y=mx+b$, so why did I switch it up on you? Why the
 
 - Today, we're studying *simple* linear regression where there is only one predictor. Next week, we study *multiple* linear regression where there are many predictors, and each one gets its own coeffient. When you go from 1 predictor to 5 or 10 or 1,000, you run out of letters. So it's easier to number them;
 - The Greek letters denote true, idealized, population values. These are unknown. If we had perfect data, we would know them, but we don't. Womp womp;
-- The lowercase roman letters denote estimated values based on a finite, imperfect sample. These are out best guess at the true values based on the data we have.
+- The lowercase roman letters denote estimated values based on a finite, imperfect sample. These are our best guess at the true values based on the data we have.
 
 ## Choosing values for $b_1$ and $b_0$
 
@@ -556,7 +556,7 @@ For our examples so far...
 ::: incremental
 - It doesn't make sense to predict the mpg of a car that weighs 0 pounds;
 - It *does* make sense to predict the ice duration of a lake at 0 degree temp;
-- It *does* make sense to predict audience score if the critics gave it a 0%.
+- It *does* make sense to predict audience score if the critics gave the movie a 0%.
 :::
 
 ## Properties of least squares regression
