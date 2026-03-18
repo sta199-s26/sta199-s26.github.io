@@ -103,6 +103,10 @@ ggplot(movie_scores, aes(x = critics, y = audience)) +
   )
 ```
 
+## Quick aside: which is which?
+
+How do we know which variable "should" be the response and which should be the predictor. This will depend on the domain and the research question, but in some cases there is a natural choice. In this example, the critic score for a film is typically available before the audience score. Critics can often screen the film in advance, and their reviews are published on opening day. By contrast, the audience score trickles in over the subsequent weeks. So it's more likely that we would already have the critics score already and use it to anticipate the audience score instead of the other way around. 
+
 
 ## Data visualization: linear model {.small}
 
@@ -313,6 +317,14 @@ $$\Large{\hat{Y} = b_0 + b_1 X}$$
 -   $b_0$: Estimated intercept of the relationship between $X$ and $Y$
 -   No error term!
 
+## Why did the notation change? {.small}
+
+You're already familiar with $y=mx+b$, so why did I switch it up on you? Why the subscripts? Why the Greek letters?
+
+- Today, we're studying *simple* linear regression where there is only one predictor. Next week, we study *multiple* linear regression where there are many predictors, and each one gets its own coeffient. When you go from 1 predictor to 5 or 10 or 1,000, you run out of letters. So it's easier to number them;
+- The Greek letters denote true, idealized, population values. These are unknown. If we had perfect data, we would know them, but we don't. Womp womp;
+- The lowercase roman letters denote estimated values based on a finite, imperfect sample. These are out best guess at the true values based on the data we have.
+
 ## Choosing values for $b_1$ and $b_0$
 
 ```{r}
@@ -379,6 +391,18 @@ movies_fit <- linear_reg() |>
 
 tidy(movies_fit)
 ```
+
+## `fit` syntax {.medium}
+
+If you recall `ggplot`, it takes two arguments: a data frame and an aesthetic mapping that specifies what columns to use and how to use them. `fit` is similar. It takes two arguments: a data frame and a *formula* that species what variables to include in the model and how. 
+
+```{r}
+#| eval: false
+linear_reg() |>
+  fit(y ~ x, df)
+```
+
+The statement `y ~ x` is called a formula in R. The variable name that appears to the *left* of the tilde (`~`) is treated as the response variable, and the variable(s!) to the *right* of the tilde are treated as explanatory.
 
 ## Prediction
 
@@ -490,7 +514,28 @@ $$\widehat{\text{audience}} = 32.3 + 0.519 \times \text{critics}$$
 :::
 ::::::
 
+## Correct
 
+$$\widehat{\text{audience}} = 32.3 + 0.519 \times \text{critics}$$
+
+- Slope: for every one point increase in the critics score, we expect the audience score to be higher by 0.519 points, on average;
+- Intercept: for movies with an audience score of 0 points, we expect the critics score to be 32.3 points, on average.
+
+The "we expect" and "on average" are a bit redundant, but let's go belt and suspenders in this class. 
+
+
+## Things to watch out for {.medium}
+
+When interpreting coefficient estimates in a regression:
+
+- avoid causal-sounding language;
+    - bad: "a one unit increase in `x` makes `y` go up by 0.519;"
+- don't make guarantees;
+    - bad: "if `x = 0`, then `y` will be 32.3;"
+- be explicitly predictive;
+    - good: "if `x` increases by one unit, we expect/predict that `y` will be higher by 0.519 on average"
+
+In general, our models give imperfect predictions about average behavior. The predictions are not guarantees, and the relationship may or may not be causal. Establishing that is an entire class in and of itself.
 
 ## Is the intercept meaningful? {.medium}
 
@@ -505,10 +550,14 @@ $$\widehat{\text{audience}} = 32.3 + 0.519 \times \text{critics}$$
 
 . . .
 
-From last time...
+For our examples so far...
 
+
+::: incremental
 - It doesn't make sense to predict the mpg of a car that weighs 0 pounds;
-- It *does* make sense to predict the ice duration of a lake at 0 degree temp.
+- It *does* make sense to predict the ice duration of a lake at 0 degree temp;
+- It *does* make sense to predict audience score if the critics gave it a 0%.
+:::
 
 ## Properties of least squares regression
 
