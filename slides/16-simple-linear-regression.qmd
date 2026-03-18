@@ -380,6 +380,61 @@ movies_fit <- linear_reg() |>
 tidy(movies_fit)
 ```
 
+## Prediction
+
+A new movie with a critic score of $x = 20$ is released, and the model predicts that the audience score will be $\hat{y}\approx 42.69$ on average:
+
+:::::: columns
+:::: {.column width="50%"}
+
+```{r}
+#| echo: false
+#| fig-asp: 0.8
+
+audience_critic_fit <- linear_reg() |> fit(audience ~ critics, data = movie_scores)
+
+new_movies <- tibble(
+  critics = c(20, 37.5, 88)
+)
+
+preds <- predict(audience_critic_fit, new_data = new_movies)
+
+ggplot(movie_scores, aes(x = critics, y = audience)) +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_point(alpha = 0.5) + 
+  labs(
+    x = "Critics Score" , 
+    y = "Audience Score"
+  )  +
+  annotate(
+    "segment",
+    x = new_movies$critics[1], xend = new_movies$critics[1], y = -Inf, yend = preds$.pred[1],
+    color = "#FE5D26"
+  ) +
+  annotate(
+    "segment",
+    x = -Inf, xend = new_movies$critics[1], y = preds$.pred[1], yend = preds$.pred[1],
+    color = "#FE5D26"
+  )
+```
+
+::::
+
+:::: {.column width="50%"}
+
+```{r}
+new_movie <- tibble(
+  critics = c(20)
+)
+
+predict(movies_fit, 
+        new_data = new_movie)
+```
+
+::::
+
+:::::: 
+
 # Slope and intercept
 
 
@@ -465,6 +520,395 @@ From last time...
 -   Sum of the residuals is zero: $\sum_{i = 1}^n \epsilon_i = 0$
 
 -   Residuals and $X$ values are uncorrelated
+:::
+
+## Goodness-of-fit
+
+::: incremental
+- Correlation is a number between -1 and 1 measuring the strength *and direction* of the linear association between two numerical variables ($X$ and $Y$);
+- If you square it, you get $R^2$ ("$R$ squared") or the *coefficient of determination*;
+- This is a number between 0 and 1 measuring how well the linear model fits the data:
+    - $R^2=1$ means linear fit is perfect;
+    - $R^2=0$ means linear fit is perfectly wretched;
+- Technically, $R^2$ measures the fraction of the variation in the response $Y$ explained by the model (more on this later).
+:::
+
+## Correlation and $R^2$
+
+::: columns
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| fig-asp: 1
+
+set.seed(34567)
+
+n <- 50
+sx <- 1
+sy <- 1
+r <- -1
+
+df <- tibble(
+  x = rnorm(n, mean = 0, sd = sx),
+  y = x * r * sy / sx + rnorm(n, mean = 0, (1 - r^2) * sy)
+)
+
+ggplot(df, aes(x = x, y = y)) + 
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
+:::
+
+::: {.column width="40%"}
+```{r}
+#| warning: false
+df |>
+  summarize(
+    r = cor(x, y)
+  )
+
+linear_reg() |>
+  fit(y ~ x, df) |>
+  glance() |>
+  select(r.squared)
+```
+:::
+:::
+
+## Correlation and $R^2$
+
+::: columns
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| fig-asp: 1
+
+set.seed(34567)
+
+n <- 50
+sx <- 1
+sy <- 1
+r <- -0.8
+
+df <- tibble(
+  x = rnorm(n, mean = 0, sd = sx),
+  y = x * r * sy / sx + rnorm(n, mean = 0, (1 - r^2) * sy)
+)
+
+ggplot(df, aes(x = x, y = y)) + 
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
+:::
+
+::: {.column width="40%"}
+```{r}
+#| warning: false
+df |>
+  summarize(
+    r = cor(x, y)
+  )
+
+linear_reg() |>
+  fit(y ~ x, df) |>
+  glance() |>
+  select(r.squared)
+```
+:::
+:::
+
+## Correlation and $R^2$
+
+::: columns
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| fig-asp: 1
+
+set.seed(34567)
+
+n <- 50
+sx <- 1
+sy <- 1
+r <- -0.5
+
+df <- tibble(
+  x = rnorm(n, mean = 0, sd = sx),
+  y = x * r * sy / sx + rnorm(n, mean = 0, (1 - r^2) * sy)
+)
+
+ggplot(df, aes(x = x, y = y)) + 
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
+:::
+
+::: {.column width="40%"}
+```{r}
+#| warning: false
+df |>
+  summarize(
+    r = cor(x, y)
+  )
+
+linear_reg() |>
+  fit(y ~ x, df) |>
+  glance() |>
+  select(r.squared)
+```
+:::
+:::
+
+## Correlation and $R^2$
+
+::: columns
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| fig-asp: 1
+
+set.seed(34567)
+
+n <- 50
+sx <- 1
+sy <- 1
+r <- -0.2
+
+df <- tibble(
+  x = rnorm(n, mean = 0, sd = sx),
+  y = x * r * sy / sx + rnorm(n, mean = 0, (1 - r^2) * sy)
+)
+
+ggplot(df, aes(x = x, y = y)) + 
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
+:::
+
+::: {.column width="40%"}
+```{r}
+#| warning: false
+df |>
+  summarize(
+    r = cor(x, y)
+  )
+
+linear_reg() |>
+  fit(y ~ x, df) |>
+  glance() |>
+  select(r.squared)
+```
+:::
+:::
+
+## Correlation and $R^2$
+
+::: columns
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| fig-asp: 1
+
+set.seed(34567)
+
+n <- 50
+sx <- 1
+sy <- 1
+r <- 0
+
+df <- tibble(
+  x = rnorm(n, mean = 0, sd = sx),
+  y = x * r * sy / sx + rnorm(n, mean = 0, (1 - r^2) * sy)
+)
+
+ggplot(df, aes(x = x, y = y)) + 
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
+:::
+
+::: {.column width="40%"}
+```{r}
+#| warning: false
+df |>
+  summarize(
+    r = cor(x, y)
+  )
+
+linear_reg() |>
+  fit(y ~ x, df) |>
+  glance() |>
+  select(r.squared)
+```
+:::
+:::
+
+## Correlation and $R^2$
+
+::: columns
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| fig-asp: 1
+
+set.seed(34567)
+
+n <- 50
+sx <- 1
+sy <- 1
+r <- 0.2
+
+df <- tibble(
+  x = rnorm(n, mean = 0, sd = sx),
+  y = x * r * sy / sx + rnorm(n, mean = 0, (1 - r^2) * sy)
+)
+
+ggplot(df, aes(x = x, y = y)) + 
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
+:::
+
+::: {.column width="40%"}
+```{r}
+#| warning: false
+df |>
+  summarize(
+    r = cor(x, y)
+  )
+
+linear_reg() |>
+  fit(y ~ x, df) |>
+  glance() |>
+  select(r.squared)
+```
+:::
+:::
+
+## Correlation and $R^2$
+
+::: columns
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| fig-asp: 1
+
+set.seed(34567)
+
+n <- 50
+sx <- 1
+sy <- 1
+r <- 0.5
+
+df <- tibble(
+  x = rnorm(n, mean = 0, sd = sx),
+  y = x * r * sy / sx + rnorm(n, mean = 0, (1 - r^2) * sy)
+)
+
+ggplot(df, aes(x = x, y = y)) + 
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
+:::
+
+::: {.column width="40%"}
+```{r}
+#| warning: false
+df |>
+  summarize(
+    r = cor(x, y)
+  )
+
+linear_reg() |>
+  fit(y ~ x, df) |>
+  glance() |>
+  select(r.squared)
+```
+:::
+:::
+
+## Correlation and $R^2$
+
+::: columns
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| fig-asp: 1
+
+set.seed(34567)
+
+n <- 50
+sx <- 1
+sy <- 1
+r <- 0.8
+
+df <- tibble(
+  x = rnorm(n, mean = 0, sd = sx),
+  y = x * r * sy / sx + rnorm(n, mean = 0, (1 - r^2) * sy)
+)
+
+ggplot(df, aes(x = x, y = y)) + 
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
+:::
+
+::: {.column width="40%"}
+```{r}
+#| warning: false
+df |>
+  summarize(
+    r = cor(x, y)
+  )
+
+linear_reg() |>
+  fit(y ~ x, df) |>
+  glance() |>
+  select(r.squared)
+```
+:::
+:::
+
+## Correlation and $R^2$
+
+::: columns
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| fig-asp: 1
+
+set.seed(34567)
+
+n <- 50
+sx <- 1
+sy <- 1
+r <- 1
+
+df <- tibble(
+  x = rnorm(n, mean = 0, sd = sx),
+  y = x * r * sy / sx + rnorm(n, mean = 0, (1 - r^2) * sy)
+)
+
+ggplot(df, aes(x = x, y = y)) + 
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
+:::
+
+::: {.column width="40%"}
+```{r}
+#| warning: false
+df |>
+  summarize(
+    r = cor(x, y)
+  )
+
+linear_reg() |>
+  fit(y ~ x, df) |>
+  glance() |>
+  select(r.squared)
+```
+:::
 :::
 
 # Application exercise
