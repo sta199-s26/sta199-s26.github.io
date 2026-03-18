@@ -294,7 +294,9 @@ John Zito
 </div>
 </section><section id="data-visualization" class="slide level2 small"><h2>Data visualization</h2>
 
-<img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section><section id="data-visualization-linear-model" class="slide level2 small"><h2>Data visualization: linear model</h2>
+<img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section><section id="quick-aside-which-is-which" class="slide level2"><h2>Quick aside: which is which?</h2>
+<p>How do we know which variable “should” be the response and which should be the predictor. This will depend on the domain and the research question, but in some cases there is a natural choice. In this example, the critic score for a film is typically available before the audience score. Critics can often screen the film in advance, and their reviews are published on opening day. By contrast, the audience score trickles in over the subsequent weeks. So it’s more likely that we would already have the critics score already and use it to anticipate the audience score instead of the other way around.</p>
+</section><section id="data-visualization-linear-model" class="slide level2 small"><h2>Data visualization: linear model</h2>
 
 <img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"><div class="columns">
 <div class="column" style="width:60%;">
@@ -411,6 +413,12 @@ John Zito
 <span class="math inline">\(b_0\)</span>: Estimated intercept of the relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>
 </li>
 <li>No error term!</li>
+</ul></section><section id="why-did-the-notation-change" class="slide level2 small"><h2>Why did the notation change?</h2>
+<p>You’re already familiar with <span class="math inline">\(y=mx+b\)</span>, so why did I switch it up on you? Why the subscripts? Why the Greek letters?</p>
+<ul>
+<li>Today, we’re studying <em>simple</em> linear regression where there is only one predictor. Next week, we study <em>multiple</em> linear regression where there are many predictors, and each one gets its own coeffient. When you go from 1 predictor to 5 or 10 or 1,000, you run out of letters. So it’s easier to number them;</li>
+<li>The Greek letters denote true, idealized, population values. These are unknown. If we had perfect data, we would know them, but we don’t. Womp womp;</li>
+<li>The lowercase roman letters denote estimated values based on a finite, imperfect sample. These are out best guess at the true values based on the data we have.</li>
 </ul></section><section id="choosing-values-for-b_1-and-b_0" class="slide level2"><h2>Choosing values for <span class="math inline">\(b_1\)</span> and <span class="math inline">\(b_0\)</span>
 </h2>
 
@@ -455,6 +463,14 @@ John Zito
 2 critics        0.519    0.0345      15.0 2.70e-31</code></pre>
 </div>
 </div>
+</section><section id="fit-syntax" class="slide level2 medium"><h2>
+<code>fit</code> syntax</h2>
+<p>If you recall <code>ggplot</code>, it takes two arguments: a data frame and an aesthetic mapping that specifies what columns to use and how to use them. <code>fit</code> is similar. It takes two arguments: a data frame and a <em>formula</em> that species what variables to include in the model and how.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a></a>  <span class="fu">fit</span>(y <span class="sc">~</span> x, df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The statement <code>y ~ x</code> is called a formula in R. The variable name that appears to the <em>left</em> of the tilde (<code>~</code>) is treated as the response variable, and the variable(s!) to the <em>right</em> of the tilde are treated as explanatory.</p>
 </section><section id="prediction-1" class="slide level2"><h2>Prediction</h2>
 <p>A new movie with a critic score of <span class="math inline">\(x = 20\)</span> is released, and the model predicts that the audience score will be <span class="math inline">\(\hat{y}\approx 42.69\)</span> on average:</p>
 <div class="columns">
@@ -462,19 +478,19 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-15-1.png" width="960"></p>
+<figure><p><img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-16-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>new_movie <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb11-2"><a></a>  <span class="at">critics =</span> <span class="fu">c</span>(<span class="dv">20</span>)</span>
-<span id="cb11-3"><a></a>)</span>
-<span id="cb11-4"><a></a></span>
-<span id="cb11-5"><a></a><span class="fu">predict</span>(movies_fit, </span>
-<span id="cb11-6"><a></a>        <span class="at">new_data =</span> new_movie)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>new_movie <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb12-2"><a></a>  <span class="at">critics =</span> <span class="fu">c</span>(<span class="dv">20</span>)</span>
+<span id="cb12-3"><a></a>)</span>
+<span id="cb12-4"><a></a></span>
+<span id="cb12-5"><a></a><span class="fu">predict</span>(movies_fit, </span>
+<span id="cb12-6"><a></a>        <span class="at">new_data =</span> new_movie)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   .pred
@@ -541,6 +557,33 @@ John Zito
 <p>Scan the QR code or go <a href="https://app.wooclap.com/TNRPMB?from=instruction-slide">HERE</a>. Log in with your Duke NetID.</p>
 </div>
 </div></div>
+</section><section id="correct" class="slide level2"><h2>Correct</h2>
+<p><span class="math display">\[\widehat{\text{audience}} = 32.3 + 0.519 \times \text{critics}\]</span></p>
+<ul>
+<li>Slope: for every one point increase in the critics score, we expect the audience score to be higher by 0.519 points, on average;</li>
+<li>Intercept: for movies with an audience score of 0 points, we expect the critics score to be 32.3 points, on average.</li>
+</ul>
+<p>The “we expect” and “on average” are a bit redundant, but let’s go belt and suspenders in this class.</p>
+</section><section id="things-to-watch-out-for" class="slide level2 medium"><h2>Things to watch out for</h2>
+<p>When interpreting coefficient estimates in a regression:</p>
+<ul>
+<li>avoid causal-sounding language;
+<ul>
+<li>bad: “a one unit increase in <code>x</code> makes <code>y</code> go up by 0.519;”</li>
+</ul>
+</li>
+<li>don’t make guarantees;
+<ul>
+<li>bad: “if <code>x = 0</code>, then <code>y</code> will be 32.3;”</li>
+</ul>
+</li>
+<li>be explicitly predictive;
+<ul>
+<li>good: “if <code>x</code> increases by one unit, we expect/predict that <code>y</code> will be higher by 0.519 on average”</li>
+</ul>
+</li>
+</ul>
+<p>In general, our models give imperfect predictions about average behavior. The predictions are not guarantees, and the relationship may or may not be causal. Establishing that is an entire class in and of itself.</p>
 </section><section id="is-the-intercept-meaningful" class="slide level2 medium"><h2>Is the intercept meaningful?</h2>
 <p>✅ The intercept is meaningful in context of the data if</p>
 <ul>
@@ -551,10 +594,11 @@ John Zito
 <p>🛑 Otherwise, it might not be meaningful!</p>
 </div>
 <div class="fragment">
-<p>From last time…</p>
+<p>For our examples so far…</p>
 <ul>
-<li>It doesn’t make sense to predict the mpg of a car that weighs 0 pounds;</li>
-<li>It <em>does</em> make sense to predict the ice duration of a lake at 0 degree temp.</li>
+<li class="fragment">It doesn’t make sense to predict the mpg of a car that weighs 0 pounds;</li>
+<li class="fragment">It <em>does</em> make sense to predict the ice duration of a lake at 0 degree temp;</li>
+<li class="fragment">It <em>does</em> make sense to predict audience score if the critics gave it a 0%.</li>
 </ul>
 </div>
 </section><section id="properties-of-least-squares-regression" class="slide level2"><h2>Properties of least squares regression</h2>
@@ -583,27 +627,27 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-17-1.png" width="960"></p>
+<figure><p><img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb13-2"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb13-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(x, y)</span>
-<span id="cb13-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb14-2"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb14-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(x, y)</span>
+<span id="cb14-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
       r
   &lt;dbl&gt;
 1    -1</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb15-2"><a></a>  <span class="fu">fit</span>(y <span class="sc">~</span> x, df) <span class="sc">|&gt;</span></span>
-<span id="cb15-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
-<span id="cb15-4"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb16-2"><a></a>  <span class="fu">fit</span>(y <span class="sc">~</span> x, df) <span class="sc">|&gt;</span></span>
+<span id="cb16-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
+<span id="cb16-4"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   r.squared
@@ -619,27 +663,27 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-19-1.png" width="960"></p>
+<figure><p><img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-20-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb17-2"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb17-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(x, y)</span>
-<span id="cb17-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb18-2"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb18-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(x, y)</span>
+<span id="cb18-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
        r
    &lt;dbl&gt;
 1 -0.935</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb19-2"><a></a>  <span class="fu">fit</span>(y <span class="sc">~</span> x, df) <span class="sc">|&gt;</span></span>
-<span id="cb19-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
-<span id="cb19-4"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb20-2"><a></a>  <span class="fu">fit</span>(y <span class="sc">~</span> x, df) <span class="sc">|&gt;</span></span>
+<span id="cb20-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
+<span id="cb20-4"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   r.squared
@@ -655,27 +699,27 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-21-1.png" width="960"></p>
+<figure><p><img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-22-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb21-2"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb21-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(x, y)</span>
-<span id="cb21-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb22-2"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb22-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(x, y)</span>
+<span id="cb22-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
        r
    &lt;dbl&gt;
 1 -0.659</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb23-2"><a></a>  <span class="fu">fit</span>(y <span class="sc">~</span> x, df) <span class="sc">|&gt;</span></span>
-<span id="cb23-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
-<span id="cb23-4"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb24-2"><a></a>  <span class="fu">fit</span>(y <span class="sc">~</span> x, df) <span class="sc">|&gt;</span></span>
+<span id="cb24-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
+<span id="cb24-4"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   r.squared
@@ -691,27 +735,27 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-23-1.png" width="960"></p>
+<figure><p><img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-24-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb25-2"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb25-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(x, y)</span>
-<span id="cb25-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb26-2"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb26-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(x, y)</span>
+<span id="cb26-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
        r
    &lt;dbl&gt;
 1 -0.335</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb27-2"><a></a>  <span class="fu">fit</span>(y <span class="sc">~</span> x, df) <span class="sc">|&gt;</span></span>
-<span id="cb27-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
-<span id="cb27-4"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb28-2"><a></a>  <span class="fu">fit</span>(y <span class="sc">~</span> x, df) <span class="sc">|&gt;</span></span>
+<span id="cb28-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
+<span id="cb28-4"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   r.squared
@@ -727,27 +771,27 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-25-1.png" width="960"></p>
+<figure><p><img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-26-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb29-2"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb29-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(x, y)</span>
-<span id="cb29-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb30-2"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb30-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(x, y)</span>
+<span id="cb30-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
        r
    &lt;dbl&gt;
 1 -0.118</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb31-2"><a></a>  <span class="fu">fit</span>(y <span class="sc">~</span> x, df) <span class="sc">|&gt;</span></span>
-<span id="cb31-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
-<span id="cb31-4"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb32-2"><a></a>  <span class="fu">fit</span>(y <span class="sc">~</span> x, df) <span class="sc">|&gt;</span></span>
+<span id="cb32-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
+<span id="cb32-4"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   r.squared
@@ -763,27 +807,27 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-27-1.png" width="960"></p>
+<figure><p><img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-28-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb33-2"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb33-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(x, y)</span>
-<span id="cb33-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb34-2"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb34-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(x, y)</span>
+<span id="cb34-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
       r
   &lt;dbl&gt;
 1 0.117</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb35-2"><a></a>  <span class="fu">fit</span>(y <span class="sc">~</span> x, df) <span class="sc">|&gt;</span></span>
-<span id="cb35-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
-<span id="cb35-4"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb36-2"><a></a>  <span class="fu">fit</span>(y <span class="sc">~</span> x, df) <span class="sc">|&gt;</span></span>
+<span id="cb36-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
+<span id="cb36-4"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   r.squared
@@ -799,27 +843,27 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-29-1.png" width="960"></p>
+<figure><p><img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-30-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb37-2"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb37-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(x, y)</span>
-<span id="cb37-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb38-2"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb38-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(x, y)</span>
+<span id="cb38-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
       r
   &lt;dbl&gt;
 1 0.538</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb39-2"><a></a>  <span class="fu">fit</span>(y <span class="sc">~</span> x, df) <span class="sc">|&gt;</span></span>
-<span id="cb39-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
-<span id="cb39-4"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb40-2"><a></a>  <span class="fu">fit</span>(y <span class="sc">~</span> x, df) <span class="sc">|&gt;</span></span>
+<span id="cb40-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
+<span id="cb40-4"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   r.squared
@@ -835,27 +879,27 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-31-1.png" width="960"></p>
+<figure><p><img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-32-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb41-2"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb41-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(x, y)</span>
-<span id="cb41-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb42-2"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb42-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(x, y)</span>
+<span id="cb42-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
       r
   &lt;dbl&gt;
 1 0.923</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb43-2"><a></a>  <span class="fu">fit</span>(y <span class="sc">~</span> x, df) <span class="sc">|&gt;</span></span>
-<span id="cb43-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
-<span id="cb43-4"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb44-2"><a></a>  <span class="fu">fit</span>(y <span class="sc">~</span> x, df) <span class="sc">|&gt;</span></span>
+<span id="cb44-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
+<span id="cb44-4"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   r.squared
@@ -871,27 +915,27 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-33-1.png" width="960"></p>
+<figure><p><img data-src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-34-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb45-2"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb45-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(x, y)</span>
-<span id="cb45-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb46-2"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb46-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(x, y)</span>
+<span id="cb46-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
       r
   &lt;dbl&gt;
 1     1</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb47-2"><a></a>  <span class="fu">fit</span>(y <span class="sc">~</span> x, df) <span class="sc">|&gt;</span></span>
-<span id="cb47-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
-<span id="cb47-4"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb48-2"><a></a>  <span class="fu">fit</span>(y <span class="sc">~</span> x, df) <span class="sc">|&gt;</span></span>
+<span id="cb48-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
+<span id="cb48-4"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   r.squared

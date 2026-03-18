@@ -453,6 +453,7 @@ window.Quarto = {
 <li><a href="#data-prep" id="toc-data-prep" class="nav-link" data-scroll-target="#data-prep">Data prep</a></li>
   <li><a href="#data-overview" id="toc-data-overview" class="nav-link" data-scroll-target="#data-overview">Data overview</a></li>
   <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization">Data visualization</a></li>
+  <li><a href="#quick-aside-which-is-which" id="toc-quick-aside-which-is-which" class="nav-link" data-scroll-target="#quick-aside-which-is-which">Quick aside: which is which?</a></li>
   <li><a href="#data-visualization-linear-model" id="toc-data-visualization-linear-model" class="nav-link" data-scroll-target="#data-visualization-linear-model">Data visualization: linear model</a></li>
   <li><a href="#data-visualization-linear-model-1" id="toc-data-visualization-linear-model-1" class="nav-link" data-scroll-target="#data-visualization-linear-model-1">Data visualization: linear model</a></li>
   <li><a href="#prediction" id="toc-prediction" class="nav-link" data-scroll-target="#prediction">Prediction</a></li>
@@ -465,11 +466,13 @@ window.Quarto = {
   <li><a href="#regression-model" id="toc-regression-model" class="nav-link" data-scroll-target="#regression-model">Regression model</a></li>
   <li><a href="#simple-linear-regression" id="toc-simple-linear-regression" class="nav-link" data-scroll-target="#simple-linear-regression">Simple linear regression</a></li>
   <li><a href="#simple-linear-regression-1" id="toc-simple-linear-regression-1" class="nav-link" data-scroll-target="#simple-linear-regression-1">Simple linear regression</a></li>
+  <li><a href="#why-did-the-notation-change" id="toc-why-did-the-notation-change" class="nav-link" data-scroll-target="#why-did-the-notation-change">Why did the notation change?</a></li>
   <li><a href="#choosing-values-for-b_1-and-b_0" id="toc-choosing-values-for-b_1-and-b_0" class="nav-link" data-scroll-target="#choosing-values-for-b_1-and-b_0">Choosing values for <span class="math inline">\(b_1\)</span> and <span class="math inline">\(b_0\)</span></a></li>
   <li><a href="#residuals" id="toc-residuals" class="nav-link" data-scroll-target="#residuals">Residuals</a></li>
   <li><a href="#notation" id="toc-notation" class="nav-link" data-scroll-target="#notation">Notation</a></li>
   <li><a href="#least-squares-line" id="toc-least-squares-line" class="nav-link" data-scroll-target="#least-squares-line">Least squares line</a></li>
   <li><a href="#least-squares-line-1" id="toc-least-squares-line-1" class="nav-link" data-scroll-target="#least-squares-line-1">Least squares line</a></li>
+  <li><a href="#fit-syntax" id="toc-fit-syntax" class="nav-link" data-scroll-target="#fit-syntax"><code>fit</code> syntax</a></li>
   <li><a href="#prediction-1" id="toc-prediction-1" class="nav-link" data-scroll-target="#prediction-1">Prediction</a></li>
   </ul>
 </li>
@@ -478,6 +481,8 @@ window.Quarto = {
   <ul class="collapse">
 <li><a href="#participate" id="toc-participate" class="nav-link" data-scroll-target="#participate">Participate 📱💻</a></li>
   <li><a href="#participate-1" id="toc-participate-1" class="nav-link" data-scroll-target="#participate-1">Participate 📱💻</a></li>
+  <li><a href="#correct" id="toc-correct" class="nav-link" data-scroll-target="#correct">Correct</a></li>
+  <li><a href="#things-to-watch-out-for" id="toc-things-to-watch-out-for" class="nav-link" data-scroll-target="#things-to-watch-out-for">Things to watch out for</a></li>
   <li><a href="#is-the-intercept-meaningful" id="toc-is-the-intercept-meaningful" class="nav-link" data-scroll-target="#is-the-intercept-meaningful">Is the intercept meaningful?</a></li>
   <li><a href="#properties-of-least-squares-regression" id="toc-properties-of-least-squares-regression" class="nav-link" data-scroll-target="#properties-of-least-squares-regression">Properties of least squares regression</a></li>
   <li><a href="#goodness-of-fit" id="toc-goodness-of-fit" class="nav-link" data-scroll-target="#goodness-of-fit">Goodness-of-fit</a></li>
@@ -622,6 +627,8 @@ window.Quarto = {
 </div>
 </div>
 </div>
+</section><section id="quick-aside-which-is-which" class="level2"><h2 class="anchored" data-anchor-id="quick-aside-which-is-which">Quick aside: which is which?</h2>
+<p>How do we know which variable “should” be the response and which should be the predictor. This will depend on the domain and the research question, but in some cases there is a natural choice. In this example, the critic score for a film is typically available before the audience score. Critics can often screen the film in advance, and their reviews are published on opening day. By contrast, the audience score trickles in over the subsequent weeks. So it’s more likely that we would already have the critics score already and use it to anticipate the audience score instead of the other way around.</p>
 </section><section id="data-visualization-linear-model" class="level2 small"><h2 class="small anchored" data-anchor-id="data-visualization-linear-model">Data visualization: linear model</h2>
 <div class="cell">
 <div class="cell-output-display">
@@ -759,6 +766,12 @@ window.Quarto = {
 <span class="math inline">\(b_0\)</span>: Estimated intercept of the relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>
 </li>
 <li>No error term!</li>
+</ul></section><section id="why-did-the-notation-change" class="level2 small"><h2 class="small anchored" data-anchor-id="why-did-the-notation-change">Why did the notation change?</h2>
+<p>You’re already familiar with <span class="math inline">\(y=mx+b\)</span>, so why did I switch it up on you? Why the subscripts? Why the Greek letters?</p>
+<ul>
+<li>Today, we’re studying <em>simple</em> linear regression where there is only one predictor. Next week, we study <em>multiple</em> linear regression where there are many predictors, and each one gets its own coeffient. When you go from 1 predictor to 5 or 10 or 1,000, you run out of letters. So it’s easier to number them;</li>
+<li>The Greek letters denote true, idealized, population values. These are unknown. If we had perfect data, we would know them, but we don’t. Womp womp;</li>
+<li>The lowercase roman letters denote estimated values based on a finite, imperfect sample. These are out best guess at the true values based on the data we have.</li>
 </ul></section><section id="choosing-values-for-b_1-and-b_0" class="level2"><h2 class="anchored" data-anchor-id="choosing-values-for-b_1-and-b_0">Choosing values for <span class="math inline">\(b_1\)</span> and <span class="math inline">\(b_0\)</span>
 </h2>
 <div class="cell">
@@ -820,6 +833,14 @@ window.Quarto = {
 2 critics        0.519    0.0345      15.0 2.70e-31</code></pre>
 </div>
 </div>
+</section><section id="fit-syntax" class="level2 medium"><h2 class="medium anchored" data-anchor-id="fit-syntax">
+<code>fit</code> syntax</h2>
+<p>If you recall <code>ggplot</code>, it takes two arguments: a data frame and an aesthetic mapping that specifies what columns to use and how to use them. <code>fit</code> is similar. It takes two arguments: a data frame and a <em>formula</em> that species what variables to include in the model and how.</p>
+<div class="cell">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="va">x</span>, <span class="va">df</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The statement <code>y ~ x</code> is called a formula in R. The variable name that appears to the <em>left</em> of the tilde (<code>~</code>) is treated as the response variable, and the variable(s!) to the <em>right</em> of the tilde are treated as explanatory.</p>
 </section><section id="prediction-1" class="level2"><h2 class="anchored" data-anchor-id="prediction-1">Prediction</h2>
 <p>A new movie with a critic score of <span class="math inline">\(x = 20\)</span> is released, and the model predicts that the audience score will be <span class="math inline">\(\hat{y}\approx 42.69\)</span> on average:</p>
 <div class="columns">
@@ -827,14 +848,14 @@ window.Quarto = {
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">new_movie</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span></span>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">new_movie</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span></span>
 <span>  critics <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span></span>
 <span><span class="op">)</span></span>
 <span></span>
@@ -908,6 +929,33 @@ window.Quarto = {
 </div>
 </div>
 </div>
+</section><section id="correct" class="level2"><h2 class="anchored" data-anchor-id="correct">Correct</h2>
+<p><span class="math display">\[\widehat{\text{audience}} = 32.3 + 0.519 \times \text{critics}\]</span></p>
+<ul>
+<li>Slope: for every one point increase in the critics score, we expect the audience score to be higher by 0.519 points, on average;</li>
+<li>Intercept: for movies with an audience score of 0 points, we expect the critics score to be 32.3 points, on average.</li>
+</ul>
+<p>The “we expect” and “on average” are a bit redundant, but let’s go belt and suspenders in this class.</p>
+</section><section id="things-to-watch-out-for" class="level2 medium"><h2 class="medium anchored" data-anchor-id="things-to-watch-out-for">Things to watch out for</h2>
+<p>When interpreting coefficient estimates in a regression:</p>
+<ul>
+<li>avoid causal-sounding language;
+<ul>
+<li>bad: “a one unit increase in <code>x</code> makes <code>y</code> go up by 0.519;”</li>
+</ul>
+</li>
+<li>don’t make guarantees;
+<ul>
+<li>bad: “if <code>x = 0</code>, then <code>y</code> will be 32.3;”</li>
+</ul>
+</li>
+<li>be explicitly predictive;
+<ul>
+<li>good: “if <code>x</code> increases by one unit, we expect/predict that <code>y</code> will be higher by 0.519 on average”</li>
+</ul>
+</li>
+</ul>
+<p>In general, our models give imperfect predictions about average behavior. The predictions are not guarantees, and the relationship may or may not be causal. Establishing that is an entire class in and of itself.</p>
 </section><section id="is-the-intercept-meaningful" class="level2 medium"><h2 class="medium anchored" data-anchor-id="is-the-intercept-meaningful">Is the intercept meaningful?</h2>
 <p>✅ The intercept is meaningful in context of the data if</p>
 <ul>
@@ -917,11 +965,15 @@ window.Quarto = {
 <p>. . .</p>
 <p>🛑 Otherwise, it might not be meaningful!</p>
 <p>. . .</p>
-<p>From last time…</p>
-<ul>
+<p>For our examples so far…</p>
+<div class="incremental">
+<ul class="incremental">
 <li>It doesn’t make sense to predict the mpg of a car that weighs 0 pounds;</li>
-<li>It <em>does</em> make sense to predict the ice duration of a lake at 0 degree temp.</li>
-</ul></section><section id="properties-of-least-squares-regression" class="level2"><h2 class="anchored" data-anchor-id="properties-of-least-squares-regression">Properties of least squares regression</h2>
+<li>It <em>does</em> make sense to predict the ice duration of a lake at 0 degree temp;</li>
+<li>It <em>does</em> make sense to predict audience score if the critics gave it a 0%.</li>
+</ul>
+</div>
+</section><section id="properties-of-least-squares-regression" class="level2"><h2 class="anchored" data-anchor-id="properties-of-least-squares-regression">Properties of least squares regression</h2>
 <div class="incremental">
 <ul class="incremental">
 <li><p>The regression line goes through the center of mass point (the coordinates corresponding to average <span class="math inline">\(X\)</span> and average <span class="math inline">\(Y\)</span>): <span class="math inline">\(b_0 = \bar{Y} - b_1~\bar{X}\)</span></p></li>
@@ -953,14 +1005,14 @@ window.Quarto = {
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">summarize</span><span class="op">(</span></span>
 <span>    r <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -970,7 +1022,7 @@ window.Quarto = {
   &lt;dbl&gt;
 1    -1</code></pre>
 </div>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">fit</span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="va">x</span>, <span class="va">df</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">glance</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">select</span><span class="op">(</span><span class="va">r.squared</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -990,14 +1042,14 @@ window.Quarto = {
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">summarize</span><span class="op">(</span></span>
 <span>    r <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1007,7 +1059,7 @@ window.Quarto = {
    &lt;dbl&gt;
 1 -0.935</code></pre>
 </div>
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">fit</span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="va">x</span>, <span class="va">df</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">glance</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">select</span><span class="op">(</span><span class="va">r.squared</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1027,14 +1079,14 @@ window.Quarto = {
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">summarize</span><span class="op">(</span></span>
 <span>    r <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1044,7 +1096,7 @@ window.Quarto = {
    &lt;dbl&gt;
 1 -0.659</code></pre>
 </div>
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">fit</span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="va">x</span>, <span class="va">df</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">glance</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">select</span><span class="op">(</span><span class="va">r.squared</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1064,14 +1116,14 @@ window.Quarto = {
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">summarize</span><span class="op">(</span></span>
 <span>    r <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1081,7 +1133,7 @@ window.Quarto = {
    &lt;dbl&gt;
 1 -0.335</code></pre>
 </div>
-<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">fit</span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="va">x</span>, <span class="va">df</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">glance</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">select</span><span class="op">(</span><span class="va">r.squared</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1101,14 +1153,14 @@ window.Quarto = {
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">summarize</span><span class="op">(</span></span>
 <span>    r <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1118,7 +1170,7 @@ window.Quarto = {
    &lt;dbl&gt;
 1 -0.118</code></pre>
 </div>
-<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">fit</span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="va">x</span>, <span class="va">df</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">glance</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">select</span><span class="op">(</span><span class="va">r.squared</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1138,14 +1190,14 @@ window.Quarto = {
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">summarize</span><span class="op">(</span></span>
 <span>    r <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1155,7 +1207,7 @@ window.Quarto = {
   &lt;dbl&gt;
 1 0.117</code></pre>
 </div>
-<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">fit</span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="va">x</span>, <span class="va">df</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">glance</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">select</span><span class="op">(</span><span class="va">r.squared</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1175,14 +1227,14 @@ window.Quarto = {
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-29-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-30-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">summarize</span><span class="op">(</span></span>
 <span>    r <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1192,7 +1244,7 @@ window.Quarto = {
   &lt;dbl&gt;
 1 0.538</code></pre>
 </div>
-<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">fit</span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="va">x</span>, <span class="va">df</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">glance</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">select</span><span class="op">(</span><span class="va">r.squared</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1212,14 +1264,14 @@ window.Quarto = {
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-31-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-32-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">summarize</span><span class="op">(</span></span>
 <span>    r <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1229,7 +1281,7 @@ window.Quarto = {
   &lt;dbl&gt;
 1 0.923</code></pre>
 </div>
-<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">fit</span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="va">x</span>, <span class="va">df</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">glance</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">select</span><span class="op">(</span><span class="va">r.squared</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1249,14 +1301,14 @@ window.Quarto = {
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-33-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="16-simple-linear-regression_files/figure-revealjs/unnamed-chunk-34-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:40%;">
 <div class="cell">
-<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">summarize</span><span class="op">(</span></span>
 <span>    r <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1266,7 +1318,7 @@ window.Quarto = {
   &lt;dbl&gt;
 1     1</code></pre>
 </div>
-<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb48"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">fit</span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="va">x</span>, <span class="va">df</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">glance</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">select</span><span class="op">(</span><span class="va">r.squared</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

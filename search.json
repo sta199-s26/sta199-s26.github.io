@@ -8703,6 +8703,13 @@
     "text": "Data visualization"
   },
   {
+    "objectID": "slides/16-simple-linear-regression.html#quick-aside-which-is-which",
+    "href": "slides/16-simple-linear-regression.html#quick-aside-which-is-which",
+    "title": "Linear models with a single predictor",
+    "section": "Quick aside: which is which?",
+    "text": "Quick aside: which is which?\nHow do we know which variable “should” be the response and which should be the predictor. This will depend on the domain and the research question, but in some cases there is a natural choice. In this example, the critic score for a film is typically available before the audience score. Critics can often screen the film in advance, and their reviews are published on opening day. By contrast, the audience score trickles in over the subsequent weeks. So it’s more likely that we would already have the critics score already and use it to anticipate the audience score instead of the other way around."
+  },
+  {
     "objectID": "slides/16-simple-linear-regression.html#data-visualization-linear-model",
     "href": "slides/16-simple-linear-regression.html#data-visualization-linear-model",
     "title": "Linear models with a single predictor",
@@ -8752,6 +8759,13 @@
     "text": "Simple linear regression\n\\[\\Large{\\hat{Y} = b_0 + b_1 X}\\]\n\n\n\\(b_1\\): Estimated slope of the relationship between \\(X\\) and \\(Y\\)\n\n\n\\(b_0\\): Estimated intercept of the relationship between \\(X\\) and \\(Y\\)\n\nNo error term!"
   },
   {
+    "objectID": "slides/16-simple-linear-regression.html#why-did-the-notation-change",
+    "href": "slides/16-simple-linear-regression.html#why-did-the-notation-change",
+    "title": "Linear models with a single predictor",
+    "section": "Why did the notation change?",
+    "text": "Why did the notation change?\nYou’re already familiar with \\(y=mx+b\\), so why did I switch it up on you? Why the subscripts? Why the Greek letters?\n\nToday, we’re studying simple linear regression where there is only one predictor. Next week, we study multiple linear regression where there are many predictors, and each one gets its own coeffient. When you go from 1 predictor to 5 or 10 or 1,000, you run out of letters. So it’s easier to number them;\nThe Greek letters denote true, idealized, population values. These are unknown. If we had perfect data, we would know them, but we don’t. Womp womp;\nThe lowercase roman letters denote estimated values based on a finite, imperfect sample. These are out best guess at the true values based on the data we have."
+  },
+  {
     "objectID": "slides/16-simple-linear-regression.html#choosing-values-for-b_1-and-b_0",
     "href": "slides/16-simple-linear-regression.html#choosing-values-for-b_1-and-b_0",
     "title": "Linear models with a single predictor",
@@ -8787,6 +8801,13 @@
     "text": "Least squares line\n\nmovies_fit &lt;- linear_reg() |&gt;\n  fit(audience ~ critics, data = movie_scores)\n\ntidy(movies_fit)\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)   32.3      2.34        13.8 4.03e-28\n2 critics        0.519    0.0345      15.0 2.70e-31"
   },
   {
+    "objectID": "slides/16-simple-linear-regression.html#fit-syntax",
+    "href": "slides/16-simple-linear-regression.html#fit-syntax",
+    "title": "Linear models with a single predictor",
+    "section": "\nfit syntax",
+    "text": "fit syntax\nIf you recall ggplot, it takes two arguments: a data frame and an aesthetic mapping that specifies what columns to use and how to use them. fit is similar. It takes two arguments: a data frame and a formula that species what variables to include in the model and how.\n\nlinear_reg() |&gt;\n  fit(y ~ x, df)\n\nThe statement y ~ x is called a formula in R. The variable name that appears to the left of the tilde (~) is treated as the response variable, and the variable(s!) to the right of the tilde are treated as explanatory."
+  },
+  {
     "objectID": "slides/16-simple-linear-regression.html#prediction-1",
     "href": "slides/16-simple-linear-regression.html#prediction-1",
     "title": "Linear models with a single predictor",
@@ -8808,11 +8829,25 @@
     "text": "Participate 📱💻\n\n\n\nThe intercept of the model for predicting audience score from critics score is 32.3. Which of the following is the best interpretation of this value?\n\\[\\widehat{\\text{audience}} = 32.3 + 0.519 \\times \\text{critics}\\]\n\n\nFor movies with a critics score of 0 points, we expect the audience score to be 32.3 points, on average.\nFor movies with an audience score of 0 points, we expect the critics score to be 32.3 points, on average.\nFor every one point increase in the critics score, the audience score goes up by 32.3 points.\nFor movies with an audience score of 0 points, we expect the critics score to be 0.519 points, on average.\n\n\n\n\n\n\nScan the QR code or go HERE. Log in with your Duke NetID."
   },
   {
+    "objectID": "slides/16-simple-linear-regression.html#correct",
+    "href": "slides/16-simple-linear-regression.html#correct",
+    "title": "Linear models with a single predictor",
+    "section": "Correct",
+    "text": "Correct\n\\[\\widehat{\\text{audience}} = 32.3 + 0.519 \\times \\text{critics}\\]\n\nSlope: for every one point increase in the critics score, we expect the audience score to be higher by 0.519 points, on average;\nIntercept: for movies with an audience score of 0 points, we expect the critics score to be 32.3 points, on average.\n\nThe “we expect” and “on average” are a bit redundant, but let’s go belt and suspenders in this class."
+  },
+  {
+    "objectID": "slides/16-simple-linear-regression.html#things-to-watch-out-for",
+    "href": "slides/16-simple-linear-regression.html#things-to-watch-out-for",
+    "title": "Linear models with a single predictor",
+    "section": "Things to watch out for",
+    "text": "Things to watch out for\nWhen interpreting coefficient estimates in a regression:\n\navoid causal-sounding language;\n\nbad: “a one unit increase in x makes y go up by 0.519;”\n\n\ndon’t make guarantees;\n\nbad: “if x = 0, then y will be 32.3;”\n\n\nbe explicitly predictive;\n\ngood: “if x increases by one unit, we expect/predict that y will be higher by 0.519 on average”\n\n\n\nIn general, our models give imperfect predictions about average behavior. The predictions are not guarantees, and the relationship may or may not be causal. Establishing that is an entire class in and of itself."
+  },
+  {
     "objectID": "slides/16-simple-linear-regression.html#is-the-intercept-meaningful",
     "href": "slides/16-simple-linear-regression.html#is-the-intercept-meaningful",
     "title": "Linear models with a single predictor",
     "section": "Is the intercept meaningful?",
-    "text": "Is the intercept meaningful?\n✅ The intercept is meaningful in context of the data if\n\nthe predictor can feasibly take values equal to or near zero or\nthe predictor has values near zero in the observed data\n\n. . .\n🛑 Otherwise, it might not be meaningful!\n. . .\nFrom last time…\n\nIt doesn’t make sense to predict the mpg of a car that weighs 0 pounds;\nIt does make sense to predict the ice duration of a lake at 0 degree temp."
+    "text": "Is the intercept meaningful?\n✅ The intercept is meaningful in context of the data if\n\nthe predictor can feasibly take values equal to or near zero or\nthe predictor has values near zero in the observed data\n\n. . .\n🛑 Otherwise, it might not be meaningful!\n. . .\nFor our examples so far…\n\n\nIt doesn’t make sense to predict the mpg of a car that weighs 0 pounds;\nIt does make sense to predict the ice duration of a lake at 0 degree temp;\nIt does make sense to predict audience score if the critics gave it a 0%."
   },
   {
     "objectID": "slides/16-simple-linear-regression.html#properties-of-least-squares-regression",
@@ -8941,6 +8976,13 @@
     "text": "Data visualization"
   },
   {
+    "objectID": "slides/16-simple-linear-regression-slides.html#quick-aside-which-is-which",
+    "href": "slides/16-simple-linear-regression-slides.html#quick-aside-which-is-which",
+    "title": "Linear models with a single predictor",
+    "section": "Quick aside: which is which?",
+    "text": "Quick aside: which is which?\nHow do we know which variable “should” be the response and which should be the predictor. This will depend on the domain and the research question, but in some cases there is a natural choice. In this example, the critic score for a film is typically available before the audience score. Critics can often screen the film in advance, and their reviews are published on opening day. By contrast, the audience score trickles in over the subsequent weeks. So it’s more likely that we would already have the critics score already and use it to anticipate the audience score instead of the other way around."
+  },
+  {
     "objectID": "slides/16-simple-linear-regression-slides.html#data-visualization-linear-model",
     "href": "slides/16-simple-linear-regression-slides.html#data-visualization-linear-model",
     "title": "Linear models with a single predictor",
@@ -8990,6 +9032,13 @@
     "text": "Simple linear regression\n\\[\\Large{\\hat{Y} = b_0 + b_1 X}\\]\n\n\n\\(b_1\\): Estimated slope of the relationship between \\(X\\) and \\(Y\\)\n\n\n\\(b_0\\): Estimated intercept of the relationship between \\(X\\) and \\(Y\\)\n\nNo error term!"
   },
   {
+    "objectID": "slides/16-simple-linear-regression-slides.html#why-did-the-notation-change",
+    "href": "slides/16-simple-linear-regression-slides.html#why-did-the-notation-change",
+    "title": "Linear models with a single predictor",
+    "section": "Why did the notation change?",
+    "text": "Why did the notation change?\nYou’re already familiar with \\(y=mx+b\\), so why did I switch it up on you? Why the subscripts? Why the Greek letters?\n\nToday, we’re studying simple linear regression where there is only one predictor. Next week, we study multiple linear regression where there are many predictors, and each one gets its own coeffient. When you go from 1 predictor to 5 or 10 or 1,000, you run out of letters. So it’s easier to number them;\nThe Greek letters denote true, idealized, population values. These are unknown. If we had perfect data, we would know them, but we don’t. Womp womp;\nThe lowercase roman letters denote estimated values based on a finite, imperfect sample. These are out best guess at the true values based on the data we have."
+  },
+  {
     "objectID": "slides/16-simple-linear-regression-slides.html#choosing-values-for-b_1-and-b_0",
     "href": "slides/16-simple-linear-regression-slides.html#choosing-values-for-b_1-and-b_0",
     "title": "Linear models with a single predictor",
@@ -9025,6 +9074,13 @@
     "text": "Least squares line\n\nmovies_fit &lt;- linear_reg() |&gt;\n  fit(audience ~ critics, data = movie_scores)\n\ntidy(movies_fit)\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)   32.3      2.34        13.8 4.03e-28\n2 critics        0.519    0.0345      15.0 2.70e-31"
   },
   {
+    "objectID": "slides/16-simple-linear-regression-slides.html#fit-syntax",
+    "href": "slides/16-simple-linear-regression-slides.html#fit-syntax",
+    "title": "Linear models with a single predictor",
+    "section": "\nfit syntax",
+    "text": "fit syntax\nIf you recall ggplot, it takes two arguments: a data frame and an aesthetic mapping that specifies what columns to use and how to use them. fit is similar. It takes two arguments: a data frame and a formula that species what variables to include in the model and how.\n\nlinear_reg() |&gt;\n  fit(y ~ x, df)\n\nThe statement y ~ x is called a formula in R. The variable name that appears to the left of the tilde (~) is treated as the response variable, and the variable(s!) to the right of the tilde are treated as explanatory."
+  },
+  {
     "objectID": "slides/16-simple-linear-regression-slides.html#prediction-1",
     "href": "slides/16-simple-linear-regression-slides.html#prediction-1",
     "title": "Linear models with a single predictor",
@@ -9046,11 +9102,25 @@
     "text": "Participate 📱💻\n\n\n\nThe intercept of the model for predicting audience score from critics score is 32.3. Which of the following is the best interpretation of this value?\n\\[\\widehat{\\text{audience}} = 32.3 + 0.519 \\times \\text{critics}\\]\n\n\nFor movies with a critics score of 0 points, we expect the audience score to be 32.3 points, on average.\nFor movies with an audience score of 0 points, we expect the critics score to be 32.3 points, on average.\nFor every one point increase in the critics score, the audience score goes up by 32.3 points.\nFor movies with an audience score of 0 points, we expect the critics score to be 0.519 points, on average.\n\n\n\n\n\n\nScan the QR code or go HERE. Log in with your Duke NetID."
   },
   {
+    "objectID": "slides/16-simple-linear-regression-slides.html#correct",
+    "href": "slides/16-simple-linear-regression-slides.html#correct",
+    "title": "Linear models with a single predictor",
+    "section": "Correct",
+    "text": "Correct\n\\[\\widehat{\\text{audience}} = 32.3 + 0.519 \\times \\text{critics}\\]\n\nSlope: for every one point increase in the critics score, we expect the audience score to be higher by 0.519 points, on average;\nIntercept: for movies with an audience score of 0 points, we expect the critics score to be 32.3 points, on average.\n\nThe “we expect” and “on average” are a bit redundant, but let’s go belt and suspenders in this class."
+  },
+  {
+    "objectID": "slides/16-simple-linear-regression-slides.html#things-to-watch-out-for",
+    "href": "slides/16-simple-linear-regression-slides.html#things-to-watch-out-for",
+    "title": "Linear models with a single predictor",
+    "section": "Things to watch out for",
+    "text": "Things to watch out for\nWhen interpreting coefficient estimates in a regression:\n\navoid causal-sounding language;\n\nbad: “a one unit increase in x makes y go up by 0.519;”\n\n\ndon’t make guarantees;\n\nbad: “if x = 0, then y will be 32.3;”\n\n\nbe explicitly predictive;\n\ngood: “if x increases by one unit, we expect/predict that y will be higher by 0.519 on average”\n\n\n\nIn general, our models give imperfect predictions about average behavior. The predictions are not guarantees, and the relationship may or may not be causal. Establishing that is an entire class in and of itself."
+  },
+  {
     "objectID": "slides/16-simple-linear-regression-slides.html#is-the-intercept-meaningful",
     "href": "slides/16-simple-linear-regression-slides.html#is-the-intercept-meaningful",
     "title": "Linear models with a single predictor",
     "section": "Is the intercept meaningful?",
-    "text": "Is the intercept meaningful?\n✅ The intercept is meaningful in context of the data if\n\nthe predictor can feasibly take values equal to or near zero or\nthe predictor has values near zero in the observed data\n\n\n🛑 Otherwise, it might not be meaningful!\n\n\nFrom last time…\n\nIt doesn’t make sense to predict the mpg of a car that weighs 0 pounds;\nIt does make sense to predict the ice duration of a lake at 0 degree temp."
+    "text": "Is the intercept meaningful?\n✅ The intercept is meaningful in context of the data if\n\nthe predictor can feasibly take values equal to or near zero or\nthe predictor has values near zero in the observed data\n\n\n🛑 Otherwise, it might not be meaningful!\n\n\nFor our examples so far…\n\nIt doesn’t make sense to predict the mpg of a car that weighs 0 pounds;\nIt does make sense to predict the ice duration of a lake at 0 degree temp;\nIt does make sense to predict audience score if the critics gave it a 0%."
   },
   {
     "objectID": "slides/16-simple-linear-regression-slides.html#properties-of-least-squares-regression",
