@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.34">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="John Zito">
+<meta name="dcterms.date" content="2026-02-23">
+<title>Data Science Wrap-up – STA 199 Spring 2026</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9f26b6341e16faa20df3ce7a36debf59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta property="og:title" content="Data Science Wrap-up – STA 199 Spring 2026">
+<meta property="og:description" content="Lecture 12">
+<meta property="og:image" content="https://sta199-s26.github.io/slides/images/00/data-science-cycle.001.png">
+<meta property="og:site_name" content="STA 199 Spring 2026">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:width" content="1920">
+</head>
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Data Science Wrap-up</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/sta199-s26" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
+    <a href="https://cmgr.oit.duke.edu/containers" title="RStudio containers" class="quarto-navigation-tool px-1" aria-label="RStudio containers"><i class="bi bi-code-square"></i></a>
+    <a href="https://duke.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=7301f69f-7a4a-459f-b8b4-b3ca00ee0a71" title="Class recordings" class="quarto-navigation-tool px-1" aria-label="Class recordings"><i class="bi bi-camera-reels-fill"></i></a>
+    <div class="dropdown">
+      <a href="" title="Support" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Support"><i class="bi bi-life-preserver"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+<li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://docs.google.com/spreadsheets/d/1bbCCaRtyUzPbB-SqcjseiwVLwFlgQbvCMaMWnvT3EG8/edit?usp=sharing">
+              <i class="bi bi-person-raised-hand pe-1"></i>
+            Office hours
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://edstem.org/us/courses/90224/discussion">
+              <i class="bi bi-people-fill pe-1"></i>
+            Ed Discussion
+            </a>
+          </li>
+      </ul>
+</div>
+    <div class="dropdown">
+      <a href="" title="Canvas" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Canvas"><i class="bi bi-file-check-fill"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
+<li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://canvas.duke.edu/courses/72135/announcements">
+              <i class="bi bi-megaphone-fill pe-1"></i>
+            Announcements
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.gradescope.com/courses/1211450">
+              <i class="bi bi-file-arrow-up-fill pe-1"></i>
+            Gradescope
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://canvas.duke.edu/courses/72135/gradebook">
+              <i class="bi bi-alphabet-uppercase pe-1"></i>
+            Gradebook
+            </a>
+          </li>
+      </ul>
+</div>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Syllabus</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus-team.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teaching team</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus-materials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Materials</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus-assignments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignments and grading</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus-policies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Policies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus-resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">University resources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus-faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FAQ</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Computing</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../computing/coding-access.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Access</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../computing/coding-cheatsheets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cheatsheets</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lab</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab-0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 0</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 6</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Homework</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homework 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homework 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homework 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homework 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homework 5</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Project</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/description.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Description</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/1-working-collaboratively.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/2-proposal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/3-improvement-progress.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/4-peer-review.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/5-writeup-presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 5</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Exam Study Guides</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exams/midterm-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Midterm 1</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li><a href="#while-you-wait-participate" id="toc-while-you-wait-participate" class="nav-link active" data-scroll-target="#while-you-wait-participate">While you wait: Participate 📱💻</a></li>
+  <li>
+<a href="#reminders" id="toc-reminders" class="nav-link" data-scroll-target="#reminders">Reminders</a>
+  <ul class="collapse">
+<li><a href="#schedule-changes" id="toc-schedule-changes" class="nav-link" data-scroll-target="#schedule-changes">Schedule changes</a></li>
+  <li><a href="#midterm-exam-1" id="toc-midterm-exam-1" class="nav-link" data-scroll-target="#midterm-exam-1">Midterm Exam 1</a></li>
+  <li><a href="#in-class" id="toc-in-class" class="nav-link" data-scroll-target="#in-class">In-class</a></li>
+  <li><a href="#what-should-i-put-on-my-cheat-sheet" id="toc-what-should-i-put-on-my-cheat-sheet" class="nav-link" data-scroll-target="#what-should-i-put-on-my-cheat-sheet">What should I put on my cheat sheet?</a></li>
+  <li><a href="#take-home" id="toc-take-home" class="nav-link" data-scroll-target="#take-home">Take-home</a></li>
+  <li><a href="#things-you-can-do-to-study" id="toc-things-you-can-do-to-study" class="nav-link" data-scroll-target="#things-you-can-do-to-study">Things you can do to study</a></li>
+  <li><a href="#our-conduct-policies" id="toc-our-conduct-policies" class="nav-link" data-scroll-target="#our-conduct-policies">Our conduct policies</a></li>
+  <li><a href="#dukes-conduct-policies" id="toc-dukes-conduct-policies" class="nav-link" data-scroll-target="#dukes-conduct-policies">Duke’s conduct policies</a></li>
+  <li><a href="#except" id="toc-except" class="nav-link" data-scroll-target="#except">Except…</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#lets-zoom-out-for-a-sec" id="toc-lets-zoom-out-for-a-sec" class="nav-link" data-scroll-target="#lets-zoom-out-for-a-sec">Let’s zoom out for a sec…</a>
+  <ul class="collapse">
+<li><a href="#data-science-and-statistical-thinking" id="toc-data-science-and-statistical-thinking" class="nav-link" data-scroll-target="#data-science-and-statistical-thinking">Data science and statistical thinking</a></li>
+  <li><a href="#data-science" id="toc-data-science" class="nav-link" data-scroll-target="#data-science">Data science</a></li>
+  <li><a href="#data-science-1" id="toc-data-science-1" class="nav-link" data-scroll-target="#data-science-1">Data science</a></li>
+  <li><a href="#data-collection" id="toc-data-collection" class="nav-link" data-scroll-target="#data-collection">Data collection</a></li>
+  <li><a href="#data-science-2" id="toc-data-science-2" class="nav-link" data-scroll-target="#data-science-2">Data science</a></li>
+  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link" data-scroll-target="#data-preparation">Data preparation</a></li>
+  <li><a href="#data-science-3" id="toc-data-science-3" class="nav-link" data-scroll-target="#data-science-3">Data science</a></li>
+  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis">Data analysis</a></li>
+  <li><a href="#data-analysis-1" id="toc-data-analysis-1" class="nav-link" data-scroll-target="#data-analysis-1">Data analysis</a></li>
+  <li><a href="#data-analysis-2" id="toc-data-analysis-2" class="nav-link" data-scroll-target="#data-analysis-2">Data analysis</a></li>
+  <li><a href="#data-analysis-3" id="toc-data-analysis-3" class="nav-link" data-scroll-target="#data-analysis-3">Data analysis</a></li>
+  <li><a href="#data-science-4" id="toc-data-science-4" class="nav-link" data-scroll-target="#data-science-4">Data science</a></li>
+  <li><a href="#a-cautionary-tale-anscombes-quartet" id="toc-a-cautionary-tale-anscombes-quartet" class="nav-link" data-scroll-target="#a-cautionary-tale-anscombes-quartet">A cautionary tale: Anscombe’s quartet</a></li>
+  <li><a href="#a-cautionary-tale-anscombes-quartet-1" id="toc-a-cautionary-tale-anscombes-quartet-1" class="nav-link" data-scroll-target="#a-cautionary-tale-anscombes-quartet-1">A cautionary tale: Anscombe’s quartet</a></li>
+  <li><a href="#a-cautionary-tale-anscombes-quartet-2" id="toc-a-cautionary-tale-anscombes-quartet-2" class="nav-link" data-scroll-target="#a-cautionary-tale-anscombes-quartet-2">A cautionary tale: Anscombe’s quartet</a></li>
+  <li><a href="#if-you-only-looked-at-summary-statistics" id="toc-if-you-only-looked-at-summary-statistics" class="nav-link" data-scroll-target="#if-you-only-looked-at-summary-statistics">If you only looked at summary statistics…</a></li>
+  <li><a href="#our-motto-abv" id="toc-our-motto-abv" class="nav-link" data-scroll-target="#our-motto-abv">Our motto: ABV!</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#study-guide" id="toc-study-guide" class="nav-link" data-scroll-target="#study-guide">Study guide</a>
+  <ul class="collapse">
+<li><a href="#can-you-match-these" id="toc-can-you-match-these" class="nav-link" data-scroll-target="#can-you-match-these">Can you match these…</a></li>
+  <li><a href="#with-these" id="toc-with-these" class="nav-link" data-scroll-target="#with-these">…with these?</a></li>
+  <li><a href="#matching-scatterplots-and-histograms" id="toc-matching-scatterplots-and-histograms" class="nav-link" data-scroll-target="#matching-scatterplots-and-histograms">Matching scatterplots and histograms</a></li>
+  <li><a href="#goes-with-e" id="toc-goes-with-e" class="nav-link" data-scroll-target="#goes-with-e">2 goes with e</a></li>
+  <li><a href="#goes-with-f" id="toc-goes-with-f" class="nav-link" data-scroll-target="#goes-with-f">7 goes with f</a></li>
+  <li><a href="#goes-with-d" id="toc-goes-with-d" class="nav-link" data-scroll-target="#goes-with-d">3 goes with d</a></li>
+  <li><a href="#goes-with-c" id="toc-goes-with-c" class="nav-link" data-scroll-target="#goes-with-c">6 goes with c</a></li>
+  <li><a href="#goes-with-b" id="toc-goes-with-b" class="nav-link" data-scroll-target="#goes-with-b">4 goes with b</a></li>
+  <li><a href="#goes-with-a" id="toc-goes-with-a" class="nav-link" data-scroll-target="#goes-with-a">5 goes with a</a></li>
+  <li><a href="#can-you-match-these-1" id="toc-can-you-match-these-1" class="nav-link" data-scroll-target="#can-you-match-these-1">Can you match these…</a></li>
+  <li><a href="#with-these-1" id="toc-with-these-1" class="nav-link" data-scroll-target="#with-these-1">…with these?</a></li>
+  <li><a href="#yes-you-can" id="toc-yes-you-can" class="nav-link" data-scroll-target="#yes-you-can">Yes you can</a></li>
+  <li><a href="#whence-the-box" id="toc-whence-the-box" class="nav-link" data-scroll-target="#whence-the-box">Whence the box?</a></li>
+  <li><a href="#whence-the-box-1" id="toc-whence-the-box-1" class="nav-link" data-scroll-target="#whence-the-box-1">Whence the box?</a></li>
+  <li><a href="#whence-the-box-2" id="toc-whence-the-box-2" class="nav-link" data-scroll-target="#whence-the-box-2">Whence the box?</a></li>
+  <li><a href="#goes-with-d-1" id="toc-goes-with-d-1" class="nav-link" data-scroll-target="#goes-with-d-1">13 goes with d</a></li>
+  <li><a href="#goes-with-c-1" id="toc-goes-with-c-1" class="nav-link" data-scroll-target="#goes-with-c-1">12 goes with c</a></li>
+  <li><a href="#goes-with-a-1" id="toc-goes-with-a-1" class="nav-link" data-scroll-target="#goes-with-a-1">9 goes with a</a></li>
+  <li><a href="#goes-with-f-1" id="toc-goes-with-f-1" class="nav-link" data-scroll-target="#goes-with-f-1">8 goes with f</a></li>
+  <li><a href="#goes-with-b-1" id="toc-goes-with-b-1" class="nav-link" data-scroll-target="#goes-with-b-1">10 goes with b</a></li>
+  <li><a href="#goes-with-e-1" id="toc-goes-with-e-1" class="nav-link" data-scroll-target="#goes-with-e-1">11 goes with e</a></li>
+  </ul>
+</li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/slides/12-wrap-up.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="12-wrap-up-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Data Science Wrap-up</h1>
+<p class="subtitle lead">Lecture 12</p>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">John Zito </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Duke University <br> STA 199 Spring 2026
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 23, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header><section id="while-you-wait-participate" class="level2"><h2 class="anchored" data-anchor-id="while-you-wait-participate">While you wait: Participate 📱💻</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div class="wooclap">
+<p>Did your container stop working over the weekend?</p>
+<div class="wooclap-choices">
+<ul>
+<li>Yes;</li>
+<li>No;</li>
+<li>idk. I didn’t use it this weekend.</li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:30%;">
+<div id="" class="qrcode"></div>
+<script type="text/javascript">
+(function() {
+  var script = document.currentScript;
+  var qrcode = script.previousElementSibling;
+  qrcode.qrcode = new QRCode(qrcode, {"colorDark":"#000000","colorLight":"#ffffff","height":"300","text":"https://app.wooclap.com/TNRPMB?from=instruction-slide","width":"300"});
+  script.remove();
+})();
+</script><div class="small">
+<p>Scan the QR code or go <a href="https://app.wooclap.com/TNRPMB?from=instruction-slide">HERE</a>. Log in with your Duke NetID.</p>
+</div>
+</div>
+</div>
+</section><section id="reminders" class="level1"><h1>Reminders</h1>
+<section id="schedule-changes" class="level2"><h2 class="anchored" data-anchor-id="schedule-changes">Schedule changes</h2>
+<p>All of the containers should be back online. Even so…</p>
+<div class="incremental">
+<ul class="incremental">
+<li>Project proposals due Tue Feb 24 @ 11:59 pm;</li>
+<li>No lab Thu Feb 26;</li>
+<li>Proposal feedback returned Mon Mar 2;</li>
+<li>Make progress by Wed March 4 @ 11:59 pm;</li>
+<li>Peer review in lab Thu Mar 5;</li>
+<li>Spring break!</li>
+</ul>
+</div>
+</section><section id="midterm-exam-1" class="level2"><h2 class="anchored" data-anchor-id="midterm-exam-1">Midterm Exam 1</h2>
+<p>Worth 20% of your final grade; consists of two parts:</p>
+<ul>
+<li>
+<p><strong>In-class</strong>: worth 80% of the Midterm 1 grade;</p>
+<ul>
+<li>Wednesday February 25 11:45 AM - 1:00 PM in this room;</li>
+</ul>
+</li>
+<li>
+<p><strong>Take-home</strong>: worth 20% of the Midterm 1 grade.</p>
+<ul>
+<li>Released Thursday February 26 at 6:00 pm;</li>
+<li>Due Sunday March 1 @ 11:59 pm.</li>
+</ul>
+</li>
+</ul>
+<p>If you take every exam and do better on the final than you did on this, we replace it.</p>
+</section><section id="in-class" class="level2"><h2 class="anchored" data-anchor-id="in-class">In-class</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>All multiple choice;</p></li>
+<li><p>There were 35 questions last spring, some of which I included on the study guide;</p></li>
+<li>
+<p>You get both sides of one 8.5” x 11” note sheet created by you and you alone;</p>
+<ul class="incremental">
+<li>You can create it however you want (written, typed, iPad, etc);</li>
+</ul>
+</li>
+<li><p>If you seek testing accommodations but haven’t documented them with the SDAO and made a Testing Center appointment, it may be too late, but try ASAP.</p></li>
+</ul>
+</div>
+</section><section id="what-should-i-put-on-my-cheat-sheet" class="level2"><h2 class="anchored" data-anchor-id="what-should-i-put-on-my-cheat-sheet">What should I put on my cheat sheet?</h2>
+<p>. . .</p>
+<p><a href="https://edstem.org/us/courses/90224/discussion/7626328"><strong>Ask one of our undergrad TAs!</strong></a> They took the class. I didn’t.</p>
+<div class="incremental">
+<ul class="incremental">
+<li>description of common functions;</li>
+<li>description of different visualizations: how to interpret, and what to use when;</li>
+<li>cute doodles;</li>
+<li>words of affirmation.</li>
+</ul>
+</div>
+<p>. . .</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Don’t waste space on the details of any specific applications or datasets we’ve seen (penguins, Bechdel, gerrymandering, midwest, etc). Anything we want you to know about a particular application will be introduced from scratch within the exam.</p>
+</div>
+</div>
+</section><section id="take-home" class="level2"><h2 class="anchored" data-anchor-id="take-home">Take-home</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>It will be just like a homework, only shorter;</li>
+<li>Completely open-resource, but citation policies apply;</li>
+<li>Absolutely no collaboration of any kind;</li>
+<li>Seek help by posting <em>privately</em> on Ed;
+<ul class="incremental">
+<li>OH are canceled while tha take-home is live;</li>
+</ul>
+</li>
+<li>Submit your final PDF to Gradescope in the usual way.</li>
+</ul>
+</div>
+</section><section id="things-you-can-do-to-study" class="level2"><h2 class="anchored" data-anchor-id="things-you-can-do-to-study">Things you can do to study</h2>
+<p>In order of importance:</p>
+<div class="incremental">
+<ul class="incremental">
+<li>Study guide</li>
+<li>Work on your cheat sheet;</li>
+<li>Correct old labs and homeworks;</li>
+<li>Old AEs: complete tasks we didn’t get to and compare with key;</li>
+<li>Old HWs: complete any unfinished “Feedback from AI” problems;</li>
+<li>Code along: watch these videos specifically;</li>
+<li>Textbook: odd-numbered exercises in the back of Chs. 1, 4, 5, 6.</li>
+</ul>
+</div>
+</section><section id="our-conduct-policies" class="level2"><h2 class="anchored" data-anchor-id="our-conduct-policies">Our conduct policies</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Inappropriate collaboration will result in a zero on the entire take-home and be referred to the conduct office;</li>
+<li>That zero will not be dropped or replaced;</li>
+<li>If a conduct violation of any kind is discovered, your final letter grade in the course will be permanently reduced (A- down to B+, B+ down to B, etc);</li>
+<li>If folks share solutions, all students involved will be penalized equally, the sharer the same as the recipient.</li>
+</ul>
+</div>
+</section><section id="dukes-conduct-policies" class="level2"><h2 class="anchored" data-anchor-id="dukes-conduct-policies">Duke’s conduct policies</h2>
+<p>Let’s say we catch you:</p>
+<div class="incremental">
+<ul class="incremental">
+<li>If you are a first-time offender, your case goes to “faculty-student resolution”;</li>
+<li>If you sign your name, you admit to wrongdoing, and agree to accept the policies outlined in my syllabus;</li>
+<li>If you do not re-offend, Duke promises that this first offense will not appear on your transcript and is not reportable outside the university.</li>
+</ul>
+</div>
+</section><section id="except" class="level2 medium"><h2 class="medium anchored" data-anchor-id="except">Except…</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>Medical school applicants are compelled to self-report any prior cases of misconduct, <em>even if</em> they are unreportable and do not appear on a transcript;</p></li>
+<li>
+<p>This is what the AAMC calls an “<a href="https://students-residents.aamc.org/applying-medical-school-amcas/publication-chapters/institutional-action">Institutional Action</a>:”</p>
+<blockquote class="blockquote">
+<p>If you were ever the recipient of any institutional action by any college or medical school for…a conduct violation, you must answer Yes…even if such action did not: interrupt your enrollment, require you to withdraw, or appear on your official transcripts.</p>
+</blockquote>
+</li>
+<li><p>Duke prehealth advising has <a href="https://advising.duke.edu/prehealth/apply/comduct-violations/">a whole page</a> on this.</p></li>
+</ul>
+</div>
+</section></section><section id="lets-zoom-out-for-a-sec" class="level1"><h1>Let’s zoom out for a sec…</h1>
+<section id="data-science-and-statistical-thinking" class="level2"><h2 class="anchored" data-anchor-id="data-science-and-statistical-thinking">Data science and statistical thinking</h2>
+<p>Before spring break…</p>
+<ul>
+<li>
+<strong>Data science</strong>: the real-world <em>art</em> of transforming messy, imperfect, incomplete data into knowledge;</li>
+</ul>
+<p>After spring break…</p>
+<ul>
+<li>
+<strong>Statistics</strong>: the mathematical discipline of quantifying our uncertainty about that knowledge.</li>
+</ul></section><section id="data-science" class="level2 medium"><h2 class="medium anchored" data-anchor-id="data-science">Data science</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/00/data-science-cycle.001.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section><section id="data-science-1" class="level2 medium"><h2 class="medium anchored" data-anchor-id="data-science-1">Data science</h2>
+<div class="incremental">
+<ol class="incremental" type="1">
+<li>
+<p><strong>Collection</strong>: we won’t seriously study this!</p>
+<ul class="incremental">
+<li>
+<strong>for us</strong>: data importing (<code>read_csv</code> etc) or webscraping;</li>
+<li>
+<strong>but really</strong>: domain-specific issues of measurement, survey design, experimental design, etc;</li>
+</ul>
+</li>
+</ol>
+</div>
+</section><section id="data-collection" class="level2 small"><h2 class="small anchored" data-anchor-id="data-collection">Data collection</h2>
+<p>I sent out my lil’ survey with Google Forms, downloaded the responses in a CSV, and read that sucker in:</p>
+<div class="columns">
+<div class="column" style="width:35%;">
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSflj08LttBQIz9Qnn0nfKspnGsQesY1y-_xOqPahT7SxRfUAw/viewform?embedded=true" width="640" height="912" frameborder="0" marginheight="0" marginwidth="0">
+Loading…
+</iframe>
+</div><div class="column" style="width:65%;">
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"data/survey-2026-02-09.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 276 Columns: 3
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (3): Timestamp, How many classes do you have on Tuesdays?, What year are...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 276 × 3
+   Timestamp         How many classes do you have on Tues…¹ `What year are you?`
+   &lt;chr&gt;             &lt;chr&gt;                                  &lt;chr&gt;               
+ 1 2/9/2026 11:03:46 3                                      First-year          
+ 2 2/9/2026 11:29:24 2                                      Sophomore           
+ 3 2/9/2026 11:33:44 2                                      Sophomore           
+ 4 2/9/2026 11:33:48 2                                      Sophomore           
+ 5 2/9/2026 11:33:56 1                                      First-year          
+ 6 2/9/2026 11:33:56 3                                      First-year          
+ 7 2/9/2026 11:33:58 3                                      Sophomore           
+ 8 2/9/2026 11:34:07 3                                      Sophomore           
+ 9 2/9/2026 11:34:13 2                                      First-year          
+10 2/9/2026 11:34:20 3                                      Junior              
+# ℹ 266 more rows
+# ℹ abbreviated name: ¹​`How many classes do you have on Tuesdays?`</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section><section id="data-science-2" class="level2 medium"><h2 class="medium anchored" data-anchor-id="data-science-2">Data science</h2>
+<ol type="1">
+<li>
+<p><strong>Collection</strong>: we won’t seriously study this!</p>
+<ul>
+<li>
+<strong>for us</strong>: data importing (<code>read_csv</code>) or webscraping;</li>
+<li>
+<strong>but really</strong>: domain-specific issues of measurement, survey design, experimental design, etc;</li>
+</ul>
+</li>
+</ol>
+<div class="incremental">
+<ol class="incremental" start="2" type="1">
+<li>
+<p><strong>Preparation</strong>: cleaning, wrangling, and otherwise <em>tidying</em> the data so we can actually work with it.</p>
+<ul class="incremental">
+<li>
+<strong>keywords</strong>: <code>mutate</code>, <code>fct_relevel</code>, <code>pivot_*</code>, <code>*_join</code>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+</section><section id="data-preparation" class="level2 scrollable small"><h2 class="scrollable small anchored" data-anchor-id="data-preparation">Data preparation</h2>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span> <span class="op">&lt;-</span> <span class="va">survey</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">rename</span><span class="op">(</span></span>
+<span>    tue_classes <span class="op">=</span> <span class="va">`How many classes do you have on Tuesdays?`</span>,</span>
+<span>    year <span class="op">=</span> <span class="va">`What year are you?`</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">mutate</span><span class="op">(</span></span>
+<span>    tue_classes <span class="op">=</span> <span class="fu">case_when</span><span class="op">(</span></span>
+<span>      <span class="va">tue_classes</span> <span class="op">==</span> <span class="st">"1 class, 1 lab, 1 volunteering session"</span> <span class="op">~</span> <span class="st">"2"</span>,</span>
+<span>      <span class="va">tue_classes</span> <span class="op">==</span> <span class="st">"One"</span> <span class="op">~</span> <span class="st">"1"</span>,</span>
+<span>      <span class="va">tue_classes</span> <span class="op">==</span> <span class="st">"Three"</span> <span class="op">~</span> <span class="st">"3"</span>,</span>
+<span>      <span class="va">tue_classes</span> <span class="op">==</span> <span class="st">"Two"</span> <span class="op">~</span> <span class="st">"2"</span>,</span>
+<span>      <span class="va">tue_classes</span> <span class="op">==</span> <span class="st">"Two in both days"</span> <span class="op">~</span> <span class="st">"2"</span>,</span>
+<span>      <span class="va">tue_classes</span> <span class="op">==</span> <span class="st">"two"</span> <span class="op">~</span> <span class="st">"2"</span>,</span>
+<span>      .default <span class="op">=</span> <span class="va">tue_classes</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    tue_classes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="va">tue_classes</span><span class="op">)</span>,</span>
+<span>    year <span class="op">=</span> <span class="fu">fct_relevel</span><span class="op">(</span><span class="va">year</span>, <span class="st">"First-year"</span>, <span class="st">"Sophomore"</span>, <span class="st">"Junior"</span>, <span class="st">"Senior"</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">select</span><span class="op">(</span><span class="va">tue_classes</span>, <span class="va">year</span><span class="op">)</span></span>
+<span><span class="va">survey</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 276 × 2
+   tue_classes year      
+         &lt;dbl&gt; &lt;fct&gt;     
+ 1           3 First-year
+ 2           2 Sophomore 
+ 3           2 Sophomore 
+ 4           2 Sophomore 
+ 5           1 First-year
+ 6           3 First-year
+ 7           3 Sophomore 
+ 8           3 Sophomore 
+ 9           2 First-year
+10           3 Junior    
+# ℹ 266 more rows</code></pre>
+</div>
+</div>
+</section><section id="data-science-3" class="level2 medium"><h2 class="medium anchored" data-anchor-id="data-science-3">Data science</h2>
+<ol type="1">
+<li>
+<p><strong>Collection</strong>: we won’t seriously study this!</p>
+<ul>
+<li>
+<strong>for us</strong>: data importing (<code>read_csv</code>) or webscraping;</li>
+<li>
+<strong>but really</strong>: domain-specific issues of measurement, survey design, experimental design, etc;</li>
+</ul>
+</li>
+<li>
+<p><strong>Preparation</strong>: cleaning, wrangling, and otherwise <em>tidying</em> the data so we can actually work with it.</p>
+<ul>
+<li>
+<strong>keywords</strong>: <code>mutate</code>, <code>fct_relevel</code>, <code>pivot_*</code>, <code>*_join</code>
+</li>
+</ul>
+</li>
+</ol>
+<div class="incremental">
+<ol class="incremental" start="3" type="1">
+<li>
+<p><strong>Analysis</strong>: finally transform the data into <em>knowledge</em>…</p>
+<ul class="incremental">
+<li>
+<strong>pictures</strong>: <code>ggplot</code>, <code>geom_*</code>, etc</li>
+<li>
+<strong>numerical summaries</strong>: <code>summarize</code>, <code>group_by</code>, <code>count</code>, <code>mean</code>, <code>median</code>, <code>sd</code>, <code>quantile</code>, <code>IQR</code>, <code>cor</code>, etc</li>
+</ul>
+</li>
+</ol>
+</div>
+</section><section id="data-analysis" class="level2"><h2 class="anchored" data-anchor-id="data-analysis">Data analysis</h2>
+<p>A human being can learn nothing from staring at this box:</p>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 276 × 2
+   tue_classes year      
+         &lt;dbl&gt; &lt;fct&gt;     
+ 1           3 First-year
+ 2           2 Sophomore 
+ 3           2 Sophomore 
+ 4           2 Sophomore 
+ 5           1 First-year
+ 6           3 First-year
+ 7           3 Sophomore 
+ 8           3 Sophomore 
+ 9           2 First-year
+10           3 Junior    
+# ℹ 266 more rows</code></pre>
+</div>
+</div>
+</section><section id="data-analysis-1" class="level2"><h2 class="anchored" data-anchor-id="data-analysis-1">Data analysis</h2>
+<p>Picture!</p>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">survey</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">tue_classes</span>, fill <span class="op">=</span> <span class="va">year</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_bar</span><span class="op">(</span>position <span class="op">=</span> <span class="st">"dodge"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="data-analysis-2" class="level2"><h2 class="anchored" data-anchor-id="data-analysis-2">Data analysis</h2>
+<p>Better picture?</p>
+<div class="cell">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">survey</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">tue_classes</span>, fill <span class="op">=</span> <span class="va">year</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_bar</span><span class="op">(</span>position <span class="op">=</span> <span class="st">"fill"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="data-analysis-3" class="level2"><h2 class="anchored" data-anchor-id="data-analysis-3">Data analysis</h2>
+<p>Numbers!</p>
+<div class="cell">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">count</span><span class="op">(</span><span class="va">tue_classes</span>, <span class="va">year</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">tue_classes</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">mutate</span><span class="op">(</span>prop <span class="op">=</span> <span class="va">n</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 19 × 4
+# Groups:   tue_classes [5]
+   tue_classes year           n   prop
+         &lt;dbl&gt; &lt;fct&gt;      &lt;int&gt;  &lt;dbl&gt;
+ 1           0 First-year     4 0.308 
+ 2           0 Sophomore      5 0.385 
+ 3           0 Junior         2 0.154 
+ 4           0 Senior         2 0.154 
+ 5           1 First-year    28 0.438 
+ 6           1 Sophomore     23 0.359 
+ 7           1 Junior        11 0.172 
+ 8           1 Senior         2 0.0312
+ 9           2 First-year    58 0.464 
+10           2 Sophomore     46 0.368 
+11           2 Junior        16 0.128 
+12           2 Senior         5 0.04  
+13           3 First-year    30 0.448 
+14           3 Sophomore     21 0.313 
+15           3 Junior        14 0.209 
+16           3 Senior         2 0.0299
+17           4 First-year     3 0.429 
+18           4 Sophomore      1 0.143 
+19           4 Junior         3 0.429 </code></pre>
+</div>
+</div>
+</section><section id="data-science-4" class="level2 small"><h2 class="small anchored" data-anchor-id="data-science-4">Data science</h2>
+<ol type="1">
+<li>
+<p><strong>Collection</strong>: we won’t seriously study this!</p>
+<ul>
+<li>
+<strong>for us</strong>: data importing (<code>read_csv</code>) or webscraping;</li>
+<li>
+<strong>but really</strong>: domain-specific issues of measurement, survey design, experimental design, etc;</li>
+</ul>
+</li>
+<li>
+<p><strong>Preparation</strong>: cleaning, wrangling, and otherwise <em>tidying</em> the data so we can actually work with it.</p>
+<ul>
+<li>
+<strong>keywords</strong>: <code>mutate</code>, <code>fct_relevel</code>, <code>pivot_*</code>, <code>*_join</code>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Analysis</strong>: finally transform the data into <em>knowledge</em>…</p>
+<ul>
+<li>
+<strong>pictures</strong>: <code>ggplot</code>, <code>geom_*</code>, etc</li>
+<li>
+<strong>numerical summaries</strong>: <code>summarize</code>, <code>group_by</code>, <code>count</code>, <code>mean</code>, <code>median</code>, <code>sd</code>, <code>quantile</code>, <code>iqr</code>, <code>cor</code>, etc</li>
+</ul>
+</li>
+</ol>
+<p>. . .</p>
+<p>The pictures and the summaries need to work together!</p>
+</section><section id="a-cautionary-tale-anscombes-quartet" class="level2"><h2 class="anchored" data-anchor-id="a-cautionary-tale-anscombes-quartet">A cautionary tale: Anscombe’s quartet</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p>Dataset I</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>    x     y
+1  10  8.04
+2   8  6.95
+3  13  7.58
+4   9  8.81
+5  11  8.33
+6  14  9.96
+7   6  7.24
+8   4  4.26
+9  12 10.84
+10  7  4.82
+11  5  5.68</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:25%;">
+<p>Dataset II</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>    x    y
+1  10 9.14
+2   8 8.14
+3  13 8.74
+4   9 8.77
+5  11 9.26
+6  14 8.10
+7   6 6.13
+8   4 3.10
+9  12 9.13
+10  7 7.26
+11  5 4.74</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:25%;">
+<p>Dataset III</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>    x     y
+1  10  7.46
+2   8  6.77
+3  13 12.74
+4   9  7.11
+5  11  7.81
+6  14  8.84
+7   6  6.08
+8   4  5.39
+9  12  8.15
+10  7  6.42
+11  5  5.73</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:25%;">
+<p>Dataset IV</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>    x     y
+1   8  6.58
+2   8  5.76
+3   8  7.71
+4   8  8.84
+5   8  8.47
+6   8  7.04
+7   8  5.25
+8  19 12.50
+9   8  5.56
+10  8  7.91
+11  8  6.89</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section><section id="a-cautionary-tale-anscombes-quartet-1" class="level2"><h2 class="anchored" data-anchor-id="a-cautionary-tale-anscombes-quartet-1">A cautionary tale: Anscombe’s quartet</h2>
+<div class="cell">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">anscombe_tidy</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span> <span class="va">set</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="a-cautionary-tale-anscombes-quartet-2" class="level2"><h2 class="anchored" data-anchor-id="a-cautionary-tale-anscombes-quartet-2">A cautionary tale: Anscombe’s quartet</h2>
+<div class="cell">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">anscombe_tidy</span>, <span class="fu">aes</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span> <span class="va">set</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span>, se <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="if-you-only-looked-at-summary-statistics" class="level2"><h2 class="anchored" data-anchor-id="if-you-only-looked-at-summary-statistics">If you only looked at summary statistics…</h2>
+<div class="cell">
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">anscombe_tidy</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">set</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">summarize</span><span class="op">(</span></span>
+<span>    xbar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>,</span>
+<span>    ybar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>,</span>
+<span>    sx <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>,</span>
+<span>    sy <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>,</span>
+<span>    r <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 6
+  set    xbar  ybar    sx    sy     r
+  &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1 I         9  7.50  3.32  2.03 0.816
+2 II        9  7.50  3.32  2.03 0.816
+3 III       9  7.5   3.32  2.03 0.816
+4 IV        9  7.50  3.32  2.03 0.817</code></pre>
+</div>
+</div>
+</section><section id="our-motto-abv" class="level2 large"><h2 class="large anchored" data-anchor-id="our-motto-abv">Our motto: ABV!</h2>
+<p>. . .</p>
+<p>No, not alcohol by volume…</p>
+<div class="columns">
+<div class="column" style="width:20%;">
+<div class="incremental">
+<ul class="incremental">
+<li>
+<code>A</code>lways!</li>
+<li>
+<code>B</code>e!</li>
+<li>
+<code>V</code>isualizing!</li>
+</ul>
+</div>
+</div>
+<div class="column fragment" style="width:70%;">
+<div class="quarto-figure quarto-figure-right">
+<figure class="figure"><p><img src="images/09/ggr.jpg" class="img-fluid quarto-figure quarto-figure-right figure-img" style="width:80.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section><section id="study-guide" class="level1"><h1>Study guide</h1>
+<section id="can-you-match-these" class="level2"><h2 class="anchored" data-anchor-id="can-you-match-these">Can you match these…</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/simulated-data-scatterplots-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="with-these" class="level2"><h2 class="anchored" data-anchor-id="with-these">…with these?</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/simulated-data-histograms-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="matching-scatterplots-and-histograms" class="level2 small scrollable"><h2 class="small scrollable anchored" data-anchor-id="matching-scatterplots-and-histograms">Matching scatterplots and histograms</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p>Dataframe with two numerical variables:</p>
+<div class="cell">
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 100 × 2
+        x       y
+    &lt;dbl&gt;   &lt;dbl&gt;
+ 1 -0.554 -0.885 
+ 2  1.58   0.497 
+ 3  1.68  -0.135 
+ 4  1.69  -0.175 
+ 5 -0.652  0.331 
+ 6  1.59   0.0341
+ 7 -2.23  -0.174 
+ 8  0.571 -1.00  
+ 9  1.30  -1.09  
+10  1.62   0.722 
+# ℹ 90 more rows</code></pre>
+</div>
+</div>
+</div>
+<div class="column fragment" style="width:35%;">
+<p>Histograms for each:</p>
+<div class="cell">
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">df</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_histogram</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">df</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">y</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_histogram</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="column fragment" style="width:40%;">
+<p>Scatterplot for both:</p>
+<div class="cell">
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">df</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, y <span class="op">=</span> <span class="va">y</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="goes-with-e" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-e">2 goes with e</h2>
+<p>Everything is symmetric and concentrating in one place:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 10 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 10 rows containing non-finite outside the scale range
+(`stat_bin()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 4 rows containing missing values or values outside the scale range
+(`geom_bar()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="goes-with-f" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-f">7 goes with f</h2>
+<p><code>x</code> and <code>y</code> each concentrate in <em>two</em> places:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 67 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 68 rows containing non-finite outside the scale range
+(`stat_bin()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 4 rows containing missing values or values outside the scale range
+(`geom_bar()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="goes-with-d" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-d">3 goes with d</h2>
+<p><code>x</code> concentrates in two places, but <code>y</code> only concentrates in one:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 28 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 28 rows containing non-finite outside the scale range
+(`stat_bin()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 4 rows containing missing values or values outside the scale range
+(`geom_bar()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="goes-with-c" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-c">6 goes with c</h2>
+<p>Points are evenly spread everywhere:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 4 rows containing missing values or values outside the scale range
+(`geom_bar()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="goes-with-b" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-b">4 goes with b</h2>
+<p>Asymetry in <code>y</code> but not in <code>x</code>:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 60 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 60 rows containing non-finite outside the scale range
+(`stat_bin()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 4 rows containing missing values or values outside the scale range
+(`geom_bar()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="goes-with-a" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-a">5 goes with a</h2>
+<p>This one’s just weird. By process of elimination…</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 349 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 349 rows containing non-finite outside the scale range
+(`stat_bin()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 4 rows containing missing values or values outside the scale range
+(`geom_bar()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="can-you-match-these-1" class="level2"><h2 class="anchored" data-anchor-id="can-you-match-these-1">Can you match these…</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/simulated-data-densities-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="with-these-1" class="level2"><h2 class="anchored" data-anchor-id="with-these-1">…with these?</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/simulated-data-boxes-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="yes-you-can" class="level2"><h2 class="anchored" data-anchor-id="yes-you-can">Yes you can</h2>
+<p>If you know how the box is drawn:</p>
+<div class="incremental">
+<ul class="incremental">
+<li>The line inside the box is the median (50% quantile);</li>
+<li>The left edge is the 25% quantile;</li>
+<li>The right edge is the 75% quantile;</li>
+<li>The box spans the middle 50% of the data;</li>
+<li>The whiskers and dots span the entire range of the data;</li>
+</ul>
+</div>
+<p>. . .</p>
+<p>Boxplots display center, spread, and (a)symmetry, but <em>not</em> modality.</p>
+</section><section id="whence-the-box" class="level2 medium scrollable"><h2 class="medium scrollable anchored" data-anchor-id="whence-the-box">Whence the box?</h2>
+<p>The middle of the box is the <strong>median</strong>. 50% of the data are below, and 50% are above:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="whence-the-box-1" class="level2 medium scrollable"><h2 class="medium scrollable anchored" data-anchor-id="whence-the-box-1">Whence the box?</h2>
+<p>The lower edge of the box is the <strong>25% quantile</strong>. 25% of the data are below, and 75% are above:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="whence-the-box-2" class="level2 medium scrollable"><h2 class="medium scrollable anchored" data-anchor-id="whence-the-box-2">Whence the box?</h2>
+<p>The upper edge of the box is the <strong>75% quantile</strong>. 75% of the data are below, and 25% are above:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="goes-with-d-1" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-d-1">13 goes with d</h2>
+<p>The only one concentrating near 2:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-36-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="goes-with-c-1" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-c-1">12 goes with c</h2>
+<p>Concentrating around -2 and symmetric:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-37-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="goes-with-a-1" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-a-1">9 goes with a</h2>
+<p>Concentrating around -2 and asymmetric:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="goes-with-f-1" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-f-1">8 goes with f</h2>
+<p>Multimodality is a distraction. Pay attention to the whiskers.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-39-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="goes-with-b-1" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-b-1">10 goes with b</h2>
+<p>Also centered at 0, but more spread out than 8:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-40-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="goes-with-e-1" class="level2 small"><h2 class="small anchored" data-anchor-id="goes-with-e-1">11 goes with e</h2>
+<p>Also centered at 0, but how wide must you make the box to swallow the middle 50%? Pretty darn wide:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="12-wrap-up_files/figure-html/unnamed-chunk-41-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/sta199-s26\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Copyright 2026 Mine Çetinkaya-Rundel, Mary Knox, Marie Neubrander, John Zito</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/slides/12-wrap-up.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+</body></html>

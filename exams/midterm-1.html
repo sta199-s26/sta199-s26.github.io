@@ -1,0 +1,3207 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.34">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Midterm 1 Study Guide – STA 199 Spring 2026</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../project/5-writeup-presentation.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9f26b6341e16faa20df3ce7a36debf59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta property="og:title" content="Midterm 1 Study Guide – STA 199 Spring 2026">
+<meta property="og:description" content="Homepage for STA 199 Introduction to Data Science at Duke University, Spring 2026.">
+<meta property="og:image" content="https://sta199-s26.github.io/exams/midterm-1_files/figure-html/simulated-data-scatterplots-1.png">
+<meta property="og:site_name" content="STA 199 Spring 2026">
+<meta property="og:image:height" content="1013">
+<meta property="og:image:width" content="1536">
+</head>
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exams/midterm-1.html">Exam Study Guides</a></li><li class="breadcrumb-item"><a href="../exams/midterm-1.html">Midterm 1</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/sta199-s26" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
+    <a href="https://cmgr.oit.duke.edu/containers" title="RStudio containers" class="quarto-navigation-tool px-1" aria-label="RStudio containers"><i class="bi bi-code-square"></i></a>
+    <a href="https://duke.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=7301f69f-7a4a-459f-b8b4-b3ca00ee0a71" title="Class recordings" class="quarto-navigation-tool px-1" aria-label="Class recordings"><i class="bi bi-camera-reels-fill"></i></a>
+    <div class="dropdown">
+      <a href="" title="Support" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Support"><i class="bi bi-life-preserver"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+<li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://docs.google.com/spreadsheets/d/1bbCCaRtyUzPbB-SqcjseiwVLwFlgQbvCMaMWnvT3EG8/edit?usp=sharing">
+              <i class="bi bi-person-raised-hand pe-1"></i>
+            Office hours
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://edstem.org/us/courses/90224/discussion">
+              <i class="bi bi-people-fill pe-1"></i>
+            Ed Discussion
+            </a>
+          </li>
+      </ul>
+</div>
+    <div class="dropdown">
+      <a href="" title="Canvas" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Canvas"><i class="bi bi-file-check-fill"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
+<li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://canvas.duke.edu/courses/72135/announcements">
+              <i class="bi bi-megaphone-fill pe-1"></i>
+            Announcements
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.gradescope.com/courses/1211450">
+              <i class="bi bi-file-arrow-up-fill pe-1"></i>
+            Gradescope
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://canvas.duke.edu/courses/72135/gradebook">
+              <i class="bi bi-alphabet-uppercase pe-1"></i>
+            Gradebook
+            </a>
+          </li>
+      </ul>
+</div>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Syllabus</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus-team.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teaching team</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus-materials.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Materials</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus-assignments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignments and grading</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus-policies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Policies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus-resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">University resources</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus/syllabus-faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FAQ</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Computing</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../computing/coding-access.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Access</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../computing/coding-cheatsheets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cheatsheets</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Lab</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab-0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 0</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 6</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Homework</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homework 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homework 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homework 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw-4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homework 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw-5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homework 5</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Project</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/description.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Description</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/1-working-collaboratively.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/2-proposal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/3-improvement-progress.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/4-peer-review.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/5-writeup-presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Milestone 5</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+ <span class="menu-text">Exam Study Guides</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exams/midterm-1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Midterm 1</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li>
+<a href="#concepts-and-main-ideas" id="toc-concepts-and-main-ideas" class="nav-link active" data-scroll-target="#concepts-and-main-ideas">Concepts and main ideas</a>
+  <ul class="collapse">
+<li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#visual-understanding" id="toc-visual-understanding" class="nav-link" data-scroll-target="#visual-understanding">Visual understanding</a>
+  <ul class="collapse">
+<li><a href="#questions-2---7-match-scatterplots-and-histograms" id="toc-questions-2---7-match-scatterplots-and-histograms" class="nav-link" data-scroll-target="#questions-2---7-match-scatterplots-and-histograms">Questions 2 - 7: match scatterplots and histograms</a></li>
+  <li><a href="#questions-8---13-match-densities-and-boxplots" id="toc-questions-8---13-match-densities-and-boxplots" class="nav-link" data-scroll-target="#questions-8---13-match-densities-and-boxplots">Questions 8 - 13: match densities and boxplots</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#code-doctor" id="toc-code-doctor" class="nav-link" data-scroll-target="#code-doctor">Code doctor</a>
+  <ul class="collapse">
+<li><a href="#question-14" id="toc-question-14" class="nav-link" data-scroll-target="#question-14">Question 14</a></li>
+  <li><a href="#question-15" id="toc-question-15" class="nav-link" data-scroll-target="#question-15">Question 15</a></li>
+  <li><a href="#question-16" id="toc-question-16" class="nav-link" data-scroll-target="#question-16">Question 16</a></li>
+  <li><a href="#question-17" id="toc-question-17" class="nav-link" data-scroll-target="#question-17">Question 17</a></li>
+  <li><a href="#question-18" id="toc-question-18" class="nav-link" data-scroll-target="#question-18">Question 18</a></li>
+  <li><a href="#question-19" id="toc-question-19" class="nav-link" data-scroll-target="#question-19">Question 19</a></li>
+  <li><a href="#question-20" id="toc-question-20" class="nav-link" data-scroll-target="#question-20">Question 20</a></li>
+  <li><a href="#question-21" id="toc-question-21" class="nav-link" data-scroll-target="#question-21">Question 21</a></li>
+  <li><a href="#question-22" id="toc-question-22" class="nav-link" data-scroll-target="#question-22">Question 22</a></li>
+  <li><a href="#question-23" id="toc-question-23" class="nav-link" data-scroll-target="#question-23">Question 23</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis">Data analysis</a>
+  <ul class="collapse">
+<li>
+<a href="#blizzard-salaries" id="toc-blizzard-salaries" class="nav-link" data-scroll-target="#blizzard-salaries">Blizzard salaries</a>
+  <ul class="collapse">
+<li><a href="#question-24" id="toc-question-24" class="nav-link" data-scroll-target="#question-24">Question 24</a></li>
+  <li><a href="#question-25" id="toc-question-25" class="nav-link" data-scroll-target="#question-25">Question 25</a></li>
+  <li><a href="#question-26" id="toc-question-26" class="nav-link" data-scroll-target="#question-26">Question 26</a></li>
+  <li><a href="#question-27" id="toc-question-27" class="nav-link" data-scroll-target="#question-27">Question 27</a></li>
+  <li><a href="#question-28" id="toc-question-28" class="nav-link" data-scroll-target="#question-28">Question 28</a></li>
+  <li><a href="#questions-29-and-30" id="toc-questions-29-and-30" class="nav-link" data-scroll-target="#questions-29-and-30">Questions 29 and 30</a></li>
+  <li><a href="#questions-31---33" id="toc-questions-31---33" class="nav-link" data-scroll-target="#questions-31---33">Questions 31 - 33</a></li>
+  <li><a href="#questions-34-and-35" id="toc-questions-34-and-35" class="nav-link" data-scroll-target="#questions-34-and-35">Questions 34 and 35</a></li>
+  <li><a href="#question-36" id="toc-question-36" class="nav-link" data-scroll-target="#question-36">Question 36</a></li>
+  <li><a href="#question-37" id="toc-question-37" class="nav-link" data-scroll-target="#question-37">Question 37</a></li>
+  <li><a href="#question-38" id="toc-question-38" class="nav-link" data-scroll-target="#question-38">Question 38</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#penguins" id="toc-penguins" class="nav-link" data-scroll-target="#penguins">Penguins</a>
+  <ul class="collapse">
+<li><a href="#question-39" id="toc-question-39" class="nav-link" data-scroll-target="#question-39">Question 39</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#nyc-flights" id="toc-nyc-flights" class="nav-link" data-scroll-target="#nyc-flights">NYC Flights</a>
+  <ul class="collapse">
+<li><a href="#question-40" id="toc-question-40" class="nav-link" data-scroll-target="#question-40">Question 40</a></li>
+  <li><a href="#question-41" id="toc-question-41" class="nav-link" data-scroll-target="#question-41">Question 41</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#countries-and-populations" id="toc-countries-and-populations" class="nav-link" data-scroll-target="#countries-and-populations">Countries and populations</a>
+  <ul class="collapse">
+<li><a href="#question-42" id="toc-question-42" class="nav-link" data-scroll-target="#question-42">Question 42</a></li>
+  <li><a href="#question-43" id="toc-question-43" class="nav-link" data-scroll-target="#question-43">Question 43</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#duke-forest-houses" id="toc-duke-forest-houses" class="nav-link" data-scroll-target="#duke-forest-houses">Duke Forest houses</a>
+  <ul class="collapse">
+<li><a href="#question-44" id="toc-question-44" class="nav-link" data-scroll-target="#question-44">Question 44</a></li>
+  <li><a href="#question-45" id="toc-question-45" class="nav-link" data-scroll-target="#question-45">Question 45</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#law-order" id="toc-law-order" class="nav-link" data-scroll-target="#law-order">Law &amp; Order</a>
+  <ul class="collapse">
+<li><a href="#question-46" id="toc-question-46" class="nav-link" data-scroll-target="#question-46">Question 46</a></li>
+  <li><a href="#question-47" id="toc-question-47" class="nav-link" data-scroll-target="#question-47">Question 47</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#romance-and-comedy" id="toc-romance-and-comedy" class="nav-link" data-scroll-target="#romance-and-comedy">Romance and comedy</a>
+  <ul class="collapse">
+<li><a href="#question-48" id="toc-question-48" class="nav-link" data-scroll-target="#question-48">Question 48</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#imdb" id="toc-imdb" class="nav-link" data-scroll-target="#imdb">IMDB</a>
+  <ul class="collapse">
+<li><a href="#question-49" id="toc-question-49" class="nav-link" data-scroll-target="#question-49">Question 49</a></li>
+  <li><a href="#question-50" id="toc-question-50" class="nav-link" data-scroll-target="#question-50">Question 50</a></li>
+  <li><a href="#question-51" id="toc-question-51" class="nav-link" data-scroll-target="#question-51">Question 51</a></li>
+  <li><a href="#question-52" id="toc-question-52" class="nav-link" data-scroll-target="#question-52">Question 52</a></li>
+  </ul>
+</li>
+  </ul>
+</li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/exams/midterm-1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exams/midterm-1.html">Exam Study Guides</a></li><li class="breadcrumb-item"><a href="../exams/midterm-1.html">Midterm 1</a></li></ol></nav><div class="quarto-title">
+<h1 class="title">Midterm 1 Study Guide</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Answer are <a href="https://sta199-s26.github.io/exams/midterm-1-answers.html">here</a>.</p>
+</div>
+</div>
+<p>Midterm Exam 1 consists of two parts:</p>
+<ul>
+<li>In-class portion
+<ul>
+<li>Wednesday February 25 at 11:45 AM - 1:00 PM in Griffith Theater;</li>
+<li>Worth 80% of your Midterm 1 grade;</li>
+<li>All multiple choice;</li>
+<li>Your only resource is both sides of one 8.5” x 11” note sheet that you and only you created (written, typed, iPad, etc);</li>
+</ul>
+</li>
+<li>Take-home portion
+<ul>
+<li>Released Thursday February 26 at 6:00 PM;</li>
+<li>Due Sunday March 1 at 11:59 PM;</li>
+<li>Worth 20% of your Midterm 1 grade;</li>
+<li>Similar to a homework assignment, but shorter;</li>
+<li>Completely open resource (open note, open internet, open ChatGPT, open everything), but citation policies apply, and collaboration between students is forbidden.</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://edstem.org/us/courses/90224/discussion/7626328">Here</a> is our advice about how you should prioritize your studying. Below are 52 practice questions to get your wheels spinning.</p>
+<section id="concepts-and-main-ideas" class="level1"><h1>Concepts and main ideas</h1>
+<section id="question-1" class="level3"><h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
+<p>Can you answer each of these in one or two sentences?</p>
+<ol type="i">
+<li>What does it mean for a dataset to be <em>tidy</em>?</li>
+<li>What does it mean for a data analysis to be <em>reproducible</em>?</li>
+<li>What is the difference between a <em>list</em> and a <em>vector</em> in <code>R</code>?</li>
+<li>How does one pronounce “STA 199”?</li>
+<li>What does the pipe operator <code>|&gt;</code> do?</li>
+<li>Inside <code>ggplot</code> or <code>geom_xxx</code>, what does the aesthetic mapping <code>aes</code> do?</li>
+<li>What is the difference between <code>if_else</code> and <code>case_when</code>?</li>
+<li>What is the difference between <code>filter</code> and <code>select</code>?</li>
+<li>What does <code>group_by</code> do?</li>
+<li>If I have a column of numbers, what is the definition of the 38% quantile?
+<ul>
+<li>Could you sketch a cartoon of what this looks like?</li>
+<li>Is the 38% quantile smaller than, bigger than, or equal to the median, or do you not have enough information to say?</li>
+</ul>
+</li>
+</ol></section></section><section id="visual-understanding" class="level1"><h1>Visual understanding</h1>
+<section id="questions-2---7-match-scatterplots-and-histograms" class="level3"><h3 class="anchored" data-anchor-id="questions-2---7-match-scatterplots-and-histograms">Questions 2 - 7: match scatterplots and histograms</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="midterm-1_files/figure-html/simulated-data-scatterplots-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Match each scatterplot to the pair of histograms that displays the distributions of <code>x</code> and <code>y</code>. There is exactly one unique match for each.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="midterm-1_files/figure-html/simulated-data-histograms-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="questions-8---13-match-densities-and-boxplots" class="level3"><h3 class="anchored" data-anchor-id="questions-8---13-match-densities-and-boxplots">Questions 8 - 13: match densities and boxplots</h3>
+<p>Match the density plot to the boxplot that visualizes the distribution of the same data. There is exactly one unique match for each.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="midterm-1_files/figure-html/simulated-data-densities-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="midterm-1_files/figure-html/simulated-data-boxes-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section><section id="code-doctor" class="level1"><h1>Code doctor</h1>
+<p>Below are ten examples of code that returns an error or a warning or otherwise behaves in a strange and unexpected way. In each case, identify the mistake and explain how it should be fixed.</p>
+<section id="question-14" class="level3"><h3 class="anchored" data-anchor-id="question-14">Question 14</h3>
+<p>Recall <code>mtcars</code>:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 32
+Columns: 11
+$ mpg  &lt;dbl&gt; 21.0, 21.0, 22.8, 21.4, 18.7, 18.1, 14.3, 24.4, 22.8, 19.2, 17.8,…
+$ cyl  &lt;dbl&gt; 6, 6, 4, 6, 8, 6, 8, 4, 4, 6, 6, 8, 8, 8, 8, 8, 8, 4, 4, 4, 4, 8,…
+$ disp &lt;dbl&gt; 160.0, 160.0, 108.0, 258.0, 360.0, 225.0, 360.0, 146.7, 140.8, 16…
+$ hp   &lt;dbl&gt; 110, 110, 93, 110, 175, 105, 245, 62, 95, 123, 123, 180, 180, 180…
+$ drat &lt;dbl&gt; 3.90, 3.90, 3.85, 3.08, 3.15, 2.76, 3.21, 3.69, 3.92, 3.92, 3.92,…
+$ wt   &lt;dbl&gt; 2.620, 2.875, 2.320, 3.215, 3.440, 3.460, 3.570, 3.190, 3.150, 3.…
+$ qsec &lt;dbl&gt; 16.46, 17.02, 18.61, 19.44, 17.02, 20.22, 15.84, 20.00, 22.90, 18…
+$ vs   &lt;dbl&gt; 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0,…
+$ am   &lt;dbl&gt; 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0,…
+$ gear &lt;dbl&gt; 4, 4, 4, 3, 3, 3, 3, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 4, 4, 4, 3, 3,…
+$ carb &lt;dbl&gt; 4, 4, 1, 1, 2, 1, 4, 2, 2, 4, 4, 3, 3, 3, 4, 4, 4, 1, 2, 1, 1, 2,…</code></pre>
+</div>
+</div>
+<p>You try to produce a plot and you get this error. Why?</p>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">mtcars</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">wt</span>, y <span class="op">=</span> <span class="va">mpg</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"Weight"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Miles per gallon"</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code>Error in `+.gg`:
+! Cannot add &lt;ggproto&gt; objects together.
+ℹ Did you forget to add this object to a &lt;ggplot&gt; object?
+Run `rlang::last_trace()` to see where the error occurred.</code></pre>
+</section><section id="question-15" class="level3"><h3 class="anchored" data-anchor-id="question-15">Question 15</h3>
+<p>You try again and you get this error. Why?</p>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">mtcars</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">wt</span>, y <span class="op">=</span> <span class="va">mpg</span>, shape <span class="op">=</span> <span class="va">vs</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"Weight"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Miles per gallon"</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `geom_point()`:
+! Problem while computing aesthetics.
+ℹ Error occurred in the 1st layer.
+Caused by error in `scale_f()`:
+! A continuous variable cannot be mapped to the shape aesthetic.
+ℹ Choose a different aesthetic or use `scale_shape_binned()`.</code></pre>
+</div>
+</div>
+</section><section id="question-16" class="level3"><h3 class="anchored" data-anchor-id="question-16">Question 16</h3>
+<p>You want to color the points on your plot by whether or not the car’s weight is above average. Why didn’t this do the trick?</p>
+<div class="cell">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">mtcars</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">mutate</span><span class="op">(</span></span>
+<span>    heavy <span class="op">=</span> <span class="fu">if_else</span><span class="op">(</span><span class="va">wt</span> <span class="op">&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">wt</span><span class="op">)</span>,</span>
+<span>                    <span class="st">"heavy"</span>,</span>
+<span>                    <span class="st">"light"</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span></span>
+<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">mtcars</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">wt</span>, y <span class="op">=</span> <span class="va">mpg</span>, color <span class="op">=</span> <span class="va">heavy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"Weight"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Miles per gallon"</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `geom_point()`:
+! Problem while computing aesthetics.
+ℹ Error occurred in the 1st layer.
+Caused by error:
+! object 'heavy' not found</code></pre>
+</div>
+</div>
+</section><section id="question-17" class="level3"><h3 class="anchored" data-anchor-id="question-17">Question 17</h3>
+<p>Recall the penguins dataset:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 344
+Columns: 8
+$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…
+$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…
+$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …
+$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …
+$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…
+$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …
+$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…
+$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…</code></pre>
+</div>
+</div>
+<p>When creating a scatter plot and giving each species a custom color, why did I get an error?</p>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">penguins</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">flipper_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">scale_color_manual</span><span class="op">(</span></span>
+<span>    values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>      <span class="st">"Adelie"</span> <span class="op">=</span> <span class="st">"purple"</span>,</span>
+<span>      <span class="st">"Gentoo"</span> <span class="op">=</span> <span class="st">"tan"</span>,</span>
+<span>      <span class="st">"Chinstrap"</span> <span class="op">=</span> <span class="st">"orange"</span>,</span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in c(Adelie = "purple", Gentoo = "tan", Chinstrap = "orange", ): argument 4 is empty</code></pre>
+</div>
+</div>
+</section><section id="question-18" class="level3"><h3 class="anchored" data-anchor-id="question-18">Question 18</h3>
+<p>When creating a scatter plot and giving each species a color and point shape, why did I get two legends?</p>
+<div class="cell">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">penguins</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">flipper_length_mm</span>, y <span class="op">=</span> <span class="va">body_mass_g</span>, shape <span class="op">=</span> <span class="va">species</span>, color <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    title <span class="op">=</span> <span class="st">"God I hate the penguins"</span>,</span>
+<span>    x <span class="op">=</span> <span class="st">"Stupid flipper length"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Bloody body mass"</span>,</span>
+<span>    color <span class="op">=</span> <span class="st">"Species"</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="midterm-1_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="question-19" class="level3"><h3 class="anchored" data-anchor-id="question-19">Question 19</h3>
+<p>Consider this dataset where people were surveyed on their views about marijuana legalization:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  age   opinion                n_people
+  &lt;chr&gt; &lt;chr&gt;                     &lt;dbl&gt;
+1 18-49 Remain Against The Law       59
+2 18-49 Be Made Legal               292
+3 18-49 Not Sure                     40
+4 50+   Remain Against The Law       67
+5 50+   Be Made Legal               245
+6 50+   Not Sure                     68</code></pre>
+</div>
+</div>
+<p>Why does this give an error?</p>
+<div class="cell">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey_counts</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">age</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">summarise</span><span class="op">(</span></span>
+<span>    age_sum <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n_people</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">mutate</span><span class="op">(</span></span>
+<span>    prop <span class="op">=</span> <span class="va">n_people</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n_people</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `mutate()`:
+ℹ In argument: `prop = n_people/sum(n_people)`.
+Caused by error:
+! object 'n_people' not found</code></pre>
+</div>
+</div>
+</section><section id="question-20" class="level3"><h3 class="anchored" data-anchor-id="question-20">Question 20</h3>
+<p>What went wrong here?</p>
+<div class="cell">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey_counts</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">pivot_wider</span><span class="op">(</span> </span>
+<span>    names_from <span class="op">=</span> <span class="va">opinion</span>,</span>
+<span>    values_from <span class="op">=</span> <span class="va">n_people</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">summarize</span><span class="op">(</span></span>
+<span>    total_remain <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="st">"Remain Against The Law"</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `summarize()`:
+ℹ In argument: `total_remain = sum("Remain Against The Law")`.
+Caused by error in `sum()`:
+! invalid 'type' (character) of argument</code></pre>
+</div>
+</div>
+</section><section id="question-21" class="level3"><h3 class="anchored" data-anchor-id="question-21">Question 21</h3>
+<p>Earlier this year I surveyed you people about how many classes you have on Tuesdays, and you silly geese responded like this:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  tuesday     n
+  &lt;chr&gt;   &lt;int&gt;
+1 1          10
+2 2          53
+3 Two         3</code></pre>
+</div>
+</div>
+<p>Why did this throw an error?</p>
+<div class="cell">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">survey</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">mutate</span><span class="op">(</span></span>
+<span>    tuesday <span class="op">=</span> <span class="fu">if_else</span><span class="op">(</span><span class="va">tuesday</span> <span class="op">==</span> <span class="st">"Two"</span>, <span class="fl">2</span>, <span class="va">tuesday</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `mutate()`:
+ℹ In argument: `tuesday = if_else(tuesday == "Two", 2, tuesday)`.
+Caused by error in `if_else()`:
+! Can't combine `true` &lt;double&gt; and `false` &lt;character&gt;.</code></pre>
+</div>
+</div>
+</section><section id="question-22" class="level3"><h3 class="anchored" data-anchor-id="question-22">Question 22</h3>
+<p>In lecture we saw this data on UN votes:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 869,937
+Columns: 4
+$ rcid         &lt;dbl&gt; 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, …
+$ country      &lt;chr&gt; "United States", "Canada", "Cuba", "Haiti", "Dominican Re…
+$ country_code &lt;chr&gt; "US", "CA", "CU", "HT", "DO", "MX", "GT", "HN", "SV", "NI…
+$ vote         &lt;fct&gt; yes, no, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes…</code></pre>
+</div>
+</div>
+<p>This code does a bunch of cleaning and transformation, and then tries to create <a href="https://sta199-s26.github.io/slides/02-grammar-of-data-visualization-slides.html#/what-does-this-picture-communicate">this plot</a> from class:</p>
+<div class="cell">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">un_votes</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">inner_join</span><span class="op">(</span><span class="va">un_roll_calls</span>, by <span class="op">=</span> <span class="st">"rcid"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">inner_join</span><span class="op">(</span><span class="va">un_roll_call_issues</span>, by <span class="op">=</span> <span class="st">"rcid"</span>, relationship <span class="op">=</span> <span class="st">"many-to-many"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">country</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"United Kingdom"</span>, <span class="st">"United States"</span>, <span class="st">"Turkey"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">mutate</span><span class="op">(</span>year <span class="op">=</span> <span class="fu">year</span><span class="op">(</span><span class="va">date</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">country</span>, <span class="va">year</span>, <span class="va">issue</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">summarize</span><span class="op">(</span>percent_yes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">vote</span> <span class="op">==</span> <span class="st">"yes"</span><span class="op">)</span>, .groups <span class="op">=</span> <span class="st">"drop"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="va">un_votes</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, y <span class="op">=</span> <span class="va">percent_yes</span>, color <span class="op">=</span> <span class="va">country</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_smooth</span><span class="op">(</span>se <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span><span class="va">issue</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">scale_color_colorblind</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"Year"</span>, </span>
+<span>    y <span class="op">=</span> <span class="st">"% yes"</span>, </span>
+<span>    color <span class="op">=</span> <span class="st">"Country"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">theme_minimal</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `ggplot()`:
+! `mapping` must be created by `aes()`.
+✖ You've supplied a tibble.</code></pre>
+</div>
+</div>
+<p>Why did it fail?</p>
+</section><section id="question-23" class="level3"><h3 class="anchored" data-anchor-id="question-23">Question 23</h3>
+<p>You decide you want to save all the transformations you performed for later and then take a peek at just the data for Turkey:</p>
+<div class="cell">
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">us_uk_tr_votes</span> <span class="op">&lt;-</span> <span class="va">un_votes</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">inner_join</span><span class="op">(</span><span class="va">un_roll_calls</span>, by <span class="op">=</span> <span class="st">"rcid"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">inner_join</span><span class="op">(</span><span class="va">un_roll_call_issues</span>, by <span class="op">=</span> <span class="st">"rcid"</span>, relationship <span class="op">=</span> <span class="st">"many-to-many"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">country</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"United Kingdom"</span>, <span class="st">"United States"</span>, <span class="st">"Turkey"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">mutate</span><span class="op">(</span>year <span class="op">=</span> <span class="fu">year</span><span class="op">(</span><span class="va">date</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">country</span>, <span class="va">year</span>, <span class="va">issue</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">summarize</span><span class="op">(</span>percent_yes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">vote</span> <span class="op">==</span> <span class="st">"yes"</span><span class="op">)</span>, .groups <span class="op">=</span> <span class="st">"drop"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, y <span class="op">=</span> <span class="va">percent_yes</span>, color <span class="op">=</span> <span class="va">country</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_smooth</span><span class="op">(</span>se <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span><span class="va">issue</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">scale_color_colorblind</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"Year"</span>, </span>
+<span>    y <span class="op">=</span> <span class="st">"% yes"</span>, </span>
+<span>    color <span class="op">=</span> <span class="st">"Country"</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">theme_minimal</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">us_uk_tr_votes</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">country</span> <span class="op">==</span> <span class="st">"Turkey"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">glimpse</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in UseMethod("filter"): no applicable method for 'filter' applied to an object of class "c('ggplot2::ggplot', 'ggplot', 'ggplot2::gg', 'S7_object', 'gg')"</code></pre>
+</div>
+</div>
+<p>Wut?</p>
+</section></section><section id="data-analysis" class="level1"><h1>Data analysis</h1>
+<section id="blizzard-salaries" class="level2"><h2 class="anchored" data-anchor-id="blizzard-salaries">Blizzard salaries</h2>
+<p>In 2020, employees of Blizzard Entertainment circulated a spreadsheet to anonymously share salaries and recent pay increases amidst rising tension in the video game industry over wage disparities and executive compensation. (Source: <a href="https://www.bloomberg.com/news/articles/2020-08-03/blizzard-workers-share-salaries-in-revolt-over-wage-disparities">Blizzard Workers Share Salaries in Revolt Over Pay</a>)</p>
+<p>The name of the data frame used for this analysis is <code>blizzard_salary</code> and the variables are:</p>
+<ul>
+<li><p><code>percent_incr</code>: Raise given in July 2020, as percent increase with values ranging from 1 (1% increase) to 21.5 (21.5% increase)</p></li>
+<li><p><code>salary_type</code>: Type of salary, with levels <code>Hourly</code> and <code>Salaried</code></p></li>
+<li><p><code>annual_salary</code>: Annual salary, in USD, with values ranging from $50,939 to $216,856.</p></li>
+<li><p><code>performance_rating</code>: Most recent review performance rating, with levels <code>Poor</code>, <code>Successful</code>, <code>High</code>, and <code>Top</code>. The <code>Poor</code> level is the lowest rating and the <code>Top</code> level is the highest rating.</p></li>
+</ul>
+<p>The first ten rows of <code>blizzard_salary</code> are shown below:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 409 × 4
+   percent_incr salary_type annual_salary performance_rating
+          &lt;dbl&gt; &lt;chr&gt;               &lt;dbl&gt; &lt;chr&gt;             
+ 1          1   Salaried               1  High              
+ 2          1   Salaried               1  Successful        
+ 3          1   Salaried               1  High              
+ 4          1   Hourly             33987. Successful        
+ 5         NA   Hourly             34798. High              
+ 6         NA   Hourly             35360  &lt;NA&gt;              
+ 7         NA   Hourly             37440  &lt;NA&gt;              
+ 8          0   Hourly             37814. &lt;NA&gt;              
+ 9          4   Hourly             41101. Top               
+10          1.2 Hourly             42328  &lt;NA&gt;              
+# ℹ 399 more rows</code></pre>
+</div>
+</div>
+<section id="question-24" class="level3"><h3 class="anchored" data-anchor-id="question-24">Question 24</h3>
+<p>Which of the following is <u><strong>correct</strong></u>? Choose all that apply.</p>
+<ol type="a">
+<li><p>The <code>blizzard_salary</code> dataset has 399 rows.</p></li>
+<li><p>The <code>blizzard_salary</code> dataset has 4 columns.</p></li>
+<li><p>Each row represents a Blizzard Entertainment worker who filled out the spreadsheet.</p></li>
+<li><p>The <code>percent_incr</code> variable is numerical and discrete.</p></li>
+<li><p>The <code>salary_type</code> variable is numerical.</p></li>
+<li><p>The <code>annual_salary</code> variable is numerical.</p></li>
+<li><p>The <code>performance_rating</code> variable is categorical and ordinal.</p></li>
+</ol></section><section id="question-25" class="level3"><h3 class="anchored" data-anchor-id="question-25">Question 25</h3>
+<p><a href="#fig-blizzard-hist-1" class="quarto-xref">Figure&nbsp;1 (a)</a> and <a href="#fig-blizzard-hist-2" class="quarto-xref">Figure&nbsp;1 (b)</a> show the distributions of annual salaries of hourly and salaried workers. The two figures show the same data, with the facets organized across rows and across columns. Which of the two figures is better for comparing the median annual salaries of hourly and salaried workers. Explain your reasoning.</p>
+<div id="fig-blizzard-hist" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-blizzard-hist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-blizzard-hist-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-blizzard-hist-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="midterm-1_files/figure-html/fig-blizzard-hist-1-1.png" class="img-fluid figure-img" data-ref-parent="fig-blizzard-hist" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-blizzard-hist-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Option 1
+</figcaption></figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-blizzard-hist-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-blizzard-hist-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="midterm-1_files/figure-html/fig-blizzard-hist-2-1.png" class="img-fluid figure-img" data-ref-parent="fig-blizzard-hist" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-blizzard-hist-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Option 2
+</figcaption></figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-blizzard-hist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Distribution of annual salaries of Blizzard employees
+</figcaption></figure>
+</div>
+</section><section id="question-26" class="level3"><h3 class="anchored" data-anchor-id="question-26">Question 26</h3>
+<p>Suppose your teammate wrote the following code as part of their analysis of the data.</p>
+<div class="cell">
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">blizzard_salary</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">salary_type</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">summarize</span><span class="op">(</span></span>
+<span>    mean_annual_salary <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">annual_salary</span><span class="op">)</span>,</span>
+<span>    median_annual_salary <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">annual_salary</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>They then printed out the results shown below. Unfortunately one of the numbers got erased from the printout. It’s indicated with <code>_____</code> below.</p>
+<pre><code># A tibble: 2 × 3
+  salary_type mean_annual_salary median_annual_salary
+  &lt;chr&gt;                    &lt;dbl&gt;                &lt;dbl&gt;
+1 Hourly                  63003.               54246.
+2 Salaried                90183.               _____</code></pre>
+<p>Which of the following is the best estimate for that erased value?</p>
+<ol type="a">
+<li><p>30,000</p></li>
+<li><p>50,000</p></li>
+<li><p>80,000</p></li>
+<li><p>100,000</p></li>
+</ol></section><section id="question-27" class="level3"><h3 class="anchored" data-anchor-id="question-27">Question 27</h3>
+<p>Which distribution of annual salaries has a higher standard deviation?</p>
+<ol type="a">
+<li><p>Hourly workers</p></li>
+<li><p>Salaried workers</p></li>
+<li><p>Roughly the same</p></li>
+</ol></section><section id="question-28" class="level3"><h3 class="anchored" data-anchor-id="question-28">Question 28</h3>
+<p>Which of the following alternate plots would also be useful for visualizing the distributions of annual salaries of hourly and salaried workers? Choose all that apply.</p>
+<p>a. Box plots</p>
+<p>b. Density plots</p>
+<p>c. Pie charts</p>
+<p>d. Waffle charts</p>
+<p>e. Histograms</p>
+<p>f. Scatterplots</p>
+<div style="page-break-after: always;"></div>
+</section><section id="questions-29-and-30" class="level3"><h3 class="anchored" data-anchor-id="questions-29-and-30">Questions 29 and 30</h3>
+<p>Suppose you made the bar plot shown in <a href="#fig-performance-rating-1" class="quarto-xref">Figure&nbsp;2 (a)</a> to visualize the distribution of <code>performance_rating</code> and your teammate made the bar plot shown in <a href="#fig-performance-rating-2" class="quarto-xref">Figure&nbsp;2 (b)</a>.</p>
+<div id="fig-performance-rating" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-performance-rating-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-performance-rating" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-performance-rating-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-performance-rating-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="midterm-1_files/figure-html/fig-performance-rating-1.png" class="img-fluid figure-img" data-ref-parent="fig-performance-rating" width="480">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-performance-rating-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Option 1
+</figcaption></figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-performance-rating" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-performance-rating-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-performance-rating-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="midterm-1_files/figure-html/fig-performance-rating-2.png" class="img-fluid figure-img" data-ref-parent="fig-performance-rating" width="480">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-performance-rating-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Option 2
+</figcaption></figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-performance-rating-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Distribution of performance rating
+</figcaption></figure>
+</div>
+<p>You made your bar plot without transforming the data in any way, while your friend did first transform the data with code like the following:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>blizzard_salary <span class="ot">&lt;-</span> blizzard_salary <span class="sc">|&gt;</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">_</span>(<span class="dv">1</span>)<span class="fu">_</span>(<span class="at">performance_rating =</span> <span class="fu">fct_relevel</span>(performance_rating, <span class="fu">_</span>(<span class="dv">2</span>)_))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Question 29:</strong> What goes in the blank (1)?</p>
+<ol type="a">
+<li><p><code>arrange()</code></p></li>
+<li><p><code><a href="https://rdrr.io/r/stats/filter.html">filter()</a></code></p></li>
+<li><p><code>mutate()</code></p></li>
+<li><p><code>summarize()</code></p></li>
+</ol>
+<p><strong>Question 30:</strong> What goes in the blank (2)?</p>
+<ol type="a">
+<li><p><code>"Poor", "Successful", "High", "Top"</code></p></li>
+<li><p><code>"Successful", "High", "Top"</code></p></li>
+<li><p><code>"Top", "High", "Successful", "Poor"</code></p></li>
+<li><p><code>Poor, Successful, High, Top</code></p></li>
+</ol>
+<div style="page-break-after: always;"></div>
+</section><section id="questions-31---33" class="level3"><h3 class="anchored" data-anchor-id="questions-31---33">Questions 31 - 33</h3>
+<p>Finally, another teammate creates the following two plots.</p>
+<div id="fig-salary-performance-rating" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-salary-performance-rating-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-salary-performance-rating" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-salary-performance-rating-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-salary-performance-rating-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="midterm-1_files/figure-html/fig-salary-performance-rating-1.png" class="img-fluid figure-img" data-ref-parent="fig-salary-performance-rating" width="480">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-salary-performance-rating-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Option 1
+</figcaption></figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-salary-performance-rating" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-salary-performance-rating-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-salary-performance-rating-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="midterm-1_files/figure-html/fig-salary-performance-rating-2.png" class="img-fluid figure-img" data-ref-parent="fig-salary-performance-rating" width="480">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-salary-performance-rating-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Option 2
+</figcaption></figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-salary-performance-rating-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Distribution of salary type by performance rating
+</figcaption></figure>
+</div>
+<p><strong>Question 31:</strong> Your teammate asks you for help deciding which one to use in the final report for visualizing the relationship between performance rating and salary type. In 1-3 sentences, can you help them make a decision, justify your choice, and write the narrative that should go with the plot?</p>
+<p><strong>Question 32:</strong> A friend with a keen eye points out that the number of observations in <a href="#fig-salary-performance-rating-1" class="quarto-xref">Figure&nbsp;3 (a)</a> seems lower than the total number of observations in <code>blizzard_salary</code>. What might be going on here? Explain your reasoning.</p>
+<p><strong>Question 33:</strong> Below are the proportions of performance ratings for hourly and salaried workers. Place these values in the corresponding segments in <a href="#fig-salary-performance-rating-2" class="quarto-xref">Figure&nbsp;3 (b)</a>.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 3
+  performance_rating Hourly Salaried
+  &lt;chr&gt;               &lt;dbl&gt;    &lt;dbl&gt;
+1 High                0.2     0.384 
+2 Successful          0.686   0.521 
+3 Top                 0.114   0.0760
+4 Poor                0       0.0190</code></pre>
+</div>
+</div>
+</section><section id="questions-34-and-35" class="level3"><h3 class="anchored" data-anchor-id="questions-34-and-35">Questions 34 and 35</h3>
+<p>The table below shows the distribution of <code>salary_type</code> and <code>performance_rating</code>.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 6
+  salary_type  Poor Successful  High   Top  `NA`
+  &lt;chr&gt;       &lt;int&gt;      &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;
+1 Hourly         NA         24     7     4    28
+2 Salaried        5        137   101    20    83</code></pre>
+</div>
+</div>
+<p>The pipeline below produces a data frame with a fewer number of rows than <code>blizzard_salary</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>blizzard_salary <span class="sc">|&gt;</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(salary_type <span class="fu">_</span>(<span class="dv">1</span>)_ <span class="st">"Hourly"</span> <span class="fu">_</span>(<span class="dv">2</span>)_ performance_rating <span class="sc">==</span> <span class="st">"Poor"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">_</span>(<span class="dv">3</span>)<span class="fu">_</span>(annual_salary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 4
+  percent_incr salary_type annual_salary performance_rating
+         &lt;dbl&gt; &lt;chr&gt;               &lt;dbl&gt; &lt;chr&gt;             
+1            0 Salaried            80000 Poor              
+2            3 Salaried            83000 Poor              
+3            0 Salaried           116000 Poor              
+4            0 Salaried           135219 Poor              
+5            0 Salaried           147500 Poor              </code></pre>
+</div>
+</div>
+<p><strong>Question 34:</strong> Which of the following goes in blanks (1) and (2)?</p>
+<table class="caption-top table">
+<thead><tr class="header">
+<th></th>
+<th style="text-align: center;">(1)</th>
+<th style="text-align: center;">(2)</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>a.</td>
+<td style="text-align: center;"><code>!=</code></td>
+<td style="text-align: center;"><code>|</code></td>
+</tr>
+<tr class="even">
+<td>b.</td>
+<td style="text-align: center;"><code>==</code></td>
+<td style="text-align: center;"><code>&amp;</code></td>
+</tr>
+<tr class="odd">
+<td>c.</td>
+<td style="text-align: center;"><code>!=</code></td>
+<td style="text-align: center;"><code>&amp;</code></td>
+</tr>
+<tr class="even">
+<td>d.</td>
+<td style="text-align: center;"><code>==</code></td>
+<td style="text-align: center;"><code>|</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Question 35:</strong> Which function or functions go into blank (3)?</p>
+<ol type="a">
+<li><p><code>arrange()</code></p></li>
+<li><p><code>mutate()</code></p></li>
+<li><p><code><a href="https://rdrr.io/r/base/order.html">order()</a></code></p></li>
+<li><p><code><a href="https://rdrr.io/r/base/sort.html">sort()</a></code></p></li>
+</ol></section><section id="question-36" class="level3"><h3 class="anchored" data-anchor-id="question-36">Question 36</h3>
+<p>You’re reviewing another team’s work and they made the following visualization:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="midterm-1_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>And they wrote the following interpretation for the relationship between annual salary and percent increase for Top performers:</p>
+<blockquote class="blockquote">
+<p>The relationship is positive, having a higher salary results in a higher percent increase. There is one clear outlier.</p>
+</blockquote>
+<p>Which of the following is/are the most accurate and helpful) peer review note for this interpretation. Choose all that apply.</p>
+<ol type="a">
+<li><p>The interpretation is complete and perfect, no changes needed!</p></li>
+<li><p>The interpretation doesn’t mention the direction of the relationship.</p></li>
+<li><p>The interpretation doesn’t mention the form of the relationship, which is linear.</p></li>
+<li><p>The interpretation doesn’t mention the strength of the relationship, which is somewhat strong.</p></li>
+<li><p>There isn’t a clear outlier in the plot. If any points stand out as potential outliers, more guidance should be given to the reader to identify them (e.g., salary and/or percent increase amount).</p></li>
+<li><p>The interpretation is causal – we don’t know if the cause of the high percent increase is higher annual salary based on observational data. The causal direction might be the other way around, or there may be other factors contributing to the apparent relationship.</p></li>
+</ol></section><section id="question-37" class="level3"><h3 class="anchored" data-anchor-id="question-37">Question 37</h3>
+<p>Below is some code and its output.</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="co"># label=plot blizzard</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(blizzard_salary,<span class="fu">aes</span>(<span class="at">x=</span>performance_rating,<span class="at">y=</span>percent_incr))<span class="sc">+</span><span class="fu">geom_boxplot</span>()</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Performance rating"</span>, <span class="at">y =</span> <span class="st">"Percent increase"</span>)</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 39 rows containing non-finite outside the scale range
+(`stat_boxplot()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="midterm-1_files/figure-html/unnamed-chunk-39-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;ggplot2::labels&gt; List of 2
+ $ x: chr "Performance rating"
+ $ y: chr "Percent increase"</code></pre>
+</div>
+</div>
+<p>Part 1: List at least 5 things that should be fixed or improved in the code.</p>
+<p>Part 2: What is the cause of the warning and what does it mean?</p>
+</section><section id="question-38" class="level3"><h3 class="anchored" data-anchor-id="question-38">Question 38</h3>
+<p>You’re working on a data analysis on salaries of Blizzard employees in a Quarto document in a project version controlled by Git. You create a plot and write up a paragraph describing any patterns in it. Then, your teammate says “render, commit, and push”.</p>
+<p>Part 1: What do they mean by each of these three steps. In 1-2 sentences for each, explain in your own words what they mean.</p>
+<ol type="1">
+<li>Render:</li>
+</ol>
+<ol start="2" type="1">
+<li>Commit:</li>
+</ol>
+<ol start="3" type="1">
+<li>Push:</li>
+</ol>
+<p>Part 2: Your teammate is getting impatient and they interrupt you after you rendered and committed and say “I still can’t see your changes in our shared GitHub repo when I look at it in my web browser.” Which of the following answers is the most accurate?</p>
+<ol type="a">
+<li><p>I rendered my document, you should be seeing my changes on GitHub when you look at it in your web browser.</p></li>
+<li><p>I committed my changes, you should be seeing my changes on GitHub when you look at it in your web browser.</p></li>
+<li><p>I didn’t yet push my changes, it’s expected that you are not seeing them on GitHub when you look at it in your web browser. Wait until I push, and check again.</p></li>
+<li><p>You need to pull to see my changes on GitHub in the web browser.</p></li>
+</ol></section></section><section id="penguins" class="level2"><h2 class="anchored" data-anchor-id="penguins">Penguins</h2>
+<p>The <code>penguins</code> data set includes measurements for penguin species, including: flipper length, body mass, bill dimensions, and sex. The following table summarizes information on which species of penguins (Adelie, Gentoo, and Chinstrap) live on which islands (Biscoe, Dream, or Torgersen).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="wcsccoznya" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wcsccoznya table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#wcsccoznya thead, #wcsccoznya tbody, #wcsccoznya tfoot, #wcsccoznya tr, #wcsccoznya td, #wcsccoznya th {
+  border-style: none;
+}
+
+#wcsccoznya p {
+  margin: 0;
+  padding: 0;
+}
+
+#wcsccoznya .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#wcsccoznya .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#wcsccoznya .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#wcsccoznya .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#wcsccoznya .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wcsccoznya .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wcsccoznya .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wcsccoznya .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#wcsccoznya .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#wcsccoznya .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#wcsccoznya .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#wcsccoznya .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#wcsccoznya .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#wcsccoznya .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#wcsccoznya .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#wcsccoznya .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#wcsccoznya .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#wcsccoznya .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#wcsccoznya .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wcsccoznya .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#wcsccoznya .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#wcsccoznya .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#wcsccoznya .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wcsccoznya .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#wcsccoznya .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#wcsccoznya .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wcsccoznya .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wcsccoznya .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#wcsccoznya .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wcsccoznya .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#wcsccoznya .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wcsccoznya .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wcsccoznya .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wcsccoznya .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wcsccoznya .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wcsccoznya .gt_left {
+  text-align: left;
+}
+
+#wcsccoznya .gt_center {
+  text-align: center;
+}
+
+#wcsccoznya .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#wcsccoznya .gt_font_normal {
+  font-weight: normal;
+}
+
+#wcsccoznya .gt_font_bold {
+  font-weight: bold;
+}
+
+#wcsccoznya .gt_font_italic {
+  font-style: italic;
+}
+
+#wcsccoznya .gt_super {
+  font-size: 65%;
+}
+
+#wcsccoznya .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#wcsccoznya .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#wcsccoznya .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#wcsccoznya .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#wcsccoznya .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#wcsccoznya .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#wcsccoznya .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#wcsccoznya .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#wcsccoznya div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead><tr class="gt_col_headings header">
+<th id="Island" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Island</th>
+<th id="Adelie" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Adelie</th>
+<th id="Gentoo" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Gentoo</th>
+<th id="Chinstrap" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Chinstrap</th>
+<th id="Total" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Total</th>
+</tr></thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="Island">Biscoe</td>
+<td class="gt_row gt_right" headers="Adelie">44</td>
+<td class="gt_row gt_right" headers="Gentoo">124</td>
+<td class="gt_row gt_right" headers="Chinstrap">0</td>
+<td class="gt_row gt_right" headers="Total">168</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Island">Dream</td>
+<td class="gt_row gt_right" headers="Adelie">56</td>
+<td class="gt_row gt_right" headers="Gentoo">0</td>
+<td class="gt_row gt_right" headers="Chinstrap">68</td>
+<td class="gt_row gt_right" headers="Total">124</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Island">Torgersen</td>
+<td class="gt_row gt_right" headers="Adelie">52</td>
+<td class="gt_row gt_right" headers="Gentoo">0</td>
+<td class="gt_row gt_right" headers="Chinstrap">0</td>
+<td class="gt_row gt_right" headers="Total">52</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Island">Total</td>
+<td class="gt_row gt_right" headers="Adelie">152</td>
+<td class="gt_row gt_right" headers="Gentoo">124</td>
+<td class="gt_row gt_right" headers="Chinstrap">68</td>
+<td class="gt_row gt_right" headers="Total">344</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<section id="question-39" class="level3"><h3 class="anchored" data-anchor-id="question-39">Question 39</h3>
+<p>Which of the following plots is the result of the following code?</p>
+<div class="cell">
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">penguins</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">island</span>, fill <span class="op">=</span> <span class="va">species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_bar</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="midterm-1_files/figure-html/penguins-species-island-bar-plots-1.png" class="img-fluid" width="480"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="midterm-1_files/figure-html/penguins-species-island-bar-plots-2.png" class="img-fluid" width="480"></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="midterm-1_files/figure-html/penguins-species-island-bar-plots-3.png" class="img-fluid" width="480"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="midterm-1_files/figure-html/penguins-species-island-bar-plots-4.png" class="img-fluid" width="480"></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="midterm-1_files/figure-html/penguins-species-island-bar-plots-5.png" class="img-fluid" width="480"></p>
+</div>
+</div>
+</div>
+</section></section><section id="nyc-flights" class="level2"><h2 class="anchored" data-anchor-id="nyc-flights">NYC Flights</h2>
+<p>The <code>flights</code> dataset includes characteristics of all flights departing from New York City airports (JFK, LGA, EWR) in 2013. Below is a peek at the first ten rows of the <code>flights</code> data.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 336,776 × 19
+    year month   day arr_delay carrier dep_time sched_dep_time dep_delay
+   &lt;int&gt; &lt;int&gt; &lt;int&gt;     &lt;dbl&gt; &lt;chr&gt;      &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;
+ 1  2013     1     1        11 UA           517            515         2
+ 2  2013     1     1        20 UA           533            529         4
+ 3  2013     1     1        33 AA           542            540         2
+ 4  2013     1     1       -18 B6           544            545        -1
+ 5  2013     1     1       -25 DL           554            600        -6
+ 6  2013     1     1        12 UA           554            558        -4
+ 7  2013     1     1        19 B6           555            600        -5
+ 8  2013     1     1       -14 EV           557            600        -3
+ 9  2013     1     1        -8 B6           557            600        -3
+10  2013     1     1         8 AA           558            600        -2
+# ℹ 336,766 more rows
+# ℹ 11 more variables: arr_time &lt;int&gt;, sched_arr_time &lt;int&gt;, flight &lt;int&gt;,
+#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,
+#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+</div>
+</div>
+<section id="question-40" class="level3"><h3 class="anchored" data-anchor-id="question-40">Question 40</h3>
+<p>Based on this output, which of the following must be <u><strong>true</strong></u> about the <code>flights</code> data frame? <strong>Select all that are true.</strong></p>
+<ol type="a">
+<li><p>The <code>flights</code> data frame is a <code>tibble</code>.</p></li>
+<li><p>The <code>flights</code> data frame has 10 rows.</p></li>
+<li><p>The <code>flights</code> data frame has 8 columns.</p></li>
+<li><p>The <code>carrier</code> variable in the <code>flights</code> data frame is a character variable.</p></li>
+<li><p>There are no missing data in the <code>flights</code> data frame.</p></li>
+</ol></section><section id="question-41" class="level3"><h3 class="anchored" data-anchor-id="question-41">Question 41</h3>
+<p>Which of the following pipelines produce(s) the output shown below? <strong>Select all that apply.</strong></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 336,776 × 5
+   arr_delay carrier  year month   day
+       &lt;dbl&gt; &lt;chr&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt;
+ 1      1272 HA       2013     1     9
+ 2      1127 MQ       2013     6    15
+ 3      1109 MQ       2013     1    10
+ 4      1007 AA       2013     9    20
+ 5       989 MQ       2013     7    22
+ 6       931 DL       2013     4    10
+ 7       915 DL       2013     3    17
+ 8       895 DL       2013     7    22
+ 9       878 AA       2013    12     5
+10       875 MQ       2013     5     3
+# ℹ 336,766 more rows</code></pre>
+</div>
+</div>
+<p>a.</p>
+<div class="cell">
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">select</span><span class="op">(</span><span class="va">arr_delay</span>, <span class="va">carrier</span>, <span class="va">year</span>, <span class="va">month</span>, <span class="va">day</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">arrange</span><span class="op">(</span><span class="fu">desc</span><span class="op">(</span><span class="va">arr_delay</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>b.</p>
+<div class="cell">
+<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">select</span><span class="op">(</span><span class="va">arr_delay</span>, <span class="va">carrier</span>, <span class="va">year</span>, <span class="va">month</span>, <span class="va">day</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">arrange</span><span class="op">(</span><span class="va">arr_delay</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>c.</p>
+<div class="cell">
+<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">select</span><span class="op">(</span><span class="va">arr_delay</span>, <span class="va">carrier</span>, <span class="va">year</span>, <span class="va">month</span>, <span class="va">day</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">arrange</span><span class="op">(</span><span class="va">year</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>d.</p>
+<div class="cell">
+<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">arrange</span><span class="op">(</span><span class="fu">desc</span><span class="op">(</span><span class="va">arr_delay</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">select</span><span class="op">(</span><span class="va">arr_delay</span>, <span class="va">carrier</span>, <span class="va">year</span>, <span class="va">month</span>, <span class="va">day</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>e.</p>
+<div class="cell">
+<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flights</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">arrange</span><span class="op">(</span><span class="fu">desc</span><span class="op">(</span><span class="va">arr_delay</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">select</span><span class="op">(</span><span class="va">day</span>, <span class="va">month</span>, <span class="va">year</span>, <span class="va">arr_delay</span>, <span class="va">carrier</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section><section id="countries-and-populations" class="level2"><h2 class="anchored" data-anchor-id="countries-and-populations">Countries and populations</h2>
+<p>We have a small dataset of six countries and their populations:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+  country       population
+  &lt;chr&gt;              &lt;dbl&gt;
+1 Curacao            150  
+2 Ecuador          18001  
+3 Iraq             44496. 
+4 New Zealand       5124. 
+5 Palau               18.0
+6 United States   333288. </code></pre>
+</div>
+</div>
+<p>And another small dataset of five countries and the continent they’re in:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 3
+  entity      code  continent    
+  &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;        
+1 Angola      AGO   Africa       
+2 Curacao     CUW   North America
+3 Ecuador     ECU   South America
+4 Iraq        IRQ   Asia         
+5 New Zealand NZL   Oceania      </code></pre>
+</div>
+</div>
+<p>You join the two datasets with the following:</p>
+<div class="cell">
+<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">population</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">left_join</span><span class="op">(</span><span class="va">continents</span>, by <span class="op">=</span> <span class="fu">join_by</span><span class="op">(</span><span class="va">country</span> <span class="op">==</span> <span class="va">entity</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="question-42" class="level3"><h3 class="anchored" data-anchor-id="question-42">Question 42</h3>
+<p>How many rows will the resulting data frame have?</p>
+<ol type="a">
+<li>4</li>
+<li>5</li>
+<li>6</li>
+<li>7</li>
+<li>8</li>
+</ol></section><section id="question-43" class="level3"><h3 class="anchored" data-anchor-id="question-43">Question 43</h3>
+<p>What will be the columns of the resulting data frame?</p>
+<ol type="a">
+<li><p><code>country</code>, <code>population</code></p></li>
+<li><p><code>country</code>, <code>population</code>, <code>code</code>, <code>continent</code></p></li>
+<li><p><code>entity</code>, <code>code</code>, <code>continent</code></p></li>
+<li><p><code>entity</code>, <code>population</code>, <code>code</code>, <code>continent</code></p></li>
+<li><p><code>country</code>, <code>entity</code>, <code>population</code>, <code>code</code>, <code>continent</code></p></li>
+</ol></section></section><section id="duke-forest-houses" class="level2"><h2 class="anchored" data-anchor-id="duke-forest-houses">Duke Forest houses</h2>
+<p>The <code>duke_forest</code> dataset includes information on prices and various other features (number of bedrooms, bathrooms, area, year built, type of cooling, type of heating, etc.) of houses in the Duke Forest neighborhood of Durham, NC.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 98
+Columns: 13
+$ address    &lt;chr&gt; "1 Learned Pl, Durham, NC 27705", "1616 Pinecrest Rd, Durha…
+$ price      &lt;dbl&gt; 1520000, 1030000, 420000, 680000, 428500, 456000, 1270000, …
+$ bed        &lt;dbl&gt; 3, 5, 2, 4, 4, 3, 5, 4, 4, 3, 4, 4, 3, 5, 4, 5, 3, 4, 4, 3,…
+$ bath       &lt;dbl&gt; 4.0, 4.0, 3.0, 3.0, 3.0, 3.0, 5.0, 3.0, 5.0, 2.0, 3.0, 3.0,…
+$ area       &lt;dbl&gt; 6040, 4475, 1745, 2091, 1772, 1950, 3909, 2841, 3924, 2173,…
+$ type       &lt;chr&gt; "Single Family", "Single Family", "Single Family", "Single …
+$ year_built &lt;dbl&gt; 1972, 1969, 1959, 1961, 2020, 2014, 1968, 1973, 1972, 1964,…
+$ heating    &lt;chr&gt; "Other, Gas", "Forced air, Gas", "Forced air, Gas", "Heat p…
+$ cooling    &lt;fct&gt; central, central, central, central, central, central, centr…
+$ parking    &lt;chr&gt; "0 spaces", "Carport, Covered", "Garage - Attached, Covered…
+$ lot        &lt;dbl&gt; 0.97, 1.38, 0.51, 0.84, 0.16, 0.45, 0.94, 0.79, 0.53, 0.73,…
+$ hoa        &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…
+$ url        &lt;chr&gt; "https://www.zillow.com/homedetails/1-Learned-Pl-Durham-NC-…</code></pre>
+</div>
+</div>
+<p>The following summary table gives us some information about whether homes in this data set have garages and when they were built.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="kxbvkfgjqh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kxbvkfgjqh table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#kxbvkfgjqh thead, #kxbvkfgjqh tbody, #kxbvkfgjqh tfoot, #kxbvkfgjqh tr, #kxbvkfgjqh td, #kxbvkfgjqh th {
+  border-style: none;
+}
+
+#kxbvkfgjqh p {
+  margin: 0;
+  padding: 0;
+}
+
+#kxbvkfgjqh .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#kxbvkfgjqh .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#kxbvkfgjqh .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#kxbvkfgjqh .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#kxbvkfgjqh .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#kxbvkfgjqh .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kxbvkfgjqh .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#kxbvkfgjqh .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#kxbvkfgjqh .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#kxbvkfgjqh .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#kxbvkfgjqh .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#kxbvkfgjqh .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#kxbvkfgjqh .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#kxbvkfgjqh .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#kxbvkfgjqh .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#kxbvkfgjqh .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#kxbvkfgjqh .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#kxbvkfgjqh .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#kxbvkfgjqh .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kxbvkfgjqh .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#kxbvkfgjqh .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#kxbvkfgjqh .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#kxbvkfgjqh .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kxbvkfgjqh .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#kxbvkfgjqh .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#kxbvkfgjqh .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kxbvkfgjqh .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kxbvkfgjqh .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#kxbvkfgjqh .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kxbvkfgjqh .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#kxbvkfgjqh .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#kxbvkfgjqh .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#kxbvkfgjqh .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kxbvkfgjqh .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#kxbvkfgjqh .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#kxbvkfgjqh .gt_left {
+  text-align: left;
+}
+
+#kxbvkfgjqh .gt_center {
+  text-align: center;
+}
+
+#kxbvkfgjqh .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#kxbvkfgjqh .gt_font_normal {
+  font-weight: normal;
+}
+
+#kxbvkfgjqh .gt_font_bold {
+  font-weight: bold;
+}
+
+#kxbvkfgjqh .gt_font_italic {
+  font-style: italic;
+}
+
+#kxbvkfgjqh .gt_super {
+  font-size: 65%;
+}
+
+#kxbvkfgjqh .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#kxbvkfgjqh .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#kxbvkfgjqh .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#kxbvkfgjqh .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#kxbvkfgjqh .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#kxbvkfgjqh .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#kxbvkfgjqh .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#kxbvkfgjqh .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#kxbvkfgjqh div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead><tr class="gt_col_headings header">
+<th id="a-" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"></th>
+<th id="Built-earlier-than-1950" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Built earlier than 1950</th>
+<th id="Built-in-1950-or-later" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Built in 1950 or later</th>
+</tr></thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers=" ">Garage</td>
+<td class="gt_row gt_right" headers="Built earlier than 1950">5</td>
+<td class="gt_row gt_right" headers="Built in 1950 or later">33</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers=" ">No garage</td>
+<td class="gt_row gt_right" headers="Built earlier than 1950">3</td>
+<td class="gt_row gt_right" headers="Built in 1950 or later">57</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>The pipeline below produces a data frame with a fewer number of rows than <code>duke_forest</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>duke_forest <span class="sc">|&gt;</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(parking <span class="sc">==</span> <span class="st">"Garage"</span> <span class="fu">_</span>(<span class="dv">1</span>)_ year_built <span class="fu">_</span>(<span class="dv">2</span>)_ <span class="dv">1950</span>) <span class="sc">|&gt;</span></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(parking, year_built, price, area) <span class="sc">|&gt;</span></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">_</span>(<span class="dv">3</span>)<span class="fu">_</span>(<span class="at">price_per_sqfeet =</span> price <span class="sc">/</span> area)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 5
+  parking year_built  price  area price_per_sqfeet
+  &lt;chr&gt;        &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;            &lt;dbl&gt;
+1 Garage        1945 900000  2933            307. 
+2 Garage        1938 265000  1300            204. 
+3 Garage        1934 600000  2514            239. 
+4 Garage        1941 412500  1661            248. 
+5 Garage        1940 105000  1094             96.0</code></pre>
+</div>
+</div>
+<section id="question-44" class="level3"><h3 class="anchored" data-anchor-id="question-44">Question 44</h3>
+<p>Which of the following goes in blanks (1) and (2)?</p>
+<table class="caption-top table">
+<thead><tr class="header">
+<th></th>
+<th style="text-align: center;">(1)</th>
+<th style="text-align: center;">(2)</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>a.</td>
+<td style="text-align: center;"><code>&amp;</code></td>
+<td style="text-align: center;"><code>&lt;</code></td>
+</tr>
+<tr class="even">
+<td>b.</td>
+<td style="text-align: center;"><code>|</code></td>
+<td style="text-align: center;"><code>&lt;</code></td>
+</tr>
+<tr class="odd">
+<td>c.</td>
+<td style="text-align: center;"><code>&amp;</code></td>
+<td style="text-align: center;"><code>&gt;=</code></td>
+</tr>
+<tr class="even">
+<td>d.</td>
+<td style="text-align: center;"><code>|</code></td>
+<td style="text-align: center;"><code>&gt;=</code></td>
+</tr>
+<tr class="odd">
+<td>e.</td>
+<td style="text-align: center;"><code>&amp;</code></td>
+<td style="text-align: center;"><code>!=</code></td>
+</tr>
+</tbody>
+</table></section><section id="question-45" class="level3"><h3 class="anchored" data-anchor-id="question-45">Question 45</h3>
+<p>Which function or functions go into blank (3)? <strong>Select all that apply.</strong></p>
+<ol type="a">
+<li><p><code>arrange()</code></p></li>
+<li><p><code>mutate()</code></p></li>
+<li><p><code><a href="https://rdrr.io/r/stats/filter.html">filter()</a></code></p></li>
+<li><p><code>summarize()</code></p></li>
+<li><p><code>slice()</code></p></li>
+</ol></section></section><section id="law-order" class="level2"><h2 class="anchored" data-anchor-id="law-order">Law &amp; Order</h2>
+<p>You’ve heard of the tidyverse, now let’s visit the Law &amp; Order-verse. Doink doink!<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Law &amp; Order is a police procedural and legal drama television series that has been running since the 1990s. The Law &amp; Order franchise includes a number of series such as Law &amp; Order, Law &amp; Order: SVU, Law &amp; Order: Criminal Intent, etc.</p>
+<p>You will work with data on average ratings for each season of three series from the Law &amp; Order-verse – a subset of the data from the previous questions. Below is a peek at the first ten rows of the Law &amp; Order data.</p>
+<p>The plot below shows the distributions of average ratings of various Law &amp; Order series across seasons.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="midterm-1_files/figure-html/unnamed-chunk-45-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="question-46" class="level3"><h3 class="anchored" data-anchor-id="question-46">Question 46</h3>
+<p>Based on the information from the side-by-side box plots, fill in the legend of the plot below with Law &amp; Order series titles.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="midterm-1_files/figure-html/unnamed-chunk-46-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="question-47" class="level3"><h3 class="anchored" data-anchor-id="question-47">Question 47</h3>
+<p>The following code calculates the standard deviations of average season ratings of the five Law &amp; Order series. Unfortunately, the output is partially erased and replaced with blanks.</p>
+<div class="cell">
+<div class="sourceCode" id="cb50"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">lo_titles</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Law &amp; Order"</span>, <span class="st">"Law &amp; Order: Criminal Intent"</span>, <span class="st">"Law &amp; Order: SVU"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">law_and_order</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">title</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">lo_titles</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">title</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">summarize</span><span class="op">(</span>mean_av_rating <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">av_rating</span><span class="op">)</span>, sd_av_rating <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">av_rating</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code># A tibble: 5 × 3
+  title                         mean_av_rating sd_av_rating
+  &lt;chr&gt;                                  &lt;dbl&gt;        &lt;dbl&gt;
+1 Law &amp; Order                            _(1)_        0.106
+2 Law &amp; Order: Criminal Intent            8.20        0.129
+4 Law &amp; Order: SVU                        8.67        _(2)_</code></pre>
+<p>Based on the visualizations you’ve seen of these data so far, which of the following is <u><strong>true</strong></u> about the blanks in the output? <strong>Select all that are true.</strong></p>
+<ol type="a">
+<li><p>The <strong>mean</strong> of average ratings (Blank 1) of Law &amp; Order seasons is <strong>lower</strong> than the other two means.</p></li>
+<li><p>The <strong>mean</strong> of average ratings (Blank 1) of Law &amp; Order seasons is <strong>higher</strong> than the other two means.</p></li>
+<li><p>The <strong>standard deviation</strong> of average ratings of Law &amp; Order: SVU seasons (Blank 2) is <strong>lower</strong> than the other two standard deviations.</p></li>
+<li><p>The <strong>standard deviation</strong> of average ratings of Law &amp; Order: SVU seasons (Blank 2) is <strong>higher</strong> than the other two standard deviations.</p></li>
+<li><p>The <strong>standard deviation</strong> of average ratings of Law &amp; Order: SVU seasons (Blank 2) is <strong>between</strong> the other two standard deviations.</p></li>
+</ol></section></section><section id="romance-and-comedy" class="level2"><h2 class="anchored" data-anchor-id="romance-and-comedy">Romance and comedy</h2>
+<p>Finally, we focus on romance and comedy shows. We first filter the dataset for any shows that have romance or comedy as their genre (<code>genre_1</code>, <code>genre_2</code>, or <code>genre_3</code>) and then remove shows that have both of these genre labels. For the next two questions, we focus on these shows that we identify as either romance or comedy. We then calculate the mean of the average season ratings for each show, to obtain a single “mean average rating” value per show.</p>
+<p>The plot below shows the distributions of mean average ratings of seasons of comedy and romance shows.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="midterm-1_files/figure-html/unnamed-chunk-49-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="question-48" class="level3"><h3 class="anchored" data-anchor-id="question-48">Question 48</h3>
+<p>Which of the following statements is <u><strong>true</strong></u> about these distributions? <strong>Select all that are true.</strong></p>
+<ol type="a">
+<li>Mean average ratings of romance shows are bimodal.</li>
+<li>Mean average ratings of comedy are unimodal.</li>
+<li>Mean average ratings of romance shows is left skewed.</li>
+<li>Mean average ratings of comedy shows is right skewed.</li>
+<li>There are more romance shows than comedy shows.</li>
+</ol></section></section><section id="imdb" class="level2"><h2 class="anchored" data-anchor-id="imdb">IMDB</h2>
+<p>The data for the next few questions come from the Internet Movie Database (IMDB). Specifically, the data are a random sample of movies released between 1980 and 2020.</p>
+<p>The name of the data frame used for this analysis is <code>movies</code>, and it contains the variables shown in <a href="#tbl-data-dictionary" class="quarto-xref">Table&nbsp;1</a>.</p>
+<div id="tbl-data-dictionary" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[20,80]">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-data-dictionary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Data dictionary for <code>movies</code>
+</figcaption><div aria-describedby="tbl-data-dictionary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 80%">
+</colgroup>
+<thead><tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>name</code></td>
+<td>name of the movie</td>
+</tr>
+<tr class="even">
+<td><code>rating</code></td>
+<td>rating of the movie (R, PG, etc.)</td>
+</tr>
+<tr class="odd">
+<td><code>genre</code></td>
+<td>main genre of the movie.</td>
+</tr>
+<tr class="even">
+<td><code>runtime</code></td>
+<td>duration of the movie</td>
+</tr>
+<tr class="odd">
+<td><code>year</code></td>
+<td>year of release</td>
+</tr>
+<tr class="even">
+<td><code>release_date</code></td>
+<td>release date (YYYY-MM-DD)</td>
+</tr>
+<tr class="odd">
+<td><code>release_country</code></td>
+<td>release country</td>
+</tr>
+<tr class="even">
+<td><code>score</code></td>
+<td>IMDB user rating</td>
+</tr>
+<tr class="odd">
+<td><code>votes</code></td>
+<td>number of user votes</td>
+</tr>
+<tr class="even">
+<td><code>director</code></td>
+<td>the director</td>
+</tr>
+<tr class="odd">
+<td><code>writer</code></td>
+<td>writer of the movie</td>
+</tr>
+<tr class="even">
+<td><code>star</code></td>
+<td>main actor/actress</td>
+</tr>
+<tr class="odd">
+<td><code>country</code></td>
+<td>country of origin</td>
+</tr>
+<tr class="even">
+<td><code>budget</code></td>
+<td>the budget of a movie (some movies don’t have this, so it appears as 0)</td>
+</tr>
+<tr class="odd">
+<td><code>gross</code></td>
+<td>revenue of the movie</td>
+</tr>
+<tr class="even">
+<td><code>company</code></td>
+<td>the production company</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>The first thirty rows of the <code>movies</code> data frame are shown in <a href="#tbl-data" class="quarto-xref">Table&nbsp;2</a>, with variable types suppressed (since we’ll ask about them later).</p>
+<div id="tbl-data" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2
+</figcaption><div aria-describedby="tbl-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p>First 30 rows of <code>movies</code>, with variable types suppressed.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 500 × 16
+   name           score runtime genre     rating    release_country release_date
+ 1 Blue City        4.4 83 mins Action    R         United States   1986-05-02  
+ 2 Winter Sleep     8.1 196     Drama     Not Rated Turkey          2014-06-12  
+ 3 Rang De Basan…   8.1 167     Comedy    Not Rated United States   2006-01-26  
+ 4 Pokémon Detec…   6.6 104     Action    PG        United States   2019-05-10  
+ 5 A Bad Moms Ch…   5.6 104     Comedy    R         United States   2017-11-01  
+ 6 Replicas         5.5 107     Drama     PG-13     United States   2019-01-11  
+ 7 Windy City       5.8 103     Drama     R         Uruguay         1986-01-01  
+ 8 War for the P…   7.4 140     Action    PG-13     United States   2017-07-14  
+ 9 Tales from th…   6.4 98      Crime     R         United States   1995-05-24  
+10 Fire with Fire   6.5 103     Drama     PG-13     United States   1986-05-09  
+11 Raising Helen    6   119     Comedy    PG-13     United States   2004-05-28  
+12 Feeling Minne…   5.4 99      Comedy    R         United States   1996-09-13  
+13 The Babe         5.9 115     Biography PG        United States   1992-04-17  
+14 The Real Blon…   6   105     Comedy    R         United States   1998-02-27  
+15 To vlemma tou…   7.6 176     Drama     Not Rated United States   1997-11-01  
+16 Going the Dis…   6.3 102     Comedy    R         United States   2010-09-03  
+17 Jung on zo       6.8 103     Action    R         Hong Kong       1993-06-24  
+18 Rita, Sue and…   6.5 93      Comedy    R         United Kingdom  1987-05-29  
+19 Phone Booth      7   81      Crime     R         United States   2003-04-04  
+20 Happy Death D…   6.6 96      Comedy    PG-13     United States   2017-10-13  
+21 Barely Legal     4.7 90      Comedy    R         Thailand        2006-05-25  
+22 Three Kings      7.1 114     Action    R         United States   1999-10-01  
+23 Menace II Soc…   7.5 97      Crime     R         United States   1993-05-26  
+24 Four Rooms       6.8 98      Comedy    R         United States   1995-12-25  
+25 Quartet          6.8 98      Comedy    PG-13     United States   2013-03-01  
+26 Tape             7.2 86      Drama     R         Denmark         2002-07-12  
+27 Marked for De…   6   93      Action    R         United States   1990-10-05  
+28 Congo            5.2 109     Action    PG-13     United States   1995-06-09  
+29 Stop-Loss        6.4 112     Drama     R         United States   2008-03-28  
+30 Con Air          6.9 115     Action    R         United States   1997-06-06  
+      budget     gross  votes  year director         writer        star         
+                                      
+ 1  10000000   6947787   1100  1986 Michelle Manning Ross Macdona… Judd Nelson  
+ 2        NA   4018705  48000  2014 Nuri Bilge Ceyl… Ebru Ceylan   Haluk Bilgin…
+ 3        NA  10800778 115000  2006 Rakeysh Ompraka… Renzil D'Sil… Aamir Khan   
+ 4 150000000 433921300 146000  2019 Rob Letterman    Dan Hernandez Ryan Reynolds
+ 5  28000000 130560428  46000  2017 Jon Lucas        Jon Lucas     Mila Kunis   
+ 6  30000000   9330075  34000  2018 Jeffrey Nachman… Chad St. John Keanu Reeves 
+ 7        NA    343890    262  1984 Armyan Bernstein Armyan Berns… John Shea    
+ 8 150000000 490719763 235000  2017 Matt Reeves      Mark Bomback  Andy Serkis  
+ 9   6000000  11837928   7400  1995 Rusty Cundieff   Rusty Cundie… Clarence Wil…
+10        NA   4636169   1500  1986 Duncan Gibbins   Bill Phillips Craig Sheffer
+11  50000000  49718611  36000  2004 Garry Marshall   Patrick J. C… Kate Hudson  
+12        NA   3124440  11000  1996 Steven Baigelman Steven Baige… Keanu Reeves 
+13        NA  19930973   9300  1992 Arthur Hiller    John Fusco    John Goodman 
+14        NA     83488   3900  1997 Tom DiCillo      Tom DiCillo   Matthew Modi…
+15        NA        NA   6400  1995 Theodoros Angel… Theodoros An… Harvey Keitel
+16  32000000  42059111  57000  2010 Nanette Burstein Geoff LaTuli… Drew Barrymo…
+17        NA   3741869   6100  1993 Kirk Wong        Tin Nam Chun  Jackie Chan  
+18        NA    124167   3600  1987 Alan Clarke      Andrea Dunbar Siobhan Finn…
+19  13000000  97837138 255000  2002 Joel Schumacher  Larry Cohen   Colin Farrell
+20   4800000 125479266 124000  2017 Christopher Lan… Scott Lobdell Jessica Rothe
+21        NA     83439   5900  2003 David Mickey Ev… David H. Ste… Erik von Det…
+22  75000000 107752036 163000  1999 David O. Russell John Ridley   George Cloon…
+23   3500000  27912072  54000  1993 Albert Hughes    Allen Hughes  Tyrin Turner 
+24   4000000   4257354 100000  1995 Directors        Allison Ande… Tim Roth     
+25  11000000  59520298  19000  2012 Dustin Hoffman   Ronald Harwo… Maggie Smith 
+26    100000    515900  19000  2001 Richard Linklat… Stephen Belb… Ethan Hawke  
+27  12000000  57968936  21000  1990 Dwight H. Little Michael Grais Steven Seagal
+28  50000000 152022101  43000  1995 Frank Marshall   Michael Cric… Laura Linney 
+29  25000000  11212953  20000  2008 Kimberly Peirce  Mark Richard  Ryan Phillip…
+30  75000000 224012234 282000  1997 Simon West       Scott Rosenb… Nicolas Cage 
+# ℹ 470 more rows
+# ℹ 2 more variables: company, country</code></pre>
+</div>
+</div>
+</div>
+</figure>
+</div>
+<section id="question-49" class="level3"><h3 class="anchored" data-anchor-id="question-49">Question 49</h3>
+<p>The <code>name</code> and <code>runtime</code> variables are shown below, with the variable types suppressed.</p>
+<div class="quarto-layout-panel" data-layout="[0.5, 0.5]">
+<div class="quarto-layout-row">
+<div id="firstcol" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 500 × 2
+  name                      runtime
+1 Blue City                 83 mins
+2 Winter Sleep              196    
+3 Rang De Basanti           167    
+4 Pokémon Detective Pikachu 104    
+5 A Bad Moms Christmas      104    
+6 Replicas                  107    
+# ℹ 494 more rows</code></pre>
+</div>
+</div>
+</div>
+<div id="secondcol" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p>What is the type of the <code>runtime</code> variable?</p>
+<ol type="a">
+<li><p>Character</p></li>
+<li><p>Double</p></li>
+<li><p>Factor</p></li>
+<li><p>Integer</p></li>
+<li><p>Logical</p></li>
+</ol>
+</div>
+</div>
+</div>
+</section><section id="question-50" class="level3"><h3 class="anchored" data-anchor-id="question-50">Question 50</h3>
+<p>The code below summarizes the data in a certain way.</p>
+<div class="cell">
+<div class="sourceCode" id="cb54"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">summarize</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">release_country</span> <span class="op">==</span> <span class="st">"United States"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  `sum(release_country == "United States")`
+                                      &lt;int&gt;
+1                                       435</code></pre>
+</div>
+</div>
+<p>Which of the following is <u><strong>TRUE</strong></u> about the code and its result? <strong>Select all that are true.</strong></p>
+<ol type="a">
+<li><p>Evaluates whether each <code>release_country</code> is equal to <code>"United States"</code> or not, which results in a logical variable.</p></li>
+<li><p>Filters out rows where <code>release_country</code> is not equal to <code>"United States"</code> and counts the remaining rows.</p></li>
+<li><p>Sums the logical values, where each <code>TRUE</code> is considered a 1 and each <code>FALSE</code> is considered a 0.</p></li>
+<li><p>Results in a character vector.</p></li>
+<li><p>The result shows there are 435 movies released in the United States.</p></li>
+</ol></section><section id="question-51" class="level3"><h3 class="anchored" data-anchor-id="question-51">Question 51</h3>
+<p>Suppose you want a visualization that shows the number of movies in the sample in each <code>genre</code>. Your first attempt is as follows.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="midterm-1_files/figure-html/unnamed-chunk-55-1.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>A friend of yours says that the visualization is difficult to read and they suggest using the following visualization instead.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="midterm-1_files/figure-html/unnamed-chunk-56-1.png" class="img-fluid figure-img" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Which of the following modifications would your friend have made to your code to create their version? <strong>Select all that apply.</strong></p>
+<ol type="a">
+<li><p>Combine movies in genres other than Comedy, Drama, Action, and Horror into a new level called <code>"Other"</code>.</p></li>
+<li><p>Reorder the levels in descending order of numbers of observations, except for the <code>"Other"</code> level.</p></li>
+<li><p>Map <code>genre</code> to the <code>y</code> aesthetic.</p></li>
+<li><p>Add a title, x and y-axis labels, and a caption.</p></li>
+<li><p>Filter out all moves in genres other than Comedy, Drama, Action, and Horror before plotting.</p></li>
+</ol></section><section id="question-52" class="level3"><h3 class="anchored" data-anchor-id="question-52">Question 52</h3>
+<p>Which of the following is <u><strong>TRUE</strong></u> about the code and its result? <strong>Select all that are true.</strong></p>
+<div class="cell">
+<div class="sourceCode" id="cb56"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">movies</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">count</span><span class="op">(</span><span class="va">rating</span>, <span class="va">genre</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">pivot_wider</span><span class="op">(</span>names_from <span class="op">=</span> <span class="va">genre</span>, values_from <span class="op">=</span> <span class="va">n</span>, values_fill <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 6
+  rating    Other Drama Action Comedy Horror
+  &lt;fct&gt;     &lt;int&gt; &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;int&gt;
+1 G             5     1      1      1      0
+2 PG           38    13     10     18      0
+3 PG-13        19    25     35     35      0
+4 R            45    50     57     96     21
+5 NC-17         1     2      0      1      0
+6 Not Rated     4    11      4      6      1</code></pre>
+</div>
+</div>
+<ol type="a">
+<li><p>The code counts how many movies are in each rating and genre combination.</p></li>
+<li><p>The code sorts the results in descending order.</p></li>
+<li><p>Each row of the output is a movie.</p></li>
+<li><p>The output shows that there are six distinct ratings in the dataset.</p></li>
+<li><p>The code reduces the number of variables and observations in the <code>movies</code> data frame to six.</p></li>
+</ol>
+
+
+</section></section></section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<ol>
+<li id="fn1"><p>“Doink doink” is the scene and episode introductory sound on the Law &amp; Order series. If you’ve never heard it, you’re not at any disadvantage for the exam. If you’ve ever heard it, good luck getting it out of your head!<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/sta199-s26\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="../project/5-writeup-presentation.html" class="pagination-link" aria-label="Milestone 5">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Milestone 5</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Copyright 2026 Mine Çetinkaya-Rundel, Mary Knox, Marie Neubrander, John Zito</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/exams/midterm-1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
+
+
+</body></html>
