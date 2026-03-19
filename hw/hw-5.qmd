@@ -229,6 +229,7 @@ The full dataset is available on David Card's [website](https://davidcard.berkel
 
 Acquire some domain knowledge! As we know, it's never a good idea to blunder into a data analysis without *some* subject-matter expertise, so here is some suggested reading:
 
+-   In the WSJ this very week: "[The 30-Year Debate Over the Minimum Wage Is Still Not Settled](https://www.wsj.com/economy/jobs/minimum-wage-jobs-cost-debate-card-krueger-63b21af2?st=kFawiR&reflink=desktopwebshare_permalink);"
 -   The original Card and Krueger paper is [here](https://davidcard.berkeley.edu/papers/njmin-aer.pdf). Their bottom line was "\[w\]e find no indication that the rise in the minimum wage reduced employment," which runs counter to the usual ECON 101 story. People have been arguing about this ever since;
 -   [This](https://www.nber.org/papers/w28388) recent survey article attempts to summarize the state of the literature on (dis?)employment effects of the minimum wage;
 -   The award citation for Card's Nobel has useful summaries: [popular](https://www.nobelprize.org/prizes/economic-sciences/2021/popular-information/), [advanced](https://www.nobelprize.org/uploads/2021/10/advanced-economicsciencesprize2021.pdf).
