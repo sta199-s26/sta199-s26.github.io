@@ -56,7 +56,7 @@ our_data
 
 ## Goal
 
-Your goal is to "make up" the outcome variable `y` such that when you fit a linear regression model predicting `y` from `x`, the model are true about the model:
+Your goal is to "make up" the outcome variable `y` such that when you fit a linear regression model predicting `y` from `x`, the following are true about the model:
 
 - For each additional unit in `x`, `y` is expected to be lower, on average, by (approximately) 2 units.
 
