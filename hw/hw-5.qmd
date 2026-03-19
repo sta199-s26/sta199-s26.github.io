@@ -236,6 +236,8 @@ Acquire some domain knowledge! As we know, it's never a good idea to blunder int
 
 We are not grading this, and we'll never know if you did it or not, but you should definitely go exploring if this area interests you. Furthermore, while you may not do the reading we are suggesting here, you should definitely do a little outside reading in the domain relevant to your final project.
 
+## Questions
+
 ### Question 6
 
 a.  Relevel the `state` and `time` variables so that `"PA"` and `"before"` are the baselines, respectively.
