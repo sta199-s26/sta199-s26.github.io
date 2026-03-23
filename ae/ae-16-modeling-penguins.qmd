@@ -109,14 +109,14 @@ tidy(bm_fl_fit)
 ```
 
 $$
-\widehat{body~bass}=-5781+49.6\times flipper~length
+\widehat{body~mass}=-5781+49.6\times flipper~length
 $$
 
 -   **Your turn:** Interpret the slope and the intercept in the context of the data.
 
-    -   Intercept: Penguins with 0 flipper length are expected, on average, to weigh 5,781 grams;
+    -   Intercept: Penguins with 0 flipper length are expected, on average, to weigh -5,781 grams;
 
-    -   Slopes: For each additional millimeter of a penguin;s flipper length, the weight of their penguin is expected to be higher, on average, by 49.7 grams.
+    -   Slopes: For each additional millimeter of a penguin's flipper length, the weight of the penguin is expected to be higher, on average, by 49.7 grams.
 
 
 **Notice!** We got exactly the same number for the slope as we did when we computed it above using $b_1=r\cdot s_y/s_x$. Phew!
