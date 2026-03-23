@@ -301,7 +301,9 @@ ggplot(data = movie_scores,
 
 ## Simple linear regression {.smaller}
 
-Use **simple linear regression** to model the relationship between a quantitative outcome ($Y$) and a single quantitative predictor ($X$): $$\Large{Y = \beta_0 + \beta_1 X + \epsilon}$$
+Use **simple linear regression** to model the relationship between a quantitative outcome ($Y$) and a single quantitative predictor ($X$): 
+
+$$\Large{Y = \beta_0 + \beta_1 X + \epsilon}$$
 
 ::: incremental
 -   $\beta_1$: True slope of the relationship between $X$ and $Y$
