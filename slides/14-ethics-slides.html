@@ -6,10 +6,10 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.25">
 <meta name="author" content="John Zito">
 <meta name="dcterms.date" content="2026-03-04">
 <title>STA 199 Spring 2026 – Data science ethics</title>
@@ -97,7 +97,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f0195dcd610196b9111c6e10e98695f4.css">
+<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f1a2306d7f1ecadf2b6aaed2cf5d8945.css">
 <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -333,7 +333,7 @@ Sharon Begley. <a href="https://www.statnews.com/2016/05/16/exercise-prevent-can
 
 <img data-src="images/14/cost-of-gas.png" class="r-stretch"></section><section id="axes-and-scales---cost-of-gas-1" class="slide level2 scrollable"><h2>Axes and scales - Cost of gas</h2>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
 <span id="cb1-2"><a></a>  <span class="at">date =</span> <span class="fu">ymd</span>(<span class="fu">c</span>(<span class="st">"2019-11-01"</span>, <span class="st">"2020-10-25"</span>, <span class="st">"2020-11-01"</span>)),</span>
 <span id="cb1-3"><a></a>  <span class="at">cost =</span> <span class="fu">c</span>(<span class="fl">3.17</span>, <span class="fl">3.51</span>, <span class="fl">3.57</span>)</span>
 <span id="cb1-4"><a></a>)</span>
@@ -354,10 +354,10 @@ Sharon Begley. <a href="https://www.statnews.com/2016/05/16/exercise-prevent-can
 <span id="cb1-19"><a></a>    <span class="at">limits =</span> <span class="fu">as.numeric</span>(<span class="fu">ymd</span>(<span class="fu">c</span>(<span class="st">"2019-11-01"</span>, <span class="st">"2020-11-29"</span>))),</span>
 <span id="cb1-20"><a></a>    <span class="at">minor_breaks =</span> <span class="fu">ymd</span>(<span class="fu">c</span>(<span class="st">"2019-11-01"</span>, <span class="st">"2020-10-25"</span>, <span class="st">"2020-11-01"</span>))</span>
 <span id="cb1-21"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb1-22"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_dollar</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-22"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_dollar</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<img data-src="14-ethics_files/figure-html/unnamed-chunk-2-1.png" style="width:100.0%" class="r-stretch"></section><section id="axes-and-scales---covid-in-ga" class="slide level2 smaller"><h2>Axes and scales - COVID in GA</h2>
+<img data-src="14-ethics_files/figure-revealjs/unnamed-chunk-2-1.png" style="width:100.0%" class="r-stretch"></section><section id="axes-and-scales---covid-in-ga" class="slide level2 smaller"><h2>Axes and scales - COVID in GA</h2>
 <div class="question">
 <p>What is wrong with this picture? How would you correct it?</p>
 </div>
@@ -384,7 +384,7 @@ Sharon Begley. <a href="https://www.statnews.com/2016/05/16/exercise-prevent-can
 <p>Timothy B. Lee. <a href="https://www.vox.com/2015/9/29/9417845/planned-parenthood-terrible-chart">Whatever you think of Planned Parenthood, this is a terrible and dishonest chart</a>. Vox. 29 September 2019.</p>
 </div></aside></section><section id="axes-and-scales---pp-services-1" class="slide level2 scrollable"><h2>Axes and scales - PP services</h2>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>pp <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<details class="code-fold"><summary>Code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>pp <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
 <span id="cb2-2"><a></a>  <span class="at">year =</span> <span class="fu">c</span>(<span class="dv">2006</span>, <span class="dv">2006</span>, <span class="dv">2013</span>, <span class="dv">2013</span>),</span>
 <span id="cb2-3"><a></a>  <span class="at">service =</span> <span class="fu">c</span>(<span class="st">"Abortion"</span>, <span class="st">"Cancer"</span>, <span class="st">"Abortion"</span>, <span class="st">"Cancer"</span>),</span>
 <span id="cb2-4"><a></a>  <span class="at">n =</span> <span class="fu">c</span>(<span class="dv">289750</span>, <span class="dv">2007371</span>, <span class="dv">327000</span>, <span class="dv">935573</span>)</span>
@@ -423,10 +423,10 @@ Sharon Begley. <a href="https://www.statnews.com/2016/05/16/exercise-prevent-can
 <span id="cb2-37"><a></a>    <span class="at">color =</span> <span class="st">"purple"</span></span>
 <span id="cb2-38"><a></a>  ) <span class="sc">+</span></span>
 <span id="cb2-39"><a></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb2-40"><a></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-40"><a></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<img data-src="14-ethics_files/figure-html/unnamed-chunk-3-1.png" width="672" class="r-stretch"></section><section id="maps-and-areas---voting-map" class="slide level2"><h2>Maps and areas - Voting map</h2>
+<img data-src="14-ethics_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section><section id="maps-and-areas---voting-map" class="slide level2"><h2>Maps and areas - Voting map</h2>
 <div class="question">
 <p>Do you recognize this map? What does it show?</p>
 </div>
@@ -459,7 +459,7 @@ Sharon Begley. <a href="https://www.statnews.com/2016/05/16/exercise-prevent-can
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="14-ethics_files/figure-html/catalan-misleading-1.png" style="width:100.0%"></p>
+<figure><p><img data-src="14-ethics_files/figure-revealjs/catalan-misleading-1.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -471,7 +471,7 @@ Sharon Begley. <a href="https://www.statnews.com/2016/05/16/exercise-prevent-can
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="14-ethics_files/figure-html/catalan-corrected-1.png" style="width:100.0%"></p>
+<figure><p><img data-src="14-ethics_files/figure-revealjs/catalan-corrected-1.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -529,7 +529,7 @@ Sharon Begley. <a href="https://www.statnews.com/2016/05/16/exercise-prevent-can
 </section><section id="what-might-risk-assessment-look-like" class="slide level2"><h2>What might “risk assessment” look like?</h2>
 <p>Something we will study after spring break:</p>
 
-<img data-src="14-ethics_files/figure-html/unnamed-chunk-4-1.png" width="672" class="r-stretch"><p>Above the line means high risk means no bail. Is this progress?</p>
+<img data-src="14-ethics_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"><p>Above the line means high risk means no bail. Is this progress?</p>
 </section><section id="what-happens-when-we-try-predictive-policing" class="slide level2 small"><h2>What happens when we try “predictive policing”?</h2>
 <p>2016 ProPublica article on algorithm used for rating a defendant’s risk of future crime:</p>
 <div class="columns">
@@ -594,9 +594,9 @@ Sharon Begley. <a href="https://www.statnews.com/2016/05/16/exercise-prevent-can
 <p>Was the publication of this model ethical? Does the open-source nature of the code affect your answer? Is it ethical to use this software? Does your answer change depending on the intended use?</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(wru)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(wru)</span>
 <span id="cb3-2"><a></a><span class="fu">predict_race</span>(<span class="at">voter.file =</span> voters, <span class="at">surname.only =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
-<span id="cb3-3"><a></a>  <span class="fu">select</span>(surname, pred.whi, pred.bla, pred.his, pred.asi, pred.oth)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-3"><a></a>  <span class="fu">select</span>(surname, pred.whi, pred.bla, pred.his, pred.asi, pred.oth)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      surname    pred.whi    pred.bla     pred.his    pred.asi    pred.oth
 1      Khanna 0.045110474 0.003067623 0.0068522723 0.860411906 0.084557725
@@ -614,9 +614,9 @@ Sharon Begley. <a href="https://www.statnews.com/2016/05/16/exercise-prevent-can
 </section><section id="wru-package-2" class="slide level2"><h2>
 <strong>wru</strong> package</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>me <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">surname =</span> <span class="st">"Zito"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>me <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">surname =</span> <span class="st">"Zito"</span>)</span>
 <span id="cb5-2"><a></a></span>
-<span id="cb5-3"><a></a><span class="fu">predict_race</span>(<span class="at">voter.file =</span> me, <span class="at">surname.only =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-3"><a></a><span class="fu">predict_race</span>(<span class="at">voter.file =</span> me, <span class="at">surname.only =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  surname  pred.whi   pred.bla   pred.his    pred.asi   pred.oth
 1    Zito 0.9220001 0.00419631 0.03968994 0.009652312 0.02446131</code></pre>
@@ -1026,6 +1026,41 @@ A conversation with UCLA internet studies scholar Safiya Noble<br></p>
           RevealZoom
         ]
       });
+    </script><script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
     </script><script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
@@ -1074,13 +1109,14 @@ A conversation with UCLA internet studies scholar Safiya Noble<br></p>
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
