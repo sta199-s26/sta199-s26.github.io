@@ -2,6 +2,9 @@
 title: "Write-up and presentation"
 subtitle: "Milestone 5"
 categories: "Project"
+execute:
+  echo: false
+  eval: true
 ---
 
 # Write-up
@@ -159,3 +162,121 @@ Are the slides well organized, readable, not full of text, featuring figures wit
   - Does the analysis answer the question?
   - Are the conclusion(s) made based on the analysis justifiable?
   - Are the limitations carefully considered and articulated?
+  
+### Presentation order
+
+```{r}
+#| message: false
+library(tidyverse)
+library(gt)
+library(googlesheets4)
+gs4_deauth()
+
+make_presentation_table <- function(df) {
+  df |>
+    mutate(team_name = paste0("[", team_name, "](", repo_url, ")")) |>
+    mutate(presentation = paste0("[pdf](", presentation_url, ")")) |>
+    select(-repo_url, -presentation_url)  |>
+    gt() |>
+    fmt_markdown(
+      columns = everything() 
+    ) |>
+    cols_label(
+      team_name = "Team",
+      presentation = "Presentation"
+    )
+}
+```
+
+::: panel-tabset
+## L1 - 8:30 am
+
+```{r}
+#| message: false
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/1qnxDcCxjlBe2kNB9jRDQi8ui05tG4qlacdukOQ383dM/edit?usp=sharing", 
+                    sheet = paste0("lab_", 1))
+make_presentation_table(teams)
+```
+
+## L2 - 10:05 am
+
+```{r}
+#| message: false
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/1qnxDcCxjlBe2kNB9jRDQi8ui05tG4qlacdukOQ383dM/edit?usp=sharing", 
+                    sheet = paste0("lab_", 2))
+make_presentation_table(teams)
+```
+
+## L3 - 10:05 am
+
+```{r}
+#| message: false
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/1qnxDcCxjlBe2kNB9jRDQi8ui05tG4qlacdukOQ383dM/edit?usp=sharing", 
+                    sheet = paste0("lab_", 3))
+make_presentation_table(teams)
+```
+
+## L4 - 11:45 am
+
+```{r}
+#| message: false
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/1qnxDcCxjlBe2kNB9jRDQi8ui05tG4qlacdukOQ383dM/edit?usp=sharing", 
+                    sheet = paste0("lab_", 4))
+make_presentation_table(teams)
+```
+
+## L5 - 11:45 am
+
+```{r}
+#| message: false
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/1qnxDcCxjlBe2kNB9jRDQi8ui05tG4qlacdukOQ383dM/edit?usp=sharing", 
+                    sheet = paste0("lab_", 5))
+make_presentation_table(teams)
+```
+
+## L6 - 1:25 pm
+
+```{r}
+#| message: false
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/1qnxDcCxjlBe2kNB9jRDQi8ui05tG4qlacdukOQ383dM/edit?usp=sharing", 
+                    sheet = paste0("lab_", 6))
+make_presentation_table(teams)
+```
+
+## L7 - 1:25 pm
+
+```{r}
+#| message: false
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/1qnxDcCxjlBe2kNB9jRDQi8ui05tG4qlacdukOQ383dM/edit?usp=sharing", 
+                    sheet = paste0("lab_", 7))
+make_presentation_table(teams)
+```
+
+## L8 - 3:05 pm
+
+```{r}
+#| message: false
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/1qnxDcCxjlBe2kNB9jRDQi8ui05tG4qlacdukOQ383dM/edit?usp=sharing", 
+                    sheet = paste0("lab_", 8))
+make_presentation_table(teams)
+```
+
+## L9 - 3:05 pm
+
+```{r}
+#| message: false
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/1qnxDcCxjlBe2kNB9jRDQi8ui05tG4qlacdukOQ383dM/edit?usp=sharing", 
+                    sheet = paste0("lab_", 9))
+make_presentation_table(teams)
+```
+
+## L10 - 4:40 pm
+
+```{r}
+#| message: false
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/1qnxDcCxjlBe2kNB9jRDQi8ui05tG4qlacdukOQ383dM/edit?usp=sharing", 
+                    sheet = paste0("lab_", 10))
+make_presentation_table(teams)
+```
+:::
+  
