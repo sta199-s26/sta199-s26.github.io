@@ -54,6 +54,23 @@ Which of the following is true about linear regression models?
 
 ![](images/17/nathan.png){fig-align="center"}
 
+
+## Data Manager for ER
+
+:::::: columns
+:::: {.column width="50%"}
+{{< qrcode https://forms.gle/euNGfxbmZzBJGK1j7 width=300 height=300 >}}
+::::
+
+:::: {.column width="50%"}
+- Due: March 28th, 2026 11:59pm;
+- Use STA 199 in real-world application;
+- Support local Durham community.
+::::
+
+
+::::::
+
 ## Bookbagging this Thursday! {.scrollable}
 
 :::::: columns
@@ -81,7 +98,9 @@ Get great advice about course selection from the old broads in the stats mafia:
 If you will not be physically present during your team's presentation in lab this Thursday...
 
 ::: incremental
+- There are too many of you to make special arrangements;
 - There will not be a remote option;
+- Your team will present without you;
 - You should communicate with your group in advance;
 - Everyone on the team gets the same grade on the presentation regardless their attendance;
 - We leave it to you to police this. If someone doesn't communicate, doesn't contribute, and flakes on the presentation, tear them to shreds in the peer eval.
