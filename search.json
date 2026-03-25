@@ -1171,78 +1171,652 @@
     "objectID": "slides/18-multiple-linear-regression-2-slides.html#wanana-datafest",
     "href": "slides/18-multiple-linear-regression-2-slides.html#wanana-datafest",
     "title": "Multiple Linear Regression 2",
-    "section": "Wanana @ DataFest",
-    "text": "Wanana @ DataFest"
+    "section": "WANANA @ DataFest!",
+    "text": "WANANA @ DataFest!"
   },
   {
-    "objectID": "slides/18-multiple-linear-regression-2-slides.html#bookbagging-reminder-again",
-    "href": "slides/18-multiple-linear-regression-2-slides.html#bookbagging-reminder-again",
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#bookbagging-tomorrow",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#bookbagging-tomorrow",
     "title": "Multiple Linear Regression 2",
-    "section": "Bookbagging reminder again",
-    "text": "Bookbagging reminder again"
+    "section": "Bookbagging tomorrow!",
+    "text": "Bookbagging tomorrow!\n\n\n\n\nGet great advice about course selection from the old broads in the stats mafia:\n\nFree boba!\nThursday 3/26 7pm - 9pm;\nSocial Sciences 136\nInstagram: @dukessmu"
   },
   {
-    "objectID": "slides/18-multiple-linear-regression-2-slides.html#advice-about-presentation",
-    "href": "slides/18-multiple-linear-regression-2-slides.html#advice-about-presentation",
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#presentations-tomorrow",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#presentations-tomorrow",
     "title": "Multiple Linear Regression 2",
-    "section": "advice about presentation",
-    "text": "advice about presentation"
+    "section": "Presentations tomorrow",
+    "text": "Presentations tomorrow\n\nKeep it tight: five minutes;\nThere is no “correct” number of slides of figures or whatever, but see bullet one;\nIf you’re absent, be extra sure to pull your weight so your group doesn’t flame you on the peer eval;\nWe don’t want to see any code whatsoever in these presentations;\nBad things will happen if we don’t have all of the slide decks launched and ready to go at the start of lab;\nMake sure that your file presentations.pdf is up-to-date and your website is working before 8AM tomorrow."
   },
   {
-    "objectID": "slides/18-multiple-linear-regression-2-slides.html#presentation-logistics",
-    "href": "slides/18-multiple-linear-regression-2-slides.html#presentation-logistics",
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#population-model",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#population-model",
     "title": "Multiple Linear Regression 2",
-    "section": "presentation logistics",
-    "text": "presentation logistics"
+    "section": "Population model",
+    "text": "Population model\nMultiple linear regression captures the relationship between a numerical outcome \\(Y\\) and many numerical predictors \\(X_1\\), \\(X_2\\), …, \\(X_p\\):\n\\[\\Large{Y = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + ...+ \\beta_p X_p+\\epsilon}\\]\n\n\n\\(\\beta_0\\): True intercept of the relationship between the \\(X_j\\) and \\(Y\\)\n\n\n\\(\\beta_j\\): True slope of the relationship between \\(X_j\\) and \\(Y\\)\n\n\n\\(\\epsilon\\): Error (residual)\n\n\nThe model with the greek letters and the error term is the “true,” idealized, population relationship that we could access if we had infinite amounts of perfect data. But we don’t, so we have to settle for…"
   },
   {
-    "objectID": "slides/18-multiple-linear-regression-2-slides.html#does-it-matter-what-the-baseline-is",
-    "href": "slides/18-multiple-linear-regression-2-slides.html#does-it-matter-what-the-baseline-is",
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#estimated-model",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#estimated-model",
     "title": "Multiple Linear Regression 2",
-    "section": "Does it matter what the baseline is?",
-    "text": "Does it matter what the baseline is?\nSometimes the application suggests a natural choice. As long as you understand and you’re consistent and your communication is clear, often doesn’t matter"
+    "section": "Estimated model",
+    "text": "Estimated model\n\\[\\Large{\\hat{Y} = b_0 + b_1 X_1 + b_2 X_2 + ... + b_pX_p}\\]\n\n\n\\(b_j\\): Estimated slope of the relationship between \\(X_j\\) and \\(Y\\);\n\n\\(b_0\\): your prediction for \\(Y\\) if all the predictors equal zero;\nNo error term!\n\n\nThis is your best guess at the true regression function based on the noisy, meager, imperfect data you actually have access to. We still compute the \\(b_j\\) using the principle of least squares: pick the estimates that make the sum of squared residuals as small as possible."
   },
   {
-    "objectID": "slides/18-multiple-linear-regression-2-slides.html#is-interaction-the-same-as-separate-simple-models-same-estimates-but-different-uq",
-    "href": "slides/18-multiple-linear-regression-2-slides.html#is-interaction-the-same-as-separate-simple-models-same-estimates-but-different-uq",
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#example-one-numerical-predictor",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#example-one-numerical-predictor",
     "title": "Multiple Linear Regression 2",
-    "section": "Is interaction the same as separate simple models? Same estimates, but different UQ",
-    "text": "Is interaction the same as separate simple models? Same estimates, but different UQ"
+    "section": "Example: one numerical predictor",
+    "text": "Example: one numerical predictor"
   },
   {
-    "objectID": "slides/18-multiple-linear-regression-2.html#bookbagging-reminder-again",
-    "href": "slides/18-multiple-linear-regression-2.html#bookbagging-reminder-again",
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#example-one-numerical-predictor-1",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#example-one-numerical-predictor-1",
     "title": "Multiple Linear Regression 2",
-    "section": "Bookbagging reminder again",
-    "text": "Bookbagging reminder again"
+    "section": "Example: one numerical predictor",
+    "text": "Example: one numerical predictor\n\nbm_fl_fit &lt;- linear_reg() |&gt;\n  fit(body_mass_g ~ flipper_length_mm, data = penguins)\n\ntidy(bm_fl_fit)\n\n# A tibble: 2 × 5\n  term              estimate std.error statistic   p.value\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)        -5781.     306.       -18.9 5.59e- 55\n2 flipper_length_mm     49.7      1.52      32.7 4.37e-107\n\n\n\\[\n\\widehat{body~mass}=-5780.83+49.68\\times flipper~length\n\\]"
   },
   {
-    "objectID": "slides/18-multiple-linear-regression-2.html#advice-about-presentation",
-    "href": "slides/18-multiple-linear-regression-2.html#advice-about-presentation",
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#example-one-numerical-predictor-2",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#example-one-numerical-predictor-2",
     "title": "Multiple Linear Regression 2",
-    "section": "advice about presentation",
-    "text": "advice about presentation"
+    "section": "Example: one numerical predictor",
+    "text": "Example: one numerical predictor\n\n\n\n\n\n\n\n\n\n\n\n\nnew_penguin &lt;- tibble(\n  flipper_length_mm = 205\n  )\n\npredict(bm_fl_fit, \n        new_penguin)\n\n# A tibble: 1 × 1\n  .pred\n  &lt;dbl&gt;\n1 4405."
   },
   {
-    "objectID": "slides/18-multiple-linear-regression-2.html#presentation-logistics",
-    "href": "slides/18-multiple-linear-regression-2.html#presentation-logistics",
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#example-one-categorical-predictor",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#example-one-categorical-predictor",
     "title": "Multiple Linear Regression 2",
-    "section": "presentation logistics",
-    "text": "presentation logistics"
+    "section": "Example: “one categorical predictor”",
+    "text": "Example: “one categorical predictor”"
   },
   {
-    "objectID": "slides/18-multiple-linear-regression-2.html#does-it-matter-what-the-baseline-is",
-    "href": "slides/18-multiple-linear-regression-2.html#does-it-matter-what-the-baseline-is",
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#example-one-categorical-predictor-1",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#example-one-categorical-predictor-1",
     "title": "Multiple Linear Regression 2",
-    "section": "Does it matter what the baseline is?",
-    "text": "Does it matter what the baseline is?\nSometimes the application suggests a natural choice. As long as you understand and you’re consistent and your communication is clear, often doesn’t matter"
+    "section": "Example: “one categorical predictor”",
+    "text": "Example: “one categorical predictor”\nThis actually gets treated as multiple binary (0/1) predictors:\n\nbm_island_fit &lt;- linear_reg() |&gt;\n  fit(body_mass_g ~ island, data = penguins)\n\ntidy(bm_island_fit)\n\n# A tibble: 3 × 5\n  term            estimate std.error statistic   p.value\n  &lt;chr&gt;              &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)        4716.      48.5      97.3 8.93e-250\n2 islandDream       -1003.      74.2     -13.5 1.42e- 33\n3 islandTorgersen   -1010.     100.      -10.1 4.66e- 21\n\n\n\\[\n\\begin{aligned}\n\\widehat{body~mass} = 4716 &- 1003 \\times islandDream \\\\ &- 1010 \\times islandTorgersen\n\\end{aligned}\n\\]"
   },
   {
-    "objectID": "slides/18-multiple-linear-regression-2.html#is-interaction-the-same-as-separate-simple-models-same-estimates-but-different-uq",
-    "href": "slides/18-multiple-linear-regression-2.html#is-interaction-the-same-as-separate-simple-models-same-estimates-but-different-uq",
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#example-one-categorical-predictor-2",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#example-one-categorical-predictor-2",
     "title": "Multiple Linear Regression 2",
-    "section": "Is interaction the same as separate simple models? Same estimates, but different UQ",
-    "text": "Is interaction the same as separate simple models? Same estimates, but different UQ"
+    "section": "Example: “one categorical predictor”",
+    "text": "Example: “one categorical predictor”\nIt’s just a concise way of summarizing the within-group means of the response variable:\n\n\n\npenguins |&gt;\n  group_by(island) |&gt;\n  summarize(\n    avg_body_mass = mean(body_mass_g, na.rm = TRUE)\n  )\n\n# A tibble: 3 × 2\n  island    avg_body_mass\n  &lt;fct&gt;             &lt;dbl&gt;\n1 Biscoe            4716.\n2 Dream             3713.\n3 Torgersen         3706.\n\n\n\n\nnew_penguins = tibble(\n  island = c(\"Biscoe\", \"Dream\", \"Torgersen\")\n)\n\npredict(bm_island_fit, \n        new_penguins)\n\n# A tibble: 3 × 1\n  .pred\n  &lt;dbl&gt;\n1 4716.\n2 3713.\n3 3706."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#example-numerical-and-categorical-predictors",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#example-numerical-and-categorical-predictors",
+    "title": "Multiple Linear Regression 2",
+    "section": "Example: numerical and categorical predictors",
+    "text": "Example: numerical and categorical predictors"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#example-numerical-and-categorical-predictors-1",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#example-numerical-and-categorical-predictors-1",
+    "title": "Multiple Linear Regression 2",
+    "section": "Example: numerical and categorical predictors",
+    "text": "Example: numerical and categorical predictors\nThe additive model:\n\nbm_fl_island_fit &lt;- linear_reg() |&gt;\n  fit(body_mass_g ~ flipper_length_mm + island, data = penguins)\n\ntidy(bm_fl_island_fit)\n\n# A tibble: 4 × 5\n  term              estimate std.error statistic  p.value\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)        -4625.     392.      -11.8  4.29e-27\n2 flipper_length_mm     44.5      1.87     23.9  1.65e-74\n3 islandDream         -262.      55.0      -4.77 2.75e- 6\n4 islandTorgersen     -185.      70.3      -2.63 8.84e- 3\n\n\n\\[\n\\begin{aligned}\n\\widehat{body~mass} = -4625 &+ 44.5 \\times flipper~length \\\\\n&- 262 \\times Dream \\\\\n&- 185 \\times Torgersen\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#example-numerical-and-categorical-predictors-2",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#example-numerical-and-categorical-predictors-2",
+    "title": "Multiple Linear Regression 2",
+    "section": "Example: numerical and categorical predictors",
+    "text": "Example: numerical and categorical predictors\nChange one character in the code, and you get the interaction model:\n\nbm_fl_island_int_fit &lt;- linear_reg() |&gt;\n  fit(body_mass_g ~ flipper_length_mm * island, data = penguins)\n\ntidy(bm_fl_island_int_fit) |&gt; select(term, estimate)\n\n# A tibble: 6 × 2\n  term                              estimate\n  &lt;chr&gt;                                &lt;dbl&gt;\n1 (Intercept)                        -5464. \n2 flipper_length_mm                     48.5\n3 islandDream                         3551. \n4 islandTorgersen                     3218. \n5 flipper_length_mm:islandDream        -19.4\n6 flipper_length_mm:islandTorgersen    -17.4\n\n\n\\[\n\\begin{aligned}\n\\widehat{body~mass} = -5464 &+ 48.5 \\times flipper~length \\\\\n&+ 3551 \\times Dream \\\\\n&+ 3218 \\times Torgersen \\\\\n&- 19.4 \\times flipper~length*Dream \\\\\n&- 17.4 \\times flipper~length*Torgersen\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#example-numerical-and-categorical-predictors-3",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#example-numerical-and-categorical-predictors-3",
+    "title": "Multiple Linear Regression 2",
+    "section": "Example: numerical and categorical predictors",
+    "text": "Example: numerical and categorical predictors\nSame code with a different model fit:\n\n\n\nnew_penguin &lt;- tibble(\n  flipper_length_mm = 205,\n  island = \"Biscoe\"\n  )\n\npredict(bm_fl_island_fit, \n        new_data = new_penguin)\n\n# A tibble: 1 × 1\n  .pred\n  &lt;dbl&gt;\n1 4506.\n\n\n\n\nnew_penguin &lt;- tibble(\n  flipper_length_mm = 205,\n  island = \"Biscoe\"\n  )\n\npredict(bm_fl_island_int_fit, \n        new_data = new_penguin)\n\n# A tibble: 1 × 1\n  .pred\n  &lt;dbl&gt;\n1 4488."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#example-many-numerical-predictors",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#example-many-numerical-predictors",
+    "title": "Multiple Linear Regression 2",
+    "section": "Example: many numerical predictors",
+    "text": "Example: many numerical predictors\n2 predictors + 1 response = 3 dimensions. Instead of a line of best fit, it’s a plane of best fit:"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#example-many-numerical-predictors-1",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#example-many-numerical-predictors-1",
+    "title": "Multiple Linear Regression 2",
+    "section": "Example: many numerical predictors",
+    "text": "Example: many numerical predictors\n\nbm_fl_bl_fit &lt;- linear_reg() |&gt;\n  fit(body_mass_g ~ flipper_length_mm + bill_length_mm, data = penguins)\n\ntidy(bm_fl_bl_fit)\n\n# A tibble: 3 × 5\n  term              estimate std.error statistic  p.value\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)       -5737.      308.      -18.6  7.80e-54\n2 flipper_length_mm    48.1       2.01     23.9  7.56e-75\n3 bill_length_mm        6.05      5.18      1.17 2.44e- 1\n\n\n\\[\n\\small\\widehat{body~mass}=-5736+48.1\\times flipper~length+6\\times bill~length\n\\]"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#example-many-numerical-predictors-2",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#example-many-numerical-predictors-2",
+    "title": "Multiple Linear Regression 2",
+    "section": "Example: many numerical predictors",
+    "text": "Example: many numerical predictors\n\nnew_penguin &lt;- tibble(\n  flipper_length_mm = 200,\n  bill_length_mm = 45\n)\n\npredict(bm_fl_bl_fit, new_data = new_penguin)\n\n# A tibble: 1 × 1\n  .pred\n  &lt;dbl&gt;\n1 4164."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#welcome-to-statistics",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#welcome-to-statistics",
+    "title": "Multiple Linear Regression 2",
+    "section": "Welcome to statistics!",
+    "text": "Welcome to statistics!\nThe code was basically the same every time. In this second half of the course, the code itself is not the primary complication. The code is merely a labor-saving device. Our focus shifts to understanding the conceptual and technical underpinnings of the code and interpreting the output correctly. This is subtle, and it tends to trip people up."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#does-it-matter-what-the-base-level-is",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#does-it-matter-what-the-base-level-is",
+    "title": "Multiple Linear Regression 2",
+    "section": "Does it matter what the base level is?",
+    "text": "Does it matter what the base level is?\nRegarding the leveling of a categorical predictor:\n\nIt doesn’t matter technically. The math doesn’t care;\nAs long as you know what the baseline is, you are consistent throughout your analysis, and you interpret everything correctly, you’re probably good;\nSometimes the application suggests a natural choice of baseline. You make interpretation and visualization easier if you respect that."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#is-interaction-the-same-as-separate-regressions",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#is-interaction-the-same-as-separate-regressions",
+    "title": "Multiple Linear Regression 2",
+    "section": "Is interaction the same as separate regressions?",
+    "text": "Is interaction the same as separate regressions?\nSort of. You get the same estimates of the slopes and intercepts, but the uncertainty quantification (standard errors) is different.\nThis matters, but we suppress the nuance in this class."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#the-interaction-model",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#the-interaction-model",
+    "title": "Multiple Linear Regression 2",
+    "section": "The interaction model",
+    "text": "The interaction model\n\nlinear_reg() |&gt;\n  fit(body_mass_g ~ flipper_length_mm * island, data = penguins) |&gt;\n  tidy() |&gt;\n  select(term, estimate, std.error)\n\n# A tibble: 6 × 3\n  term                              estimate std.error\n  &lt;chr&gt;                                &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)                        -5464.     431.  \n2 flipper_length_mm                     48.5      2.05\n3 islandDream                         3551.     969.  \n4 islandTorgersen                     3218.    1680.  \n5 flipper_length_mm:islandDream        -19.4      4.94\n6 flipper_length_mm:islandTorgersen    -17.4      8.73\n\n\nSo on Biscoe island (where Dream = Torgersen = 0), the line is\n\\[\n\\begin{aligned}\n\\widehat{body~mass} = -5464 &+ 48.5 \\times flipper~length\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#simple-regression-within-a-group",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#simple-regression-within-a-group",
+    "title": "Multiple Linear Regression 2",
+    "section": "Simple regression within a group",
+    "text": "Simple regression within a group\nIf we fit a simple model with the Biscoe subset of the data:\n\npenguins_biscoe &lt;- penguins |&gt;\n  filter(island == \"Biscoe\")\n\nlinear_reg() |&gt;\n  fit(body_mass_g ~ flipper_length_mm, data = penguins_biscoe) |&gt;\n  tidy()\n\n# A tibble: 2 × 5\n  term              estimate std.error statistic  p.value\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)        -5464.     435.       -12.6 8.48e-26\n2 flipper_length_mm     48.5      2.07      23.4 2.20e-54\n\n\nSame estimates, but different standard errors."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#the-default-picture",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#the-default-picture",
+    "title": "Multiple Linear Regression 2",
+    "section": "The default picture",
+    "text": "The default picture\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = island)) + \n  geom_point() + \n  geom_smooth(method = \"lm\")\n\n\nThese are separate simple regressions within each group. The slopes and the intercepts are the same as the interaction model, but the uncertainty bands are different."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#recap-our-first-look",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#recap-our-first-look",
+    "title": "Multiple Linear Regression 2",
+    "section": "Recap: our first look",
+    "text": "Recap: our first look\n\\(R^2\\) measures “goodness-of-fit:”\n\n\n\\(R^2\\) is “a Rotten Tomatoes score” for your model;\nIt ranges from 0 (horrific) to 1 (perfect) and measures how well the linear model fits the data;\nIn simple linear regression with one numerical predictor, \\(R^2\\) is literally equal to the square of the correlation coefficient between the predictor \\(X\\) and the numerical response \\(Y\\);\nWhen you move from one predictor to many, this relationship breaks down, but \\(R^2\\) remains meaningful.\n\n\nSo what is it, actually?"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#reminder-residuals",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#reminder-residuals",
+    "title": "Multiple Linear Regression 2",
+    "section": "Reminder: residuals",
+    "text": "Reminder: residuals\nEvery data point has one:\n\nSome are big, some are small. Some are above the line (positive), and some are below the line (negative)."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#reminder-residuals-1",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#reminder-residuals-1",
+    "title": "Multiple Linear Regression 2",
+    "section": "Reminder: residuals",
+    "text": "Reminder: residuals\nThe residuals are what’s left over after the model attempts to “explain” the response:\n\\[\ne_i = \\text{observed} - \\text{predicted} = y_i - \\hat{y}_i.\n\\]\nEvery data point has one:\n\naugment(bm_fl_fit, penguins) |&gt;\n  select(flipper_length_mm, body_mass_g, .pred, .resid)\n\n# A tibble: 344 × 4\n   flipper_length_mm body_mass_g .pred  .resid\n               &lt;int&gt;       &lt;int&gt; &lt;dbl&gt;   &lt;dbl&gt;\n 1               181        3750 3212.  538.  \n 2               186        3800 3461.  339.  \n 3               195        3250 3908. -658.  \n 4                NA          NA   NA    NA   \n 5               193        3450 3808. -358.  \n 6               190        3650 3659.   -9.43\n 7               181        3625 3212.  413.  \n 8               195        4675 3908.  767.  \n 9               193        3475 3808. -333.  \n10               190        4250 3659.  591.  \n# ℹ 334 more rows"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#how-it-started",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#how-it-started",
+    "title": "Multiple Linear Regression 2",
+    "section": "How it started",
+    "text": "How it started\nThe original distribution of the response. This is the mess we’re trying to clean up with a model:\n\n\n\n# A tibble: 1 × 3\n  type        variance   std\n  &lt;chr&gt;          &lt;dbl&gt; &lt;dbl&gt;\n1 body_mass_g  643131.  802."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#how-its-going",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#how-its-going",
+    "title": "Multiple Linear Regression 2",
+    "section": "How it’s going",
+    "text": "How it’s going\nThe distribution of the residuals (the leftover mess) after the model tries to explain (clean up):\n\n\n\n# A tibble: 2 × 3\n  type        variance   std\n  &lt;chr&gt;          &lt;dbl&gt; &lt;dbl&gt;\n1 .resid       154999.  394.\n2 body_mass_g  643131.  802."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#the-main-idea",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#the-main-idea",
+    "title": "Multiple Linear Regression 2",
+    "section": "The main idea",
+    "text": "The main idea\nThe model is trying to “explain” the variation in the response:\n\nVariation in the response (blue distribution), is the mess we’re trying to clean up;\nVariation in the residuals (red distribution), is the leftover after the model gives it a shot;\nThe more leftover there is, the worse the model did;\nYou can quantify this with the variance. The smaller the variance of the residuals relative to the original response variance, the better.\n\n\nThat’s what \\(R^2\\) actually is: the proportion of the variance in the response explained by the model."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#r2approx-0",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#r2approx-0",
+    "title": "Multiple Linear Regression 2",
+    "section": "\\(R^2\\approx 0\\)",
+    "text": "\\(R^2\\approx 0\\)\nHorrifically awful fit. The model didn’t explain (clean up) anything:\n\n\n\n# A tibble: 1 × 3\n  var_y var_resid r.squared\n  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1  1.02      1.02  0.000450"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#r2approx-0.28",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#r2approx-0.28",
+    "title": "Multiple Linear Regression 2",
+    "section": "\\(R^2\\approx 0.28\\)",
+    "text": "\\(R^2\\approx 0.28\\)\n\n\n\n# A tibble: 1 × 3\n  var_y var_resid r.squared\n  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 0.805     0.574     0.287"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#r2approx-0.63",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#r2approx-0.63",
+    "title": "Multiple Linear Regression 2",
+    "section": "\\(R^2\\approx 0.63\\)",
+    "text": "\\(R^2\\approx 0.63\\)\n\n\n\n# A tibble: 1 × 3\n  var_y var_resid r.squared\n  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 0.701     0.255     0.636"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#r2approx-0.97",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#r2approx-0.97",
+    "title": "Multiple Linear Regression 2",
+    "section": "\\(R^2\\approx 0.97\\)",
+    "text": "\\(R^2\\approx 0.97\\)\n\n\n\n# A tibble: 1 × 3\n  var_y var_resid r.squared\n  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 0.762    0.0230     0.970"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#r2approx-1",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#r2approx-1",
+    "title": "Multiple Linear Regression 2",
+    "section": "\\(R^2\\approx 1\\)",
+    "text": "\\(R^2\\approx 1\\)\nPerfect fit. The model explained (cleaned up) everything:\n\n\n\n# A tibble: 1 × 3\n  var_y var_resid r.squared\n  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 0.847  0.000408     1.000"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#the-nitty-gritty",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#the-nitty-gritty",
+    "title": "Multiple Linear Regression 2",
+    "section": "The nitty gritty",
+    "text": "The nitty gritty\n\\[\n\\begin{aligned}\n    R^2\\,\n    =\n    \\begin{matrix}\n        \\text{proportion of}\\\\\n        \\text{variation explained}\n    \\end{matrix}\n    &=\n    1-\n    \\begin{matrix}\n        \\text{proportion of}\\\\\n        \\text{variation unexplained}\n    \\end{matrix}\\\\[15pt]\n    &=\n    1-\\frac{\\text{unexplained variation}}{\\text{total variation}}\n    \\\\[15pt]\n    &=\n    1-\\frac{\\text{spread of residuals}}{\\text{spread of response}}\n    \\\\[15pt]\n    &=\n    1-\\frac{\\text{var}(e_i)}{\\text{var}(y_i)}\n    .\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#literally",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#literally",
+    "title": "Multiple Linear Regression 2",
+    "section": "Literally",
+    "text": "Literally\n\naugment(bm_fl_fit, penguins) |&gt;\n  summarize(\n    var_y = var(body_mass_g, na.rm = TRUE),\n    var_e = var(.resid, na.rm = TRUE),\n    R2 = 1 - var_e / var_y\n  )\n\n# A tibble: 1 × 3\n    var_y   var_e    R2\n    &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;\n1 643131. 154999. 0.759\n\n\n\n\nlinear_reg() |&gt;\n  fit(body_mass_g ~ flipper_length_mm, penguins) |&gt;\n  glance() |&gt;\n  select(r.squared)\n\n# A tibble: 1 × 1\n  r.squared\n      &lt;dbl&gt;\n1     0.759"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#summary",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#summary",
+    "title": "Multiple Linear Regression 2",
+    "section": "Summary",
+    "text": "Summary\n\n\\(R^2\\) is a number between zero and one, and it represents the proportion of the variance in the response \\(Y\\) that is explained by the model fit;\nThis is the interpretation, regardless how many predictors you have;\nIn simple regression with one numerical predictor, \\(R^2\\) it is also the square of the correlation coefficient, but this doesn’t generalize to the multivariate setting."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#model-selection-1",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#model-selection-1",
+    "title": "Multiple Linear Regression 2",
+    "section": "Model selection",
+    "text": "Model selection\nQuestion: Given many competing models for the same response, which model is “best”? What does that even mean?\n\nAnswer: Assign a “quality score” to each model, and pick the model with the best score:\n\n\nModel\nScore\nVerdict\n\n\n\nSimple\n0.1\n❌\n\n\nAdditive\n0.5\n✅\n\n\nInteraction\n0.48\n❌\n\n\n\n\n\nVariable selection: all of our models were linear, and they differed only by which predictor variables are included. By ranking models by quality score and picking the “best” one, we can determine which predictors are the “most important” to include."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#selection-criteria",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#selection-criteria",
+    "title": "Multiple Linear Regression 2",
+    "section": "Selection criteria",
+    "text": "Selection criteria\nThis is a big area of statistical research. There are loads of “quality scores” you could consider, and they prioritize different things: predictive accuracy, goodness-of-fit, simplicity, fairness, etc.\n\n\\(R^2\\)\nadjusted \\(R^2\\)\n\nAkaike Information criterion (AIC)\nBayesian information criterion (BIC)\n… so many more\n\nWe won’t go into detail, but you will if you keep studying statistics."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#tidymodels-reports-many-of-these-for-free",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#tidymodels-reports-many-of-these-for-free",
+    "title": "Multiple Linear Regression 2",
+    "section": "\ntidymodels reports many of these for free",
+    "text": "tidymodels reports many of these for free\n\nbm_fl_fit |&gt;\n  glance() |&gt;\n  select(r.squared, adj.r.squared, AIC, BIC)\n\n# A tibble: 1 × 4\n  r.squared adj.r.squared   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     0.759         0.758 5063. 5074."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#r2s-dirty-little-secret",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#r2s-dirty-little-secret",
+    "title": "Multiple Linear Regression 2",
+    "section": "\n\\(R^2\\)’s dirty little secret",
+    "text": "\\(R^2\\)’s dirty little secret\n\\(R^2\\) gives participation trophies. It always goes up when you add any new variable to the model, even if that variable is worthless."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#adding-a-phony-variable",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#adding-a-phony-variable",
+    "title": "Multiple Linear Regression 2",
+    "section": "Adding a phony variable",
+    "text": "Adding a phony variable\nThe original model fit:\n\nlinear_reg() |&gt;\n  fit(body_mass_g ~ flipper_length_mm, penguins) |&gt;\n  glance() |&gt;\n  pull(r.squared)\n\n[1] 0.7589925\n\n\n\nAdd a predictor that is literally just a bunch of random numbers:\n\nnoisy_penguins &lt;- penguins |&gt;\n  mutate(\n    bullshit = rnorm(nrow(penguins))\n  )\n\nlinear_reg() |&gt;\n  fit(body_mass_g ~ flipper_length_mm + bullshit, noisy_penguins) |&gt;\n  glance() |&gt;\n  pull(r.squared)\n\n[1] 0.7600283"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#adjusted-r2",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#adjusted-r2",
+    "title": "Multiple Linear Regression 2",
+    "section": "Adjusted \\(R^2\\)\n",
+    "text": "Adjusted \\(R^2\\)\n\nBecause vanilla \\(R^2\\) blithely rewards the addition of any variable, no matter how meaningless, you shouldn’t use it for model selection. Instead, use adjusted \\(R^2\\). The formula is in the textbook if you’re dying to know, but here’s the tea:\n\nadjusted \\(R^2\\) penalizes the inclusion of unnecessary predictors;\nIt prioritizes a parsimonious model:\n\na model that fits/predicts well, and…\na model that’s not too complicated (so our pear brains can still understand it);\n\n\nOccam’s razor!"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#for-the-penguins",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#for-the-penguins",
+    "title": "Multiple Linear Regression 2",
+    "section": "For the penguins",
+    "text": "For the penguins\n\n\n\nbm_fl_fit |&gt; glance() |&gt;\n  pull(adj.r.squared)\n\n[1] 0.7582837\n\n\n\nbm_island_fit |&gt; glance() |&gt;\n  pull(adj.r.squared)\n\n[1] 0.3899995\n\n\n\nbm_fl_island_fit |&gt; glance() |&gt;\n  pull(adj.r.squared)\n\n[1] 0.7722296\n\n\n\n\nbm_fl_island_int_fit |&gt; glance() |&gt;\n  pull(adj.r.squared)\n\n[1] 0.7825604\n\n\n\nbm_fl_bl_fit |&gt; glance() |&gt;\n  pull(adj.r.squared)\n\n[1] 0.7585415"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#balancing-fit-and-complexity",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#balancing-fit-and-complexity",
+    "title": "Multiple Linear Regression 2",
+    "section": "Balancing fit and complexity",
+    "text": "Balancing fit and complexity\n\nMore complex models (i.e., models with more predictors) tend to fit the data at hand better, but may not generalize well to new data.\nModel selection criteria, like adjusted \\(R^2\\), help balance model fit and complexity to avoid overfitting by penalizing models with more predictors."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2-slides.html#overfitting",
+    "href": "slides/18-multiple-linear-regression-2-slides.html#overfitting",
+    "title": "Multiple Linear Regression 2",
+    "section": "Overfitting",
+    "text": "Overfitting\n\nOverfitting occurs when a model captures not only the underlying relationship between predictors and outcome but also the random noise in the data.\n\nOverfitted models tend to perform well on the observed data but poorly on new, unseen data.\n\nGood news: We have techniques to detect and prevent overfitting.\nBad news: We won’t get into those until next week."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#bookbagging-tomorrow",
+    "href": "slides/18-multiple-linear-regression-2.html#bookbagging-tomorrow",
+    "title": "Multiple Linear Regression 2",
+    "section": "Bookbagging tomorrow!",
+    "text": "Bookbagging tomorrow!\n\n\n\n\nGet great advice about course selection from the old broads in the stats mafia:\n\nFree boba!\nThursday 3/26 7pm - 9pm;\nSocial Sciences 136\nInstagram: @dukessmu"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#presentations-tomorrow",
+    "href": "slides/18-multiple-linear-regression-2.html#presentations-tomorrow",
+    "title": "Multiple Linear Regression 2",
+    "section": "Presentations tomorrow",
+    "text": "Presentations tomorrow\n\nKeep it tight: five minutes;\nThere is no “correct” number of slides of figures or whatever, but see bullet one;\nIf you’re absent, be extra sure to pull your weight so your group doesn’t flame you on the peer eval;\nWe don’t want to see any code whatsoever in these presentations;\nBad things will happen if we don’t have all of the slide decks launched and ready to go at the start of lab;\nMake sure that your file presentations.pdf is up-to-date and your website is working before 8AM tomorrow."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#population-model",
+    "href": "slides/18-multiple-linear-regression-2.html#population-model",
+    "title": "Multiple Linear Regression 2",
+    "section": "Population model",
+    "text": "Population model\nMultiple linear regression captures the relationship between a numerical outcome \\(Y\\) and many numerical predictors \\(X_1\\), \\(X_2\\), …, \\(X_p\\):\n\\[\\Large{Y = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + ...+ \\beta_p X_p+\\epsilon}\\]\n\n\n\n\\(\\beta_0\\): True intercept of the relationship between the \\(X_j\\) and \\(Y\\)\n\n\n\\(\\beta_j\\): True slope of the relationship between \\(X_j\\) and \\(Y\\)\n\n\n\\(\\epsilon\\): Error (residual)\n\n\n. . .\nThe model with the greek letters and the error term is the “true,” idealized, population relationship that we could access if we had infinite amounts of perfect data. But we don’t, so we have to settle for…"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#estimated-model",
+    "href": "slides/18-multiple-linear-regression-2.html#estimated-model",
+    "title": "Multiple Linear Regression 2",
+    "section": "Estimated model",
+    "text": "Estimated model\n\\[\\Large{\\hat{Y} = b_0 + b_1 X_1 + b_2 X_2 + ... + b_pX_p}\\]\n\n\n\\(b_j\\): Estimated slope of the relationship between \\(X_j\\) and \\(Y\\);\n\n\\(b_0\\): your prediction for \\(Y\\) if all the predictors equal zero;\nNo error term!\n\n. . .\nThis is your best guess at the true regression function based on the noisy, meager, imperfect data you actually have access to. We still compute the \\(b_j\\) using the principle of least squares: pick the estimates that make the sum of squared residuals as small as possible."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#example-one-numerical-predictor",
+    "href": "slides/18-multiple-linear-regression-2.html#example-one-numerical-predictor",
+    "title": "Multiple Linear Regression 2",
+    "section": "Example: one numerical predictor",
+    "text": "Example: one numerical predictor"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#example-one-numerical-predictor-1",
+    "href": "slides/18-multiple-linear-regression-2.html#example-one-numerical-predictor-1",
+    "title": "Multiple Linear Regression 2",
+    "section": "Example: one numerical predictor",
+    "text": "Example: one numerical predictor\n\nbm_fl_fit &lt;- linear_reg() |&gt;\n  fit(body_mass_g ~ flipper_length_mm, data = penguins)\n\ntidy(bm_fl_fit)\n\n# A tibble: 2 × 5\n  term              estimate std.error statistic   p.value\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)        -5781.     306.       -18.9 5.59e- 55\n2 flipper_length_mm     49.7      1.52      32.7 4.37e-107\n\n\n\\[\n\\widehat{body~mass}=-5780.83+49.68\\times flipper~length\n\\]"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#example-one-numerical-predictor-2",
+    "href": "slides/18-multiple-linear-regression-2.html#example-one-numerical-predictor-2",
+    "title": "Multiple Linear Regression 2",
+    "section": "Example: one numerical predictor",
+    "text": "Example: one numerical predictor\n\n\n\n\n\n\n\n\n\n\n\n\nnew_penguin &lt;- tibble(\n  flipper_length_mm = 205\n  )\n\npredict(bm_fl_fit, \n        new_penguin)\n\n# A tibble: 1 × 1\n  .pred\n  &lt;dbl&gt;\n1 4405."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#example-one-categorical-predictor",
+    "href": "slides/18-multiple-linear-regression-2.html#example-one-categorical-predictor",
+    "title": "Multiple Linear Regression 2",
+    "section": "Example: “one categorical predictor”",
+    "text": "Example: “one categorical predictor”"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#example-one-categorical-predictor-1",
+    "href": "slides/18-multiple-linear-regression-2.html#example-one-categorical-predictor-1",
+    "title": "Multiple Linear Regression 2",
+    "section": "Example: “one categorical predictor”",
+    "text": "Example: “one categorical predictor”\nThis actually gets treated as multiple binary (0/1) predictors:\n\nbm_island_fit &lt;- linear_reg() |&gt;\n  fit(body_mass_g ~ island, data = penguins)\n\ntidy(bm_island_fit)\n\n# A tibble: 3 × 5\n  term            estimate std.error statistic   p.value\n  &lt;chr&gt;              &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)        4716.      48.5      97.3 8.93e-250\n2 islandDream       -1003.      74.2     -13.5 1.42e- 33\n3 islandTorgersen   -1010.     100.      -10.1 4.66e- 21\n\n\n\\[\n\\begin{aligned}\n\\widehat{body~mass} = 4716 &- 1003 \\times islandDream \\\\ &- 1010 \\times islandTorgersen\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#example-one-categorical-predictor-2",
+    "href": "slides/18-multiple-linear-regression-2.html#example-one-categorical-predictor-2",
+    "title": "Multiple Linear Regression 2",
+    "section": "Example: “one categorical predictor”",
+    "text": "Example: “one categorical predictor”\nIt’s just a concise way of summarizing the within-group means of the response variable:\n\n\n\npenguins |&gt;\n  group_by(island) |&gt;\n  summarize(\n    avg_body_mass = mean(body_mass_g, na.rm = TRUE)\n  )\n\n# A tibble: 3 × 2\n  island    avg_body_mass\n  &lt;fct&gt;             &lt;dbl&gt;\n1 Biscoe            4716.\n2 Dream             3713.\n3 Torgersen         3706.\n\n\n\n\nnew_penguins = tibble(\n  island = c(\"Biscoe\", \"Dream\", \"Torgersen\")\n)\n\npredict(bm_island_fit, \n        new_penguins)\n\n# A tibble: 3 × 1\n  .pred\n  &lt;dbl&gt;\n1 4716.\n2 3713.\n3 3706."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#example-numerical-and-categorical-predictors",
+    "href": "slides/18-multiple-linear-regression-2.html#example-numerical-and-categorical-predictors",
+    "title": "Multiple Linear Regression 2",
+    "section": "Example: numerical and categorical predictors",
+    "text": "Example: numerical and categorical predictors"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#example-numerical-and-categorical-predictors-1",
+    "href": "slides/18-multiple-linear-regression-2.html#example-numerical-and-categorical-predictors-1",
+    "title": "Multiple Linear Regression 2",
+    "section": "Example: numerical and categorical predictors",
+    "text": "Example: numerical and categorical predictors\nThe additive model:\n\nbm_fl_island_fit &lt;- linear_reg() |&gt;\n  fit(body_mass_g ~ flipper_length_mm + island, data = penguins)\n\ntidy(bm_fl_island_fit)\n\n# A tibble: 4 × 5\n  term              estimate std.error statistic  p.value\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)        -4625.     392.      -11.8  4.29e-27\n2 flipper_length_mm     44.5      1.87     23.9  1.65e-74\n3 islandDream         -262.      55.0      -4.77 2.75e- 6\n4 islandTorgersen     -185.      70.3      -2.63 8.84e- 3\n\n\n\\[\n\\begin{aligned}\n\\widehat{body~mass} = -4625 &+ 44.5 \\times flipper~length \\\\\n&- 262 \\times Dream \\\\\n&- 185 \\times Torgersen\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#example-numerical-and-categorical-predictors-2",
+    "href": "slides/18-multiple-linear-regression-2.html#example-numerical-and-categorical-predictors-2",
+    "title": "Multiple Linear Regression 2",
+    "section": "Example: numerical and categorical predictors",
+    "text": "Example: numerical and categorical predictors\nChange one character in the code, and you get the interaction model:\n\nbm_fl_island_int_fit &lt;- linear_reg() |&gt;\n  fit(body_mass_g ~ flipper_length_mm * island, data = penguins)\n\ntidy(bm_fl_island_int_fit) |&gt; select(term, estimate)\n\n# A tibble: 6 × 2\n  term                              estimate\n  &lt;chr&gt;                                &lt;dbl&gt;\n1 (Intercept)                        -5464. \n2 flipper_length_mm                     48.5\n3 islandDream                         3551. \n4 islandTorgersen                     3218. \n5 flipper_length_mm:islandDream        -19.4\n6 flipper_length_mm:islandTorgersen    -17.4\n\n\n\\[\n\\begin{aligned}\n\\widehat{body~mass} = -5464 &+ 48.5 \\times flipper~length \\\\\n&+ 3551 \\times Dream \\\\\n&+ 3218 \\times Torgersen \\\\\n&- 19.4 \\times flipper~length*Dream \\\\\n&- 17.4 \\times flipper~length*Torgersen\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#example-numerical-and-categorical-predictors-3",
+    "href": "slides/18-multiple-linear-regression-2.html#example-numerical-and-categorical-predictors-3",
+    "title": "Multiple Linear Regression 2",
+    "section": "Example: numerical and categorical predictors",
+    "text": "Example: numerical and categorical predictors\nSame code with a different model fit:\n\n\n\nnew_penguin &lt;- tibble(\n  flipper_length_mm = 205,\n  island = \"Biscoe\"\n  )\n\npredict(bm_fl_island_fit, \n        new_data = new_penguin)\n\n# A tibble: 1 × 1\n  .pred\n  &lt;dbl&gt;\n1 4506.\n\n\n\n\nnew_penguin &lt;- tibble(\n  flipper_length_mm = 205,\n  island = \"Biscoe\"\n  )\n\npredict(bm_fl_island_int_fit, \n        new_data = new_penguin)\n\n# A tibble: 1 × 1\n  .pred\n  &lt;dbl&gt;\n1 4488."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#example-many-numerical-predictors",
+    "href": "slides/18-multiple-linear-regression-2.html#example-many-numerical-predictors",
+    "title": "Multiple Linear Regression 2",
+    "section": "Example: many numerical predictors",
+    "text": "Example: many numerical predictors\n2 predictors + 1 response = 3 dimensions. Instead of a line of best fit, it’s a plane of best fit:"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#example-many-numerical-predictors-1",
+    "href": "slides/18-multiple-linear-regression-2.html#example-many-numerical-predictors-1",
+    "title": "Multiple Linear Regression 2",
+    "section": "Example: many numerical predictors",
+    "text": "Example: many numerical predictors\n\nbm_fl_bl_fit &lt;- linear_reg() |&gt;\n  fit(body_mass_g ~ flipper_length_mm + bill_length_mm, data = penguins)\n\ntidy(bm_fl_bl_fit)\n\n# A tibble: 3 × 5\n  term              estimate std.error statistic  p.value\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)       -5737.      308.      -18.6  7.80e-54\n2 flipper_length_mm    48.1       2.01     23.9  7.56e-75\n3 bill_length_mm        6.05      5.18      1.17 2.44e- 1\n\n\n\\[\n\\small\\widehat{body~mass}=-5736+48.1\\times flipper~length+6\\times bill~length\n\\]"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#example-many-numerical-predictors-2",
+    "href": "slides/18-multiple-linear-regression-2.html#example-many-numerical-predictors-2",
+    "title": "Multiple Linear Regression 2",
+    "section": "Example: many numerical predictors",
+    "text": "Example: many numerical predictors\n\nnew_penguin &lt;- tibble(\n  flipper_length_mm = 200,\n  bill_length_mm = 45\n)\n\npredict(bm_fl_bl_fit, new_data = new_penguin)\n\n# A tibble: 1 × 1\n  .pred\n  &lt;dbl&gt;\n1 4164."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#welcome-to-statistics",
+    "href": "slides/18-multiple-linear-regression-2.html#welcome-to-statistics",
+    "title": "Multiple Linear Regression 2",
+    "section": "Welcome to statistics!",
+    "text": "Welcome to statistics!\nThe code was basically the same every time. In this second half of the course, the code itself is not the primary complication. The code is merely a labor-saving device. Our focus shifts to understanding the conceptual and technical underpinnings of the code and interpreting the output correctly. This is subtle, and it tends to trip people up."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#does-it-matter-what-the-base-level-is",
+    "href": "slides/18-multiple-linear-regression-2.html#does-it-matter-what-the-base-level-is",
+    "title": "Multiple Linear Regression 2",
+    "section": "Does it matter what the base level is?",
+    "text": "Does it matter what the base level is?\nRegarding the leveling of a categorical predictor:\n\nIt doesn’t matter technically. The math doesn’t care;\nAs long as you know what the baseline is, you are consistent throughout your analysis, and you interpret everything correctly, you’re probably good;\nSometimes the application suggests a natural choice of baseline. You make interpretation and visualization easier if you respect that."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#is-interaction-the-same-as-separate-regressions",
+    "href": "slides/18-multiple-linear-regression-2.html#is-interaction-the-same-as-separate-regressions",
+    "title": "Multiple Linear Regression 2",
+    "section": "Is interaction the same as separate regressions?",
+    "text": "Is interaction the same as separate regressions?\nSort of. You get the same estimates of the slopes and intercepts, but the uncertainty quantification (standard errors) is different.\nThis matters, but we suppress the nuance in this class."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#the-interaction-model",
+    "href": "slides/18-multiple-linear-regression-2.html#the-interaction-model",
+    "title": "Multiple Linear Regression 2",
+    "section": "The interaction model",
+    "text": "The interaction model\n\nlinear_reg() |&gt;\n  fit(body_mass_g ~ flipper_length_mm * island, data = penguins) |&gt;\n  tidy() |&gt;\n  select(term, estimate, std.error)\n\n# A tibble: 6 × 3\n  term                              estimate std.error\n  &lt;chr&gt;                                &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)                        -5464.     431.  \n2 flipper_length_mm                     48.5      2.05\n3 islandDream                         3551.     969.  \n4 islandTorgersen                     3218.    1680.  \n5 flipper_length_mm:islandDream        -19.4      4.94\n6 flipper_length_mm:islandTorgersen    -17.4      8.73\n\n\nSo on Biscoe island (where Dream = Torgersen = 0), the line is\n\\[\n\\begin{aligned}\n\\widehat{body~mass} = -5464 &+ 48.5 \\times flipper~length\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#simple-regression-within-a-group",
+    "href": "slides/18-multiple-linear-regression-2.html#simple-regression-within-a-group",
+    "title": "Multiple Linear Regression 2",
+    "section": "Simple regression within a group",
+    "text": "Simple regression within a group\nIf we fit a simple model with the Biscoe subset of the data:\n\npenguins_biscoe &lt;- penguins |&gt;\n  filter(island == \"Biscoe\")\n\nlinear_reg() |&gt;\n  fit(body_mass_g ~ flipper_length_mm, data = penguins_biscoe) |&gt;\n  tidy()\n\n# A tibble: 2 × 5\n  term              estimate std.error statistic  p.value\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)        -5464.     435.       -12.6 8.48e-26\n2 flipper_length_mm     48.5      2.07      23.4 2.20e-54\n\n\nSame estimates, but different standard errors."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#the-default-picture",
+    "href": "slides/18-multiple-linear-regression-2.html#the-default-picture",
+    "title": "Multiple Linear Regression 2",
+    "section": "The default picture",
+    "text": "The default picture\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = island)) + \n  geom_point() + \n  geom_smooth(method = \"lm\")\n\n\n\n\n\n\n\nThese are separate simple regressions within each group. The slopes and the intercepts are the same as the interaction model, but the uncertainty bands are different."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#recap-our-first-look",
+    "href": "slides/18-multiple-linear-regression-2.html#recap-our-first-look",
+    "title": "Multiple Linear Regression 2",
+    "section": "Recap: our first look",
+    "text": "Recap: our first look\n\\(R^2\\) measures “goodness-of-fit:”\n\n\n\n\\(R^2\\) is “a Rotten Tomatoes score” for your model;\nIt ranges from 0 (horrific) to 1 (perfect) and measures how well the linear model fits the data;\nIn simple linear regression with one numerical predictor, \\(R^2\\) is literally equal to the square of the correlation coefficient between the predictor \\(X\\) and the numerical response \\(Y\\);\nWhen you move from one predictor to many, this relationship breaks down, but \\(R^2\\) remains meaningful.\n\n\n. . .\nSo what is it, actually?"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#reminder-residuals",
+    "href": "slides/18-multiple-linear-regression-2.html#reminder-residuals",
+    "title": "Multiple Linear Regression 2",
+    "section": "Reminder: residuals",
+    "text": "Reminder: residuals\nEvery data point has one:\n\n\n\n\n\n\n\n\nSome are big, some are small. Some are above the line (positive), and some are below the line (negative)."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#reminder-residuals-1",
+    "href": "slides/18-multiple-linear-regression-2.html#reminder-residuals-1",
+    "title": "Multiple Linear Regression 2",
+    "section": "Reminder: residuals",
+    "text": "Reminder: residuals\nThe residuals are what’s left over after the model attempts to “explain” the response:\n\\[\ne_i = \\text{observed} - \\text{predicted} = y_i - \\hat{y}_i.\n\\]\nEvery data point has one:\n\naugment(bm_fl_fit, penguins) |&gt;\n  select(flipper_length_mm, body_mass_g, .pred, .resid)\n\n# A tibble: 344 × 4\n   flipper_length_mm body_mass_g .pred  .resid\n               &lt;int&gt;       &lt;int&gt; &lt;dbl&gt;   &lt;dbl&gt;\n 1               181        3750 3212.  538.  \n 2               186        3800 3461.  339.  \n 3               195        3250 3908. -658.  \n 4                NA          NA   NA    NA   \n 5               193        3450 3808. -358.  \n 6               190        3650 3659.   -9.43\n 7               181        3625 3212.  413.  \n 8               195        4675 3908.  767.  \n 9               193        3475 3808. -333.  \n10               190        4250 3659.  591.  \n# ℹ 334 more rows"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#how-it-started",
+    "href": "slides/18-multiple-linear-regression-2.html#how-it-started",
+    "title": "Multiple Linear Regression 2",
+    "section": "How it started",
+    "text": "How it started\nThe original distribution of the response. This is the mess we’re trying to clean up with a model:\n\n\n\n\n\n\n\n\n\n\n# A tibble: 1 × 3\n  type        variance   std\n  &lt;chr&gt;          &lt;dbl&gt; &lt;dbl&gt;\n1 body_mass_g  643131.  802."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#how-its-going",
+    "href": "slides/18-multiple-linear-regression-2.html#how-its-going",
+    "title": "Multiple Linear Regression 2",
+    "section": "How it’s going",
+    "text": "How it’s going\nThe distribution of the residuals (the leftover mess) after the model tries to explain (clean up):\n\n\n\n\n\n\n\n\n\n\n# A tibble: 2 × 3\n  type        variance   std\n  &lt;chr&gt;          &lt;dbl&gt; &lt;dbl&gt;\n1 .resid       154999.  394.\n2 body_mass_g  643131.  802."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#the-main-idea",
+    "href": "slides/18-multiple-linear-regression-2.html#the-main-idea",
+    "title": "Multiple Linear Regression 2",
+    "section": "The main idea",
+    "text": "The main idea\nThe model is trying to “explain” the variation in the response:\n\n\nVariation in the response (blue distribution), is the mess we’re trying to clean up;\nVariation in the residuals (red distribution), is the leftover after the model gives it a shot;\nThe more leftover there is, the worse the model did;\nYou can quantify this with the variance. The smaller the variance of the residuals relative to the original response variance, the better.\n\n\n. . .\nThat’s what \\(R^2\\) actually is: the proportion of the variance in the response explained by the model."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#r2approx-0",
+    "href": "slides/18-multiple-linear-regression-2.html#r2approx-0",
+    "title": "Multiple Linear Regression 2",
+    "section": "\\(R^2\\approx 0\\)",
+    "text": "\\(R^2\\approx 0\\)\nHorrifically awful fit. The model didn’t explain (clean up) anything:\n\n\n\n\n\n\n\n\n\n\n# A tibble: 1 × 3\n  var_y var_resid r.squared\n  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1  1.02      1.02  0.000450"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#r2approx-0.28",
+    "href": "slides/18-multiple-linear-regression-2.html#r2approx-0.28",
+    "title": "Multiple Linear Regression 2",
+    "section": "\\(R^2\\approx 0.28\\)",
+    "text": "\\(R^2\\approx 0.28\\)\n\n\n\n\n\n\n\n\n\n\n# A tibble: 1 × 3\n  var_y var_resid r.squared\n  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 0.805     0.574     0.287"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#r2approx-0.63",
+    "href": "slides/18-multiple-linear-regression-2.html#r2approx-0.63",
+    "title": "Multiple Linear Regression 2",
+    "section": "\\(R^2\\approx 0.63\\)",
+    "text": "\\(R^2\\approx 0.63\\)\n\n\n\n\n\n\n\n\n\n\n# A tibble: 1 × 3\n  var_y var_resid r.squared\n  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 0.701     0.255     0.636"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#r2approx-0.97",
+    "href": "slides/18-multiple-linear-regression-2.html#r2approx-0.97",
+    "title": "Multiple Linear Regression 2",
+    "section": "\\(R^2\\approx 0.97\\)",
+    "text": "\\(R^2\\approx 0.97\\)\n\n\n\n\n\n\n\n\n\n\n# A tibble: 1 × 3\n  var_y var_resid r.squared\n  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 0.762    0.0230     0.970"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#r2approx-1",
+    "href": "slides/18-multiple-linear-regression-2.html#r2approx-1",
+    "title": "Multiple Linear Regression 2",
+    "section": "\\(R^2\\approx 1\\)",
+    "text": "\\(R^2\\approx 1\\)\nPerfect fit. The model explained (cleaned up) everything:\n\n\n\n\n\n\n\n\n\n\n# A tibble: 1 × 3\n  var_y var_resid r.squared\n  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 0.847  0.000408     1.000"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#the-nitty-gritty",
+    "href": "slides/18-multiple-linear-regression-2.html#the-nitty-gritty",
+    "title": "Multiple Linear Regression 2",
+    "section": "The nitty gritty",
+    "text": "The nitty gritty\n\\[\n\\begin{aligned}\n    R^2\\,\n    =\n    \\begin{matrix}\n        \\text{proportion of}\\\\\n        \\text{variation explained}\n    \\end{matrix}\n    &=\n    1-\n    \\begin{matrix}\n        \\text{proportion of}\\\\\n        \\text{variation unexplained}\n    \\end{matrix}\\\\[15pt]\n    &=\n    1-\\frac{\\text{unexplained variation}}{\\text{total variation}}\n    \\\\[15pt]\n    &=\n    1-\\frac{\\text{spread of residuals}}{\\text{spread of response}}\n    \\\\[15pt]\n    &=\n    1-\\frac{\\text{var}(e_i)}{\\text{var}(y_i)}\n    .\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#literally",
+    "href": "slides/18-multiple-linear-regression-2.html#literally",
+    "title": "Multiple Linear Regression 2",
+    "section": "Literally",
+    "text": "Literally\n\naugment(bm_fl_fit, penguins) |&gt;\n  summarize(\n    var_y = var(body_mass_g, na.rm = TRUE),\n    var_e = var(.resid, na.rm = TRUE),\n    R2 = 1 - var_e / var_y\n  )\n\n# A tibble: 1 × 3\n    var_y   var_e    R2\n    &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;\n1 643131. 154999. 0.759\n\n\n. . .\n\nlinear_reg() |&gt;\n  fit(body_mass_g ~ flipper_length_mm, penguins) |&gt;\n  glance() |&gt;\n  select(r.squared)\n\n# A tibble: 1 × 1\n  r.squared\n      &lt;dbl&gt;\n1     0.759"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#summary",
+    "href": "slides/18-multiple-linear-regression-2.html#summary",
+    "title": "Multiple Linear Regression 2",
+    "section": "Summary",
+    "text": "Summary\n\n\\(R^2\\) is a number between zero and one, and it represents the proportion of the variance in the response \\(Y\\) that is explained by the model fit;\nThis is the interpretation, regardless how many predictors you have;\nIn simple regression with one numerical predictor, \\(R^2\\) it is also the square of the correlation coefficient, but this doesn’t generalize to the multivariate setting."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#model-selection-1",
+    "href": "slides/18-multiple-linear-regression-2.html#model-selection-1",
+    "title": "Multiple Linear Regression 2",
+    "section": "Model selection",
+    "text": "Model selection\nQuestion: Given many competing models for the same response, which model is “best”? What does that even mean?\n. . .\nAnswer: Assign a “quality score” to each model, and pick the model with the best score:\n\n\nModel\nScore\nVerdict\n\n\n\nSimple\n0.1\n❌\n\n\nAdditive\n0.5\n✅\n\n\nInteraction\n0.48\n❌\n\n\n\n. . .\nVariable selection: all of our models were linear, and they differed only by which predictor variables are included. By ranking models by quality score and picking the “best” one, we can determine which predictors are the “most important” to include."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#selection-criteria",
+    "href": "slides/18-multiple-linear-regression-2.html#selection-criteria",
+    "title": "Multiple Linear Regression 2",
+    "section": "Selection criteria",
+    "text": "Selection criteria\nThis is a big area of statistical research. There are loads of “quality scores” you could consider, and they prioritize different things: predictive accuracy, goodness-of-fit, simplicity, fairness, etc.\n\n\\(R^2\\)\nadjusted \\(R^2\\)\n\nAkaike Information criterion (AIC)\nBayesian information criterion (BIC)\n… so many more\n\nWe won’t go into detail, but you will if you keep studying statistics."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#tidymodels-reports-many-of-these-for-free",
+    "href": "slides/18-multiple-linear-regression-2.html#tidymodels-reports-many-of-these-for-free",
+    "title": "Multiple Linear Regression 2",
+    "section": "\ntidymodels reports many of these for free",
+    "text": "tidymodels reports many of these for free\n\nbm_fl_fit |&gt;\n  glance() |&gt;\n  select(r.squared, adj.r.squared, AIC, BIC)\n\n# A tibble: 1 × 4\n  r.squared adj.r.squared   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     0.759         0.758 5063. 5074."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#r2s-dirty-little-secret",
+    "href": "slides/18-multiple-linear-regression-2.html#r2s-dirty-little-secret",
+    "title": "Multiple Linear Regression 2",
+    "section": "\n\\(R^2\\)’s dirty little secret",
+    "text": "\\(R^2\\)’s dirty little secret\n\\(R^2\\) gives participation trophies. It always goes up when you add any new variable to the model, even if that variable is worthless."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#adding-a-phony-variable",
+    "href": "slides/18-multiple-linear-regression-2.html#adding-a-phony-variable",
+    "title": "Multiple Linear Regression 2",
+    "section": "Adding a phony variable",
+    "text": "Adding a phony variable\nThe original model fit:\n\nlinear_reg() |&gt;\n  fit(body_mass_g ~ flipper_length_mm, penguins) |&gt;\n  glance() |&gt;\n  pull(r.squared)\n\n[1] 0.7589925\n\n\n. . .\nAdd a predictor that is literally just a bunch of random numbers:\n\nnoisy_penguins &lt;- penguins |&gt;\n  mutate(\n    bullshit = rnorm(nrow(penguins))\n  )\n\nlinear_reg() |&gt;\n  fit(body_mass_g ~ flipper_length_mm + bullshit, noisy_penguins) |&gt;\n  glance() |&gt;\n  pull(r.squared)\n\n[1] 0.7600283"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#adjusted-r2",
+    "href": "slides/18-multiple-linear-regression-2.html#adjusted-r2",
+    "title": "Multiple Linear Regression 2",
+    "section": "Adjusted \\(R^2\\)\n",
+    "text": "Adjusted \\(R^2\\)\n\nBecause vanilla \\(R^2\\) blithely rewards the addition of any variable, no matter how meaningless, you shouldn’t use it for model selection. Instead, use adjusted \\(R^2\\). The formula is in the textbook if you’re dying to know, but here’s the tea:\n\n\nadjusted \\(R^2\\) penalizes the inclusion of unnecessary predictors;\nIt prioritizes a parsimonious model:\n\na model that fits/predicts well, and…\na model that’s not too complicated (so our pear brains can still understand it);\n\n\nOccam’s razor!"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#for-the-penguins",
+    "href": "slides/18-multiple-linear-regression-2.html#for-the-penguins",
+    "title": "Multiple Linear Regression 2",
+    "section": "For the penguins",
+    "text": "For the penguins\n\n\n\nbm_fl_fit |&gt; glance() |&gt;\n  pull(adj.r.squared)\n\n[1] 0.7582837\n\n\n\nbm_island_fit |&gt; glance() |&gt;\n  pull(adj.r.squared)\n\n[1] 0.3899995\n\n\n\nbm_fl_island_fit |&gt; glance() |&gt;\n  pull(adj.r.squared)\n\n[1] 0.7722296\n\n\n\n\nbm_fl_island_int_fit |&gt; glance() |&gt;\n  pull(adj.r.squared)\n\n[1] 0.7825604\n\n\n\nbm_fl_bl_fit |&gt; glance() |&gt;\n  pull(adj.r.squared)\n\n[1] 0.7585415"
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#balancing-fit-and-complexity",
+    "href": "slides/18-multiple-linear-regression-2.html#balancing-fit-and-complexity",
+    "title": "Multiple Linear Regression 2",
+    "section": "Balancing fit and complexity",
+    "text": "Balancing fit and complexity\n\n\nMore complex models (i.e., models with more predictors) tend to fit the data at hand better, but may not generalize well to new data.\nModel selection criteria, like adjusted \\(R^2\\), help balance model fit and complexity to avoid overfitting by penalizing models with more predictors."
+  },
+  {
+    "objectID": "slides/18-multiple-linear-regression-2.html#overfitting",
+    "href": "slides/18-multiple-linear-regression-2.html#overfitting",
+    "title": "Multiple Linear Regression 2",
+    "section": "Overfitting",
+    "text": "Overfitting\n\n\nOverfitting occurs when a model captures not only the underlying relationship between predictors and outcome but also the random noise in the data.\n\nOverfitted models tend to perform well on the observed data but poorly on new, unseen data.\n\nGood news: We have techniques to detect and prevent overfitting.\nBad news: We won’t get into those until next week."
   },
   {
     "objectID": "slides/13-communication-slides.html#while-you-wait-participate",
@@ -5694,7 +6268,7 @@
     "href": "index.html",
     "title": "STA 199 Introduction to Data Science and Statistical Thinking",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 7\n\n🧑‍🏫 Welcome!\n🖥️ slides 00\n\n\n\n\n\nThu, Jan 8\n\n💻 Lab 0\nlab 0\n\n\n\n1\nMon, Jan 12\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\n🧑‍🏫 Meet the toolkit\n🖥️ slides 01  🗒️ notes 01\n\n\n\n\n\nWed, Jan 14\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\n🧑‍🏫 Grammar of data visualization\n🖥️ slides 02  🗒️ notes 02\n\n\n\n\n\nThu, Jan 15\n\n💻 Lab 1\nlab 1\nLab 1 @ end of section\n\n\n2\nMon, Jan 19\n\n❌ MLK Day - No Lecture\n\n\n\n\n\n\nWed, Jan 21\n📗 r4ds - chp 2  📗 r4ds - chp 3.1-3.5  🎥 Grammar of data transformation  🎥 Code along :: Flights and pipes\n\n🧑‍🏫 Grammar of data transformation\n🖥️ slides 03  🗒️ notes 03  💃 ae 03\n\n\n\n\n\nThu, Jan 22\n\n💻 Lab 2\n\nlab 2 hw 1\n\nLab 2 @ end of section\n\n\n3\nMon, Jan 26\n📗 r4ds - chp 3.6-3.7  🎥 Visualizing and summarizing categorical data  🎥 Visualizing and summarizing numerical data  🎥 Visualizing and summarizing relationships  🎥 Code along :: Star Wars characters\n\n🧑‍🏫 Exploratory Data Analysis I\n🖥️ slides 04  🗒️ notes 04\n\n\n\n\n\nWed, Jan 28\n📘 ims - chp 5  📘 ims - chp 6  🎥 Code along :: Diving deeper with Palmer Penguins\n\n🧑‍🏫 Exploratory Data Analysis II\n🖥️ slides 05  🗒️ notes 05  🕺 ae 05\n\nHW 1 @ 11:59 pm\n\n\n\nThu, Jan 29\n\n💻 Lab 3\n\nlab 3 hw 2\n\nLab 3 @ end of section\n\n\n4\nMon, Feb 2\n🎥 Tidy data  🎥 Tidying data  🎥 Code along :: Country populations over time  📗 r4ds - chp 5\n\n🧑‍🏫 Tidying data\n🖥️ slides 06  🗒️ notes 06  🧞 ae 06\n\n\n\n\n\nWed, Feb 4\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\n🧑‍🏫 Joining data\n🖥️ slides 07  🗒️ notes 07  🦧 ae 07\n\nHW 2 @ 11:59 pm\n\n\n\nThu, Feb 5\n\n💻 Lab 4\n\nlab 4 hw 3\n\nLab 4 @ end of section\n\n\n5\nMon, Feb 9\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\n🧑‍🏫 Data types and classes\n🖥️ slides 08  🗒️ notes 08  😭 follow-up\n\n\n\n\n\nWed, Feb 11\n\n🧑‍🏫 More data types and classes\n🖥️ slides 09  🗒️ notes 09  🐙 ae 08\n\nHW 3 @ 11:59 pm\n\n\n\nThu, Feb 12\n\n💻 Lab 5\n\nlab 5 hw 4\n\nLab 5 @ end of section\n\n\n6\nMon, Feb 16\n🎥 Importing data  🎥 Code along :: Halving CO2 emissions  🎥 Code along :: Student survey  📗 r4ds - chp 7  📗 r4ds - chp 17.1 - 17.3\n\n🧑‍🏫 Importing and recoding data\n🖥️ slides 10  🗒️ notes 10  🐢 ae 09  🪐 ae 10\n\n\n\n\n\nWed, Feb 18\n🎥 Web scraping basics  🎥 Code along :: Scraping an eCommerce page  📗 r4ds - chp 24.1 - 24.6  🎥 Code along :: Scraping many eCommerce pages  🎥 Web scraping considerations  📗 r4ds - chp 25.1 - 25.2\n\n🧑‍🏫 Webscraping\n🖥️ slides 11  🗒️ notes 11  🌐 ae 11\n\nHW 4 @ 11:59 pm\n\n\n\nThu, Feb 19\n\n💻 Project Milestone 1 + 2\n🎉 Description  🪨 Milestone 1  🧗 Milestone 2\n\n\n\n\n7\nMon, Feb 23\n\n🧑‍🏫 Data science wrap-up\n🖥️ slides 12  🗒️ notes 12\n\n\n\n\n\nTue, Feb 24\n\n\n\nProject Proposal @ 11:59 pm\n\n\n\nWed, Feb 25\n💫 study guide\n\n📝 Midterm 1\n\n\n\n\n\n\nThu, Feb 26\n\n❌ No lab!\n\n\n\n\n\n\nSun, Mar 1\n\n\n\nTake-home 1 @ 11:59 pm\n\n\n8\nMon, Mar 2\n📘 ims - chp 6  📗 r4ds - chp 10\n\n🧑‍🏫 Communicating results\n🖥️ slides 13  🗒️ notes 13  🍊 ae 13  🤢 ae 14\n\nPeer evaluation 1 @ 11:59 pm\n\n\n\nWed, Mar 4\n🎥 Misrepresentation  🎥 Data privacy  🎥 Algorithmic bias  🎥 Code along :: Sectors and services\n\n🧑‍🏫 Data science ethics\n🖥️ slides 14\n\nMilestone 3 @ 11:59 pm\n\n\n\nThu, Mar 5\n\n💻 Project Milestone 4\n🪨 Milestone 4\n\nMilestone 4 @ end-of-lab\n\n\n9\nMon, Mar 9\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nWed, Mar 11\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nThu, Mar 12\n\n❌ Spring Break - No Lab\n\n\n\n\n\n10\nMon, Mar 16\n🎥 The language of models  🎥 Linear regression with a numerical predictor  📘 ims - chp 7.1\n\n🧑‍🏫 The language of models\n🖥️ slides 15  🗒️ notes 15  🧊 ae 15\n\nPeer evaluation 2 @ 11:59 pm\n\n\n\nWed, Mar 18\n🎥 Linear regression with a categorical predictor  🎥 Outliers in linear regression  🎥 Code along :: Modeling fish  📘 ims - chp 7.2\n\n🧑‍🏫 Simple linear regression\n🖥️ slides 16  🗒️ notes 16  🐧 ae 16\n\n\n\n\n\nThu, Mar 19\n\n💻 Lab 6\n\nlab 6 hw 5\n\nLab 6 @ end of section\n\n\n11\nMon, Mar 23\n🎥 Linear regression with multiple predictors  🎥 Main and interaction effects  📘 ims - chp 8.1-8.2  📘 ims - chp 8.3-8.5\n\n🧑‍🏫 Multiple linear regression I\n🖥️ slides 17  🗒️ notes 17\n\n\n\n\n\nWed, Mar 25\n🎥 Code along :: Modeling interest rates\n\n🧑‍🏫 Multiple linear regression II\n\nHW 5 @ 11:59 pm\n\n\n\nThu, Mar 26\n\n💻 Final Project Presentation\n\n\n\n\n\nSun, Mar 29\n\n\n\nFinal Project @ 11:59 pm\n\n\n12\nMon, Mar 30\n🎥 Logistic regression  🎥 Code along :: Building a spam filter  📘 ims - chp 9\n\n🧑‍🏫 Logistic regression I\n\nPeer evaluation 3 @ 11:59 pm\n\n\n\nWed, Apr 1\n🎥 Clasification and decision errors  🎥 Overfitting and spending your data\n\n🧑‍🏫 Logistic regression II\n\nHW 6 @ 11:59 pm\n\n\n\nThu, Apr 2\n\n💻 Lab 7\n\nLab 7 @ end of section\n\n\n13\nMon, Apr 6\n🎥 Code along :: Forest classification\n\n🧑‍🏫 Modeling wrap-up\n\n\n\n\n\nWed, Apr 8\n\n📝 Midterm 2\n\n\n\n\n\n\nThu, Apr 9\n\n❌ We’re all tired - No lab!\n\n\n\n\n\n\nSun, Apr 12\n\n\n\nTake-home 2 @ 11:59 pm\n\n\n14\nMon, Apr 13\n🎥 Quantifying uncertainty  🎥 Bootstrapping  🎥 Code along :: Bootstrapping Duke Forest houses  📘 ims - chp 11  📘 ims - chp 12\n\n🧑‍🏫 Interval estimation\n\n\n\n\n\nWed, Apr 15\n🎥 Hypothesis testing  📘 ims - chp 11\n\n🧑‍🏫 Hypothesis testing\n\n\n\n\n\nThu, Apr 16\n\n💻 Lab 8\n\nLab 8 @ end of section\n\n\n15\nMon, Apr 20\n\n🧑‍🏫 More inference\n\n\n\n\n\nWed, Apr 22\n\n🧑‍🏫 Farewell!\n\nHW 7 @ 11:59 pm\n\n\n\nThu, Apr 23\n\n❌ Reading Days - No Lab\n\n\n\n\n\n16\nFri, May 1\n\n📝 Final (2pm - 5pm)",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 7\n\n🧑‍🏫 Welcome!\n🖥️ slides 00\n\n\n\n\n\nThu, Jan 8\n\n💻 Lab 0\nlab 0\n\n\n\n1\nMon, Jan 12\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\n🧑‍🏫 Meet the toolkit\n🖥️ slides 01  🗒️ notes 01\n\n\n\n\n\nWed, Jan 14\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\n🧑‍🏫 Grammar of data visualization\n🖥️ slides 02  🗒️ notes 02\n\n\n\n\n\nThu, Jan 15\n\n💻 Lab 1\nlab 1\nLab 1 @ end of section\n\n\n2\nMon, Jan 19\n\n❌ MLK Day - No Lecture\n\n\n\n\n\n\nWed, Jan 21\n📗 r4ds - chp 2  📗 r4ds - chp 3.1-3.5  🎥 Grammar of data transformation  🎥 Code along :: Flights and pipes\n\n🧑‍🏫 Grammar of data transformation\n🖥️ slides 03  🗒️ notes 03  💃 ae 03\n\n\n\n\n\nThu, Jan 22\n\n💻 Lab 2\n\nlab 2 hw 1\n\nLab 2 @ end of section\n\n\n3\nMon, Jan 26\n📗 r4ds - chp 3.6-3.7  🎥 Visualizing and summarizing categorical data  🎥 Visualizing and summarizing numerical data  🎥 Visualizing and summarizing relationships  🎥 Code along :: Star Wars characters\n\n🧑‍🏫 Exploratory Data Analysis I\n🖥️ slides 04  🗒️ notes 04\n\n\n\n\n\nWed, Jan 28\n📘 ims - chp 5  📘 ims - chp 6  🎥 Code along :: Diving deeper with Palmer Penguins\n\n🧑‍🏫 Exploratory Data Analysis II\n🖥️ slides 05  🗒️ notes 05  🕺 ae 05\n\nHW 1 @ 11:59 pm\n\n\n\nThu, Jan 29\n\n💻 Lab 3\n\nlab 3 hw 2\n\nLab 3 @ end of section\n\n\n4\nMon, Feb 2\n🎥 Tidy data  🎥 Tidying data  🎥 Code along :: Country populations over time  📗 r4ds - chp 5\n\n🧑‍🏫 Tidying data\n🖥️ slides 06  🗒️ notes 06  🧞 ae 06\n\n\n\n\n\nWed, Feb 4\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\n🧑‍🏫 Joining data\n🖥️ slides 07  🗒️ notes 07  🦧 ae 07\n\nHW 2 @ 11:59 pm\n\n\n\nThu, Feb 5\n\n💻 Lab 4\n\nlab 4 hw 3\n\nLab 4 @ end of section\n\n\n5\nMon, Feb 9\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\n🧑‍🏫 Data types and classes\n🖥️ slides 08  🗒️ notes 08  😭 follow-up\n\n\n\n\n\nWed, Feb 11\n\n🧑‍🏫 More data types and classes\n🖥️ slides 09  🗒️ notes 09  🐙 ae 08\n\nHW 3 @ 11:59 pm\n\n\n\nThu, Feb 12\n\n💻 Lab 5\n\nlab 5 hw 4\n\nLab 5 @ end of section\n\n\n6\nMon, Feb 16\n🎥 Importing data  🎥 Code along :: Halving CO2 emissions  🎥 Code along :: Student survey  📗 r4ds - chp 7  📗 r4ds - chp 17.1 - 17.3\n\n🧑‍🏫 Importing and recoding data\n🖥️ slides 10  🗒️ notes 10  🐢 ae 09  🪐 ae 10\n\n\n\n\n\nWed, Feb 18\n🎥 Web scraping basics  🎥 Code along :: Scraping an eCommerce page  📗 r4ds - chp 24.1 - 24.6  🎥 Code along :: Scraping many eCommerce pages  🎥 Web scraping considerations  📗 r4ds - chp 25.1 - 25.2\n\n🧑‍🏫 Webscraping\n🖥️ slides 11  🗒️ notes 11  🌐 ae 11\n\nHW 4 @ 11:59 pm\n\n\n\nThu, Feb 19\n\n💻 Project Milestone 1 + 2\n🎉 Description  🪨 Milestone 1  🧗 Milestone 2\n\n\n\n\n7\nMon, Feb 23\n\n🧑‍🏫 Data science wrap-up\n🖥️ slides 12  🗒️ notes 12\n\n\n\n\n\nTue, Feb 24\n\n\n\nProject Proposal @ 11:59 pm\n\n\n\nWed, Feb 25\n💫 study guide\n\n📝 Midterm 1\n\n\n\n\n\n\nThu, Feb 26\n\n❌ No lab!\n\n\n\n\n\n\nSun, Mar 1\n\n\n\nTake-home 1 @ 11:59 pm\n\n\n8\nMon, Mar 2\n📘 ims - chp 6  📗 r4ds - chp 10\n\n🧑‍🏫 Communicating results\n🖥️ slides 13  🗒️ notes 13  🍊 ae 13  🤢 ae 14\n\nPeer evaluation 1 @ 11:59 pm\n\n\n\nWed, Mar 4\n🎥 Misrepresentation  🎥 Data privacy  🎥 Algorithmic bias  🎥 Code along :: Sectors and services\n\n🧑‍🏫 Data science ethics\n🖥️ slides 14\n\nMilestone 3 @ 11:59 pm\n\n\n\nThu, Mar 5\n\n💻 Project Milestone 4\n🪨 Milestone 4\n\nMilestone 4 @ end-of-lab\n\n\n9\nMon, Mar 9\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nWed, Mar 11\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nThu, Mar 12\n\n❌ Spring Break - No Lab\n\n\n\n\n\n10\nMon, Mar 16\n🎥 The language of models  🎥 Linear regression with a numerical predictor  📘 ims - chp 7.1\n\n🧑‍🏫 The language of models\n🖥️ slides 15  🗒️ notes 15  🧊 ae 15\n\nPeer evaluation 2 @ 11:59 pm\n\n\n\nWed, Mar 18\n🎥 Linear regression with a categorical predictor  🎥 Outliers in linear regression  🎥 Code along :: Modeling fish  📘 ims - chp 7.2\n\n🧑‍🏫 Simple linear regression\n🖥️ slides 16  🗒️ notes 16  🐧 ae 16\n\n\n\n\n\nThu, Mar 19\n\n💻 Lab 6\n\nlab 6 hw 5\n\nLab 6 @ end of section\n\n\n11\nMon, Mar 23\n🎥 Linear regression with multiple predictors  🎥 Main and interaction effects  📘 ims - chp 8.1-8.2  📘 ims - chp 8.3-8.5\n\n🧑‍🏫 Multiple linear regression I\n🖥️ slides 17  🗒️ notes 17\n\n\n\n\n\nWed, Mar 25\n🎥 Code along :: Modeling interest rates\n\n🧑‍🏫 Multiple linear regression II\n🖥️ slides 18  🗒️ notes 18\n\nHW 5 @ 11:59 pm\n\n\n\nThu, Mar 26\n\n💻 Final Project Presentation\n\n\n\n\n\nSun, Mar 29\n\n\n\nFinal Project @ 11:59 pm\n\n\n12\nMon, Mar 30\n🎥 Logistic regression  🎥 Code along :: Building a spam filter  📘 ims - chp 9\n\n🧑‍🏫 Logistic regression I\n\nPeer evaluation 3 @ 11:59 pm\n\n\n\nWed, Apr 1\n🎥 Clasification and decision errors  🎥 Overfitting and spending your data\n\n🧑‍🏫 Logistic regression II\n\nHW 6 @ 11:59 pm\n\n\n\nThu, Apr 2\n\n💻 Lab 7\n\nLab 7 @ end of section\n\n\n13\nMon, Apr 6\n🎥 Code along :: Forest classification\n\n🧑‍🏫 Modeling wrap-up\n\n\n\n\n\nWed, Apr 8\n\n📝 Midterm 2\n\n\n\n\n\n\nThu, Apr 9\n\n❌ We’re all tired - No lab!\n\n\n\n\n\n\nSun, Apr 12\n\n\n\nTake-home 2 @ 11:59 pm\n\n\n14\nMon, Apr 13\n🎥 Quantifying uncertainty  🎥 Bootstrapping  🎥 Code along :: Bootstrapping Duke Forest houses  📘 ims - chp 11  📘 ims - chp 12\n\n🧑‍🏫 Interval estimation\n\n\n\n\n\nWed, Apr 15\n🎥 Hypothesis testing  📘 ims - chp 11\n\n🧑‍🏫 Hypothesis testing\n\n\n\n\n\nThu, Apr 16\n\n💻 Lab 8\n\nLab 8 @ end of section\n\n\n15\nMon, Apr 20\n\n🧑‍🏫 More inference\n\n\n\n\n\nWed, Apr 22\n\n🧑‍🏫 Farewell!\n\nHW 7 @ 11:59 pm\n\n\n\nThu, Apr 23\n\n❌ Reading Days - No Lab\n\n\n\n\n\n16\nFri, May 1\n\n📝 Final (2pm - 5pm)",
     "crumbs": [
       "Syllabus",
       "Schedule"
@@ -13175,7 +13749,7 @@
     "href": "project/5-writeup-presentation.html#presentation",
     "title": "Write-up and presentation",
     "section": "Presentation",
-    "text": "Presentation\nPresentations will be in person in lab on November 10. All team members must participate in the presentation. The presentation must be no longer than 5 minutes.",
+    "text": "Presentation\nPresentations will be in person in lab on Thursday March 26. The presentation must be no longer than 5 minutes.",
     "crumbs": [
       "Project",
       "Milestone 5"
