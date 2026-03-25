@@ -15,32 +15,1063 @@ format:
     code-link: true
 ---
 
-## Ann Lee's announcement?
+```{r}
+#| include: false
+library(tidyverse)
+library(tidymodels)
+library(palmerpenguins)
+library(scatterplot3d)
+library(ggthemes)
+library(ggbeeswarm)
+```
 
-## Bookbagging reminder again
+## WANANA @ DataFest!
+
+![](images/18/datafest.png)
+
+## Bookbagging tomorrow! {.scrollable}
+
+:::::: columns
+:::: {.column width="50%"}
+
+
+![](images/17/ssmu.png)
+
+::::
+
+::: {.column width="50%"}
+
+Get great advice about course selection from the old broads in the stats mafia:
+
+- Free boba!
+- Thursday 3/26 7pm - 9pm;
+- Social Sciences 136
+- Instagram: [@dukessmu](https://www.instagram.com/dukessmu/)
+
+:::
+::::::
+
+## Presentations tomorrow
+
+- Keep it tight: five minutes;
+- There is no "correct" number of slides of figures or whatever, but see bullet one;
+- If you're absent, be extra sure to pull your weight so your group doesn't flame you on the peer eval;
+- We don't want to see any code whatsoever in these presentations;
+- Bad things will happen if we don't have all of the slide decks launched and ready to go at the start of lab;
+- Make sure that your file `presentations.pdf` is up-to-date and your website is working before 8AM tomorrow.
 
 # Recap: linear regression
 
-One numerical 
+## Population model {.medium}
 
-One categorical 
+**Multiple linear regression** captures the relationship between a numerical outcome $Y$ and *many* numerical predictors $X_1$, $X_2$, ..., $X_p$:
 
-One numerical; one categorical 
+$$\Large{Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + ...+ \beta_p X_p+\epsilon}$$
 
-Multiple numerical 
+::: incremental
+-   $\beta_0$: True intercept of the relationship between the $X_j$ and $Y$
+-   $\beta_j$: True slope of the relationship between $X_j$ and $Y$
+-   $\epsilon$: Error (residual)
+:::
+
+. . .
+
+The model with the greek letters and the error term is the "true," idealized, *population* relationship that we could access if we had infinite amounts of perfect data. But we don't, so we have to settle for...
+
+## Estimated model {.medium}
+
+$$\Large{\hat{Y} = b_0 + b_1 X_1 + b_2 X_2 + ... + b_pX_p}$$
+
+-   $b_j$: Estimated slope of the relationship between $X_j$ and $Y$;
+-   $b_0$: your prediction for $Y$ if all the predictors equal zero;
+-   No error term!
+
+. . .
+
+This is your *best guess* at the true regression function based on the noisy, meager, imperfect data you actually have access to. We still compute the $b_j$ using the principle of least squares: pick the estimates that make the sum of squared residuals as small as possible.
+
+## Example: one numerical predictor
+
+```{r}
+#| echo: false
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) + 
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
+
+## Example: one numerical predictor
+
+```{r}
+bm_fl_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm, data = penguins)
+
+tidy(bm_fl_fit)
+```
+
+$$
+\widehat{body~mass}=-5780.83+49.68\times flipper~length
+$$
+
+## Example: one numerical predictor
+
+:::::: columns
+
+:::: {.column width="50%"}
+
+```{r}
+#| echo: false
+
+new_penguin <- tibble(flipper_length_mm = 205)
+
+preds <- predict(bm_fl_fit, new_data = new_penguin)
+
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) + 
+  geom_point() + 
+  geom_smooth(method = "lm")   +
+  annotate(
+    "segment",
+    x = new_penguin$flipper_length_mm[1], xend = new_penguin$flipper_length_mm[1], y = -Inf, yend = preds$.pred[1],
+    color = "#FE5D26"
+  ) +
+  annotate(
+    "segment",
+    x = -Inf, xend = new_penguin$flipper_length_mm[1], y = preds$.pred[1], yend = preds$.pred[1],
+    color = "#FE5D26"
+  )
+```
+
+::::
+
+::: {.column width="50%"}
+```{r}
+#| label: predict-210
+new_penguin <- tibble(
+  flipper_length_mm = 205
+  )
+
+predict(bm_fl_fit, 
+        new_penguin)
+```
+:::
+
+::::::
+
+## Example: "one categorical predictor"
+
+```{r}
+#| echo: false
+ggplot(
+  penguins,
+  aes(x = island, y = body_mass_g, color = island)
+) +
+  geom_boxplot() +
+  geom_beeswarm(size = 2, alpha = 0.5) +
+  scale_color_colorblind() +
+  labs(
+    x = "Island",
+    y = "Body mass (g)",
+    title = "Body mass by island"
+  ) +
+  theme(legend.position = "none")
+```
+
+## Example: "one categorical predictor"
+
+This actually gets treated as multiple *binary* (0/1) predictors:
+
+```{r}
+bm_island_fit <- linear_reg() |>
+  fit(body_mass_g ~ island, data = penguins)
+
+tidy(bm_island_fit)
+```
+
+$$
+\begin{aligned}
+\widehat{body~mass} = 4716 &- 1003 \times islandDream \\ &- 1010 \times islandTorgersen
+\end{aligned}
+$$
+
+## Example: "one categorical predictor"
+
+It's just a concise way of summarizing the within-group means of the response variable:
+
+:::::: columns
+
+:::: {.column width="50%"}
+
+```{r}
+penguins |>
+  group_by(island) |>
+  summarize(
+    avg_body_mass = mean(body_mass_g, na.rm = TRUE)
+  )
+```
+
+::::
+
+::: {.column width="50%"}
+
+```{r}
+new_penguins = tibble(
+  island = c("Biscoe", "Dream", "Torgersen")
+)
+
+predict(bm_island_fit, 
+        new_penguins)
+```
+
+:::
+
+::::::
+
+## Example: numerical and categorical predictors
+
+```{r}
+#| label: additive-interaction-viz
+#| layout-ncol: 2
+#| echo: false
+#| fig-asp: 1
+
+# Plot A
+bm_fl_island_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm + island, data = penguins)
+bm_fl_island_aug <- augment(bm_fl_island_fit, new_data = penguins)
+ggplot(
+  bm_fl_island_aug, 
+  aes(x = flipper_length_mm, y = body_mass_g, color = island)
+  ) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(aes(y = .pred), method = "lm") +
+  labs(title = "Plot A - Additive model") +
+  theme(legend.position = "bottom")
+
+# Plot B
+ggplot(
+  penguins, 
+  aes(x = flipper_length_mm, y = body_mass_g, color = island)
+  ) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "Plot B - Interaction model") +
+  theme(legend.position = "bottom")
+```
+
+## Example: numerical and categorical predictors
+
+The additive model:
+
+```{r}
+bm_fl_island_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm + island, data = penguins)
+
+tidy(bm_fl_island_fit)
+```
+
+$$
+\begin{aligned}
+\widehat{body~mass} = -4625 &+ 44.5 \times flipper~length \\
+&- 262 \times Dream \\
+&- 185 \times Torgersen
+\end{aligned}
+$$
+
+## Example: numerical and categorical predictors {.small}
+
+Change *one character* in the code, and you get the interaction model:
+
+```{r}
+bm_fl_island_int_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm * island, data = penguins)
+
+tidy(bm_fl_island_int_fit) |> select(term, estimate)
+```
+
+
+$$
+\begin{aligned}
+\widehat{body~mass} = -5464 &+ 48.5 \times flipper~length \\
+&+ 3551 \times Dream \\
+&+ 3218 \times Torgersen \\
+&- 19.4 \times flipper~length*Dream \\
+&- 17.4 \times flipper~length*Torgersen
+\end{aligned}
+$$
+
+
+
+
+## Example: numerical and categorical predictors
+
+Same code with a different model fit:
+
+:::::: columns
+:::: {.column width="50%"}
+```{r}
+new_penguin <- tibble(
+  flipper_length_mm = 205,
+  island = "Biscoe"
+  )
+
+predict(bm_fl_island_fit, 
+        new_data = new_penguin)
+```
+
+::::
+
+:::: {.column width="50%"}
+```{r}
+new_penguin <- tibble(
+  flipper_length_mm = 205,
+  island = "Biscoe"
+  )
+
+predict(bm_fl_island_int_fit, 
+        new_data = new_penguin)
+```
+::::
+
+::::::
+
+
+## Example: many numerical predictors
+
+2 predictors + 1 response = 3 dimensions. Instead of a line of best fit, it's a *plane* of best fit:
+
+```{r}
+#| echo: false
+plot3vars <- scatterplot3d(
+  penguins[,c("bill_length_mm", "flipper_length_mm", "body_mass_g")],
+  pch = 19, 
+  color = "blue",
+  xlab = "Bill length (mm)", 
+  ylab = "Flipper length (mm)", 
+  zlab = "Body mass (grams)"
+) 
+
+model <- lm(body_mass_g ~ bill_length_mm + flipper_length_mm, data = penguins)
+plot3vars$plane3d(model, col = "darkred")
+```
+
+
+
+## Example: many numerical predictors
+
+```{r}
+bm_fl_bl_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm + bill_length_mm, data = penguins)
+
+tidy(bm_fl_bl_fit)
+```
+
+
+
+$$
+\small\widehat{body~mass}=-5736+48.1\times flipper~length+6\times bill~length
+$$
+
+## Example: many numerical predictors
+
+```{r}
+new_penguin <- tibble(
+  flipper_length_mm = 200,
+  bill_length_mm = 45
+)
+
+predict(bm_fl_bl_fit, new_data = new_penguin)
+```
+
+## Welcome to statistics!
+
+The code was basically the same every time. In this second half of the course, the code itself is not the primary complication. The code is merely a labor-saving device. Our focus shifts to understanding the conceptual and technical underpinnings of the code and interpreting the output correctly. This is subtle, and it tends to trip people up.
 
 # FAQ
 
-## Does it matter what the baseline is?
+## Does it matter what the base level is?
 
-Sometimes the application suggests a natural choice. As long as you understand and you're consistent and your communication is clear, often doesn't matter
+Regarding the leveling of a categorical predictor:
 
-## Is interaction the same as separate simple models? Same estimates, but different UQ
+- It doesn't matter *technically*. The math doesn't care;
+- As long as you *know* what the baseline is, you are consistent throughout your analysis, and you interpret everything correctly, you're probably good;
+- Sometimes the application suggests a natural choice of baseline. You make interpretation and visualization *easier* if you respect that.
+
+## Is interaction the same as separate regressions?
+
+Sort of. You get the same estimates of the slopes and intercepts, but the uncertainty quantification (standard errors) is different. 
+
+This matters, but we suppress the nuance in this class.
+
+## The interaction model
+
+```{r}
+linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm * island, data = penguins) |>
+  tidy() |>
+  select(term, estimate, std.error)
+```
+
+So on Biscoe island (where Dream = Torgersen = 0), the line is
+
+$$
+\begin{aligned}
+\widehat{body~mass} = -5464 &+ 48.5 \times flipper~length
+\end{aligned}
+$$
+
+## Simple regression within a group
+
+If we fit a simple model with the Biscoe subset of the data:
+
+```{r}
+
+penguins_biscoe <- penguins |>
+  filter(island == "Biscoe")
+
+linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm, data = penguins_biscoe) |>
+  tidy()
+
+```
+
+Same estimates, but different standard errors.
+
+## The default picture
+
+```{r}
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = island)) + 
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
+
+These are *separate* simple regressions within each group. The slopes and the intercepts are the same as the interaction model, but the uncertainty bands are different.
 
 # A second look at $R^2$
 
+## Recap: our first look
+
+$R^2$ measures "goodness-of-fit:"
+
+::: incremental
+- $R^2$ is "a Rotten Tomatoes score" for your model;
+- It ranges from 0 (horrific) to 1 (perfect) and measures how well the linear model fits the data;
+- In simple linear regression with one numerical predictor, $R^2$ is literally equal to the square of the correlation coefficient between the predictor $X$ and the numerical response $Y$;
+- When you move from one predictor to many, this relationship breaks down, but $R^2$ remains meaningful.
+:::
+
+. . .
+
+So what is it, actually?
+
+
+## Reminder: residuals
+
+Every data point has one:
+
+```{r}
+#| message: false
+#| echo: false
+#| fig-align: center
+
+penguins_small <- penguins |>
+  select(body_mass_g, flipper_length_mm) |>
+  drop_na()
+
+m <- lm(body_mass_g ~ flipper_length_mm, data = penguins_small)
+ggplot(penguins_small, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "lm", color = "#325b74", se = FALSE, linewidth = 1.5) +
+  geom_segment(aes(x = flipper_length_mm, xend = flipper_length_mm, y = body_mass_g, yend = predict(m)), color = "steel blue") +
+  theme(legend.position = "none")
+```
+
+Some are big, some are small. Some are above the line (positive), and some are below the line (negative).
+
+## Reminder: residuals {.scrollable}
+
+The residuals are what's left over after the model attempts to "explain" the response:
+
+$$
+e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i.
+$$
+
+Every data point has one:
+
+```{r}
+augment(bm_fl_fit, penguins) |>
+  select(flipper_length_mm, body_mass_g, .pred, .resid)
+```
+
+
+## How it started {.medium}
+
+The original distribution of the response. This is the mess we're trying to clean up with a model:
+
+```{r}
+#| warning: false
+#| echo: false
+#| fig-align: "center"
+augment(bm_fl_fit, penguins) |>
+  pivot_longer(
+    cols = c(body_mass_g, .resid),
+    names_to = "type",
+    values_to = "value"
+  ) |>
+  group_by(type) |>
+  mutate(
+    value = value - mean(value, na.rm = TRUE)
+  ) |>
+  ungroup() |>
+  ggplot(aes(x = value, color = type, fill = type)) +
+  geom_density() + 
+  scale_color_manual(values = c(body_mass_g = "blue", .resid = NA)) + 
+  scale_fill_manual(values = c(body_mass_g = rgb(0, 0, 1, 0.2), .resid = NA))
+
+```
+
+```{r}
+#| echo: false
+augment(bm_fl_fit, penguins) |>
+  pivot_longer(
+    cols = c(body_mass_g, .resid),
+    names_to = "type",
+    values_to = "value"
+  ) |>
+  group_by(type) |>
+  summarize(
+    variance = var(value, na.rm = TRUE),
+    std = sd(value, na.rm = TRUE)
+  ) |>
+  filter(type == "body_mass_g")
+```
+
+## How it's going {.medium}
+
+The distribution of the residuals (the leftover mess) after the model tries to explain (clean up):
+
+```{r}
+#| warning: false
+#| echo: false
+#| fig-align: "center"
+augment(bm_fl_fit, penguins) |>
+  pivot_longer(
+    cols = c(body_mass_g, .resid),
+    names_to = "type",
+    values_to = "value"
+  ) |>
+  group_by(type) |>
+  mutate(
+    value = value - mean(value, na.rm = TRUE)
+  ) |>
+  ungroup() |>
+  ggplot(aes(x = value, color = type, fill = type)) +
+  geom_density() + 
+  scale_color_manual(values = c(body_mass_g = "blue", .resid = "red")) + 
+  scale_fill_manual(values = c(body_mass_g = rgb(0, 0, 1, 0.2), .resid = rgb(1, 0, 0, 0.2)))
+
+```
+
+```{r}
+#| echo: false
+augment(bm_fl_fit, penguins) |>
+  pivot_longer(
+    cols = c(body_mass_g, .resid),
+    names_to = "type",
+    values_to = "value"
+  ) |>
+  group_by(type) |>
+  summarize(
+    variance = var(value, na.rm = TRUE),
+    std = sd(value, na.rm = TRUE)
+  )
+```
+
+
+## The main idea
+
+The model is trying to "explain" the variation in the response:
+
+::: incremental
+- Variation in the response (blue distribution), is the mess we're trying to clean up;
+- Variation in the residuals (red distribution), is the leftover after the model gives it a shot;
+- The more leftover there is, the worse the model did;
+- You can *quantify* this with the variance. The smaller the variance of the residuals relative to the original response variance, the better.
+:::
+
+. . .
+
+That's what $R^2$ actually is: the proportion of the variance in the response explained by the model.
+
+
+
+
+
+
+## $R^2\approx 0$ 
+
+Horrifically awful fit. The model didn’t explain (clean up) anything:
+
+
+```{r}
+#| echo: false
+#| fig-asp: 0.4
+par(mar = c(4, 4, 3, 0.5), mfrow = c(1, 3), cex.main = 1.5, 
+    cex.lab = 1.5)
+
+set.seed(1)
+
+n <- 200
+sx <- 1
+sy <- 1
+true_r <- 
+r <- 0
+
+df <- tibble(
+  x = rnorm(n, mean = 0, sd = sx),
+  y = x * r * sy / sx + rnorm(n, mean = 0, (1 - r^2) * sy)
+)
+plot(df$x, df$y, pch = 19, main = "", xlab = "x", ylab = "y")
+myfit <- lm(y ~ x, data = df)
+e <- myfit$residuals
+abline(myfit, col = "red", lwd = 3)
+max_count <- 1.1*max(max(hist(df$y, plot = FALSE)$dens), max(hist(e, plot = FALSE)$dens))
+
+hist(df$y, breaks = "Scott", main = "Response distribution",
+     xlab = expression(y[i]), 
+     ylab = "", border = NA, col = "lightblue", 
+     freq = FALSE,
+     xlim = c(-5, 5),
+     yaxt = "n", ylim = c(0, max_count))
+hist(e, breaks = "Scott", 
+     main = "Residual distribution",
+     xlab = expression(e[i]~" = "~y[i]~" - "~hat(y)[i]), 
+     ylab = "", border = NA, col = "salmon", xlim = c(-5, 5),
+     yaxt = "n",
+     freq = FALSE, ylim = c(0, max_count))
+```
+
+```{r}
+#| echo: false
+augment(myfit, df) |>
+  summarize(
+    var_y = var(y),
+    var_resid = var(.resid),
+    r.squared = 1 - var_resid / var_y
+  )
+```
+
+## $R^2\approx 0.28$ 
+
+
+```{r}
+#| echo: false
+#| fig-asp: 0.4
+par(mar = c(4, 4, 3, 0.5), mfrow = c(1, 3), cex.main = 1.5, 
+    cex.lab = 1.5)
+
+set.seed(1)
+
+n <- 200
+sx <- 1
+sy <- 1
+r <- -sqrt(0.25)
+
+df <- tibble(
+  x = rnorm(n, mean = 0, sd = sx),
+  y = x * r * sy / sx + rnorm(n, mean = 0, (1 - r^2) * sy)
+)
+plot(df$x, df$y, pch = 19, main = "", xlab = "x", ylab = "y")
+myfit <- lm(y ~ x, data = df)
+e <- myfit$residuals
+abline(myfit, col = "red", lwd = 3)
+max_count <- 1.1*max(max(hist(df$y, plot = FALSE)$dens), max(hist(e, plot = FALSE)$dens))
+
+hist(df$y, breaks = "Scott", main = "Response distribution",
+     xlab = expression(y[i]), 
+     ylab = "", border = NA, col = "lightblue", 
+     freq = FALSE,
+     xlim = c(-5, 5),
+     yaxt = "n", ylim = c(0, max_count))
+hist(e, breaks = "Scott", 
+     main = "Residual distribution",
+     xlab = expression(e[i]~" = "~y[i]~" - "~hat(y)[i]), 
+     ylab = "", border = NA, col = "salmon", xlim = c(-5, 5),
+     yaxt = "n",
+     freq = FALSE, ylim = c(0, max_count))
+```
+
+```{r}
+#| echo: false
+augment(myfit, df) |>
+  summarize(
+    var_y = var(y),
+    var_resid = var(.resid),
+    r.squared = 1 - var_resid / var_y
+  )
+```
+
+## $R^2\approx 0.63$ 
+
+
+```{r}
+#| echo: false
+#| fig-asp: 0.4
+par(mar = c(4, 4, 3, 0.5), mfrow = c(1, 3), cex.main = 1.5, 
+    cex.lab = 1.5)
+
+set.seed(1)
+
+n <- 200
+sx <- 1
+sy <- 1
+r <- -sqrt(0.5)
+
+df <- tibble(
+  x = rnorm(n, mean = 0, sd = sx),
+  y = x * r * sy / sx + rnorm(n, mean = 0, (1 - r^2) * sy)
+)
+plot(df$x, df$y, pch = 19, main = "", xlab = "x", ylab = "y")
+myfit <- lm(y ~ x, data = df)
+e <- myfit$residuals
+abline(myfit, col = "red", lwd = 3)
+max_count <- 1.1*max(max(hist(df$y, plot = FALSE)$dens), max(hist(e, plot = FALSE)$dens))
+
+hist(df$y, breaks = "Scott", main = "Response distribution",
+     xlab = expression(y[i]), 
+     ylab = "", border = NA, col = "lightblue", 
+     freq = FALSE,
+     xlim = c(-5, 5),
+     yaxt = "n", ylim = c(0, max_count))
+hist(e, breaks = "Scott", 
+     main = "Residual distribution",
+     xlab = expression(e[i]~" = "~y[i]~" - "~hat(y)[i]), 
+     ylab = "", border = NA, col = "salmon", xlim = c(-5, 5),
+     yaxt = "n",
+     freq = FALSE, ylim = c(0, max_count))
+```
+
+```{r}
+#| echo: false
+augment(myfit, df) |>
+  summarize(
+    var_y = var(y),
+    var_resid = var(.resid),
+    r.squared = 1 - var_resid / var_y
+  )
+```
+
+## $R^2\approx 0.97$ 
+
+
+```{r}
+#| echo: false
+#| fig-asp: 0.4
+par(mar = c(4, 4, 3, 0.5), mfrow = c(1, 3), cex.main = 1.5, 
+    cex.lab = 1.5)
+
+set.seed(1)
+
+n <- 200
+sx <- 1
+sy <- 1
+r <- -sqrt(0.85)
+
+df <- tibble(
+  x = rnorm(n, mean = 0, sd = sx),
+  y = x * r * sy / sx + rnorm(n, mean = 0, (1 - r^2) * sy)
+)
+plot(df$x, df$y, pch = 19, main = "", xlab = "x", ylab = "y")
+myfit <- lm(y ~ x, data = df)
+e <- myfit$residuals
+abline(myfit, col = "red", lwd = 3)
+max_count <- 1.1*max(max(hist(df$y, plot = FALSE)$dens), max(hist(e, plot = FALSE)$dens))
+
+hist(df$y, breaks = "Scott", main = "Response distribution",
+     xlab = expression(y[i]), 
+     ylab = "", border = NA, col = "lightblue", 
+     freq = FALSE,
+     xlim = c(-5, 5),
+     yaxt = "n", ylim = c(0, max_count))
+hist(e, breaks = "Scott", 
+     main = "Residual distribution",
+     xlab = expression(e[i]~" = "~y[i]~" - "~hat(y)[i]), 
+     ylab = "", border = NA, col = "salmon", xlim = c(-5, 5),
+     yaxt = "n",
+     freq = FALSE, ylim = c(0, max_count))
+```
+
+```{r}
+#| echo: false
+augment(myfit, df) |>
+  summarize(
+    var_y = var(y),
+    var_resid = var(.resid),
+    r.squared = 1 - var_resid / var_y
+  )
+```
+
+## $R^2\approx 1$ 
+
+Perfect fit. The model explained (cleaned up) everything:
+
+
+```{r}
+#| echo: false
+#| fig-asp: 0.4
+par(mar = c(4, 4, 3, 0.5), mfrow = c(1, 3), cex.main = 1.5, 
+    cex.lab = 1.5)
+
+set.seed(1)
+
+n <- 200
+sx <- 1
+sy <- 1
+r <- -sqrt(0.98)
+
+df <- tibble(
+  x = rnorm(n, mean = 0, sd = sx),
+  y = x * r * sy / sx + rnorm(n, mean = 0, (1 - r^2) * sy)
+)
+plot(df$x, df$y, pch = 19, main = "", xlab = "x", ylab = "y")
+myfit <- lm(y ~ x, data = df)
+e <- myfit$residuals
+abline(myfit, col = "red", lwd = 3)
+max_count <- 1.1*max(max(hist(df$y, plot = FALSE)$dens), max(hist(e, plot = FALSE)$dens))
+
+hist(df$y, breaks = "Scott", main = "Response distribution",
+     xlab = expression(y[i]), 
+     ylab = "", border = NA, col = "lightblue", 
+     freq = FALSE,
+     xlim = c(-5, 5),
+     yaxt = "n", ylim = c(0, max_count))
+hist(e, breaks = "Scott", 
+     main = "Residual distribution",
+     xlab = expression(e[i]~" = "~y[i]~" - "~hat(y)[i]), 
+     ylab = "", border = NA, col = "salmon", xlim = c(-5, 5),
+     yaxt = "n",
+     freq = FALSE, ylim = c(0, max_count))
+```
+
+```{r}
+#| echo: false
+augment(myfit, df) |>
+  summarize(
+    var_y = var(y),
+    var_resid = var(.resid),
+    r.squared = 1 - var_resid / var_y
+  )
+```
+
+## The nitty gritty
+
+$$
+\begin{aligned}
+    R^2\,
+    =
+    \begin{matrix}
+        \text{proportion of}\\
+        \text{variation explained}
+    \end{matrix}
+    &=
+    1-
+    \begin{matrix}
+        \text{proportion of}\\
+        \text{variation unexplained}
+    \end{matrix}\\[15pt]
+    &= 
+    1-\frac{\text{unexplained variation}}{\text{total variation}}
+    \\[15pt]
+    &=
+    1-\frac{\text{spread of residuals}}{\text{spread of response}}
+    \\[15pt]
+    &=
+    1-\frac{\text{var}(e_i)}{\text{var}(y_i)}
+    .
+\end{aligned}
+$$
+
+## Literally {.medium}
+
+
+
+```{r}
+augment(bm_fl_fit, penguins) |>
+  summarize(
+    var_y = var(body_mass_g, na.rm = TRUE),
+    var_e = var(.resid, na.rm = TRUE),
+    R2 = 1 - var_e / var_y
+  )
+
+```
+
+. . .
+
+```{r}
+
+linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm, penguins) |>
+  glance() |>
+  select(r.squared)
+```
+
+## Summary
+
+- $R^2$ is a number between zero and one, and it represents the proportion of the variance in the response $Y$ that is explained by the model fit;
+
+- This is *the* interpretation, regardless how many predictors you have;
+
+- In *simple* regression with one numerical predictor, $R^2$ it is also the square of the correlation coefficient, but this doesn't generalize to the multivariate setting.
+
 # Model selection 
 
+## Model selection
 
-# AE
+**Question**: Given many competing models for *the same response*, which model is "best"? What does that even mean?
 
+. . .
+
+**Answer**: Assign a "quality score" to each model, and pick the model with the best score:
+
+| Model | Score | Verdict |
+| --- | --- | --- | 
+| Simple | 0.1 | ❌ |
+| Additive | 0.5 | ✅ |
+| Interaction | 0.48 | ❌ |
+
+. . .
+
+**Variable selection**: all of our models were linear, and they differed only by which predictor variables are included. By ranking models by quality score and picking the "best" one, we can determine which predictors are the "most important" to include.
+
+## Selection criteria
+
+This is a big area of statistical research. There are loads of "quality scores" you could consider, and they prioritize different things: predictive accuracy, goodness-of-fit, simplicity, fairness, etc.
+
+- $R^2$
+- adjusted $R^2$
+- Akaike Information criterion (AIC)
+- Bayesian information criterion (BIC)
+- ... so many more
+
+We won't go into detail, but you will if you keep studying statistics.
+
+## `tidymodels` reports many of these for free
+
+```{r}
+bm_fl_fit |>
+  glance() |>
+  select(r.squared, adj.r.squared, AIC, BIC)
+```
+
+## $R^2$'s dirty little secret
+
+$R^2$ gives participation trophies. It *always* goes up when you add any new variable to the model, even if that variable is worthless.
+
+## Adding a phony variable {.medium}
+
+
+
+The original model fit:
+
+```{r}
+linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm, penguins) |>
+  glance() |>
+  pull(r.squared)
+```
+
+
+. . .
+
+
+Add a predictor that is literally just a bunch of random numbers:
+
+
+```{r}
+#| echo: false
+set.seed(12345)
+```
+
+```{r}
+noisy_penguins <- penguins |>
+  mutate(
+    bullshit = rnorm(nrow(penguins))
+  )
+
+linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm + bullshit, noisy_penguins) |>
+  glance() |>
+  pull(r.squared)
+```
+
+## Adjusted $R^2$
+
+Because vanilla $R^2$ blithely rewards the addition of *any* variable, no matter how meaningless, you shouldn't use it for model selection. Instead, use *adjusted* $R^2$. The formula is in the textbook if you're dying to know, but here's the tea:
+
+::: incremental
+- adjusted $R^2$ penalizes the inclusion of unnecessary predictors;
+- It prioritizes a *parsimonious model*:
+    - a model that fits/predicts well, *and*...
+    - a model that's not too complicated (so our pear brains can still understand it);
+- Occam's razor!
+:::
+
+## For the penguins
+
+:::::: columns
+:::: {.column width="50%"}
+```{r}
+bm_fl_fit |> glance() |>
+  pull(adj.r.squared)
+```
+
+```{r}
+bm_island_fit |> glance() |>
+  pull(adj.r.squared)
+```
+
+```{r}
+bm_fl_island_fit |> glance() |>
+  pull(adj.r.squared)
+```
+::::
+
+
+:::: {.column width="50%"}
+
+```{r}
+bm_fl_island_int_fit |> glance() |>
+  pull(adj.r.squared)
+```
+
+```{r}
+bm_fl_bl_fit |> glance() |>
+  pull(adj.r.squared)
+```
+
+::::
+
+::::::
+
+
+
+
+## Balancing fit and complexity
+
+::: incremental
+
+- More complex models (i.e., models with more predictors) tend to fit the data at hand better, but may not generalize well to new data.
+
+- Model selection criteria, like adjusted $R^2$, help balance model fit and complexity to avoid overfitting by penalizing models with more predictors.
+
+:::
+
+## Overfitting {.smaller}
+
+::: incremental
+
+- Overfitting occurs when a model captures not only the underlying relationship between predictors and outcome but also the random noise in the data.
+
+- Overfitted models tend to perform well on the observed data but poorly on new, unseen data.
+  - Good news: We have techniques to detect and prevent overfitting.
+  - Bad news: We won't get into those until next week.
+
+:::
