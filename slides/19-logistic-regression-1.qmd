@@ -340,6 +340,8 @@ This is called the *logistic regression* model.
 
 -   The log odds $\log(p / (1 - p))$ is a number between $-\infty$ and $\infty$, which is suitable for the linear model.
 
+-   Why does this "transformation" work? The log function maps positive numbers $(0, \infty)$ to all real numbers $(-\infty, \infty)$. 
+
 ## Probability to odds
 
 ```{r}
@@ -347,7 +349,18 @@ This is called the *logistic regression* model.
 #| fig-asp: 0.6
 
 curve(x/(1 - x), from = 0, to = 1, n = 500,
-      xlab = "p", ylab = "p / (1 - p)",
+      xlab = "Probability: p)", ylab = "Odds: p / (1 - p)",
+      lwd = 2, col = "red", bty = "n")
+```
+
+## Zooming in
+
+```{r}
+#| echo: false
+#| fig-asp: 0.6
+
+curve(x/(1 - x), from = 0.10, to = 0.90, n = 500,
+      xlab = "Probability: p", ylab = "Odds: p / (1 - p)",
       lwd = 2, col = "red", bty = "n")
 ```
 
@@ -359,7 +372,7 @@ curve(x/(1 - x), from = 0, to = 1, n = 500,
 
 curve(log(x), from = 0, to = 10, n = 1000,
       lwd = 2, col = "red", xaxt = "n", bty = "n",
-      xlab = "p / (1 - p)", ylab = "log[p / (1 - p)]")
+      xlab = "Odds: p / (1 - p)", ylab = "Log-odds: log[p / (1 - p)]")
 axis(1, pos = 0)
 ```
 
@@ -373,7 +386,7 @@ $$
 
 -   The *logit* function $\log(p / (1-p))$ is an example of a *link function* that transforms the linear model to have an appropriate range;
 
--   This is an example of a *generalized linear model*;
+-   This is an example of a *generalized linear model*
 
 ## Estimation
 
