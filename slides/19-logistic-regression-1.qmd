@@ -146,7 +146,10 @@ ggplot(
   ) +
   geom_point(alpha = 0.5) +
   geom_smooth(aes(y = .pred), method = "lm") +
-  labs(title = "Plot A - Additive model") +
+  labs(title = "Plot A - Additive model",
+       x = "Flipper Length (mm)",
+       y = "Body Mass (g)",
+       color = "Island") +
   theme(legend.position = "bottom")
 
 # Plot B
@@ -156,7 +159,10 @@ ggplot(
   ) +
   geom_point(alpha = 0.5) +
   geom_smooth(method = "lm") +
-  labs(title = "Plot B - Interaction model") +
+  labs(title = "Plot B - Interaction model",
+       x = "Flipper Length (mm)",
+       y = "Body Mass (g)",
+       color = "Island") +
   theme(legend.position = "bottom")
 ```
 
