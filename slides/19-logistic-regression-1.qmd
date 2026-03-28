@@ -403,7 +403,9 @@ $$
 ## Today's data {.smaller}
 
 ```{r}
-email |> dplyr::select(c(spam, dollar, viagra, winner, password, exclaim_mess)) |> glimpse()
+email |> 
+  dplyr::select(c(spam, dollar, viagra, winner, password, exclaim_mess)) |> 
+  glimpse()
 ```
 
 ## Fitting a logistic model
@@ -433,7 +435,7 @@ $$
 \hat{p}=\widehat{P(y=1)}=\frac{e^{-2.27}}{1+e^{-2.27}}\approx 0.09.
 $$
 
-So, an email with no exclamation marks has a 9% chance of being spam.
+So, our model predicts that an email with no exclamation marks has a 9% probability of being spam.
 
 ## Interpreting the slope is tricky {.scrollable}
 
@@ -487,7 +489,7 @@ $$
 0.000272\times exclaim~mess
 $$
 
-If we add one exclamation mark to the model, we predict the odds of an email being spam to be **higher** by a factor of $e^{0.000272}\approx 1.000272$ on average.
+If we add one exclamation mark to the model, we predict the odds of an email being spam to be **higher** by a multiplicative factor of $e^{0.000272}\approx 1.000272$ on average.
 
 ## Logistic regression -\> classification?
 
@@ -694,20 +696,19 @@ legend("bottomright", c("y = 0", "y = 1"), pch = 19, col = c("orange", "blue"), 
 
 ## "Multiple" logistic regression
 
-On the probability scale:
-
-$$
-\text{Prob}(y = 1)
-=
-\frac{e^{\beta_0+\beta_1x_1+\beta_2x_2+...+\beta_mx_m}}{1+e^{\beta_0+\beta_1x_1+\beta_2x_2+...+\beta_mx_m}}.
-$$
-
 For the log-odds, a *multiple* linear regression:
 
 $$
 \log\left(\frac{p}{1-p}\right)
 =
 \beta_0+\beta_1x_1+\beta_2x_2+...+\beta_mx_m.
+$$
+On the probability scale:
+
+$$
+\text{Prob}(y = 1)
+=
+\frac{e^{\beta_0+\beta_1x_1+\beta_2x_2+...+\beta_mx_m}}{1+e^{\beta_0+\beta_1x_1+\beta_2x_2+...+\beta_mx_m}}.
 $$
 
 ## Decision boundary, again {.smaller}
