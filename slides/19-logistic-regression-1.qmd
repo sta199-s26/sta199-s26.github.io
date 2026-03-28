@@ -239,7 +239,22 @@ y
 0 & \text{applicant is safe}
 \end{cases}
 $$
+## Example: Who said it: Taylor Swift, or Shakespeare? {.smaller}
 
+$$
+\mathbf{x}: \text{word counts (e.g., thou, love, heartbreak), stylistic features}
+$$
+
+![](images/19/tswift.png){fig-align="center"}
+
+$$
+y
+= 
+\begin{cases}
+1 & \text{Taylor Swift}\\
+0 & \text{William Shakespeare}
+\end{cases}
+$$
 ## How do we model this type of data?
 
 ```{r}
