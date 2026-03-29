@@ -295,6 +295,19 @@ y
 0 &amp; \text{applicant is safe}
 \end{cases}
 \]</span></p>
+</section><section id="example-who-said-it-taylor-swift-or-shakespeare" class="slide level2 smaller"><h2>Example: Who said it: Taylor Swift, or Shakespeare?</h2>
+<p><span class="math display">\[
+\mathbf{x}: \text{word counts (e.g., thou, love, heartbreak), stylistic features}
+\]</span></p>
+
+<img data-src="images/19/tswift.png" class="quarto-figure quarto-figure-center r-stretch" style="width:40.0%"><p><span class="math display">\[
+y
+=
+\begin{cases}
+1 &amp; \text{Taylor Swift}\\
+0 &amp; \text{William Shakespeare}
+\end{cases}
+\]</span></p>
 </section><section id="how-do-we-model-this-type-of-data" class="slide level2"><h2>How do we model this type of data?</h2>
 
 <img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section><section id="straight-line-of-best-fit-is-a-little-silly" class="slide level2"><h2>Straight line of best fit is a little silly</h2>
@@ -343,12 +356,15 @@ y
 <p>“The odds of this lecture going well are 10 to 1.”</p>
 </blockquote>
 <ul>
-<li>The log odds <span class="math inline">\(\log(p / (1 - p))\)</span> is a number between <span class="math inline">\(-\infty\)</span> and <span class="math inline">\(\infty\)</span>, which is suitable for the linear model.</li>
+<li><p>The log odds <span class="math inline">\(\log(p / (1 - p))\)</span> is a number between <span class="math inline">\(-\infty\)</span> and <span class="math inline">\(\infty\)</span>, which is suitable for the linear model.</p></li>
+<li><p>Why does this “transformation” work? The log function maps positive numbers <span class="math inline">\((0, \infty)\)</span> to all real numbers <span class="math inline">\((-\infty, \infty)\)</span>.</p></li>
 </ul></section><section id="probability-to-odds" class="slide level2"><h2>Probability to odds</h2>
 
-<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section><section id="odds-to-log-odds" class="slide level2"><h2>Odds to log odds</h2>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section><section id="zooming-in" class="slide level2"><h2>Zooming in</h2>
 
-<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section><section id="logistic-regression" class="slide level2"><h2>Logistic regression</h2>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section><section id="odds-to-log-odds" class="slide level2"><h2>Odds to log odds</h2>
+
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section><section id="logistic-regression" class="slide level2"><h2>Logistic regression</h2>
 <p><span class="math display">\[
 \log\left(\frac{p}{1-p}\right)
 =
@@ -356,7 +372,7 @@ y
 \]</span></p>
 <ul>
 <li><p>The <em>logit</em> function <span class="math inline">\(\log(p / (1-p))\)</span> is an example of a <em>link function</em> that transforms the linear model to have an appropriate range;</p></li>
-<li><p>This is an example of a <em>generalized linear model</em>;</p></li>
+<li><p>This is an example of a <em>generalized linear model</em></p></li>
 </ul></section><section id="estimation" class="slide level2"><h2>Estimation</h2>
 <ul>
 <li><p>We estimate the parameters <span class="math inline">\(\beta_0,\,\beta_1\)</span> using <em>maximum likelihood</em> (don’t worry about it) to get the “best fitting” S-curve;</p></li>
@@ -369,7 +385,9 @@ b_0+b_1x.
 \]</span></p>
 </section><section id="todays-data" class="slide level2 smaller"><h2>Today’s data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>email <span class="sc">|&gt;</span> dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="fu">c</span>(spam, dollar, viagra, winner, password, exclaim_mess)) <span class="sc">|&gt;</span> <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>email <span class="sc">|&gt;</span> </span>
+<span id="cb1-2"><a></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="fu">c</span>(spam, dollar, viagra, winner, password, exclaim_mess)) <span class="sc">|&gt;</span> </span>
+<span id="cb1-3"><a></a>  <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 3,921
 Columns: 6
@@ -408,7 +426,7 @@ $ exclaim_mess &lt;dbl&gt; 0, 1, 6, 48, 1, 1, 1, 18, 1, 0, 2, 1, 0, 10, 4, 10, 2
 <p><span class="math display">\[
 \hat{p}=\widehat{P(y=1)}=\frac{e^{-2.27}}{1+e^{-2.27}}\approx 0.09.
 \]</span></p>
-<p>So, an email with no exclamation marks has a 9% chance of being spam.</p>
+<p>So, our model predicts that an email with no exclamation marks has a 9% probability of being spam.</p>
 </section><section id="interpreting-the-slope-is-tricky" class="slide level2 scrollable"><h2>Interpreting the slope is tricky</h2>
 <p>Recall:</p>
 <p><span class="math display">\[
@@ -451,7 +469,7 @@ e^{b_0}e^{b_1x+b_1}
 +
 0.000272\times exclaim~mess
 \]</span></p>
-<p>If we add one exclamation mark to the model, we predict the odds of an email being spam to be <strong>higher</strong> by a factor of <span class="math inline">\(e^{0.000272}\approx 1.000272\)</span> on average.</p>
+<p>If we add one exclamation mark to the model, we predict the odds of an email being spam to be <strong>higher</strong> by a multiplicative factor of <span class="math inline">\(e^{0.000272}\approx 1.000272\)</span> on average.</p>
 </section><section id="logistic-regression---classification" class="slide level2"><h2>Logistic regression -&gt; classification?</h2>
 </section><section id="step-0-fit-the-model" class="slide level2 smaller"><h2>Step 0: fit the model</h2>
 <p>Select a number <span class="math inline">\(0 &lt; p^* &lt; 1\)</span>:</p>
@@ -492,40 +510,39 @@ e^{b_0}e^{b_1x+b_1}
 </ul></section><section id="nothing-special-about-one-predictor" class="slide level2 smaller"><h2>Nothing special about one predictor…</h2>
 <p>Two numerical predictors and one binary response:</p>
 
-<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section><section id="multiple-logistic-regression" class="slide level2"><h2>“Multiple” logistic regression</h2>
-<p>On the probability scale:</p>
-<p><span class="math display">\[
-\text{Prob}(y = 1)
-=
-\frac{e^{\beta_0+\beta_1x_1+\beta_2x_2+...+\beta_mx_m}}{1+e^{\beta_0+\beta_1x_1+\beta_2x_2+...+\beta_mx_m}}.
-\]</span></p>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section><section id="multiple-logistic-regression" class="slide level2"><h2>“Multiple” logistic regression</h2>
 <p>For the log-odds, a <em>multiple</em> linear regression:</p>
 <p><span class="math display">\[
 \log\left(\frac{p}{1-p}\right)
 =
 \beta_0+\beta_1x_1+\beta_2x_2+...+\beta_mx_m.
+\]</span> On the probability scale:</p>
+<p><span class="math display">\[
+\text{Prob}(y = 1)
+=
+\frac{e^{\beta_0+\beta_1x_1+\beta_2x_2+...+\beta_mx_m}}{1+e^{\beta_0+\beta_1x_1+\beta_2x_2+...+\beta_mx_m}}.
 \]</span></p>
 </section><section id="decision-boundary-again" class="slide level2 smaller"><h2>Decision boundary, again</h2>
-<p>It’s linear! Consider two numerical predictors:</p>
-
-<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"><ul>
-<li>if new <span class="math inline">\((x_1,\,x_2)\)</span> below, <span class="math inline">\(\text{Prob}(y=1)\leq p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=0\)</span> for the new person;</li>
-<li>if new <span class="math inline">\((x_1,\,x_2)\)</span> above, <span class="math inline">\(\text{Prob}(y=1)&gt; p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=1\)</span> for the new person.</li>
-</ul></section><section id="decision-boundary-again-1" class="slide level2 smaller"><h2>Decision boundary, again</h2>
 <p>It’s linear! Consider two numerical predictors:</p>
 
 <img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"><ul>
 <li>if new <span class="math inline">\((x_1,\,x_2)\)</span> below, <span class="math inline">\(\text{Prob}(y=1)\leq p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=0\)</span> for the new person;</li>
 <li>if new <span class="math inline">\((x_1,\,x_2)\)</span> above, <span class="math inline">\(\text{Prob}(y=1)&gt; p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=1\)</span> for the new person.</li>
-</ul></section><section id="decision-boundary-again-2" class="slide level2 smaller"><h2>Decision boundary, again</h2>
+</ul></section><section id="decision-boundary-again-1" class="slide level2 smaller"><h2>Decision boundary, again</h2>
 <p>It’s linear! Consider two numerical predictors:</p>
 
 <img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"><ul>
 <li>if new <span class="math inline">\((x_1,\,x_2)\)</span> below, <span class="math inline">\(\text{Prob}(y=1)\leq p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=0\)</span> for the new person;</li>
 <li>if new <span class="math inline">\((x_1,\,x_2)\)</span> above, <span class="math inline">\(\text{Prob}(y=1)&gt; p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=1\)</span> for the new person.</li>
-</ul></section><section id="note-the-classifier-isnt-perfect" class="slide level2 medium"><h2>Note: the classifier isn’t perfect</h2>
+</ul></section><section id="decision-boundary-again-2" class="slide level2 smaller"><h2>Decision boundary, again</h2>
+<p>It’s linear! Consider two numerical predictors:</p>
 
 <img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"><ul>
+<li>if new <span class="math inline">\((x_1,\,x_2)\)</span> below, <span class="math inline">\(\text{Prob}(y=1)\leq p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=0\)</span> for the new person;</li>
+<li>if new <span class="math inline">\((x_1,\,x_2)\)</span> above, <span class="math inline">\(\text{Prob}(y=1)&gt; p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=1\)</span> for the new person.</li>
+</ul></section><section id="note-the-classifier-isnt-perfect" class="slide level2 medium"><h2>Note: the classifier isn’t perfect</h2>
+
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"><ul>
 <li>There are blue points in the orange region: spam (1) emails misclassified as legit (0);</li>
 <li>There are orange points in the blue region: legit (0) emails misclassified as spam (1).</li>
 </ul></section><section id="how-do-you-pick-the-threshold" class="slide level2 smaller"><h2>How do you pick the threshold?</h2>

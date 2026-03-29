@@ -460,6 +460,7 @@ window.Quarto = {
   <li><a href="#example-is-the-e-mail-spam-or-not" id="toc-example-is-the-e-mail-spam-or-not" class="nav-link" data-scroll-target="#example-is-the-e-mail-spam-or-not">Example: is the e-mail spam or not?</a></li>
   <li><a href="#example-is-it-cancer-or-not" id="toc-example-is-it-cancer-or-not" class="nav-link" data-scroll-target="#example-is-it-cancer-or-not">Example: is it cancer or not?</a></li>
   <li><a href="#example-will-they-default" id="toc-example-will-they-default" class="nav-link" data-scroll-target="#example-will-they-default">Example: will they default?</a></li>
+  <li><a href="#example-who-said-it-taylor-swift-or-shakespeare" id="toc-example-who-said-it-taylor-swift-or-shakespeare" class="nav-link" data-scroll-target="#example-who-said-it-taylor-swift-or-shakespeare">Example: Who said it: Taylor Swift, or Shakespeare?</a></li>
   <li><a href="#how-do-we-model-this-type-of-data" id="toc-how-do-we-model-this-type-of-data" class="nav-link" data-scroll-target="#how-do-we-model-this-type-of-data">How do we model this type of data?</a></li>
   <li><a href="#straight-line-of-best-fit-is-a-little-silly" id="toc-straight-line-of-best-fit-is-a-little-silly" class="nav-link" data-scroll-target="#straight-line-of-best-fit-is-a-little-silly">Straight line of best fit is a little silly</a></li>
   <li><a href="#instead-s-curve-of-best-fit" id="toc-instead-s-curve-of-best-fit" class="nav-link" data-scroll-target="#instead-s-curve-of-best-fit">Instead: S-curve of best fit</a></li>
@@ -467,6 +468,7 @@ window.Quarto = {
   <li><a href="#so-what-is-this-s-curve-anyway" id="toc-so-what-is-this-s-curve-anyway" class="nav-link" data-scroll-target="#so-what-is-this-s-curve-anyway">So, what is this S-curve, anyway?</a></li>
   <li><a href="#log-odds" id="toc-log-odds" class="nav-link" data-scroll-target="#log-odds">Log-odds?</a></li>
   <li><a href="#probability-to-odds" id="toc-probability-to-odds" class="nav-link" data-scroll-target="#probability-to-odds">Probability to odds</a></li>
+  <li><a href="#zooming-in" id="toc-zooming-in" class="nav-link" data-scroll-target="#zooming-in">Zooming in</a></li>
   <li><a href="#odds-to-log-odds" id="toc-odds-to-log-odds" class="nav-link" data-scroll-target="#odds-to-log-odds">Odds to log odds</a></li>
   <li><a href="#logistic-regression" id="toc-logistic-regression" class="nav-link" data-scroll-target="#logistic-regression">Logistic regression</a></li>
   <li><a href="#estimation" id="toc-estimation" class="nav-link" data-scroll-target="#estimation">Estimation</a></li>
@@ -641,6 +643,22 @@ y
 0 &amp; \text{applicant is safe}
 \end{cases}
 \]</span></p>
+</section><section id="example-who-said-it-taylor-swift-or-shakespeare" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="example-who-said-it-taylor-swift-or-shakespeare">Example: Who said it: Taylor Swift, or Shakespeare?</h2>
+<p><span class="math display">\[
+\mathbf{x}: \text{word counts (e.g., thou, love, heartbreak), stylistic features}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/19/tswift.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p><span class="math display">\[
+y
+=
+\begin{cases}
+1 &amp; \text{Taylor Swift}\\
+0 &amp; \text{William Shakespeare}
+\end{cases}
+\]</span></p>
 </section><section id="how-do-we-model-this-type-of-data" class="level2"><h2 class="anchored" data-anchor-id="how-do-we-model-this-type-of-data">How do we model this type of data?</h2>
 <div class="cell">
 <div class="cell-output-display">
@@ -710,7 +728,8 @@ y
 <p>“The odds of this lecture going well are 10 to 1.”</p>
 </blockquote>
 <ul>
-<li>The log odds <span class="math inline">\(\log(p / (1 - p))\)</span> is a number between <span class="math inline">\(-\infty\)</span> and <span class="math inline">\(\infty\)</span>, which is suitable for the linear model.</li>
+<li><p>The log odds <span class="math inline">\(\log(p / (1 - p))\)</span> is a number between <span class="math inline">\(-\infty\)</span> and <span class="math inline">\(\infty\)</span>, which is suitable for the linear model.</p></li>
+<li><p>Why does this “transformation” work? The log function maps positive numbers <span class="math inline">\((0, \infty)\)</span> to all real numbers <span class="math inline">\((-\infty, \infty)\)</span>.</p></li>
 </ul></section><section id="probability-to-odds" class="level2"><h2 class="anchored" data-anchor-id="probability-to-odds">Probability to odds</h2>
 <div class="cell">
 <div class="cell-output-display">
@@ -720,11 +739,20 @@ y
 </div>
 </div>
 </div>
-</section><section id="odds-to-log-odds" class="level2"><h2 class="anchored" data-anchor-id="odds-to-log-odds">Odds to log odds</h2>
+</section><section id="zooming-in" class="level2"><h2 class="anchored" data-anchor-id="zooming-in">Zooming in</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="odds-to-log-odds" class="level2"><h2 class="anchored" data-anchor-id="odds-to-log-odds">Odds to log odds</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
@@ -737,7 +765,7 @@ y
 \]</span></p>
 <ul>
 <li><p>The <em>logit</em> function <span class="math inline">\(\log(p / (1-p))\)</span> is an example of a <em>link function</em> that transforms the linear model to have an appropriate range;</p></li>
-<li><p>This is an example of a <em>generalized linear model</em>;</p></li>
+<li><p>This is an example of a <em>generalized linear model</em></p></li>
 </ul></section><section id="estimation" class="level2"><h2 class="anchored" data-anchor-id="estimation">Estimation</h2>
 <ul>
 <li><p>We estimate the parameters <span class="math inline">\(\beta_0,\,\beta_1\)</span> using <em>maximum likelihood</em> (don’t worry about it) to get the “best fitting” S-curve;</p></li>
@@ -750,7 +778,9 @@ b_0+b_1x.
 \]</span></p>
 </section><section id="todays-data" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="todays-data">Today’s data</h2>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">email</span> <span class="op">|&gt;</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">spam</span>, <span class="va">dollar</span>, <span class="va">viagra</span>, <span class="va">winner</span>, <span class="va">password</span>, <span class="va">exclaim_mess</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu">glimpse</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">email</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">spam</span>, <span class="va">dollar</span>, <span class="va">viagra</span>, <span class="va">winner</span>, <span class="va">password</span>, <span class="va">exclaim_mess</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">glimpse</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 3,921
 Columns: 6
@@ -789,7 +819,7 @@ $ exclaim_mess &lt;dbl&gt; 0, 1, 6, 48, 1, 1, 1, 18, 1, 0, 2, 1, 0, 10, 4, 10, 2
 <p><span class="math display">\[
 \hat{p}=\widehat{P(y=1)}=\frac{e^{-2.27}}{1+e^{-2.27}}\approx 0.09.
 \]</span></p>
-<p>So, an email with no exclamation marks has a 9% chance of being spam.</p>
+<p>So, our model predicts that an email with no exclamation marks has a 9% probability of being spam.</p>
 </section><section id="interpreting-the-slope-is-tricky" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="interpreting-the-slope-is-tricky">Interpreting the slope is tricky</h2>
 <p>Recall:</p>
 <p><span class="math display">\[
@@ -829,7 +859,7 @@ e^{b_0}e^{b_1x+b_1}
 +
 0.000272\times exclaim~mess
 \]</span></p>
-<p>If we add one exclamation mark to the model, we predict the odds of an email being spam to be <strong>higher</strong> by a factor of <span class="math inline">\(e^{0.000272}\approx 1.000272\)</span> on average.</p>
+<p>If we add one exclamation mark to the model, we predict the odds of an email being spam to be <strong>higher</strong> by a multiplicative factor of <span class="math inline">\(e^{0.000272}\approx 1.000272\)</span> on average.</p>
 </section><section id="logistic-regression---classification" class="level2"><h2 class="anchored" data-anchor-id="logistic-regression---classification">Logistic regression -&gt; classification?</h2>
 </section><section id="step-0-fit-the-model" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="step-0-fit-the-model">Step 0: fit the model</h2>
 <p>Select a number <span class="math inline">\(0 &lt; p^* &lt; 1\)</span>:</p>
@@ -914,38 +944,24 @@ e^{b_0}e^{b_1x+b_1}
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="multiple-logistic-regression" class="level2"><h2 class="anchored" data-anchor-id="multiple-logistic-regression">“Multiple” logistic regression</h2>
-<p>On the probability scale:</p>
-<p><span class="math display">\[
-\text{Prob}(y = 1)
-=
-\frac{e^{\beta_0+\beta_1x_1+\beta_2x_2+...+\beta_mx_m}}{1+e^{\beta_0+\beta_1x_1+\beta_2x_2+...+\beta_mx_m}}.
-\]</span></p>
-<p>For the log-odds, a <em>multiple</em> linear regression:</p>
-<p><span class="math display">\[
-\log\left(\frac{p}{1-p}\right)
-=
-\beta_0+\beta_1x_1+\beta_2x_2+...+\beta_mx_m.
-\]</span></p>
-</section><section id="decision-boundary-again" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="decision-boundary-again">Decision boundary, again</h2>
-<p>It’s linear! Consider two numerical predictors:</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
 <figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
-<ul>
-<li>if new <span class="math inline">\((x_1,\,x_2)\)</span> below, <span class="math inline">\(\text{Prob}(y=1)\leq p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=0\)</span> for the new person;</li>
-<li>if new <span class="math inline">\((x_1,\,x_2)\)</span> above, <span class="math inline">\(\text{Prob}(y=1)&gt; p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=1\)</span> for the new person.</li>
-</ul></section><section id="decision-boundary-again-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="decision-boundary-again-1">Decision boundary, again</h2>
+</section><section id="multiple-logistic-regression" class="level2"><h2 class="anchored" data-anchor-id="multiple-logistic-regression">“Multiple” logistic regression</h2>
+<p>For the log-odds, a <em>multiple</em> linear regression:</p>
+<p><span class="math display">\[
+\log\left(\frac{p}{1-p}\right)
+=
+\beta_0+\beta_1x_1+\beta_2x_2+...+\beta_mx_m.
+\]</span> On the probability scale:</p>
+<p><span class="math display">\[
+\text{Prob}(y = 1)
+=
+\frac{e^{\beta_0+\beta_1x_1+\beta_2x_2+...+\beta_mx_m}}{1+e^{\beta_0+\beta_1x_1+\beta_2x_2+...+\beta_mx_m}}.
+\]</span></p>
+</section><section id="decision-boundary-again" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="decision-boundary-again">Decision boundary, again</h2>
 <p>It’s linear! Consider two numerical predictors:</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -958,7 +974,7 @@ e^{b_0}e^{b_1x+b_1}
 <ul>
 <li>if new <span class="math inline">\((x_1,\,x_2)\)</span> below, <span class="math inline">\(\text{Prob}(y=1)\leq p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=0\)</span> for the new person;</li>
 <li>if new <span class="math inline">\((x_1,\,x_2)\)</span> above, <span class="math inline">\(\text{Prob}(y=1)&gt; p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=1\)</span> for the new person.</li>
-</ul></section><section id="decision-boundary-again-2" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="decision-boundary-again-2">Decision boundary, again</h2>
+</ul></section><section id="decision-boundary-again-1" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="decision-boundary-again-1">Decision boundary, again</h2>
 <p>It’s linear! Consider two numerical predictors:</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -971,11 +987,24 @@ e^{b_0}e^{b_1x+b_1}
 <ul>
 <li>if new <span class="math inline">\((x_1,\,x_2)\)</span> below, <span class="math inline">\(\text{Prob}(y=1)\leq p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=0\)</span> for the new person;</li>
 <li>if new <span class="math inline">\((x_1,\,x_2)\)</span> above, <span class="math inline">\(\text{Prob}(y=1)&gt; p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=1\)</span> for the new person.</li>
-</ul></section><section id="note-the-classifier-isnt-perfect" class="level2 medium"><h2 class="medium anchored" data-anchor-id="note-the-classifier-isnt-perfect">Note: the classifier isn’t perfect</h2>
+</ul></section><section id="decision-boundary-again-2" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="decision-boundary-again-2">Decision boundary, again</h2>
+<p>It’s linear! Consider two numerical predictors:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>if new <span class="math inline">\((x_1,\,x_2)\)</span> below, <span class="math inline">\(\text{Prob}(y=1)\leq p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=0\)</span> for the new person;</li>
+<li>if new <span class="math inline">\((x_1,\,x_2)\)</span> above, <span class="math inline">\(\text{Prob}(y=1)&gt; p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=1\)</span> for the new person.</li>
+</ul></section><section id="note-the-classifier-isnt-perfect" class="level2 medium"><h2 class="medium anchored" data-anchor-id="note-the-classifier-isnt-perfect">Note: the classifier isn’t perfect</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
