@@ -754,6 +754,7 @@ It's linear! Consider two numerical predictors:
 ```{r}
 #| message: false
 #| echo: false
+#| fig-align: "center"
 fit <- glm(y ~ X, family = binomial)
 
 b0 <- fit$coefficients[1]
@@ -766,7 +767,7 @@ p_thresh <- 0.5
 bd_incpt <- (log(p_thresh / (1 - p_thresh)) - b0) / b2
 bd_slp <- -b1 / b2
 
-x_for_poly <- seq(0, 10, length.out = 500)
+x_for_poly <- seq(-10, 10, length.out = 1000)
 y_for_poly <- bd_incpt + bd_slp * x_for_poly
 
 par(mar = c(4, 5, 0.5, 0.5))
@@ -779,8 +780,8 @@ plot(X,
      ylim = c(-4, 4) + 4,
      cex.lab = 2)
 abline(a = bd_incpt, b = bd_slp, lty = 2, lwd = 3)
-polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(10, 500)), col = rgb(0, 0, 1, alpha = 0.2), border = NA)
-polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(0, 500)), col = rgb(1, .5, 0, alpha = 0.2), border = NA)
+polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(10, 1000)), col = rgb(0, 0, 1, alpha = 0.2), border = NA)
+polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(-10, 1000)), col = rgb(1, .5, 0, alpha = 0.2), border = NA)
 legend("left", expression(hat(y)~" = 0"), text.col = "orange", bty = "n", cex = 2)
 legend("right", expression(hat(y)~" = 1"), text.col = "blue", bty = "n", cex = 2)
 points(X, pch = 19, 
@@ -798,6 +799,7 @@ It's linear! Consider two numerical predictors:
 ```{r}
 #| message: false
 #| echo: false
+#| fig-align: "center"
 fit <- glm(y ~ X, family = binomial)
 
 b0 <- fit$coefficients[1]
@@ -810,7 +812,7 @@ p_thresh <- 0.15
 bd_incpt <- (log(p_thresh / (1 - p_thresh)) - b0) / b2
 bd_slp <- -b1 / b2
 
-x_for_poly <- seq(0, 10, length.out = 500)
+x_for_poly <- seq(-10, 10, length.out = 1000)
 y_for_poly <- bd_incpt + bd_slp * x_for_poly
 
 par(mar = c(4, 5, 0.5, 0.5))
@@ -823,8 +825,8 @@ plot(X,
      ylim = c(-4, 4) + 4,
      cex.lab = 2)
 abline(a = bd_incpt, b = bd_slp, lty = 2, lwd = 3)
-polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(10, 500)), col = rgb(0, 0, 1, alpha = 0.2), border = NA)
-polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(0, 500)), col = rgb(1, .5, 0, alpha = 0.2), border = NA)
+polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(10, 1000)), col = rgb(0, 0, 1, alpha = 0.2), border = NA)
+polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(-10, 1000)), col = rgb(1, .5, 0, alpha = 0.2), border = NA)
 legend("left", expression(hat(y)~" = 0"), text.col = "orange", bty = "n", cex = 2)
 legend("right", expression(hat(y)~" = 1"), text.col = "blue", bty = "n", cex = 2)
 points(X, pch = 19, 
@@ -842,6 +844,7 @@ It's linear! Consider two numerical predictors:
 ```{r}
 #| message: false
 #| echo: false
+#| fig-align: "center"
 fit <- glm(y ~ X, family = binomial)
 
 b0 <- fit$coefficients[1]
@@ -854,7 +857,7 @@ p_thresh <- 0.9
 bd_incpt <- (log(p_thresh / (1 - p_thresh)) - b0) / b2
 bd_slp <- -b1 / b2
 
-x_for_poly <- seq(0, 10, length.out = 500)
+x_for_poly <- seq(-10, 10, length.out = 1000)
 y_for_poly <- bd_incpt + bd_slp * x_for_poly
 
 par(mar = c(4, 5, 0.5, 0.5))
@@ -867,8 +870,8 @@ plot(X,
      ylim = c(-4, 4) + 4,
      cex.lab = 2)
 abline(a = bd_incpt, b = bd_slp, lty = 2, lwd = 3)
-polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(10, 500)), col = rgb(0, 0, 1, alpha = 0.2), border = NA)
-polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(0, 500)), col = rgb(1, .5, 0, alpha = 0.2), border = NA)
+polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(10, 1000)), col = rgb(0, 0, 1, alpha = 0.2), border = NA)
+polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(-10, 1000)), col = rgb(1, .5, 0, alpha = 0.2), border = NA)
 legend("left", expression(hat(y)~" = 0"), text.col = "orange", bty = "n", cex = 2)
 legend("right", expression(hat(y)~" = 1"), text.col = "blue", bty = "n", cex = 2)
 points(X, pch = 19, 
@@ -885,6 +888,7 @@ legend("topright", "p* = 0.9", cex = 2, bty = "n")
 #| message: false
 #| echo: false
 #| fig-asp: 0.45
+#| fig-align: "center"
 
 fit <- glm(y ~ X, family = binomial)
 
@@ -898,7 +902,7 @@ p_thresh <- 0.5
 bd_incpt <- (log(p_thresh / (1 - p_thresh)) - b0) / b2
 bd_slp <- -b1 / b2
 
-x_for_poly <- seq(0, 10, length.out = 500)
+x_for_poly <- seq(-10, 10, length.out = 1000)
 y_for_poly <- bd_incpt + bd_slp * x_for_poly
 
 par(mar = c(4, 5, 0.5, 0.5))
@@ -911,8 +915,8 @@ plot(X,
      ylim = c(-4, 4) + 4,
      cex.lab = 2)
 abline(a = bd_incpt, b = bd_slp, lty = 2, lwd = 3)
-polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(10, 500)), col = rgb(0, 0, 1, alpha = 0.2), border = NA)
-polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(0, 500)), col = rgb(1, .5, 0, alpha = 0.2), border = NA)
+polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(10, 1000)), col = rgb(0, 0, 1, alpha = 0.2), border = NA)
+polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(-10, 1000)), col = rgb(1, .5, 0, alpha = 0.2), border = NA)
 legend("left", expression(hat(y)~" = 0"), text.col = "orange", bty = "n", cex = 2)
 legend("right", expression(hat(y)~" = 1"), text.col = "blue", bty = "n", cex = 2)
 points(X, pch = 19, 
