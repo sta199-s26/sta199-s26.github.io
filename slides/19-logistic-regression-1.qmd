@@ -131,7 +131,7 @@ ggplot(card_krueger_wide, aes(x = statebin, y = emp_diff)) +
   scale_x_continuous(breaks = c(0, 1),
                    labels = c("PA (0)", "NJ (1)")) +
   labs(
-    title = "Card and Krueger data from Lab 5",
+    title = "Card and Krueger data from HW 5",
     y = "Employment difference",
     x = "State"
   )
