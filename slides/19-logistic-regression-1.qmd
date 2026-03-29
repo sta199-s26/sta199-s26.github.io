@@ -53,10 +53,13 @@ y_vals <- 1 / (1 + exp(-(fit$coefficients[1] + fit$coefficients[2] * seq_x)))
 :::: {.column width="70%"}
 ::: wooclap
 
-In a regression with one numerical and one categorical predictor, what is the difference between additive and interaction models?
+What is the difference between the additive vs. interaction linear model when you run a regression model with one numeric and one categorical predictor?
 
 ::: wooclap-choices
-- ???
+- This is a trick question - both models require only numeric predictors.
+- Both give you different lines for each group, but the additive model requires the lines be parallel.
+- Both give you different lines for each group, but the interaction model requires the lines be parallel.
+- Where is John Zito and what have you done with him?
 :::
 
 :::
@@ -452,10 +455,13 @@ So, our model predicts that an email with no exclamation marks has a 9% probabil
 :::: {.column width="70%"}
 ::: wooclap
 
-???
+The slope of the logistic regression model for these data is 0.000272. Which of the following is the best interpretation of this value?
 
 ::: wooclap-choices
-- ???
+- If we add one exclamation mark to the model, we predict the probability of an email being spam will increase by 0.000272, on average.
+- If we add one exclamation mark to the model, we predict the odds of an email being spam will increase by 0.000272, on average.
+- If we add one exclamation mark to the model, we predict the odds of an email being spam to be higher by a factor of e^0.000272 = 1.000272, on average.
+- The odds of an email being spam are decreasing in the number of exclamation marks.
 :::
 
 :::
