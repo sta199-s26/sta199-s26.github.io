@@ -16,7 +16,7 @@ format:
     code-link: true
 ---
 
-## While you wait...
+## While you wait: Participate 📱💻 {.xsmall}
 
 ```{r}
 #| label: load-packages
@@ -29,7 +29,7 @@ library(fivethirtyeight)
 library(palmerpenguins)
 library(MASS)
 hp_spam <- read_csv("data/hp-spam.csv")
-todays_ae <- "ae-13-spam-filter"
+todays_ae <- "ae-19-spam-filter"
 ```
 
 ```{r}
@@ -49,15 +49,23 @@ seq_x = seq(1.2 * min(x), 1.2 * max(x), length.out = 500)
 y_vals <- 1 / (1 + exp(-(fit$coefficients[1] + fit$coefficients[2] * seq_x)))
 ```
 
-::: appex
--   Go to your `ae` project in RStudio.
+:::::: columns
+:::: {.column width="70%"}
+::: wooclap
 
--   Make sure all of your changes up to this point are committed and pushed, i.e., there's nothing left in your Git pane.
+???
 
--   Click Pull to get today's application exercise file: *`{r} paste0(todays_ae, ".qmd")`*.
-
--   Wait till the you're prompted to work on the application exercise during class before editing the file.
+::: wooclap-choices
+- ???
 :::
+
+:::
+::::
+
+::: {.column width="30%"}
+{{< include _wooclap-column.qmd >}}
+:::
+::::::
 
 ## Thus far...
 
@@ -436,6 +444,28 @@ $$
 $$
 
 So, our model predicts that an email with no exclamation marks has a 9% probability of being spam.
+
+## Participate 📱💻 {.xsmall}
+
+
+:::::: columns
+:::: {.column width="70%"}
+::: wooclap
+
+???
+
+::: wooclap-choices
+- ???
+:::
+
+:::
+::::
+
+::: {.column width="30%"}
+{{< include _wooclap-column.qmd >}}
+:::
+::::::
+
 
 ## Interpreting the slope is tricky {.scrollable}
 
