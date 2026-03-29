@@ -53,7 +53,7 @@ y_vals <- 1 / (1 + exp(-(fit$coefficients[1] + fit$coefficients[2] * seq_x)))
 :::: {.column width="70%"}
 ::: wooclap
 
-???
+In a regression with one numerical and one categorical predictor, what is the difference between additive and interaction models?
 
 ::: wooclap-choices
 - ???
