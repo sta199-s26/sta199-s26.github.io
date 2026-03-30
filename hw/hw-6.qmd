@@ -183,7 +183,7 @@ gapminder_23 <- gapminder_raw_23 |>
 
 a. Data Prep: What happens when you take the natural log of 0? Remove rows of your data set where life_expectancy = 0, justifying why this is helpful.
 
-b. Model fitting: Fit a linear model predicting log life expectancy from gross domestic product. Display the tidy summary.
+b. Model fitting: Fit a linear model predicting the natural log of life expectancy from gross domestic product. Display the tidy summary.
 
 c. Model evaluation:
 
