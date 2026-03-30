@@ -232,23 +232,20 @@ To obtain the predicted probability, you can set the type argument in `predict()
 
 ### Question 9
 
-a\. Fit a logistic regression model predicting \`spam\` from \`dollar\`, \`winner\` (indicating whether “winner” appeared in the email), and \`urgent_subj\` (whether the word "urgent" is in the subject of the email). Then, display the tidy output of the model.
+a. Fit a logistic regression model predicting `spam` from `dollar`, `winner` (indicating whether “winner” appeared in the email), and `urgent_subj` (whether the word "urgent" is in the subject of the email). Then, display the tidy output of the model.
 
-b\. Using this model, predict spam / not spam for all emails in the \`email\` dataset with \`augment()\`. Store the resulting data frame with an appropriate name and display the data frame as well.
+b. Using this model, predict spam / not spam for all emails in the `email` dataset with `augment()`. Store the resulting data frame with an appropriate name and display the data frame as well.
 
-c\. Using your data frame from the previous part, determine, in a single pipeline, and using \`count()\`, the numbers of emails:
+c. Using your data frame from the previous part, determine, in a single pipeline, and using `count()`, the numbers of emails:
 
     -   that are labelled as spam that are actually spam
-    
     -   that are not labelled as spam that are actually spam
-    
     -   that are labelled as spam that are actually not spam
-    
     -   that are not labelled as spam that are actually not spam
 
 Store the resulting data frame with an appropriate name.
 
-d\. In a single pipeline, and using \`mutate()\`, calculate the false positive and false negative rates.
+d. In a single pipeline, and using `mutate()`, calculate the false positive and false negative rates.
 
 In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identifies the two rates.
 
@@ -260,10 +257,10 @@ b.  Using this model, predict spam / not spam for all emails in the `email` data
 
 c.  Using your data frame from the previous part, determine, in a single pipeline, and using `count()`, the numbers of emails:
 
-    -   that are labelled as spam that are actually spam
-    -   that are not labelled as spam that are actually spam
-    -   that are labelled as spam that are actually not spam
-    -   that are not labelled as spam that are actually not spam
+    - that are labelled as spam that are actually spam
+    - that are not labelled as spam that are actually spam
+    - that are labelled as spam that are actually not spam
+    - that are not labelled as spam that are actually not spam
 
     Store the resulting data frame with an appropriate name.
 
