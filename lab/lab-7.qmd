@@ -21,7 +21,7 @@ You can view the code book for all variables [here](https://github.com/rfordatas
 By now you should be familiar with how to get started with a lab assignment by cloning the GitHub repo for the assignment.
 If you're not sure how, refer back to an earlier lab.
 
-Open the *lab-6.qmd* template Quarto file and update the `authors` field to add your name first (first and last) and then your teammates' names (first and last).
+Open the *lab-7.qmd* template Quarto file and update the `authors` field to add your name first (first and last) and then your teammates' names (first and last).
 Render the document.
 Examine the rendered document and make sure your and your teammates' names are updated in the document.
 Commit and push your changes with a meaningful commit message and push to GitHub.
@@ -36,7 +36,7 @@ Commit and push your changes with a meaningful commit message and push to GitHub
 
 ## Packages
 
-In this lab we will work with the **tidyverse** package.
+In this lab we will work with the **tidyverse** and **tidymodels** packages.
 
 ```{r}
 #| eval: true
