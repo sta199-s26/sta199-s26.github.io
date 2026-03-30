@@ -232,7 +232,7 @@ To obtain the predicted probability, you can set the type argument in `predict()
 
 ### Question 9
 
-a. Fit a logistic regression model predicting `spam` from `dollar`, `winner` (indicating whether “winner” appeared in the email), and `urgent_subj` (whether the word "urgent" is in the subject of the email). Then, display the tidy output of the model.
+a. Fit a logistic regression model predicting `spam` from `dollar`, `winner` (indicating whether “winner” appeared in the email), and `urgent_subj` (whether the word "urgent" is in the subject of the email). Then, display the tidy output of the model. Include the two predictors using an *additive* model, not an interaction model.
 
 b. Using this model, predict spam / not spam for all emails in the `email` dataset with `augment()`. Store the resulting data frame with an appropriate name and display the data frame as well.
 
@@ -251,7 +251,7 @@ In addition to these numbers showing in your R output, you must write a sentence
 
 ### Question 10
 
-a.  Fit a logistic regression model predicting `spam` from `dollar` and another variable you think would be a good predictor. Provide a 1-sentence justification for why you chose this variable. Display the tidy output of the model.
+a.  Fit a logistic regression model predicting `spam` from `dollar` and another variable you think would be a good predictor. Again, inclue the multiple predictors with an *additive* model. No interactions. Provide a 1-sentence justification for why you chose this variable. Display the tidy output of the model.
 
 b.  Using this model, predict spam / not spam for all emails in the `email` dataset with `augment()`. Store the resulting data frame with an appropriate name.
 
@@ -266,7 +266,7 @@ c.  Using your data frame from the previous part, determine, in a single pipelin
 
 d.  In a single pipeline, and using `mutate()`, calculate the false positive and false negative rates. In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identifies the two rates.
 
-e.  Based on the false positive and false negatives rates of this model, comment, in 1-2 sentences, on which model (one from Question 8 or Question 9) is preferable and why.
+e.  Based on the false positive and false negatives rates of this model, comment, in 1-2 sentences, on which model (one from Question 9 or Question 10) is preferable and why.
 
 
 # Wrap-up
