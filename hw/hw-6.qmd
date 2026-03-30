@@ -9,11 +9,17 @@ draft: false
 
 # Introduction
 
+::: callout-important
+## All questions are AI enabled
+
+This homework covers topics that will appear on next week's midterm. Naturally, you will not get human-graded feedback before that time, and so *all* of the questions are AI-enabled so that you have *something* to study from. Then later, the TAs will go in and properly grade the second half as usual.
+:::
+
 This is a two-part homework assignment:
 
 - **Part 1 -- 🤖 Feedback from AI:** Not graded, for practice, you get immediate feedback with AI, based on rubrics designed by the course instructor. Complete in `hw-6-part-1.qmd`, no submission required.
 
-- **Part 2 -- 🧑🏽‍🏫 Feedback from Humans:** Graded, you get feedback from the course instructional team in about a week. Complete in `hw-6-part-2.qmd`, submit on Gradescope.
+- **Part 2 -- 🧑🏽‍🏫 Feedback from AI, and then Humans later:** First you get immediate feedback with AI, based on rubrics designed by the course instructor. Then in about a week, you get graded feedback from the course instructional team. Complete in `hw-6-part-2.qmd`, submit on Gradescope.
 
 By now you should be familiar with how to get started with a homework assignment by cloning the GitHub repo for the assignment.
 
@@ -72,12 +78,85 @@ You will then need to click the red X on the top left corner of the Viewer pane 
 {{< video https://www.youtube.com/embed/EyT6QQN1ouQ?si=DsG-laE30BykMJby title="aifeedr">}}
 </details>
 
+## Do you even lift?
+
+### Question 1
+
+In this part, you will be working with data from www.openpowerlifting.org. This data was sourced from Tidy Tuesday and contains international powerlifting records at various meets. At each meet, each lifter gets three attempts at lifting max weight on three lifts: the bench press, squat and deadlift. For all of the following exercises, you should include units on axes labels, e.g. “Bench press (lbs)” or “Bench press (kg)”. “Age (years)” etc. This is good practice.
+
+a.  Let's begin by taking a look at the **squat lifting** records.
+
+-   Start with the `ipf` data frame.
+-   First, remove any observations that are negative for squat.
+-   Next, create a new column called `best3_squat_lbs` that converts the record from kilograms to pounds.
+-   Save your data frame as `ipf_squat`.
+-   Report the number of rows and columns of this new data frame.
+
+**Note:** You may need to google the conversion formula.
+
+b.  Using the `ipf_squat` data frame you created in part (a), create a scatter plot to investigate the relationship between squat (in lbs) and age.
+
+-   Age should be on the x-axis.
+-   Adjust the `alpha` level of your points to get a better sense of the density of the data.
+-   Add a linear trend-line.
+-   Summarize the trend you observe in at most 4 sentences.
+
+c.  
+
+-   Write down the linear population model to predict lift squat lbs from age.
+-   Fit the linear model, and save it as `age_fit`.
+-   Re-write your previous equation replacing the population parameters with the numeric estimates. This is called the "fitted" linear model.
+-   Interpret each estimate of $\beta$, and comment on whether the interpretations are sensible
+
+### Question 2
+
+a. Building on your `ipf_squat` data frame, create a new column called `age2` that takes the age of each lifter and squares it. Save it to your data frame `ipf_squat`. Next, plot squat in lbs vs `age2` and add a linear best fit line. How does the fit of the model compare to the one from earlier?
+
+b. One metric to assess the fit of a model is the correlation squared, also known as $R^2$. Fit the age$^2$ model and save the object as `age2_fit`. Compare $R^2$ of the new model (squat vs. age$^2$) to the $R^2$ of the earlier model (squat vs. age). Which has a higher $R^2$?
+
+## General Social Survey
+
+The General Social Survey (GSS) gathers data on contemporary American society in order to monitor and explain trends and constants in attitudes, behaviours, and attributes. Hundreds of trends have been tracked since 1972. In addition, since the GSS adopted questions from earlier surveys, trends can be followed for up to 70 years. The GSS contains a standard core of demographic, behavioural, and attitudinal questions, plus topics of special interest. Among the topics covered are civil liberties, crime and violence, intergroup tolerance, morality, national spending priorities, psychological well-being, social mobility, and stress and traumatic events. In this part you will work with variables from the 2022 General Social Survey.
+
+### Question 3
+
+a. Read in the `gss22.csv` file that is in your data folder and save it as `gss22`. Report its number of rows and columns.
+
+b. Create a new data frame called `gss22_advfront` that only contains the variables `advfront`, `educ`, and `polviews`. Then, use the `drop_na()` function to remove rows that contain NAs from this new data frame. Report the number of rows and columns of `gss22_advfront`. Additionally, report what percent of the observations were discarded at this step.
+
+c. Re-level the advfront variable such that it has two levels: "Strongly agree" and "Agree" combined into a new level called Agree and the remaining levels combined into ”Not agree". Then, re-order the levels in the following order: "Agree" and "Not agree". Finally, `count()` how many times each new level appears in the advfront variable.
+
+**Tip:** You can do this in various ways. One option is to use the `str_detect()` function to detect the existence of words. Note that these sometimes show up with lowercase first letters and sometimes with upper case first letters. To detect either in the `str_detect()` function, you can use “[Aa]gree”. However, solve the problem however you like, this is just one option.
+
+d. Combine the levels of the `polviews` variable such that levels that have the word “liberal” in them are lumped into a level called "Liberal" and those that have the word conservative in them are lumped into a level called "Conservative". Then, re-order the levels in the following order: "Conservative" , "Moderate", and "Liberal". Finally, `count()` how many times each new level appears in the `polviews` variable.
+
+### Question 4
+
+a\. Fit a logistic regression model that predicts `advfront` from `educ`. Report the tidy output of the model.
+
+b\. Write out the estimated model in proper notation.
+
+c\. Using your estimated model, predict the probability of agreeing with the statement *"Even if it brings no immediate benefits, scientific research that advances the frontiers of knowledge is necessary and should be supported by the federal government."* (`Agree` in `advfront`) for someone with 7 years of education.
+
+### Question 5
+
+a\. Fit a model that adds the additional explanatory variable of `polviews` to your model from Question 9. Report the tidy output of the model.
+
+b\. Now, predict the probability of agreeing with the following statement *"Even if it brings no immediate benefits, scientific research that advances the frontiers of knowledge is necessary and should be supported by the federal government."* (`Agree` in `advfront`) for a Conservative person with 7 years of education.
+
+
+
+
+# Part 2 -- Feedback from AI, and then Humans later
+
+Your answers to the questions in this part should go in the file `hw-6-part-2.qmd`.
+
 ## Gapminder, again
 
 Gapminder is a “fact tank” that uses publicly available world data to produce data visualizations and teaching resources on global development. We will use an excerpt of their data to explore relationships among world health metrics across countries and regions between the years 2000 and 2023. The data set is called `gapminder` and it’s in your lab repository’s data folder.
 
 
-### Question 1
+### Question 6
 
 a. Data Prep: What happens when you take the natural log of 0? Remove rows of your data set where life_expectancy = 0, justifying why this is helpful.
 
@@ -89,7 +168,7 @@ c. Model evaluation:
 
 - Interpret R-squared in the context of the data and the research question.
 
-### Question 2
+### Question 7
 
 This question relies on an earlier assignment, where the `gapminder` dataframe is read in and transformed into `gapminder23`. This dataframe can be re-created with the code below:
 
@@ -135,7 +214,7 @@ The data come from incoming emails in David Diez’s (one of the authors of Open
 
 The outcome variable is spam, which takes the value 1 if the email is spam, 0 otherwise.
 
-### Question 3
+### Question 8
 
 a. What type of variable is spam? What percent of the emails are spam?
 
@@ -147,7 +226,7 @@ d. Using this model and the `predict()` function, predict the probability the em
 
 **Note:** To obtain the predicted probability, you can set the type argument in `predict()` to "prob".
 
-### Question 4
+### Question 9
 
 a\. Fit a logistic regression model predicting \`spam\` from \`dollar\`, \`winner\` (indicating whether “winner” appeared in the email), and \`urgent_subj\` (whether the word "urgent" is in the subject of the email). Then, display the tidy output of the model.
 
@@ -169,7 +248,7 @@ d\. In a single pipeline, and using \`mutate()\`, calculate the false positive a
 
 In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identified the two rates.
 
-### Question 5
+### Question 10
 
 a.  Fit a logistic regression model predicting `spam` from `dollar` and another variable you think would be a good predictor. Provide a 1-sentence justification for why you chose this variable. Display the tidy output of the model.
 
@@ -187,26 +266,6 @@ c.  Using your data frame from the previous part, determine, in a single pipelin
 d.  In a single pipeline, and using `mutate()`, calculate the false positive and false negative rates. In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identified the two rates.
 
 e.  Based on the false positive and false negatives rates of this model, comment, in 1-2 sentences, on which model (one from Question 3 or Question 4) is preferable and why.
-
-# Part 2 -- Feedback from Humans
-
-Your answers to the questions in this part should go in the file `hw-6-part-2.qmd`.
-
-## SOMETHING
-
-### Question 6
-
-### Question 7
-
-### Question 8
-
-## GSS
-
-### Question 9
-
-### Question 10
-
-
 
 
 # Wrap-up
