@@ -70,6 +70,15 @@ What is the difference between the additive vs. interaction linear model when yo
 :::
 ::::::
 
+## Reminder: project peer eval
+
+- Please submit it on time!
+- Dig the emails out of your spam/junk folder;
+- These later peer evals get by far the most weight in assessing your the 10% of your project grade devoted to "Teamwork;"
+- Make sure you are thorough and honest.
+
+# So where were we...
+
 ## Thus far...
 
 We have been studying regression:
