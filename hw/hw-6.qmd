@@ -192,11 +192,15 @@ e.  Based on the false positive and false negatives rates of this model, comment
 
 Your answers to the questions in this part should go in the file `hw-6-part-2.qmd`.
 
+## SOMETHING
+
 ### Question 6
 
 ### Question 7
 
 ### Question 8
+
+## GSS
 
 ### Question 9
 
