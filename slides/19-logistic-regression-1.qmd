@@ -370,7 +370,7 @@ This is called the *logistic regression* model.
 #| fig-asp: 0.6
 
 curve(x/(1 - x), from = 0, to = 1, n = 500,
-      xlab = "Probability: p)", ylab = "Odds: p / (1 - p)",
+      xlab = "Probability: p", ylab = "Odds: p / (1 - p)",
       lwd = 2, col = "red", bty = "n")
 ```
 
