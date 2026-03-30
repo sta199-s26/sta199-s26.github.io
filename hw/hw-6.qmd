@@ -246,7 +246,7 @@ Store the resulting data frame with an appropriate name.
 
 d\. In a single pipeline, and using \`mutate()\`, calculate the false positive and false negative rates.
 
-In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identified the two rates.
+In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identifies the two rates.
 
 ### Question 10
 
@@ -263,9 +263,9 @@ c.  Using your data frame from the previous part, determine, in a single pipelin
 
     Store the resulting data frame with an appropriate name.
 
-d.  In a single pipeline, and using `mutate()`, calculate the false positive and false negative rates. In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identified the two rates.
+d.  In a single pipeline, and using `mutate()`, calculate the false positive and false negative rates. In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identifies the two rates.
 
-e.  Based on the false positive and false negatives rates of this model, comment, in 1-2 sentences, on which model (one from Question 3 or Question 4) is preferable and why.
+e.  Based on the false positive and false negatives rates of this model, comment, in 1-2 sentences, on which model (one from Question 8 or Question 9) is preferable and why.
 
 
 # Wrap-up
