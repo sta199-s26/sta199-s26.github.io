@@ -159,7 +159,7 @@ Your answers to the questions in this part should go in the file `hw-6-part-2.qm
 
 Gapminder is a “fact tank” that uses publicly available world data to produce data visualizations and teaching resources on global development. We will use an excerpt of their data to explore relationships among world health metrics across countries and regions between the years 2000 and 2023. The data set is called `gapminder` and it’s in your HW repository’s data folder.
 
-The next two questions rely on work you did back on [HW 4](/hw/hw-4.html#gapminder), where the `gapminder` dataframe is read in and transformed into `gapminder23`. This dataframe can be re-created with the code below:
+The next two questions rely on work you did back on [HW 4](/hw/hw-4.html#gapminder), where the `gapminder` dataframe is read in and transformed into `gapminder_23`. This dataframe can be re-created with the code below:
 
 ```{r}
 #| eval: false
