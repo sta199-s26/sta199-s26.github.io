@@ -126,10 +126,10 @@ window.Quarto = {
 </script>
 <meta property="og:title" content="Logistic regression – STA 199 Spring 2026">
 <meta property="og:description" content="Lecture 19">
-<meta property="og:image" content="https://sta199-s26.github.io/slides/19-logistic-regression-1_files/figure-revealjs/slr-1-1.png">
+<meta property="og:image" content="https://sta199-s26.github.io/slides/19-logistic-regression-1_files/figure-html/slr-1-1.png">
 <meta property="og:site_name" content="STA 199 Spring 2026">
 <meta property="og:image:height" content="960">
-<meta property="og:image:width" content="1920">
+<meta property="og:image:width" content="1344">
 </head>
 <body class="nav-sidebar docked quarto-light">
 
@@ -377,6 +377,12 @@ window.Quarto = {
  <span class="menu-text">Homework 5</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/hw-6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homework 6</span></a>
+  </div>
+</li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -585,7 +591,7 @@ window.Quarto = {
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/slr-1-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-html/slr-1-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -595,20 +601,39 @@ window.Quarto = {
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </section><section id="recap-multiple-linear-regression" class="level2"><h2 class="anchored" data-anchor-id="recap-multiple-linear-regression">Recap: multiple linear regression</h2>
 <p>Numerical response; numerical and categorical predictors:</p>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range (`stat_smooth()`).
+Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
 <div class="cell quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="19-logistic-regression-1_files/figure-revealjs/additive-interaction-viz-1.png" class="img-fluid" width="960"></p>
+<p><img src="19-logistic-regression-1_files/figure-html/additive-interaction-viz-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="19-logistic-regression-1_files/figure-revealjs/additive-interaction-viz-2.png" class="img-fluid" width="960"></p>
+<p><img src="19-logistic-regression-1_files/figure-html/additive-interaction-viz-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
@@ -623,7 +648,7 @@ y =
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -698,7 +723,7 @@ y
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -707,7 +732,7 @@ y
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -717,7 +742,7 @@ y
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -769,7 +794,7 @@ y
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -778,7 +803,7 @@ y
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -787,7 +812,7 @@ y
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -813,7 +838,7 @@ b_0+b_1x.
 \]</span></p>
 </section><section id="todays-data" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="todays-data">Today’s data</h2>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">email</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">email</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">spam</span>, <span class="va">dollar</span>, <span class="va">viagra</span>, <span class="va">winner</span>, <span class="va">password</span>, <span class="va">exclaim_mess</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">glimpse</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -829,7 +854,7 @@ $ exclaim_mess &lt;dbl&gt; 0, 1, 6, 48, 1, 1, 1, 18, 1, 0, 2, 1, 0, 10, 4, 10, 2
 </div>
 </section><section id="fitting-a-logistic-model" class="level2"><h2 class="anchored" data-anchor-id="fitting-a-logistic-model">Fitting a logistic model</h2>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">logistic_fit</span> <span class="op">&lt;-</span> <span class="fu">logistic_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">logistic_fit</span> <span class="op">&lt;-</span> <span class="fu">logistic_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">fit</span><span class="op">(</span><span class="va">spam</span> <span class="op">~</span> <span class="va">exclaim_mess</span>, data <span class="op">=</span> <span class="va">email</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">tidy</span><span class="op">(</span><span class="va">logistic_fit</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -929,7 +954,7 @@ e^{b_0}e^{b_1x+b_1}
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/step-0-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-html/step-0-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -942,7 +967,7 @@ e^{b_0}e^{b_1x+b_1}
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/step-1-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-html/step-1-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -955,7 +980,7 @@ e^{b_0}e^{b_1x+b_1}
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/step-2-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-html/step-2-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -968,7 +993,7 @@ e^{b_0}e^{b_1x+b_1}
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/step-3-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-html/step-3-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -981,7 +1006,7 @@ e^{b_0}e^{b_1x+b_1}
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/lower-threshold-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-html/lower-threshold-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -994,7 +1019,7 @@ e^{b_0}e^{b_1x+b_1}
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/higher-threshold-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-html/higher-threshold-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1007,7 +1032,7 @@ e^{b_0}e^{b_1x+b_1}
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1029,7 +1054,7 @@ e^{b_0}e^{b_1x+b_1}
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-12-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1042,7 +1067,7 @@ e^{b_0}e^{b_1x+b_1}
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-13-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1055,7 +1080,7 @@ e^{b_0}e^{b_1x+b_1}
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-14-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1067,7 +1092,7 @@ e^{b_0}e^{b_1x+b_1}
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-15-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="960"></p>
+<figure class="figure"><p><img src="19-logistic-regression-1_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1110,42 +1135,7 @@ e^{b_0}e^{b_1x+b_1}
 </div>
 
 
-</section></section></main><!-- /main --><script>
-  // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-  // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-  // slide changes (different for each slide format).
-  (function () {
-    // dispatch for htmlwidgets
-    function fireSlideEnter() {
-      const event = window.document.createEvent("Event");
-      event.initEvent("slideenter", true, true);
-      window.document.dispatchEvent(event);
-    }
-
-    function fireSlideChanged(previousSlide, currentSlide) {
-      fireSlideEnter();
-
-      // dispatch for shiny
-      if (window.jQuery) {
-        if (previousSlide) {
-          window.jQuery(previousSlide).trigger("hidden");
-        }
-        if (currentSlide) {
-          window.jQuery(currentSlide).trigger("shown");
-        }
-      }
-    }
-
-    // hookup for slidy
-    if (window.w3c_slidy) {
-      window.w3c_slidy.add_observer(function (slide_num) {
-        // slide_num starts at position 1
-        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-      });
-    }
-
-  })();
-</script><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
