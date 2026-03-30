@@ -134,11 +134,11 @@
   </url>
   <url>
     <loc>https://sta199-s26.github.io/slides/19-logistic-regression-1-slides.html</loc>
-    <lastmod>2026-03-29T01:12:41.274Z</lastmod>
+    <lastmod>2026-03-30T14:42:17.024Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s26.github.io/slides/19-logistic-regression-1.html</loc>
-    <lastmod>2026-03-29T01:12:41.274Z</lastmod>
+    <lastmod>2026-03-30T14:42:17.024Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s26.github.io/slides/02-grammar-of-data-visualization-slides.html</loc>
@@ -185,16 +185,20 @@
     <lastmod>2026-01-06T20:03:36.258Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s26.github.io/lab/lab-5.html</loc>
-    <lastmod>2026-02-12T12:21:21.681Z</lastmod>
+    <loc>https://sta199-s26.github.io/lab/lab-7.html</loc>
+    <lastmod>2026-03-30T01:53:55.621Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s26.github.io/lab/lab-0.html</loc>
-    <lastmod>2026-01-07T05:53:15.469Z</lastmod>
+    <loc>https://sta199-s26.github.io/lab/lab-4.html</loc>
+    <lastmod>2026-02-05T02:00:14.753Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s26.github.io/lab/lab-3.html</loc>
-    <lastmod>2026-01-29T05:02:20.314Z</lastmod>
+    <loc>https://sta199-s26.github.io/lab/lab-1.html</loc>
+    <lastmod>2026-01-15T04:33:33.144Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/lab/lab-2.html</loc>
+    <lastmod>2026-01-22T06:15:07.808Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s26.github.io/ae/ae-11-chronicle-scrape.html</loc>
@@ -233,12 +237,16 @@
     <lastmod>2026-02-12T08:54:40.977Z</lastmod>
   </url>
   <url>
+    <loc>https://sta199-s26.github.io/hw/hw-4.html</loc>
+    <lastmod>2026-02-12T16:33:49.846Z</lastmod>
+  </url>
+  <url>
     <loc>https://sta199-s26.github.io/hw/hw-5.html</loc>
     <lastmod>2026-03-19T21:49:35.685Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s26.github.io/hw/hw-4.html</loc>
-    <lastmod>2026-02-12T16:33:49.846Z</lastmod>
+    <loc>https://sta199-s26.github.io/hw/hw-6.html</loc>
+    <lastmod>2026-03-30T14:47:03.398Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s26.github.io/hw/hw-2.html</loc>
@@ -269,16 +277,20 @@
     <lastmod>2026-02-17T01:39:48.578Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s26.github.io/lab/lab-2.html</loc>
-    <lastmod>2026-01-22T06:15:07.808Z</lastmod>
+    <loc>https://sta199-s26.github.io/ae/ae-19-spam-filter.html</loc>
+    <lastmod>2026-03-29T16:55:06.991Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s26.github.io/lab/lab-1.html</loc>
-    <lastmod>2026-01-15T04:33:33.144Z</lastmod>
+    <loc>https://sta199-s26.github.io/lab/lab-3.html</loc>
+    <lastmod>2026-01-29T05:02:20.314Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s26.github.io/lab/lab-4.html</loc>
-    <lastmod>2026-02-05T02:00:14.753Z</lastmod>
+    <loc>https://sta199-s26.github.io/lab/lab-0.html</loc>
+    <lastmod>2026-01-07T05:53:15.469Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/lab/lab-5.html</loc>
+    <lastmod>2026-02-12T12:21:21.681Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s26.github.io/lab/lab-6.html</loc>

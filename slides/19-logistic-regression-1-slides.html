@@ -6,7 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/quarto-contrib/qrcodejs-v1.0.0/qrcode.js"></script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
 <meta name="author" content="Katie Solarz">
@@ -213,15 +214,42 @@ Katie Solarz
 </div>
 
   <p class="date">2026-03-30</p>
-</section><section id="while-you-wait" class="slide level2"><h2>While you wait…</h2>
-<div class="appex">
+</section><section id="while-you-wait-participate" class="slide level2 xsmall"><h2>While you wait: Participate 📱💻</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div class="wooclap">
+<p>What is the difference between the additive vs.&nbsp;interaction linear model when you run a regression model with one numeric and one categorical predictor?</p>
+<div class="wooclap-choices">
 <ul>
-<li><p>Go to your <code>ae</code> project in RStudio.</p></li>
-<li><p>Make sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.</p></li>
-<li><p>Click Pull to get today’s application exercise file: <em>ae-13-spam-filter.qmd</em>.</p></li>
-<li><p>Wait till the you’re prompted to work on the application exercise during class before editing the file.</p></li>
+<li>This is a trick question - both models require only numeric predictors.</li>
+<li>Both give you different lines for each group, but the additive model requires the lines be parallel.</li>
+<li>Both give you different lines for each group, but the interaction model requires the lines be parallel.</li>
+<li>Where is John Zito and what have you done with him?</li>
 </ul>
 </div>
+</div>
+</div><div class="column" style="width:30%;">
+<div id="" class="qrcode"></div>
+<script type="text/javascript">
+(function() {
+  var script = document.currentScript;
+  var qrcode = script.previousElementSibling;
+  qrcode.qrcode = new QRCode(qrcode, {"colorDark":"#000000","colorLight":"#ffffff","height":"300","text":"https://app.wooclap.com/TNRPMB?from=instruction-slide","width":"300"});
+  script.remove();
+})();
+</script><div class="small">
+<p>Scan the QR code or go <a href="https://app.wooclap.com/TNRPMB?from=instruction-slide">HERE</a>. Log in with your Duke NetID.</p>
+</div>
+</div></div>
+</section><section id="reminder-project-peer-eval" class="slide level2"><h2>Reminder: project peer eval</h2>
+<ul>
+<li>Please submit it on time!</li>
+<li>Dig the emails out of your spam/junk folder;</li>
+<li>“Teamwork” is 10% of your project score;</li>
+<li>These later peer evals bear the most weight in assessing that;</li>
+<li>Please be thorough and honest.</li>
+</ul></section><section><section id="so-where-were-we" class="title-slide slide level1 center"><h1>So where were we…</h1>
+
 </section><section id="thus-far" class="slide level2"><h2>Thus far…</h2>
 <p>We have been studying regression:</p>
 <ul>
@@ -427,6 +455,33 @@ $ exclaim_mess &lt;dbl&gt; 0, 1, 6, 48, 1, 1, 1, 18, 1, 0, 2, 1, 0, 10, 4, 10, 2
 \hat{p}=\widehat{P(y=1)}=\frac{e^{-2.27}}{1+e^{-2.27}}\approx 0.09.
 \]</span></p>
 <p>So, our model predicts that an email with no exclamation marks has a 9% probability of being spam.</p>
+</section><section id="participate" class="slide level2 xsmall"><h2>Participate 📱💻</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div class="wooclap">
+<p>The slope of the logistic regression model for these data is 0.000272. Which of the following is the best interpretation of this value?</p>
+<div class="wooclap-choices">
+<ul>
+<li>If we add one exclamation mark to the model, we predict the probability of an email being spam will increase by 0.000272, on average.</li>
+<li>If we add one exclamation mark to the model, we predict the odds of an email being spam will increase by 0.000272, on average.</li>
+<li>If we add one exclamation mark to the model, we predict the odds of an email being spam to be higher by a factor of e^0.000272 = 1.000272, on average.</li>
+<li>The odds of an email being spam are decreasing in the number of exclamation marks.</li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:30%;">
+<div id="" class="qrcode"></div>
+<script type="text/javascript">
+(function() {
+  var script = document.currentScript;
+  var qrcode = script.previousElementSibling;
+  qrcode.qrcode = new QRCode(qrcode, {"colorDark":"#000000","colorLight":"#ffffff","height":"300","text":"https://app.wooclap.com/TNRPMB?from=instruction-slide","width":"300"});
+  script.remove();
+})();
+</script><div class="small">
+<p>Scan the QR code or go <a href="https://app.wooclap.com/TNRPMB?from=instruction-slide">HERE</a>. Log in with your Duke NetID.</p>
+</div>
+</div></div>
 </section><section id="interpreting-the-slope-is-tricky" class="slide level2 scrollable"><h2>Interpreting the slope is tricky</h2>
 <p>Recall:</p>
 <p><span class="math display">\[
@@ -525,24 +580,24 @@ e^{b_0}e^{b_1x+b_1}
 </section><section id="decision-boundary-again" class="slide level2 smaller"><h2>Decision boundary, again</h2>
 <p>It’s linear! Consider two numerical predictors:</p>
 
-<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"><ul>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><ul>
 <li>if new <span class="math inline">\((x_1,\,x_2)\)</span> below, <span class="math inline">\(\text{Prob}(y=1)\leq p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=0\)</span> for the new person;</li>
 <li>if new <span class="math inline">\((x_1,\,x_2)\)</span> above, <span class="math inline">\(\text{Prob}(y=1)&gt; p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=1\)</span> for the new person.</li>
 </ul></section><section id="decision-boundary-again-1" class="slide level2 smaller"><h2>Decision boundary, again</h2>
 <p>It’s linear! Consider two numerical predictors:</p>
 
-<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"><ul>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><ul>
 <li>if new <span class="math inline">\((x_1,\,x_2)\)</span> below, <span class="math inline">\(\text{Prob}(y=1)\leq p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=0\)</span> for the new person;</li>
 <li>if new <span class="math inline">\((x_1,\,x_2)\)</span> above, <span class="math inline">\(\text{Prob}(y=1)&gt; p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=1\)</span> for the new person.</li>
 </ul></section><section id="decision-boundary-again-2" class="slide level2 smaller"><h2>Decision boundary, again</h2>
 <p>It’s linear! Consider two numerical predictors:</p>
 
-<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"><ul>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-14-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><ul>
 <li>if new <span class="math inline">\((x_1,\,x_2)\)</span> below, <span class="math inline">\(\text{Prob}(y=1)\leq p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=0\)</span> for the new person;</li>
 <li>if new <span class="math inline">\((x_1,\,x_2)\)</span> above, <span class="math inline">\(\text{Prob}(y=1)&gt; p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=1\)</span> for the new person.</li>
 </ul></section><section id="note-the-classifier-isnt-perfect" class="slide level2 medium"><h2>Note: the classifier isn’t perfect</h2>
 
-<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"><ul>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-15-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><ul>
 <li>There are blue points in the orange region: spam (1) emails misclassified as legit (0);</li>
 <li>There are orange points in the blue region: legit (0) emails misclassified as spam (1).</li>
 </ul></section><section id="how-do-you-pick-the-threshold" class="slide level2 smaller"><h2>How do you pick the threshold?</h2>
@@ -569,18 +624,18 @@ e^{b_0}e^{b_1x+b_1}
 </li>
 </ul>
 <p>You pick a threshold in between to strike a balance. The exact number depends on context.</p>
-</section><section id="ae-13-spam-filter" class="slide level2"><h2>ae-13-spam-filter</h2>
+</section><section id="ae-19-spam-filter" class="slide level2"><h2>ae-19-spam-filter</h2>
 <div class="appex">
 <ul>
 <li><p>Go to your ae project in RStudio.</p></li>
 <li><p>If you haven’t yet done so, make sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.</p></li>
-<li><p>If you haven’t yet done so, click Pull to get today’s application exercise file: <em>ae-13-spam-filter.qmd</em>.</p></li>
+<li><p>If you haven’t yet done so, click Pull to get today’s application exercise file: <em>ae-19-spam-filter.qmd</em>.</p></li>
 <li><p>Work through the application exercise in class, and render, commit, and push your edits.</p></li>
 </ul>
 </div>
 
 
-</section>
+</section></section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/logo.png" class="slide-logo"></p>

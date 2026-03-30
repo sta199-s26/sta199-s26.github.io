@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="description" content="Due: Wed, Apr 1, 11:59 pm">
+<meta name="description" content="Due: Mon, Apr 6, 11:59 pm">
 <title>HW 6 – STA 199 Spring 2026</title>
 <style>
 code{white-space: pre-wrap;}
@@ -96,8 +96,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><meta name="quarto:status" content="draft">
-<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -124,14 +123,13 @@ window.Quarto = {
 };
 </script>
 <meta property="og:title" content="HW 6 – STA 199 Spring 2026">
-<meta property="og:description" content="Due: Wed, Apr 1, 11:59 pm">
-<meta property="og:image" content="https://sta199-s26.github.io/hw/images/lab-6/deadlift-age-sex-plot.png">
+<meta property="og:description" content="Due: Mon, Apr 6, 11:59 pm">
 <meta property="og:site_name" content="STA 199 Spring 2026">
 </head>
 <body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -456,32 +454,46 @@ window.Quarto = {
   <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow">Workflow</a></li>
   </ul>
 </li>
+  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
   <li>
 <a href="#part-1-feedback-from-ai" id="toc-part-1-feedback-from-ai" class="nav-link" data-scroll-target="#part-1-feedback-from-ai">Part 1 – Feedback from AI</a>
   <ul class="collapse">
 <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a></li>
-  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
+  <li>
+<a href="#gapminder-again" id="toc-gapminder-again" class="nav-link" data-scroll-target="#gapminder-again">Gapminder, again</a>
+  <ul class="collapse">
+<li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
   </ul>
 </li>
   <li>
-<a href="#part-2---bike-rentals" id="toc-part-2---bike-rentals" class="nav-link" data-scroll-target="#part-2---bike-rentals">Part 2 - Bike rentals</a>
+<a href="#spam-spam-spam-spam" id="toc-spam-spam-spam-spam" class="nav-link" data-scroll-target="#spam-spam-spam-spam">Spam spam spam spam</a>
   <ul class="collapse">
-<li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6">Question 6</a></li>
+<li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
+  <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5">Question 5</a></li>
   </ul>
 </li>
-  <li>
-<a href="#part-3---do-you-even-lift" id="toc-part-3---do-you-even-lift" class="nav-link" data-scroll-target="#part-3---do-you-even-lift">Part 3 - Do you even lift?</a>
-  <ul class="collapse">
-<li><a href="#question-7" id="toc-question-7" class="nav-link" data-scroll-target="#question-7">Question 7</a></li>
-  <li><a href="#question-8" id="toc-question-8" class="nav-link" data-scroll-target="#question-8">Question 8</a></li>
-  <li><a href="#question-9" id="toc-question-9" class="nav-link" data-scroll-target="#question-9">Question 9</a></li>
-  <li><a href="#question-10" id="toc-question-10" class="nav-link" data-scroll-target="#question-10">Question 10</a></li>
   </ul>
 </li>
   <li>
 <a href="#part-2-feedback-from-humans" id="toc-part-2-feedback-from-humans" class="nav-link" data-scroll-target="#part-2-feedback-from-humans">Part 2 – Feedback from Humans</a>
   <ul class="collapse">
-<li><a href="#packages-1" id="toc-packages-1" class="nav-link" data-scroll-target="#packages-1">Packages</a></li>
+<li>
+<a href="#something" id="toc-something" class="nav-link" data-scroll-target="#something">SOMETHING</a>
+  <ul class="collapse">
+<li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6">Question 6</a></li>
+  <li><a href="#question-7" id="toc-question-7" class="nav-link" data-scroll-target="#question-7">Question 7</a></li>
+  <li><a href="#question-8" id="toc-question-8" class="nav-link" data-scroll-target="#question-8">Question 8</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#gss" id="toc-gss" class="nav-link" data-scroll-target="#gss">GSS</a>
+  <ul class="collapse">
+<li><a href="#question-9" id="toc-question-9" class="nav-link" data-scroll-target="#question-9">Question 9</a></li>
+  <li><a href="#question-10" id="toc-question-10" class="nav-link" data-scroll-target="#question-10">Question 10</a></li>
+  </ul>
+</li>
   </ul>
 </li>
   <li>
@@ -496,7 +508,6 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">HW 6</h1>
-<p class="subtitle lead">Visualize, model, interpret again</p>
   <div class="quarto-categories">
     <div class="quarto-category">HW</div>
   </div>
@@ -504,7 +515,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    Due: Wed, Apr 1, 11:59 pm
+    Due: Mon, Apr 6, 11:59 pm
   </div>
 </div>
 
@@ -557,14 +568,7 @@ Click to expand if you need a refresher on assignment guidelines.
 <ul>
 <li>You should have at least 3 commits with meaningful commit messages by the end of the assignment.</li>
 <li>Final versions of both your <code>.qmd</code> file and the rendered PDF should be pushed to GitHub.</li>
-</ul></section></details></section><section id="part-1-feedback-from-ai" class="level1"><h1>Part 1 – Feedback from AI</h1>
-<p>Your answers to the questions in this part should go in the file <code>hw-6-part-1.qmd</code>.</p>
-<section id="instructions" class="level2"><h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
-<p>Write your answer to each question in the appropriate section of the <code>hw-6-part-1.qmd</code> file. Then, highlight your answer to a question, click on <em>Addins &gt; AIFEEDR &gt; Get feedback</em>. In the app that opens, select the appropriate homework number (4) and question number. Then click on <em>Get Feedback</em>. Please be patient, feedback generation can take a few seconds. Once you read the feedback, you can go back to your Quarto document to improve your answer based on the feedback. You will then need to click the red X on the top left corner of the Viewer pane to stop the feedback app from running before you can re-render your Quarto document.</p>
-<details><summary>
-Click to expand if you want to review the video that demonstrates how to use the AI feedback tool.
-</summary><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/EyT6QQN1ouQ?si=DsG-laE30BykMJby" title="aifeedr" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-</details></section><section id="packages" class="level2"><h2 class="anchored" data-anchor-id="packages">Packages</h2>
+</ul></section></details></section><section id="packages" class="level1"><h1>Packages</h1>
 <p>In this part you will work with the</p>
 <ul>
 <li>
@@ -574,249 +578,107 @@ Click to expand if you want to review the video that demonstrates how to use the
 </ul>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidymodels.tidymodels.org">tidymodels</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidymodels.tidymodels.org">tidymodels</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://openintrostat.github.io/openintro/">openintro</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section><section id="part-2---bike-rentals" class="level1"><h1>Part 2 - Bike rentals</h1>
-<p>Bike sharing systems are new generation of traditional bike rentals where whole process from membership, rental and return back has become automatic. You are tasked to investigate the relationship between the temperature outside and the number of bikes rented in the Washington DC area between the years 2011 and 2022. You will be investigating data for the months June, July, September, and November.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p>The dataset is called <code>bike.csv</code> and it’s in your lab repository’s <code>data</code> folder.</p>
-<p>Below is a list of variables and their definitions:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 14%">
-<col style="width: 85%">
-</colgroup>
-<thead><tr class="header">
-<th style="text-align: left;">Variable</th>
-<th style="text-align: left;">Definition</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><code>season</code></td>
-<td style="text-align: left;">Numerical representation of Spring (2), Summer (3), and Fall (4)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>year</code></td>
-<td style="text-align: left;">Numerical representation of 2011 (0) or 2012 (1)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>month</code></td>
-<td style="text-align: left;">Month in which data were collected</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>holiday</code></td>
-<td style="text-align: left;">Indicator variable for whether data were collected on a holiday (1) or not (0)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>weekday</code></td>
-<td style="text-align: left;">Numerical representation of day of week</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>temp</code></td>
-<td style="text-align: left;">Temperature in Celsius</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>count</code></td>
-<td style="text-align: left;">Number of bike rentals for that day</td>
-</tr>
-</tbody>
-</table>
-<section id="question-6" class="level2"><h2 class="anchored" data-anchor-id="question-6">Question 6</h2>
+</section><section id="part-1-feedback-from-ai" class="level1"><h1>Part 1 – Feedback from AI</h1>
+<p>Your answers to the questions in this part should go in the file <code>hw-6-part-1.qmd</code>.</p>
+<section id="instructions" class="level2"><h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<p>Write your answer to each question in the appropriate section of the <code>hw-6-part-1.qmd</code> file. Then, highlight your answer to a question, click on <em>Addins &gt; AIFEEDR &gt; Get feedback</em>. In the app that opens, select the appropriate homework number (4) and question number. Then click on <em>Get Feedback</em>. Please be patient, feedback generation can take a few seconds. Once you read the feedback, you can go back to your Quarto document to improve your answer based on the feedback. You will then need to click the red X on the top left corner of the Viewer pane to stop the feedback app from running before you can re-render your Quarto document.</p>
+<details><summary>
+Click to expand if you want to review the video that demonstrates how to use the AI feedback tool.
+</summary><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/EyT6QQN1ouQ?si=DsG-laE30BykMJby" title="aifeedr" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</details></section><section id="gapminder-again" class="level2"><h2 class="anchored" data-anchor-id="gapminder-again">Gapminder, again</h2>
+<p>Gapminder is a “fact tank” that uses publicly available world data to produce data visualizations and teaching resources on global development. We will use an excerpt of their data to explore relationships among world health metrics across countries and regions between the years 2000 and 2023. The data set is called <code>gapminder</code> and it’s in your lab repository’s data folder.</p>
+<section id="question-1" class="level3"><h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
 <ol type="a">
-<li><p>Read in the data. Then, create a scatter plot that investigates the relationship between the number of bikes rented and the temperature outside. Include a straight line of best fit to help discuss the discovered relationship. Summarize your findings in at most 4 sentences.</p></li>
-<li><p>Another researcher suggests to look at the relationship between bikes rented and temperature by each of the four months of interest. Recreate your plot in part a, and color the points by month. Include a straight line for each of the four months to help discuss each month’s relationship between bikes rented and temperature. Summarize your findings in at most 4 sentences.</p></li>
+<li><p>Data Prep: What happens when you take the natural log of 0? Remove rows of your data set where life_expectancy = 0, justifying why this is helpful.</p></li>
+<li><p>Model fitting: Fit a linear model predicting log life expectancy from gross domestic product. Display the tidy summary.</p></li>
+<li><p>Model evaluation:</p></li>
 </ol>
-<p>Watch the following video on Simpson’s Paradox <a href="https://www.youtube.com/watch?v=ebEkn-BiW5k">here</a>. After you do, please answer the following questions.</p>
+<ul>
+<li><p>Calculate the R-squared of the model using two methods and confirm that the values match: first method is using the <code>glance()</code> function and the other method is based on the value of the correlation coefficient between the two variables.</p></li>
+<li><p>Interpret R-squared in the context of the data and the research question.</p></li>
+</ul></section><section id="question-2" class="level3"><h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
+<p>This question relies on an earlier assignment, where the <code>gapminder</code> dataframe is read in and transformed into <code>gapminder23</code>. This dataframe can be re-created with the code below:</p>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gapminder_raw</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/gapminder.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">gapminder_raw_23</span> <span class="op">&lt;-</span> <span class="va">gapminder_raw</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fl">2023</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">gapminder_23</span> <span class="op">&lt;-</span> <span class="va">gapminder_raw_23</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    gdp_percap <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span></span>
+<span>      <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_detect.html">str_detect</a></span><span class="op">(</span><span class="va">gdp_percap</span>, <span class="st">"k"</span><span class="op">)</span>,                      </span>
+<span>      <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace</a></span><span class="op">(</span><span class="va">gdp_percap</span>, <span class="st">"k"</span>, <span class="st">""</span><span class="op">)</span><span class="op">)</span> <span class="op">*</span> <span class="fl">1000</span>,  </span>
+<span>      <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="va">gdp_percap</span><span class="op">)</span>                            </span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Next, we want to examine if the relationship between life expectancy and GDP that we observed in the previous exercise holds across all continents in our data. We’ll continue to work with logged life expectancy (<code>life_exp_log</code>) and data from 2023.</p>
+<ol type="a">
+<li><p><strong>Justification:</strong> Create a scatter plot of <code>life_exp_log</code> vs.&nbsp;<code>gdp_percap</code>, where the points are colored by <code>continent</code>. Do you think the trend between <code>life_exp_log</code> and <code>gdp_percap</code> is different for different continents? Justify your answer with specific features of the plot.</p></li>
+<li><p><strong>Model fitting and interpretation:</strong></p></li>
+</ol>
+<pre><code>-   Regardless of your answer in part (a), fit an [additive model]{.underline} (main effects) that predicts `life_exp_log` from GDP per capita and continent (with Africas as the baseline level). Display a tidy summary of the model output.
+
+-   Interpret the *intercept* of the model, making sure that your interpretation is in the units of the original data (not on log scale).
+
+-   Interpret the *slope* of the model, making sure that your interpretation is in the units of the original data (not on log scale).</code></pre>
 <ol start="3" type="a">
-<li><p>In your own words, summarize Simpson’s Paradox in at most 4 sentences.</p></li>
-<li><p>Compare and contrast your findings from part (a) and part (b). What’s different?</p></li>
-<li><p>Think critically about your answer to part d. What other context from this study could be creating this paradox? That is, identify a potential confounding variable in this study. Be sure to justify how your example could be a potential confounding variable by relating it back to both bike rentals and temperature.</p></li>
-</ol></section></section><section id="part-3---do-you-even-lift" class="level1"><h1>Part 3 - Do you even lift?</h1>
-<p>In this part, you will be working with data from <a href="https://www.openpowerlifting.org/">www.openpowerlifting.org</a>. This data was sourced from <a href="https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-10-08">Tidy Tuesday</a> and contains international powerlifting records at various meets. At each meet, each lifter gets three attempts at lifting max weight on three lifts: the bench press, squat and deadlift.</p>
-<div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">ipf</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/ipf.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The data dictionary for this dataset from TidyTuesday is reproduced below:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 7%">
-<col style="width: 92%">
-</colgroup>
-<thead><tr class="header">
-<th style="text-align: left;">variable</th>
-<th style="text-align: left;">description</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><code>name</code></td>
-<td style="text-align: left;">Individual lifter name</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>sex</code></td>
-<td style="text-align: left;">Binary gender (M/F)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>event</code></td>
-<td style="text-align: left;">
-<p>The type of competition that the lifter entered. Values are as follows:</p>
+<li>
+<strong>Prediction:</strong> Predict the life expectancy of a country in Asia where the average GDP per capita is $70,000. Do this using R functions, not by manually plugging in numbers.</li>
+</ol></section></section><section id="spam-spam-spam-spam" class="level2"><h2 class="anchored" data-anchor-id="spam-spam-spam-spam">Spam spam spam spam</h2>
+<p>The data come from incoming emails in David Diez’s (one of the authors of OpenIntro textbooks) Gmail account for the first three months of 2012. All personally identifiable information has been removed. The dataset is called <code>email</code> and it’s in the <code>openintro</code> package.</p>
+<p>The outcome variable is spam, which takes the value 1 if the email is spam, 0 otherwise.</p>
+<section id="question-3" class="level3"><h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
+<ol type="a">
+<li><p>What type of variable is spam? What percent of the emails are spam?</p></li>
+<li><p>What type of variable is dollar - number of times a dollar sign or the word “dollar” appeared in the email? Visualize and describe its distribution, supporting your description with the appropriate summary statistics.</p></li>
+<li><p>Fit a logistic regression model predicting spam from dollar. Then, display the tidy output of the model.</p></li>
+<li><p>Using this model and the <code><a href="https://rdrr.io/r/stats/predict.html">predict()</a></code> function, predict the probability the email is spam if it contains 5 dollar signs. Based on this probability, how does the model classify this email?</p></li>
+</ol>
+<p><strong>Note:</strong> To obtain the predicted probability, you can set the type argument in <code><a href="https://rdrr.io/r/stats/predict.html">predict()</a></code> to “prob”.</p>
+</section><section id="question-4" class="level3"><h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
+<p>a. Fit a logistic regression model predicting `spam` from `dollar`, `winner` (indicating whether “winner” appeared in the email), and `urgent_subj` (whether the word “urgent” is in the subject of the email). Then, display the tidy output of the model.</p>
+<p>b. Using this model, predict spam / not spam for all emails in the `email` dataset with `augment()`. Store the resulting data frame with an appropriate name and display the data frame as well.</p>
+<p>c. Using your data frame from the previous part, determine, in a single pipeline, and using `count()`, the numbers of emails:</p>
 <ul>
-<li><p>SBD: Squat-Bench-Deadlift, also commonly called “Full Power”</p></li>
-<li><p>BD: Bench-Deadlift, also commonly called “Ironman” or “Push-Pull”</p></li>
-<li><p>SD: Squat-Deadlift, very uncommon</p></li>
-<li><p>SB: Squat-Bench, very uncommon</p></li>
-<li><p>S: Squat-only</p></li>
-<li><p>B: Bench-only</p></li>
-<li><p>D: Deadlift-only</p></li>
+<li><p>that are labelled as spam that are actually spam</p></li>
+<li><p>that are not labelled as spam that are actually spam</p></li>
+<li><p>that are labelled as spam that are actually not spam</p></li>
+<li><p>that are not labelled as spam that are actually not spam</p></li>
 </ul>
-</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>equipment</code></td>
-<td style="text-align: left;">
-<p>The equipment category under which the lifts were performed. Values are as follows:</p>
+<p>Store the resulting data frame with an appropriate name.</p>
+<p>d. In a single pipeline, and using `mutate()`, calculate the false positive and false negative rates.</p>
+<p>In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identified the two rates.</p>
+</section><section id="question-5" class="level3"><h3 class="anchored" data-anchor-id="question-5">Question 5</h3>
+<ol type="a">
+<li><p>Fit a logistic regression model predicting <code>spam</code> from <code>dollar</code> and another variable you think would be a good predictor. Provide a 1-sentence justification for why you chose this variable. Display the tidy output of the model.</p></li>
+<li><p>Using this model, predict spam / not spam for all emails in the <code>email</code> dataset with <code>augment()</code>. Store the resulting data frame with an appropriate name.</p></li>
+<li>
+<p>Using your data frame from the previous part, determine, in a single pipeline, and using <code><a href="https://dplyr.tidyverse.org/reference/count.html">count()</a></code>, the numbers of emails:</p>
 <ul>
-<li><p>Raw: Bare knees or knee sleeves</p></li>
-<li><p>Wraps: Knee wraps were allowed</p></li>
-<li><p>Single-ply: Equipped, single-ply suits</p></li>
-<li><p>Multi-ply: Equipped, multi-ply suits (includes Double-ply)</p></li>
-<li><p>Straps: Allowed straps on the deadlift (used mostly for exhibitions, not real meets)</p></li>
+<li>that are labelled as spam that are actually spam</li>
+<li>that are not labelled as spam that are actually spam</li>
+<li>that are labelled as spam that are actually not spam</li>
+<li>that are not labelled as spam that are actually not spam</li>
 </ul>
-</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>age</code></td>
-<td style="text-align: left;">The age of the lifter on the start date of the meet, if known.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>age_class</code></td>
-<td style="text-align: left;">The age class in which the filter falls, for example <code>40-45</code>
-</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>division</code></td>
-<td style="text-align: left;">Free-form UTF-8 text describing the division of competition, like <code>Open</code> or <code>Juniors 20-23</code> or <code>Professional</code>.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>bodyweight_kg</code></td>
-<td style="text-align: left;">The recorded bodyweight of the lifter at the time of competition, to two decimal places.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>weight_class_kg</code></td>
-<td style="text-align: left;">
-<p>The weight class in which the lifter competed, to two decimal places.</p>
-<p>Weight classes can be specified as a maximum or as a minimum. Maximums are specified by just the number, for example <code>90</code> means “up to (and including) 90kg.” minimums are specified by a <code>+</code> to the right of the number, for example <code>90+</code> means “above (and excluding) 90kg.”</p>
-</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>best3squat_kg</code></td>
-<td style="text-align: left;">
-<p>Maximum of the first three successful attempts for the lift.</p>
-<p>Rarely may be negative: that is used by some federations to report the lowest weight the lifter attempted and failed.</p>
-</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>best3bench_kg</code></td>
-<td style="text-align: left;">
-<p>Maximum of the first three successful attempts for the lift.</p>
-<p>Rarely may be negative: that is used by some federations to report the lowest weight the lifter attempted and failed.</p>
-</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>best3deadlift_kg</code></td>
-<td style="text-align: left;">
-<p>Maximum of the first three successful attempts for the lift.</p>
-<p>Rarely may be negative: that is used by some federations to report the lowest weight the lifter attempted and failed.</p>
-</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>place</code></td>
-<td style="text-align: left;">
-<p>The recorded place of the lifter in the given division at the end of the meet. Values are as follows:</p>
-<ul>
-<li><p>Positive number: the place the lifter came in.</p></li>
-<li><p>G: Guest lifter. The lifter succeeded, but wasn’t eligible for awards.</p></li>
-<li><p>DQ: Disqualified. Note that DQ could be for procedural reasons, not just failed attempts.</p></li>
-<li><p>DD: Doping Disqualification. The lifter failed a drug test.</p></li>
-<li><p>NS: No-Show. The lifter did not show up on the meet day.</p></li>
-</ul>
-</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>date</code></td>
-<td style="text-align: left;">ISO 8601 Date of the event</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><code>federation</code></td>
-<td style="text-align: left;">The federation that hosted the meet. (limited to IPF for this data subset)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><code>meet_name</code></td>
-<td style="text-align: left;">The name of the meet. The name is defined to never include the year or the federation. For example, the meet officially called <code>2019 USAPL Raw National Championships</code> would have the MeetName <code>Raw National Championshps</code>.</td>
-</tr>
-</tbody>
-</table>
-<p>For all of the following exercises, you should include units on axes labels, e.g.&nbsp;“Bench press (lbs)” or “Bench press (kg)”. “Age (years)” etc. This is good practice.</p>
-<section id="question-7" class="level2"><h2 class="anchored" data-anchor-id="question-7">Question 7</h2>
-<p>a. Let’s begin by taking a look at the <strong>squat lifting</strong> records.</p>
-<ul>
-<li>Start with the <code>ipf</code> data frame.</li>
-<li>First, remove any observations that are negative for squat.</li>
-<li>Next, create a new column called <code>best3_squat_lbs</code> that converts the record from kilograms to pounds.</li>
-</ul>
-<p>You may need to google the conversion formula. Save your data frame as <code>ipf_squat</code>. Report the number of rows and columns of this new data frame using inline code.</p>
-<p>b. Using the <code>ipf_squat</code> data frame you created in part (a), create a scatter plot to investigate the relationship between squat (in lbs) and age. Age should be on the x-axis. Adjust the <code>alpha</code> level of your points to get a better sense of the density of the data. Add a linear trend-line. Summarize the trend you observe in at most 4 sentences.</p>
-<p>c. Write down the linear population model to predict lift squat lbs from age. Next, fit the linear model, and save it as <code>age_fit</code>. Re-write your previous equation replacing the population parameters with the numeric estimates. This is called the “fitted” linear model. Interpret each estimate of <span class="math inline">\(\beta\)</span>. Are the interpretations sensible?</p>
-</section><section id="question-8" class="level2"><h2 class="anchored" data-anchor-id="question-8">Question 8</h2>
-<p>a. Building on your <code>ipf_squat</code> data frame from the previous question, create a new column called <code>age2</code> that takes the age of each lifter and squares it. Save it to your data frame <code>ipf_squat</code>. Next, plot squat in lbs vs <code>age2</code> and add a linear best fit line. How does the fit of the model compare to the one from earlier?</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>To raise a value to a power, use <code>^</code> in R, e.g.: <code>2 ^ 2</code> gives you 4, <code>2 ^ 3</code> gives you 8, etc.</p>
-</div>
-</div>
-<p>b. One metric to assess the fit of a model is the correlation squared, also known as <span class="math inline">\(R^2\)</span>. Fit the age<span class="math inline">\(^2\)</span> model and save the object as <code>age2_fit</code>. Compare <span class="math inline">\(R^2\)</span> of the new model (squat vs.&nbsp;age<span class="math inline">\(^2\)</span>) to the <span class="math inline">\(R^2\)</span> of the earlier model (squat vs.&nbsp;age). Which has a higher <span class="math inline">\(R^2\)</span>?</p>
-</section><section id="question-9" class="level2"><h2 class="anchored" data-anchor-id="question-9">Question 9</h2>
-<p>Start over with the <code>ipf</code> data frame.</p>
-<p>Next, let’s turn our attention to <strong>dead lifting</strong> records. Recreate the plot below. Make sure axes and title labels are exactly matching, including spelling, capitalization, etc. Based on the plot below, which impacts deadlift weight more, age category or sex?</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/lab-6/deadlift-age-sex-plot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
-</figure>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You will need to create a couple of new columns. One to classify age appropriately and one to convert <code>best3deadlift_kg</code> to the plotted units (lbs). Notice that there are no negative deadlift values on the x-axis.</p>
-</div>
-</div>
-</section><section id="question-10" class="level2"><h2 class="anchored" data-anchor-id="question-10">Question 10</h2>
-<p>a. Start over with the <code>ipf</code> data frame.</p>
-<p>Finally, let’s turn our attention to <strong>bench press</strong> records.</p>
-<p>To begin, remove any observations that are negative for bench press, create two new columns: <code>best3bench_lbs</code> and <code>bodyweight_lbs</code>. Save the result in a new data frame called <code>ipf_bench</code>.</p>
-<p>Then, create a scatter plot to investigate the relationship between best bench press (in lbs) and the lifter’s bodyweight (in lbs). Bodyweight should be on the x-axis. Add a linear trend-line. Be sure to label all axes and give the plot a title. Comment on what you observe.</p>
-<p>b. Fit the linear model displayed in part (a) and write down the <strong>fitted model equation</strong> only, replacing <span class="math inline">\(\hat{\beta}\)</span>s with their fitted estimates. Interpret the <span class="math inline">\(\hat{\beta}\)</span>s (intercept and slope). Report <span class="math inline">\(R^2\)</span>. Is body weight an important predictor of bench press ability? Why or why not?</p>
-</section></section><section id="part-2-feedback-from-humans" class="level1"><h1>Part 2 – Feedback from Humans</h1>
+<p>Store the resulting data frame with an appropriate name.</p>
+</li>
+<li><p>In a single pipeline, and using <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code>, calculate the false positive and false negative rates. In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identified the two rates.</p></li>
+<li><p>Based on the false positive and false negatives rates of this model, comment, in 1-2 sentences, on which model (one from Question 3 or Question 4) is preferable and why.</p></li>
+</ol></section></section></section><section id="part-2-feedback-from-humans" class="level1"><h1>Part 2 – Feedback from Humans</h1>
 <p>Your answers to the questions in this part should go in the file <code>hw-6-part-2.qmd</code>.</p>
-<section id="packages-1" class="level2"><h2 class="anchored" data-anchor-id="packages-1">Packages</h2>
-<p>You will use the <strong>tidyverse</strong> and <strong>tidymodels</strong> packages for data wrangling and visualization,</p>
-<p>You may choose to load other packages as needed, particularly for improving your plots. If you do so, add the functions to load these packages in the code cell labeled <code>load-packages</code>.</p>
-<div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidymodels.tidymodels.org">tidymodels</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section></section><section id="wrap-up" class="level1"><h1>Wrap-up</h1>
+<section id="something" class="level2"><h2 class="anchored" data-anchor-id="something">SOMETHING</h2>
+<section id="question-6" class="level3"><h3 class="anchored" data-anchor-id="question-6">Question 6</h3>
+</section><section id="question-7" class="level3"><h3 class="anchored" data-anchor-id="question-7">Question 7</h3>
+</section><section id="question-8" class="level3"><h3 class="anchored" data-anchor-id="question-8">Question 8</h3>
+</section></section><section id="gss" class="level2"><h2 class="anchored" data-anchor-id="gss">GSS</h2>
+<section id="question-9" class="level3"><h3 class="anchored" data-anchor-id="question-9">Question 9</h3>
+</section><section id="question-10" class="level3"><h3 class="anchored" data-anchor-id="question-10">Question 10</h3>
+</section></section></section><section id="wrap-up" class="level1"><h1>Wrap-up</h1>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -878,10 +740,7 @@ Checklist
 </ul>
 
 
-</section></section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-<ol>
-<li id="fn1"><p>Data subset from Progress in Artificial Intelligence, 2013.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();

@@ -357,7 +357,7 @@ Sharon Begley. <a href="https://www.statnews.com/2016/05/16/exercise-prevent-can
 <span id="cb1-22"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_dollar</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<img data-src="14-ethics_files/figure-html/unnamed-chunk-2-1.png" style="width:100.0%" class="r-stretch"></section><section id="axes-and-scales---covid-in-ga" class="slide level2 smaller"><h2>Axes and scales - COVID in GA</h2>
+<img data-src="14-ethics_files/figure-revealjs/unnamed-chunk-2-1.png" style="width:100.0%" class="r-stretch"></section><section id="axes-and-scales---covid-in-ga" class="slide level2 smaller"><h2>Axes and scales - COVID in GA</h2>
 <div class="question">
 <p>What is wrong with this picture? How would you correct it?</p>
 </div>
@@ -426,7 +426,7 @@ Sharon Begley. <a href="https://www.statnews.com/2016/05/16/exercise-prevent-can
 <span id="cb2-40"><a></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<img data-src="14-ethics_files/figure-html/unnamed-chunk-3-1.png" width="672" class="r-stretch"></section><section id="maps-and-areas---voting-map" class="slide level2"><h2>Maps and areas - Voting map</h2>
+<img data-src="14-ethics_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section><section id="maps-and-areas---voting-map" class="slide level2"><h2>Maps and areas - Voting map</h2>
 <div class="question">
 <p>Do you recognize this map? What does it show?</p>
 </div>
@@ -459,7 +459,7 @@ Sharon Begley. <a href="https://www.statnews.com/2016/05/16/exercise-prevent-can
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="14-ethics_files/figure-html/catalan-misleading-1.png" style="width:100.0%"></p>
+<figure><p><img data-src="14-ethics_files/figure-revealjs/catalan-misleading-1.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -471,7 +471,7 @@ Sharon Begley. <a href="https://www.statnews.com/2016/05/16/exercise-prevent-can
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="14-ethics_files/figure-html/catalan-corrected-1.png" style="width:100.0%"></p>
+<figure><p><img data-src="14-ethics_files/figure-revealjs/catalan-corrected-1.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
@@ -529,7 +529,7 @@ Sharon Begley. <a href="https://www.statnews.com/2016/05/16/exercise-prevent-can
 </section><section id="what-might-risk-assessment-look-like" class="slide level2"><h2>What might “risk assessment” look like?</h2>
 <p>Something we will study after spring break:</p>
 
-<img data-src="14-ethics_files/figure-html/unnamed-chunk-4-1.png" width="672" class="r-stretch"><p>Above the line means high risk means no bail. Is this progress?</p>
+<img data-src="14-ethics_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"><p>Above the line means high risk means no bail. Is this progress?</p>
 </section><section id="what-happens-when-we-try-predictive-policing" class="slide level2 small"><h2>What happens when we try “predictive policing”?</h2>
 <p>2016 ProPublica article on algorithm used for rating a defendant’s risk of future crime:</p>
 <div class="columns">
@@ -1026,6 +1026,41 @@ A conversation with UCLA internet studies scholar Safiya Noble<br></p>
           RevealZoom
         ]
       });
+    </script><script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
     </script><script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
