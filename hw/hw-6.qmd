@@ -29,7 +29,7 @@ By now you should be familiar with how to get started with a homework assignment
 -   Go to <https://cmgr.oit.duke.edu/containers> and login with your Duke NetID and Password.
 -   Click `STA199` under My reservations to log into your container. You should now see the RStudio environment.
 -   Go to the course organization at [github.com/sta199-s26](https://github.com/sta199-s26) organization on GitHub.
-    Click on the repo with the prefix **hw-5**.
+    Click on the repo with the prefix **hw-6**.
     It contains the starter documents you need to complete the homework.
 -   Click on the green **CODE** button, select **Use SSH**.
     Click on the clipboard icon to copy the repo URL.
@@ -153,7 +153,7 @@ Your answers to the questions in this part should go in the file `hw-6-part-2.qm
 
 ## Gapminder, again
 
-Gapminder is a “fact tank” that uses publicly available world data to produce data visualizations and teaching resources on global development. We will use an excerpt of their data to explore relationships among world health metrics across countries and regions between the years 2000 and 2023. The data set is called `gapminder` and it’s in your lab repository’s data folder.
+Gapminder is a “fact tank” that uses publicly available world data to produce data visualizations and teaching resources on global development. We will use an excerpt of their data to explore relationships among world health metrics across countries and regions between the years 2000 and 2023. The data set is called `gapminder` and it’s in your HW repository’s data folder.
 
 
 ### Question 6
