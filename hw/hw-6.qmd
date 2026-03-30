@@ -86,27 +86,29 @@ In this part, you will be working with data from www.openpowerlifting.org. This 
 
 a.  Let's begin by taking a look at the **squat lifting** records.
 
--   Start with the `ipf` data frame.
--   First, remove any observations that are negative for squat.
--   Next, create a new column called `best3_squat_lbs` that converts the record from kilograms to pounds.
--   Save your data frame as `ipf_squat`.
--   Report the number of rows and columns of this new data frame.
+    -   Start with the `ipf` data frame.
+    -   First, remove any observations that are negative for squat.
+    -   Next, create a new column called `best3_squat_lbs` that converts the record from kilograms to pounds.
+    -   Save your data frame as `ipf_squat`.
+    -   Report the number of rows and columns of this new data frame.
 
-**Note:** You may need to google the conversion formula.
+::: callout-note
+You may need to google the conversion formula.
+:::
 
 b.  Using the `ipf_squat` data frame you created in part (a), create a scatter plot to investigate the relationship between squat (in lbs) and age.
 
--   Age should be on the x-axis.
--   Adjust the `alpha` level of your points to get a better sense of the density of the data.
--   Add a linear trend-line.
--   Summarize the trend you observe in at most 4 sentences.
+    -   Age should be on the x-axis.
+    -   Adjust the `alpha` level of your points to get a better sense of the density of the data.
+    -   Add a linear trend-line.
+    -   Summarize the trend you observe in at most 4 sentences.
 
 c.  
 
--   Write down the linear population model to predict lift squat lbs from age.
--   Fit the linear model, and save it as `age_fit`.
--   Re-write your previous equation replacing the population parameters with the numeric estimates. This is called the "fitted" linear model.
--   Interpret each estimate of $\beta$, and comment on whether the interpretations are sensible
+    -   Write down the linear population model to predict lift squat lbs from age.
+    -   Fit the linear model, and save it as `age_fit`.
+    -   Re-write your previous equation replacing the population parameters with the numeric estimates. This is called the "fitted" linear model.
+    -   Interpret each estimate of $\beta$, and comment on whether the interpretations are sensible
 
 ### Question 2
 
@@ -126,7 +128,9 @@ b. Create a new data frame called `gss22_advfront` that only contains the variab
 
 c. Re-level the advfront variable such that it has two levels: "Strongly agree" and "Agree" combined into a new level called Agree and the remaining levels combined into ”Not agree". Then, re-order the levels in the following order: "Agree" and "Not agree". Finally, `count()` how many times each new level appears in the advfront variable.
 
-**Tip:** You can do this in various ways. One option is to use the `str_detect()` function to detect the existence of words. Note that these sometimes show up with lowercase first letters and sometimes with upper case first letters. To detect either in the `str_detect()` function, you can use “[Aa]gree”. However, solve the problem however you like, this is just one option.
+::: callout-tip
+You can do this in various ways. One option is to use the `str_detect()` function to detect the existence of words. Note that these sometimes show up with lowercase first letters and sometimes with upper case first letters. To detect either in the `str_detect()` function, you can use “[Aa]gree”. However, solve the problem however you like, this is just one option.
+:::
 
 d. Combine the levels of the `polviews` variable such that levels that have the word “liberal” in them are lumped into a level called "Liberal" and those that have the word conservative in them are lumped into a level called "Conservative". Then, re-order the levels in the following order: "Conservative" , "Moderate", and "Liberal". Finally, `count()` how many times each new level appears in the `polviews` variable.
 
@@ -155,22 +159,7 @@ Your answers to the questions in this part should go in the file `hw-6-part-2.qm
 
 Gapminder is a “fact tank” that uses publicly available world data to produce data visualizations and teaching resources on global development. We will use an excerpt of their data to explore relationships among world health metrics across countries and regions between the years 2000 and 2023. The data set is called `gapminder` and it’s in your HW repository’s data folder.
 
-
-### Question 6
-
-a. Data Prep: What happens when you take the natural log of 0? Remove rows of your data set where life_expectancy = 0, justifying why this is helpful.
-
-b. Model fitting: Fit a linear model predicting log life expectancy from gross domestic product. Display the tidy summary.
-
-c. Model evaluation:
-
-- Calculate the R-squared of the model using two methods and confirm that the values match: first method is using the `glance()` function and the other method is based on the value of the correlation coefficient between the two variables.
-
-- Interpret R-squared in the context of the data and the research question.
-
-### Question 7
-
-This question relies on an earlier assignment, where the `gapminder` dataframe is read in and transformed into `gapminder23`. This dataframe can be re-created with the code below:
+The next two questions rely on work you did back on [HW 4](/hw/hw-4.html#gapminder), where the `gapminder` dataframe is read in and transformed into `gapminder23`. This dataframe can be re-created with the code below:
 
 ```{r}
 #| eval: false
@@ -189,6 +178,21 @@ gapminder_23 <- gapminder_raw_23 |>
   )
 ```
 
+
+### Question 6
+
+a. Data Prep: What happens when you take the natural log of 0? Remove rows of your data set where life_expectancy = 0, justifying why this is helpful.
+
+b. Model fitting: Fit a linear model predicting log life expectancy from gross domestic product. Display the tidy summary.
+
+c. Model evaluation:
+
+    - Calculate the R-squared of the model using two methods and confirm that the values match: first method is using the `glance()` function and the other method is based on the value of the correlation coefficient between the two variables.
+    
+    - Interpret R-squared in the context of the data and the research question.
+
+### Question 7
+
 Next, we want to examine if the relationship between life expectancy and GDP that we observed in the previous exercise holds across all continents in our data.
 We’ll continue to work with logged life expectancy (`life_exp_log`) and data from 2023.
 
@@ -198,13 +202,11 @@ Justify your answer with specific features of the plot.
 
 b. **Model fitting and interpretation:**
 
-```         
--   Regardless of your answer in part (a), fit an [additive model]{.underline} (main effects) that predicts `life_exp_log` from GDP per capita and continent (with Africas as the baseline level). Display a tidy summary of the model output.
-
--   Interpret the *intercept* of the model, making sure that your interpretation is in the units of the original data (not on log scale).
-
--   Interpret the *slope* of the model, making sure that your interpretation is in the units of the original data (not on log scale).
-```
+    -   Regardless of your answer in part (a), fit an [additive model]{.underline} (main effects) that predicts `life_exp_log` from GDP per capita and continent (with Africas as the baseline level). Display a tidy summary of the model output.
+    
+    -   Interpret the *intercept* of the model, making sure that your interpretation is in the units of the original data (not on log scale).
+    
+    -   Interpret the *slope* of the model, making sure that your interpretation is in the units of the original data (not on log scale).
 
 c. **Prediction:** Predict the life expectancy of a country in Asia where the average GDP per capita is \$70,000. Do this using R functions, not by manually plugging in numbers.
 
@@ -224,7 +226,9 @@ c. Fit a logistic regression model predicting spam from dollar. Then, display th
 
 d. Using this model and the `predict()` function, predict the probability the email is spam if it contains 5 dollar signs. Based on this probability, how does the model classify this email?
 
-**Note:** To obtain the predicted probability, you can set the type argument in `predict()` to "prob".
+::: callout-note
+To obtain the predicted probability, you can set the type argument in `predict()` to "prob".
+:::
 
 ### Question 9
 
@@ -234,13 +238,13 @@ b\. Using this model, predict spam / not spam for all emails in the \`email\` da
 
 c\. Using your data frame from the previous part, determine, in a single pipeline, and using \`count()\`, the numbers of emails:
 
--   that are labelled as spam that are actually spam
-
--   that are not labelled as spam that are actually spam
-
--   that are labelled as spam that are actually not spam
-
--   that are not labelled as spam that are actually not spam
+    -   that are labelled as spam that are actually spam
+    
+    -   that are not labelled as spam that are actually spam
+    
+    -   that are labelled as spam that are actually not spam
+    
+    -   that are not labelled as spam that are actually not spam
 
 Store the resulting data frame with an appropriate name.
 
