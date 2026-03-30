@@ -1,0 +1,232 @@
+---
+title: HW 6
+description: "Due: Mon, Apr 6, 11:59 pm"
+categories: HW
+filters:
+  - ../remove-fmt-skip.lua
+draft: false
+---
+
+# Introduction
+
+This is a two-part homework assignment:
+
+- **Part 1 -- 🤖 Feedback from AI:** Not graded, for practice, you get immediate feedback with AI, based on rubrics designed by the course instructor. Complete in `hw-6-part-1.qmd`, no submission required.
+
+- **Part 2 -- 🧑🏽‍🏫 Feedback from Humans:** Graded, you get feedback from the course instructional team in about a week. Complete in `hw-6-part-2.qmd`, submit on Gradescope.
+
+By now you should be familiar with how to get started with a homework assignment by cloning the GitHub repo for the assignment.
+
+<details>
+<summary>Click to expand if you need a refresher on how to get started with a homework assignment.</summary>
+
+-   Go to <https://cmgr.oit.duke.edu/containers> and login with your Duke NetID and Password.
+-   Click `STA199` under My reservations to log into your container. You should now see the RStudio environment.
+-   Go to the course organization at [github.com/sta199-s26](https://github.com/sta199-s26) organization on GitHub.
+    Click on the repo with the prefix **hw-5**.
+    It contains the starter documents you need to complete the homework.
+-   Click on the green **CODE** button, select **Use SSH**.
+    Click on the clipboard icon to copy the repo URL.
+-   In RStudio, go to *File* ➛ *New Project* ➛*Version Control* ➛ *Git*.
+-   Copy and paste the URL of your assignment repo into the dialog box *Repository URL*. Again, please make sure to have *SSH* highlighted under *Clone* when you copy the address.
+-   Click *Create Project*, and the files from your GitHub repo will be displayed in the *Files* pane in RStudio.
+</details>
+
+By now you should also be familiar with guidelines for formatting your code and plots as well as your Git and Gradescope workflow.
+
+<details>
+<summary>Click to expand if you need a refresher on assignment guidelines.</summary>
+{{< include _guidelines.qmd >}}
+</details>
+
+# Packages
+
+In this part you will work with the
+
+-   **tidyverse** package for doing data analysis in a "tidy" way, and
+-   **tidymodels** package for modeling in a "tidy" way.
+
+```{r}
+library(tidyverse)
+library(tidymodels)
+library(openintro)
+```
+
+
+# Part 1 -- Feedback from AI
+
+Your answers to the questions in this part should go in the file `hw-6-part-1.qmd`.
+
+## Instructions
+
+Write your answer to each question in the appropriate section of the `hw-6-part-1.qmd` file.
+Then, highlight your answer to a question, click on _Addins > AIFEEDR > Get feedback_.
+In the app that opens, select the appropriate homework number (4) and question number.
+Then click on _Get Feedback_.
+Please be patient, feedback generation can take a few seconds. 
+Once you read the feedback, you can go back to your Quarto document to improve your answer based on the feedback. 
+You will then need to click the red X on the top left corner of the Viewer pane to stop the feedback app from running before you can re-render your Quarto document.
+
+<details>
+<summary>Click to expand if you want to review the video that demonstrates how to use the AI feedback tool.</summary>
+{{< video https://www.youtube.com/embed/EyT6QQN1ouQ?si=DsG-laE30BykMJby title="aifeedr">}}
+</details>
+
+## Gapminder, again
+
+Gapminder is a “fact tank” that uses publicly available world data to produce data visualizations and teaching resources on global development. We will use an excerpt of their data to explore relationships among world health metrics across countries and regions between the years 2000 and 2023. The data set is called `gapminder` and it’s in your lab repository’s data folder.
+
+
+### Question 1
+
+a. Data Prep: What happens when you take the natural log of 0? Remove rows of your data set where life_expectancy = 0, justifying why this is helpful.
+
+b. Model fitting: Fit a linear model predicting log life expectancy from gross domestic product. Display the tidy summary.
+
+c. Model evaluation:
+
+- Calculate the R-squared of the model using two methods and confirm that the values match: first method is using the `glance()` function and the other method is based on the value of the correlation coefficient between the two variables.
+
+- Interpret R-squared in the context of the data and the research question.
+
+### Question 2
+
+This question relies on an earlier assignment, where the `gapminder` dataframe is read in and transformed into `gapminder23`. This dataframe can be re-created with the code below:
+
+```{r}
+#| eval: false
+gapminder_raw <- read_csv("data/gapminder.csv")
+
+gapminder_raw_23 <- gapminder_raw |>
+  filter(year == 2023)
+
+gapminder_23 <- gapminder_raw_23 |> 
+  mutate(
+    gdp_percap = if_else(
+      str_detect(gdp_percap, "k"),                      
+      as.numeric(str_replace(gdp_percap, "k", "")) * 1000,  
+      as.numeric(gdp_percap)                            
+    )
+  )
+```
+
+Next, we want to examine if the relationship between life expectancy and GDP that we observed in the previous exercise holds across all continents in our data.
+We’ll continue to work with logged life expectancy (`life_exp_log`) and data from 2023.
+
+a. **Justification:** Create a scatter plot of `life_exp_log` vs. `gdp_percap`, where the points are colored by `continent`.
+Do you think the trend between `life_exp_log` and `gdp_percap` is different for different continents?
+Justify your answer with specific features of the plot.
+
+b. **Model fitting and interpretation:**
+
+```         
+-   Regardless of your answer in part (a), fit an [additive model]{.underline} (main effects) that predicts `life_exp_log` from GDP per capita and continent (with Africas as the baseline level). Display a tidy summary of the model output.
+
+-   Interpret the *intercept* of the model, making sure that your interpretation is in the units of the original data (not on log scale).
+
+-   Interpret the *slope* of the model, making sure that your interpretation is in the units of the original data (not on log scale).
+```
+
+c. **Prediction:** Predict the life expectancy of a country in Asia where the average GDP per capita is \$70,000. Do this using R functions, not by manually plugging in numbers.
+
+## Spam spam spam spam
+
+The data come from incoming emails in David Diez’s (one of the authors of OpenIntro textbooks) Gmail account for the first three months of 2012. All personally identifiable information has been removed. The dataset is called `email` and it’s in the `openintro` package.
+
+The outcome variable is spam, which takes the value 1 if the email is spam, 0 otherwise.
+
+### Question 3
+
+a. What type of variable is spam? What percent of the emails are spam?
+
+b. What type of variable is dollar - number of times a dollar sign or the word “dollar” appeared in the email? Visualize and describe its distribution, supporting your description with the appropriate summary statistics.
+
+c. Fit a logistic regression model predicting spam from dollar. Then, display the tidy output of the model.
+
+d. Using this model and the `predict()` function, predict the probability the email is spam if it contains 5 dollar signs. Based on this probability, how does the model classify this email?
+
+**Note:** To obtain the predicted probability, you can set the type argument in `predict()` to "prob".
+
+### Question 4
+
+a\. Fit a logistic regression model predicting \`spam\` from \`dollar\`, \`winner\` (indicating whether “winner” appeared in the email), and \`urgent_subj\` (whether the word "urgent" is in the subject of the email). Then, display the tidy output of the model.
+
+b\. Using this model, predict spam / not spam for all emails in the \`email\` dataset with \`augment()\`. Store the resulting data frame with an appropriate name and display the data frame as well.
+
+c\. Using your data frame from the previous part, determine, in a single pipeline, and using \`count()\`, the numbers of emails:
+
+-   that are labelled as spam that are actually spam
+
+-   that are not labelled as spam that are actually spam
+
+-   that are labelled as spam that are actually not spam
+
+-   that are not labelled as spam that are actually not spam
+
+Store the resulting data frame with an appropriate name.
+
+d\. In a single pipeline, and using \`mutate()\`, calculate the false positive and false negative rates.
+
+In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identified the two rates.
+
+### Question 5
+
+a.  Fit a logistic regression model predicting `spam` from `dollar` and another variable you think would be a good predictor. Provide a 1-sentence justification for why you chose this variable. Display the tidy output of the model.
+
+b.  Using this model, predict spam / not spam for all emails in the `email` dataset with `augment()`. Store the resulting data frame with an appropriate name.
+
+c.  Using your data frame from the previous part, determine, in a single pipeline, and using `count()`, the numbers of emails:
+
+    -   that are labelled as spam that are actually spam
+    -   that are not labelled as spam that are actually spam
+    -   that are labelled as spam that are actually not spam
+    -   that are not labelled as spam that are actually not spam
+
+    Store the resulting data frame with an appropriate name.
+
+d.  In a single pipeline, and using `mutate()`, calculate the false positive and false negative rates. In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identified the two rates.
+
+e.  Based on the false positive and false negatives rates of this model, comment, in 1-2 sentences, on which model (one from Question 3 or Question 4) is preferable and why.
+
+# Part 2 -- Feedback from Humans
+
+Your answers to the questions in this part should go in the file `hw-6-part-2.qmd`.
+
+### Question 6
+
+### Question 7
+
+### Question 8
+
+### Question 9
+
+### Question 10
+
+
+
+
+# Wrap-up
+
+::: callout-warning
+Before you wrap up the assignment, make sure that you render, commit, and push one final time so that the final versions of both your `.qmd` file and the rendered PDF are pushed to GitHub and your Git pane is empty.
+We will be checking these to make sure you have been practicing how to commit and push changes.
+:::
+
+## Submission
+
+{{< include _submission.qmd >}}
+
+## Grading and feedback
+
+-   Questions 1-5 are not graded, but you should complete them to get practice.
+
+-   Questions 6-10 are graded, and you will receive feedback on Gradescope from the course instructional team in about a week.
+    -   Questions will be graded for accuracy and completeness.
+    -   Partial credit will be given where appropriate.
+    -   There are also workflow points for:
+        - committing at least three times as you work through your homework,
+        - having your final version of `.qmd` and `.pdf` files in your GitHub repository, and
+        - overall organization.
+        
+
+
