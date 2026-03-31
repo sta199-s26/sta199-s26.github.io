@@ -107,6 +107,8 @@ website:
             text: Homework 4
           - href: hw/hw-5.qmd
             text: Homework 5
+          - href: hw/hw-6.qmd
+            text: Homework 6
       - section: "Project"
         contents:
           - href: project/description.qmd

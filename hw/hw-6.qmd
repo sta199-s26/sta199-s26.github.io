@@ -47,10 +47,11 @@ By now you should also be familiar with guidelines for formatting your code and 
 
 # Packages
 
-In this part you will work with the
+In this assignment you will work with the
 
 -   **tidyverse** package for doing data analysis in a "tidy" way, and
--   **tidymodels** package for modeling in a "tidy" way.
+-   **tidymodels** package for modeling in a "tidy" way
+-   **openintro** package for the spam e-mail dataset
 
 ```{r}
 library(tidyverse)
@@ -80,13 +81,15 @@ You will then need to click the red X on the top left corner of the Viewer pane 
 
 ## Do you even lift?
 
-### Question 1
-
 In this part, you will be working with data from www.openpowerlifting.org. This data was sourced from Tidy Tuesday and contains international powerlifting records at various meets. At each meet, each lifter gets three attempts at lifting max weight on three lifts: the bench press, squat and deadlift. For all of the following exercises, you should include units on axes labels, e.g. “Bench press (lbs)” or “Bench press (kg)”. “Age (years)” etc. This is good practice.
+
+
+
+### Question 1
 
 a.  Let's begin by taking a look at the **squat lifting** records.
 
-    -   Start with the `ipf` data frame.
+    -   Read in the `ipf.csv` file that is in your data folder and save it as `ipf`. 
     -   First, remove any observations that are negative for squat.
     -   Next, create a new column called `best3_squat_lbs` that converts the record from kilograms to pounds.
     -   Save your data frame as `ipf_squat`.
