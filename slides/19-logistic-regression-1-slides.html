@@ -258,37 +258,18 @@ Katie Solarz
 </ul></section><section id="recap-simple-linear-regression" class="slide level2"><h2>Recap: simple linear regression</h2>
 <p>Numerical response and one numerical predictor:</p>
 
-<img data-src="19-logistic-regression-1_files/figure-html/slr-1-1.png" width="672" class="r-stretch"></section><section id="recap-simple-linear-regression-1" class="slide level2"><h2>Recap: simple linear regression</h2>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/slr-1-1.png" width="960" class="r-stretch"></section><section id="recap-simple-linear-regression-1" class="slide level2"><h2>Recap: simple linear regression</h2>
 <p>Numerical response and one categorical predictor (two levels):</p>
 
-<img data-src="19-logistic-regression-1_files/figure-html/unnamed-chunk-1-1.png" width="672" class="r-stretch"></section><section id="recap-multiple-linear-regression" class="slide level2"><h2>Recap: multiple linear regression</h2>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section><section id="recap-multiple-linear-regression" class="slide level2"><h2>Recap: multiple linear regression</h2>
 <p>Numerical response; numerical and categorical predictors:</p>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
-(`stat_smooth()`).</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
-(`geom_point()`).</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range (`stat_smooth()`).
-Removed 2 rows containing missing values or values outside the scale range
-(`geom_point()`).</code></pre>
-</div>
 <div class="cell quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img data-src="19-logistic-regression-1_files/figure-html/additive-interaction-viz-1.png" width="672"></p>
+<p><img data-src="19-logistic-regression-1_files/figure-revealjs/additive-interaction-viz-1.png" width="960"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img data-src="19-logistic-regression-1_files/figure-html/additive-interaction-viz-2.png" width="672"></p>
+<p><img data-src="19-logistic-regression-1_files/figure-revealjs/additive-interaction-viz-2.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -301,7 +282,7 @@ y =
 \end{cases}
 \]</span></p>
 
-<img data-src="19-logistic-regression-1_files/figure-html/unnamed-chunk-2-1.png" width="672" class="r-stretch"></section><section id="who-cares" class="slide level2"><h2>Who cares?</h2>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section><section id="who-cares" class="slide level2"><h2>Who cares?</h2>
 <p>If we can model the relationship between predictors (<span class="math inline">\(x\)</span>) and a binary response (<span class="math inline">\(y\)</span>), we can use the model to do a special kind of prediction called <em>classification</em>.</p>
 </section><section id="example-is-the-e-mail-spam-or-not" class="slide level2 smaller"><h2>Example: is the e-mail spam or not?</h2>
 <p><span class="math display">\[
@@ -357,12 +338,12 @@ y
 \]</span></p>
 </section><section id="how-do-we-model-this-type-of-data" class="slide level2"><h2>How do we model this type of data?</h2>
 
-<img data-src="19-logistic-regression-1_files/figure-html/unnamed-chunk-3-1.png" width="672" class="r-stretch"></section><section id="straight-line-of-best-fit-is-a-little-silly" class="slide level2"><h2>Straight line of best fit is a little silly</h2>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section><section id="straight-line-of-best-fit-is-a-little-silly" class="slide level2"><h2>Straight line of best fit is a little silly</h2>
 
-<img data-src="19-logistic-regression-1_files/figure-html/unnamed-chunk-4-1.png" width="672" class="r-stretch"></section><section id="instead-s-curve-of-best-fit" class="slide level2 smaller"><h2>Instead: S-curve of best fit</h2>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section><section id="instead-s-curve-of-best-fit" class="slide level2 smaller"><h2>Instead: S-curve of best fit</h2>
 <p>Instead of modeling <span class="math inline">\(y\)</span> directly, we model the probability that <span class="math inline">\(y=1\)</span>:</p>
 
-<img data-src="19-logistic-regression-1_files/figure-html/unnamed-chunk-5-1.png" width="672" class="r-stretch"><ul>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"><ul>
 <li>“Given new email, what’s the probability that it’s spam?’’</li>
 <li>“Given new image, what’s the probability that it’s cancer?’’</li>
 <li>“Given new loan application, what’s the probability that they default?’’</li>
@@ -407,11 +388,11 @@ y
 <li><p>Why does this “transformation” work? The log function maps positive numbers <span class="math inline">\((0, \infty)\)</span> to all real numbers <span class="math inline">\((-\infty, \infty)\)</span>.</p></li>
 </ul></section><section id="probability-to-odds" class="slide level2"><h2>Probability to odds</h2>
 
-<img data-src="19-logistic-regression-1_files/figure-html/unnamed-chunk-6-1.png" width="672" class="r-stretch"></section><section id="zooming-in" class="slide level2"><h2>Zooming in</h2>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section><section id="zooming-in" class="slide level2"><h2>Zooming in</h2>
 
-<img data-src="19-logistic-regression-1_files/figure-html/unnamed-chunk-7-1.png" width="672" class="r-stretch"></section><section id="odds-to-log-odds" class="slide level2"><h2>Odds to log odds</h2>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section><section id="odds-to-log-odds" class="slide level2"><h2>Odds to log odds</h2>
 
-<img data-src="19-logistic-regression-1_files/figure-html/unnamed-chunk-8-1.png" width="672" class="r-stretch"></section><section id="logistic-regression" class="slide level2"><h2>Logistic regression</h2>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section><section id="logistic-regression" class="slide level2"><h2>Logistic regression</h2>
 <p><span class="math display">\[
 \log\left(\frac{p}{1-p}\right)
 =
@@ -432,9 +413,9 @@ b_0+b_1x.
 \]</span></p>
 </section><section id="todays-data" class="slide level2 smaller"><h2>Today’s data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>email <span class="sc">|&gt;</span> </span>
-<span id="cb6-2"><a></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="fu">c</span>(spam, dollar, viagra, winner, password, exclaim_mess)) <span class="sc">|&gt;</span> </span>
-<span id="cb6-3"><a></a>  <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>email <span class="sc">|&gt;</span> </span>
+<span id="cb1-2"><a></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="fu">c</span>(spam, dollar, viagra, winner, password, exclaim_mess)) <span class="sc">|&gt;</span> </span>
+<span id="cb1-3"><a></a>  <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 3,921
 Columns: 6
@@ -448,10 +429,10 @@ $ exclaim_mess &lt;dbl&gt; 0, 1, 6, 48, 1, 1, 1, 18, 1, 0, 2, 1, 0, 10, 4, 10, 2
 </div>
 </section><section id="fitting-a-logistic-model" class="slide level2"><h2>Fitting a logistic model</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>logistic_fit <span class="ot">&lt;-</span> <span class="fu">logistic_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb8-2"><a></a>  <span class="fu">fit</span>(spam <span class="sc">~</span> exclaim_mess, <span class="at">data =</span> email)</span>
-<span id="cb8-3"><a></a></span>
-<span id="cb8-4"><a></a><span class="fu">tidy</span>(logistic_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>logistic_fit <span class="ot">&lt;-</span> <span class="fu">logistic_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a></a>  <span class="fu">fit</span>(spam <span class="sc">~</span> exclaim_mess, <span class="at">data =</span> email)</span>
+<span id="cb3-3"><a></a></span>
+<span id="cb3-4"><a></a><span class="fu">tidy</span>(logistic_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 5
   term          estimate std.error statistic p.value
@@ -548,43 +529,43 @@ e^{b_0}e^{b_1x+b_1}
 </section><section id="step-0-fit-the-model" class="slide level2 smaller"><h2>Step 0: fit the model</h2>
 <p>Select a number <span class="math inline">\(0 &lt; p^* &lt; 1\)</span>:</p>
 
-<img data-src="19-logistic-regression-1_files/figure-html/step-0-1.png" width="672" class="r-stretch"><ul>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/step-0-1.png" width="960" class="r-stretch"><ul>
 <li>if <span class="math inline">\(\text{Prob}(y=1)\leq p^*\)</span>, then predict <span class="math inline">\(\widehat{y}=0\)</span>;</li>
 <li>if <span class="math inline">\(\text{Prob}(y=1)&gt; p^*\)</span>, then predict <span class="math inline">\(\widehat{y}=1\)</span>.</li>
 </ul></section><section id="step-1-pick-a-threshold" class="slide level2 smaller"><h2>Step 1: pick a threshold</h2>
 <p>Select a number <span class="math inline">\(0 &lt; p^* &lt; 1\)</span>:</p>
 
-<img data-src="19-logistic-regression-1_files/figure-html/step-1-1.png" width="672" class="r-stretch"><ul>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/step-1-1.png" width="960" class="r-stretch"><ul>
 <li>if <span class="math inline">\(\text{Prob}(y=1)\leq p^*\)</span>, then predict <span class="math inline">\(\widehat{y}=0\)</span>;</li>
 <li>if <span class="math inline">\(\text{Prob}(y=1)&gt; p^*\)</span>, then predict <span class="math inline">\(\widehat{y}=1\)</span>.</li>
 </ul></section><section id="step-2-find-the-decision-boundary" class="slide level2 smaller"><h2>Step 2: find the “decision boundary”</h2>
 <p>Solve for the x-value that matches the threshold:</p>
 
-<img data-src="19-logistic-regression-1_files/figure-html/step-2-1.png" width="672" class="r-stretch"><ul>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/step-2-1.png" width="960" class="r-stretch"><ul>
 <li>if <span class="math inline">\(\text{Prob}(y=1)\leq p^*\)</span>, then predict <span class="math inline">\(\widehat{y}=0\)</span>;</li>
 <li>if <span class="math inline">\(\text{Prob}(y=1)&gt; p^*\)</span>, then predict <span class="math inline">\(\widehat{y}=1\)</span>.</li>
 </ul></section><section id="step-3-classify-a-new-arrival" class="slide level2 smaller"><h2>Step 3: classify a new arrival</h2>
 <p>A new person shows up with <span class="math inline">\(x_{\text{new}}\)</span>. Which side of the boundary are they on?</p>
 
-<img data-src="19-logistic-regression-1_files/figure-html/step-3-1.png" width="672" class="r-stretch"><ul>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/step-3-1.png" width="960" class="r-stretch"><ul>
 <li>if <span class="math inline">\(x_{\text{new}} \leq x^\star\)</span>, then <span class="math inline">\(\text{Prob}(y=1)\leq p^*\)</span>, so predict <span class="math inline">\(\widehat{y}=0\)</span> for the new person;</li>
 <li>if <span class="math inline">\(x_{\text{new}} &gt; x^\star\)</span>, then <span class="math inline">\(\text{Prob}(y=1)&gt; p^*\)</span>, so predict <span class="math inline">\(\widehat{y}=1\)</span> for the new person.</li>
 </ul></section><section id="lets-change-the-threshold" class="slide level2 smaller"><h2>Let’s change the threshold</h2>
 <p>A new person shows up with <span class="math inline">\(x_{\text{new}}\)</span>. Which side of the boundary are they on?</p>
 
-<img data-src="19-logistic-regression-1_files/figure-html/lower-threshold-1.png" width="672" class="r-stretch"><ul>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/lower-threshold-1.png" width="960" class="r-stretch"><ul>
 <li>if <span class="math inline">\(x_{\text{new}} \leq x^\star\)</span>, then <span class="math inline">\(\text{Prob}(y=1)\leq p^*\)</span>, so predict <span class="math inline">\(\widehat{y}=0\)</span> for the new person;</li>
 <li>if <span class="math inline">\(x_{\text{new}} &gt; x^\star\)</span>, then <span class="math inline">\(\text{Prob}(y=1)&gt; p^*\)</span>, so predict <span class="math inline">\(\widehat{y}=1\)</span> for the new person.</li>
 </ul></section><section id="lets-change-the-threshold-1" class="slide level2 smaller"><h2>Let’s change the threshold</h2>
 <p>A new person shows up with <span class="math inline">\(x_{\text{new}}\)</span>. Which side of the boundary are they on?</p>
 
-<img data-src="19-logistic-regression-1_files/figure-html/higher-threshold-1.png" width="672" class="r-stretch"><ul>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/higher-threshold-1.png" width="960" class="r-stretch"><ul>
 <li>if <span class="math inline">\(x_{\text{new}} \leq x^\star\)</span>, then <span class="math inline">\(\text{Prob}(y=1)\leq p^*\)</span>, so predict <span class="math inline">\(\widehat{y}=0\)</span> for the new person;</li>
 <li>if <span class="math inline">\(x_{\text{new}} &gt; x^\star\)</span>, then <span class="math inline">\(\text{Prob}(y=1)&gt; p^*\)</span>, so predict <span class="math inline">\(\widehat{y}=1\)</span> for the new person.</li>
 </ul></section><section id="nothing-special-about-one-predictor" class="slide level2 smaller"><h2>Nothing special about one predictor…</h2>
 <p>Two numerical predictors and one binary response:</p>
 
-<img data-src="19-logistic-regression-1_files/figure-html/unnamed-chunk-11-1.png" width="672" class="r-stretch"></section><section id="multiple-logistic-regression" class="slide level2"><h2>“Multiple” logistic regression</h2>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section><section id="multiple-logistic-regression" class="slide level2"><h2>“Multiple” logistic regression</h2>
 <p>For the log-odds, a <em>multiple</em> linear regression:</p>
 <p><span class="math display">\[
 \log\left(\frac{p}{1-p}\right)
@@ -599,24 +580,24 @@ e^{b_0}e^{b_1x+b_1}
 </section><section id="decision-boundary-again" class="slide level2 smaller"><h2>Decision boundary, again</h2>
 <p>It’s linear! Consider two numerical predictors:</p>
 
-<img data-src="19-logistic-regression-1_files/figure-html/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center r-stretch" width="672"><ul>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><ul>
 <li>if new <span class="math inline">\((x_1,\,x_2)\)</span> below, <span class="math inline">\(\text{Prob}(y=1)\leq p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=0\)</span> for the new person;</li>
 <li>if new <span class="math inline">\((x_1,\,x_2)\)</span> above, <span class="math inline">\(\text{Prob}(y=1)&gt; p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=1\)</span> for the new person.</li>
 </ul></section><section id="decision-boundary-again-1" class="slide level2 smaller"><h2>Decision boundary, again</h2>
 <p>It’s linear! Consider two numerical predictors:</p>
 
-<img data-src="19-logistic-regression-1_files/figure-html/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center r-stretch" width="672"><ul>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-13-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><ul>
 <li>if new <span class="math inline">\((x_1,\,x_2)\)</span> below, <span class="math inline">\(\text{Prob}(y=1)\leq p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=0\)</span> for the new person;</li>
 <li>if new <span class="math inline">\((x_1,\,x_2)\)</span> above, <span class="math inline">\(\text{Prob}(y=1)&gt; p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=1\)</span> for the new person.</li>
 </ul></section><section id="decision-boundary-again-2" class="slide level2 smaller"><h2>Decision boundary, again</h2>
 <p>It’s linear! Consider two numerical predictors:</p>
 
-<img data-src="19-logistic-regression-1_files/figure-html/unnamed-chunk-14-1.png" class="quarto-figure quarto-figure-center r-stretch" width="672"><ul>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-14-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><ul>
 <li>if new <span class="math inline">\((x_1,\,x_2)\)</span> below, <span class="math inline">\(\text{Prob}(y=1)\leq p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=0\)</span> for the new person;</li>
 <li>if new <span class="math inline">\((x_1,\,x_2)\)</span> above, <span class="math inline">\(\text{Prob}(y=1)&gt; p^*\)</span>. Predict <span class="math inline">\(\widehat{y}=1\)</span> for the new person.</li>
 </ul></section><section id="note-the-classifier-isnt-perfect" class="slide level2 medium"><h2>Note: the classifier isn’t perfect</h2>
 
-<img data-src="19-logistic-regression-1_files/figure-html/unnamed-chunk-15-1.png" class="quarto-figure quarto-figure-center r-stretch" width="672"><ul>
+<img data-src="19-logistic-regression-1_files/figure-revealjs/unnamed-chunk-15-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><ul>
 <li>There are blue points in the orange region: spam (1) emails misclassified as legit (0);</li>
 <li>There are orange points in the blue region: legit (0) emails misclassified as spam (1).</li>
 </ul></section><section id="how-do-you-pick-the-threshold" class="slide level2 smaller"><h2>How do you pick the threshold?</h2>
@@ -855,6 +836,41 @@ e^{b_0}e^{b_1x+b_1}
           RevealZoom
         ]
       });
+    </script><script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
     </script><script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
