@@ -280,7 +280,7 @@ tidy(adr_fit_1)
 
 a.  Which of the following is the best interpretation of the slope coefficient for `adults`?
 
-    For each additional adult in the booking, the average daily rate is predicted to be higher by $29.50 
+    For each additional adult in the booking, the average daily rate is predicted to be higher by $29.00 
 
     A. on average, holding hotel type constant.
 
@@ -292,23 +292,23 @@ a.  Which of the following is the best interpretation of the slope coefficient f
 
 b.  Which of the following is the correct interpretation of the slope coefficient for `hotel`?
 
-    A. For each additional Resort Hotel booking, the predicted average daily rate is $10.70 lower, holding number of adults constant.
+    A. For each additional Resort Hotel booking, the predicted average daily rate is $10.80 lower, holding number of adults constant.
     
-    B. For each additional adult in the booking, the average daily rate is predicted to be lower by $10.70 for resort hotels compared to City Hotels, on average.
+    B. For each additional adult in the booking, the average daily rate is predicted to be lower by $10.80 for resort hotels compared to City Hotels, on average.
     
-    C. Resort Hotels bookings are predicted to have an average daily rate that is $10.70 lower than City Hotels, on average, holding number of adults constant.
+    C. Resort Hotels bookings are predicted to have an average daily rate that is $10.80 lower than City Hotels, on average, holding number of adults constant.
     
-    D. Resort Hotels bookings are predicted to have an average daily rate that is $10.70 higher than City Hotels, on average, holding number of adults constant.
+    D. Resort Hotels bookings are predicted to have an average daily rate that is $10.80 higher than City Hotels, on average, holding number of adults constant.
 
 c.  Which of the following is the correct interpretation of the intercept?
 
-    A. The predicted average daily rate for a bookings with 0 adults at a Resort Hotel is $50.50, on average.
+    A. The predicted average daily rate for a bookings with 0 adults at a Resort Hotel is $51.70, on average.
     
-    B. The predicted average daily rate for a bookings with 0 adults at a City Hotel is $50.50, on average.
+    B. The predicted average daily rate for a bookings with 0 adults at a City Hotel is $51.70, on average.
     
-    C. For each additional adult and Resort Hotel in the booking, the average daily rate is predicted to be $50.50 higher, on average.
+    C. For each additional adult and Resort Hotel in the booking, the average daily rate is predicted to be $51.70 higher, on average.
     
-    D. For each additional adult and City Hotel in the booking, the average daily rate is predicted to be $50.50 higher, on average.
+    D. For each additional adult and City Hotel in the booking, the average daily rate is predicted to be $51.70 higher, on average.
 
 d.  Which of the following (Plot A or Plot B) is the correct visual representation of this model?
 
