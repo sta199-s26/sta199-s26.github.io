@@ -1819,6 +1819,909 @@
     "text": "Overfitting\n\n\nOverfitting occurs when a model captures not only the underlying relationship between predictors and outcome but also the random noise in the data.\n\nOverfitted models tend to perform well on the observed data but poorly on new, unseen data.\n\nGood news: We have techniques to detect and prevent overfitting.\nBad news: We won’t get into those until next week."
   },
   {
+    "objectID": "slides/20-logistic-regression-2-slides.html#while-you-wait-participate",
+    "href": "slides/20-logistic-regression-2-slides.html#while-you-wait-participate",
+    "title": "Logistic regression 2",
+    "section": "While you wait: Participate 📱💻",
+    "text": "While you wait: Participate 📱💻\n\n\n\nWhat is your comfort level with mathematics?\n\n\nVery low\nLow\nAverage\nHigh\nVery high\n\n\n\n\n\n\nScan the QR code or go HERE. Log in with your Duke NetID."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#statsci-house-course-next-fall",
+    "href": "slides/20-logistic-regression-2-slides.html#statsci-house-course-next-fall",
+    "title": "Logistic regression 2",
+    "section": "StatSci House Course next Fall",
+    "text": "StatSci House Course next Fall\n\n\n\n\nStatistical Methods in Research\n\nMonday 7:00-8:30 PM;\nTaught by the oldest broads in the stats mafia, Cooper Ruffing and our own Liane Ma.\nReading and discussion course;\nCelebrate and/or roast the statistical methods and reasoning is published research articles."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#ssmu-data-mini",
+    "href": "slides/20-logistic-regression-2-slides.html#ssmu-data-mini",
+    "title": "Logistic regression 2",
+    "section": "SSMU Data Mini",
+    "text": "SSMU Data Mini\n\n\nThe old broads strike again:\n\nLike DataFest, only mini;\nSaturday April 11 11am - 5:30pm\nRegister by tomorow."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#duke-business-behind-health-conference",
+    "href": "slides/20-logistic-regression-2-slides.html#duke-business-behind-health-conference",
+    "title": "Logistic regression 2",
+    "section": "Duke Business Behind Health Conference",
+    "text": "Duke Business Behind Health Conference\n\n\n\n\n\nSaturday April 11\nAt the business school\nDo some fancy networking!"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#wind-symphony-tomorrow",
+    "href": "slides/20-logistic-regression-2-slides.html#wind-symphony-tomorrow",
+    "title": "Logistic regression 2",
+    "section": "Wind Symphony tomorrow!",
+    "text": "Wind Symphony tomorrow!\n\n\n\nThursday, April 2 7:30 pm - 9:00 pm;\nBaldwin Auditorium (East)\nProgramming is always very colorful and interesting;\nMany past and present JZ students."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#ragtime-this-weekend",
+    "href": "slides/20-logistic-regression-2-slides.html#ragtime-this-weekend",
+    "title": "Logistic regression 2",
+    "section": "Ragtime this weekend!",
+    "text": "Ragtime this weekend!"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#hw-6",
+    "href": "slides/20-logistic-regression-2-slides.html#hw-6",
+    "title": "Logistic regression 2",
+    "section": "HW 6",
+    "text": "HW 6\n\n5 Qs on linear reg; 5 Qs on logistic reg;\nDue Monday April 6 @ 11:59 pm;\nThereafter, the usual late penalties apply;\nAll ten questions AI-enabled for immediate feedback;\nLater, Humans grade the second half like usual."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#midterm-2",
+    "href": "slides/20-logistic-regression-2-slides.html#midterm-2",
+    "title": "Logistic regression 2",
+    "section": "Midterm 2",
+    "text": "Midterm 2\n\nSimilar format, length, style to Midterm 1;\nStudy guide goes up tomorrow; solutions Monday;\nWeight falls squarely on material since spring break;\nLogistic regression is fair game, but I’m sensitive to the fact that it is still quite new."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#last-time-regression-with-a-binary-response",
+    "href": "slides/20-logistic-regression-2-slides.html#last-time-regression-with-a-binary-response",
+    "title": "Logistic regression 2",
+    "section": "Last time: regression with a binary response",
+    "text": "Last time: regression with a binary response\n\\[\ny =\n\\begin{cases}\n1 & &&\\text{eg. Yes, Win, True, Heads, Success, Spam}\\\\\n0 & &&\\text{eg. No, Lose, False, Tails, Failure, Legit}.\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#new-model-logistic-regression",
+    "href": "slides/20-logistic-regression-2-slides.html#new-model-logistic-regression",
+    "title": "Logistic regression 2",
+    "section": "New model: logistic regression",
+    "text": "New model: logistic regression\nS-curve for the probability of “success”:\n\\[\n\\hat{p}\n=\n\\widehat{\\text{Prob}(y=1)}\n=\n\\frac{e^{b_0+b_1x}}{1+e^{b_0+b_1x}}.\n\\]\nLinear model for the log-odds:\n\\[\n\\log\\left(\\frac{\\hat{p}}{1-\\hat{p}}\\right)\n=\nb_0+b_1x.\n\\]\nThese are equivalent."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#r-syntax-is-largely-unchanged",
+    "href": "slides/20-logistic-regression-2-slides.html#r-syntax-is-largely-unchanged",
+    "title": "Logistic regression 2",
+    "section": "R syntax is largely unchanged",
+    "text": "R syntax is largely unchanged\nJust use logistic_reg instead of linear_reg:\n\n\nsimple_logistic_fit &lt;- logistic_reg() |&gt;\n  fit(spam ~ exclaim_mess, data = email)\n\ntidy(simple_logistic_fit)\n\n# A tibble: 2 × 5\n  term          estimate std.error statistic p.value\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 (Intercept)  -2.27      0.0553     -41.1     0    \n2 exclaim_mess  0.000272  0.000949     0.287   0.774\n\n\n\n\nFitted equation for the log-odds:\n\\[\n\\log\\left(\\frac{\\hat{p}}{1-\\hat{p}}\\right)\n=\n-2.27\n+\n0.000272\\times exclaim~mess\n\\]"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#interpretations-are-strange-and-delicate",
+    "href": "slides/20-logistic-regression-2-slides.html#interpretations-are-strange-and-delicate",
+    "title": "Logistic regression 2",
+    "section": "Interpretations are strange and delicate",
+    "text": "Interpretations are strange and delicate\n\nIf exclaim_mess = 0, then \\[\n\\hat{p}=\\widehat{P(y=1)}=\\frac{e^{-2.27}}{1+e^{-2.27}}\\approx 0.09.\n\\] So, our model predicts that an email with no exclamation marks has a 9% probability of being spam.\nIf the email has an additional exclamation mark, we predict the odds of the email being spam to be higher by a factor of \\(e^{0.000272}\\approx 1.000272\\).\n\n\n(the odds are higher because the scale factor is greater than one. If it had been 0.98, then the odds shrink)"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#use-the-exp-function-to-compute",
+    "href": "slides/20-logistic-regression-2-slides.html#use-the-exp-function-to-compute",
+    "title": "Logistic regression 2",
+    "section": "Use the exp function to compute",
+    "text": "Use the exp function to compute\n\ntidy(simple_logistic_fit) |&gt;\n  filter(term == \"(Intercept)\") |&gt;\n  summarize(\n    prob0 = exp(estimate) / (1 + exp(estimate))\n  )\n\n# A tibble: 1 × 1\n   prob0\n   &lt;dbl&gt;\n1 0.0934\n\n\n\ntidy(simple_logistic_fit) |&gt;\n  filter(term == \"exclaim_mess\") |&gt;\n  summarize(\n    scale_factor = exp(estimate)\n  ) |&gt;\n  pull()\n\n[1] 1.000272"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#heres-an-alternative-model",
+    "href": "slides/20-logistic-regression-2-slides.html#heres-an-alternative-model",
+    "title": "Logistic regression 2",
+    "section": "Here’s an alternative model",
+    "text": "Here’s an alternative model\nDump all the predictors in:\n\nfull_logistic_fit &lt;- logistic_reg() |&gt;\n  fit(spam ~ ., data = email)\n\ntidy(full_logistic_fit)\n\n# A tibble: 22 × 5\n   term         estimate std.error statistic  p.value\n   &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n 1 (Intercept)  -9.09e+1   9.80e+3  -0.00928 9.93e- 1\n 2 to_multiple1 -2.68e+0   3.27e-1  -8.21    2.25e-16\n 3 from1        -2.19e+1   9.80e+3  -0.00224 9.98e- 1\n 4 cc            1.88e-2   2.20e-2   0.855   3.93e- 1\n 5 sent_email1  -2.07e+1   3.87e+2  -0.0536  9.57e- 1\n 6 time          8.48e-8   2.85e-8   2.98    2.92e- 3\n 7 image        -1.78e+0   5.95e-1  -3.00    2.73e- 3\n 8 attach        7.35e-1   1.44e-1   5.09    3.61e- 7\n 9 dollar       -6.85e-2   2.64e-2  -2.59    9.64e- 3\n10 winneryes     2.07e+0   3.65e-1   5.67    1.41e- 8\n# ℹ 12 more rows"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#classification-error",
+    "href": "slides/20-logistic-regression-2-slides.html#classification-error",
+    "title": "Logistic regression 2",
+    "section": "Classification error",
+    "text": "Classification error\nThere are two kinds of mistakes:\n\nWe want to avoid both, but there’s a trade-off."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#jargon-false-negative-and-positive",
+    "href": "slides/20-logistic-regression-2-slides.html#jargon-false-negative-and-positive",
+    "title": "Logistic regression 2",
+    "section": "Jargon: False negative and positive",
+    "text": "Jargon: False negative and positive\n\nFalse negative rate is the proportion of actual positives that were classified as negatives.\nFalse positive rate is the proportion of actual negatives that were classified as positives.\n\n\n\n\n\n\n\nTip\n\n\nWe want these to be low!"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#jargon-sensitivity",
+    "href": "slides/20-logistic-regression-2-slides.html#jargon-sensitivity",
+    "title": "Logistic regression 2",
+    "section": "Jargon: Sensitivity",
+    "text": "Jargon: Sensitivity\nSensitivity is the proportion of actual positives that were correctly classified as positive.\n\nAlso known as true positive rate and recall\nSensitivity = 1 − False negative rate\nUseful when false negatives are more “expensive” than false positives\n\n\n\n\n\n\n\nTip\n\n\nWe want this to be high!"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#jargon-specificity",
+    "href": "slides/20-logistic-regression-2-slides.html#jargon-specificity",
+    "title": "Logistic regression 2",
+    "section": "Jargon: Specificity",
+    "text": "Jargon: Specificity\nSpecificity is the proportion of actual negatives that were correctly classified as negative\n\nAlso known as true negative rate\nSpecificity = 1 − False positive rate\n\n\n\n\n\n\n\nTip\n\n\nWe want this to be high!"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#the-augment-function",
+    "href": "slides/20-logistic-regression-2-slides.html#the-augment-function",
+    "title": "Logistic regression 2",
+    "section": "The augment function",
+    "text": "The augment function\nThe augment function takes a data frame and “augments” it by adding three new columns on the left that describe the model predictions for each row:\n\n\n.pred_class: model prediction (\\(\\hat{y}\\)) based on a 50% threshold;\n\n.pred_0: model estimate of \\(P(y=0)\\);\n\n.pred_1: model estimate of \\(P(y=1) = 1 - P(y = 0)\\)."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#the-augment-function-1",
+    "href": "slides/20-logistic-regression-2-slides.html#the-augment-function-1",
+    "title": "Logistic regression 2",
+    "section": "The augment function",
+    "text": "The augment function\nThe augment function takes a data frame and “augments” it by adding three new columns on the left that describe the model predictions for each row:\n\nlog_aug_full &lt;- augment(full_logistic_fit, email)\nlog_aug_full\n\n# A tibble: 3,921 × 24\n   .pred_class .pred_0  .pred_1 spam  to_multiple from     cc sent_email\n   &lt;fct&gt;         &lt;dbl&gt;    &lt;dbl&gt; &lt;fct&gt; &lt;fct&gt;       &lt;fct&gt; &lt;int&gt; &lt;fct&gt;     \n 1 0             0.867 1.33e- 1 0     0           1         0 0         \n 2 0             0.943 5.70e- 2 0     0           1         0 0         \n 3 0             0.942 5.78e- 2 0     0           1         0 0         \n 4 0             0.920 7.96e- 2 0     0           1         0 0         \n 5 0             0.903 9.74e- 2 0     0           1         0 0         \n 6 0             0.901 9.87e- 2 0     0           1         0 0         \n 7 0             1.000 7.89e-12 0     1           1         0 1         \n 8 0             1.000 1.24e-12 0     1           1         1 1         \n 9 0             0.862 1.38e- 1 0     0           1         0 0         \n10 0             0.922 7.76e- 2 0     0           1         0 0         \n# ℹ 3,911 more rows\n# ℹ 16 more variables: time &lt;dttm&gt;, image &lt;dbl&gt;, attach &lt;dbl&gt;, dollar &lt;dbl&gt;,\n#   winner &lt;fct&gt;, inherit &lt;dbl&gt;, viagra &lt;dbl&gt;, password &lt;dbl&gt;, num_char &lt;dbl&gt;,\n#   line_breaks &lt;int&gt;, format &lt;fct&gt;, re_subj &lt;fct&gt;, exclaim_subj &lt;dbl&gt;,\n#   urgent_subj &lt;fct&gt;, exclaim_mess &lt;dbl&gt;, number &lt;fct&gt;"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#calculating-the-error-rates",
+    "href": "slides/20-logistic-regression-2-slides.html#calculating-the-error-rates",
+    "title": "Logistic regression 2",
+    "section": "Calculating the error rates",
+    "text": "Calculating the error rates\n\nlog_aug_full |&gt;\n  count(spam, .pred_class) \n\n# A tibble: 4 × 3\n  spam  .pred_class     n\n  &lt;fct&gt; &lt;fct&gt;       &lt;int&gt;\n1 0     0            3521\n2 0     1              33\n3 1     0             299\n4 1     1              68"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#calculating-the-error-rates-1",
+    "href": "slides/20-logistic-regression-2-slides.html#calculating-the-error-rates-1",
+    "title": "Logistic regression 2",
+    "section": "Calculating the error rates",
+    "text": "Calculating the error rates\n\nlog_aug_full |&gt;\n  count(spam, .pred_class) |&gt;\n  group_by(spam)\n\n# A tibble: 4 × 3\n# Groups:   spam [2]\n  spam  .pred_class     n\n  &lt;fct&gt; &lt;fct&gt;       &lt;int&gt;\n1 0     0            3521\n2 0     1              33\n3 1     0             299\n4 1     1              68"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#calculating-the-error-rates-2",
+    "href": "slides/20-logistic-regression-2-slides.html#calculating-the-error-rates-2",
+    "title": "Logistic regression 2",
+    "section": "Calculating the error rates",
+    "text": "Calculating the error rates\n\nlog_aug_full |&gt;\n  count(spam, .pred_class) |&gt;\n  group_by(spam) |&gt;\n  mutate(p = n / sum(n))\n\n# A tibble: 4 × 4\n# Groups:   spam [2]\n  spam  .pred_class     n       p\n  &lt;fct&gt; &lt;fct&gt;       &lt;int&gt;   &lt;dbl&gt;\n1 0     0            3521 0.991  \n2 0     1              33 0.00929\n3 1     0             299 0.815  \n4 1     1              68 0.185"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#calculating-the-error-rates-3",
+    "href": "slides/20-logistic-regression-2-slides.html#calculating-the-error-rates-3",
+    "title": "Logistic regression 2",
+    "section": "Calculating the error rates",
+    "text": "Calculating the error rates\n\nlog_aug_full |&gt;\n  count(spam, .pred_class) |&gt;\n  group_by(spam) |&gt;\n  mutate(\n    p = n / sum(n),\n    decision = case_when(\n      spam == \"0\" & .pred_class == \"0\" ~ \"True negative\",\n      spam == \"0\" & .pred_class == \"1\" ~ \"False positive\",\n      spam == \"1\" & .pred_class == \"0\" ~ \"False negative\",\n      spam == \"1\" & .pred_class == \"1\" ~ \"True positive\"\n    ))\n\n# A tibble: 4 × 5\n# Groups:   spam [2]\n  spam  .pred_class     n       p decision      \n  &lt;fct&gt; &lt;fct&gt;       &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;         \n1 0     0            3521 0.991   True negative \n2 0     1              33 0.00929 False positive\n3 1     0             299 0.815   False negative\n4 1     1              68 0.185   True positive"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#but-wait",
+    "href": "slides/20-logistic-regression-2-slides.html#but-wait",
+    "title": "Logistic regression 2",
+    "section": "But wait!",
+    "text": "But wait!\nIf we change the classification threshold, we change the classifications, and we change the error rates:\n\nlog_aug_full |&gt;\n  mutate(\n    .pred_class = if_else(.pred_1 &lt;= 0.25, 0, 1)\n  ) |&gt;\n  count(spam, .pred_class) |&gt;\n  group_by(spam) |&gt;\n  mutate(p = n / sum(n))\n\n# A tibble: 4 × 4\n# Groups:   spam [2]\n  spam  .pred_class     n      p\n  &lt;fct&gt;       &lt;dbl&gt; &lt;int&gt;  &lt;dbl&gt;\n1 0               0  3263 0.918 \n2 0               1   291 0.0819\n3 1               0   172 0.469 \n4 1               1   195 0.531"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#classification-threshold-0.00",
+    "href": "slides/20-logistic-regression-2-slides.html#classification-threshold-0.00",
+    "title": "Logistic regression 2",
+    "section": "Classification threshold: 0.00",
+    "text": "Classification threshold: 0.00\n\nlog_aug_full |&gt;\n  mutate(\n    .pred_class = if_else(.pred_1 &lt;= 0.00, 0, 1)\n  ) |&gt;\n  count(spam, .pred_class) |&gt;\n  group_by(spam) |&gt;\n  mutate(p = n / sum(n))\n\n# A tibble: 2 × 4\n# Groups:   spam [2]\n  spam  .pred_class     n     p\n  &lt;fct&gt;       &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;\n1 0               1  3554     1\n2 1               1   367     1"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#classification-threshold-0.25",
+    "href": "slides/20-logistic-regression-2-slides.html#classification-threshold-0.25",
+    "title": "Logistic regression 2",
+    "section": "Classification threshold: 0.25",
+    "text": "Classification threshold: 0.25\n\nlog_aug_full |&gt;\n  mutate(\n    .pred_class = if_else(.pred_1 &lt;= 0.25, 0, 1)\n  ) |&gt;\n  count(spam, .pred_class) |&gt;\n  group_by(spam) |&gt;\n  mutate(p = n / sum(n))\n\n# A tibble: 4 × 4\n# Groups:   spam [2]\n  spam  .pred_class     n      p\n  &lt;fct&gt;       &lt;dbl&gt; &lt;int&gt;  &lt;dbl&gt;\n1 0               0  3263 0.918 \n2 0               1   291 0.0819\n3 1               0   172 0.469 \n4 1               1   195 0.531"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#classification-threshold-0.5",
+    "href": "slides/20-logistic-regression-2-slides.html#classification-threshold-0.5",
+    "title": "Logistic regression 2",
+    "section": "Classification threshold: 0.5",
+    "text": "Classification threshold: 0.5\n\nlog_aug_full |&gt;\n  mutate(\n    .pred_class = if_else(.pred_1 &lt;= 0.50, 0, 1)\n  ) |&gt;\n  count(spam, .pred_class) |&gt;\n  group_by(spam) |&gt;\n  mutate(p = n / sum(n))\n\n# A tibble: 4 × 4\n# Groups:   spam [2]\n  spam  .pred_class     n       p\n  &lt;fct&gt;       &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt;\n1 0               0  3521 0.991  \n2 0               1    33 0.00929\n3 1               0   299 0.815  \n4 1               1    68 0.185"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#classification-threshold-0.75",
+    "href": "slides/20-logistic-regression-2-slides.html#classification-threshold-0.75",
+    "title": "Logistic regression 2",
+    "section": "Classification threshold: 0.75",
+    "text": "Classification threshold: 0.75\n\nlog_aug_full |&gt;\n  mutate(\n    .pred_class = if_else(.pred_1 &lt;= 0.75, 0, 1)\n  ) |&gt;\n  count(spam, .pred_class) |&gt;\n  group_by(spam) |&gt;\n  mutate(p = n / sum(n))\n\n# A tibble: 4 × 4\n# Groups:   spam [2]\n  spam  .pred_class     n       p\n  &lt;fct&gt;       &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt;\n1 0               0  3544 0.997  \n2 0               1    10 0.00281\n3 1               0   339 0.924  \n4 1               1    28 0.0763"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#classification-threshold-1.00",
+    "href": "slides/20-logistic-regression-2-slides.html#classification-threshold-1.00",
+    "title": "Logistic regression 2",
+    "section": "Classification threshold: 1.00",
+    "text": "Classification threshold: 1.00\n\nlog_aug_full |&gt;\n  mutate(\n    .pred_class = if_else(.pred_1 &lt;= 1.00, 0, 1)\n  ) |&gt;\n  count(spam, .pred_class) |&gt;\n  group_by(spam) |&gt;\n  mutate(p = n / sum(n))\n\n# A tibble: 2 × 4\n# Groups:   spam [2]\n  spam  .pred_class     n     p\n  &lt;fct&gt;       &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;\n1 0               0  3554     1\n2 1               0   367     1"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#lets-plot-these-error-rates",
+    "href": "slides/20-logistic-regression-2-slides.html#lets-plot-these-error-rates",
+    "title": "Logistic regression 2",
+    "section": "Let’s plot these error rates",
+    "text": "Let’s plot these error rates"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#roc-curve",
+    "href": "slides/20-logistic-regression-2-slides.html#roc-curve",
+    "title": "Logistic regression 2",
+    "section": "ROC curve",
+    "text": "ROC curve\nIf we repeat this process for “all” possible thresholds \\(0\\leq p^\\star\\leq 1\\), we trace out the receiver operating characteristic curve (ROC curve), which assesses the model’s performance across a range of thresholds:"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#roc-curve-1",
+    "href": "slides/20-logistic-regression-2-slides.html#roc-curve-1",
+    "title": "Logistic regression 2",
+    "section": "ROC curve",
+    "text": "ROC curve\n\nWhich corner of the plot indicates the best model performance?\n\n\n\nUpper left!"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#roc-for-full-model",
+    "href": "slides/20-logistic-regression-2-slides.html#roc-for-full-model",
+    "title": "Logistic regression 2",
+    "section": "ROC for full model",
+    "text": "ROC for full model"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#roc-for-simple-model",
+    "href": "slides/20-logistic-regression-2-slides.html#roc-for-simple-model",
+    "title": "Logistic regression 2",
+    "section": "ROC for simple model",
+    "text": "ROC for simple model\n\nComparing these two curves, the full model is better."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#model-comparison",
+    "href": "slides/20-logistic-regression-2-slides.html#model-comparison",
+    "title": "Logistic regression 2",
+    "section": "Model comparison",
+    "text": "Model comparison\nThe farther up and to the left the ROC curve is, the better the classification accuracy. You can quantify this with the area under the curve.\n\n\n\n\n\n\nNote\n\n\nArea under the ROC curve will be our “quality score” for comparing logistic regression models."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#data",
+    "href": "slides/20-logistic-regression-2-slides.html#data",
+    "title": "Logistic regression 2",
+    "section": "Data",
+    "text": "Data\n\nThe U.S. Forest Service maintains machine learning models to predict whether a plot of land is “forested.”\nThis classification is important for research, legislation, land management, etc. purposes.\nPlots are typically remeasured every 10 years.\nThe forested dataset contains the most recent measurement per plot."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#data-forested",
+    "href": "slides/20-logistic-regression-2-slides.html#data-forested",
+    "title": "Logistic regression 2",
+    "section": "Data: forested\n",
+    "text": "Data: forested\n\n\nforested\n\n# A tibble: 7,107 × 20\n   forested  year elevation eastness northness roughness tree_no_tree dew_temp\n   &lt;fct&gt;    &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;fct&gt;           &lt;dbl&gt;\n 1 Yes       2005       881       90        43        63 Tree             0.04\n 2 Yes       2005       113      -25        96        30 Tree             6.4 \n 3 No        2005       164      -84        53        13 Tree             6.06\n 4 Yes       2005       299       93        34         6 No tree          4.43\n 5 Yes       2005       806       47       -88        35 Tree             1.06\n 6 Yes       2005       736      -27       -96        53 Tree             1.35\n 7 Yes       2005       636      -48        87         3 No tree          1.42\n 8 Yes       2005       224      -65       -75         9 Tree             6.39\n 9 Yes       2005        52      -62        78        42 Tree             6.5 \n10 Yes       2005      2240      -67       -74        99 No tree         -5.63\n# ℹ 7,097 more rows\n# ℹ 12 more variables: precip_annual &lt;dbl&gt;, temp_annual_mean &lt;dbl&gt;,\n#   temp_annual_min &lt;dbl&gt;, temp_annual_max &lt;dbl&gt;, temp_january_min &lt;dbl&gt;,\n#   vapor_min &lt;dbl&gt;, vapor_max &lt;dbl&gt;, canopy_cover &lt;dbl&gt;, lon &lt;dbl&gt;, lat &lt;dbl&gt;,\n#   land_type &lt;fct&gt;, county &lt;fct&gt;"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#data-forested-1",
+    "href": "slides/20-logistic-regression-2-slides.html#data-forested-1",
+    "title": "Logistic regression 2",
+    "section": "Data: forested\n",
+    "text": "Data: forested\n\n\nglimpse(forested)\n\nRows: 7,107\nColumns: 20\n$ forested         &lt;fct&gt; Yes, Yes, No, Yes, Yes, Yes, Yes, Yes, Yes, Yes, Yes,…\n$ year             &lt;dbl&gt; 2005, 2005, 2005, 2005, 2005, 2005, 2005, 2005, 2005,…\n$ elevation        &lt;dbl&gt; 881, 113, 164, 299, 806, 736, 636, 224, 52, 2240, 104…\n$ eastness         &lt;dbl&gt; 90, -25, -84, 93, 47, -27, -48, -65, -62, -67, 96, -4…\n$ northness        &lt;dbl&gt; 43, 96, 53, 34, -88, -96, 87, -75, 78, -74, -26, 86, …\n$ roughness        &lt;dbl&gt; 63, 30, 13, 6, 35, 53, 3, 9, 42, 99, 51, 190, 95, 212…\n$ tree_no_tree     &lt;fct&gt; Tree, Tree, Tree, No tree, Tree, Tree, No tree, Tree,…\n$ dew_temp         &lt;dbl&gt; 0.04, 6.40, 6.06, 4.43, 1.06, 1.35, 1.42, 6.39, 6.50,…\n$ precip_annual    &lt;dbl&gt; 466, 1710, 1297, 2545, 609, 539, 702, 1195, 1312, 103…\n$ temp_annual_mean &lt;dbl&gt; 6.42, 10.64, 10.07, 9.86, 7.72, 7.89, 7.61, 10.45, 10…\n$ temp_annual_min  &lt;dbl&gt; -8.32, 1.40, 0.19, -1.20, -5.98, -6.00, -5.76, 1.11, …\n$ temp_annual_max  &lt;dbl&gt; 12.91, 15.84, 14.42, 15.78, 13.84, 14.66, 14.23, 15.3…\n$ temp_january_min &lt;dbl&gt; -0.08, 5.44, 5.72, 3.95, 1.60, 1.12, 0.99, 5.54, 6.20…\n$ vapor_min        &lt;dbl&gt; 78, 34, 49, 67, 114, 67, 67, 31, 60, 79, 172, 162, 70…\n$ vapor_max        &lt;dbl&gt; 1194, 938, 754, 1164, 1254, 1331, 1275, 944, 892, 549…\n$ canopy_cover     &lt;dbl&gt; 50, 79, 47, 42, 59, 36, 14, 27, 82, 12, 74, 66, 83, 6…\n$ lon              &lt;dbl&gt; -118.6865, -123.0825, -122.3468, -121.9144, -117.8841…\n$ lat              &lt;dbl&gt; 48.69537, 47.07991, 48.77132, 45.80776, 48.07396, 48.…\n$ land_type        &lt;fct&gt; Tree, Tree, Tree, Tree, Tree, Tree, Non-tree vegetati…\n$ county           &lt;fct&gt; Ferry, Thurston, Whatcom, Skamania, Stevens, Stevens,…"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#outcome-and-predictors",
+    "href": "slides/20-logistic-regression-2-slides.html#outcome-and-predictors",
+    "title": "Logistic regression 2",
+    "section": "Outcome and predictors",
+    "text": "Outcome and predictors\n\nOutcome: forested - Factor, Yes or No\n\n\n\nlevels(forested$forested)\n\n[1] \"Yes\" \"No\" \n\n\n\n\nPredictors: 18 remotely-sensed and easily-accessible predictors:\n\nnumeric variables based on weather and topography\ncategorical variables based on classifications from other governmental organizations"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#forested",
+    "href": "slides/20-logistic-regression-2-slides.html#forested",
+    "title": "Logistic regression 2",
+    "section": "?forested",
+    "text": "?forested"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#should-we-include-a-predictor",
+    "href": "slides/20-logistic-regression-2-slides.html#should-we-include-a-predictor",
+    "title": "Logistic regression 2",
+    "section": "Should we include a predictor?",
+    "text": "Should we include a predictor?\nTo determine whether we should include a predictor in a model, we should start by asking:\n\nIs it ethical to use this variable? (Or even legal?)\nWill this variable be available at prediction time?\nDoes this variable contribute to explainability?"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#weve-been-cheating",
+    "href": "slides/20-logistic-regression-2-slides.html#weve-been-cheating",
+    "title": "Logistic regression 2",
+    "section": "We’ve been cheating!",
+    "text": "We’ve been cheating!\n\nSo far, we’ve been using all the data we have for building models. In predictive contexts, this would be considered cheating.\nEvaluating model performance for predicting outcomes that were used when building the models is like evaluating your learning with questions whose answers you’ve already seen."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#spending-your-data",
+    "href": "slides/20-logistic-regression-2-slides.html#spending-your-data",
+    "title": "Logistic regression 2",
+    "section": "Spending your data",
+    "text": "Spending your data\nFor predictive models (used primarily in machine learning), we typically split data into training and test sets:\n\n\nThe training set is used to estimate model parameters.\nThe test set is used to find an independent assessment of model performance.\n\n\n\n\n\n\n\n\nWarning\n\n\nDo not use, or even peek at, the test set during training."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#how-much-to-spend",
+    "href": "slides/20-logistic-regression-2-slides.html#how-much-to-spend",
+    "title": "Logistic regression 2",
+    "section": "How much to spend?",
+    "text": "How much to spend?\n\nThe more data we spend (use in training), the better estimates we’ll get.\nSpending too much data in training prevents us from computing a good assessment of predictive performance.\nSpending too much data in testing prevents us from computing a good estimate of model parameters."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#the-initial-split",
+    "href": "slides/20-logistic-regression-2-slides.html#the-initial-split",
+    "title": "Logistic regression 2",
+    "section": "The initial split",
+    "text": "The initial split\n\nset.seed(20241112)\nforested_split &lt;- initial_split(forested)\nforested_split\n\n&lt;Training/Testing/Total&gt;\n&lt;5330/1777/7107&gt;"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#setting-a-seed",
+    "href": "slides/20-logistic-regression-2-slides.html#setting-a-seed",
+    "title": "Logistic regression 2",
+    "section": "Setting a seed",
+    "text": "Setting a seed\n\nWhat does set.seed() do?\n\n\nTo create that split of the data, R generates “pseudo-random” numbers: while they are made to behave like random numbers, their generation is deterministic given a “seed”.\nThis allows us to reproduce results by setting that seed.\nWhich seed you pick doesn’t matter, as long as you don’t try a bunch of seeds and pick the one that gives you the best performance."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#accessing-the-data",
+    "href": "slides/20-logistic-regression-2-slides.html#accessing-the-data",
+    "title": "Logistic regression 2",
+    "section": "Accessing the data",
+    "text": "Accessing the data\n\nforested_train &lt;- training(forested_split)\nforested_test &lt;- testing(forested_split)"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#the-training-set",
+    "href": "slides/20-logistic-regression-2-slides.html#the-training-set",
+    "title": "Logistic regression 2",
+    "section": "The training set",
+    "text": "The training set\n\nforested_train\n\n# A tibble: 5,330 × 20\n   forested  year elevation eastness northness roughness tree_no_tree dew_temp\n   &lt;fct&gt;    &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;fct&gt;           &lt;dbl&gt;\n 1 Yes       2013       315      -17        98        92 Tree             5.83\n 2 No        2018       374       93       -34        23 No tree          0.7 \n 3 No        2017       377       44       -89         1 Tree             1.83\n 4 Yes       2013       541       31       -94       139 Tree             4.19\n 5 Yes       2017       680       14       -98        20 Tree             0.79\n 6 Yes       2017      1482       76       -64        43 Tree            -0.18\n 7 No        2020        84       42       -90        12 No tree          6.9 \n 8 Yes       2011       210       34        93        16 Tree             5.52\n 9 No        2020       766       14        98        20 No tree          1.52\n10 Yes       2013      1559       98        16        79 Tree            -3.45\n# ℹ 5,320 more rows\n# ℹ 12 more variables: precip_annual &lt;dbl&gt;, temp_annual_mean &lt;dbl&gt;,\n#   temp_annual_min &lt;dbl&gt;, temp_annual_max &lt;dbl&gt;, temp_january_min &lt;dbl&gt;,\n#   vapor_min &lt;dbl&gt;, vapor_max &lt;dbl&gt;, canopy_cover &lt;dbl&gt;, lon &lt;dbl&gt;, lat &lt;dbl&gt;,\n#   land_type &lt;fct&gt;, county &lt;fct&gt;"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#the-testing-data",
+    "href": "slides/20-logistic-regression-2-slides.html#the-testing-data",
+    "title": "Logistic regression 2",
+    "section": "The testing data",
+    "text": "The testing data\n\nforested_test\n\n# A tibble: 1,777 × 20\n   forested  year elevation eastness northness roughness tree_no_tree dew_temp\n   &lt;fct&gt;    &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;fct&gt;           &lt;dbl&gt;\n 1 Yes       2005       881       90        43        63 Tree             0.04\n 2 Yes       2005       636      -48        87         3 No tree          1.42\n 3 Yes       2005      2240      -67       -74        99 No tree         -5.63\n 4 Yes       2014       940      -93        35        50 Tree            -0.15\n 5 No        2014       246       22       -97         5 Tree             2.41\n 6 No        2014       419       86       -49         5 No tree          1.87\n 7 No        2014       308      -70       -70         4 No tree          3.07\n 8 No        2014       302      -31       -94         1 No tree          2.55\n 9 No        2014       340      -54        83        60 No tree          1.29\n10 No        2014       792      -61       -79        30 No tree          0.25\n# ℹ 1,767 more rows\n# ℹ 12 more variables: precip_annual &lt;dbl&gt;, temp_annual_mean &lt;dbl&gt;,\n#   temp_annual_min &lt;dbl&gt;, temp_annual_max &lt;dbl&gt;, temp_january_min &lt;dbl&gt;,\n#   vapor_min &lt;dbl&gt;, vapor_max &lt;dbl&gt;, canopy_cover &lt;dbl&gt;, lon &lt;dbl&gt;, lat &lt;dbl&gt;,\n#   land_type &lt;fct&gt;, county &lt;fct&gt;"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#initial-questions",
+    "href": "slides/20-logistic-regression-2-slides.html#initial-questions",
+    "title": "Logistic regression 2",
+    "section": "Initial questions",
+    "text": "Initial questions\n\nWhat’s the distribution of the outcome, forested?\nWhat’s the distribution of numeric variables like precip_annual?\nHow does the distribution of forested differ across the categorical and numerical variables?\n\n\n\nWhich dataset should we use for the exploration? The entire data forested, the training data forested_train, or the testing data forested_test?"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#forested-1",
+    "href": "slides/20-logistic-regression-2-slides.html#forested-1",
+    "title": "Logistic regression 2",
+    "section": "forested",
+    "text": "forested\nWhat’s the distribution of the outcome, forested?\n\nggplot(forested_train, aes(x = forested)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#forested-2",
+    "href": "slides/20-logistic-regression-2-slides.html#forested-2",
+    "title": "Logistic regression 2",
+    "section": "forested",
+    "text": "forested\nWhat’s the distribution of the outcome, forested?\n\nforested_train |&gt;\n  count(forested) |&gt;\n  mutate(\n    p = n / sum(n)\n  )\n\n# A tibble: 2 × 3\n  forested     n     p\n  &lt;fct&gt;    &lt;int&gt; &lt;dbl&gt;\n1 Yes       2917 0.547\n2 No        2413 0.453"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#precip_annual",
+    "href": "slides/20-logistic-regression-2-slides.html#precip_annual",
+    "title": "Logistic regression 2",
+    "section": "precip_annual",
+    "text": "precip_annual\nWhat’s the distribution of precip_annual?\n\nggplot(forested_train, aes(x = precip_annual)) +\n  geom_histogram()"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#forested-and-precip_annual",
+    "href": "slides/20-logistic-regression-2-slides.html#forested-and-precip_annual",
+    "title": "Logistic regression 2",
+    "section": "\nforested and precip_annual\n",
+    "text": "forested and precip_annual\n\n\nggplot(\n  forested_train,\n  aes(x = precip_annual, fill = forested, group = forested)\n  ) +\n  geom_histogram(binwidth = 200, position = \"identity\", alpha = 0.7) +\n  scale_fill_manual(values = c(\"Yes\" = \"forestgreen\", \"No\" = \"gold2\")) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#forested-and-precip_annual-1",
+    "href": "slides/20-logistic-regression-2-slides.html#forested-and-precip_annual-1",
+    "title": "Logistic regression 2",
+    "section": "\nforested and precip_annual\n",
+    "text": "forested and precip_annual\n\n\nggplot(\n  forested_train,\n  aes(x = precip_annual, fill = forested, group = forested)\n  ) +\n  geom_histogram(binwidth = 200, position = \"fill\", alpha = 0.7) +\n  scale_fill_manual(values = c(\"Yes\" = \"forestgreen\", \"No\" = \"gold2\")) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#forested-and-tree_no_tree",
+    "href": "slides/20-logistic-regression-2-slides.html#forested-and-tree_no_tree",
+    "title": "Logistic regression 2",
+    "section": "\nforested and tree_no_tree\n",
+    "text": "forested and tree_no_tree\n\n\nggplot(forested_train, aes(x = tree_no_tree, fill = forested)) +\n  geom_bar(position = \"fill\") +\n  scale_fill_manual(values = c(\"Yes\" = \"forestgreen\", \"No\" = \"gold2\")) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#forested-and-lat-lon",
+    "href": "slides/20-logistic-regression-2-slides.html#forested-and-lat-lon",
+    "title": "Logistic regression 2",
+    "section": "\nforested and lat / lon\n",
+    "text": "forested and lat / lon\n\n\nggplot(forested_train, aes(x = lon, y = lat, color = forested)) +\n  geom_point(alpha = 0.7) +\n  scale_color_manual(values = c(\"Yes\" = \"forestgreen\", \"No\" = \"gold2\")) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#precip_annual-and-lat-lon",
+    "href": "slides/20-logistic-regression-2-slides.html#precip_annual-and-lat-lon",
+    "title": "Logistic regression 2",
+    "section": "\nprecip_annual and lat / lon\n",
+    "text": "precip_annual and lat / lon\n\n\nggplot(forested_train, aes(x = lon, y = lat, color = precip_annual)) +\n  geom_point(alpha = 0.7) +\n  labs(color = \"annual\\nprecipitation\\n(mm × 100)\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#fyi-the-response-variable-must-be-a-factor",
+    "href": "slides/20-logistic-regression-2-slides.html#fyi-the-response-variable-must-be-a-factor",
+    "title": "Logistic regression 2",
+    "section": "FYI: the response variable must be a factor",
+    "text": "FYI: the response variable must be a factor\nforested already comes as a factor, so we’re lucky:\n\nclass(forested$forested)\n\n[1] \"factor\"\n\nlevels(forested$forested)\n\n[1] \"Yes\" \"No\" \n\n\n\nBut if it didn’t, things would not work:\n\nlogistic_reg() |&gt;\n  fit(as.numeric(forested) ~ precip_annual, data = forested_train)\n\nError in `check_outcome()`:\n! For a classification model, the outcome should be a &lt;factor&gt;, not a\n  double vector."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#fyi-the-base-level-is-treated-as-failure-0",
+    "href": "slides/20-logistic-regression-2-slides.html#fyi-the-base-level-is-treated-as-failure-0",
+    "title": "Logistic regression 2",
+    "section": "FYI: the base level is treated as “failure” (0)",
+    "text": "FYI: the base level is treated as “failure” (0)\nThe base level here is “Yes”, so “No” is treated as “success” (1):\n\nlevels(forested$forested)\n\n[1] \"Yes\" \"No\" \n\n\n\nAs a result, this code:\n\nlogistic_reg() |&gt;\n  fit(forested ~ precip_annual, data = forested_train)\n\n\n\nCorresponds to this model:\n\\[\n\\text{Prob}(\n\\texttt{forested = \"No\"}\n)\n=\n\\frac{e^{\\beta_0+\\beta_1 x}}{1 + e^{\\beta_0+\\beta_1 x}}.\n\\]\n\n\nThis is not a problem, but it means that in order to interpret the output correctly, you need to understand how your factors are leveled."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#dont-get-burned-on-this",
+    "href": "slides/20-logistic-regression-2-slides.html#dont-get-burned-on-this",
+    "title": "Logistic regression 2",
+    "section": "Don’t get burned on this!",
+    "text": "Don’t get burned on this!\nThere are two distinct but related things going on at the same time:\n\nYour binary response variable is a factor with two levels. There is a first level (base) and a second level;\nIn the context of your application, one of those levels is the “negative” or “zero” case (legit e-mail) and one is the “positive” or “one” case (spam e-mail).\n\n\nDo these two things agree? If not, that isn’t an error, but you might make mistakes when interpreting. Be careful!"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#next-steps",
+    "href": "slides/20-logistic-regression-2-slides.html#next-steps",
+    "title": "Logistic regression 2",
+    "section": "Next steps",
+    "text": "Next steps\n\nFit models on training data\nMake predictions on testing data\n\nEvaluate predictions on testing data:\n\nLinear models: R-squared, adjusted R-squared, RMSE (root mean squared error), etc.\nLogistic models: False negative and positive rates, AUC (area under the curve), etc.\n\n\nMake decisions based on model predictive performance, validity across various testing/training splits (aka “cross validation”), explainability\n\n\n\n\n\n\n\n\nNote\n\n\nWe will only learn about a subset of these in this course, but you can go further into these ideas in STA 210 or STA 221 as well as in various machine learning courses."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2-slides.html#ae-20-forest-classification",
+    "href": "slides/20-logistic-regression-2-slides.html#ae-20-forest-classification",
+    "title": "Logistic regression 2",
+    "section": "ae-20-forest-classification",
+    "text": "ae-20-forest-classification\n\n\nGo to your ae project in RStudio.\nIf you haven’t yet done so, make sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.\nIf you haven’t yet done so, click Pull to get today’s application exercise file: ae-20-forest-classification.qmd. You might be prompted to install forested, say yes.\nWork through the application exercise in class, and render, commit, and push your edits."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html",
+    "href": "slides/20-logistic-regression-2.html",
+    "title": "Logistic regression 2",
+    "section": "",
+    "text": "What is your comfort level with mathematics?\n\n\nVery low\nLow\nAverage\nHigh\nVery high\n\n\n\n\n\n\nScan the QR code or go HERE. Log in with your Duke NetID."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#while-you-wait-participate",
+    "href": "slides/20-logistic-regression-2.html#while-you-wait-participate",
+    "title": "Logistic regression 2",
+    "section": "",
+    "text": "What is your comfort level with mathematics?\n\n\nVery low\nLow\nAverage\nHigh\nVery high\n\n\n\n\n\n\nScan the QR code or go HERE. Log in with your Duke NetID."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#statsci-house-course-next-fall",
+    "href": "slides/20-logistic-regression-2.html#statsci-house-course-next-fall",
+    "title": "Logistic regression 2",
+    "section": "StatSci House Course next Fall",
+    "text": "StatSci House Course next Fall\n\n\n\n\nStatistical Methods in Research\n\nMonday 7:00-8:30 PM;\nTaught by the oldest broads in the stats mafia, Cooper Ruffing and our own Liane Ma.\nReading and discussion course;\nCelebrate and/or roast the statistical methods and reasoning is published research articles."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#ssmu-data-mini",
+    "href": "slides/20-logistic-regression-2.html#ssmu-data-mini",
+    "title": "Logistic regression 2",
+    "section": "SSMU Data Mini",
+    "text": "SSMU Data Mini\n\n\nThe old broads strike again:\n\nLike DataFest, only mini;\nSaturday April 11 11am - 5:30pm\nRegister by tomorow."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#duke-business-behind-health-conference",
+    "href": "slides/20-logistic-regression-2.html#duke-business-behind-health-conference",
+    "title": "Logistic regression 2",
+    "section": "Duke Business Behind Health Conference",
+    "text": "Duke Business Behind Health Conference\n\n\n\n\n\nSaturday April 11\nAt the business school\nDo some fancy networking!"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#wind-symphony-tomorrow",
+    "href": "slides/20-logistic-regression-2.html#wind-symphony-tomorrow",
+    "title": "Logistic regression 2",
+    "section": "Wind Symphony tomorrow!",
+    "text": "Wind Symphony tomorrow!\n\n\n\nThursday, April 2 7:30 pm - 9:00 pm;\nBaldwin Auditorium (East)\nProgramming is always very colorful and interesting;\nMany past and present JZ students."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#ragtime-this-weekend",
+    "href": "slides/20-logistic-regression-2.html#ragtime-this-weekend",
+    "title": "Logistic regression 2",
+    "section": "Ragtime this weekend!",
+    "text": "Ragtime this weekend!"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#hw-6",
+    "href": "slides/20-logistic-regression-2.html#hw-6",
+    "title": "Logistic regression 2",
+    "section": "HW 6",
+    "text": "HW 6\n\n5 Qs on linear reg; 5 Qs on logistic reg;\nDue Monday April 6 @ 11:59 pm;\nThereafter, the usual late penalties apply;\nAll ten questions AI-enabled for immediate feedback;\nLater, Humans grade the second half like usual."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#midterm-2",
+    "href": "slides/20-logistic-regression-2.html#midterm-2",
+    "title": "Logistic regression 2",
+    "section": "Midterm 2",
+    "text": "Midterm 2\n\nSimilar format, length, style to Midterm 1;\nStudy guide goes up tomorrow; solutions Monday;\nWeight falls squarely on material since spring break;\nLogistic regression is fair game, but I’m sensitive to the fact that it is still quite new."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#last-time-regression-with-a-binary-response",
+    "href": "slides/20-logistic-regression-2.html#last-time-regression-with-a-binary-response",
+    "title": "Logistic regression 2",
+    "section": "Last time: regression with a binary response",
+    "text": "Last time: regression with a binary response\n\\[\ny =\n\\begin{cases}\n1 & &&\\text{eg. Yes, Win, True, Heads, Success, Spam}\\\\\n0 & &&\\text{eg. No, Lose, False, Tails, Failure, Legit}.\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#new-model-logistic-regression",
+    "href": "slides/20-logistic-regression-2.html#new-model-logistic-regression",
+    "title": "Logistic regression 2",
+    "section": "New model: logistic regression",
+    "text": "New model: logistic regression\nS-curve for the probability of “success”:\n\\[\n\\hat{p}\n=\n\\widehat{\\text{Prob}(y=1)}\n=\n\\frac{e^{b_0+b_1x}}{1+e^{b_0+b_1x}}.\n\\]\nLinear model for the log-odds:\n\\[\n\\log\\left(\\frac{\\hat{p}}{1-\\hat{p}}\\right)\n=\nb_0+b_1x.\n\\]\nThese are equivalent."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#r-syntax-is-largely-unchanged",
+    "href": "slides/20-logistic-regression-2.html#r-syntax-is-largely-unchanged",
+    "title": "Logistic regression 2",
+    "section": "R syntax is largely unchanged",
+    "text": "R syntax is largely unchanged\nJust use logistic_reg instead of linear_reg:\n. . .\n\nsimple_logistic_fit &lt;- logistic_reg() |&gt;\n  fit(spam ~ exclaim_mess, data = email)\n\ntidy(simple_logistic_fit)\n\n# A tibble: 2 × 5\n  term          estimate std.error statistic p.value\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 (Intercept)  -2.27      0.0553     -41.1     0    \n2 exclaim_mess  0.000272  0.000949     0.287   0.774\n\n\n. . .\nFitted equation for the log-odds:\n\\[\n\\log\\left(\\frac{\\hat{p}}{1-\\hat{p}}\\right)\n=\n-2.27\n+\n0.000272\\times exclaim~mess\n\\]"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#interpretations-are-strange-and-delicate",
+    "href": "slides/20-logistic-regression-2.html#interpretations-are-strange-and-delicate",
+    "title": "Logistic regression 2",
+    "section": "Interpretations are strange and delicate",
+    "text": "Interpretations are strange and delicate\n\n\nIf exclaim_mess = 0, then \\[\n\\hat{p}=\\widehat{P(y=1)}=\\frac{e^{-2.27}}{1+e^{-2.27}}\\approx 0.09.\n\\] So, our model predicts that an email with no exclamation marks has a 9% probability of being spam.\nIf the email has an additional exclamation mark, we predict the odds of the email being spam to be higher by a factor of \\(e^{0.000272}\\approx 1.000272\\).\n\n\n. . .\n(the odds are higher because the scale factor is greater than one. If it had been 0.98, then the odds shrink)"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#use-the-exp-function-to-compute",
+    "href": "slides/20-logistic-regression-2.html#use-the-exp-function-to-compute",
+    "title": "Logistic regression 2",
+    "section": "Use the exp function to compute",
+    "text": "Use the exp function to compute\n\ntidy(simple_logistic_fit) |&gt;\n  filter(term == \"(Intercept)\") |&gt;\n  summarize(\n    prob0 = exp(estimate) / (1 + exp(estimate))\n  )\n\n# A tibble: 1 × 1\n   prob0\n   &lt;dbl&gt;\n1 0.0934\n\n\n\ntidy(simple_logistic_fit) |&gt;\n  filter(term == \"exclaim_mess\") |&gt;\n  summarize(\n    scale_factor = exp(estimate)\n  ) |&gt;\n  pull()\n\n[1] 1.000272"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#heres-an-alternative-model",
+    "href": "slides/20-logistic-regression-2.html#heres-an-alternative-model",
+    "title": "Logistic regression 2",
+    "section": "Here’s an alternative model",
+    "text": "Here’s an alternative model\nDump all the predictors in:\n\nfull_logistic_fit &lt;- logistic_reg() |&gt;\n  fit(spam ~ ., data = email)\n\ntidy(full_logistic_fit)\n\n# A tibble: 22 × 5\n   term         estimate std.error statistic  p.value\n   &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n 1 (Intercept)  -9.09e+1   9.80e+3  -0.00928 9.93e- 1\n 2 to_multiple1 -2.68e+0   3.27e-1  -8.21    2.25e-16\n 3 from1        -2.19e+1   9.80e+3  -0.00224 9.98e- 1\n 4 cc            1.88e-2   2.20e-2   0.855   3.93e- 1\n 5 sent_email1  -2.07e+1   3.87e+2  -0.0536  9.57e- 1\n 6 time          8.48e-8   2.85e-8   2.98    2.92e- 3\n 7 image        -1.78e+0   5.95e-1  -3.00    2.73e- 3\n 8 attach        7.35e-1   1.44e-1   5.09    3.61e- 7\n 9 dollar       -6.85e-2   2.64e-2  -2.59    9.64e- 3\n10 winneryes     2.07e+0   3.65e-1   5.67    1.41e- 8\n# ℹ 12 more rows"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#classification-error",
+    "href": "slides/20-logistic-regression-2.html#classification-error",
+    "title": "Logistic regression 2",
+    "section": "Classification error",
+    "text": "Classification error\nThere are two kinds of mistakes:\n\nWe want to avoid both, but there’s a trade-off."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#jargon-false-negative-and-positive",
+    "href": "slides/20-logistic-regression-2.html#jargon-false-negative-and-positive",
+    "title": "Logistic regression 2",
+    "section": "Jargon: False negative and positive",
+    "text": "Jargon: False negative and positive\n\nFalse negative rate is the proportion of actual positives that were classified as negatives.\nFalse positive rate is the proportion of actual negatives that were classified as positives.\n\n\n\n\n\n\n\nTip\n\n\n\nWe want these to be low!"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#jargon-sensitivity",
+    "href": "slides/20-logistic-regression-2.html#jargon-sensitivity",
+    "title": "Logistic regression 2",
+    "section": "Jargon: Sensitivity",
+    "text": "Jargon: Sensitivity\nSensitivity is the proportion of actual positives that were correctly classified as positive.\n\nAlso known as true positive rate and recall\nSensitivity = 1 − False negative rate\nUseful when false negatives are more “expensive” than false positives\n\n\n\n\n\n\n\nTip\n\n\n\nWe want this to be high!"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#jargon-specificity",
+    "href": "slides/20-logistic-regression-2.html#jargon-specificity",
+    "title": "Logistic regression 2",
+    "section": "Jargon: Specificity",
+    "text": "Jargon: Specificity\nSpecificity is the proportion of actual negatives that were correctly classified as negative\n\nAlso known as true negative rate\nSpecificity = 1 − False positive rate\n\n\n\n\n\n\n\nTip\n\n\n\nWe want this to be high!"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#the-augment-function",
+    "href": "slides/20-logistic-regression-2.html#the-augment-function",
+    "title": "Logistic regression 2",
+    "section": "The augment function",
+    "text": "The augment function\nThe augment function takes a data frame and “augments” it by adding three new columns on the left that describe the model predictions for each row:\n\n\n.pred_class: model prediction (\\(\\hat{y}\\)) based on a 50% threshold;\n\n.pred_0: model estimate of \\(P(y=0)\\);\n\n.pred_1: model estimate of \\(P(y=1) = 1 - P(y = 0)\\)."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#the-augment-function-1",
+    "href": "slides/20-logistic-regression-2.html#the-augment-function-1",
+    "title": "Logistic regression 2",
+    "section": "The augment function",
+    "text": "The augment function\nThe augment function takes a data frame and “augments” it by adding three new columns on the left that describe the model predictions for each row:\n\nlog_aug_full &lt;- augment(full_logistic_fit, email)\nlog_aug_full\n\n# A tibble: 3,921 × 24\n   .pred_class .pred_0  .pred_1 spam  to_multiple from     cc sent_email\n   &lt;fct&gt;         &lt;dbl&gt;    &lt;dbl&gt; &lt;fct&gt; &lt;fct&gt;       &lt;fct&gt; &lt;int&gt; &lt;fct&gt;     \n 1 0             0.867 1.33e- 1 0     0           1         0 0         \n 2 0             0.943 5.70e- 2 0     0           1         0 0         \n 3 0             0.942 5.78e- 2 0     0           1         0 0         \n 4 0             0.920 7.96e- 2 0     0           1         0 0         \n 5 0             0.903 9.74e- 2 0     0           1         0 0         \n 6 0             0.901 9.87e- 2 0     0           1         0 0         \n 7 0             1.000 7.89e-12 0     1           1         0 1         \n 8 0             1.000 1.24e-12 0     1           1         1 1         \n 9 0             0.862 1.38e- 1 0     0           1         0 0         \n10 0             0.922 7.76e- 2 0     0           1         0 0         \n# ℹ 3,911 more rows\n# ℹ 16 more variables: time &lt;dttm&gt;, image &lt;dbl&gt;, attach &lt;dbl&gt;, dollar &lt;dbl&gt;,\n#   winner &lt;fct&gt;, inherit &lt;dbl&gt;, viagra &lt;dbl&gt;, password &lt;dbl&gt;, num_char &lt;dbl&gt;,\n#   line_breaks &lt;int&gt;, format &lt;fct&gt;, re_subj &lt;fct&gt;, exclaim_subj &lt;dbl&gt;,\n#   urgent_subj &lt;fct&gt;, exclaim_mess &lt;dbl&gt;, number &lt;fct&gt;"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#calculating-the-error-rates",
+    "href": "slides/20-logistic-regression-2.html#calculating-the-error-rates",
+    "title": "Logistic regression 2",
+    "section": "Calculating the error rates",
+    "text": "Calculating the error rates\n\nlog_aug_full |&gt;\n  count(spam, .pred_class) \n\n# A tibble: 4 × 3\n  spam  .pred_class     n\n  &lt;fct&gt; &lt;fct&gt;       &lt;int&gt;\n1 0     0            3521\n2 0     1              33\n3 1     0             299\n4 1     1              68"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#calculating-the-error-rates-1",
+    "href": "slides/20-logistic-regression-2.html#calculating-the-error-rates-1",
+    "title": "Logistic regression 2",
+    "section": "Calculating the error rates",
+    "text": "Calculating the error rates\n\nlog_aug_full |&gt;\n  count(spam, .pred_class) |&gt;\n  group_by(spam)\n\n# A tibble: 4 × 3\n# Groups:   spam [2]\n  spam  .pred_class     n\n  &lt;fct&gt; &lt;fct&gt;       &lt;int&gt;\n1 0     0            3521\n2 0     1              33\n3 1     0             299\n4 1     1              68"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#calculating-the-error-rates-2",
+    "href": "slides/20-logistic-regression-2.html#calculating-the-error-rates-2",
+    "title": "Logistic regression 2",
+    "section": "Calculating the error rates",
+    "text": "Calculating the error rates\n\nlog_aug_full |&gt;\n  count(spam, .pred_class) |&gt;\n  group_by(spam) |&gt;\n  mutate(p = n / sum(n))\n\n# A tibble: 4 × 4\n# Groups:   spam [2]\n  spam  .pred_class     n       p\n  &lt;fct&gt; &lt;fct&gt;       &lt;int&gt;   &lt;dbl&gt;\n1 0     0            3521 0.991  \n2 0     1              33 0.00929\n3 1     0             299 0.815  \n4 1     1              68 0.185"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#calculating-the-error-rates-3",
+    "href": "slides/20-logistic-regression-2.html#calculating-the-error-rates-3",
+    "title": "Logistic regression 2",
+    "section": "Calculating the error rates",
+    "text": "Calculating the error rates\n\nlog_aug_full |&gt;\n  count(spam, .pred_class) |&gt;\n  group_by(spam) |&gt;\n  mutate(\n    p = n / sum(n),\n    decision = case_when(\n      spam == \"0\" & .pred_class == \"0\" ~ \"True negative\",\n      spam == \"0\" & .pred_class == \"1\" ~ \"False positive\",\n      spam == \"1\" & .pred_class == \"0\" ~ \"False negative\",\n      spam == \"1\" & .pred_class == \"1\" ~ \"True positive\"\n    ))\n\n# A tibble: 4 × 5\n# Groups:   spam [2]\n  spam  .pred_class     n       p decision      \n  &lt;fct&gt; &lt;fct&gt;       &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;         \n1 0     0            3521 0.991   True negative \n2 0     1              33 0.00929 False positive\n3 1     0             299 0.815   False negative\n4 1     1              68 0.185   True positive"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#but-wait",
+    "href": "slides/20-logistic-regression-2.html#but-wait",
+    "title": "Logistic regression 2",
+    "section": "But wait!",
+    "text": "But wait!\nIf we change the classification threshold, we change the classifications, and we change the error rates:\n\nlog_aug_full |&gt;\n  mutate(\n    .pred_class = if_else(.pred_1 &lt;= 0.25, 0, 1)\n  ) |&gt;\n  count(spam, .pred_class) |&gt;\n  group_by(spam) |&gt;\n  mutate(p = n / sum(n))\n\n# A tibble: 4 × 4\n# Groups:   spam [2]\n  spam  .pred_class     n      p\n  &lt;fct&gt;       &lt;dbl&gt; &lt;int&gt;  &lt;dbl&gt;\n1 0               0  3263 0.918 \n2 0               1   291 0.0819\n3 1               0   172 0.469 \n4 1               1   195 0.531"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#classification-threshold-0.00",
+    "href": "slides/20-logistic-regression-2.html#classification-threshold-0.00",
+    "title": "Logistic regression 2",
+    "section": "Classification threshold: 0.00",
+    "text": "Classification threshold: 0.00\n\nlog_aug_full |&gt;\n  mutate(\n    .pred_class = if_else(.pred_1 &lt;= 0.00, 0, 1)\n  ) |&gt;\n  count(spam, .pred_class) |&gt;\n  group_by(spam) |&gt;\n  mutate(p = n / sum(n))\n\n# A tibble: 2 × 4\n# Groups:   spam [2]\n  spam  .pred_class     n     p\n  &lt;fct&gt;       &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;\n1 0               1  3554     1\n2 1               1   367     1"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#classification-threshold-0.25",
+    "href": "slides/20-logistic-regression-2.html#classification-threshold-0.25",
+    "title": "Logistic regression 2",
+    "section": "Classification threshold: 0.25",
+    "text": "Classification threshold: 0.25\n\nlog_aug_full |&gt;\n  mutate(\n    .pred_class = if_else(.pred_1 &lt;= 0.25, 0, 1)\n  ) |&gt;\n  count(spam, .pred_class) |&gt;\n  group_by(spam) |&gt;\n  mutate(p = n / sum(n))\n\n# A tibble: 4 × 4\n# Groups:   spam [2]\n  spam  .pred_class     n      p\n  &lt;fct&gt;       &lt;dbl&gt; &lt;int&gt;  &lt;dbl&gt;\n1 0               0  3263 0.918 \n2 0               1   291 0.0819\n3 1               0   172 0.469 \n4 1               1   195 0.531"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#classification-threshold-0.5",
+    "href": "slides/20-logistic-regression-2.html#classification-threshold-0.5",
+    "title": "Logistic regression 2",
+    "section": "Classification threshold: 0.5",
+    "text": "Classification threshold: 0.5\n\nlog_aug_full |&gt;\n  mutate(\n    .pred_class = if_else(.pred_1 &lt;= 0.50, 0, 1)\n  ) |&gt;\n  count(spam, .pred_class) |&gt;\n  group_by(spam) |&gt;\n  mutate(p = n / sum(n))\n\n# A tibble: 4 × 4\n# Groups:   spam [2]\n  spam  .pred_class     n       p\n  &lt;fct&gt;       &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt;\n1 0               0  3521 0.991  \n2 0               1    33 0.00929\n3 1               0   299 0.815  \n4 1               1    68 0.185"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#classification-threshold-0.75",
+    "href": "slides/20-logistic-regression-2.html#classification-threshold-0.75",
+    "title": "Logistic regression 2",
+    "section": "Classification threshold: 0.75",
+    "text": "Classification threshold: 0.75\n\nlog_aug_full |&gt;\n  mutate(\n    .pred_class = if_else(.pred_1 &lt;= 0.75, 0, 1)\n  ) |&gt;\n  count(spam, .pred_class) |&gt;\n  group_by(spam) |&gt;\n  mutate(p = n / sum(n))\n\n# A tibble: 4 × 4\n# Groups:   spam [2]\n  spam  .pred_class     n       p\n  &lt;fct&gt;       &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt;\n1 0               0  3544 0.997  \n2 0               1    10 0.00281\n3 1               0   339 0.924  \n4 1               1    28 0.0763"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#classification-threshold-1.00",
+    "href": "slides/20-logistic-regression-2.html#classification-threshold-1.00",
+    "title": "Logistic regression 2",
+    "section": "Classification threshold: 1.00",
+    "text": "Classification threshold: 1.00\n\nlog_aug_full |&gt;\n  mutate(\n    .pred_class = if_else(.pred_1 &lt;= 1.00, 0, 1)\n  ) |&gt;\n  count(spam, .pred_class) |&gt;\n  group_by(spam) |&gt;\n  mutate(p = n / sum(n))\n\n# A tibble: 2 × 4\n# Groups:   spam [2]\n  spam  .pred_class     n     p\n  &lt;fct&gt;       &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;\n1 0               0  3554     1\n2 1               0   367     1"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#lets-plot-these-error-rates",
+    "href": "slides/20-logistic-regression-2.html#lets-plot-these-error-rates",
+    "title": "Logistic regression 2",
+    "section": "Let’s plot these error rates",
+    "text": "Let’s plot these error rates"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#roc-curve",
+    "href": "slides/20-logistic-regression-2.html#roc-curve",
+    "title": "Logistic regression 2",
+    "section": "ROC curve",
+    "text": "ROC curve\nIf we repeat this process for “all” possible thresholds \\(0\\leq p^\\star\\leq 1\\), we trace out the receiver operating characteristic curve (ROC curve), which assesses the model’s performance across a range of thresholds:"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#roc-curve-1",
+    "href": "slides/20-logistic-regression-2.html#roc-curve-1",
+    "title": "Logistic regression 2",
+    "section": "ROC curve",
+    "text": "ROC curve\n\nWhich corner of the plot indicates the best model performance?\n\n\n. . .\nUpper left!"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#roc-for-full-model",
+    "href": "slides/20-logistic-regression-2.html#roc-for-full-model",
+    "title": "Logistic regression 2",
+    "section": "ROC for full model",
+    "text": "ROC for full model"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#roc-for-simple-model",
+    "href": "slides/20-logistic-regression-2.html#roc-for-simple-model",
+    "title": "Logistic regression 2",
+    "section": "ROC for simple model",
+    "text": "ROC for simple model\n\n\n\n\n\n\n\n\nComparing these two curves, the full model is better."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#model-comparison",
+    "href": "slides/20-logistic-regression-2.html#model-comparison",
+    "title": "Logistic regression 2",
+    "section": "Model comparison",
+    "text": "Model comparison\nThe farther up and to the left the ROC curve is, the better the classification accuracy. You can quantify this with the area under the curve.\n\n\n\n\n\n\nNote\n\n\n\nArea under the ROC curve will be our “quality score” for comparing logistic regression models."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#data",
+    "href": "slides/20-logistic-regression-2.html#data",
+    "title": "Logistic regression 2",
+    "section": "Data",
+    "text": "Data\n\nThe U.S. Forest Service maintains machine learning models to predict whether a plot of land is “forested.”\nThis classification is important for research, legislation, land management, etc. purposes.\nPlots are typically remeasured every 10 years.\nThe forested dataset contains the most recent measurement per plot."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#data-forested",
+    "href": "slides/20-logistic-regression-2.html#data-forested",
+    "title": "Logistic regression 2",
+    "section": "Data: forested\n",
+    "text": "Data: forested\n\n\nforested\n\n# A tibble: 7,107 × 20\n   forested  year elevation eastness northness roughness tree_no_tree dew_temp\n   &lt;fct&gt;    &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;fct&gt;           &lt;dbl&gt;\n 1 Yes       2005       881       90        43        63 Tree             0.04\n 2 Yes       2005       113      -25        96        30 Tree             6.4 \n 3 No        2005       164      -84        53        13 Tree             6.06\n 4 Yes       2005       299       93        34         6 No tree          4.43\n 5 Yes       2005       806       47       -88        35 Tree             1.06\n 6 Yes       2005       736      -27       -96        53 Tree             1.35\n 7 Yes       2005       636      -48        87         3 No tree          1.42\n 8 Yes       2005       224      -65       -75         9 Tree             6.39\n 9 Yes       2005        52      -62        78        42 Tree             6.5 \n10 Yes       2005      2240      -67       -74        99 No tree         -5.63\n# ℹ 7,097 more rows\n# ℹ 12 more variables: precip_annual &lt;dbl&gt;, temp_annual_mean &lt;dbl&gt;,\n#   temp_annual_min &lt;dbl&gt;, temp_annual_max &lt;dbl&gt;, temp_january_min &lt;dbl&gt;,\n#   vapor_min &lt;dbl&gt;, vapor_max &lt;dbl&gt;, canopy_cover &lt;dbl&gt;, lon &lt;dbl&gt;, lat &lt;dbl&gt;,\n#   land_type &lt;fct&gt;, county &lt;fct&gt;"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#data-forested-1",
+    "href": "slides/20-logistic-regression-2.html#data-forested-1",
+    "title": "Logistic regression 2",
+    "section": "Data: forested\n",
+    "text": "Data: forested\n\n\nglimpse(forested)\n\nRows: 7,107\nColumns: 20\n$ forested         &lt;fct&gt; Yes, Yes, No, Yes, Yes, Yes, Yes, Yes, Yes, Yes, Yes,…\n$ year             &lt;dbl&gt; 2005, 2005, 2005, 2005, 2005, 2005, 2005, 2005, 2005,…\n$ elevation        &lt;dbl&gt; 881, 113, 164, 299, 806, 736, 636, 224, 52, 2240, 104…\n$ eastness         &lt;dbl&gt; 90, -25, -84, 93, 47, -27, -48, -65, -62, -67, 96, -4…\n$ northness        &lt;dbl&gt; 43, 96, 53, 34, -88, -96, 87, -75, 78, -74, -26, 86, …\n$ roughness        &lt;dbl&gt; 63, 30, 13, 6, 35, 53, 3, 9, 42, 99, 51, 190, 95, 212…\n$ tree_no_tree     &lt;fct&gt; Tree, Tree, Tree, No tree, Tree, Tree, No tree, Tree,…\n$ dew_temp         &lt;dbl&gt; 0.04, 6.40, 6.06, 4.43, 1.06, 1.35, 1.42, 6.39, 6.50,…\n$ precip_annual    &lt;dbl&gt; 466, 1710, 1297, 2545, 609, 539, 702, 1195, 1312, 103…\n$ temp_annual_mean &lt;dbl&gt; 6.42, 10.64, 10.07, 9.86, 7.72, 7.89, 7.61, 10.45, 10…\n$ temp_annual_min  &lt;dbl&gt; -8.32, 1.40, 0.19, -1.20, -5.98, -6.00, -5.76, 1.11, …\n$ temp_annual_max  &lt;dbl&gt; 12.91, 15.84, 14.42, 15.78, 13.84, 14.66, 14.23, 15.3…\n$ temp_january_min &lt;dbl&gt; -0.08, 5.44, 5.72, 3.95, 1.60, 1.12, 0.99, 5.54, 6.20…\n$ vapor_min        &lt;dbl&gt; 78, 34, 49, 67, 114, 67, 67, 31, 60, 79, 172, 162, 70…\n$ vapor_max        &lt;dbl&gt; 1194, 938, 754, 1164, 1254, 1331, 1275, 944, 892, 549…\n$ canopy_cover     &lt;dbl&gt; 50, 79, 47, 42, 59, 36, 14, 27, 82, 12, 74, 66, 83, 6…\n$ lon              &lt;dbl&gt; -118.6865, -123.0825, -122.3468, -121.9144, -117.8841…\n$ lat              &lt;dbl&gt; 48.69537, 47.07991, 48.77132, 45.80776, 48.07396, 48.…\n$ land_type        &lt;fct&gt; Tree, Tree, Tree, Tree, Tree, Tree, Non-tree vegetati…\n$ county           &lt;fct&gt; Ferry, Thurston, Whatcom, Skamania, Stevens, Stevens,…"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#outcome-and-predictors",
+    "href": "slides/20-logistic-regression-2.html#outcome-and-predictors",
+    "title": "Logistic regression 2",
+    "section": "Outcome and predictors",
+    "text": "Outcome and predictors\n\nOutcome: forested - Factor, Yes or No\n\n\n\nlevels(forested$forested)\n\n[1] \"Yes\" \"No\" \n\n\n\n\nPredictors: 18 remotely-sensed and easily-accessible predictors:\n\nnumeric variables based on weather and topography\ncategorical variables based on classifications from other governmental organizations"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#forested",
+    "href": "slides/20-logistic-regression-2.html#forested",
+    "title": "Logistic regression 2",
+    "section": "?forested",
+    "text": "?forested"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#should-we-include-a-predictor",
+    "href": "slides/20-logistic-regression-2.html#should-we-include-a-predictor",
+    "title": "Logistic regression 2",
+    "section": "Should we include a predictor?",
+    "text": "Should we include a predictor?\nTo determine whether we should include a predictor in a model, we should start by asking:\n\n\nIs it ethical to use this variable? (Or even legal?)\nWill this variable be available at prediction time?\nDoes this variable contribute to explainability?"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#weve-been-cheating",
+    "href": "slides/20-logistic-regression-2.html#weve-been-cheating",
+    "title": "Logistic regression 2",
+    "section": "We’ve been cheating!",
+    "text": "We’ve been cheating!\n\n\nSo far, we’ve been using all the data we have for building models. In predictive contexts, this would be considered cheating.\nEvaluating model performance for predicting outcomes that were used when building the models is like evaluating your learning with questions whose answers you’ve already seen."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#spending-your-data",
+    "href": "slides/20-logistic-regression-2.html#spending-your-data",
+    "title": "Logistic regression 2",
+    "section": "Spending your data",
+    "text": "Spending your data\nFor predictive models (used primarily in machine learning), we typically split data into training and test sets:\n\n\n\n\n\nThe training set is used to estimate model parameters.\nThe test set is used to find an independent assessment of model performance.\n\n. . .\n\n\n\n\n\n\nWarning\n\n\n\nDo not use, or even peek at, the test set during training."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#how-much-to-spend",
+    "href": "slides/20-logistic-regression-2.html#how-much-to-spend",
+    "title": "Logistic regression 2",
+    "section": "How much to spend?",
+    "text": "How much to spend?\n\n\nThe more data we spend (use in training), the better estimates we’ll get.\nSpending too much data in training prevents us from computing a good assessment of predictive performance.\nSpending too much data in testing prevents us from computing a good estimate of model parameters."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#the-initial-split",
+    "href": "slides/20-logistic-regression-2.html#the-initial-split",
+    "title": "Logistic regression 2",
+    "section": "The initial split",
+    "text": "The initial split\n\nset.seed(20241112)\nforested_split &lt;- initial_split(forested)\nforested_split\n\n&lt;Training/Testing/Total&gt;\n&lt;5330/1777/7107&gt;"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#setting-a-seed",
+    "href": "slides/20-logistic-regression-2.html#setting-a-seed",
+    "title": "Logistic regression 2",
+    "section": "Setting a seed",
+    "text": "Setting a seed\n\nWhat does set.seed() do?\n\n\n\nTo create that split of the data, R generates “pseudo-random” numbers: while they are made to behave like random numbers, their generation is deterministic given a “seed”.\nThis allows us to reproduce results by setting that seed.\nWhich seed you pick doesn’t matter, as long as you don’t try a bunch of seeds and pick the one that gives you the best performance."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#accessing-the-data",
+    "href": "slides/20-logistic-regression-2.html#accessing-the-data",
+    "title": "Logistic regression 2",
+    "section": "Accessing the data",
+    "text": "Accessing the data\n\nforested_train &lt;- training(forested_split)\nforested_test &lt;- testing(forested_split)"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#the-training-set",
+    "href": "slides/20-logistic-regression-2.html#the-training-set",
+    "title": "Logistic regression 2",
+    "section": "The training set",
+    "text": "The training set\n\nforested_train\n\n# A tibble: 5,330 × 20\n   forested  year elevation eastness northness roughness tree_no_tree dew_temp\n   &lt;fct&gt;    &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;fct&gt;           &lt;dbl&gt;\n 1 Yes       2013       315      -17        98        92 Tree             5.83\n 2 No        2018       374       93       -34        23 No tree          0.7 \n 3 No        2017       377       44       -89         1 Tree             1.83\n 4 Yes       2013       541       31       -94       139 Tree             4.19\n 5 Yes       2017       680       14       -98        20 Tree             0.79\n 6 Yes       2017      1482       76       -64        43 Tree            -0.18\n 7 No        2020        84       42       -90        12 No tree          6.9 \n 8 Yes       2011       210       34        93        16 Tree             5.52\n 9 No        2020       766       14        98        20 No tree          1.52\n10 Yes       2013      1559       98        16        79 Tree            -3.45\n# ℹ 5,320 more rows\n# ℹ 12 more variables: precip_annual &lt;dbl&gt;, temp_annual_mean &lt;dbl&gt;,\n#   temp_annual_min &lt;dbl&gt;, temp_annual_max &lt;dbl&gt;, temp_january_min &lt;dbl&gt;,\n#   vapor_min &lt;dbl&gt;, vapor_max &lt;dbl&gt;, canopy_cover &lt;dbl&gt;, lon &lt;dbl&gt;, lat &lt;dbl&gt;,\n#   land_type &lt;fct&gt;, county &lt;fct&gt;"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#the-testing-data",
+    "href": "slides/20-logistic-regression-2.html#the-testing-data",
+    "title": "Logistic regression 2",
+    "section": "The testing data",
+    "text": "The testing data\n\nforested_test\n\n# A tibble: 1,777 × 20\n   forested  year elevation eastness northness roughness tree_no_tree dew_temp\n   &lt;fct&gt;    &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;fct&gt;           &lt;dbl&gt;\n 1 Yes       2005       881       90        43        63 Tree             0.04\n 2 Yes       2005       636      -48        87         3 No tree          1.42\n 3 Yes       2005      2240      -67       -74        99 No tree         -5.63\n 4 Yes       2014       940      -93        35        50 Tree            -0.15\n 5 No        2014       246       22       -97         5 Tree             2.41\n 6 No        2014       419       86       -49         5 No tree          1.87\n 7 No        2014       308      -70       -70         4 No tree          3.07\n 8 No        2014       302      -31       -94         1 No tree          2.55\n 9 No        2014       340      -54        83        60 No tree          1.29\n10 No        2014       792      -61       -79        30 No tree          0.25\n# ℹ 1,767 more rows\n# ℹ 12 more variables: precip_annual &lt;dbl&gt;, temp_annual_mean &lt;dbl&gt;,\n#   temp_annual_min &lt;dbl&gt;, temp_annual_max &lt;dbl&gt;, temp_january_min &lt;dbl&gt;,\n#   vapor_min &lt;dbl&gt;, vapor_max &lt;dbl&gt;, canopy_cover &lt;dbl&gt;, lon &lt;dbl&gt;, lat &lt;dbl&gt;,\n#   land_type &lt;fct&gt;, county &lt;fct&gt;"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#initial-questions",
+    "href": "slides/20-logistic-regression-2.html#initial-questions",
+    "title": "Logistic regression 2",
+    "section": "Initial questions",
+    "text": "Initial questions\n\nWhat’s the distribution of the outcome, forested?\nWhat’s the distribution of numeric variables like precip_annual?\nHow does the distribution of forested differ across the categorical and numerical variables?\n\n. . .\n\nWhich dataset should we use for the exploration? The entire data forested, the training data forested_train, or the testing data forested_test?"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#forested-1",
+    "href": "slides/20-logistic-regression-2.html#forested-1",
+    "title": "Logistic regression 2",
+    "section": "forested",
+    "text": "forested\nWhat’s the distribution of the outcome, forested?\n\nggplot(forested_train, aes(x = forested)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#forested-2",
+    "href": "slides/20-logistic-regression-2.html#forested-2",
+    "title": "Logistic regression 2",
+    "section": "forested",
+    "text": "forested\nWhat’s the distribution of the outcome, forested?\n\nforested_train |&gt;\n  count(forested) |&gt;\n  mutate(\n    p = n / sum(n)\n  )\n\n# A tibble: 2 × 3\n  forested     n     p\n  &lt;fct&gt;    &lt;int&gt; &lt;dbl&gt;\n1 Yes       2917 0.547\n2 No        2413 0.453"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#precip_annual",
+    "href": "slides/20-logistic-regression-2.html#precip_annual",
+    "title": "Logistic regression 2",
+    "section": "precip_annual",
+    "text": "precip_annual\nWhat’s the distribution of precip_annual?\n\nggplot(forested_train, aes(x = precip_annual)) +\n  geom_histogram()"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#forested-and-precip_annual",
+    "href": "slides/20-logistic-regression-2.html#forested-and-precip_annual",
+    "title": "Logistic regression 2",
+    "section": "\nforested and precip_annual\n",
+    "text": "forested and precip_annual\n\n\nggplot(\n  forested_train,\n  aes(x = precip_annual, fill = forested, group = forested)\n  ) +\n  geom_histogram(binwidth = 200, position = \"identity\", alpha = 0.7) +\n  scale_fill_manual(values = c(\"Yes\" = \"forestgreen\", \"No\" = \"gold2\")) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#forested-and-precip_annual-1",
+    "href": "slides/20-logistic-regression-2.html#forested-and-precip_annual-1",
+    "title": "Logistic regression 2",
+    "section": "\nforested and precip_annual\n",
+    "text": "forested and precip_annual\n\n\nggplot(\n  forested_train,\n  aes(x = precip_annual, fill = forested, group = forested)\n  ) +\n  geom_histogram(binwidth = 200, position = \"fill\", alpha = 0.7) +\n  scale_fill_manual(values = c(\"Yes\" = \"forestgreen\", \"No\" = \"gold2\")) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#forested-and-tree_no_tree",
+    "href": "slides/20-logistic-regression-2.html#forested-and-tree_no_tree",
+    "title": "Logistic regression 2",
+    "section": "\nforested and tree_no_tree\n",
+    "text": "forested and tree_no_tree\n\n\nggplot(forested_train, aes(x = tree_no_tree, fill = forested)) +\n  geom_bar(position = \"fill\") +\n  scale_fill_manual(values = c(\"Yes\" = \"forestgreen\", \"No\" = \"gold2\")) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#forested-and-lat-lon",
+    "href": "slides/20-logistic-regression-2.html#forested-and-lat-lon",
+    "title": "Logistic regression 2",
+    "section": "\nforested and lat / lon\n",
+    "text": "forested and lat / lon\n\n\nggplot(forested_train, aes(x = lon, y = lat, color = forested)) +\n  geom_point(alpha = 0.7) +\n  scale_color_manual(values = c(\"Yes\" = \"forestgreen\", \"No\" = \"gold2\")) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#precip_annual-and-lat-lon",
+    "href": "slides/20-logistic-regression-2.html#precip_annual-and-lat-lon",
+    "title": "Logistic regression 2",
+    "section": "\nprecip_annual and lat / lon\n",
+    "text": "precip_annual and lat / lon\n\n\nggplot(forested_train, aes(x = lon, y = lat, color = precip_annual)) +\n  geom_point(alpha = 0.7) +\n  labs(color = \"annual\\nprecipitation\\n(mm × 100)\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#fyi-the-response-variable-must-be-a-factor",
+    "href": "slides/20-logistic-regression-2.html#fyi-the-response-variable-must-be-a-factor",
+    "title": "Logistic regression 2",
+    "section": "FYI: the response variable must be a factor",
+    "text": "FYI: the response variable must be a factor\nforested already comes as a factor, so we’re lucky:\n\nclass(forested$forested)\n\n[1] \"factor\"\n\nlevels(forested$forested)\n\n[1] \"Yes\" \"No\" \n\n\n. . .\nBut if it didn’t, things would not work:\n\nlogistic_reg() |&gt;\n  fit(as.numeric(forested) ~ precip_annual, data = forested_train)\n\nError in `check_outcome()`:\n! For a classification model, the outcome should be a &lt;factor&gt;, not a\n  double vector."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#fyi-the-base-level-is-treated-as-failure-0",
+    "href": "slides/20-logistic-regression-2.html#fyi-the-base-level-is-treated-as-failure-0",
+    "title": "Logistic regression 2",
+    "section": "FYI: the base level is treated as “failure” (0)",
+    "text": "FYI: the base level is treated as “failure” (0)\nThe base level here is “Yes”, so “No” is treated as “success” (1):\n\nlevels(forested$forested)\n\n[1] \"Yes\" \"No\" \n\n\n. . .\nAs a result, this code:\n\nlogistic_reg() |&gt;\n  fit(forested ~ precip_annual, data = forested_train)\n\n. . .\nCorresponds to this model:\n\\[\n\\text{Prob}(\n\\texttt{forested = \"No\"}\n)\n=\n\\frac{e^{\\beta_0+\\beta_1 x}}{1 + e^{\\beta_0+\\beta_1 x}}.\n\\]\n. . .\nThis is not a problem, but it means that in order to interpret the output correctly, you need to understand how your factors are leveled."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#dont-get-burned-on-this",
+    "href": "slides/20-logistic-regression-2.html#dont-get-burned-on-this",
+    "title": "Logistic regression 2",
+    "section": "Don’t get burned on this!",
+    "text": "Don’t get burned on this!\nThere are two distinct but related things going on at the same time:\n\n\nYour binary response variable is a factor with two levels. There is a first level (base) and a second level;\nIn the context of your application, one of those levels is the “negative” or “zero” case (legit e-mail) and one is the “positive” or “one” case (spam e-mail).\n\n\n. . .\nDo these two things agree? If not, that isn’t an error, but you might make mistakes when interpreting. Be careful!"
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#next-steps",
+    "href": "slides/20-logistic-regression-2.html#next-steps",
+    "title": "Logistic regression 2",
+    "section": "Next steps",
+    "text": "Next steps\n\n\nFit models on training data\nMake predictions on testing data\n\nEvaluate predictions on testing data:\n\nLinear models: R-squared, adjusted R-squared, RMSE (root mean squared error), etc.\nLogistic models: False negative and positive rates, AUC (area under the curve), etc.\n\n\nMake decisions based on model predictive performance, validity across various testing/training splits (aka “cross validation”), explainability\n\n\n. . .\n\n\n\n\n\n\nNote\n\n\n\nWe will only learn about a subset of these in this course, but you can go further into these ideas in STA 210 or STA 221 as well as in various machine learning courses."
+  },
+  {
+    "objectID": "slides/20-logistic-regression-2.html#ae-20-forest-classification",
+    "href": "slides/20-logistic-regression-2.html#ae-20-forest-classification",
+    "title": "Logistic regression 2",
+    "section": "ae-20-forest-classification",
+    "text": "ae-20-forest-classification\n\n\nGo to your ae project in RStudio.\nIf you haven’t yet done so, make sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.\nIf you haven’t yet done so, click Pull to get today’s application exercise file: ae-20-forest-classification.qmd. You might be prompted to install forested, say yes.\nWork through the application exercise in class, and render, commit, and push your edits."
+  },
+  {
     "objectID": "slides/15-models-slides.html#while-you-wait-participate",
     "href": "slides/15-models-slides.html#while-you-wait-participate",
     "title": "The language of models",
@@ -8663,7 +9566,7 @@
     "href": "index.html",
     "title": "STA 199 Introduction to Data Science and Statistical Thinking",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 7\n\n🧑‍🏫 Welcome!\n🖥️ slides 00\n\n\n\n\n\nThu, Jan 8\n\n💻 Lab 0\nlab 0\n\n\n\n1\nMon, Jan 12\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\n🧑‍🏫 Meet the toolkit\n🖥️ slides 01  🗒️ notes 01\n\n\n\n\n\nWed, Jan 14\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\n🧑‍🏫 Grammar of data visualization\n🖥️ slides 02  🗒️ notes 02\n\n\n\n\n\nThu, Jan 15\n\n💻 Lab 1\nlab 1\nLab 1 @ end of section\n\n\n2\nMon, Jan 19\n\n❌ MLK Day - No Lecture\n\n\n\n\n\n\nWed, Jan 21\n📗 r4ds - chp 2  📗 r4ds - chp 3.1-3.5  🎥 Grammar of data transformation  🎥 Code along :: Flights and pipes\n\n🧑‍🏫 Grammar of data transformation\n🖥️ slides 03  🗒️ notes 03  💃 ae 03\n\n\n\n\n\nThu, Jan 22\n\n💻 Lab 2\n\nlab 2 hw 1\n\nLab 2 @ end of section\n\n\n3\nMon, Jan 26\n📗 r4ds - chp 3.6-3.7  🎥 Visualizing and summarizing categorical data  🎥 Visualizing and summarizing numerical data  🎥 Visualizing and summarizing relationships  🎥 Code along :: Star Wars characters\n\n🧑‍🏫 Exploratory Data Analysis I\n🖥️ slides 04  🗒️ notes 04\n\n\n\n\n\nWed, Jan 28\n📘 ims - chp 5  📘 ims - chp 6  🎥 Code along :: Diving deeper with Palmer Penguins\n\n🧑‍🏫 Exploratory Data Analysis II\n🖥️ slides 05  🗒️ notes 05  🕺 ae 05\n\nHW 1 @ 11:59 pm\n\n\n\nThu, Jan 29\n\n💻 Lab 3\n\nlab 3 hw 2\n\nLab 3 @ end of section\n\n\n4\nMon, Feb 2\n🎥 Tidy data  🎥 Tidying data  🎥 Code along :: Country populations over time  📗 r4ds - chp 5\n\n🧑‍🏫 Tidying data\n🖥️ slides 06  🗒️ notes 06  🧞 ae 06\n\n\n\n\n\nWed, Feb 4\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\n🧑‍🏫 Joining data\n🖥️ slides 07  🗒️ notes 07  🦧 ae 07\n\nHW 2 @ 11:59 pm\n\n\n\nThu, Feb 5\n\n💻 Lab 4\n\nlab 4 hw 3\n\nLab 4 @ end of section\n\n\n5\nMon, Feb 9\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\n🧑‍🏫 Data types and classes\n🖥️ slides 08  🗒️ notes 08  😭 follow-up\n\n\n\n\n\nWed, Feb 11\n\n🧑‍🏫 More data types and classes\n🖥️ slides 09  🗒️ notes 09  🐙 ae 08\n\nHW 3 @ 11:59 pm\n\n\n\nThu, Feb 12\n\n💻 Lab 5\n\nlab 5 hw 4\n\nLab 5 @ end of section\n\n\n6\nMon, Feb 16\n🎥 Importing data  🎥 Code along :: Halving CO2 emissions  🎥 Code along :: Student survey  📗 r4ds - chp 7  📗 r4ds - chp 17.1 - 17.3\n\n🧑‍🏫 Importing and recoding data\n🖥️ slides 10  🗒️ notes 10  🐢 ae 09  🪐 ae 10\n\n\n\n\n\nWed, Feb 18\n🎥 Web scraping basics  🎥 Code along :: Scraping an eCommerce page  📗 r4ds - chp 24.1 - 24.6  🎥 Code along :: Scraping many eCommerce pages  🎥 Web scraping considerations  📗 r4ds - chp 25.1 - 25.2\n\n🧑‍🏫 Webscraping\n🖥️ slides 11  🗒️ notes 11  🌐 ae 11\n\nHW 4 @ 11:59 pm\n\n\n\nThu, Feb 19\n\n💻 Project Milestone 1 + 2\n🎉 Description  🪨 Milestone 1  🧗 Milestone 2\n\n\n\n\n7\nMon, Feb 23\n\n🧑‍🏫 Data science wrap-up\n🖥️ slides 12  🗒️ notes 12\n\n\n\n\n\nTue, Feb 24\n\n\n\nProject Proposal @ 11:59 pm\n\n\n\nWed, Feb 25\n💫 study guide\n\n📝 Midterm 1\n\n\n\n\n\n\nThu, Feb 26\n\n❌ No lab!\n\n\n\n\n\n\nSun, Mar 1\n\n\n\nTake-home 1 @ 11:59 pm\n\n\n8\nMon, Mar 2\n📘 ims - chp 6  📗 r4ds - chp 10\n\n🧑‍🏫 Communicating results\n🖥️ slides 13  🗒️ notes 13  🍊 ae 13  🤢 ae 14\n\nPeer evaluation 1 @ 11:59 pm\n\n\n\nWed, Mar 4\n🎥 Misrepresentation  🎥 Data privacy  🎥 Algorithmic bias  🎥 Code along :: Sectors and services\n\n🧑‍🏫 Data science ethics\n🖥️ slides 14\n\nMilestone 3 @ 11:59 pm\n\n\n\nThu, Mar 5\n\n💻 Project Milestone 4\n🪨 Milestone 4\n\nMilestone 4 @ end-of-lab\n\n\n9\nMon, Mar 9\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nWed, Mar 11\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nThu, Mar 12\n\n❌ Spring Break - No Lab\n\n\n\n\n\n10\nMon, Mar 16\n🎥 The language of models  🎥 Linear regression with a numerical predictor  📘 ims - chp 7.1\n\n🧑‍🏫 The language of models\n🖥️ slides 15  🗒️ notes 15  🧊 ae 15\n\nPeer evaluation 2 @ 11:59 pm\n\n\n\nWed, Mar 18\n🎥 Linear regression with a categorical predictor  🎥 Outliers in linear regression  🎥 Code along :: Modeling fish  📘 ims - chp 7.2\n\n🧑‍🏫 Simple linear regression\n🖥️ slides 16  🗒️ notes 16  🐧 ae 16\n\n\n\n\n\nThu, Mar 19\n\n💻 Lab 6\n\nlab 6 hw 5\n\nLab 6 @ end of section\n\n\n11\nMon, Mar 23\n🎥 Linear regression with multiple predictors  🎥 Main and interaction effects  📘 ims - chp 8.1-8.2  📘 ims - chp 8.3-8.5\n\n🧑‍🏫 Multiple linear regression I\n🖥️ slides 17  🗒️ notes 17\n\n\n\n\n\nWed, Mar 25\n🎥 Code along :: Modeling interest rates\n\n🧑‍🏫 Multiple linear regression II\n🖥️ slides 18  🗒️ notes 18 🤑 ae 18\n\nHW 5 @ 11:59 pm\n\n\n\nThu, Mar 26\n\n💻 Final Project Presentation\n\n\n\n\n\nSun, Mar 29\n\n\n\nFinal Project @ 11:59 pm\n\n\n12\nMon, Mar 30\n🎥 Logistic regression  🎥 Code along :: Building a spam filter  📘 ims - chp 9\n\n🧑‍🏫 Logistic regression I\n🖥️ slides 19  🗒️ notes 19  ✉️ ae 19\n\nPeer evaluation 3 @ 11:59 pm\n\n\n\nWed, Apr 1\n🎥 Clasification and decision errors  🎥 Overfitting and spending your data\n\n🧑‍🏫 Logistic regression II\n\n\n\n\n\nThu, Apr 2\n\n💻 Lab 7\nhw 6\nLab 7 @ end of section\n\n\n13\nMon, Apr 6\n🎥 Code along :: Forest classification\n\n🧑‍🏫 Modeling wrap-up\n\nHW 6 @ 11:59 pm\n\n\n\nWed, Apr 8\n\n📝 Midterm 2\n\n\n\n\n\n\nThu, Apr 9\n\n❌ We’re all tired - No lab!\n\n\n\n\n\n\nSun, Apr 12\n\n\n\nTake-home 2 @ 11:59 pm\n\n\n14\nMon, Apr 13\n🎥 Quantifying uncertainty  🎥 Bootstrapping  🎥 Code along :: Bootstrapping Duke Forest houses  📘 ims - chp 11  📘 ims - chp 12\n\n🧑‍🏫 Interval estimation\n\n\n\n\n\nWed, Apr 15\n🎥 Hypothesis testing  📘 ims - chp 11\n\n🧑‍🏫 Hypothesis testing\n\n\n\n\n\nThu, Apr 16\n\n💻 Lab 8\n\nLab 8 @ end of section\n\n\n15\nMon, Apr 20\n\n🧑‍🏫 More inference\n\n\n\n\n\nWed, Apr 22\n\n🧑‍🏫 Farewell!\n\nHW 7 @ 11:59 pm\n\n\n\nThu, Apr 23\n\n❌ Reading Days - No Lab\n\n\n\n\n\n16\nFri, May 1\n\n📝 Final (2pm - 5pm)",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 7\n\n🧑‍🏫 Welcome!\n🖥️ slides 00\n\n\n\n\n\nThu, Jan 8\n\n💻 Lab 0\nlab 0\n\n\n\n1\nMon, Jan 12\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\n🧑‍🏫 Meet the toolkit\n🖥️ slides 01  🗒️ notes 01\n\n\n\n\n\nWed, Jan 14\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\n🧑‍🏫 Grammar of data visualization\n🖥️ slides 02  🗒️ notes 02\n\n\n\n\n\nThu, Jan 15\n\n💻 Lab 1\nlab 1\nLab 1 @ end of section\n\n\n2\nMon, Jan 19\n\n❌ MLK Day - No Lecture\n\n\n\n\n\n\nWed, Jan 21\n📗 r4ds - chp 2  📗 r4ds - chp 3.1-3.5  🎥 Grammar of data transformation  🎥 Code along :: Flights and pipes\n\n🧑‍🏫 Grammar of data transformation\n🖥️ slides 03  🗒️ notes 03  💃 ae 03\n\n\n\n\n\nThu, Jan 22\n\n💻 Lab 2\n\nlab 2 hw 1\n\nLab 2 @ end of section\n\n\n3\nMon, Jan 26\n📗 r4ds - chp 3.6-3.7  🎥 Visualizing and summarizing categorical data  🎥 Visualizing and summarizing numerical data  🎥 Visualizing and summarizing relationships  🎥 Code along :: Star Wars characters\n\n🧑‍🏫 Exploratory Data Analysis I\n🖥️ slides 04  🗒️ notes 04\n\n\n\n\n\nWed, Jan 28\n📘 ims - chp 5  📘 ims - chp 6  🎥 Code along :: Diving deeper with Palmer Penguins\n\n🧑‍🏫 Exploratory Data Analysis II\n🖥️ slides 05  🗒️ notes 05  🕺 ae 05\n\nHW 1 @ 11:59 pm\n\n\n\nThu, Jan 29\n\n💻 Lab 3\n\nlab 3 hw 2\n\nLab 3 @ end of section\n\n\n4\nMon, Feb 2\n🎥 Tidy data  🎥 Tidying data  🎥 Code along :: Country populations over time  📗 r4ds - chp 5\n\n🧑‍🏫 Tidying data\n🖥️ slides 06  🗒️ notes 06  🧞 ae 06\n\n\n\n\n\nWed, Feb 4\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\n🧑‍🏫 Joining data\n🖥️ slides 07  🗒️ notes 07  🦧 ae 07\n\nHW 2 @ 11:59 pm\n\n\n\nThu, Feb 5\n\n💻 Lab 4\n\nlab 4 hw 3\n\nLab 4 @ end of section\n\n\n5\nMon, Feb 9\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\n🧑‍🏫 Data types and classes\n🖥️ slides 08  🗒️ notes 08  😭 follow-up\n\n\n\n\n\nWed, Feb 11\n\n🧑‍🏫 More data types and classes\n🖥️ slides 09  🗒️ notes 09  🐙 ae 08\n\nHW 3 @ 11:59 pm\n\n\n\nThu, Feb 12\n\n💻 Lab 5\n\nlab 5 hw 4\n\nLab 5 @ end of section\n\n\n6\nMon, Feb 16\n🎥 Importing data  🎥 Code along :: Halving CO2 emissions  🎥 Code along :: Student survey  📗 r4ds - chp 7  📗 r4ds - chp 17.1 - 17.3\n\n🧑‍🏫 Importing and recoding data\n🖥️ slides 10  🗒️ notes 10  🐢 ae 09  🪐 ae 10\n\n\n\n\n\nWed, Feb 18\n🎥 Web scraping basics  🎥 Code along :: Scraping an eCommerce page  📗 r4ds - chp 24.1 - 24.6  🎥 Code along :: Scraping many eCommerce pages  🎥 Web scraping considerations  📗 r4ds - chp 25.1 - 25.2\n\n🧑‍🏫 Webscraping\n🖥️ slides 11  🗒️ notes 11  🌐 ae 11\n\nHW 4 @ 11:59 pm\n\n\n\nThu, Feb 19\n\n💻 Project Milestone 1 + 2\n🎉 Description  🪨 Milestone 1  🧗 Milestone 2\n\n\n\n\n7\nMon, Feb 23\n\n🧑‍🏫 Data science wrap-up\n🖥️ slides 12  🗒️ notes 12\n\n\n\n\n\nTue, Feb 24\n\n\n\nProject Proposal @ 11:59 pm\n\n\n\nWed, Feb 25\n💫 study guide\n\n📝 Midterm 1\n\n\n\n\n\n\nThu, Feb 26\n\n❌ No lab!\n\n\n\n\n\n\nSun, Mar 1\n\n\n\nTake-home 1 @ 11:59 pm\n\n\n8\nMon, Mar 2\n📘 ims - chp 6  📗 r4ds - chp 10\n\n🧑‍🏫 Communicating results\n🖥️ slides 13  🗒️ notes 13  🍊 ae 13  🤢 ae 14\n\nPeer evaluation 1 @ 11:59 pm\n\n\n\nWed, Mar 4\n🎥 Misrepresentation  🎥 Data privacy  🎥 Algorithmic bias  🎥 Code along :: Sectors and services\n\n🧑‍🏫 Data science ethics\n🖥️ slides 14\n\nMilestone 3 @ 11:59 pm\n\n\n\nThu, Mar 5\n\n💻 Project Milestone 4\n🪨 Milestone 4\n\nMilestone 4 @ end-of-lab\n\n\n9\nMon, Mar 9\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nWed, Mar 11\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nThu, Mar 12\n\n❌ Spring Break - No Lab\n\n\n\n\n\n10\nMon, Mar 16\n🎥 The language of models  🎥 Linear regression with a numerical predictor  📘 ims - chp 7.1\n\n🧑‍🏫 The language of models\n🖥️ slides 15  🗒️ notes 15  🧊 ae 15\n\nPeer evaluation 2 @ 11:59 pm\n\n\n\nWed, Mar 18\n🎥 Linear regression with a categorical predictor  🎥 Outliers in linear regression  🎥 Code along :: Modeling fish  📘 ims - chp 7.2\n\n🧑‍🏫 Simple linear regression\n🖥️ slides 16  🗒️ notes 16  🐧 ae 16\n\n\n\n\n\nThu, Mar 19\n\n💻 Lab 6\n\nlab 6 hw 5\n\nLab 6 @ end of section\n\n\n11\nMon, Mar 23\n🎥 Linear regression with multiple predictors  🎥 Main and interaction effects  📘 ims - chp 8.1-8.2  📘 ims - chp 8.3-8.5\n\n🧑‍🏫 Multiple linear regression I\n🖥️ slides 17  🗒️ notes 17\n\n\n\n\n\nWed, Mar 25\n🎥 Code along :: Modeling interest rates\n\n🧑‍🏫 Multiple linear regression II\n🖥️ slides 18  🗒️ notes 18 🤑 ae 18\n\nHW 5 @ 11:59 pm\n\n\n\nThu, Mar 26\n\n💻 Final Project Presentation\n\n\n\n\n\nSun, Mar 29\n\n\n\nFinal Project @ 11:59 pm\n\n\n12\nMon, Mar 30\n🎥 Logistic regression  🎥 Code along :: Building a spam filter  📘 ims - chp 9\n\n🧑‍🏫 Logistic regression I\n🖥️ slides 19  🗒️ notes 19  ✉️ ae 19\n\nPeer evaluation 3 @ 11:59 pm\n\n\n\nWed, Apr 1\n🎥 Clasification and decision errors  🎥 Overfitting and spending your data\n\n🧑‍🏫 Logistic regression II\n🖥️ slides 20  🗒️ notes 20\n\n\n\n\n\nThu, Apr 2\n\n💻 Lab 7\nhw 6\nLab 7 @ end of section\n\n\n13\nMon, Apr 6\n🎥 Code along :: Forest classification\n\n🧑‍🏫 Modeling wrap-up\n\nHW 6 @ 11:59 pm\n\n\n\nWed, Apr 8\n\n📝 Midterm 2\n\n\n\n\n\n\nThu, Apr 9\n\n❌ We’re all tired - No lab!\n\n\n\n\n\n\nSun, Apr 12\n\n\n\nTake-home 2 @ 11:59 pm\n\n\n14\nMon, Apr 13\n🎥 Quantifying uncertainty  🎥 Bootstrapping  🎥 Code along :: Bootstrapping Duke Forest houses  📘 ims - chp 11  📘 ims - chp 12\n\n🧑‍🏫 Interval estimation\n\n\n\n\n\nWed, Apr 15\n🎥 Hypothesis testing  📘 ims - chp 11\n\n🧑‍🏫 Hypothesis testing\n\n\n\n\n\nThu, Apr 16\n\n💻 Lab 8\n\nLab 8 @ end of section\n\n\n15\nMon, Apr 20\n\n🧑‍🏫 More inference\n\n\n\n\n\nWed, Apr 22\n\n🧑‍🏫 Farewell!\n\nHW 7 @ 11:59 pm\n\n\n\nThu, Apr 23\n\n❌ Reading Days - No Lab\n\n\n\n\n\n16\nFri, May 1\n\n📝 Final (2pm - 5pm)",
     "crumbs": [
       "Syllabus",
       "Schedule"
@@ -11313,7 +12216,7 @@
     "href": "slides/19-logistic-regression-1.html#back-to-the-example",
     "title": "Logistic regression",
     "section": "Back to the example…",
-    "text": "Back to the example…\n\\[\n\\log\\left(\\frac{\\hat{p}}{1-\\hat{p}}\\right)\n=\n-2.27\n+\n0.000272\\times exclaim~mess\n\\]\nIf we add one exclamation mark to the model, we predict the odds of an email being spam to be higher by a multiplicative factor of \\(e^{0.000272}\\approx 1.000272\\) on average."
+    "text": "Back to the example…\n\\[\n\\log\\left(\\frac{\\hat{p}}{1-\\hat{p}}\\right)\n=\n-2.27\n+\n0.000272\\times exclaim~mess\n\\]\nIf the email has an additional exclamation mark, we predict the odds of an email being spam to be higher by a multiplicative factor of \\(e^{0.000272}\\approx 1.000272\\) on average."
   },
   {
     "objectID": "slides/19-logistic-regression-1.html#logistic-regression---classification",
@@ -11628,7 +12531,7 @@
     "href": "slides/19-logistic-regression-1-slides.html#back-to-the-example",
     "title": "Logistic regression",
     "section": "Back to the example…",
-    "text": "Back to the example…\n\\[\n\\log\\left(\\frac{\\hat{p}}{1-\\hat{p}}\\right)\n=\n-2.27\n+\n0.000272\\times exclaim~mess\n\\]\nIf we add one exclamation mark to the model, we predict the odds of an email being spam to be higher by a multiplicative factor of \\(e^{0.000272}\\approx 1.000272\\) on average."
+    "text": "Back to the example…\n\\[\n\\log\\left(\\frac{\\hat{p}}{1-\\hat{p}}\\right)\n=\n-2.27\n+\n0.000272\\times exclaim~mess\n\\]\nIf the email has an additional exclamation mark, we predict the odds of an email being spam to be higher by a multiplicative factor of \\(e^{0.000272}\\approx 1.000272\\) on average."
   },
   {
     "objectID": "slides/19-logistic-regression-1-slides.html#logistic-regression---classification",
