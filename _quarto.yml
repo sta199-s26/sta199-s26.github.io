@@ -129,6 +129,8 @@ website:
         contents:
           - href: exams/midterm-1.qmd
             text: Midterm 1
+          - href: exams/midterm-2.qmd
+            text: Midterm 2
 
 
 
