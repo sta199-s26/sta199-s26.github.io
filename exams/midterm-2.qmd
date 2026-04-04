@@ -487,7 +487,7 @@ blizzard_salary |>
 q_no <- q_no + 1
 ```
 
-## Question `{r} q_no`
+### Question `{r} q_no`
 
 You fit a model for predicting raises (`percent_incr`) from salaries (`annual_salary`). We'll call this model `raise_1_fit`. A tidy output of the model is shown below.
 
@@ -510,7 +510,7 @@ d.  For every additional \$1,000 of annual salary, the model predicts the raise 
 q_no <- q_no + 1
 ```
 
-## Question `{r} q_no`
+### Question `{r} q_no`
 
 You then fit a model for predicting raises (`percent_incr`) from salaries (`annual_salary`) and performance ratings (`performance_rating`). We'll call this model `raise_2_fit`. Which of the following is definitely true based on the information you have so far?
 
@@ -524,7 +524,7 @@ d.  $R^2$ of `raise_2_fit` is higher $R^2$ of `raise_1_fit`.
 q_no <- q_no + 1
 ```
 
-## Question `{r} q_no`
+### Question `{r} q_no`
 
 The tidy model output for the `raise_2_fit` model you fit is shown below.
 
@@ -546,7 +546,7 @@ How would you respond to your teammate?
 q_no <- q_no + 1
 ```
 
-## Question `{r} q_no`
+### Question `{r} q_no`
 
 Ultimately, your teammate decides they don't like the negative slope coefficients in the model output you created (not that there's anything wrong with negative slope coefficients!), does something else, and comes up with the following model output.
 
@@ -588,7 +588,7 @@ d.  Poor, Successful, High, Top
 q_no <- q_no + 1
 ```
 
-## Question `{r} q_no`
+### Question `{r} q_no`
 
 Suppose we fit a model to predict `percent_incr` from `annual_salary` and `salary_type`. A tidy output of the model is shown below.
 
@@ -719,7 +719,7 @@ ggplot(
 q_no <- q_no + 1
 ```
 
-## Question `{r} q_no`
+### Question `{r} q_no`
 
 Suppose you now fit a model to predict the natural log of percent increase, `log(percent_incr)`, from performance rating. The model is called `raise_4_fit`.
 
