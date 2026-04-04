@@ -69,8 +69,8 @@ i. What is the difference between $Y=\beta_0+\beta_1 X + \varepsilon$ and $\hat{
 i. Under what circumstances is the intercept in a regression model a meaningful quantity?
 i. If you run a "simple" linear regression model with a numerical response and a categorical predictor with three levels, what does the computer actually do to estimate that model?
 i. The second argument to the `fit` command is always the data frame you're working with. What is the first argument? What does it do, and how do you use it?
-i. Let $\hat{y}^{(\text{old})}$ be the prediction at $x$ of a simple linear regression, and let $\hat{y}^{(\text{new})}$ be the prediction at $x+1$ of the same regression. How are $\hat{y}^{(\text{old})}$ and $\hat{y}^{(\text{new})}$ related? In other words, how does the prediction of the simplie linear regression model change when you change the input from $x$ to $x+1$?
-i. Let $\hat{o}^{(\text{old})}$ be the estimated odds at $x$ from a simple logistic regression model, and let $\hat{o}^{(\text{new})}$ be the estimated odds at $x+1$ of the same regression. How are $\hat{o}^{(\text{old})}$ and $\hat{o}^{(\text{new})}$ related? In other words, how does the prediction of the simplie logistic regression model change when you change the input from $x$ to $x+1$?
+i. Let $\hat{y}^{(\text{old})}$ be the prediction at $x$ of a simple linear regression, and let $\hat{y}^{(\text{new})}$ be the prediction at $x+1$ of the same regression. How are $\hat{y}^{(\text{old})}$ and $\hat{y}^{(\text{new})}$ related? In other words, how does the prediction of the simple linear regression model change when you change the input from $x$ to $x+1$?
+i. Let $\hat{o}^{(\text{old})}$ be the estimated odds at $x$ from a simple logistic regression model, and let $\hat{o}^{(\text{new})}$ be the estimated odds at $x+1$ of the same regression. How are $\hat{o}^{(\text{old})}$ and $\hat{o}^{(\text{new})}$ related? In other words, how does the prediction of the simple logistic regression model change when you change the input from $x$ to $x+1$?
 i. Why is adjusted $R^2$ a better model selection criterion than unadjusted $R^2$?
 
 # Visual understanding
@@ -395,7 +395,7 @@ logistic_reg() |>
   tidy()
 ```
 
-> If an email contains no exclamation marks, no dollar signs, and no mentions of viagra, then the model predicts that the probability of it being spam are $e^{-2.218}\approx 0.10886$.
+> If an email contains no exclamation marks, no dollar signs, and no mentions of viagra, then the model predicts that the probability of it being spam is $e^{-2.218}\approx 0.10886$.
 
 
 ```{r}
@@ -413,7 +413,7 @@ linear_reg() |>
   tidy()
 ```
 
-> If a male penguin has a bill depth of 0mm (sad!), then we expect its bill length is to be 60.99mm on average.
+> If a male penguin has a bill depth of 0mm (sad!), then we expect its bill length to be 60.99mm on average.
 
 
 ```{r}
