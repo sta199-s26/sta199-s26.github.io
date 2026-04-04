@@ -497,13 +497,17 @@ window.Quarto = {
   <li>
 <a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis">Data analysis</a>
   <ul class="collapse">
-<li><a href="#blizzard-salaries" id="toc-blizzard-salaries" class="nav-link" data-scroll-target="#blizzard-salaries">Blizzard salaries</a></li>
-  <li><a href="#question-21" id="toc-question-21" class="nav-link" data-scroll-target="#question-21">Question 21</a></li>
+<li>
+<a href="#blizzard-salaries" id="toc-blizzard-salaries" class="nav-link" data-scroll-target="#blizzard-salaries">Blizzard salaries</a>
+  <ul class="collapse">
+<li><a href="#question-21" id="toc-question-21" class="nav-link" data-scroll-target="#question-21">Question 21</a></li>
   <li><a href="#question-22" id="toc-question-22" class="nav-link" data-scroll-target="#question-22">Question 22</a></li>
   <li><a href="#question-23" id="toc-question-23" class="nav-link" data-scroll-target="#question-23">Question 23</a></li>
   <li><a href="#question-24" id="toc-question-24" class="nav-link" data-scroll-target="#question-24">Question 24</a></li>
   <li><a href="#question-25" id="toc-question-25" class="nav-link" data-scroll-target="#question-25">Question 25</a></li>
   <li><a href="#question-26" id="toc-question-26" class="nav-link" data-scroll-target="#question-26">Question 26</a></li>
+  </ul>
+</li>
   <li>
 <a href="#movies" id="toc-movies" class="nav-link" data-scroll-target="#movies">Movies</a>
   <ul class="collapse">
@@ -585,7 +589,7 @@ window.Quarto = {
 </ul>
 </li>
 </ul>
-<p><a href="https://edstem.org/us/courses/90224/discussion/7626328">Here</a> is our advice about how you should prioritize your studying. Below are 33 practice questions to get your wheels spinning.</p>
+<p><a href="https://edstem.org/us/courses/90224/discussion/7626328">Here</a> is our advice about how you should prioritize your studying. Below are 35 practice questions to get your wheels spinning.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -947,7 +951,7 @@ Try this
 # ℹ 399 more rows</code></pre>
 </div>
 </div>
-</section><section id="question-21" class="level2"><h2 class="anchored" data-anchor-id="question-21">Question 21</h2>
+<section id="question-21" class="level3"><h3 class="anchored" data-anchor-id="question-21">Question 21</h3>
 <p>You fit a model for predicting raises (<code>percent_incr</code>) from salaries (<code>annual_salary</code>). We’ll call this model <code>raise_1_fit</code>. A tidy output of the model is shown below.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -964,7 +968,7 @@ Try this
 <li>For every additional $1,000 of annual salary, the raise goes up by 0.0155%.</li>
 <li>For every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 0.0155%.</li>
 <li>For every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 1.87%.</li>
-</ol></section><section id="question-22" class="level2"><h2 class="anchored" data-anchor-id="question-22">Question 22</h2>
+</ol></section><section id="question-22" class="level3"><h3 class="anchored" data-anchor-id="question-22">Question 22</h3>
 <p>You then fit a model for predicting raises (<code>percent_incr</code>) from salaries (<code>annual_salary</code>) and performance ratings (<code>performance_rating</code>). We’ll call this model <code>raise_2_fit</code>. Which of the following is definitely true based on the information you have so far?</p>
 <ol type="a">
 <li>Intercept of <code>raise_2_fit</code> is higher than intercept of <code>raise_1_fit</code>.</li>
@@ -972,7 +976,7 @@ Try this
 <li>Adjusted <span class="math inline">\(R^2\)</span> of <code>raise_2_fit</code> is higher than adjusted <span class="math inline">\(R^2\)</span> of <code>raise_1_fit</code>.</li>
 <li>
 <span class="math inline">\(R^2\)</span> of <code>raise_2_fit</code> is higher <span class="math inline">\(R^2\)</span> of <code>raise_1_fit</code>.</li>
-</ol></section><section id="question-23" class="level2"><h2 class="anchored" data-anchor-id="question-23">Question 23</h2>
+</ol></section><section id="question-23" class="level3"><h3 class="anchored" data-anchor-id="question-23">Question 23</h3>
 <p>The tidy model output for the <code>raise_2_fit</code> model you fit is shown below.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -991,7 +995,7 @@ Try this
 <p>“The coefficient for <code>performance_ratingSuccessful</code> is negative. That’s weird. I guess it means that people who get successful performance ratings get lower raises.”</p>
 </blockquote>
 <p>How would you respond to your teammate?</p>
-</section><section id="question-24" class="level2"><h2 class="anchored" data-anchor-id="question-24">Question 24</h2>
+</section><section id="question-24" class="level3"><h3 class="anchored" data-anchor-id="question-24">Question 24</h3>
 <p>Ultimately, your teammate decides they don’t like the negative slope coefficients in the model output you created (not that there’s anything wrong with negative slope coefficients!), does something else, and comes up with the following model output.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -1016,7 +1020,7 @@ Try this
 <li>“Successful”, “High”, “Top”</li>
 <li>“Top”, “High”, “Successful”, “Poor”</li>
 <li>Poor, Successful, High, Top</li>
-</ol></section><section id="question-25" class="level2"><h2 class="anchored" data-anchor-id="question-25">Question 25</h2>
+</ol></section><section id="question-25" class="level3"><h3 class="anchored" data-anchor-id="question-25">Question 25</h3>
 <p>Suppose we fit a model to predict <code>percent_incr</code> from <code>annual_salary</code> and <code>salary_type</code>. A tidy output of the model is shown below.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -1080,7 +1084,7 @@ Try this
 Figure&nbsp;1: Visualizations of the relationship between percent increase, annual salary, and salary type
 </figcaption></figure>
 </div>
-</section><section id="question-26" class="level2"><h2 class="anchored" data-anchor-id="question-26">Question 26</h2>
+</section><section id="question-26" class="level3"><h3 class="anchored" data-anchor-id="question-26">Question 26</h3>
 <p>Suppose you now fit a model to predict the natural log of percent increase, <code>log(percent_incr)</code>, from performance rating. The model is called <code>raise_4_fit</code>.</p>
 <p>You’re provided the following:</p>
 <div class="cell">
@@ -1102,7 +1106,7 @@ Figure&nbsp;1: Visualizations of the relationship between percent increase, annu
 <p>b. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by 6.93% compared to the employees with Poor performance rating.</p>
 <p>c. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 1025 compared to the employees with Poor performance rating.</p>
 <p>d. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 6.93 compared to the employees with Poor performance rating.</p>
-</section><section id="movies" class="level2"><h2 class="anchored" data-anchor-id="movies">Movies</h2>
+</section></section><section id="movies" class="level2"><h2 class="anchored" data-anchor-id="movies">Movies</h2>
 <p>The data for this part comes from the Internet Movie Database (IMDB). Specifically, the data are a random sample of movies released between 1980 and 2020.</p>
 <p>The name of the data frame used for this analysis is <code>movies</code>, and it contains the variables shown in <a href="#tbl-data-dictionary" class="quarto-xref">Table&nbsp;1</a>.</p>
 <div id="tbl-data-dictionary" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[20,80]">
