@@ -92,7 +92,7 @@
     "href": "exams/midterm-2.html#question-18",
     "title": "Midterm 2 Study Guide",
     "section": "Question 18",
-    "text": "Question 18\nSome chooch ran this regression and wrote the following interpretation:\n\nlogistic_reg() |&gt;\n  fit(spam ~ exclaim_mess + viagra + dollar, email) |&gt;\n  tidy()\n\n# A tibble: 4 × 5\n  term         estimate std.error statistic p.value\n  &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 (Intercept)  -2.22      0.0568   -39.1    0      \n2 exclaim_mess  0.00189   0.00108    1.75   0.0794 \n3 viagra        1.86     40.6        0.0459 0.963  \n4 dollar       -0.0656    0.0208    -3.15   0.00165\n\n\n\nIf an email contains no exclamation marks, no dollar signs, and no mentions of viagra, then the model predicts that the probability of it being spam are \\(e^{-2.218}\\approx 0.10886\\).",
+    "text": "Question 18\nSome chooch ran this regression and wrote the following interpretation:\n\nlogistic_reg() |&gt;\n  fit(spam ~ exclaim_mess + viagra + dollar, email) |&gt;\n  tidy()\n\n# A tibble: 4 × 5\n  term         estimate std.error statistic p.value\n  &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 (Intercept)  -2.22      0.0568   -39.1    0      \n2 exclaim_mess  0.00189   0.00108    1.75   0.0794 \n3 viagra        1.86     40.6        0.0459 0.963  \n4 dollar       -0.0656    0.0208    -3.15   0.00165\n\n\n\nIf an email contains no exclamation marks, no dollar signs, and no mentions of viagra, then the model predicts that the probability of it being spam is \\(e^{-2.218}\\approx 0.10886\\).",
     "crumbs": [
       "Exam Study Guides",
       "Midterm 2"
@@ -103,7 +103,7 @@
     "href": "exams/midterm-2.html#question-19",
     "title": "Midterm 2 Study Guide",
     "section": "Question 19",
-    "text": "Question 19\nSome nincompoop ran this regression and wrote the following interpretation:\n\nlinear_reg() |&gt;\n  fit(bill_length_mm ~ bill_depth_mm + sex, penguins) |&gt;\n  tidy()\n\n# A tibble: 3 × 5\n  term          estimate std.error statistic  p.value\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)      61.0      2.35      26.0  7.39e-82\n2 bill_depth_mm    -1.15     0.141     -8.16 7.35e-15\n3 sexmale           5.44     0.555      9.81 4.18e-20\n\n\n\nIf a male penguin has a bill depth of 0mm (sad!), then we expect its bill length is to be 60.99mm on average.",
+    "text": "Question 19\nSome nincompoop ran this regression and wrote the following interpretation:\n\nlinear_reg() |&gt;\n  fit(bill_length_mm ~ bill_depth_mm + sex, penguins) |&gt;\n  tidy()\n\n# A tibble: 3 × 5\n  term          estimate std.error statistic  p.value\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)      61.0      2.35      26.0  7.39e-82\n2 bill_depth_mm    -1.15     0.141     -8.16 7.35e-15\n3 sexmale           5.44     0.555      9.81 4.18e-20\n\n\n\nIf a male penguin has a bill depth of 0mm (sad!), then we expect its bill length to be 60.99mm on average.",
     "crumbs": [
       "Exam Study Guides",
       "Midterm 2"
