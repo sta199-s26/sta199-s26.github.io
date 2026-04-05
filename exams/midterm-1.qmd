@@ -6,7 +6,7 @@ execute:
 ---
 
 ::: callout-note
-Answer are [here](https://sta199-s26.github.io/exams/midterm-1-answers.html).
+Answer are [here](/exams/midterm-1-answers.html).
 :::
 
 ```{r}
