@@ -1,0 +1,101 @@
+---
+title: "Midterm 2 Study Guide Solutions"
+format: html
+---
+
+# Concepts and main ideas
+
+1. Rapid-fire:
+
+    i. The line is chosen to make the sum of *squared* residuals as small as possible;
+    i. It measures the strength and direction of the linear association between two numerical variables;
+    i. It measures the proportion of the variation in the response variable explained by the model;
+    i. Always Be Visualizing! Wildly different datasets could have very similar numerical summaries. Actually plot the data so that you aren't fooled;
+    i. $Y=\beta_0+\beta_1 X + \varepsilon$ is the "true," population relationship between $X$ and $Y$. $\hat{Y}=b_0+b_1 X$ is the estimated relationship based on a sample of imperfect data;
+    i. If it makes sense for the predictor to take on a value of zero, and if the model prediction at zero is a value that the response could plausibly take, then the intercept is meaningful;
+    i. The computer creates two dummy variables indicating whether or not an observation belongs to the two levels of the categorical predictor that are not the base level. Then it runs a multiple linear regression with those two dummies as predictors;
+    i. A formula goes in the blank. This is `R` syntax like `y ~ x + z` where you tell the computer which columns in your data frame you want to use, and how to use them. Predictors go on the righthand side of the tilde, and the response variable goes on the left;
+    i. $\hat{y}^{(\text{new})} = \hat{y}^{(\text{old})} + b_1$;
+    i. $\hat{o}^{(\text{new})}=\hat{o}^{(\text{old})}\times e^{b_1}$;
+    i. Unadjusted $R^2$ always goes up when you add any new variable to a linear regression model, even if that variable is worthless. Unadjusted $R^2$ penalizes the addition of irrelevant predictors.
+    
+
+# Visual understanding
+
+## S-curves
+
+3. c. This is the plain vanilla one.
+4. e. Like an additive linear regression, the inclusion of the categorical predictor (with two levels) means that each level gets its own curve.
+5. f. Negative slope means the probability goes down as $x$ increases.
+6. d. The negative intercept makes the probability at $x=0$ tiny, so the curve shifts right.
+7. a. The bigger slope means the probability increases faster as $x$ increases, so steep curve.
+8. b. The itty bitty slope means the probability increases slower as $x$ increases, so flatter curve.
+
+## ROC
+
+9. c
+10. a
+11. d
+12. b
+
+
+# WANANA doctor
+
+13. Causal-sounding language that makes the prediction sound like a guarantee.
+14. A one unit (which is measured in thousands of characters here) increase in the predictor is associated with a decrease by -0.0621 in the estimated *log-odds*, not the probability. 
+15. Holding bill length constant, a one unit increase in flipper length is associated with a 48.14 gram *increase* in body mass, on average.
+16. 1.74 is not the slope between flipper length and body mass for Chinstrap penguins. It's the *adjustment* that must be made to the baseline slope of 32.8 in order to get the Chinstrap slope. Those interaction terms are slope adjusters, not slopes themselves.
+17. $R^2$ is percent of variation in the *response* that is explained by the model. `mpg` is the predictor here (since it's to the right of the tilde).
+18. $e^{-2.218}\approx 0.10886$ is the *odds* of the email being spam. The probability would be
+
+$$
+\frac{e^{-2.218}}{1+e^{-2.218}}\approx 0.098.
+$$
+
+
+
+19. The base level is female, not male, so the intercept applies to the female penguins.
+20. Correlation applies to *pairs* of numerical variables. We don't talk about correlation between three variables. Since this is multiple linear regression instead of simple, we cannot interpret the $R^2$ as literally the square of a correlation coefficient.
+
+
+# Data analysis
+
+## Blizzard
+
+
+21.  \(c\) For every additional \$1,000 of annual salary, the model predicts the raise to be higher, on average, by 0.0155%.
+22.  \(d\) $R^2$ of `raise_2_fit` is higher than $R^2$ of `raise_1_fit` since `raise_2_fit` has one more predictor
+23.  The reference level of `performance_rating` is High, since it’s the first level alphabetically. Therefore, the coefficient -2.40% is the predicted difference in raise comparing High to Successful. In this context a negative coefficient makes sense since we would expect those with High performance rating to get higher raises than those with Successful performance.
+24.  \(a\) “Poor”, “Successful”, “High”, “Top”.
+25.  \(c\) Option 3. It's a linear model with no interaction effect, so parallel lines. And since the slope for `salary_typeSalaried` is positive, its intercept is higher. The equations of the lines are as follows:
+      - Hourly:
+$$
+\begin{align*}
+\widehat{percent\_incr} &= 1.24 + 0.0000137 \times annual\_salary + 0.913 \times salary\_typeSalaried \\
+&= 1.24 + 0.0000137 \times annual\_salary + 0.913 \times 0 \\
+&= 1.24 + 0.0000137 \times annual\_salary
+\end{align*}
+$$
+
+      - Salaried:
+$$
+\begin{align*}
+\widehat{percent\_incr} &= 1.24 + 0.0000137 \times annual\_salary + 0.913 \times salary\_typeSalaried \\
+&= 1.24 + 0.0000137 \times annual\_salary + 0.913 \times 1 \\
+&= 2.153 + 0.0000137 \times annual\_salary
+\end{align*}
+$$
+
+26.  \(c\) The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 1025 compared to the employees with Poor performance rating.
+
+## Movies
+
+27.  \(d\) `as.numeric(str_remove(runtime, " mins"))`
+28.  \(e\) Blue City $>$ Rang De Basanti $>$ Winter Sleep
+29.  \(b\) 31% of the variability in movie scores is explained by their runtime.
+30. \(a\) summarize
+31. \(b\) A value between 0 and 0.434.
+32. \(e\) G-rated movies that are 0 minutes in length are predicted to score, on average, 4.525 points.
+33. \(c\) All else held constant, for each additional minute of runtime, movie scores will be higher by 0.021 points on average.
+34. \(c\) is greater than
+35. \(a\) $\widehat{score} = (4.525 - 0.257) + 0.021 \times runtime$
