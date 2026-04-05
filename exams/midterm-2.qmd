@@ -4,6 +4,10 @@ execute:
   echo: false
 ---
 
+::: callout-note
+Answer are [here](/exams/midterm-2-answers.html).
+:::
+
 ```{r}
 #| label: load-packages
 #| message: false
@@ -177,11 +181,11 @@ curve(exp(b0 + b1 * x) / (1 + exp(b0 + b1 * x)), from = min(x), to = max(x), n =
 ```
 
 a. $\log\left(\frac{\hat{p}}{1-\hat{p}}\right) = 22.9 + 4.54 \times x$
-a. $\log\left(\frac{\hat{p}}{1-\hat{p}}\right) = 0.118 + 0.246 \times x$
-a. $\log\left(\frac{\hat{p}}{1-\hat{p}}\right) = 0.798 + 0.486 \times x$
-a. $\log\left(\frac{\hat{p}}{1-\hat{p}}\right) = -6.035 + 1.194 \times x$
-a. $\log\left(\frac{\hat{p}}{1-\hat{p}}\right) = -2.26 - 0.99 \times x+1.26\times z$
-a. $\log\left(\frac{\hat{p}}{1-\hat{p}}\right) = 0.079  -0.373 \times x$
+b. $\log\left(\frac{\hat{p}}{1-\hat{p}}\right) = 0.118 + 0.246 \times x$
+c. $\log\left(\frac{\hat{p}}{1-\hat{p}}\right) = 0.798 + 0.486 \times x$
+d. $\log\left(\frac{\hat{p}}{1-\hat{p}}\right) = -6.035 + 1.194 \times x$
+e. $\log\left(\frac{\hat{p}}{1-\hat{p}}\right) = -2.26 - 0.99 \times x+1.26\times z$
+f. $\log\left(\frac{\hat{p}}{1-\hat{p}}\right) = 0.079  -0.373 \times x$
 
 ### Questions 9 - 12
 
