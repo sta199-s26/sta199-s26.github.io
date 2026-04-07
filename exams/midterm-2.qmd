@@ -31,6 +31,8 @@ Midterm Exam 2 focuses on the modeling material that has been introduced since s
 - [Lecture 19 (logistic regression)](/slides/19-logistic-regression-1.html)
      - [Application exercise 19 (spam filter)](/ae/ae-19-spam-filter.html)
 - [Lecture 20 (logistic regression)](/slides/20-logistic-regression-2.html)
+     - [Application exercise 20 (forests)](/ae/ae-20-forest-classification.html)
+- [Lecture 21 (logistic regression)](/slides/21-logistic-regression-3.html)
 - [Lab 6](/lab/lab-6.html)
 - [Lab 7](/lab/lab-7.html)
 - [HW 5](/hw/hw-5.html)
