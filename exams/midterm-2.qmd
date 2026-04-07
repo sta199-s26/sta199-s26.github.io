@@ -291,7 +291,7 @@ email_aug |>
 
 # WANANA doctor
 
-Fix the interpretive mistakes below.
+What's wrong with the interpretations below? Diagnose the problem and fix it if possible.
 
 ```{r}
 q_no <- 12
@@ -1131,7 +1131,7 @@ Which of the following is the [**best**]{.underline} interpretation of the slope
 
 a.  All else held constant, as runtime increases by 1 minute, the score of the movie increases by 0.021 points.
 
-b.  For G-rated movies, all else held constant, as runtime increases by 1 minute, the score of the movie increases by 0.021 points.
+b.  For G-rated movies, all else held constant, as runtime increases by 1 minute, we predict the score of the movie to be higher by 0.021 points on average.
 
 c.  All else held constant, for each additional minute of runtime, movie scores will be higher by 0.021 points on average.
 
