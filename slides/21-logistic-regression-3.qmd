@@ -127,6 +127,23 @@ Which of the following is a correct description of how the predictions of a logi
 :::
 ::::::
 
+## Friday: Momentum Showcase
+
+:::::: columns
+:::: {.column width="50%"}
+![](images/21/momentum.png)
+::::
+
+::: {.column width="50%"}
+
+- Insta: [@momentum_duke](https://www.instagram.com/momentum_duke/)
+- Friday April 10 @ 7pm
+- Reynolds Theatre
+- Lily! Katarina! 
+
+:::
+::::::
+
 ## Saturday: DBBH's Spring Business Conference
 
 :::::: columns
@@ -158,6 +175,40 @@ Which of the following is a correct description of how the predictions of a logi
 - Saturday April 11 @ 7pm
 - Reynolds Industries Theater
 - Classmates! More Shelly Han!
+
+:::
+::::::
+
+## Saturday: Nakisai Showcase
+
+:::::: columns
+:::: {.column width="45%"}
+![](images/21/nakisai.jpeg)
+::::
+
+::: {.column width="55%"}
+
+- Insta: [@dukenakisaiade](https://www.instagram.com/dukenakisaiade/)
+- Saturday April 11 @ 7pm
+- Page Auditorium
+- #DOMOREBELIT
+
+:::
+::::::
+
+## Saturday: Pureun Showcase
+
+:::::: columns
+:::: {.column width="40%"}
+
+::::
+
+::: {.column width="60%"}
+
+- Insta: [@duke_pureun](https://www.instagram.com/duke_pureun/)
+- Saturday April 11 @ 8pm
+- Page Auditorium
+- Makky! Mia! 
 
 :::
 ::::::
