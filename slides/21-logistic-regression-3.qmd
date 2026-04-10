@@ -200,13 +200,13 @@ Which of the following is a correct description of how the predictions of a logi
 
 :::::: columns
 :::: {.column width="40%"}
-
+![](images/21/pureun.png)
 ::::
 
 ::: {.column width="60%"}
 
 - Insta: [@duke_pureun](https://www.instagram.com/duke_pureun/)
-- Saturday April 11 @ 8pm
+- Saturday April 11 @ 8:15pm
 - Page Auditorium
 - Makky! Mia! 
 
@@ -230,7 +230,7 @@ Which of the following is a correct description of how the predictions of a logi
 :::
 ::::::
 
-## Sunday: Chinese Music
+## Sunday: Chinese Music Ensemble
 
 :::::: columns
 :::: {.column width="45%"}
