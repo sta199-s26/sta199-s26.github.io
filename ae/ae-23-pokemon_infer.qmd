@@ -1,0 +1,202 @@
+---
+title: "AE 23: Pokemon Inference"
+---
+
+Today we’ll explore the question “Are taller Pokémon speedier or faster than shorter Pokémon?”
+
+# Packages
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(tidymodels)
+```
+
+# Data
+
+The data for this application exercise was originally gathered using the [**Complete Pokémon Dataset**](https://www.kaggle.com/datasets/rounakbanik/pokemon) from Kaggle. 
+
+First, let's load the data:
+
+```{r}
+#| label: load-data
+#| message: false
+
+pokemon <- read_csv("data/pokemon.csv")
+
+
+```
+
+To keep things simple, we'll work with a subset of the data, the generation 4 Pokémon.
+
+```{r}
+pokemon <- pokemon |>
+  filter(generation == 4)
+
+glimpse(pokemon)
+```
+
+We are interested in whether a Pokémon's log height (measured in meters) can predict its speed (how fast it is).
+
+# Visualize
+
+a. Review! Create a new variable for the Pokémon's log height.
+
+```{r}
+pokemon <- pokemon |>
+  mutate(log_height = log(height_m))
+```
+
+
+a. **Your turn**: Plot the data and the line of best fit.
+
+```{r}
+#| message: false
+ggplot(pokemon, aes(x = log_height, y = speed)) + 
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
+
+# Point Estimation
+
+a.  **Your turn**: Fit the linear model to these data:
+
+```{r}
+observed_fit <- pokemon |>
+  specify(speed ~ log_height) |>
+  fit()
+observed_fit
+```
+
+::: callout-note 
+This gives the exact same numbers that you get if you use `linear_reg() |> fit()`, but we need this new syntax because it plays nice with the tools we have for confidence intervals and hypothesis tests. I know, I hate it too, but it's the way it is.
+:::
+
+b.  **Your turn**: Typeset the equation for the model fit:
+
+$$
+\widehat{\text{speed}} = 72.41 + 7.39\times \log(\text{height})
+$$
+
+c.  **Your turn**: Interpret the slope and the intercept estimates:
+
+    -   If a Pokémon had 0 log(height) (equivalently 1 m tall), we predict that it would have a 72.41 speed stat on average;
+    -   A \$1 increase in log(height) is associated with a 7.39 increase in speed, on average.
+
+# Interval Estimation
+
+a.  **Demo**: Using seed `24601`, generate `500` bootstrap samples, and store them in a new data frame called `bstrap_samples`.
+
+```{r}
+set.seed(24601)
+bstrap_samples <- pokemon |>
+  specify(speed ~ log_height) |>
+  generate(reps = 500, type = "bootstrap")
+```
+
+b.  **Demo**: Fit a linear model to each of these bootstrap samples and store the estimates in a new data framed called `bstrap_fits`.
+
+```{r}
+bstrap_fits <- bstrap_samples |> 
+  fit()
+```
+
+c.  **Your turn**: Use `linear_reg() |> fit(...)` to fit a linear model to bootstrap sample number *347*, and verify that you get the same estimates as the ones contained in `bstrap_fits`.
+
+```{r}
+replicate_347 <- bstrap_samples |>
+  filter(
+    replicate == 347
+  )
+
+linear_reg() |>
+  fit(speed ~ log_height, data = replicate_347) |>
+  tidy()
+
+bstrap_fits |>
+  filter(replicate == 347)
+```
+
+::: callout-note 
+The only point I'm making here is that this new bootstrap code is not performing a fundamentally new task. It's performing an old task (fitting the linear model), but it's repeating it A LOT. So the numbers you get here are not mysterious. They're numbers you already know how to compute.
+:::
+
+d.  **Demo**: Compute 95% confidence intervals for the slope and the intercept using the `get_confidence_interval` command.
+
+```{r}
+ci_95 <- get_confidence_interval(
+  bstrap_fits,
+  point_estimate = observed_fit,
+  level = 0.90,
+  type = "percentile"
+)
+ci_95
+```
+
+e.  **Your turn**: Verify that you get the same numbers when you manually calculate the quantiles of the slope estimates using `summarize` and `quantile`. *Pay attention to the grouping*.
+
+```{r}
+bstrap_fits |>
+  ungroup() |>
+  group_by(term) |>
+  summarize(
+    lower_ci = quantile(estimate, 0.05),
+    upper_ci = quantile(estimate, 0.95)
+  )
+```
+
+::: callout-note 
+Same point as before. There's no magic here. `get_confidence_interval` is just a convenient way of doing something that you already knew how to do.s
+:::
+
+f. **BONUS**: You can visualize the confidence interval:
+
+```{r}
+visualize(bstrap_fits) + 
+  shade_confidence_interval(ci_95)
+```
+
+
+# Hypothesis Testing
+
+Let's consider the hypotheses:
+
+$$
+H_0:\beta_1=0\quad vs\quad H_A: \beta_1\neq 0.
+$$ The null hypothesis corresponds to the claim that log_height and speed are uncorrelated.
+
+a.  Simulate and plot the null distribution for the slope:
+
+```{r}
+#| message: false
+set.seed(24601)
+null_dist <- pokemon |>
+  specify(speed ~ log_height) |>
+  hypothesize(null = "independence") |>
+  generate(reps = 500, type = "permute") |>
+  fit()
+
+null_dist |>
+  filter(term == "log_height") |>
+  ggplot(aes(x = estimate)) + 
+  geom_histogram()
+```
+
+b.  Add a vertical line to your plot indicating the point estimate of the slope from your original data analysis:
+
+```{r}
+visualize(null_dist) +
+  shade_p_value(obs_stat = observed_fit, direction = "two-sided")
+```
+
+c.  Compute the $p$-value for this test and interpret it:
+
+```{r}
+#| warning: false
+null_dist |>
+  get_p_value(obs_stat = observed_fit, direction = "two-sided")
+```
+
+**Answer**: If the null were true and $\beta_1=0$ (meaning log_height and speed are uncorrelated), the probability of getting an estimate as or more extreme than the one we got ($b_1=7.39$) is 0.028. So we reject the null hypothesis. Evidence is sufficient to conclude that $\beta_1$, whatever it is, is not equal to zero.
