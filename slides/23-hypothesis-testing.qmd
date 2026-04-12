@@ -1,0 +1,39 @@
+---
+title: "Hypothesis testing"
+subtitle: "Lecture 23"
+author: Josh Lim
+date: "2026-04-15"
+format: 
+  revealjs: 
+    output-file: 23-hypothesis-testing-slides.html
+    footer: "[🔗 sta199-s26.github.io](https://sta199-s26.github.io/)"
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+    logo: images/logo.png
+    toc: false
+  html: 
+    code-link: true
+---
+
+
+## While you wait: Participate 📱💻 {.small}
+
+:::::: columns
+:::: {.column width="70%"}
+::: wooclap
+
+TBD
+
+::: wooclap-choices
+- TBD
+- TBD
+:::
+
+:::
+::::
+
+::: {.column width="30%"}
+{{< include _wooclap-column.qmd >}}
+:::
+::::::
