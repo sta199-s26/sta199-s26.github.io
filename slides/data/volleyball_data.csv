@@ -1,0 +1,430 @@
+"name","height","weight","spike","block","is_Libero"
+"Angelina Lazarenko",193,80,320,305,FALSE
+"Svetlana Serbina",182,71,295,284,FALSE
+"Ekaterina Shkurikhina",190,72,306,296,FALSE
+"Kristina Kurnosova",176,62,288,278,TRUE
+"Ekaterina Novikova",181,70,290,275,FALSE
+"Victoria Zhurbenko",186,67,306,297,FALSE
+"Angelina Sperskaite",188,72,305,295,FALSE
+"Anastasiia Barchuk",187,78,305,297,FALSE
+"Anastasiia Cheremisina",187,80,305,298,FALSE
+"Anna Lazareva",190,67,315,300,FALSE
+"Tatiana Iurinskaia",195,69,305,275,FALSE
+"Sabina Gilfanova",187,79,300,296,FALSE
+"Drussyla Costa",182,73,304,286,FALSE
+"Lana Conceição",175,72,292,281,FALSE
+"Ariane Pinto",191,79,291,284,FALSE
+"Laiza Ferreira",181,71,301,285,FALSE
+"Gabriela Candido Da Silva",181,75,296,285,FALSE
+"Gabriela Silva",182,75,296,281,FALSE
+"Karoline Tormena",187,69,295,284,FALSE
+"Lorenne Geraldo Teixeira",187,72,306,289,FALSE
+"Thais Oliveira",172,69,275,272,FALSE
+"Lais Vasques",171,70,275,274,TRUE
+"Lyara Medeiros",184,67,297,285,FALSE
+"Maiara Basso",186,80,287,276,FALSE
+"Nanami Hirose",177,61,301,295,FALSE
+"Misaki Shirai",175,70,293,278,FALSE
+"Yurika Kono",177,60,292,282,FALSE
+"Yuka Kitsui",172,60,294,283,FALSE
+"Haruka Maruo",176,64,293,283,FALSE
+"Haruka Kanamori",176,66,297,290,FALSE
+"Moeri Hanai",167,60,280,272,TRUE
+"Mizuki Yanagita",168,64,300,290,FALSE
+"Yuka Onodera",173,70,293,283,FALSE
+"Shino Nakata",178,66,287,284,FALSE
+"Kaori Mabashi",173,63,296,286,FALSE
+"Anna Koike",162,62,263,253,FALSE
+"Slavena Nikova",180,72,290,280,FALSE
+"Elitsa Barakova",184,60,290,280,FALSE
+"Polina Neykova",182,73,287,280,FALSE
+"Simona Nikolova",190,75,308,300,FALSE
+"Iveta Stanchulova",186,72,290,285,FALSE
+"Vangeliya Rachkovska",185,67,296,281,FALSE
+"Gergana Dimitrova",184,71,305,288,FALSE
+"Miroslava Paskova",180,67,299,280,FALSE
+"Kristiana Petrova",177,70,290,282,FALSE
+"Radostina Marinova",183,62,287,279,FALSE
+"Zhana Todorova",170,56,271,255,TRUE
+"Mirela Shahpazova",175,65,280,270,FALSE
+"Jovana Kocic",190,85,290,285,FALSE
+"Aleksandra Cirovic",175,57,285,275,FALSE
+"Sara Lozo",186,61,295,290,FALSE
+"Katarina Marinkovic",186,72,298,285,FALSE
+"Jelena Vignjevic",180,63,285,280,FALSE
+"Maja Aleksic",188,72,290,285,FALSE
+"Katarina Lazovic",182,65,285,275,FALSE
+"Bojana Milenkovic",185,70,294,288,FALSE
+"Aleksandra Tadic",174,60,270,265,TRUE
+"Sara Vucicevic",186,66,287,282,FALSE
+"Milena Dimic",170,64,255,250,TRUE
+"Marija Vujnovic",182,65,290,276,FALSE
+"Leslie Angélica Lopez Flores",169,78,198,190,TRUE
+"Maria Fernanda Rodriguez Gomez",185,80,287,280,FALSE
+"Janeth Alejandra Vargas Guevara",169,68,200,210,FALSE
+"Maria Elena Aguilera",153,55,260,240,FALSE
+"Kathya Paulina Garcia Chavez",178,69,285,250,FALSE
+"Miriam Arleth Bojorquez Ruiz",164,66,195,200,FALSE
+"Montserrat Castro Narvaez",199,85,270,268,FALSE
+"Fernanda Bañuelos",186,70,303,285,FALSE
+"Karina Angelica Flores Gamez",192,80,299,285,FALSE
+"Mitzy Natalia Gonzalez Guzman",168,75,211,209,FALSE
+"Alondra Amaro Rodriguez",188,69,275,250,FALSE
+"Dalila Palma Rodriguez",182,62,301,285,FALSE
+"Laura Beatriz Suarez Hernandez",185,75,304,292,FALSE
+"Aidachi Attilah Aguero Aguilera",177,69,304,295,FALSE
+"Claudia Hernandez Aguila",181,78,225,223,FALSE
+"Diaris De La Caridad Perez Ramos",182,75,304,295,FALSE
+"Kitania Medina Torres",186,77,308,295,FALSE
+"Ailama Cese Montalvo",188,58,322,308,FALSE
+"Liset Herrera Blanco",192,70,311,300,FALSE
+"Anaila Martinez Chaviano",184,70,320,310,FALSE
+"Carmela Massip Mursuli",181,65,304,295,FALSE
+"Sonia Beatriz Romero Espinosa",183,70,301,288,FALSE
+"Anet Alfonso Benitez",172,54,225,222,FALSE
+"Haiping Sun",180,65,300,292,FALSE
+"Mingyuan Hu",187,69,305,297,FALSE
+"Zixuan Meng",180,62,298,290,TRUE
+"Ye Jin",187,77,310,302,FALSE
+"Qingqing Du",189,72,312,300,FALSE
+"Qian Zhang",193,70,313,302,FALSE
+"Jiayi Huang",173,60,285,275,TRUE
+"Wanqianbai Rong",184,75,304,297,FALSE
+"Yuanyuan Wang",195,75,312,300,FALSE
+"Xiangyu Gong",186,72,313,302,FALSE
+"Xinyi Zhou",187,69,307,300,FALSE
+"Yi Yang",184,70,308,300,FALSE
+"Mayar Mohamed",186,78,288,279,FALSE
+"Mai Moustafa",175,63,280,269,FALSE
+"Salma Mahmoud",175,56,278,266,FALSE
+"Nourallah Amin",184,70,285,276,FALSE
+"Malak Badawy",175,64,273,289,FALSE
+"Mariam Ebrahim",167,63,273,261,FALSE
+"Rahma Almohandes",175,63,277,265,FALSE
+"Yasmin Hussein",175,74,188,178,FALSE
+"Hend Farag",186,68,277,272,FALSE
+"Icel Nadim",162,52,253,267,TRUE
+"Jailan Tawfik",175,65,292,279,FALSE
+"Rania Ashmawy",174,67,273,264,FALSE
+"Diana De La Peña",187,60,294,295,FALSE
+"Nair Canessa",185,70,295,298,FALSE
+"Nicole Abreu Erquinigo",180,63,285,270,FALSE
+"Cristina Cuba",176,65,280,275,FALSE
+"Shiamara Almeida",172,62,286,275,FALSE
+"Maguilaura Frias",186,71,291,280,FALSE
+"Katherine Regalado",190,66,296,287,FALSE
+"Rosa Valiente",183,60,290,295,FALSE
+"Angela Leyva",184,70,312,291,FALSE
+"Yomira Villacorta",164,61,265,250,TRUE
+"Dayana Rojas",160,55,178,180,FALSE
+"Coraima Gomez",179,70,300,285,FALSE
+"Ilaria Bonvicini",160,52,261,243,FALSE
+"Carlotta Cambi",177,66,302,292,FALSE
+"Sofia D'odorico",187,78,312,302,FALSE
+"Alessia Orro",180,74,308,231,FALSE
+"Sara Bonifacio",188,76,320,300,FALSE
+"Anna Danesi",195,75,312,246,FALSE
+"Anastasia Guerra",187,80,314,239,FALSE
+"Chiara De Bortoli",180,68,302,286,TRUE
+"Paola Ogechi Egonu",190,70,336,256,FALSE
+"Beatrice Berti",193,87,304,288,FALSE
+"Anna Nicoletti",193,86,306,290,FALSE
+"Elisa Zanette",193,86,304,288,FALSE
+"Melis Yilmaz",165,52,260,259,TRUE
+"Cansu Ozbay",182,75,285,284,FALSE
+"Ayca Aykac",176,54,280,279,TRUE
+"Rida Erlalelitepe",183,70,293,290,FALSE
+"Ada Germen",182,62,285,283,FALSE
+"Zehra Gunes",194,82,309,255,FALSE
+"Humay Topaloglu",180,63,295,293,FALSE
+"Yagmur Mislina Kilic",189,66,283,280,FALSE
+"Cemre Janset Erkul",184,65,298,295,FALSE
+"Arelya Karasoy",181,73,287,280,FALSE
+"Arelya Karasoy",181,73,287,280,FALSE
+"Su Zent",184,70,305,303,FALSE
+"Angelina Lazarenko",193,80,320,305,FALSE
+"Svetlana Serbina",182,71,295,284,FALSE
+"Ekaterina Shkurikhina",190,72,306,296,FALSE
+"Kristina Kurnosova",176,62,288,278,TRUE
+"Ekaterina Novikova",181,70,290,275,FALSE
+"Victoria Zhurbenko",186,67,306,297,FALSE
+"Angelina Sperskaite",188,72,305,295,FALSE
+"Anastasiia Barchuk",187,78,305,297,FALSE
+"Anastasiia Cheremisina",187,80,305,298,FALSE
+"Anna Lazareva",190,67,315,300,FALSE
+"Tatiana Iurinskaia",195,69,305,275,FALSE
+"Sabina Gilfanova",187,79,300,296,FALSE
+"Drussyla Costa",182,73,304,286,FALSE
+"Lana Conceição",175,72,292,281,FALSE
+"Ariane Pinto",191,79,291,284,FALSE
+"Laiza Ferreira",181,71,301,285,FALSE
+"Gabriela Candido Da Silva",181,75,296,285,FALSE
+"Gabriela Silva",182,75,296,281,FALSE
+"Karoline Tormena",187,69,295,284,FALSE
+"Lorenne Geraldo Teixeira",187,72,306,289,FALSE
+"Thais Oliveira",172,69,275,272,FALSE
+"Lais Vasques",171,70,275,274,TRUE
+"Lyara Medeiros",184,67,297,285,FALSE
+"Maiara Basso",186,80,287,276,FALSE
+"Nanami Hirose",177,61,301,295,FALSE
+"Misaki Shirai",175,70,293,278,FALSE
+"Yurika Kono",177,60,292,282,FALSE
+"Yuka Kitsui",172,60,294,283,FALSE
+"Haruka Maruo",176,64,293,283,FALSE
+"Haruka Kanamori",176,66,297,290,FALSE
+"Moeri Hanai",167,60,280,272,TRUE
+"Mizuki Yanagita",168,64,300,290,FALSE
+"Yuka Onodera",173,70,293,283,FALSE
+"Shino Nakata",178,66,287,284,FALSE
+"Kaori Mabashi",173,63,296,286,FALSE
+"Anna Koike",162,62,263,253,FALSE
+"Slavena Nikova",180,72,290,280,FALSE
+"Elitsa Barakova",184,60,290,280,FALSE
+"Polina Neykova",182,73,287,280,FALSE
+"Simona Nikolova",190,75,308,300,FALSE
+"Iveta Stanchulova",186,72,290,285,FALSE
+"Vangeliya Rachkovska",185,67,296,281,FALSE
+"Gergana Dimitrova",184,71,305,288,FALSE
+"Miroslava Paskova",180,67,299,280,FALSE
+"Kristiana Petrova",177,70,290,282,FALSE
+"Radostina Marinova",183,62,287,279,FALSE
+"Zhana Todorova",170,56,271,255,TRUE
+"Mirela Shahpazova",175,65,280,270,FALSE
+"Jovana Kocic",190,85,290,285,FALSE
+"Aleksandra Cirovic",175,57,285,275,FALSE
+"Sara Lozo",186,61,295,290,FALSE
+"Katarina Marinkovic",186,72,298,285,FALSE
+"Jelena Vignjevic",180,63,285,280,FALSE
+"Maja Aleksic",188,72,290,285,FALSE
+"Katarina Lazovic",182,65,285,275,FALSE
+"Bojana Milenkovic",185,70,294,288,FALSE
+"Aleksandra Tadic",174,60,270,265,TRUE
+"Sara Vucicevic",186,66,287,282,FALSE
+"Milena Dimic",170,64,255,250,TRUE
+"Marija Vujnovic",182,65,290,276,FALSE
+"Leslie Angélica Lopez Flores",169,78,198,190,TRUE
+"Maria Fernanda Rodriguez Gomez",185,80,287,280,FALSE
+"Janeth Alejandra Vargas Guevara",169,68,200,210,FALSE
+"Maria Elena Aguilera",153,55,260,240,FALSE
+"Kathya Paulina Garcia Chavez",178,69,285,250,FALSE
+"Miriam Arleth Bojorquez Ruiz",164,66,195,200,FALSE
+"Montserrat Castro Narvaez",199,85,270,268,FALSE
+"Fernanda Bañuelos",186,70,303,285,FALSE
+"Karina Angelica Flores Gamez",192,80,299,285,FALSE
+"Mitzy Natalia Gonzalez Guzman",168,75,211,209,FALSE
+"Alondra Amaro Rodriguez",188,69,275,250,FALSE
+"Dalila Palma Rodriguez",182,62,301,285,FALSE
+"Laura Beatriz Suarez Hernandez",185,75,304,292,FALSE
+"Aidachi Attilah Aguero Aguilera",177,69,304,295,FALSE
+"Claudia Hernandez Aguila",181,78,225,223,FALSE
+"Diaris De La Caridad Perez Ramos",182,75,304,295,FALSE
+"Kitania Medina Torres",186,77,308,295,FALSE
+"Ailama Cese Montalvo",188,58,322,308,FALSE
+"Liset Herrera Blanco",192,70,311,300,FALSE
+"Anaila Martinez Chaviano",184,70,320,310,FALSE
+"Carmela Massip Mursuli",181,65,304,295,FALSE
+"Sonia Beatriz Romero Espinosa",183,70,301,288,FALSE
+"Anet Alfonso Benitez",172,54,225,222,FALSE
+"Haiping Sun",180,65,300,292,FALSE
+"Mingyuan Hu",187,69,305,297,FALSE
+"Zixuan Meng",180,62,298,290,TRUE
+"Ye Jin",187,77,310,302,FALSE
+"Qingqing Du",189,72,312,300,FALSE
+"Qian Zhang",193,70,313,302,FALSE
+"Jiayi Huang",173,60,285,275,TRUE
+"Wanqianbai Rong",184,75,304,297,FALSE
+"Yuanyuan Wang",195,75,312,300,FALSE
+"Xiangyu Gong",186,72,313,302,FALSE
+"Xinyi Zhou",187,69,307,300,FALSE
+"Yi Yang",184,70,308,300,FALSE
+"Mayar Mohamed",186,78,288,279,FALSE
+"Mai Moustafa",175,63,280,269,FALSE
+"Salma Mahmoud",175,56,278,266,FALSE
+"Nourallah Amin",184,70,285,276,FALSE
+"Malak Badawy",175,64,273,289,FALSE
+"Mariam Ebrahim",167,63,273,261,FALSE
+"Rahma Almohandes",175,63,277,265,FALSE
+"Yasmin Hussein",175,74,188,178,FALSE
+"Hend Farag",186,68,277,272,FALSE
+"Icel Nadim",162,52,253,267,TRUE
+"Jailan Tawfik",175,65,292,279,FALSE
+"Rania Ashmawy",174,67,273,264,FALSE
+"Diana De La Peña",187,60,294,295,FALSE
+"Nair Canessa",185,70,295,298,FALSE
+"Nicole Abreu Erquinigo",180,63,285,270,FALSE
+"Cristina Cuba",176,65,280,275,FALSE
+"Shiamara Almeida",172,62,286,275,FALSE
+"Maguilaura Frias",186,71,291,280,FALSE
+"Katherine Regalado",190,66,296,287,FALSE
+"Rosa Valiente",183,60,290,295,FALSE
+"Angela Leyva",184,70,312,291,FALSE
+"Yomira Villacorta",164,61,265,250,TRUE
+"Dayana Rojas",160,55,178,180,FALSE
+"Coraima Gomez",179,70,300,285,FALSE
+"Ilaria Bonvicini",160,52,261,243,FALSE
+"Carlotta Cambi",177,66,302,292,FALSE
+"Sofia D'odorico",187,78,312,302,FALSE
+"Alessia Orro",180,74,308,231,FALSE
+"Sara Bonifacio",188,76,320,300,FALSE
+"Anna Danesi",195,75,312,246,FALSE
+"Anastasia Guerra",187,80,314,239,FALSE
+"Chiara De Bortoli",180,68,302,286,TRUE
+"Paola Ogechi Egonu",190,70,336,256,FALSE
+"Beatrice Berti",193,87,304,288,FALSE
+"Anna Nicoletti",193,86,306,290,FALSE
+"Elisa Zanette",193,86,304,288,FALSE
+"Melis Yilmaz",165,52,260,259,TRUE
+"Cansu Ozbay",182,75,285,284,FALSE
+"Ayca Aykac",176,54,280,279,TRUE
+"Rida Erlalelitepe",183,70,293,290,FALSE
+"Ada Germen",182,62,285,283,FALSE
+"Zehra Gunes",194,82,309,255,FALSE
+"Humay Topaloglu",180,63,295,293,FALSE
+"Yagmur Mislina Kilic",189,66,283,280,FALSE
+"Cemre Janset Erkul",184,65,298,295,FALSE
+"Arelya Karasoy",181,73,287,280,FALSE
+"Arelya Karasoy",181,73,287,280,FALSE
+"Su Zent",184,70,305,303,FALSE
+"Angelina Lazarenko",193,80,320,305,FALSE
+"Svetlana Serbina",182,71,295,284,FALSE
+"Ekaterina Shkurikhina",190,72,306,296,FALSE
+"Kristina Kurnosova",176,62,288,278,TRUE
+"Ekaterina Novikova",181,70,290,275,FALSE
+"Victoria Zhurbenko",186,67,306,297,FALSE
+"Angelina Sperskaite",188,72,305,295,FALSE
+"Anastasiia Barchuk",187,78,305,297,FALSE
+"Anastasiia Cheremisina",187,80,305,298,FALSE
+"Anna Lazareva",190,67,315,300,FALSE
+"Tatiana Iurinskaia",195,69,305,275,FALSE
+"Sabina Gilfanova",187,79,300,296,FALSE
+"Drussyla Costa",182,73,304,286,FALSE
+"Lana Conceição",175,72,292,281,FALSE
+"Ariane Pinto",191,79,291,284,FALSE
+"Laiza Ferreira",181,71,301,285,FALSE
+"Gabriela Candido Da Silva",181,75,296,285,FALSE
+"Gabriela Silva",182,75,296,281,FALSE
+"Karoline Tormena",187,69,295,284,FALSE
+"Lorenne Geraldo Teixeira",187,72,306,289,FALSE
+"Thais Oliveira",172,69,275,272,FALSE
+"Lais Vasques",171,70,275,274,TRUE
+"Lyara Medeiros",184,67,297,285,FALSE
+"Maiara Basso",186,80,287,276,FALSE
+"Nanami Hirose",177,61,301,295,FALSE
+"Misaki Shirai",175,70,293,278,FALSE
+"Yurika Kono",177,60,292,282,FALSE
+"Yuka Kitsui",172,60,294,283,FALSE
+"Haruka Maruo",176,64,293,283,FALSE
+"Haruka Kanamori",176,66,297,290,FALSE
+"Moeri Hanai",167,60,280,272,TRUE
+"Mizuki Yanagita",168,64,300,290,FALSE
+"Yuka Onodera",173,70,293,283,FALSE
+"Shino Nakata",178,66,287,284,FALSE
+"Kaori Mabashi",173,63,296,286,FALSE
+"Anna Koike",162,62,263,253,FALSE
+"Slavena Nikova",180,72,290,280,FALSE
+"Elitsa Barakova",184,60,290,280,FALSE
+"Polina Neykova",182,73,287,280,FALSE
+"Simona Nikolova",190,75,308,300,FALSE
+"Iveta Stanchulova",186,72,290,285,FALSE
+"Vangeliya Rachkovska",185,67,296,281,FALSE
+"Gergana Dimitrova",184,71,305,288,FALSE
+"Miroslava Paskova",180,67,299,280,FALSE
+"Kristiana Petrova",177,70,290,282,FALSE
+"Radostina Marinova",183,62,287,279,FALSE
+"Zhana Todorova",170,56,271,255,TRUE
+"Mirela Shahpazova",175,65,280,270,FALSE
+"Jovana Kocic",190,85,290,285,FALSE
+"Aleksandra Cirovic",175,57,285,275,FALSE
+"Sara Lozo",186,61,295,290,FALSE
+"Katarina Marinkovic",186,72,298,285,FALSE
+"Jelena Vignjevic",180,63,285,280,FALSE
+"Maja Aleksic",188,72,290,285,FALSE
+"Katarina Lazovic",182,65,285,275,FALSE
+"Bojana Milenkovic",185,70,294,288,FALSE
+"Aleksandra Tadic",174,60,270,265,TRUE
+"Sara Vucicevic",186,66,287,282,FALSE
+"Milena Dimic",170,64,255,250,TRUE
+"Marija Vujnovic",182,65,290,276,FALSE
+"Leslie Angélica Lopez Flores",169,78,198,190,TRUE
+"Maria Fernanda Rodriguez Gomez",185,80,287,280,FALSE
+"Janeth Alejandra Vargas Guevara",169,68,200,210,FALSE
+"Maria Elena Aguilera",153,55,260,240,FALSE
+"Kathya Paulina Garcia Chavez",178,69,285,250,FALSE
+"Miriam Arleth Bojorquez Ruiz",164,66,195,200,FALSE
+"Montserrat Castro Narvaez",199,85,270,268,FALSE
+"Fernanda Bañuelos",186,70,303,285,FALSE
+"Karina Angelica Flores Gamez",192,80,299,285,FALSE
+"Mitzy Natalia Gonzalez Guzman",168,75,211,209,FALSE
+"Alondra Amaro Rodriguez",188,69,275,250,FALSE
+"Dalila Palma Rodriguez",182,62,301,285,FALSE
+"Laura Beatriz Suarez Hernandez",185,75,304,292,FALSE
+"Aidachi Attilah Aguero Aguilera",177,69,304,295,FALSE
+"Claudia Hernandez Aguila",181,78,225,223,FALSE
+"Diaris De La Caridad Perez Ramos",182,75,304,295,FALSE
+"Kitania Medina Torres",186,77,308,295,FALSE
+"Ailama Cese Montalvo",188,58,322,308,FALSE
+"Liset Herrera Blanco",192,70,311,300,FALSE
+"Anaila Martinez Chaviano",184,70,320,310,FALSE
+"Carmela Massip Mursuli",181,65,304,295,FALSE
+"Sonia Beatriz Romero Espinosa",183,70,301,288,FALSE
+"Anet Alfonso Benitez",172,54,225,222,FALSE
+"Haiping Sun",180,65,300,292,FALSE
+"Mingyuan Hu",187,69,305,297,FALSE
+"Zixuan Meng",180,62,298,290,TRUE
+"Ye Jin",187,77,310,302,FALSE
+"Qingqing Du",189,72,312,300,FALSE
+"Qian Zhang",193,70,313,302,FALSE
+"Jiayi Huang",173,60,285,275,TRUE
+"Wanqianbai Rong",184,75,304,297,FALSE
+"Yuanyuan Wang",195,75,312,300,FALSE
+"Xiangyu Gong",186,72,313,302,FALSE
+"Xinyi Zhou",187,69,307,300,FALSE
+"Yi Yang",184,70,308,300,FALSE
+"Mayar Mohamed",186,78,288,279,FALSE
+"Mai Moustafa",175,63,280,269,FALSE
+"Salma Mahmoud",175,56,278,266,FALSE
+"Nourallah Amin",184,70,285,276,FALSE
+"Malak Badawy",175,64,273,289,FALSE
+"Mariam Ebrahim",167,63,273,261,FALSE
+"Rahma Almohandes",175,63,277,265,FALSE
+"Yasmin Hussein",175,74,188,178,FALSE
+"Hend Farag",186,68,277,272,FALSE
+"Icel Nadim",162,52,253,267,TRUE
+"Jailan Tawfik",175,65,292,279,FALSE
+"Rania Ashmawy",174,67,273,264,FALSE
+"Diana De La Peña",187,60,294,295,FALSE
+"Nair Canessa",185,70,295,298,FALSE
+"Nicole Abreu Erquinigo",180,63,285,270,FALSE
+"Cristina Cuba",176,65,280,275,FALSE
+"Shiamara Almeida",172,62,286,275,FALSE
+"Maguilaura Frias",186,71,291,280,FALSE
+"Katherine Regalado",190,66,296,287,FALSE
+"Rosa Valiente",183,60,290,295,FALSE
+"Angela Leyva",184,70,312,291,FALSE
+"Yomira Villacorta",164,61,265,250,TRUE
+"Dayana Rojas",160,55,178,180,FALSE
+"Coraima Gomez",179,70,300,285,FALSE
+"Ilaria Bonvicini",160,52,261,243,FALSE
+"Carlotta Cambi",177,66,302,292,FALSE
+"Sofia D'odorico",187,78,312,302,FALSE
+"Alessia Orro",180,74,308,231,FALSE
+"Sara Bonifacio",188,76,320,300,FALSE
+"Anna Danesi",195,75,312,246,FALSE
+"Anastasia Guerra",187,80,314,239,FALSE
+"Chiara De Bortoli",180,68,302,286,TRUE
+"Paola Ogechi Egonu",190,70,336,256,FALSE
+"Beatrice Berti",193,87,304,288,FALSE
+"Anna Nicoletti",193,86,306,290,FALSE
+"Elisa Zanette",193,86,304,288,FALSE
+"Melis Yilmaz",165,52,260,259,TRUE
+"Cansu Ozbay",182,75,285,284,FALSE
+"Ayca Aykac",176,54,280,279,TRUE
+"Rida Erlalelitepe",183,70,293,290,FALSE
+"Ada Germen",182,62,285,283,FALSE
+"Zehra Gunes",194,82,309,255,FALSE
+"Humay Topaloglu",180,63,295,293,FALSE
+"Yagmur Mislina Kilic",189,66,283,280,FALSE
+"Cemre Janset Erkul",184,65,298,295,FALSE
+"Arelya Karasoy",181,73,287,280,FALSE
+"Arelya Karasoy",181,73,287,280,FALSE
+"Su Zent",184,70,305,303,FALSE

@@ -26,6 +26,7 @@ library(openintro)
 library(scales)      # for pretty axis labels
 library(glue)        # for constructing character strings
 library(knitr)       # for neatly formatted tables
+volleyball <- read_csv("data/volleyball_cut.csv")
 ```
 
 ## While you wait: Participate 📱💻 {.small}
@@ -49,6 +50,23 @@ TBD
 :::
 ::::::
 
+## This ain't Zito
+
+Hi, I'm Josh!
+
+::: incremental
+- 2nd Year PhD Student in Statistical Science
+- Teaching this course in summer
+- Fun fact: I'm a professional Saja Boy (Kpop Demon Hunter)
+- ![](images/23/saja.JPEG)
+:::
+
+
+
+## Zito the GOAT
+
+![](images/23/joshnzito.png)
+
 # Hypothesis testing
 
 ## Hypothesis testing
@@ -67,17 +85,40 @@ Note: Hypotheses are always at the population level!
 
 ## Running Example
 
+```{r}
+glimpse(volleyball)
+```
+
+::: incremental
+- Volleyball Dataset on FIVB Athletes
+- Spike: How high an athlete touches on a spike (cm)
+- Block: How high an athlete touches on a block (cm)
+- Height (cm)
+:::
+
+## Running Example cont
+
+Question: Is an athlete's spike touch significantly related to their height?
+
+```{r}
+observed_fit <- volleyball |>
+  specify(spike ~ height) |>
+  fit()
+
+observed_fit
+```
+
 ## Setting hypotheses
 
--   **Null hypothesis,** $H_0$: "There is nothing going on." The slope of the model for predicting the prices of houses in Duke Forest from their areas is 0, $\beta_1 = 0$.
+-   **Null hypothesis,** $H_0$: "There is nothing going on." The slope of the model for predicting the spike touch of FIVB athletes from their heights is 0, $\beta_1 = 0$.
 
--   **Alternative hypothesis,** $H_A$: "There is something going on". The slope of the model for predicting the prices of houses in Duke Forest from their areas is different than, $\beta_1 \ne 0$.
+-   **Alternative hypothesis,** $H_A$: "There is something going on". The slope of the model for predicting the spike touch of FIVB athletes from their heights is different than, $\beta_1 \ne 0$.
 
 ## Hypothesis testing "mindset"
 
 -   Assume you live in a world where null hypothesis is true: $\beta_1 = 0$.
 
--   Ask yourself how likely you are to observe the sample statistic, or something even more extreme, in this world: $P(b_1 \leq 159.48~or~b_1 \geq 159.48 | \beta_1 = 0)$ = ?
+-   Ask yourself how likely you are to observe the sample statistic, or something even more extreme, in this world: $P(b_1 \leq -1.62~or~b_1 \geq 1.62 | \beta_1 = 0)$ = ?
 
 ## Hypothesis testing as a court trial
 
@@ -129,8 +170,8 @@ Note: Hypotheses are always at the population level!
 ... which we have already done:
 
 ```{r}
-observed_fit <- duke_forest |>
-  specify(price ~ area) |>
+observed_fit <- volleyball |>
+  specify(spike ~ height) |>
   fit()
 
 observed_fit
@@ -138,15 +179,30 @@ observed_fit
 
 ## Simulate null distribution
 
-```{r}
+```{r, cache=TRUE}
 #| code-line-numbers: "|1|2|3|4|5|6"
-set.seed(20241118)
-null_dist <- duke_forest |>
-  specify(price ~ area) |>
+set.seed(24601)
+null_dist <- volleyball |>
+  specify(spike ~ height) |>
   hypothesize(null = "independence") |>
-  generate(reps = 100, type = "permute") |>
+  generate(reps = 10000, type = "permute") |>
   fit()
 ```
+
+## Wait, so what's a null distribution?
+
+::: incremental
+-   Simulating a universe under $H_0$: the slope of the model for predicting the spike touch of FIVB athletes from their heights is 0, $\beta_1 = 0$. I.e., no relationship between spike and height.
+
+-  If I "shuffle" the order of the spike variable, is there a relationship between spike and height?
+
+-  No! Spike is essentially random and unrelated to anything!
+
+-  Shuffle the spike variable, fit a model and get a slope, record the slope, repeat!
+
+- More on this in STA 221L
+
+:::
 
 ## View null distribution {.smaller}
 
@@ -158,9 +214,9 @@ null_dist
 
 ```{r}
 null_dist |>
-  filter(term == "area") |>
+  filter(term == "height") |>
   ggplot(aes(x = estimate)) +
-  geom_histogram(binwidth = 15)
+  geom_histogram(binwidth = 0.2)
 ```
 
 ## Visualize null distribution (alternative)
@@ -182,6 +238,8 @@ null_dist |>
 ::: task
 Based on the p-value calculated, what is the conclusion of the hypothesis test?
 :::
+
+Since $p = 0.002$, we reject the null hypothesis and have evidence that there is a statistically significant relationship between an FIVB players spike touch and height. 
 
 ## Sometimes the test will be wrong
 
