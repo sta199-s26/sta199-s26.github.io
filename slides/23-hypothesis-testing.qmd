@@ -49,7 +49,6 @@ TBD
 :::
 ::::::
 
-<<<<<<< HEAD
 # Hypothesis testing
 
 ## Hypothesis testing
@@ -213,6 +212,3 @@ Pick a threshold $\alpha\in[0,\,1]$ called the **discernibility level** and thre
 
 ![](images/23/alpha.png)
 =======
-
-
->>>>>>> c0ca879c2ce8026e14884ab329cfe1d156d0c1cb
