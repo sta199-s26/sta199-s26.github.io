@@ -16,6 +16,17 @@ format:
     code-link: true
 ---
 
+```{r}
+#| label: load-packages
+#| message: false
+#| echo: false
+library(tidyverse)
+library(tidymodels)
+library(openintro)
+library(scales)      # for pretty axis labels
+library(glue)        # for constructing character strings
+library(knitr)       # for neatly formatted tables
+```
 
 ## While you wait: Participate 📱💻 {.small}
 
@@ -37,3 +48,166 @@ TBD
 {{< include _wooclap-column.qmd >}}
 :::
 ::::::
+
+# Hypothesis testing
+
+## Hypothesis testing
+
+A hypothesis test is a statistical technique used to evaluate *competing claims* using data
+
+::: incremental
+-   **Null hypothesis,** $H_0$: An assumption about the population. "There is nothing going on."
+
+-   **Alternative hypothesis,** $H_A$: A research question about the population. "There is something going on".
+:::
+
+. . .
+
+Note: Hypotheses are always at the population level!
+
+## Running Example
+
+## Setting hypotheses
+
+-   **Null hypothesis,** $H_0$: "There is nothing going on." The slope of the model for predicting the prices of houses in Duke Forest from their areas is 0, $\beta_1 = 0$.
+
+-   **Alternative hypothesis,** $H_A$: "There is something going on". The slope of the model for predicting the prices of houses in Duke Forest from their areas is different than, $\beta_1 \ne 0$.
+
+## Hypothesis testing "mindset"
+
+-   Assume you live in a world where null hypothesis is true: $\beta_1 = 0$.
+
+-   Ask yourself how likely you are to observe the sample statistic, or something even more extreme, in this world: $P(b_1 \leq 159.48~or~b_1 \geq 159.48 | \beta_1 = 0)$ = ?
+
+## Hypothesis testing as a court trial
+
+-   **Null hypothesis**, $H_0$: Defendant is innocent
+
+-   **Alternative hypothesis**, $H_A$: Defendant is guilty
+
+. . .
+
+-   **Present the evidence:** Collect data
+
+. . .
+
+-   **Judge the evidence:** "Could these data plausibly have happened by chance if the null hypothesis were true?"
+    -   Yes: Fail to reject $H_0$
+    -   No: Reject $H_0$
+
+## Hypothesis testing as medical diagnosis
+
+-   **Null hypothesis**, $H_0$: patient is fine
+
+-   **Alternative hypothesis**, $H_A$: patient is sick
+
+. . .
+
+-   **Present the evidence:** Collect data
+
+. . .
+
+-   **Judge the evidence:** "Could these data plausibly have happened by chance if the null hypothesis were true?"
+    -   Yes: Fail to reject $H_0$
+    -   No: Reject $H_0$
+
+## Hypothesis testing framework {.smaller}
+
+::: incremental
+-   Start with a null hypothesis, $H_0$, that represents the status quo
+
+-   Set an alternative hypothesis, $H_A$, that represents the research question, i.e. what we’re testing for
+
+-   Conduct a hypothesis test under the assumption that the null hypothesis is true and calculate a **p-value** (probability of observed or more extreme outcome given that the null hypothesis is true)
+
+    -   if the test results suggest that the data do not provide convincing evidence for the alternative hypothesis, stick with the null hypothesis
+    -   if they do, then reject the null hypothesis in favor of the alternative
+:::
+
+## Calculate observed slope
+
+... which we have already done:
+
+```{r}
+observed_fit <- duke_forest |>
+  specify(price ~ area) |>
+  fit()
+
+observed_fit
+```
+
+## Simulate null distribution
+
+```{r}
+#| code-line-numbers: "|1|2|3|4|5|6"
+set.seed(20241118)
+null_dist <- duke_forest |>
+  specify(price ~ area) |>
+  hypothesize(null = "independence") |>
+  generate(reps = 100, type = "permute") |>
+  fit()
+```
+
+## View null distribution {.smaller}
+
+```{r}
+null_dist
+```
+
+## Visualize null distribution {.smaller}
+
+```{r}
+null_dist |>
+  filter(term == "area") |>
+  ggplot(aes(x = estimate)) +
+  geom_histogram(binwidth = 15)
+```
+
+## Visualize null distribution (alternative)
+
+```{r}
+visualize(null_dist) +
+  shade_p_value(obs_stat = observed_fit, direction = "two-sided")
+```
+
+## Get p-value
+
+```{r}
+null_dist |>
+  get_p_value(obs_stat = observed_fit, direction = "two-sided")
+```
+
+## Make a decision
+
+::: task
+Based on the p-value calculated, what is the conclusion of the hypothesis test?
+:::
+
+## Sometimes the test will be wrong
+
+![](images/23/general.png)
+
+## Think about the judge
+
+$H_0$ person innocent vs $H_A$ person guilty
+
+![](images/23/judge.png)
+
+## Think about the doctor
+
+$H_0$ person well vs $H_A$ person sick.
+
+![](images/23/doctor.png)
+
+## How do we negotiate the trade-off?
+
+::: incremental
+Pick a threshold $\alpha\in[0,\,1]$ called the **discernibility level** and threshold the $p$-value:
+
+-   If $p\text{-value} < \alpha$, reject null and accept alternative;
+-   If $p\text{-value} \geq \alpha$, fail to reject null;
+:::
+
+. . .
+
+![](images/23/alpha.png)
