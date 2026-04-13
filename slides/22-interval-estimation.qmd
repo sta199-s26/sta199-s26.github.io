@@ -1202,11 +1202,15 @@ The amount of variation in the histogram tells us something about the uncertaint
 
 ## Summary {.medium}
 
+::: incremental
 - The notion of uncertainty we seek to quantify is "variability of estimates across datasets;"
     - If the estimates vary a lot across datasets, reliability is low and uncertainty is high;
     - If the estimates vary only a little across datasets, reliability is high and uncertainty is low;
 - We can visualizes this with a histogram of estimates, and quantify it with the *spread* of that histogram (sd, var, IQR, etc);
 - Sampling uncertainty is influenced by the underlying noisiness of the data and the sample size.
+:::
+
+. . .
 
 In order to *do* this in practice, we need multiple datasets. But in practice we only have one. So now what?
 
@@ -1215,6 +1219,7 @@ In order to *do* this in practice, we need multiple datasets. But in practice we
 
 ## Reality check {.medium}
 
+::: incremental
 - Contemplating alternative datasets is a cute thought experiment, but in reality we cannot collect completely new data;
 - Data collection is costly!
   - Collecting new survey responses;
@@ -1222,6 +1227,7 @@ In order to *do* this in practice, we need multiple datasets. But in practice we
   - Running new experiments;
   - Firing up the Large Hadron Collider for one more go;
 - Given the *one* dataset we actually have, how can we approximate the idea of alternative datasets and use them to assess the variability of results?
+:::
 
 ## Bootstrapping {.medium .scrollable}
 
@@ -1866,6 +1872,20 @@ df_boot_samples_100_hist +
 ::: incremental
 -   A 95% confidence interval is bounded by the middle 95% of the bootstrap distribution
 -   We are 95% confident that for each additional square foot, the model predicts the sale price of Duke Forest houses to be higher, on average, by `r dollar(lower)` to `r dollar(upper)`.
+:::
+
+## Where do the bounds come from?
+
+Quantiles!
+
+::: incremental
+-   Think IQR! 50% of the bootstrap distribution is between the 25% quantile on the left and the 75% quantile on the right. But we want more than 50%
+
+-   90% of the bootstrap distribution is between the 5% quantile on the left and the 95% quantile on the right;
+
+-   95% of the bootstrap distribution is between the 2.5% quantile on the left and the 97.5% quantile on the right;
+
+-   And so on.
 :::
 
 # Application exercise
