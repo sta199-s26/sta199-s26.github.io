@@ -40,6 +40,7 @@ The line on the left is the 8% quantile of the data, and the line on the right i
 ```{r}
 #| echo: false
 #| warning: false
+#| fig-asp: 0.3
 
 df <- tibble(
   x = c(rnorm(300), rnorm(200, -4, 2))
