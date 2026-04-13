@@ -196,11 +196,6 @@ null_dist <- volleyball |>
 
 -  If I "shuffle" the order of the spike variable, is there a relationship between spike and height? Could height predict spike touch?
 
--  No! Spike is essentially random and unrelated to anything!
-
--  Shuffle the spike variable, fit a model and get a slope, record the slope, repeat!
-
-- More on this in STA 221L
 
 :::
 
@@ -213,8 +208,10 @@ null_dist <- volleyball |>
 If I "shuffle" the order of the spike variable, is there a relationship between spike and height? Could height predict spike touch?
 
 ::: wooclap-choices
-- TBD
-- TBD
+- On Average, Yes
+- On Average, No
+- Never
+- I want lunch, stop talking about volleyball
 :::
 
 :::
@@ -224,6 +221,22 @@ If I "shuffle" the order of the spike variable, is there a relationship between 
 {{< include _wooclap-column.qmd >}}
 :::
 ::::::
+
+## Shuffling is cool, trust
+
+::: incremental
+-  On avergage, no
+
+-  Shuffling breaks any link between spike and height (on average)
+
+- `type = "permute"`
+
+-  Shuffle the spike variable, fit a model and get a slope, record the slope, repeat!
+
+- More on this in STA 221L
+
+- What if we shuffled height instead? Both?
+:::
 
 ## Every day I'm shuffling
 
@@ -242,10 +255,7 @@ ggplot(volleyball, aes(x = height, y = sample(spike))) +
   geom_smooth(method = "lm")
 ```
 
-
-
-
-## sample?
+## Wait, what's that new function
 
 ```{r}
 set.seed(8675309)
@@ -257,6 +267,164 @@ sample(rouges_gallery)
 ```
 
 
+
+## What if this was my shuffle?
+
+::: columns
+::: {.column width="49%"}
+```{r}
+#| echo: false
+#| message: false
+#| fig-asp: 0.8
+
+set.seed(2345)
+
+volleyball$spike_sh <- sample(volleyball$spike)
+
+ggplot(volleyball, aes(x = height, y = spike_sh)) +
+  geom_point() + 
+  geom_smooth(method = "lm")
+
+model_fit <- linear_reg() |>
+  fit(spike_sh ~ height, data = volleyball)
+
+model_fit |> 
+  tidy() |>
+  select(term, estimate)
+
+estimates <- tibble(
+  estimate = model_fit |> tidy() |> filter(term == "height") |> pull(estimate)
+)
+```
+:::
+
+::: {.column width="49%"}
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-asp: 0.8
+
+estimates |>
+  ggplot(aes(x = estimate)) +
+  geom_histogram() + 
+  xlim(-1, 1) + 
+  ylim(0, 5) + 
+  labs(
+    x = "Slope estimate",
+    y = "Count",
+    title = "Histogram of alternative estimates"
+  ) + 
+  theme(title = element_text(size = 20, face = "bold"))
+```
+:::
+:::
+
+## What if this was my shuffle instead?
+
+::: columns
+::: {.column width="49%"}
+```{r}
+#| echo: false
+#| message: false
+#| fig-asp: 0.8
+
+set.seed(2346)
+
+volleyball$spike_sh <- sample(volleyball$spike)
+
+ggplot(volleyball, aes(x = height, y = spike_sh)) +
+  geom_point() + 
+  geom_smooth(method = "lm")
+
+model_fit <- linear_reg() |>
+  fit(spike_sh ~ height, data = volleyball)
+
+model_fit |> 
+  tidy() |>
+  select(term, estimate)
+
+estimates <- estimates |> add_row(
+  estimate = model_fit |> tidy() |> filter(term == "height") |> pull(estimate)
+)
+```
+:::
+
+::: {.column width="49%"}
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-asp: 0.8
+
+estimates |>
+  ggplot(aes(x = estimate)) +
+  geom_histogram() + 
+  xlim(-1, 1) + 
+  ylim(0, 5) + 
+  labs(
+    x = "Slope estimate",
+    y = "Count",
+    title = "Histogram of alternative estimates"
+  ) + 
+  theme(title = element_text(size = 20, face = "bold"))
+```
+:::
+:::
+
+## What if this was my shuffle instead?
+
+::: columns
+::: {.column width="49%"}
+```{r}
+#| echo: false
+#| message: false
+#| fig-asp: 0.8
+
+set.seed(1)
+
+volleyball$spike_sh <- sample(volleyball$spike)
+
+ggplot(volleyball, aes(x = height, y = spike_sh)) +
+  geom_point() + 
+  geom_smooth(method = "lm")
+
+model_fit <- linear_reg() |>
+  fit(spike_sh ~ height, data = volleyball)
+
+model_fit |> 
+  tidy() |>
+  select(term, estimate)
+
+estimates <- estimates |> add_row(
+  estimate = model_fit |> tidy() |> filter(term == "height") |> pull(estimate)
+)
+```
+:::
+
+::: {.column width="49%"}
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-asp: 0.8
+
+estimates |>
+  ggplot(aes(x = estimate)) +
+  geom_histogram() + 
+  xlim(-1, 1) + 
+  ylim(0, 5) + 
+  labs(
+    x = "Slope estimate",
+    y = "Count",
+    title = "Histogram of alternative estimates"
+  ) + 
+  theme(title = element_text(size = 20, face = "bold"))
+```
+:::
+:::
+
+## Rinse and repeat 10000 times...
 
 
 ## View null distribution {.smaller}
@@ -308,7 +476,19 @@ null_dist |>
 Based on the p-value calculated, what is the conclusion of the hypothesis test?
 :::
 
-Since $p = 0.002$, we reject the null hypothesis and have evidence that there is a statistically significant relationship between an FIVB players spike touch and height. 
+::: incremental
+- Probability of observing your data or something more extreme given the null is true
+- Since $p = 0.002$, we reject the null hypothesis and have evidence that there is a statistically significant relationship between an FIVB players spike touch and height. 
+:::
+
+## How small is small enough?
+
+::: incremental
+Pick a threshold $\alpha\in[0,\,1]$ called the **discernibility level** and threshold the $p$-value:
+
+-   If $p\text{-value} < \alpha$, reject null and accept alternative;
+-   If $p\text{-value} \geq \alpha$, fail to reject null;
+:::
 
 ## Sometimes the test will be wrong
 
@@ -326,16 +506,9 @@ $H_0$ person well vs $H_A$ person sick.
 
 ![](images/23/doctor.png)
 
-## How do we negotiate the trade-off?
 
-::: incremental
-Pick a threshold $\alpha\in[0,\,1]$ called the **discernibility level** and threshold the $p$-value:
+## Where does alpha come in to this?
 
--   If $p\text{-value} < \alpha$, reject null and accept alternative;
--   If $p\text{-value} \geq \alpha$, fail to reject null;
-:::
-
-. . .
 
 ![](images/23/alpha.png)
 =======
