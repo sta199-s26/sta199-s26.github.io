@@ -204,6 +204,27 @@ null_dist <- volleyball |>
 
 :::
 
+## Participate 📱💻 {.small}
+
+:::::: columns
+:::: {.column width="70%"}
+::: wooclap
+
+If I "shuffle" the order of the spike variable, is there a relationship between spike and height? Could height predict spike touch?
+
+::: wooclap-choices
+- TBD
+- TBD
+:::
+
+:::
+::::
+
+::: {.column width="30%"}
+{{< include _wooclap-column.qmd >}}
+:::
+::::::
+
 ## Every day I'm shuffling
 
 
@@ -212,6 +233,7 @@ ggplot(volleyball, aes(x = height, y = spike)) +
   geom_point() + 
   geom_smooth(method = "lm")
 ```
+
 ## Every day I'm shuffling
 
 ```{r}
@@ -220,8 +242,18 @@ ggplot(volleyball, aes(x = height, y = sample(spike))) +
   geom_smooth(method = "lm")
 ```
 
-```{r}
 
+
+
+## sample?
+
+```{r}
+set.seed(8675309)
+
+rouges_gallery <- c("Josh Lim", "John Zito", "Sarah Wu", "Katie Solarz")
+rouges_gallery
+
+sample(rouges_gallery)
 ```
 
 
@@ -242,12 +274,26 @@ null_dist |>
   geom_histogram(binwidth = 0.2)
 ```
 
+## Reminder: observed fit
+
+What was our estimate to begin with?
+
+```{r}
+observed_fit <- volleyball |>
+  specify(spike ~ height) |>
+  fit()
+
+observed_fit
+```
+
 ## Visualize null distribution (alternative)
 
 ```{r}
 visualize(null_dist) +
   shade_p_value(obs_stat = observed_fit, direction = "two-sided")
 ```
+
+
 
 ## Get p-value
 
