@@ -35,11 +35,29 @@ todays_ae <- "ae-22-duke-forest-bootstrap"
 :::: {.column width="70%"}
 ::: wooclap
 
-TBD
+The line on the left is the 8% quantile of the data, and the line on the right is the 87% quantile of the data. What fraction of the data lives *between* the two lines?
+
+```{r}
+#| echo: false
+#| warning: false
+
+df <- tibble(
+  x = c(rnorm(300), rnorm(200, -4, 2))
+)
+
+ggplot(df, aes(x = x)) + 
+  geom_histogram() + 
+  geom_vline(xintercept = quantile(df$x, 0.08), color = "red", size = 2) + 
+  geom_vline(xintercept = quantile(df$x, 0.87), color = "red", size = 2)
+
+```
 
 ::: wooclap-choices
-- TBD
-- TBD
+- 50%
+- 79%
+- 80%
+- 87%
+- 95%
 :::
 
 :::
@@ -77,6 +95,10 @@ TBD
 - 80% of your final course grade is *locked* going into the final
 - I replace your lowest midterm score (the whole thing) with your final exam score, if it's better
 :::
+
+## Also
+
+![](images/22/tom-jerry-rake.gif){fig-align="center"}
 
 # Statistics
 
