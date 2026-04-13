@@ -2,7 +2,7 @@
 title: "AE 23: Pokemon Inference"
 ---
 
-Today we’ll explore the question “Are taller Pokémon speedier or faster than shorter Pokémon?”
+Today we’ll explore the question “Are taller Pokémon speedier than shorter Pokémon?”
 
 # Packages
 

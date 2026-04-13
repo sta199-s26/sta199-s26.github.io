@@ -57,7 +57,7 @@ Hi, I'm Josh!
 ::: incremental
 - 2nd Year PhD Student in Statistical Science
 - Teaching this course in summer
-- Fun fact: I'm a professional Saja Boy (Kpop Demon Hunter)
+- Fun fact: I'm a professional Saja Boy (Kpop Demon Hunters)
 - ![](images/23/saja.JPEG)
 :::
 
@@ -194,7 +194,7 @@ null_dist <- volleyball |>
 ::: incremental
 -   Simulating a universe under $H_0$: the slope of the model for predicting the spike touch of FIVB athletes from their heights is 0, $\beta_1 = 0$. I.e., no relationship between spike and height.
 
--  If I "shuffle" the order of the spike variable, is there a relationship between spike and height?
+-  If I "shuffle" the order of the spike variable, is there a relationship between spike and height? Could height predict spike touch?
 
 -  No! Spike is essentially random and unrelated to anything!
 
@@ -203,6 +203,29 @@ null_dist <- volleyball |>
 - More on this in STA 221L
 
 :::
+
+## Every day I'm shuffling
+
+
+```{r}
+ggplot(volleyball, aes(x = height, y = spike)) +
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
+## Every day I'm shuffling
+
+```{r}
+ggplot(volleyball, aes(x = height, y = sample(spike))) +
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
+
+```{r}
+
+```
+
+
+
 
 ## View null distribution {.smaller}
 
