@@ -44,7 +44,7 @@ Commit and push your changes with a meaningful commit message and push to GitHub
 
 ## Packages
 
-In this lab we will work with the **tidyverse** package.
+In this lab we will work with the **tidyverse** and **tidymodels** packages.
 
 ```{r}
 #| eval: true
