@@ -1182,7 +1182,7 @@ The amount of variation in the histogram tells us something about the uncertaint
 - The notion of uncertainty we seek to quantify is "variability of estimates across datasets;"
     - If the estimates vary a lot across datasets, reliability is low and uncertainty is high;
     - If the estimates vary only a little across datasets, reliability is high and uncertainty is low;
-- We can visualizes this with a histogram of estimates;
+- We can visualizes this with a histogram of estimates, and quantify it with the *spread* of that histogram (sd, var, IQR, etc);
 - Sampling uncertainty is influenced by the underlying noisiness of the data and the sample size.
 
 In order to *do* this in practice, we need multiple datasets. But in practice we only have one. So now what?
