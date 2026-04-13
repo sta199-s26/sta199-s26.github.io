@@ -64,7 +64,7 @@ The dataset, called `rdu-flights.csv`, can be found in the `data` folder.
 Take a random sample of 100 flights and store it as `rdu_flights_sample`.
 Make sure that you use the same seed as your teammates.
 
-:::: callout-tip
+::: callout-tip
 The following code allows you to obtain a random sample of N observations from a larger dataset.
 Update the code below to complete Question 1.
 
@@ -76,34 +76,86 @@ df_sample <- df_full |>
   slice(sample(1:nrow(df_full), N))
 
 ```
+:::
 
 ## Question 2 - Visualize
 
-Visualize the relationship between `distance` and `air_time` using a scatter plot.
-Also add a regression line to the scatter plot.
-Do not show the standard error ribbon around the regression line.
+Visualize the relationship between `distance` (x) and `air_time` (y) using a scatter plot.
+Add a regression line to the scatter plot, but do not display the standard error ribbon around the regression line.
 
-How does the relationship between the variables in your sample compare to that of others in your team or others in the class?
-How do the regression lines compare?
-Exactly the same?
-Wildly different?
-Somewhere in between?
+## Question 3 - Bootstrap
 
-## Question 3 - Model and estimate
+Compute a 95% bootstrap interval for the slope of the regression line for predicting `air_time` from `distance`.
+In your code, use 1,000 bootstrap samples when simulating your bootstrap distribution.
 
-Fit a model predicting `air_time` using `distance` using the sample data.
-Display the model summary.
+In your narrative, provide an interpretation of the 95% confidence interval for the slope (hint: refer back to "notes 22" on the course website).
 
-How does the slope estimate in your sample compare to that of others in your team or others in the class?
-Exactly the same?
-Wildly different?
-Somewhere in between?
+::: callout-tip
+Below is a step-by-step recipe for constructing and visualizing a confidence interval.
+The code snippets shown are not "complete." They include some blanks you need to fill in, and they are just intended to guide you in the right direction.
 
-## Question 4 - Quantify(ish) uncertainty
+-   Step 1: Calculate the point estimate for the slope and the intercept of the regression line.
 
-Mark your slope estimate from Question 3 on the number line on the board.
-Then, based on the slope estimates from the entire class, determine a reasonable range of values for the estimate of the slope of the relationship between `distance` and `air_time`.
-How do you define "reasonable"?
+```{r}
+#| eval: false
+obs_fit <- rdu_flights_sample |>
+  specify(______ ~ ______) |>
+  fit()
+```
+
+-   Step 2: Simulate a bootstrap distribution of regression estimates.
+
+```{r}
+#| eval: false
+set.seed(___)
+
+boot_dist <- rdu_flights_sample |>
+  specify(_____ ~ ______) |>
+  generate(reps = ____, type = _______) |>
+  fit()
+```
+
+-   Step 3: Calculate the bounds of the confidence interval.
+
+```{r}
+#| eval: false
+conf_ints <- 
+  get_confidence_interval(
+    ____, 
+    level = ___, 
+    point_estimate = ____
+  )
+```
+:::
+
+## Question 4: Hypothesize
+a.  Set the null hypothesis:
+
+    What if there was no relationship between `distance` and `air_time`? What would the true slope of the relationship be in that case? This is your null hypothesis. You can articulate it as:
+
+    $H_0:$ There is no relationship between distance and air time, the value of the true slope is \_\_\_\_, i.e., $\beta_1$ = \_\_\_\_.
+
+    Fill in the blanks.
+
+    ::: callout-tip
+    The null hypothesis **always** sets the true population parameter **equal** to a specific value.
+    :::
+
+b.  Set the alternative hypothesis:
+
+    What if there is a relationship between `distance` and `air_time`? This is your alternative hypothesis!
+
+    $H_A:$ There is a relationship between distance and air time, the value of the true slope is \_\_\_\_, i.e., $\beta_1$ \_\_\_\_\_\_.
+
+    Fill in the blanks.
+
+    ::: callout-tip
+    The alternative hypothesis **always** compares the true population parameter to the same specific value set in the null hypothesis.
+    This comparison can be "not equal to", "greater than", or "less than" and the choice depends on the research question.
+    In this case, our research question is whether there is *some* relationship between distance and air time.
+    :::
+
+c. Based on the 95% confidence interval you came up with in Question 3, would you expect to fail to reject or to reject the above null hypothesis at the 5% significance level? Explain your reasoning.
 
 # Wrap-up
 
