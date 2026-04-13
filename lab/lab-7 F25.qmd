@@ -1,15 +1,18 @@
 ---
-title: Lab 7
+title: Lab 8
 subtitle: "Leavin' on a jet plane, confidently"
-description: "Due: End of lab on Mon, Nov 24"
+description: "Due: End of lab on Thurs, April 16"
 categories: Lab
 filters:
   - ../remove-fmt-skip.lua
-draft: false
+draft: true
 execute:
   echo: true
   eval: true
   message: false
+editor: 
+  markdown: 
+    wrap: sentence
 ---
 
 # Introduction
@@ -18,7 +21,7 @@ In this lab you'll explore the relationship between distance and air time of fli
 
 And you'll work in what's considered a pretty unlikely situation: you have access to population data -- all flights out of RDU in 2024!
 But we'll ask you to pretend that you didn't actually have access and you need to work with sample data.
-How? 
+How?
 Hang in there, get the population data loaded first, then we'll explain the next steps!
 
 ## Getting started
@@ -26,7 +29,7 @@ Hang in there, get the population data loaded first, then we'll explain the next
 By now you should be familiar with how to get started with a lab assignment by cloning the GitHub repo for the assignment.
 If you're not sure how, refer back to an earlier lab.
 
-Open the *lab-7.qmd* template Quarto file and update the `authors` field to add your name first (first and last) and then your teammates' names (first and last).
+Open the *lab-8.qmd* template Quarto file and update the `authors` field to add your name first (first and last) and then your teammates' names (first and last).
 Render the document.
 Examine the rendered document and make sure your and your teammates' names are updated in the document.
 Commit and push your changes with a meaningful commit message and push to GitHub.
@@ -59,7 +62,20 @@ The dataset, called `rdu-flights.csv`, can be found in the `data` folder.
 ## Question 1 - Sample
 
 Take a random sample of 100 flights and store it as `rdu_flights_sample`.
-Each person in the class should have a different sample.
+Make sure that you use the same seed as your teammates.
+
+:::: callout-tip
+The following code allows you to obtain a random sample of N observations from a larger dataset.
+Update the code below to complete Question 1.
+
+```{r}
+#| eval: false
+
+set.seed(___)
+df_sample <- df_full |>
+  slice(sample(1:nrow(df_full), N))
+
+```
 
 ## Question 2 - Visualize
 
@@ -69,7 +85,9 @@ Do not show the standard error ribbon around the regression line.
 
 How does the relationship between the variables in your sample compare to that of others in your team or others in the class?
 How do the regression lines compare?
-Exactly the same? Wildly different? Somewhere in between?
+Exactly the same?
+Wildly different?
+Somewhere in between?
 
 ## Question 3 - Model and estimate
 
@@ -77,7 +95,9 @@ Fit a model predicting `air_time` using `distance` using the sample data.
 Display the model summary.
 
 How does the slope estimate in your sample compare to that of others in your team or others in the class?
-Exactly the same? Wildly different? Somewhere in between?
+Exactly the same?
+Wildly different?
+Somewhere in between?
 
 ## Question 4 - Quantify(ish) uncertainty
 
@@ -118,3 +138,4 @@ By now you should also be familiar with how to submit your assignment in Gradesc
 -   You'll receive feedback on your lab on Gradescope within a week.
 
 Good luck, and have fun with it!
+::::
