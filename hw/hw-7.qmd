@@ -146,8 +146,6 @@ library(knitr)
 ```
 
 
-# Questions
-
 ::: render-commit-push
 Do not forget to render, commit, and push regularly, after each substantial change to your document (e.g., after answering each question).
 Use succinct and informative commit messages.
