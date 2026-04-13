@@ -1,0 +1,323 @@
+---
+title: HW 7
+description: "Due: Wed, Apr 29, 11:59 pm"
+categories: HW
+filters:
+  - ../remove-fmt-skip.lua
+draft: false
+---
+
+# Introduction
+
+This is a two-part homework assignment:
+
+- **Part 1 -- 🤖 Feedback from AI:** Not graded, for practice, you get immediate feedback with AI, based on rubrics designed by the course instructor. Complete in `hw-7-part-1.qmd`, no submission required.
+
+- **Part 2 -- 🧑🏽‍🏫 Feedback from Humans:** Graded, you get feedback from the course instructional team in about a week. Complete in `hw-7-part-2.qmd`, submit on Gradescope.
+
+By now you should be familiar with how to get started with a homework assignment by cloning the GitHub repo for the assignment.
+
+<details>
+<summary>Click to expand if you need a refresher on how to get started with a homework assignment.</summary>
+
+-   Go to <https://cmgr.oit.duke.edu/containers> and login with your Duke NetID and Password.
+-   Click `STA199` under My reservations to log into your container. You should now see the RStudio environment.
+-   Go to the course organization at [github.com/sta199-s26](https://github.com/sta199-s26) organization on GitHub.
+    Click on the repo with the prefix **hw-7**.
+    It contains the starter documents you need to complete the homework.
+-   Click on the green **CODE** button, select **Use SSH**.
+    Click on the clipboard icon to copy the repo URL.
+-   In RStudio, go to *File* ➛ *New Project* ➛*Version Control* ➛ *Git*.
+-   Copy and paste the URL of your assignment repo into the dialog box *Repository URL*. Again, please make sure to have *SSH* highlighted under *Clone* when you copy the address.
+-   Click *Create Project*, and the files from your GitHub repo will be displayed in the *Files* pane in RStudio.
+</details>
+
+By now you should also be familiar with guidelines for formatting your code and plots as well as your Git and Gradescope workflow.
+
+<details>
+<summary>Click to expand if you need a refresher on assignment guidelines.</summary>
+{{< include _guidelines.qmd >}}
+</details>
+
+## Packages
+
+In this homework you will work with the **tidyverse** and **tidymodels** packages.
+
+```{r}
+library(tidyverse)
+library(tidymodels)
+```
+
+# Part 1 -- Feedback from AI
+
+Your answers to the questions in this part should go in the file `hw-7-part-1.qmd`.
+
+## Instructions
+
+Write your answer to each question in the appropriate section of the `hw-7-part-1.qmd` file.
+Then, highlight your answer to a question, click on _Addins > AIFEEDR > Get feedback_.
+In the app that opens, select the appropriate homework number (4) and question number.
+Then click on _Get Feedback_.
+Please be patient, feedback generation can take a few seconds. 
+Once you read the feedback, you can go back to your Quarto document to improve your answer based on the feedback. 
+You will then need to click the red X on the top left corner of the Viewer pane to stop the feedback app from running before you can re-render your Quarto document.
+
+<details>
+<summary>Click to expand if you want to review the video that demonstrates how to use the AI feedback tool.</summary>
+{{< video https://www.youtube.com/embed/EyT6QQN1ouQ?si=DsG-laE30BykMJby title="aifeedr">}}
+</details>
+
+## Data
+
+In this part, you'll work with data from the [Duke Lemur Center](https://lemur.duke.edu/), which houses over 200 lemurs across 14 species -- the most diverse population of lemurs on Earth, outside their native Madagascar.
+
+> Lemurs are the most threatened group of mammals on the planet, and 95% of lemur species are at risk of extinction.
+> Our mission is to learn everything we can about lemurs -- because the more we learn, the better we can work to save them from extinction.
+> They are endemic only to Madagascar, so it's essentially a one-shot deal: once lemurs are gone from Madagascar, they are gone from the wild.
+
+> By studying the variables that most affect their health, reproduction, and social dynamics, the Duke Lemur Center learns how to most effectively focus [their conservation efforts](https://lemur.duke.edu/protect/overview-madagascar-conservation-programs/).
+> And the more we learn about lemurs, the better we can educate the public around the world about just how amazing these animals are, why they need to be protected, and how each and every one of us can make a difference in their survival.
+
+> Source: [TidyTuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-08-24/readme.md)
+
+While the TidyTuesday project used the full dataset, you'll work with a subset.
+The dataset, called `lemurs.csv`, can be found in the `data` folder.
+You can learn more about the data at <https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-08-24>.
+A data dictionary has been included in the README of the `data` folder of your repository.
+
+## Questions
+
+::: render-commit-push
+Do not forget to render, commit, and push regularly, after each substantial change to your document (e.g., after answering each question).
+Use succinct and informative commit messages.
+Make sure to commit and push all changed files so that your Git pane is empty afterward.
+:::
+
+### Question 1
+
+Load the `lemurs` data from your `data` folder and save it as `lemurs`.
+Then, report which "types" of lemurs are represented in the sample and how many of each.
+Note that this information is in the `taxon` variable.
+You should refer back to the linked data dictionary to understand what the different values of `taxon` mean.
+Your response should be a tibble with at least three columns, `taxon`, `taxon_name` (a new variable you create that contains the description of the `taxon`, e.g., `EMON` is `Mongoose lemur`), and `n` (number of lemurs with that taxon).
+
+### Question 2
+
+What is the slope of the regression line for predicting weights of lemurs (`weight_g`) from the ages of lemurs (in years) when their weight was measured (`age_at_wt_y`)?
+Calculate and interpret a 95% bootstrap bootstrap confidence interval.
+Also report your point estimate.
+Don't forget to set a seed and use 1,000 bootstrap samples (`reps = 1000`) when simulating your bootstrap distribution.
+
+### Question 3
+
+What are the slopes of the regression line for predicting weights of lemurs (`weight_g`) from the ages of lemurs (in years) when their weight was measured (`age_at_wt_y`) and their types (`taxon`)?
+Calculate and interpret a 95% bootstrap bootstrap confidence interval.
+Also report your point estimate.
+Don't forget to set a seed and use 1,000 bootstrap samples (`reps = 1000`) when simulating your bootstrap distribution.
+
+### Question 4
+
+What is the **median** weight of red-bellied lemurs?
+What is the **median** weight of ring-tailed lemurs?
+What is the **median** weight of mongoose lemurs?
+Calculate and interpret a 95% bootstrap bootstrap confidence intervals.
+Also report your point estimates.
+Don't forget to set a seed and use 1,000 bootstrap samples (`reps = 1000`) when simulating your bootstrap distribution.
+
+::: render-commit-push
+Now is another good time to render, commit, and push your changes to GitHub with an informative and concise commit message.
+And once again, make sure to commit and push all changed files so that your Git pane is empty afterward.
+We keep repeating this because it's important and because we see students forget to do this.
+So take a moment to make sure you're practicing good version control habits.
+:::
+
+# Part 2 -- Feedback from Humans 
+
+Your answers to the questions in this part should go in the file `hw-7-part-2.qmd`.
+
+## Packages
+
+You will work with the following packages:
+
+```{r}
+library(tidyverse)
+library(tidymodels)
+library(knitr)
+```
+
+
+# Questions
+
+::: render-commit-push
+Do not forget to render, commit, and push regularly, after each substantial change to your document (e.g., after answering each question).
+Use succinct and informative commit messages.
+Make sure to commit and push all changed files so that your Git pane is empty afterward.
+:::
+
+## More Lemurs
+
+Questions 5 and 6 use the `lemurs` data from Part 1 of this homework.
+You can refer to the background information provided above for context, and load the data from `lemurs.csv` in your data folder.
+
+### Question 5 🤖
+
+The goal of this question is to answer the following research question:
+
+> Do female lemurs differ in weight from male lemurs, on average?
+
+More specifically, we want to answer whether the data provide convincing evidence of a discernible difference between the average weights of female and male lemurs.
+
+a.  Conduct a hypothesis test to answer this question at 5% discernability level.
+    Clearly state your hypotheses in the context of the data and the research question, simulate a randomization distribution, find the p-value, and make a decision on your hypotheses based on this p-value.
+    Provide a one-sentence conclusion for your hypothesis test in the context of the data and the research question.
+    Don’t forget to set a seed and use 1,000 resamples (`reps = 1000`) when simulating your randomization distribution.
+
+b.  Based on your answer to Part (a), would you expect a 95% confidence interval for the difference in means of female and male lemurs to include 0?
+    Explain your reasoning.
+
+c.  Construct and interpret a 95% bootstrap confidence interval for the difference in means of female and male lemurs.
+    Does it include 0?
+    Does this align with your answer to Part (b)?
+    Don’t forget to set a seed and use 1,000 resamples (`reps = 1000`) when simulating your bootstrap distribution.
+
+### Question 6 🧑🏽‍🏫
+
+The goal of this question is to answer the following research question:
+
+> Does the median weight of female lemurs differ from that of male lemurs?
+
+More specifically, we want to answer whether the data provide convincing evidence of a discernible difference between the median weights of female and male lemurs.
+
+a.  Conduct a hypothesis test to answer this question at 5% discernability level.
+    Clearly state your hypotheses in the context of the data and the research question, simulate a randomization distribution, find the p-value, and make a decision on your hypotheses based on this p-value.
+    Provide a one-sentence conclusion for your hypothesis test in the context of the data and the research question.
+    Don’t forget to set a seed and use 1,000 resamples (`reps = 1000`) when simulating your randomization distribution.
+
+b.  Based on your answer to Part (a), would you expect a 95% confidence interval for the difference in medians of female and male lemurs to include 0?
+    Explain your reasoning.
+
+c.  Construct and interpret a 95% bootstrap confidence interval for the difference in medians of female and male lemurs.
+    Does it include 0?
+    Does this align with your answer to Part (b)?
+    Don’t forget to set a seed and use 1,000 resamples (`reps = 1000`) when simulating your bootstrap distribution.
+
+## Babies
+
+Every year, the US releases to the public a large dataset containing information on births recorded in the country.
+This dataset has been of interest to medical researchers who are studying the relation between habits and practices of expectant mothers and the birth of their children.[^1]
+This is a random sample of 1,000 cases from the dataset released in 2014.
+
+[^1]: United States Department of Health and Human Services.
+    Centers for Disease Control and Prevention.
+    National Center for Health Statistics.
+    Natality Detail File, 2014 United States.
+    Inter-university Consortium for Political and Social Research, 2016-10-07.
+    doi:10.3886/ICPSR36461.v1.
+
+The data are available your `data` folder in `births14.csv`.
+Questions 3-10 use these data.
+
+The variables in the data are as follows:
+
+-   `fage`: Father's age in years.
+-   `mage`: Mother's age in years.
+-   `mature`: Maturity status of mother.
+-   `weeks`: Length of pregnancy in weeks.
+-   `premie`: Whether the birth was classified as premature (premie) or full-term.
+-   `visits`: Number of hospital visits during pregnancy.
+-   `gained`: Weight gained by mother during pregnancy in pounds.
+-   `weight`: Weight of the baby at birth in pounds.
+-   `lowbirthweight`: Whether baby was classified as low birthweight (low) or not (⁠not low⁠).
+-   `sex`: Sex of the baby, female or male.
+-   `habit`: Status of the mother as a nonsmoker or a smoker.
+-   `marital`: Whether mother is married or ⁠not married⁠ at birth.
+-   `whitemom`: Whether mom is white or ⁠not white⁠.
+
+### Question 7 🤖
+
+a.  First, read the data in and store it as `births14_raw`.
+
+Then, in a single pipeline, filter for any rows of the `births14` data frame where one or more of the following variables has an `NA` value: `mage`, `weight`, `habit`, `mature`, `lowbirthweight`, then select only these five variables to display.
+
+b.  In a single pipeline, remove any rows of the `births14_raw` data frame with `NA` values among those you identified as having `NA` values in the previous question, and save the results as `births14`.
+
+Then, find and state the numbers of rows of columns of `births14`.
+
+::: callout-tip
+You should end up with 981 rows.
+If you do not, revisit your earlier work to make sure you have removed all rows with `NA` values in any of the specified columns.
+:::
+
+c.  One of the variables in the data is `mature`, indicating whether the mom is considered "mature" or "younger".
+This categorization is based on a medical threshold used for pregnancies.
+Using the data alone (not medical knowledge or external resources), determine the threshold age used to categorize moms as "mature" vs. "younger".
+Describe your process, include any evidence (summary statistics and/or visualization), and clearly state the threshold you determined.
+
+d.  Another variable in the data is `lowbirthweight`, indicating whether the baby's weight is considered "low" or "not low" at birth.
+This categorization is based on a medical threshold used for births.
+Using the data alone (not medical knowledge or external resources), determine the threshold weight used to categorize baby weights as "low" vs. "now low".
+Describe your process, include any evidence (summary statistics and/or visualization), and clearly state the threshold you determined.
+
+e.  In a single pipeline, recode the variables `mature`, `habit`, and `lowbirthweight` in the `births14` data frame as follows:
+
+-   `mature` : "mature mom" → "35 and over", "younger mom" → "34 and under"
+-   `habit` : "smoker" → "Smoker", "nonsmoker" → "Non-smoker"
+-   `lowbirthweight` : "low" → "Low", "not low" → "Not low"
+
+In that same pipeline, relocate these three variables to be the first three columns of the data frame.
+
+Save the result back to `births14` and display the first 10 rows (and however many columns fit across the page) of `births14`.
+
+### Question 8 🤖
+
+In this question you will conduct inference for a slope in a model with a single predictor.
+
+a.  Fit a model for predicting baby weight (`weight`) from mother's age category (`mature`).
+    Display the tidy model output.
+
+b.  Construct a 95% confidence interval for the slope the model from part (a), using bootstrapping with 1,000 resamples and the percentile method.
+    Dislay the bounds of the interval and interpret it in the context of the data and the research question.
+
+c.  Visualize the bootstrap distribution you used to construct the confidence interval.
+    Comment on its shape and center.
+
+d.  Based on your interval from Part (b), do these data provide convincing evidence of a discernible difference between the average weights of babies born to mothers who are 35 years and older vs. those born to mothers who are 34 years and younger?
+    Explain your reasoning.
+    Note: You do not need to a hypothesis test to answer this question, justify your answer with your confidence interval only.
+
+### Question 9 🧑🏽‍🏫
+
+In this question you will conduct inference for slopes in a model with a two predictors.
+
+a.  Fit a model for predicting baby weight (`weight`) from mother's age (`mage`) and smoking status (`habit`).
+    Display the tidy model output.
+
+b.  Construct 95% confidence intervals for the slopes the model from part (a), using bootstrapping with 1,000 resamples and the percentile method.
+    Dislay the bounds of the intervals and interpret them in the context of the data and the research question.
+
+c.  Visualize the bootstrap distributions you used to construct the confidence intervals.
+    Comment on their shapes and centers.
+
+# Wrap-up
+
+::: callout-warning
+Before you wrap up the assignment, make sure that you render, commit, and push one final time so that the final versions of both your `.qmd` file and the rendered PDF are pushed to GitHub and your Git pane is empty.
+We will be checking these to make sure you have been practicing how to commit and push changes.
+:::
+
+## Submission
+
+{{< include _submission.qmd >}}
+
+## Grading and feedback
+
+-   Questions 1-4 are not graded, but you should complete them to get practice.
+
+-   Questions 5-9 are graded, and you will receive feedback on Gradescope from the course instructional team in about a week.
+    -   Questions will be graded for accuracy and completeness.
+    -   Partial credit will be given where appropriate.
+    -   There are also workflow points for:
+        - committing at least three times as you work through your homework,
+        - having your final version of `.qmd` and `.pdf` files in your GitHub repository, and
+        - overall organization.
+        
