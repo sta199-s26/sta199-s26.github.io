@@ -35,11 +35,14 @@ volleyball <- read_csv("data/volleyball_cut.csv")
 :::: {.column width="70%"}
 ::: wooclap
 
-How confident are you about confidence intervals?
+Sampling uncertainty refers to...
 
 ::: wooclap-choices
-- TBD
-- TBD
+- uncertainty about the accuracy of data collection
+- uncertainty about whether our statistical model is true
+- sensitivity of results to human error
+- variation in conclusions across different models
+- variation in estimates across alternative datasets
 :::
 
 :::
