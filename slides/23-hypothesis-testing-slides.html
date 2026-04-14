@@ -244,7 +244,7 @@ Josh Lim
 <ul>
 <li class="fragment">2nd Year PhD Student in Statistical Science</li>
 <li class="fragment">Teaching this course in summer</li>
-<li class="fragment">Fun fact: I’m a professional Saja Boy (Kpop Demon Hunter)</li>
+<li class="fragment">Fun fact: I’m a professional Saja Boy (Kpop Demon Hunters)</li>
 <li class="fragment"><img data-src="images/23/saja.JPEG"></li>
 </ul></section><section id="zito-the-goat" class="slide level2"><h2>Zito the GOAT</h2>
 
@@ -387,13 +387,158 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 </section><section id="wait-so-whats-a-null-distribution" class="slide level2"><h2>Wait, so what’s a null distribution?</h2>
 <ul>
 <li class="fragment"><p>Simulating a universe under <span class="math inline">\(H_0\)</span>: the slope of the model for predicting the spike touch of FIVB athletes from their heights is 0, <span class="math inline">\(\beta_1 = 0\)</span>. I.e., no relationship between spike and height.</p></li>
-<li class="fragment"><p>If I “shuffle” the order of the spike variable, is there a relationship between spike and height?</p></li>
-<li class="fragment"><p>No! Spike is essentially random and unrelated to anything!</p></li>
+<li class="fragment"><p>If I “shuffle” the order of the spike variable, is there a relationship between spike and height? Could height predict spike touch?</p></li>
+</ul></section><section id="participate" class="slide level2 small"><h2>Participate 📱💻</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div class="wooclap">
+<p>If I “shuffle” the order of the spike variable, is there a relationship between spike and height? Could height predict spike touch?</p>
+<div class="wooclap-choices">
+<ul>
+<li>On Average, Yes</li>
+<li>On Average, No</li>
+<li>Never</li>
+<li>I want lunch, stop talking about volleyball</li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:30%;">
+<div id="" class="qrcode"></div>
+<script type="text/javascript">
+(function() {
+  var script = document.currentScript;
+  var qrcode = script.previousElementSibling;
+  qrcode.qrcode = new QRCode(qrcode, {"colorDark":"#000000","colorLight":"#ffffff","height":"300","text":"https://app.wooclap.com/TNRPMB?from=instruction-slide","width":"300"});
+  script.remove();
+})();
+</script><div class="small">
+<p>Scan the QR code or go <a href="https://app.wooclap.com/TNRPMB?from=instruction-slide">HERE</a>. Log in with your Duke NetID.</p>
+</div>
+</div></div>
+</section><section id="shuffling-is-cool-trust" class="slide level2"><h2>Shuffling is cool, trust</h2>
+<ul>
+<li class="fragment"><p>On avergage, no</p></li>
+<li class="fragment"><p>Shuffling breaks any link between spike and height (on average)</p></li>
+<li class="fragment"><p><code>type = "permute"</code></p></li>
 <li class="fragment"><p>Shuffle the spike variable, fit a model and get a slope, record the slope, repeat!</p></li>
 <li class="fragment"><p>More on this in STA 221L</p></li>
-</ul></section><section id="view-null-distribution" class="slide level2 smaller"><h2>View null distribution</h2>
+<li class="fragment"><p>What if we shuffled height instead? Both?</p></li>
+</ul></section><section id="every-day-im-shuffling" class="slide level2"><h2>Every day I’m shuffling</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>null_dist</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">ggplot</span>(volleyball, <span class="fu">aes</span>(<span class="at">x =</span> height, <span class="at">y =</span> spike)) <span class="sc">+</span></span>
+<span id="cb8-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb8-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section><section id="every-day-im-shuffling-1" class="slide level2"><h2>Every day I’m shuffling</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">ggplot</span>(volleyball, <span class="fu">aes</span>(<span class="at">x =</span> height, <span class="at">y =</span> <span class="fu">sample</span>(spike))) <span class="sc">+</span></span>
+<span id="cb9-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb9-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section><section id="wait-whats-that-new-function" class="slide level2"><h2>Wait, what’s that new function</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">set.seed</span>(<span class="dv">8675309</span>)</span>
+<span id="cb10-2"><a></a></span>
+<span id="cb10-3"><a></a>rouges_gallery <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Josh Lim"</span>, <span class="st">"John Zito"</span>, <span class="st">"Sarah Wu"</span>, <span class="st">"Katie Solarz"</span>)</span>
+<span id="cb10-4"><a></a>rouges_gallery</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Josh Lim"     "John Zito"    "Sarah Wu"     "Katie Solarz"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">sample</span>(rouges_gallery)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Katie Solarz" "Sarah Wu"     "John Zito"    "Josh Lim"    </code></pre>
+</div>
+</div>
+</section><section id="what-if-this-was-my-shuffle" class="slide level2"><h2>What if this was my shuffle?</h2>
+<div class="columns">
+<div class="column" style="width:49%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  term        estimate
+  &lt;chr&gt;          &lt;dbl&gt;
+1 (Intercept)  336.   
+2 height        -0.231</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:49%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section><section id="what-if-this-was-my-shuffle-instead" class="slide level2"><h2>What if this was my shuffle instead?</h2>
+<div class="columns">
+<div class="column" style="width:49%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  term        estimate
+  &lt;chr&gt;          &lt;dbl&gt;
+1 (Intercept)  389.   
+2 height        -0.526</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:49%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section><section id="what-if-this-was-my-shuffle-instead-1" class="slide level2"><h2>What if this was my shuffle instead?</h2>
+<div class="columns">
+<div class="column" style="width:49%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  term        estimate
+  &lt;chr&gt;          &lt;dbl&gt;
+1 (Intercept)  242.   
+2 height         0.291</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:49%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section><section id="rinse-and-repeat-10000-times" class="slide level2"><h2>Rinse and repeat 10000 times…</h2>
+</section><section id="view-null-distribution" class="slide level2 smaller"><h2>View null distribution</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>null_dist</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 20,000 × 3
 # Groups:   replicate [10,000]
@@ -414,22 +559,38 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 </div>
 </section><section id="visualize-null-distribution" class="slide level2 smaller"><h2>Visualize null distribution</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>null_dist <span class="sc">|&gt;</span></span>
-<span id="cb10-2"><a></a>  <span class="fu">filter</span>(term <span class="sc">==</span> <span class="st">"height"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb10-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> estimate)) <span class="sc">+</span></span>
-<span id="cb10-4"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>null_dist <span class="sc">|&gt;</span></span>
+<span id="cb19-2"><a></a>  <span class="fu">filter</span>(term <span class="sc">==</span> <span class="st">"height"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb19-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> estimate)) <span class="sc">+</span></span>
+<span id="cb19-4"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section><section id="visualize-null-distribution-alternative" class="slide level2"><h2>Visualize null distribution (alternative)</h2>
+<img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section><section id="reminder-observed-fit" class="slide level2"><h2>Reminder: observed fit</h2>
+<p>What was our estimate to begin with?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">visualize</span>(null_dist) <span class="sc">+</span></span>
-<span id="cb11-2"><a></a>  <span class="fu">shade_p_value</span>(<span class="at">obs_stat =</span> observed_fit, <span class="at">direction =</span> <span class="st">"two-sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>observed_fit <span class="ot">&lt;-</span> volleyball <span class="sc">|&gt;</span></span>
+<span id="cb20-2"><a></a>  <span class="fu">specify</span>(spike <span class="sc">~</span> height) <span class="sc">|&gt;</span></span>
+<span id="cb20-3"><a></a>  <span class="fu">fit</span>()</span>
+<span id="cb20-4"><a></a></span>
+<span id="cb20-5"><a></a>observed_fit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  term      estimate
+  &lt;chr&gt;        &lt;dbl&gt;
+1 intercept   0.0540
+2 height      1.62  </code></pre>
+</div>
+</div>
+</section><section id="visualize-null-distribution-alternative" class="slide level2"><h2>Visualize null distribution (alternative)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">visualize</span>(null_dist) <span class="sc">+</span></span>
+<span id="cb22-2"><a></a>  <span class="fu">shade_p_value</span>(<span class="at">obs_stat =</span> observed_fit, <span class="at">direction =</span> <span class="st">"two-sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section><section id="get-p-value" class="slide level2"><h2>Get p-value</h2>
+<img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section><section id="get-p-value" class="slide level2"><h2>Get p-value</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>null_dist <span class="sc">|&gt;</span></span>
-<span id="cb12-2"><a></a>  <span class="fu">get_p_value</span>(<span class="at">obs_stat =</span> observed_fit, <span class="at">direction =</span> <span class="st">"two-sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>null_dist <span class="sc">|&gt;</span></span>
+<span id="cb23-2"><a></a>  <span class="fu">get_p_value</span>(<span class="at">obs_stat =</span> observed_fit, <span class="at">direction =</span> <span class="st">"two-sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 2
   term      p_value
@@ -442,8 +603,15 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <div class="task">
 <p>Based on the p-value calculated, what is the conclusion of the hypothesis test?</p>
 </div>
-<p>Since <span class="math inline">\(p = 0.002\)</span>, we reject the null hypothesis and have evidence that there is a statistically significant relationship between an FIVB players spike touch and height.</p>
-</section><section id="sometimes-the-test-will-be-wrong" class="slide level2"><h2>Sometimes the test will be wrong</h2>
+<ul>
+<li class="fragment">Probability of observing your data or something more extreme given the null is true</li>
+<li class="fragment">Since <span class="math inline">\(p = 0.002\)</span>, we reject the null hypothesis and have evidence that there is a statistically significant relationship between an FIVB players spike touch and height.</li>
+</ul></section><section id="how-small-is-small-enough" class="slide level2"><h2>How small is small enough?</h2>
+<p>Pick a threshold <span class="math inline">\(\alpha\in[0,\,1]\)</span> called the <strong>discernibility level</strong> and threshold the <span class="math inline">\(p\)</span>-value:</p>
+<ul>
+<li class="fragment">If <span class="math inline">\(p\text{-value} &lt; \alpha\)</span>, reject null and accept alternative;</li>
+<li class="fragment">If <span class="math inline">\(p\text{-value} \geq \alpha\)</span>, fail to reject null;</li>
+</ul></section><section id="sometimes-the-test-will-be-wrong" class="slide level2"><h2>Sometimes the test will be wrong</h2>
 
 <img data-src="images/23/general.png" class="r-stretch"></section><section id="think-about-the-judge" class="slide level2"><h2>Think about the judge</h2>
 <p><span class="math inline">\(H_0\)</span> person innocent vs <span class="math inline">\(H_A\)</span> person guilty</p>
@@ -451,12 +619,8 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <img data-src="images/23/judge.png" class="r-stretch"></section><section id="think-about-the-doctor" class="slide level2"><h2>Think about the doctor</h2>
 <p><span class="math inline">\(H_0\)</span> person well vs <span class="math inline">\(H_A\)</span> person sick.</p>
 
-<img data-src="images/23/doctor.png" class="r-stretch"></section><section id="how-do-we-negotiate-the-trade-off" class="slide level2"><h2>How do we negotiate the trade-off?</h2>
-<p>Pick a threshold <span class="math inline">\(\alpha\in[0,\,1]\)</span> called the <strong>discernibility level</strong> and threshold the <span class="math inline">\(p\)</span>-value:</p>
-<ul>
-<li class="fragment">If <span class="math inline">\(p\text{-value} &lt; \alpha\)</span>, reject null and accept alternative;</li>
-<li class="fragment">If <span class="math inline">\(p\text{-value} \geq \alpha\)</span>, fail to reject null;</li>
-</ul></section></section><section id="section" class="title-slide slide level1 center"><h1><img data-src="images/23/alpha.png"></h1>
+<img data-src="images/23/doctor.png" class="r-stretch"></section><section id="where-does-alpha-come-in-to-this" class="slide level2"><h2>Where does alpha come in to this?</h2>
+</section></section><section id="section" class="title-slide slide level1 center"><h1><img data-src="images/23/alpha.png"></h1>
 
 
 </section>

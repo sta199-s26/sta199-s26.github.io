@@ -2760,7 +2760,7 @@
     "href": "slides/23-hypothesis-testing-slides.html#this-aint-zito",
     "title": "Hypothesis testing",
     "section": "This ain’t Zito",
-    "text": "This ain’t Zito\nHi, I’m Josh!\n\n2nd Year PhD Student in Statistical Science\nTeaching this course in summer\nFun fact: I’m a professional Saja Boy (Kpop Demon Hunter)"
+    "text": "This ain’t Zito\nHi, I’m Josh!\n\n2nd Year PhD Student in Statistical Science\nTeaching this course in summer\nFun fact: I’m a professional Saja Boy (Kpop Demon Hunters)"
   },
   {
     "objectID": "slides/23-hypothesis-testing-slides.html#zito-the-goat",
@@ -2844,7 +2844,70 @@
     "href": "slides/23-hypothesis-testing-slides.html#wait-so-whats-a-null-distribution",
     "title": "Hypothesis testing",
     "section": "Wait, so what’s a null distribution?",
-    "text": "Wait, so what’s a null distribution?\n\nSimulating a universe under \\(H_0\\): the slope of the model for predicting the spike touch of FIVB athletes from their heights is 0, \\(\\beta_1 = 0\\). I.e., no relationship between spike and height.\nIf I “shuffle” the order of the spike variable, is there a relationship between spike and height?\nNo! Spike is essentially random and unrelated to anything!\nShuffle the spike variable, fit a model and get a slope, record the slope, repeat!\nMore on this in STA 221L"
+    "text": "Wait, so what’s a null distribution?\n\nSimulating a universe under \\(H_0\\): the slope of the model for predicting the spike touch of FIVB athletes from their heights is 0, \\(\\beta_1 = 0\\). I.e., no relationship between spike and height.\nIf I “shuffle” the order of the spike variable, is there a relationship between spike and height? Could height predict spike touch?"
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing-slides.html#participate",
+    "href": "slides/23-hypothesis-testing-slides.html#participate",
+    "title": "Hypothesis testing",
+    "section": "Participate 📱💻",
+    "text": "Participate 📱💻\n\n\n\nIf I “shuffle” the order of the spike variable, is there a relationship between spike and height? Could height predict spike touch?\n\n\nOn Average, Yes\nOn Average, No\nNever\nI want lunch, stop talking about volleyball\n\n\n\n\n\n\nScan the QR code or go HERE. Log in with your Duke NetID."
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing-slides.html#shuffling-is-cool-trust",
+    "href": "slides/23-hypothesis-testing-slides.html#shuffling-is-cool-trust",
+    "title": "Hypothesis testing",
+    "section": "Shuffling is cool, trust",
+    "text": "Shuffling is cool, trust\n\nOn avergage, no\nShuffling breaks any link between spike and height (on average)\ntype = \"permute\"\nShuffle the spike variable, fit a model and get a slope, record the slope, repeat!\nMore on this in STA 221L\nWhat if we shuffled height instead? Both?"
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing-slides.html#every-day-im-shuffling",
+    "href": "slides/23-hypothesis-testing-slides.html#every-day-im-shuffling",
+    "title": "Hypothesis testing",
+    "section": "Every day I’m shuffling",
+    "text": "Every day I’m shuffling\n\nggplot(volleyball, aes(x = height, y = spike)) +\n  geom_point() + \n  geom_smooth(method = \"lm\")"
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing-slides.html#every-day-im-shuffling-1",
+    "href": "slides/23-hypothesis-testing-slides.html#every-day-im-shuffling-1",
+    "title": "Hypothesis testing",
+    "section": "Every day I’m shuffling",
+    "text": "Every day I’m shuffling\n\nggplot(volleyball, aes(x = height, y = sample(spike))) +\n  geom_point() + \n  geom_smooth(method = \"lm\")"
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing-slides.html#wait-whats-that-new-function",
+    "href": "slides/23-hypothesis-testing-slides.html#wait-whats-that-new-function",
+    "title": "Hypothesis testing",
+    "section": "Wait, what’s that new function",
+    "text": "Wait, what’s that new function\n\nset.seed(8675309)\n\nrouges_gallery &lt;- c(\"Josh Lim\", \"John Zito\", \"Sarah Wu\", \"Katie Solarz\")\nrouges_gallery\n\n[1] \"Josh Lim\"     \"John Zito\"    \"Sarah Wu\"     \"Katie Solarz\"\n\nsample(rouges_gallery)\n\n[1] \"Katie Solarz\" \"Sarah Wu\"     \"John Zito\"    \"Josh Lim\""
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing-slides.html#what-if-this-was-my-shuffle",
+    "href": "slides/23-hypothesis-testing-slides.html#what-if-this-was-my-shuffle",
+    "title": "Hypothesis testing",
+    "section": "What if this was my shuffle?",
+    "text": "What if this was my shuffle?\n\n\n\n\n\n\n\n\n\n\n# A tibble: 2 × 2\n  term        estimate\n  &lt;chr&gt;          &lt;dbl&gt;\n1 (Intercept)  336.   \n2 height        -0.231"
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing-slides.html#what-if-this-was-my-shuffle-instead",
+    "href": "slides/23-hypothesis-testing-slides.html#what-if-this-was-my-shuffle-instead",
+    "title": "Hypothesis testing",
+    "section": "What if this was my shuffle instead?",
+    "text": "What if this was my shuffle instead?\n\n\n\n\n\n\n\n\n\n\n# A tibble: 2 × 2\n  term        estimate\n  &lt;chr&gt;          &lt;dbl&gt;\n1 (Intercept)  389.   \n2 height        -0.526"
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing-slides.html#what-if-this-was-my-shuffle-instead-1",
+    "href": "slides/23-hypothesis-testing-slides.html#what-if-this-was-my-shuffle-instead-1",
+    "title": "Hypothesis testing",
+    "section": "What if this was my shuffle instead?",
+    "text": "What if this was my shuffle instead?\n\n\n\n\n\n\n\n\n\n\n# A tibble: 2 × 2\n  term        estimate\n  &lt;chr&gt;          &lt;dbl&gt;\n1 (Intercept)  242.   \n2 height         0.291"
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing-slides.html#rinse-and-repeat-10000-times",
+    "href": "slides/23-hypothesis-testing-slides.html#rinse-and-repeat-10000-times",
+    "title": "Hypothesis testing",
+    "section": "Rinse and repeat 10000 times…",
+    "text": "Rinse and repeat 10000 times…"
   },
   {
     "objectID": "slides/23-hypothesis-testing-slides.html#view-null-distribution",
@@ -2859,6 +2922,13 @@
     "title": "Hypothesis testing",
     "section": "Visualize null distribution",
     "text": "Visualize null distribution\n\nnull_dist |&gt;\n  filter(term == \"height\") |&gt;\n  ggplot(aes(x = estimate)) +\n  geom_histogram(binwidth = 0.2)"
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing-slides.html#reminder-observed-fit",
+    "href": "slides/23-hypothesis-testing-slides.html#reminder-observed-fit",
+    "title": "Hypothesis testing",
+    "section": "Reminder: observed fit",
+    "text": "Reminder: observed fit\nWhat was our estimate to begin with?\n\nobserved_fit &lt;- volleyball |&gt;\n  specify(spike ~ height) |&gt;\n  fit()\n\nobserved_fit\n\n# A tibble: 2 × 2\n  term      estimate\n  &lt;chr&gt;        &lt;dbl&gt;\n1 intercept   0.0540\n2 height      1.62"
   },
   {
     "objectID": "slides/23-hypothesis-testing-slides.html#visualize-null-distribution-alternative",
@@ -2879,7 +2949,14 @@
     "href": "slides/23-hypothesis-testing-slides.html#make-a-decision",
     "title": "Hypothesis testing",
     "section": "Make a decision",
-    "text": "Make a decision\n\nBased on the p-value calculated, what is the conclusion of the hypothesis test?\n\nSince \\(p = 0.002\\), we reject the null hypothesis and have evidence that there is a statistically significant relationship between an FIVB players spike touch and height."
+    "text": "Make a decision\n\nBased on the p-value calculated, what is the conclusion of the hypothesis test?\n\n\nProbability of observing your data or something more extreme given the null is true\nSince \\(p = 0.002\\), we reject the null hypothesis and have evidence that there is a statistically significant relationship between an FIVB players spike touch and height."
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing-slides.html#how-small-is-small-enough",
+    "href": "slides/23-hypothesis-testing-slides.html#how-small-is-small-enough",
+    "title": "Hypothesis testing",
+    "section": "How small is small enough?",
+    "text": "How small is small enough?\nPick a threshold \\(\\alpha\\in[0,\\,1]\\) called the discernibility level and threshold the \\(p\\)-value:\n\nIf \\(p\\text{-value} &lt; \\alpha\\), reject null and accept alternative;\nIf \\(p\\text{-value} \\geq \\alpha\\), fail to reject null;"
   },
   {
     "objectID": "slides/23-hypothesis-testing-slides.html#sometimes-the-test-will-be-wrong",
@@ -2903,11 +2980,11 @@
     "text": "Think about the doctor\n\\(H_0\\) person well vs \\(H_A\\) person sick."
   },
   {
-    "objectID": "slides/23-hypothesis-testing-slides.html#how-do-we-negotiate-the-trade-off",
-    "href": "slides/23-hypothesis-testing-slides.html#how-do-we-negotiate-the-trade-off",
+    "objectID": "slides/23-hypothesis-testing-slides.html#where-does-alpha-come-in-to-this",
+    "href": "slides/23-hypothesis-testing-slides.html#where-does-alpha-come-in-to-this",
     "title": "Hypothesis testing",
-    "section": "How do we negotiate the trade-off?",
-    "text": "How do we negotiate the trade-off?\nPick a threshold \\(\\alpha\\in[0,\\,1]\\) called the discernibility level and threshold the \\(p\\)-value:\n\nIf \\(p\\text{-value} &lt; \\alpha\\), reject null and accept alternative;\nIf \\(p\\text{-value} \\geq \\alpha\\), fail to reject null;"
+    "section": "Where does alpha come in to this?",
+    "text": "Where does alpha come in to this?"
   },
   {
     "objectID": "slides/23-hypothesis-testing.html",
@@ -2928,7 +3005,7 @@
     "href": "slides/23-hypothesis-testing.html#this-aint-zito",
     "title": "Hypothesis testing",
     "section": "This ain’t Zito",
-    "text": "This ain’t Zito\nHi, I’m Josh!\n\n\n2nd Year PhD Student in Statistical Science\nTeaching this course in summer\nFun fact: I’m a professional Saja Boy (Kpop Demon Hunter)"
+    "text": "This ain’t Zito\nHi, I’m Josh!\n\n\n2nd Year PhD Student in Statistical Science\nTeaching this course in summer\nFun fact: I’m a professional Saja Boy (Kpop Demon Hunters)"
   },
   {
     "objectID": "slides/23-hypothesis-testing.html#zito-the-goat",
@@ -3012,7 +3089,70 @@
     "href": "slides/23-hypothesis-testing.html#wait-so-whats-a-null-distribution",
     "title": "Hypothesis testing",
     "section": "Wait, so what’s a null distribution?",
-    "text": "Wait, so what’s a null distribution?\n\n\nSimulating a universe under \\(H_0\\): the slope of the model for predicting the spike touch of FIVB athletes from their heights is 0, \\(\\beta_1 = 0\\). I.e., no relationship between spike and height.\nIf I “shuffle” the order of the spike variable, is there a relationship between spike and height?\nNo! Spike is essentially random and unrelated to anything!\nShuffle the spike variable, fit a model and get a slope, record the slope, repeat!\nMore on this in STA 221L"
+    "text": "Wait, so what’s a null distribution?\n\n\nSimulating a universe under \\(H_0\\): the slope of the model for predicting the spike touch of FIVB athletes from their heights is 0, \\(\\beta_1 = 0\\). I.e., no relationship between spike and height.\nIf I “shuffle” the order of the spike variable, is there a relationship between spike and height? Could height predict spike touch?"
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing.html#participate",
+    "href": "slides/23-hypothesis-testing.html#participate",
+    "title": "Hypothesis testing",
+    "section": "Participate 📱💻",
+    "text": "Participate 📱💻\n\n\n\nIf I “shuffle” the order of the spike variable, is there a relationship between spike and height? Could height predict spike touch?\n\n\nOn Average, Yes\nOn Average, No\nNever\nI want lunch, stop talking about volleyball\n\n\n\n\n\n\nScan the QR code or go HERE. Log in with your Duke NetID."
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing.html#shuffling-is-cool-trust",
+    "href": "slides/23-hypothesis-testing.html#shuffling-is-cool-trust",
+    "title": "Hypothesis testing",
+    "section": "Shuffling is cool, trust",
+    "text": "Shuffling is cool, trust\n\n\nOn avergage, no\nShuffling breaks any link between spike and height (on average)\ntype = \"permute\"\nShuffle the spike variable, fit a model and get a slope, record the slope, repeat!\nMore on this in STA 221L\nWhat if we shuffled height instead? Both?"
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing.html#every-day-im-shuffling",
+    "href": "slides/23-hypothesis-testing.html#every-day-im-shuffling",
+    "title": "Hypothesis testing",
+    "section": "Every day I’m shuffling",
+    "text": "Every day I’m shuffling\n\nggplot(volleyball, aes(x = height, y = spike)) +\n  geom_point() + \n  geom_smooth(method = \"lm\")"
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing.html#every-day-im-shuffling-1",
+    "href": "slides/23-hypothesis-testing.html#every-day-im-shuffling-1",
+    "title": "Hypothesis testing",
+    "section": "Every day I’m shuffling",
+    "text": "Every day I’m shuffling\n\nggplot(volleyball, aes(x = height, y = sample(spike))) +\n  geom_point() + \n  geom_smooth(method = \"lm\")"
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing.html#wait-whats-that-new-function",
+    "href": "slides/23-hypothesis-testing.html#wait-whats-that-new-function",
+    "title": "Hypothesis testing",
+    "section": "Wait, what’s that new function",
+    "text": "Wait, what’s that new function\n\nset.seed(8675309)\n\nrouges_gallery &lt;- c(\"Josh Lim\", \"John Zito\", \"Sarah Wu\", \"Katie Solarz\")\nrouges_gallery\n\n[1] \"Josh Lim\"     \"John Zito\"    \"Sarah Wu\"     \"Katie Solarz\"\n\nsample(rouges_gallery)\n\n[1] \"Katie Solarz\" \"Sarah Wu\"     \"John Zito\"    \"Josh Lim\""
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing.html#what-if-this-was-my-shuffle",
+    "href": "slides/23-hypothesis-testing.html#what-if-this-was-my-shuffle",
+    "title": "Hypothesis testing",
+    "section": "What if this was my shuffle?",
+    "text": "What if this was my shuffle?\n\n\n\n\n\n\n\n\n\n\n# A tibble: 2 × 2\n  term        estimate\n  &lt;chr&gt;          &lt;dbl&gt;\n1 (Intercept)  336.   \n2 height        -0.231"
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing.html#what-if-this-was-my-shuffle-instead",
+    "href": "slides/23-hypothesis-testing.html#what-if-this-was-my-shuffle-instead",
+    "title": "Hypothesis testing",
+    "section": "What if this was my shuffle instead?",
+    "text": "What if this was my shuffle instead?\n\n\n\n\n\n\n\n\n\n\n# A tibble: 2 × 2\n  term        estimate\n  &lt;chr&gt;          &lt;dbl&gt;\n1 (Intercept)  389.   \n2 height        -0.526"
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing.html#what-if-this-was-my-shuffle-instead-1",
+    "href": "slides/23-hypothesis-testing.html#what-if-this-was-my-shuffle-instead-1",
+    "title": "Hypothesis testing",
+    "section": "What if this was my shuffle instead?",
+    "text": "What if this was my shuffle instead?\n\n\n\n\n\n\n\n\n\n\n# A tibble: 2 × 2\n  term        estimate\n  &lt;chr&gt;          &lt;dbl&gt;\n1 (Intercept)  242.   \n2 height         0.291"
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing.html#rinse-and-repeat-10000-times",
+    "href": "slides/23-hypothesis-testing.html#rinse-and-repeat-10000-times",
+    "title": "Hypothesis testing",
+    "section": "Rinse and repeat 10000 times…",
+    "text": "Rinse and repeat 10000 times…"
   },
   {
     "objectID": "slides/23-hypothesis-testing.html#view-null-distribution",
@@ -3027,6 +3167,13 @@
     "title": "Hypothesis testing",
     "section": "Visualize null distribution",
     "text": "Visualize null distribution\n\nnull_dist |&gt;\n  filter(term == \"height\") |&gt;\n  ggplot(aes(x = estimate)) +\n  geom_histogram(binwidth = 0.2)"
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing.html#reminder-observed-fit",
+    "href": "slides/23-hypothesis-testing.html#reminder-observed-fit",
+    "title": "Hypothesis testing",
+    "section": "Reminder: observed fit",
+    "text": "Reminder: observed fit\nWhat was our estimate to begin with?\n\nobserved_fit &lt;- volleyball |&gt;\n  specify(spike ~ height) |&gt;\n  fit()\n\nobserved_fit\n\n# A tibble: 2 × 2\n  term      estimate\n  &lt;chr&gt;        &lt;dbl&gt;\n1 intercept   0.0540\n2 height      1.62"
   },
   {
     "objectID": "slides/23-hypothesis-testing.html#visualize-null-distribution-alternative",
@@ -3047,7 +3194,14 @@
     "href": "slides/23-hypothesis-testing.html#make-a-decision",
     "title": "Hypothesis testing",
     "section": "Make a decision",
-    "text": "Make a decision\n\nBased on the p-value calculated, what is the conclusion of the hypothesis test?\n\nSince \\(p = 0.002\\), we reject the null hypothesis and have evidence that there is a statistically significant relationship between an FIVB players spike touch and height."
+    "text": "Make a decision\n\nBased on the p-value calculated, what is the conclusion of the hypothesis test?\n\n\n\nProbability of observing your data or something more extreme given the null is true\nSince \\(p = 0.002\\), we reject the null hypothesis and have evidence that there is a statistically significant relationship between an FIVB players spike touch and height."
+  },
+  {
+    "objectID": "slides/23-hypothesis-testing.html#how-small-is-small-enough",
+    "href": "slides/23-hypothesis-testing.html#how-small-is-small-enough",
+    "title": "Hypothesis testing",
+    "section": "How small is small enough?",
+    "text": "How small is small enough?\n\nPick a threshold \\(\\alpha\\in[0,\\,1]\\) called the discernibility level and threshold the \\(p\\)-value:\n\nIf \\(p\\text{-value} &lt; \\alpha\\), reject null and accept alternative;\nIf \\(p\\text{-value} \\geq \\alpha\\), fail to reject null;"
   },
   {
     "objectID": "slides/23-hypothesis-testing.html#sometimes-the-test-will-be-wrong",
@@ -3071,11 +3225,11 @@
     "text": "Think about the doctor\n\\(H_0\\) person well vs \\(H_A\\) person sick."
   },
   {
-    "objectID": "slides/23-hypothesis-testing.html#how-do-we-negotiate-the-trade-off",
-    "href": "slides/23-hypothesis-testing.html#how-do-we-negotiate-the-trade-off",
+    "objectID": "slides/23-hypothesis-testing.html#where-does-alpha-come-in-to-this",
+    "href": "slides/23-hypothesis-testing.html#where-does-alpha-come-in-to-this",
     "title": "Hypothesis testing",
-    "section": "How do we negotiate the trade-off?",
-    "text": "How do we negotiate the trade-off?\n\nPick a threshold \\(\\alpha\\in[0,\\,1]\\) called the discernibility level and threshold the \\(p\\)-value:\n\nIf \\(p\\text{-value} &lt; \\alpha\\), reject null and accept alternative;\nIf \\(p\\text{-value} \\geq \\alpha\\), fail to reject null;\n\n\n. . ."
+    "section": "Where does alpha come in to this?",
+    "text": "Where does alpha come in to this?"
   },
   {
     "objectID": "slides/00-welcome.html#teaching-team-a-glamorous-assemblage",
@@ -8563,91 +8717,190 @@
     ]
   },
   {
-    "objectID": "lab/lab-3.html",
-    "href": "lab/lab-3.html",
-    "title": "Lab 3",
+    "objectID": "lab/lab-8 F25.html",
+    "href": "lab/lab-8 F25.html",
+    "title": "Lab 8",
     "section": "",
-    "text": "This lab is a deep dive into group_by()!\nMake sure to upload your completed lab to Gradescope by the end of your lab session and commit and push your final version to GitHub.\n\nTo get started, follow the instructions below.\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA199 under My reservations to log into your container. You should now see the RStudio environment.\nGo to the course organization at github.com/sta199-s26 organization on GitHub. Click on the repo with the prefix lab-3. It contains the starter documents you need to complete the homework.\nClick on the green CODE button, select Use SSH. Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\n\nThen, click lab-3.qmd to open the template Quarto file and update the authors field to add your name first (first and last) and then your teammates’ names (first and last). Render the document. If you get a popup window error, click “Try again”. Examine the rendered document and make sure your name is updated in the document. Commit and push your changes with a meaningful commit message and push to GitHub.\n\n\nCode should follow the tidyverse style. Particularly,\n\nthere should be spaces before and line breaks after each + when building a ggplot,\nthere should also be spaces before and line breaks after each |&gt; in a data transformation pipeline,\ncode should be properly indented,\nthere should be spaces around = signs and spaces after commas.\n\nAdditionally, all code should be visible in the PDF output, i.e., should not run off the page on the PDF. Long lines that run off the page should be split across multiple lines with line breaks.1\n\n\nPlots should have an informative title and, if needed, also a subtitle.\nAxes and legends should be labeled with both the variable name and its units (if applicable).\nCareful consideration should be given to aesthetic choices.\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course.\n\nYou should have at least 3 commits with meaningful commit messages by the end of the assignment.\nFinal versions of both your .qmd file and the rendered PDF should be pushed to GitHub.",
+    "text": "Last week you explored the relationship between distance and air time of flights out of RDU in 2024. And you did it in some la la land where we you had access to the full population. Time to get back to reality! This week you will explore the same relationship, but this time you will work with a single sample from the population.\n\nBy now you should be familiar with how to get started with a lab assignment by cloning the GitHub repo for the assignment. If you’re not sure how, refer back to an earlier lab.\nOpen the lab-8.qmd template Quarto file and update the authors field to add your name first (first and last) and then your teammates’ names (first and last). Render the document. Examine the rendered document and make sure your and your teammates’ names are updated in the document. Commit and push your changes with a meaningful commit message and push to GitHub.\n\nClick to expand if you need a refresher on assignment guidelines.\n\nCode should follow the tidyverse style. Particularly,\n\nthere should be spaces before and line breaks after each + when building a ggplot,\nthere should also be spaces before and line breaks after each |&gt; in a data transformation pipeline,\ncode should be properly indented,\nthere should be spaces around = signs and spaces after commas.\n\nAdditionally, all code should be visible in the PDF output, i.e., should not run off the page on the PDF. Long lines that run off the page should be split across multiple lines with line breaks.1\n\n\nPlots should have an informative title and, if needed, also a subtitle.\nAxes and legends should be labeled with both the variable name and its units (if applicable).\nCareful consideration should be given to aesthetic choices.\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course.\n\nYou should have at least 3 commits with meaningful commit messages by the end of the assignment.\nFinal versions of both your .qmd file and the rendered PDF should be pushed to GitHub."
+  },
+  {
+    "objectID": "lab/lab-8 F25.html#getting-started",
+    "href": "lab/lab-8 F25.html#getting-started",
+    "title": "Lab 8",
+    "section": "",
+    "text": "By now you should be familiar with how to get started with a lab assignment by cloning the GitHub repo for the assignment. If you’re not sure how, refer back to an earlier lab.\nOpen the lab-8.qmd template Quarto file and update the authors field to add your name first (first and last) and then your teammates’ names (first and last). Render the document. Examine the rendered document and make sure your and your teammates’ names are updated in the document. Commit and push your changes with a meaningful commit message and push to GitHub.\n\nClick to expand if you need a refresher on assignment guidelines.\n\nCode should follow the tidyverse style. Particularly,\n\nthere should be spaces before and line breaks after each + when building a ggplot,\nthere should also be spaces before and line breaks after each |&gt; in a data transformation pipeline,\ncode should be properly indented,\nthere should be spaces around = signs and spaces after commas.\n\nAdditionally, all code should be visible in the PDF output, i.e., should not run off the page on the PDF. Long lines that run off the page should be split across multiple lines with line breaks.1\n\n\nPlots should have an informative title and, if needed, also a subtitle.\nAxes and legends should be labeled with both the variable name and its units (if applicable).\nCareful consideration should be given to aesthetic choices.\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course.\n\nYou should have at least 3 commits with meaningful commit messages by the end of the assignment.\nFinal versions of both your .qmd file and the rendered PDF should be pushed to GitHub."
+  },
+  {
+    "objectID": "lab/lab-8 F25.html#packages",
+    "href": "lab/lab-8 F25.html#packages",
+    "title": "Lab 8",
+    "section": "Packages",
+    "text": "Packages\nIn this lab we will work with the tidyverse package.\n\nlibrary(tidyverse)\nlibrary(tidymodels)"
+  },
+  {
+    "objectID": "lab/lab-8 F25.html#population-data",
+    "href": "lab/lab-8 F25.html#population-data",
+    "title": "Lab 8",
+    "section": "Population data",
+    "text": "Population data\nThe dataset, called rdu-flights-sample.csv, can be found in the data folder."
+  },
+  {
+    "objectID": "lab/lab-8 F25.html#question-1---observe",
+    "href": "lab/lab-8 F25.html#question-1---observe",
+    "title": "Lab 8",
+    "section": "Question 1 - Observe",
+    "text": "Question 1 - Observe\n\n\nRead the observed data:\nRead in your random sample of 10 flights and store it as rdu_flights_sample. Each person in the class will have the same observed sample of flights.\n\n\nVisualize the observed relationship:\nVisualize the relationship between distance and air_time using a scatter plot. Also add a regression line to the scatter plot. Do not show the standard error ribbon around the regression line.\n\n\nModel and estimate the observed relationship:\nFit a model predicting air_time using distance using the sample data. Display the model summary."
+  },
+  {
+    "objectID": "lab/lab-8 F25.html#question-2---hypothesize",
+    "href": "lab/lab-8 F25.html#question-2---hypothesize",
+    "title": "Lab 8",
+    "section": "Question 2 - Hypothesize",
+    "text": "Question 2 - Hypothesize\n\n\nSet the null hypothesis:\nWhat if there was no relationship between distance and air_time? What would the true slope of the relationship be in that case? This is your null hypothesis. You can articulate it as:\n\\(H_0:\\) There is no relationship between distance and air time, the value of the true slope is ____, i.e., \\(\\beta_1\\) = ____.\nFill in the blanks.\n\n\n\n\n\n\nTip\n\n\n\nThe null hypothesis always sets the true population parameter equal to a specific value.\n\n\n\n\nSet the alternative hypothesis:\nWhat if there is a relationship between distance and air_time? This is your alternative hypothesis!\n\\(H_A:\\) There is a relationship between distance and air time, the value of the true slope is ____, i.e., \\(\\beta_1\\) ______.\nFill in the blanks.\n\n\n\n\n\n\nTip\n\n\n\nThe alternative hypothesis always compares the true population parameter to the same specific value set in the null hypothesis. This comparison ca be “not equal to”, “greater than”, or “less than” and the choice depends on the research question. In this case, our research question is whether there is some relationship between distance and air time."
+  },
+  {
+    "objectID": "lab/lab-8 F25.html#question-3---generate",
+    "href": "lab/lab-8 F25.html#question-3---generate",
+    "title": "Lab 8",
+    "section": "Question 3 - Generate",
+    "text": "Question 3 - Generate\n\n\nBreak the relationship:\nNow let’s set aside reality for a bit again, and imagine we live in the land of the null hypothesis where there is no relationship between distance and air_time. Using the sample data, simulate such a world by breaking any relationship between distance and air_time.\nHow? Randomly permute the air_time values in your sample data to break any relationship between distance and air_time, and store the resulting air time values in a new column called air_time_permuted. Each person in the class should have a different permuation of the air_time values. You could achieve this by setting different seeds, e.g., each person could use their birthday. Mine is Feb 5, so I’ll use 52.\n\nset.seed(52)\nrdu_flights_sample &lt;- rdu_flights_sample |&gt;\n  mutate(\n    air_time_permuted = sample(\n      air_time,\n      size = nrow(rdu_flights_sample),\n      replace = FALSE\n    )\n  )\n\nDisplay rdu_flights_sample to see the new column. Confirm that each air_time_permuted value comes from the original air_time values, but the order is different.\n\n\nVisualize, model, and estimate the broken relationship:\nVisualize the relationship between distance and air_time_permuted using a scatter plot. Also add a regression line to the scatter plot. Do not show the standard error ribbon around the regression line.\nThen, fit a model predicting air_time_permuted using distance using the sample data. Display the model summary.\nHow does the slope estimate for your permuted air time values compare to that of others in your team or others in the class? Exactly the same? Wildly different? Somewhere in between?\n\n\nGenerate the null distribution (collectively):\nEach person in the class has now simulated a slightly different world where there is no relationship between distance and air_time by breaking any relationship in their sample data. Mark your slope estimate from part (b) on the number line on the board. The distribution you constructed on the board is called the null distribution of the slope estimates. This distribution represents what slope estimates we would expect to see if the null hypothesis were true.\nWhen everyone has marked their slope estimates, what does the overall distribution of slope estimates look like? Is it centered around a particular value?"
+  },
+  {
+    "objectID": "lab/lab-8 F25.html#question-4---calculate-and-conclude",
+    "href": "lab/lab-8 F25.html#question-4---calculate-and-conclude",
+    "title": "Lab 8",
+    "section": "Question 4 - Calculate and conclude",
+    "text": "Question 4 - Calculate and conclude\n\n\nCalculate the p-value:\nThe p-value is defined as the probability of the observed or more extreme outcomes assuming the null hypothesis is true. In this case, the p-value is the probability, under the null distribution, of observing a slope estimate as extreme or more extreme than the one you observed in Question 1 - part (c).\nBased on the null distribution you constructed collectively in Question 3 - part (c), calculate your p-value.\n\n\n\n\n\n\nTip\n\n\n\nFirst mark the slope estimate you observed in Question 1 - part (c) on the number line on the board. Then count how many slope estimates in the null distribution are beyond your observed slope estimate. Then, don’t forget about the other side of the distribution – we generally account for that side by multiplying the count we obtained by 2. Finally, divide that count by the total number of slope estimates in the null distribution to get your p-value.\n\n\n\n\nConclude the hypothesis test:\nUsing a significance level of \\(\\alpha = 0.05\\), what is your conclusion regarding the hypothesis test you conducted?\n\n\n\n\n\n\nTip\n\n\n\nIf your p-value is less than or equal to \\(\\alpha\\), you reject the null hypothesis, and conclude that the data provide convincing evidence of a discernible relationship between distance and air time. If your p-value is greater than \\(\\alpha\\), you fail to reject the null hypothesis, and conclude that the data do not provide convincing evidence of a discernible relationship between distance and air time. Whatever you do, your conclusion should always be stated in the context of the research question."
+  },
+  {
+    "objectID": "lab/lab-8 F25.html#submission",
+    "href": "lab/lab-8 F25.html#submission",
+    "title": "Lab 8",
+    "section": "Submission",
+    "text": "Submission\nBy now you should also be familiar with how to submit your assignment in Gradescope.\n\nClick to expand if you need a refresher on how to get started with a lab assignment.\nSubmit your PDF document to Gradescope by the end of the lab to be considered “on time”:\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials \\(\\rightarrow\\) Duke NetID and log in using your NetID credentials.\nClick on your STA 199 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with question. All the pages of your lab should be associated with at least one question (i.e., should be “checked”).\n\n\n\n\n\n\n\nChecklist\n\n\n\nMake sure you have:\n\nattempted all questions\nrendered your Quarto document\ncommitted and pushed everything to your GitHub repository such that the Git pane in RStudio is empty\nuploaded your PDF to Gradescope"
+  },
+  {
+    "objectID": "lab/lab-8 F25.html#grading-and-feedback",
+    "href": "lab/lab-8 F25.html#grading-and-feedback",
+    "title": "Lab 8",
+    "section": "Grading and feedback",
+    "text": "Grading and feedback\n\nThis lab is worth 30 points:\n\n10 points for being in lab and turning in something – no partial credit for this part.\n20 points for:\n\nanswering the questions correctly – there is partial credit for this part.\nfollowing the workflow – there is partial credit for this part.\n\n\n\n\nThe workflow points are for:\n\ncommitting at least three times as you work through your lab,\nhaving your final version of .qmd and .pdf files in your GitHub repository, and\noverall organization.\n\n\nYou’ll receive feedback on your lab on Gradescope within a week.\n\nGood luck, and have fun with it!"
+  },
+  {
+    "objectID": "lab/lab-8 F25.html#footnotes",
+    "href": "lab/lab-8 F25.html#footnotes",
+    "title": "Lab 8",
+    "section": "Footnotes",
+    "text": "Footnotes\n\nRemember, haikus not novellas when writing code!↩︎"
+  },
+  {
+    "objectID": "lab/lab-2.html",
+    "href": "lab/lab-2.html",
+    "title": "Lab 2",
+    "section": "",
+    "text": "Today you will double down on your data visualization skills, and you will also start playing with the pipe operator |&gt;.\n\n\nGain practice with\n\nthe data science workflow using R, RStudio, Git, and GitHub,\nwriting a reproducible report using Quarto, and\nversion control using Git and GitHub.\n\n\nCreate data visualizations with the tidyverse, specifically using ggplot2.\nDescribe in words what those visualizations teach us.\nWrite a simple data transformation pipeline with the tidyverse, specifically using dplyr.\n\nTo get started, follow the instructions below.\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA199 under My reservations to log into your container. You should now see the RStudio environment.\nGo to the course organization at github.com/sta199-s26 organization on GitHub. Click on the repo with the prefix lab-2. It contains the starter documents you need to complete the homework.\nClick on the green CODE button, select Use SSH. Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\n\nThen, click lab-2.qmd to open the template Quarto file and update the authors field to add your name first (first and last) and then your teammates’ names (first and last). Render the document. If you get a popup window error, click “Try again”. Examine the rendered document and make sure your name is updated in the document. Commit and push your changes with a meaningful commit message and push to GitHub.\n\n\nCode should follow the tidyverse style. Particularly,\n\nthere should be spaces before and line breaks after each + when building a ggplot,\nthere should also be spaces before and line breaks after each |&gt; in a data transformation pipeline,\ncode should be properly indented,\nthere should be spaces around = signs and spaces after commas.\n\nAdditionally, all code should be visible in the PDF output, i.e., should not run off the page on the PDF. Long lines that run off the page should be split across multiple lines with line breaks.1\n\n\nPlots should have an informative title and, if needed, also a subtitle.\nAxes and legends should be labeled with both the variable name and its units (if applicable).\nCareful consideration should be given to aesthetic choices.\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course.\n\nYou should have at least 3 commits with meaningful commit messages by the end of the assignment.\nFinal versions of both your .qmd file and the rendered PDF should be pushed to GitHub.",
     "crumbs": [
       "Lab",
-      "Lab 3"
+      "Lab 2"
     ]
   },
   {
-    "objectID": "lab/lab-3.html#getting-started",
-    "href": "lab/lab-3.html#getting-started",
-    "title": "Lab 3",
+    "objectID": "lab/lab-2.html#learning-objectives",
+    "href": "lab/lab-2.html#learning-objectives",
+    "title": "Lab 2",
     "section": "",
-    "text": "To get started, follow the instructions below.\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA199 under My reservations to log into your container. You should now see the RStudio environment.\nGo to the course organization at github.com/sta199-s26 organization on GitHub. Click on the repo with the prefix lab-3. It contains the starter documents you need to complete the homework.\nClick on the green CODE button, select Use SSH. Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\n\nThen, click lab-3.qmd to open the template Quarto file and update the authors field to add your name first (first and last) and then your teammates’ names (first and last). Render the document. If you get a popup window error, click “Try again”. Examine the rendered document and make sure your name is updated in the document. Commit and push your changes with a meaningful commit message and push to GitHub.",
+    "text": "Gain practice with\n\nthe data science workflow using R, RStudio, Git, and GitHub,\nwriting a reproducible report using Quarto, and\nversion control using Git and GitHub.\n\n\nCreate data visualizations with the tidyverse, specifically using ggplot2.\nDescribe in words what those visualizations teach us.\nWrite a simple data transformation pipeline with the tidyverse, specifically using dplyr.",
     "crumbs": [
       "Lab",
-      "Lab 3"
+      "Lab 2"
     ]
   },
   {
-    "objectID": "lab/lab-3.html#guidelines",
-    "href": "lab/lab-3.html#guidelines",
-    "title": "Lab 3",
+    "objectID": "lab/lab-2.html#getting-started",
+    "href": "lab/lab-2.html#getting-started",
+    "title": "Lab 2",
+    "section": "",
+    "text": "To get started, follow the instructions below.\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA199 under My reservations to log into your container. You should now see the RStudio environment.\nGo to the course organization at github.com/sta199-s26 organization on GitHub. Click on the repo with the prefix lab-2. It contains the starter documents you need to complete the homework.\nClick on the green CODE button, select Use SSH. Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\n\nThen, click lab-2.qmd to open the template Quarto file and update the authors field to add your name first (first and last) and then your teammates’ names (first and last). Render the document. If you get a popup window error, click “Try again”. Examine the rendered document and make sure your name is updated in the document. Commit and push your changes with a meaningful commit message and push to GitHub.",
+    "crumbs": [
+      "Lab",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "lab/lab-2.html#guidelines",
+    "href": "lab/lab-2.html#guidelines",
+    "title": "Lab 2",
     "section": "",
     "text": "Code should follow the tidyverse style. Particularly,\n\nthere should be spaces before and line breaks after each + when building a ggplot,\nthere should also be spaces before and line breaks after each |&gt; in a data transformation pipeline,\ncode should be properly indented,\nthere should be spaces around = signs and spaces after commas.\n\nAdditionally, all code should be visible in the PDF output, i.e., should not run off the page on the PDF. Long lines that run off the page should be split across multiple lines with line breaks.1\n\n\nPlots should have an informative title and, if needed, also a subtitle.\nAxes and legends should be labeled with both the variable name and its units (if applicable).\nCareful consideration should be given to aesthetic choices.\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course.\n\nYou should have at least 3 commits with meaningful commit messages by the end of the assignment.\nFinal versions of both your .qmd file and the rendered PDF should be pushed to GitHub.",
     "crumbs": [
       "Lab",
-      "Lab 3"
+      "Lab 2"
     ]
   },
   {
-    "objectID": "lab/lab-3.html#question-1",
-    "href": "lab/lab-3.html#question-1",
-    "title": "Lab 3",
+    "objectID": "lab/lab-2.html#refresher-tidyverse",
+    "href": "lab/lab-2.html#refresher-tidyverse",
+    "title": "Lab 2",
+    "section": "Refresher: tidyverse",
+    "text": "Refresher: tidyverse\nThe tidyverse is a meta-package. When you load it you get nine packages loaded for you:\n\n\ndplyr: for data wrangling\n\nforcats: for dealing with factors\n\nggplot2: for data visualization\n\nlubridate: for dealing with dates\n\npurrr: for iteration with functional programming\n\nreadr: for reading and writing data\n\nstringr: for string manipulation\n\ntibble: for modern, tidy data frames\n\ntidyr: for data tidying and rectangling",
+    "crumbs": [
+      "Lab",
+      "Lab 2"
+    ]
+  },
+  {
+    "objectID": "lab/lab-2.html#question-1",
+    "href": "lab/lab-2.html#question-1",
+    "title": "Lab 2",
     "section": "Question 1",
-    "text": "Question 1\nGrouping by one variable.\nFor this question, you will work with the following dataset called df_1. The tibble() function creates the data frame (the tibble object) df_1 with two variables: member and hours. The following code is already included in your lab document.\n\ndf_1 &lt;- tibble(\n  member = c(\"A\", \"B\", \"B\", \"A\", \"B\"),\n  hours  = c(10, 5, 2, 7, 6)\n)\n\ndf_1\n\n\nWhat does the following pipeline do? Run it and analyze the result and articulate in words what arrange() does.\n\n\ndf_1 |&gt;\n  arrange(member)\n\n\n\n\n\n\n\nTip\n\n\n\nCheck out the R Documentation for arrange() by typing “?arrange” into the console. You should see the “Help” tab pop up in the bottom right pane of your RStudio environment. Read through the “Description” section to confirm your understanding of the function.\n\n\n\nWhat does the following pipeline do? Run it and analyze the result and articulate in words what group_by() does.\n\n\ndf_1 |&gt;\n  group_by(member)\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Q1, parts a and b”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\nRun the following code cell and analyze the result.\n\nHow many rows does the output have?\nHow many columns does the output have?\nIs the output grouped? If so, how many groups does it have?\n\n\n\n\ndf_1 |&gt;\n  group_by(member) |&gt;\n  summarize(total_hours = sum(hours))\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nA visual representation of what group_by() does\n\n\n\n\nRun the following code cell and analyze the result.\n\nHow many rows does the output have?\nHow many columns does the output have?\nIs the output grouped? If so, how many groups does it have?\n\n\n\n\ndf_1 |&gt;\n  summarize(total_hours = sum(hours))\n\n\nRender, commit, and push your changes to GitHub with the commit message “Finished Q1”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.",
+    "text": "Question 1\n\nMake two well-labeled plots: a histogram and a boxplot of the median_hh_income variable.\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Q1, part a”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\nProvide written responses to the following questions related to the plots created in part a:\n\n\nIs the distribution of median household income in NC counties right-skewed, left-skewed, or approximately symmetric? Which plot(s) helped you determine this?\nIs the distribution of median household income in NC counties unimodal, bimodal, multimodal or uniform? Which plot(s) helped you determine this?\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Q1, part b”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\nIn a single pipeline, identify the counties with unusually high median household income (according to the boxplot) and display their names and median household income in descending order of income\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Q1, part c”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.",
     "crumbs": [
       "Lab",
-      "Lab 3"
+      "Lab 2"
     ]
   },
   {
-    "objectID": "lab/lab-3.html#question-2",
-    "href": "lab/lab-3.html#question-2",
-    "title": "Lab 3",
+    "objectID": "lab/lab-2.html#question-2",
+    "href": "lab/lab-2.html#question-2",
+    "title": "Lab 2",
     "section": "Question 2",
-    "text": "Question 2\nGrouping by two variables.\nFor this question, you will work with the following dataset called df_2. The tibble() function creates the data frame (the tibble object) df_2 with three variables: shift, member and hours. The following code is already included in your lab document.\n\ndf_2 &lt;- tibble(\n  shift  = c(\"day\", \"day\", \"night\", \"day\", \"night\", \"day\", \"night\", \"night\", \"day\", \"night\"),\n  member = c(\"A\", \"B\", \"B\", \"A\", \"B\", \"B\", \"B\", \"A\", \"A\", \"B\"),\n  hours  = c(10, 5, 2, 7, 6, 5, 4, 2, 3, 5)\n)\n\ndf_2\n\n\nHow many levels does member have? How many levels does shifthave? How many possible combinations are there of the levels of member and shift?\n\nRun the following code cell and analyze the result.\n\nHow many rows does the output have?\nHow many columns does the output have?\nIs the output grouped? If so, how many groups does it have?\nWhat does the message mean?\n\n\n\n\ndf_2 |&gt;\n  group_by(shift, member) |&gt;\n  summarize(mean_hours = mean(hours))\n\n\nRun the following code cell and analyze the result.\n\nHow many rows does the output have?\nHow many columns does the output have?\nIs the output grouped? If so, how many groups does it have?\n\n\n\n\ndf_2 |&gt;\n  group_by(shift, member) |&gt;\n  summarize(mean_hours = mean(hours), .groups = \"drop\")\n\n\nIn the following code cell, we add one more step to the data pipelines from the previous two parts. The new step uses slice_head(n = 1), which is designed to give the first row of the output. Run each and analyze the result. You will notice the results are different. Why?\n\n\n# pipeline from part b + slice_head()\ndf_2 |&gt;\n  group_by(shift, member) |&gt;\n  summarize(mean_hours = mean(hours)) |&gt;\n  slice_head(n = 1)\n\n# pipeline from part c + slice_head()\ndf_2 |&gt;\n  group_by(shift, member) |&gt;\n  summarize(mean_hours = mean(hours), .groups = \"drop\") |&gt;\n  slice_head(n = 1)\n\n\nRun the following code cell and analyze the result.\n\nHow many rows does the output have?\nHow many columns does the output have?\nIs the output grouped? If so, how many groups does it have?\nArticulate the difference between summarize() and mutate().\n\n\n\n\ndf_2 |&gt;\n  group_by(shift, member) |&gt;\n  mutate(mean_hours = mean(hours)) |&gt;\n  arrange(shift, member)\n\n\nRender, commit, and push your changes to GitHub with a meaningful commit message.",
+    "text": "Question 2\n\nGuess what the relationship the percentage of 25-44-year-olds with a bachelor’s degree and median household income might be – positive? negative? no relationship? Explain your reasoning.\nMake a scatter plot of median household income (median_hh_income on the y-axis) vs. percentage of 25-44-year-olds with a bachelor’s degree (p_edu_ba on the x-axis). Make sure to set an informative title and axis labels for your plot. Describe the relationship. Was your guess correct?\nAgain, make a scatter plot of median household income (median_hh_income on the y-axis) vs. percentage of 25-44-year-olds with a bachelor’s degree (p_edu_ba on the x-axis), this time coloring the points by county type (county_type). Based on the resultant plot, does the relationship between these two variables appear to differ by county type?\n(Optional) In a single pipeline, compute the average percentage of 25-44-year-olds with a bachelor’s degree and the average median household income across NC counties classified as “Suburban”. Similarly, in a separate pipeline compute the average percentage of 25-44-year-olds with a bachelor’s degree and the average median household income across NC counties classified as “Rural - Metro”. Comment on whether the results are what you would have expected.\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Q2”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.",
     "crumbs": [
       "Lab",
-      "Lab 3"
+      "Lab 2"
     ]
   },
   {
-    "objectID": "lab/lab-3.html#submission",
-    "href": "lab/lab-3.html#submission",
-    "title": "Lab 3",
+    "objectID": "lab/lab-2.html#submission",
+    "href": "lab/lab-2.html#submission",
+    "title": "Lab 2",
     "section": "Submission",
     "text": "Submission\nSubmit your PDF document to Gradescope by the end of the lab to be considered “on time”:\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials \\(\\rightarrow\\) Duke NetID and log in using your NetID credentials.\nClick on your STA 199 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with question. All the pages of your lab should be associated with at least one question (i.e., should be “checked”).\n\n\n\n\n\n\n\nChecklist\n\n\n\nMake sure you have:\n\nattempted all questions\nrendered your Quarto document\ncommitted and pushed everything to your GitHub repository such that the Git pane in RStudio is empty\nuploaded your PDF to Gradescope",
     "crumbs": [
       "Lab",
-      "Lab 3"
+      "Lab 2"
     ]
   },
   {
-    "objectID": "lab/lab-3.html#grading-and-feedback",
-    "href": "lab/lab-3.html#grading-and-feedback",
-    "title": "Lab 3",
+    "objectID": "lab/lab-2.html#grading-and-feedback",
+    "href": "lab/lab-2.html#grading-and-feedback",
+    "title": "Lab 2",
     "section": "Grading and feedback",
-    "text": "Grading and feedback\n\nThis lab is worth 30 points:\n\n10 points for being in lab and turning in something – no partial credit for this part.\n20 points for:\n\nanswering the questions correctly – there is partial credit for this part.\nfollowing the workflow – there is partial credit for this part.\n\n\n\n\nThe workflow points are for:\n\ncommitting at least three times as you work through your lab,\nhaving your final version of .qmd and .pdf files in your GitHub repository, and\noverall organization.\n\n\nYou’ll receive feedback on your lab on Gradescope within a week.\n\nGood luck, and have fun with it!",
+    "text": "Grading and feedback\n\nThis lab is worth 30 points:\n\n10 points for being in lab and turning in something – no partial credit for this part.\n20 points for:\n\nanswering the questions correctly – there is partial credit for this part.\nfollowing the workflow – there is partial credit for this part.\n\n\n\n\nThe workflow points are for:\n\ncommitting at least three times as you work through your lab,\nhaving your final version of .qmd and .pdf files in your GitHub repository, and\noverall organization.\n\n\nYou’ll receive feedback on your lab on Gradescope within a week.\n\nGood luck, and work together!",
     "crumbs": [
       "Lab",
-      "Lab 3"
+      "Lab 2"
     ]
   },
   {
-    "objectID": "lab/lab-3.html#footnotes",
-    "href": "lab/lab-3.html#footnotes",
-    "title": "Lab 3",
+    "objectID": "lab/lab-2.html#footnotes",
+    "href": "lab/lab-2.html#footnotes",
+    "title": "Lab 2",
     "section": "Footnotes",
     "text": "Footnotes\n\nRemember, haikus not novellas when writing code!↩︎",
     "crumbs": [
       "Lab",
-      "Lab 3"
+      "Lab 2"
     ]
   },
   {
@@ -9083,91 +9336,201 @@
     ]
   },
   {
-    "objectID": "hw/hw-6.html",
-    "href": "hw/hw-6.html",
-    "title": "HW 6",
+    "objectID": "hw/hw-7.html",
+    "href": "hw/hw-7.html",
+    "title": "HW 7",
     "section": "",
-    "text": "All questions are AI enabled\n\n\n\nThis homework covers topics that will appear on next week’s midterm. Naturally, you will not get human-graded feedback before that time, and so all of the questions are AI-enabled so that you have something to study from. Then later, the TAs will go in and properly grade the second half as usual.\n\n\nThis is a two-part homework assignment:\n\nPart 1 – 🤖 Feedback from AI: Not graded, for practice, you get immediate feedback with AI, based on rubrics designed by the course instructor. Complete in hw-6-part-1.qmd, no submission required.\nPart 2 – 🧑🏽‍🏫 Feedback from AI, and then Humans later: First you get immediate feedback with AI, based on rubrics designed by the course instructor. Then in about a week, you get graded feedback from the course instructional team. Complete in hw-6-part-2.qmd, submit on Gradescope.\n\nBy now you should be familiar with how to get started with a homework assignment by cloning the GitHub repo for the assignment.\n\nClick to expand if you need a refresher on how to get started with a homework assignment.\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA199 under My reservations to log into your container. You should now see the RStudio environment.\nGo to the course organization at github.com/sta199-s26 organization on GitHub. Click on the repo with the prefix hw-6. It contains the starter documents you need to complete the homework.\nClick on the green CODE button, select Use SSH. Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nBy now you should also be familiar with guidelines for formatting your code and plots as well as your Git and Gradescope workflow.\n\nClick to expand if you need a refresher on assignment guidelines.\n\nCode should follow the tidyverse style. Particularly,\n\nthere should be spaces before and line breaks after each + when building a ggplot,\nthere should also be spaces before and line breaks after each |&gt; in a data transformation pipeline,\ncode should be properly indented,\nthere should be spaces around = signs and spaces after commas.\n\nAdditionally, all code should be visible in the PDF output, i.e., should not run off the page on the PDF. Long lines that run off the page should be split across multiple lines with line breaks.\n\n\nPlots should have an informative title and, if needed, also a subtitle.\nAxes and legends should be labeled with both the variable name and its units (if applicable).\nCareful consideration should be given to aesthetic choices.\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course.\n\nYou should have at least 3 commits with meaningful commit messages by the end of the assignment.\nFinal versions of both your .qmd file and the rendered PDF should be pushed to GitHub.",
-    "crumbs": [
-      "Homework",
-      "Homework 6"
-    ]
+    "text": "This is a two-part homework assignment:\n\nPart 1 – 🤖 Feedback from AI: Not graded, for practice, you get immediate feedback with AI, based on rubrics designed by the course instructor. Complete in hw-7-part-1.qmd, no submission required.\nPart 2 – 🧑🏽‍🏫 Feedback from Humans: Graded, you get feedback from the course instructional team in about a week. Complete in hw-7-part-2.qmd, submit on Gradescope.\n\nBy now you should be familiar with how to get started with a homework assignment by cloning the GitHub repo for the assignment.\n\nClick to expand if you need a refresher on how to get started with a homework assignment.\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA199 under My reservations to log into your container. You should now see the RStudio environment.\nGo to the course organization at github.com/sta199-s26 organization on GitHub. Click on the repo with the prefix hw-7. It contains the starter documents you need to complete the homework.\nClick on the green CODE button, select Use SSH. Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nBy now you should also be familiar with guidelines for formatting your code and plots as well as your Git and Gradescope workflow.\n\nClick to expand if you need a refresher on assignment guidelines.\n\nCode should follow the tidyverse style. Particularly,\n\nthere should be spaces before and line breaks after each + when building a ggplot,\nthere should also be spaces before and line breaks after each |&gt; in a data transformation pipeline,\ncode should be properly indented,\nthere should be spaces around = signs and spaces after commas.\n\nAdditionally, all code should be visible in the PDF output, i.e., should not run off the page on the PDF. Long lines that run off the page should be split across multiple lines with line breaks.\n\n\nPlots should have an informative title and, if needed, also a subtitle.\nAxes and legends should be labeled with both the variable name and its units (if applicable).\nCareful consideration should be given to aesthetic choices.\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course.\n\nYou should have at least 3 commits with meaningful commit messages by the end of the assignment.\nFinal versions of both your .qmd file and the rendered PDF should be pushed to GitHub."
   },
   {
-    "objectID": "hw/hw-6.html#instructions",
-    "href": "hw/hw-6.html#instructions",
-    "title": "HW 6",
+    "objectID": "hw/hw-7.html#packages",
+    "href": "hw/hw-7.html#packages",
+    "title": "HW 7",
+    "section": "Packages",
+    "text": "Packages\nIn this homework you will work with the tidyverse and tidymodels packages.\n\nlibrary(tidyverse)\nlibrary(tidymodels)"
+  },
+  {
+    "objectID": "hw/hw-7.html#instructions",
+    "href": "hw/hw-7.html#instructions",
+    "title": "HW 7",
     "section": "Instructions",
-    "text": "Instructions\nWrite your answer to each question in the appropriate section of the hw-6-part-1.qmd file. Then, highlight your answer to a question, click on Addins &gt; AIFEEDR &gt; Get feedback. In the app that opens, select the appropriate homework number (4) and question number. Then click on Get Feedback. Please be patient, feedback generation can take a few seconds. Once you read the feedback, you can go back to your Quarto document to improve your answer based on the feedback. You will then need to click the red X on the top left corner of the Viewer pane to stop the feedback app from running before you can re-render your Quarto document.\n\nClick to expand if you want to review the video that demonstrates how to use the AI feedback tool.",
+    "text": "Instructions\nWrite your answer to each question in the appropriate section of the hw-7-part-1.qmd file. Then, highlight your answer to a question, click on Addins &gt; AIFEEDR &gt; Get feedback. In the app that opens, select the appropriate homework number (4) and question number. Then click on Get Feedback. Please be patient, feedback generation can take a few seconds. Once you read the feedback, you can go back to your Quarto document to improve your answer based on the feedback. You will then need to click the red X on the top left corner of the Viewer pane to stop the feedback app from running before you can re-render your Quarto document.\n\nClick to expand if you want to review the video that demonstrates how to use the AI feedback tool."
+  },
+  {
+    "objectID": "hw/hw-7.html#data",
+    "href": "hw/hw-7.html#data",
+    "title": "HW 7",
+    "section": "Data",
+    "text": "Data\nIn this part, you’ll work with data from the Duke Lemur Center, which houses over 200 lemurs across 14 species – the most diverse population of lemurs on Earth, outside their native Madagascar.\n\nLemurs are the most threatened group of mammals on the planet, and 95% of lemur species are at risk of extinction. Our mission is to learn everything we can about lemurs – because the more we learn, the better we can work to save them from extinction. They are endemic only to Madagascar, so it’s essentially a one-shot deal: once lemurs are gone from Madagascar, they are gone from the wild.\n\n\nBy studying the variables that most affect their health, reproduction, and social dynamics, the Duke Lemur Center learns how to most effectively focus their conservation efforts. And the more we learn about lemurs, the better we can educate the public around the world about just how amazing these animals are, why they need to be protected, and how each and every one of us can make a difference in their survival.\n\n\nSource: TidyTuesday\n\nWhile the TidyTuesday project used the full dataset, you’ll work with a subset. The dataset, called lemurs.csv, can be found in the data folder. You can learn more about the data at https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-08-24. A data dictionary has been included in the README of the data folder of your repository."
+  },
+  {
+    "objectID": "hw/hw-7.html#questions",
+    "href": "hw/hw-7.html#questions",
+    "title": "HW 7",
+    "section": "Questions",
+    "text": "Questions\n\nDo not forget to render, commit, and push regularly, after each substantial change to your document (e.g., after answering each question). Use succinct and informative commit messages. Make sure to commit and push all changed files so that your Git pane is empty afterward.\n\nQuestion 1\nLoad the lemurs data from your data folder and save it as lemurs. Then, report which “types” of lemurs are represented in the sample and how many of each. Note that this information is in the taxon variable. You should refer back to the linked data dictionary to understand what the different values of taxon mean. Your response should be a tibble with at least three columns, taxon, taxon_name (a new variable you create that contains the description of the taxon, e.g., EMON is Mongoose lemur), and n (number of lemurs with that taxon).\nQuestion 2\nWhat is the slope of the regression line for predicting weights of lemurs (weight_g) from the ages of lemurs (in years) when their weight was measured (age_at_wt_y)? Calculate and interpret a 95% bootstrap bootstrap confidence interval. Also report your point estimate. Don’t forget to set a seed and use 1,000 bootstrap samples (reps = 1000) when simulating your bootstrap distribution.\nQuestion 3\nWhat are the slopes of the regression line for predicting weights of lemurs (weight_g) from the ages of lemurs (in years) when their weight was measured (age_at_wt_y) and their types (taxon)? Calculate and interpret a 95% bootstrap bootstrap confidence interval. Also report your point estimate. Don’t forget to set a seed and use 1,000 bootstrap samples (reps = 1000) when simulating your bootstrap distribution.\nQuestion 4\nWhat is the median weight of red-bellied lemurs? What is the median weight of ring-tailed lemurs? What is the median weight of mongoose lemurs? Calculate and interpret a 95% bootstrap bootstrap confidence intervals. Also report your point estimates. Don’t forget to set a seed and use 1,000 bootstrap samples (reps = 1000) when simulating your bootstrap distribution.\n\nNow is another good time to render, commit, and push your changes to GitHub with an informative and concise commit message. And once again, make sure to commit and push all changed files so that your Git pane is empty afterward. We keep repeating this because it’s important and because we see students forget to do this. So take a moment to make sure you’re practicing good version control habits."
+  },
+  {
+    "objectID": "hw/hw-7.html#packages-1",
+    "href": "hw/hw-7.html#packages-1",
+    "title": "HW 7",
+    "section": "Packages",
+    "text": "Packages\nYou will work with the following packages:\n\nlibrary(tidyverse)\nlibrary(tidymodels)\nlibrary(knitr)\n\n\nDo not forget to render, commit, and push regularly, after each substantial change to your document (e.g., after answering each question). Use succinct and informative commit messages. Make sure to commit and push all changed files so that your Git pane is empty afterward."
+  },
+  {
+    "objectID": "hw/hw-7.html#more-lemurs",
+    "href": "hw/hw-7.html#more-lemurs",
+    "title": "HW 7",
+    "section": "More Lemurs",
+    "text": "More Lemurs\nQuestions 5 and 6 use the lemurs data from Part 1 of this homework. You can refer to the background information provided above for context, and load the data from lemurs.csv in your data folder.\nQuestion 5 🤖\nThe goal of this question is to answer the following research question:\n\nDo female lemurs differ in weight from male lemurs, on average?\n\nMore specifically, we want to answer whether the data provide convincing evidence of a discernible difference between the average weights of female and male lemurs.\n\nConduct a hypothesis test to answer this question at 5% discernability level. Clearly state your hypotheses in the context of the data and the research question, simulate a randomization distribution, find the p-value, and make a decision on your hypotheses based on this p-value. Provide a one-sentence conclusion for your hypothesis test in the context of the data and the research question. Don’t forget to set a seed and use 1,000 resamples (reps = 1000) when simulating your randomization distribution.\nBased on your answer to Part (a), would you expect a 95% confidence interval for the difference in means of female and male lemurs to include 0? Explain your reasoning.\nConstruct and interpret a 95% bootstrap confidence interval for the difference in means of female and male lemurs. Does it include 0? Does this align with your answer to Part (b)? Don’t forget to set a seed and use 1,000 resamples (reps = 1000) when simulating your bootstrap distribution.\nQuestion 6 🧑🏽‍🏫\nThe goal of this question is to answer the following research question:\n\nDoes the median weight of female lemurs differ from that of male lemurs?\n\nMore specifically, we want to answer whether the data provide convincing evidence of a discernible difference between the median weights of female and male lemurs.\n\nConduct a hypothesis test to answer this question at 5% discernability level. Clearly state your hypotheses in the context of the data and the research question, simulate a randomization distribution, find the p-value, and make a decision on your hypotheses based on this p-value. Provide a one-sentence conclusion for your hypothesis test in the context of the data and the research question. Don’t forget to set a seed and use 1,000 resamples (reps = 1000) when simulating your randomization distribution.\nBased on your answer to Part (a), would you expect a 95% confidence interval for the difference in medians of female and male lemurs to include 0? Explain your reasoning.\nConstruct and interpret a 95% bootstrap confidence interval for the difference in medians of female and male lemurs. Does it include 0? Does this align with your answer to Part (b)? Don’t forget to set a seed and use 1,000 resamples (reps = 1000) when simulating your bootstrap distribution."
+  },
+  {
+    "objectID": "hw/hw-7.html#babies",
+    "href": "hw/hw-7.html#babies",
+    "title": "HW 7",
+    "section": "Babies",
+    "text": "Babies\nEvery year, the US releases to the public a large dataset containing information on births recorded in the country. This dataset has been of interest to medical researchers who are studying the relation between habits and practices of expectant mothers and the birth of their children.1 This is a random sample of 1,000 cases from the dataset released in 2014.\nThe data are available your data folder in births14.csv. Questions 3-10 use these data.\nThe variables in the data are as follows:\n\n\nfage: Father’s age in years.\n\nmage: Mother’s age in years.\n\nmature: Maturity status of mother.\n\nweeks: Length of pregnancy in weeks.\n\npremie: Whether the birth was classified as premature (premie) or full-term.\n\nvisits: Number of hospital visits during pregnancy.\n\ngained: Weight gained by mother during pregnancy in pounds.\n\nweight: Weight of the baby at birth in pounds.\n\nlowbirthweight: Whether baby was classified as low birthweight (low) or not (⁠not low⁠).\n\nsex: Sex of the baby, female or male.\n\nhabit: Status of the mother as a nonsmoker or a smoker.\n\nmarital: Whether mother is married or ⁠not married⁠ at birth.\n\nwhitemom: Whether mom is white or ⁠not white⁠.\n\nQuestion 7 🤖\n\nFirst, read the data in and store it as births14_raw.\n\nThen, in a single pipeline, filter for any rows of the births14 data frame where one or more of the following variables has an NA value: mage, weight, habit, mature, lowbirthweight, then select only these five variables to display.\n\nIn a single pipeline, remove any rows of the births14_raw data frame with NA values among those you identified as having NA values in the previous question, and save the results as births14.\n\nThen, find and state the numbers of rows of columns of births14.\n\n\n\n\n\n\nTip\n\n\n\nYou should end up with 981 rows. If you do not, revisit your earlier work to make sure you have removed all rows with NA values in any of the specified columns.\n\n\n\nOne of the variables in the data is mature, indicating whether the mom is considered “mature” or “younger”. This categorization is based on a medical threshold used for pregnancies. Using the data alone (not medical knowledge or external resources), determine the threshold age used to categorize moms as “mature” vs. “younger”. Describe your process, include any evidence (summary statistics and/or visualization), and clearly state the threshold you determined.\nAnother variable in the data is lowbirthweight, indicating whether the baby’s weight is considered “low” or “not low” at birth. This categorization is based on a medical threshold used for births. Using the data alone (not medical knowledge or external resources), determine the threshold weight used to categorize baby weights as “low” vs. “now low”. Describe your process, include any evidence (summary statistics and/or visualization), and clearly state the threshold you determined.\nIn a single pipeline, recode the variables mature, habit, and lowbirthweight in the births14 data frame as follows:\n\n\n\nmature : “mature mom” → “35 and over”, “younger mom” → “34 and under”\n\nhabit : “smoker” → “Smoker”, “nonsmoker” → “Non-smoker”\n\nlowbirthweight : “low” → “Low”, “not low” → “Not low”\n\nIn that same pipeline, relocate these three variables to be the first three columns of the data frame.\nSave the result back to births14 and display the first 10 rows (and however many columns fit across the page) of births14.\nQuestion 8 🤖\nIn this question you will conduct inference for a slope in a model with a single predictor.\n\nFit a model for predicting baby weight (weight) from mother’s age category (mature). Display the tidy model output.\nConstruct a 95% confidence interval for the slope the model from part (a), using bootstrapping with 1,000 resamples and the percentile method. Dislay the bounds of the interval and interpret it in the context of the data and the research question.\nVisualize the bootstrap distribution you used to construct the confidence interval. Comment on its shape and center.\nBased on your interval from Part (b), do these data provide convincing evidence of a discernible difference between the average weights of babies born to mothers who are 35 years and older vs. those born to mothers who are 34 years and younger? Explain your reasoning. Note: You do not need to a hypothesis test to answer this question, justify your answer with your confidence interval only.\nQuestion 9 🧑🏽‍🏫\nIn this question you will conduct inference for slopes in a model with a two predictors.\n\nFit a model for predicting baby weight (weight) from mother’s age (mage) and smoking status (habit). Display the tidy model output.\nConstruct 95% confidence intervals for the slopes the model from part (a), using bootstrapping with 1,000 resamples and the percentile method. Dislay the bounds of the intervals and interpret them in the context of the data and the research question.\nVisualize the bootstrap distributions you used to construct the confidence intervals. Comment on their shapes and centers."
+  },
+  {
+    "objectID": "hw/hw-7.html#submission",
+    "href": "hw/hw-7.html#submission",
+    "title": "HW 7",
+    "section": "Submission",
+    "text": "Submission\nSubmit your PDF document to Gradescope by the deadline to be considered “on time”:\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials \\(\\rightarrow\\) Duke NetID and log in using your NetID credentials.\nClick on your STA 199 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with question. All the pages of your homework should be associated with at least one question (i.e., should be “checked”).\n\n\n\n\n\n\n\nChecklist\n\n\n\nMake sure you have:\n\nattempted all questions\nrendered your Quarto document\ncommitted and pushed everything to your GitHub repository such that the Git pane in RStudio is empty\nuploaded your PDF to Gradescope"
+  },
+  {
+    "objectID": "hw/hw-7.html#grading-and-feedback",
+    "href": "hw/hw-7.html#grading-and-feedback",
+    "title": "HW 7",
+    "section": "Grading and feedback",
+    "text": "Grading and feedback\n\nQuestions 1-4 are not graded, but you should complete them to get practice.\n\nQuestions 5-9 are graded, and you will receive feedback on Gradescope from the course instructional team in about a week.\n\nQuestions will be graded for accuracy and completeness.\nPartial credit will be given where appropriate.\nThere are also workflow points for:\n\ncommitting at least three times as you work through your homework,\nhaving your final version of .qmd and .pdf files in your GitHub repository, and\noverall organization."
+  },
+  {
+    "objectID": "hw/hw-7.html#footnotes",
+    "href": "hw/hw-7.html#footnotes",
+    "title": "HW 7",
+    "section": "Footnotes",
+    "text": "Footnotes\n\nUnited States Department of Health and Human Services. Centers for Disease Control and Prevention. National Center for Health Statistics. Natality Detail File, 2014 United States. Inter-university Consortium for Political and Social Research, 2016-10-07. doi:10.3886/ICPSR36461.v1.↩︎"
+  },
+  {
+    "objectID": "hw/hw-4.html",
+    "href": "hw/hw-4.html",
+    "title": "HW 4",
+    "section": "",
+    "text": "This is a two-part homework assignment:\n\nPart 1 – 🤖 Feedback from AI: Not graded, for practice, you get immediate feedback with AI, based on rubrics designed by the course instructor. Complete in hw-4-part-1.qmd, no submission required.\nPart 2 – 🧑🏽‍🏫 Feedback from Humans: Graded, you get feedback from the course instructional team within a week. Complete in hw-4-part-2.qmd, submit on Gradescope.\n\nBy now you should be familiar with how to get started with a homework assignment by cloning the GitHub repo for the assignment.\n\nClick to expand if you need a refresher on how to get started with a homework assignment.\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA199 under My reservations to log into your container. You should now see the RStudio environment.\nGo to the course organization at github.com/sta199-s26 organization on GitHub. Click on the repo with the prefix hw-4. It contains the starter documents you need to complete the homework.\nClick on the green CODE button, select Use SSH. Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nBy now you should also be familiar with guidelines for formatting your code and plots as well as your Git and Gradescope workflow.\n\nClick to expand if you need a refresher on assignment guidelines.\n\nCode should follow the tidyverse style. Particularly,\n\nthere should be spaces before and line breaks after each + when building a ggplot,\nthere should also be spaces before and line breaks after each |&gt; in a data transformation pipeline,\ncode should be properly indented,\nthere should be spaces around = signs and spaces after commas.\n\nAdditionally, all code should be visible in the PDF output, i.e., should not run off the page on the PDF. Long lines that run off the page should be split across multiple lines with line breaks.\n\n\nPlots should have an informative title and, if needed, also a subtitle.\nAxes and legends should be labeled with both the variable name and its units (if applicable).\nCareful consideration should be given to aesthetic choices.\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course.\n\nYou should have at least 3 commits with meaningful commit messages by the end of the assignment.\nFinal versions of both your .qmd file and the rendered PDF should be pushed to GitHub.",
     "crumbs": [
       "Homework",
-      "Homework 6"
+      "Homework 4"
     ]
   },
   {
-    "objectID": "hw/hw-6.html#do-you-even-lift",
-    "href": "hw/hw-6.html#do-you-even-lift",
-    "title": "HW 6",
-    "section": "Do you even lift?",
-    "text": "Do you even lift?\nIn this part, you will be working with data from www.openpowerlifting.org. This data was sourced from Tidy Tuesday and contains international powerlifting records at various meets. At each meet, each lifter gets three attempts at lifting max weight on three lifts: the bench press, squat and deadlift. For all of the following exercises, you should include units on axes labels, e.g. “Bench press (lbs)” or “Bench press (kg)”. “Age (years)” etc. This is good practice.\nQuestion 1\n\n\nLet’s begin by taking a look at the squat lifting records.\n\nRead in the ipf.csv file that is in your data folder and save it as ipf.\nFirst, remove any observations that are negative for squat.\nNext, create a new column called best3_squat_lbs that converts the record from kilograms to pounds.\nSave your data frame as ipf_squat.\nReport the number of rows and columns of this new data frame.\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nYou may need to google the conversion formula.\n\n\n\n\nUsing the ipf_squat data frame you created in part (a), create a scatter plot to investigate the relationship between squat (in lbs) and age.\n\nAge should be on the x-axis.\nAdjust the alpha level of your points to get a better sense of the density of the data.\nAdd a linear trend-line.\nSummarize the trend you observe in at most 4 sentences.\n\n\n\nWrite down the linear population model to predict lift squat lbs from age.\nFit the linear model, and save it as age_fit.\nRe-write your previous equation replacing the population parameters with the numeric estimates. This is called the “fitted” linear model.\nInterpret each estimate of \\(\\beta\\), and comment on whether the interpretations are sensible\n\nQuestion 2\n\nBuilding on your ipf_squat data frame, create a new column called age2 that takes the age of each lifter and squares it. Save it to your data frame ipf_squat. Next, plot squat in lbs vs age2 and add a linear best fit line. How does the fit of the model compare to the one from earlier?\nOne metric to assess the fit of a model is the correlation squared, also known as \\(R^2\\). Fit the age\\(^2\\) model and save the object as age2_fit. Compare \\(R^2\\) of the new model (squat vs. age\\(^2\\)) to the \\(R^2\\) of the earlier model (squat vs. age). Which has a higher \\(R^2\\)?",
+    "objectID": "hw/hw-4.html#instructions",
+    "href": "hw/hw-4.html#instructions",
+    "title": "HW 4",
+    "section": "Instructions",
+    "text": "Instructions\nWrite your answer to each question in the appropriate section of the hw-4-part-1.qmd file. Then, highlight your answer to a question, click on Addins &gt; AIFEEDR &gt; Get feedback. In the app that opens, select the appropriate homework number (4) and question number. Then click on Get Feedback. Please be patient, feedback generation can take a few seconds. Once you read the feedback, you can go back to your Quarto document to improve your answer based on the feedback. You will then need to click the red X on the top left corner of the Viewer pane to stop the feedback app from running before you can re-render your Quarto document.\n\nClick to expand if you want to review the video that demonstrates how to use the AI feedback tool.",
     "crumbs": [
       "Homework",
-      "Homework 6"
+      "Homework 4"
     ]
   },
   {
-    "objectID": "hw/hw-6.html#general-social-survey",
-    "href": "hw/hw-6.html#general-social-survey",
-    "title": "HW 6",
-    "section": "General Social Survey",
-    "text": "General Social Survey\nThe General Social Survey (GSS) gathers data on contemporary American society in order to monitor and explain trends and constants in attitudes, behaviours, and attributes. Hundreds of trends have been tracked since 1972. In addition, since the GSS adopted questions from earlier surveys, trends can be followed for up to 70 years. The GSS contains a standard core of demographic, behavioural, and attitudinal questions, plus topics of special interest. Among the topics covered are civil liberties, crime and violence, intergroup tolerance, morality, national spending priorities, psychological well-being, social mobility, and stress and traumatic events. In this part you will work with variables from the 2022 General Social Survey.\nQuestion 3\n\nRead in the gss22.csv file that is in your data folder and save it as gss22. Report its number of rows and columns.\nCreate a new data frame called gss22_advfront that only contains the variables advfront, educ, and polviews. Then, use the drop_na() function to remove rows that contain NAs from this new data frame. Report the number of rows and columns of gss22_advfront. Additionally, report what percent of the observations were discarded at this step.\nRe-level the advfront variable such that it has two levels: “Strongly agree” and “Agree” combined into a new level called Agree and the remaining levels combined into ”Not agree”. Then, re-order the levels in the following order: “Agree” and “Not agree”. Finally, count() how many times each new level appears in the advfront variable.\n\n\n\n\n\n\n\nTip\n\n\n\nYou can do this in various ways. One option is to use the str_detect() function to detect the existence of words. Note that these sometimes show up with lowercase first letters and sometimes with upper case first letters. To detect either in the str_detect() function, you can use “[Aa]gree”. However, solve the problem however you like, this is just one option.\n\n\n\nCombine the levels of the polviews variable such that levels that have the word “liberal” in them are lumped into a level called “Liberal” and those that have the word conservative in them are lumped into a level called “Conservative”. Then, re-order the levels in the following order: “Conservative” , “Moderate”, and “Liberal”. Finally, count() how many times each new level appears in the polviews variable.\nQuestion 4\na. Fit a logistic regression model that predicts advfront from educ. Report the tidy output of the model.\nb. Write out the estimated model in proper notation.\nc. Using your estimated model, predict the probability of agreeing with the statement “Even if it brings no immediate benefits, scientific research that advances the frontiers of knowledge is necessary and should be supported by the federal government.” (Agree in advfront) for someone with 7 years of education.\nQuestion 5\na. Fit a model that adds the additional explanatory variable of polviews to your model from Question 9. Report the tidy output of the model.\nb. Now, predict the probability of agreeing with the following statement “Even if it brings no immediate benefits, scientific research that advances the frontiers of knowledge is necessary and should be supported by the federal government.” (Agree in advfront) for a Conservative person with 7 years of education.",
+    "objectID": "hw/hw-4.html#packages",
+    "href": "hw/hw-4.html#packages",
+    "title": "HW 4",
+    "section": "Packages",
+    "text": "Packages\nIn this part you will work with the\n\n\ntidyverse package for doing data analysis in a “tidy” way and\n\ndatasauRus package for a dataset.\n\n\nlibrary(tidyverse)\nlibrary(datasauRus)\n\n\nDo not forget to render, commit, and push regularly, after each substantial change to your document (e.g., after answering each question). Use succinct and informative commit messages. Make sure to commit and push all changed files so that your Git pane is empty afterward.",
     "crumbs": [
       "Homework",
-      "Homework 6"
+      "Homework 4"
     ]
   },
   {
-    "objectID": "hw/hw-6.html#gapminder-again",
-    "href": "hw/hw-6.html#gapminder-again",
-    "title": "HW 6",
-    "section": "Gapminder, again",
-    "text": "Gapminder, again\nGapminder is a “fact tank” that uses publicly available world data to produce data visualizations and teaching resources on global development. We will use an excerpt of their data to explore relationships among world health metrics across countries and regions between the years 2000 and 2023. The data set is called gapminder and it’s in your HW repository’s data folder.\nThe next two questions rely on work you did back on HW 4, where the gapminder dataframe is read in and transformed into gapminder_23. This dataframe can be re-created with the code below:\n\ngapminder_raw &lt;- read_csv(\"data/gapminder.csv\")\n\ngapminder_raw_23 &lt;- gapminder_raw |&gt;\n  filter(year == 2023)\n\ngapminder_23 &lt;- gapminder_raw_23 |&gt; \n  mutate(\n    gdp_percap = if_else(\n      str_detect(gdp_percap, \"k\"),                      \n      as.numeric(str_replace(gdp_percap, \"k\", \"\")) * 1000,  \n      as.numeric(gdp_percap)                            \n    )\n  )\n\nQuestion 6\n\nData Prep: What happens when you take the natural log of 0? Remove rows of your data set where life_expectancy = 0, justifying why this is helpful.\nModel fitting: Fit a linear model predicting the natural log of life expectancy from gross domestic product. Display the tidy summary.\n\nModel evaluation:\n\nCalculate the R-squared of the model using two methods and confirm that the values match: first method is using the glance() function and the other method is based on the value of the correlation coefficient between the two variables.\nInterpret R-squared in the context of the data and the research question.\n\n\nQuestion 7\nNext, we want to examine if the relationship between life expectancy and GDP that we observed in the previous exercise holds across all continents in our data. We’ll continue to work with logged life expectancy (life_exp_log) and data from 2023.\n\nJustification: Create a scatter plot of life_exp_log vs. gdp_percap, where the points are colored by continent. Do you think the trend between life_exp_log and gdp_percap is different for different continents? Justify your answer with specific features of the plot.\n\nModel fitting and interpretation:\n\nRegardless of your answer in part (a), fit an additive model (main effects) that predicts life_exp_log from GDP per capita and continent (with Africas as the baseline level). Display a tidy summary of the model output.\nInterpret the intercept of the model, making sure that your interpretation is in the units of the original data (not on log scale).\nInterpret the slope of the model, making sure that your interpretation is in the units of the original data (not on log scale).\n\n\nPrediction: Predict the life expectancy of a country in Asia where the average GDP per capita is $70,000. Do this using R functions, not by manually plugging in numbers.",
+    "objectID": "hw/hw-4.html#datasaurus",
+    "href": "hw/hw-4.html#datasaurus",
+    "title": "HW 4",
+    "section": "datasauRus!",
+    "text": "datasauRus!\nQuestion 1\nThe data frame you will be working with for this question is called datasaurus_dozen and it’s in the datasauRus package. This single data frame contains 13 datasets, designed to show us why data visualization is important and how summary statistics alone can be misleading. The different datasets are marked by the dataset variable, as shown in Figure 1.\n\n\n\n\n\nFigure 1: The `datasaurus_dozen` data frame stacks 13 datasets on top of each other. This figure shows the first three datasets.\n\n\n\n\n\n\n\n\nNote\n\n\n\nIf it’s confusing that the data frame is called datasaurus_dozen when it contains 13 datasets, you’re not alone! Have you heard of a baker’s dozen?\n\n\nHere is a peek at the top 10 rows of the dataset:\n\ndatasaurus_dozen\n\n# A tibble: 1,846 × 3\n   dataset     x     y\n   &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;\n 1 dino     55.4  97.2\n 2 dino     51.5  96.0\n 3 dino     46.2  94.5\n 4 dino     42.8  91.4\n 5 dino     40.8  88.3\n 6 dino     38.7  84.9\n 7 dino     35.6  79.9\n 8 dino     33.1  77.6\n 9 dino     29.0  74.5\n10 dino     26.2  71.4\n# ℹ 1,836 more rows\n\n\n\nIn a single pipeline, calculate the mean of x, mean of y, standard deviation of x, standard deviation of y, and the correlation between x and y for each level of the dataset variable. Then, in 1-2 sentences, comment on how these summary statistics compare across groups (datasets).\n\n\n\n\n\n\n\nTip\n\n\n\nThere are 13 groups but tibbles only print out 10 rows by default. To display all rows, add print(n = 13) as the last step of your pipeline.\n\n\n\nCreate a scatterplot of y versus x and color and facet it by dataset. Then, in 1-2 sentences, how these plots compare across groups (datasets). How does your response in this question compare to your response to the previous question and what does this say about using visualizations and summary statistics when getting to know a dataset?\n\n\n\n\n\n\n\nTip\n\n\n\nWhen you both color and facet by the same variable, you’ll end up with a redundant legend. Turn off the legend by adding show.legend = FALSE to the geom creating the legend.\n\n\n\nRender, commit, and push your changes. Make sure that you commit and push all changed documents and that your Git pane is completely empty before proceeding.",
     "crumbs": [
       "Homework",
-      "Homework 6"
+      "Homework 4"
     ]
   },
   {
-    "objectID": "hw/hw-6.html#spam-spam-spam-spam",
-    "href": "hw/hw-6.html#spam-spam-spam-spam",
-    "title": "HW 6",
-    "section": "Spam spam spam spam",
-    "text": "Spam spam spam spam\nThe data come from incoming emails in David Diez’s (one of the authors of OpenIntro textbooks) Gmail account for the first three months of 2012. All personally identifiable information has been removed. The dataset is called email and it’s in the openintro package.\nThe outcome variable is spam, which takes the value 1 if the email is spam, 0 otherwise.\nQuestion 8\n\nWhat type of variable is spam? What percent of the emails are spam?\nWhat type of variable is dollar - number of times a dollar sign or the word “dollar” appeared in the email? Visualize and describe its distribution, supporting your description with the appropriate summary statistics.\nFit a logistic regression model predicting spam from dollar. Then, display the tidy output of the model.\nUsing this model and the predict() function, predict the probability the email is spam if it contains 5 dollar signs. Based on this probability, how does the model classify this email?\n\n\n\n\n\n\n\nNote\n\n\n\nTo obtain the predicted probability, you can set the type argument in predict() to “prob”.\n\n\nQuestion 9\n\nFit a logistic regression model predicting spam from dollar, winner (indicating whether “winner” appeared in the email), and urgent_subj (whether the word “urgent” is in the subject of the email). Then, display the tidy output of the model. Include the two predictors using an additive model, not an interaction model.\nUsing this model, predict spam / not spam for all emails in the email dataset with augment(). Store the resulting data frame with an appropriate name and display the data frame as well.\n\nUsing your data frame from the previous part, determine, in a single pipeline, and using count(), the numbers of emails:\n\nthat are labelled as spam that are actually spam\nthat are not labelled as spam that are actually spam\nthat are labelled as spam that are actually not spam\nthat are not labelled as spam that are actually not spam\n\n\n\nStore the resulting data frame with an appropriate name.\n\nIn a single pipeline, and using mutate(), calculate the false positive and false negative rates.\n\nIn addition to these numbers showing in your R output, you must write a sentence that explicitly states and identifies the two rates.\nQuestion 10\n\nFit a logistic regression model predicting spam from dollar and another variable you think would be a good predictor. Again, inclue the multiple predictors with an additive model. No interactions. Provide a 1-sentence justification for why you chose this variable. Display the tidy output of the model.\nUsing this model, predict spam / not spam for all emails in the email dataset with augment(). Store the resulting data frame with an appropriate name.\n\nUsing your data frame from the previous part, determine, in a single pipeline, and using count(), the numbers of emails:\n\nthat are labelled as spam that are actually spam\nthat are not labelled as spam that are actually spam\nthat are labelled as spam that are actually not spam\nthat are not labelled as spam that are actually not spam\n\nStore the resulting data frame with an appropriate name.\n\nIn a single pipeline, and using mutate(), calculate the false positive and false negative rates. In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identifies the two rates.\nBased on the false positive and false negatives rates of this model, comment, in 1-2 sentences, on which model (one from Question 9 or Question 10) is preferable and why.",
+    "objectID": "hw/hw-4.html#gapminder",
+    "href": "hw/hw-4.html#gapminder",
+    "title": "HW 4",
+    "section": "Gapminder!",
+    "text": "Gapminder!\nQuestion 2\nGapminder is a “fact tank” that uses publicly available world data to produce data visualizations and teaching resources on global development. We will use an excerpt of their data to explore relationships among world health metrics across countries and regions between the years 2000 and 2023. The data set is called gapminder and it’s in your lab repository’s data folder.\nIn this question you’ll prepare the dataset you’ll use in this part.\n\nRead: Read the data and save it as an object called gapminder_raw.\nFilter: For our analysis, we will only be working with data from 2023. Filter the data set so only values from the year 2023 are included. Save this data set as gapminder_raw_23 and use it for the remainder of this exercise and the following.\nGlimpse: Glimpse at gapminder_raw_23 and list the variables and their types. Comment on any unexpected features in the data.\nClean: First, figure out why gdp_percap is read in as a character variable and describe your findings in one sentence. Then, clean the gdp_percap variable and convert it to numeric values. Save the resulting data frame as gapminder_23.\nQuestion 3\nThis question relies on an earlier part of the assignment, where the gapminder dataframe is read in and transformed into gapminder23. We are interested in learning more about life expectancy in countries, and we’ll start by exploring the relationship between life expectancy and GDP.\n\nCreate two visualizations:\n\n\nScatter plot of life_exp vs. gdp_percap\nScatter plot of life_exp_log vs. gdp_percap, where life_exp_log is a new variable you add to the data set by taking the natural log of life_exp.\n\n\nFirst describe the relationship between each pair of the variables. Then, comment on which relationship would be better modeled using a linear model, and explain your reasoning.",
     "crumbs": [
       "Homework",
-      "Homework 6"
+      "Homework 4"
     ]
   },
   {
-    "objectID": "hw/hw-6.html#submission",
-    "href": "hw/hw-6.html#submission",
-    "title": "HW 6",
+    "objectID": "hw/hw-4.html#packages-1",
+    "href": "hw/hw-4.html#packages-1",
+    "title": "HW 4",
+    "section": "Packages",
+    "text": "Packages\nIn this part you will work with the\n\n\ntidyverse package for doing data analysis in a “tidy” way,\n\nreadxl package for reading in Excel files,\n\njanitor package for cleaning up variable names, and\n\npalmerpenguins package for a dataset.\n\nYou may choose to load other packages as needed, particularly for improving your plots. If you do so, add the functions to load these packages in the code cell labeled load-packages-data.\n\nlibrary(tidyverse)\nlibrary(readxl)\nlibrary(janitor)\nlibrary(palmerpenguins)",
+    "crumbs": [
+      "Homework",
+      "Homework 4"
+    ]
+  },
+  {
+    "objectID": "hw/hw-4.html#cars",
+    "href": "hw/hw-4.html#cars",
+    "title": "HW 4",
+    "section": "Cars!",
+    "text": "Cars!\nIn Questions 4 and 5, you’ll work with one of the most basic and overused datasets in R: mtcars. The data in this dataset come from the 1974 Motor Trend US magazine (so, yes, they’re old!) and provide information on fuel efficiency and other car characteristics.\nQuestion 4\nSince the dataset is used in many code examples, it’s not unexpected that some analyses of the data are good and some not so much.\n\n\n\n\n\n\nTip\n\n\n\nFor both parts of this question, you should review the data dictionary that is in the documentation for the dataset which you can find at https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html or by typing ?mtcars in your Console.\n\n\na. You come across the following visualization of these data. First, determine what is wrong with this visualization and describe it in one sentence (hint: it involves the am variable). Then, fix and improve the visualization. As part of your improvement, make sure your legend\n\nis on top of the plot,\nis informative, and\nlists levels in the order they appear in the plot (from left to right).\n\n\nggplot(mtcars, aes(x = wt, y = mpg, color = am)) +\n  geom_point() +\n  labs(\n    x = \"Weight (1000 lbs)\",\n    y = \"Miles / gallon\"\n  )\n\n\n\n\n\n\n\nTip\n\n\n\nYour answer must include all of the above code. You should add to it to make improvements, not create a completely different plot.\n\n\nb. Update your plot from part (a) further, this time using different shaped points for cars with V-shaped and straight engines. Once again, some requirements for your legend – it should be informative and moved to the right of the plot.\nQuestion 5\nYour task is to make your plot from Question 4b as ugly and as ineffective as possible. Like, seriously. I want something that is apocalyptically heinous, loathsome, and rotten. Change colors, axes, fonts, themes, or anything else you can think of. You can also search online for other themes, fonts, etc. that you want to tweak. The sky is truly the limit. I want Sauron, Voldemort, Cruella de Vil, Count Dracula, and Regina George all nodding in approval at how horrendous your plot is.\nYou must make at least 5 updates to the plot, and your answer must include:\n\na list of the at least 5 updates you’ve made to your plot from Question 4b, and\n1-2 sentence explanation of why the plot you created is ugly (to you, at least) and ineffective.\n\nDid I mention that the plot should be bad? A prize will be awarded for the worst submission, so get crackin’!\n\n\n\n\n\n\nTip\n\n\n\nThe tidyverse documentation on themes may give you ideas about how you can alter the various features of the plot. Furthermore, the solutions for AEs 6 and 8 demo some of the advanced layers you can add to tweak colors and positioning and so on.\n\n\n\nRender, commit, and push your changes. Make sure that you commit and push all changed documents and that your Git pane is completely empty before proceeding.",
+    "crumbs": [
+      "Homework",
+      "Homework 4"
+    ]
+  },
+  {
+    "objectID": "hw/hw-4.html#olympics",
+    "href": "hw/hw-4.html#olympics",
+    "title": "HW 4",
+    "section": "Olympics!",
+    "text": "Olympics!\nData\nFor this part of your homework, you’ll work with data from the rosters of Team USA from the 2020 and 2024 Olympics. The data come from https://www.teamusa.com and the rosters for the two games are in a single Excel file (team-usa.xlsx in your data folder), accross two separate spreadsheets within that file. Figure 2 shows screenshots of these spreadsheets.\n\n\n\n\n\n\nTeam USA 2020\n\n\n\n\n\nTeam USA 2024\n\n\n\n\n\nFigure 2: Excel file with two sheets for rosters of Team USA 2020 and 2024.\n\n\nYour goal is to answer questions about athletes who competed in both games and only one of the games.\nQuestion 6\n\nRead data from the two sheets of team-usa.xlsx as two separate data frames called team_usa_2020 and team_usa_2024.\n\n\n\n\n\n\n\nTip\n\n\n\nThe names of the sheets are shown in the screenshots in Figure 2, or you can use the excel_sheets() function to discover them. Additionally, note that the first row of the sheets contain a logo and a title describing the contents of the data, and not the header row containing variable names.\n\n\n\nRead the documentation for the clean_names() function from the janitor package at https://sfirke.github.io/janitor/reference/clean_names.html. Use this function to “clean” the variable names of team_usa_2020 and team_usa_2024 and save the data frames with the new variable names.\n\nCreate a new variable in both of the datasets called name that:\n\n\npaste()s together the first_name and last_name variables with a space in between and\nis the first variable in the resulting data frame.\n\n\nUsing the appropriate *_join() function, determine how many athletes participated in both Olympic Games?\n\n\n\n\n\n\n\nImportant\n\n\n\nYour answer to this question, based on the data frames you created, should be 0, even if it doesn’t make sense in context of actual Olympic athletes.\n\n\nQuestion 7\nIf you have even a passing knowledge of the Olympic Games, you might know that there are some athletes that participated in both the 2020 and 2024 games, e.g., Simone Biles, Katie Ledecky, etc.\n\nThe reason why athlete names didn’t match across the two data frames is that in one data frame, names are in UPPER CASE, and in the other, they’re in Title Case. Update the 2020 data frame to make name all upper case. Display the first 10 rows of team_usa_2020 with upper case names.\n\n\n\n\n\n\n\nImportant\n\n\n\nYour answer must use the str_to_upper() function.\n\n\n\nLet’s try that question again: How many athletes participated in both Olympic Games?\nHow many athletes participated in the 2020 Olympic Games but not the 2024 Olympic Games? How many athletes participated in the 2024 Olympic Games but not the 2020 Olympic Games?\n\n\nRender, commit, and push your changes. Make sure that you commit and push all changed documents and that your Git pane is completely empty before proceeding.",
+    "crumbs": [
+      "Homework",
+      "Homework 4"
+    ]
+  },
+  {
+    "objectID": "hw/hw-4.html#quarto",
+    "href": "hw/hw-4.html#quarto",
+    "title": "HW 4",
+    "section": "Quarto!",
+    "text": "Quarto!\nQuestion 8\nYou have the following code chunk:\n\nggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) + \n  geom_point()\n\nAdd the following code cell options, one at a time, and set each to false and then to true. After each value, render your document and observe its effect. Ultimately, choose the values that are the most appropriate for this code cell. Based on the behaviors you observe, describe what each code cell option does.\n\necho\nwarning\neval\nQuestion 9\n\nYou have the following code cell again.\n\n\nggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) + \n  geom_point()\n\nAdd fig-width and fig-asp as code chunk options. Try setting fig-width to values between 1 and 10. Try setting fig-asp to values between 0.1 and 1. Re-render the document after each value and observe its effect. Ultimately, choose values that make the plot look visually pleasing in the rendered document. Based on the behavior you observe, describe what each chunk option does.\n\n\n\n\n\n\nTip\n\n\n\nNow that you’ve had more practice with figure sizing in Quarto documents, review all of the plots you made in this lab and adjust their widths and aspect rations to improve how they look in your rendered document.\n\n\nb. You have the following code cell, but look carefully, it’s not exactly the same!\n\ngplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) + \n  geom_point()\n\nAdd error as a code chunk option and set it to false and then set it to true. After each value, render your document and observe its effect. Ultimately, choose the value that allows you to render your document without altering the code. Based on the behavior you observe, describe what this code chunk option does.\n\n\n\n\n\n\nTip\n\n\n\nReading the documentation might also be helpful.\n\n\n\nNow is another good time to render, commit, and push your changes to GitHub with an informative and concise commit message. And once again, make sure to commit and push all changed files so that your Git pane is empty afterward. We keep repeating this because it’s important and because we see students forget to do this. So take a moment to make sure you’re practicing good version control habits.",
+    "crumbs": [
+      "Homework",
+      "Homework 4"
+    ]
+  },
+  {
+    "objectID": "hw/hw-4.html#submission",
+    "href": "hw/hw-4.html#submission",
+    "title": "HW 4",
     "section": "Submission",
     "text": "Submission\nSubmit your PDF document to Gradescope by the deadline to be considered “on time”:\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials \\(\\rightarrow\\) Duke NetID and log in using your NetID credentials.\nClick on your STA 199 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with question. All the pages of your homework should be associated with at least one question (i.e., should be “checked”).\n\n\n\n\n\n\n\nChecklist\n\n\n\nMake sure you have:\n\nattempted all questions\nrendered your Quarto document\ncommitted and pushed everything to your GitHub repository such that the Git pane in RStudio is empty\nuploaded your PDF to Gradescope",
     "crumbs": [
       "Homework",
-      "Homework 6"
+      "Homework 4"
     ]
   },
   {
-    "objectID": "hw/hw-6.html#grading-and-feedback",
-    "href": "hw/hw-6.html#grading-and-feedback",
-    "title": "HW 6",
+    "objectID": "hw/hw-4.html#grading-and-feedback",
+    "href": "hw/hw-4.html#grading-and-feedback",
+    "title": "HW 4",
     "section": "Grading and feedback",
-    "text": "Grading and feedback\n\nQuestions 1-5 are not graded, but you should complete them to get practice.\n\nQuestions 6-10 are graded, and you will receive feedback on Gradescope from the course instructional team in about a week.\n\nQuestions will be graded for accuracy and completeness.\nPartial credit will be given where appropriate.\nThere are also workflow points for:\n\ncommitting at least three times as you work through your homework,\nhaving your final version of .qmd and .pdf files in your GitHub repository, and\noverall organization.",
+    "text": "Grading and feedback\n\nQuestions 1 - 3 are not graded, but you should complete them to get practice.\n\nQuestions 4 - 9 are graded, and you will receive feedback on Gradescope from the course instructional team within a week.\n\nQuestions will be graded for accuracy and completeness.\nPartial credit will be given where appropriate.\nThere are also workflow points for:\n\ncommitting at least three times as you work through your homework,\nhaving your final version of .qmd and .pdf files in your GitHub repository, and\noverall organization.",
     "crumbs": [
       "Homework",
-      "Homework 6"
+      "Homework 4"
     ]
   },
   {
@@ -9314,124 +9677,91 @@
     ]
   },
   {
-    "objectID": "hw/hw-4.html",
-    "href": "hw/hw-4.html",
-    "title": "HW 4",
+    "objectID": "hw/hw-6.html",
+    "href": "hw/hw-6.html",
+    "title": "HW 6",
     "section": "",
-    "text": "This is a two-part homework assignment:\n\nPart 1 – 🤖 Feedback from AI: Not graded, for practice, you get immediate feedback with AI, based on rubrics designed by the course instructor. Complete in hw-4-part-1.qmd, no submission required.\nPart 2 – 🧑🏽‍🏫 Feedback from Humans: Graded, you get feedback from the course instructional team within a week. Complete in hw-4-part-2.qmd, submit on Gradescope.\n\nBy now you should be familiar with how to get started with a homework assignment by cloning the GitHub repo for the assignment.\n\nClick to expand if you need a refresher on how to get started with a homework assignment.\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA199 under My reservations to log into your container. You should now see the RStudio environment.\nGo to the course organization at github.com/sta199-s26 organization on GitHub. Click on the repo with the prefix hw-4. It contains the starter documents you need to complete the homework.\nClick on the green CODE button, select Use SSH. Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nBy now you should also be familiar with guidelines for formatting your code and plots as well as your Git and Gradescope workflow.\n\nClick to expand if you need a refresher on assignment guidelines.\n\nCode should follow the tidyverse style. Particularly,\n\nthere should be spaces before and line breaks after each + when building a ggplot,\nthere should also be spaces before and line breaks after each |&gt; in a data transformation pipeline,\ncode should be properly indented,\nthere should be spaces around = signs and spaces after commas.\n\nAdditionally, all code should be visible in the PDF output, i.e., should not run off the page on the PDF. Long lines that run off the page should be split across multiple lines with line breaks.\n\n\nPlots should have an informative title and, if needed, also a subtitle.\nAxes and legends should be labeled with both the variable name and its units (if applicable).\nCareful consideration should be given to aesthetic choices.\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course.\n\nYou should have at least 3 commits with meaningful commit messages by the end of the assignment.\nFinal versions of both your .qmd file and the rendered PDF should be pushed to GitHub.",
+    "text": "All questions are AI enabled\n\n\n\nThis homework covers topics that will appear on next week’s midterm. Naturally, you will not get human-graded feedback before that time, and so all of the questions are AI-enabled so that you have something to study from. Then later, the TAs will go in and properly grade the second half as usual.\n\n\nThis is a two-part homework assignment:\n\nPart 1 – 🤖 Feedback from AI: Not graded, for practice, you get immediate feedback with AI, based on rubrics designed by the course instructor. Complete in hw-6-part-1.qmd, no submission required.\nPart 2 – 🧑🏽‍🏫 Feedback from AI, and then Humans later: First you get immediate feedback with AI, based on rubrics designed by the course instructor. Then in about a week, you get graded feedback from the course instructional team. Complete in hw-6-part-2.qmd, submit on Gradescope.\n\nBy now you should be familiar with how to get started with a homework assignment by cloning the GitHub repo for the assignment.\n\nClick to expand if you need a refresher on how to get started with a homework assignment.\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA199 under My reservations to log into your container. You should now see the RStudio environment.\nGo to the course organization at github.com/sta199-s26 organization on GitHub. Click on the repo with the prefix hw-6. It contains the starter documents you need to complete the homework.\nClick on the green CODE button, select Use SSH. Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nBy now you should also be familiar with guidelines for formatting your code and plots as well as your Git and Gradescope workflow.\n\nClick to expand if you need a refresher on assignment guidelines.\n\nCode should follow the tidyverse style. Particularly,\n\nthere should be spaces before and line breaks after each + when building a ggplot,\nthere should also be spaces before and line breaks after each |&gt; in a data transformation pipeline,\ncode should be properly indented,\nthere should be spaces around = signs and spaces after commas.\n\nAdditionally, all code should be visible in the PDF output, i.e., should not run off the page on the PDF. Long lines that run off the page should be split across multiple lines with line breaks.\n\n\nPlots should have an informative title and, if needed, also a subtitle.\nAxes and legends should be labeled with both the variable name and its units (if applicable).\nCareful consideration should be given to aesthetic choices.\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course.\n\nYou should have at least 3 commits with meaningful commit messages by the end of the assignment.\nFinal versions of both your .qmd file and the rendered PDF should be pushed to GitHub.",
     "crumbs": [
       "Homework",
-      "Homework 4"
+      "Homework 6"
     ]
   },
   {
-    "objectID": "hw/hw-4.html#instructions",
-    "href": "hw/hw-4.html#instructions",
-    "title": "HW 4",
+    "objectID": "hw/hw-6.html#instructions",
+    "href": "hw/hw-6.html#instructions",
+    "title": "HW 6",
     "section": "Instructions",
-    "text": "Instructions\nWrite your answer to each question in the appropriate section of the hw-4-part-1.qmd file. Then, highlight your answer to a question, click on Addins &gt; AIFEEDR &gt; Get feedback. In the app that opens, select the appropriate homework number (4) and question number. Then click on Get Feedback. Please be patient, feedback generation can take a few seconds. Once you read the feedback, you can go back to your Quarto document to improve your answer based on the feedback. You will then need to click the red X on the top left corner of the Viewer pane to stop the feedback app from running before you can re-render your Quarto document.\n\nClick to expand if you want to review the video that demonstrates how to use the AI feedback tool.",
+    "text": "Instructions\nWrite your answer to each question in the appropriate section of the hw-6-part-1.qmd file. Then, highlight your answer to a question, click on Addins &gt; AIFEEDR &gt; Get feedback. In the app that opens, select the appropriate homework number (4) and question number. Then click on Get Feedback. Please be patient, feedback generation can take a few seconds. Once you read the feedback, you can go back to your Quarto document to improve your answer based on the feedback. You will then need to click the red X on the top left corner of the Viewer pane to stop the feedback app from running before you can re-render your Quarto document.\n\nClick to expand if you want to review the video that demonstrates how to use the AI feedback tool.",
     "crumbs": [
       "Homework",
-      "Homework 4"
+      "Homework 6"
     ]
   },
   {
-    "objectID": "hw/hw-4.html#packages",
-    "href": "hw/hw-4.html#packages",
-    "title": "HW 4",
-    "section": "Packages",
-    "text": "Packages\nIn this part you will work with the\n\n\ntidyverse package for doing data analysis in a “tidy” way and\n\ndatasauRus package for a dataset.\n\n\nlibrary(tidyverse)\nlibrary(datasauRus)\n\n\nDo not forget to render, commit, and push regularly, after each substantial change to your document (e.g., after answering each question). Use succinct and informative commit messages. Make sure to commit and push all changed files so that your Git pane is empty afterward.",
+    "objectID": "hw/hw-6.html#do-you-even-lift",
+    "href": "hw/hw-6.html#do-you-even-lift",
+    "title": "HW 6",
+    "section": "Do you even lift?",
+    "text": "Do you even lift?\nIn this part, you will be working with data from www.openpowerlifting.org. This data was sourced from Tidy Tuesday and contains international powerlifting records at various meets. At each meet, each lifter gets three attempts at lifting max weight on three lifts: the bench press, squat and deadlift. For all of the following exercises, you should include units on axes labels, e.g. “Bench press (lbs)” or “Bench press (kg)”. “Age (years)” etc. This is good practice.\nQuestion 1\n\n\nLet’s begin by taking a look at the squat lifting records.\n\nRead in the ipf.csv file that is in your data folder and save it as ipf.\nFirst, remove any observations that are negative for squat.\nNext, create a new column called best3_squat_lbs that converts the record from kilograms to pounds.\nSave your data frame as ipf_squat.\nReport the number of rows and columns of this new data frame.\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nYou may need to google the conversion formula.\n\n\n\n\nUsing the ipf_squat data frame you created in part (a), create a scatter plot to investigate the relationship between squat (in lbs) and age.\n\nAge should be on the x-axis.\nAdjust the alpha level of your points to get a better sense of the density of the data.\nAdd a linear trend-line.\nSummarize the trend you observe in at most 4 sentences.\n\n\n\nWrite down the linear population model to predict lift squat lbs from age.\nFit the linear model, and save it as age_fit.\nRe-write your previous equation replacing the population parameters with the numeric estimates. This is called the “fitted” linear model.\nInterpret each estimate of \\(\\beta\\), and comment on whether the interpretations are sensible\n\nQuestion 2\n\nBuilding on your ipf_squat data frame, create a new column called age2 that takes the age of each lifter and squares it. Save it to your data frame ipf_squat. Next, plot squat in lbs vs age2 and add a linear best fit line. How does the fit of the model compare to the one from earlier?\nOne metric to assess the fit of a model is the correlation squared, also known as \\(R^2\\). Fit the age\\(^2\\) model and save the object as age2_fit. Compare \\(R^2\\) of the new model (squat vs. age\\(^2\\)) to the \\(R^2\\) of the earlier model (squat vs. age). Which has a higher \\(R^2\\)?",
     "crumbs": [
       "Homework",
-      "Homework 4"
+      "Homework 6"
     ]
   },
   {
-    "objectID": "hw/hw-4.html#datasaurus",
-    "href": "hw/hw-4.html#datasaurus",
-    "title": "HW 4",
-    "section": "datasauRus!",
-    "text": "datasauRus!\nQuestion 1\nThe data frame you will be working with for this question is called datasaurus_dozen and it’s in the datasauRus package. This single data frame contains 13 datasets, designed to show us why data visualization is important and how summary statistics alone can be misleading. The different datasets are marked by the dataset variable, as shown in Figure 1.\n\n\n\n\n\nFigure 1: The `datasaurus_dozen` data frame stacks 13 datasets on top of each other. This figure shows the first three datasets.\n\n\n\n\n\n\n\n\nNote\n\n\n\nIf it’s confusing that the data frame is called datasaurus_dozen when it contains 13 datasets, you’re not alone! Have you heard of a baker’s dozen?\n\n\nHere is a peek at the top 10 rows of the dataset:\n\ndatasaurus_dozen\n\n# A tibble: 1,846 × 3\n   dataset     x     y\n   &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;\n 1 dino     55.4  97.2\n 2 dino     51.5  96.0\n 3 dino     46.2  94.5\n 4 dino     42.8  91.4\n 5 dino     40.8  88.3\n 6 dino     38.7  84.9\n 7 dino     35.6  79.9\n 8 dino     33.1  77.6\n 9 dino     29.0  74.5\n10 dino     26.2  71.4\n# ℹ 1,836 more rows\n\n\n\nIn a single pipeline, calculate the mean of x, mean of y, standard deviation of x, standard deviation of y, and the correlation between x and y for each level of the dataset variable. Then, in 1-2 sentences, comment on how these summary statistics compare across groups (datasets).\n\n\n\n\n\n\n\nTip\n\n\n\nThere are 13 groups but tibbles only print out 10 rows by default. To display all rows, add print(n = 13) as the last step of your pipeline.\n\n\n\nCreate a scatterplot of y versus x and color and facet it by dataset. Then, in 1-2 sentences, how these plots compare across groups (datasets). How does your response in this question compare to your response to the previous question and what does this say about using visualizations and summary statistics when getting to know a dataset?\n\n\n\n\n\n\n\nTip\n\n\n\nWhen you both color and facet by the same variable, you’ll end up with a redundant legend. Turn off the legend by adding show.legend = FALSE to the geom creating the legend.\n\n\n\nRender, commit, and push your changes. Make sure that you commit and push all changed documents and that your Git pane is completely empty before proceeding.",
+    "objectID": "hw/hw-6.html#general-social-survey",
+    "href": "hw/hw-6.html#general-social-survey",
+    "title": "HW 6",
+    "section": "General Social Survey",
+    "text": "General Social Survey\nThe General Social Survey (GSS) gathers data on contemporary American society in order to monitor and explain trends and constants in attitudes, behaviours, and attributes. Hundreds of trends have been tracked since 1972. In addition, since the GSS adopted questions from earlier surveys, trends can be followed for up to 70 years. The GSS contains a standard core of demographic, behavioural, and attitudinal questions, plus topics of special interest. Among the topics covered are civil liberties, crime and violence, intergroup tolerance, morality, national spending priorities, psychological well-being, social mobility, and stress and traumatic events. In this part you will work with variables from the 2022 General Social Survey.\nQuestion 3\n\nRead in the gss22.csv file that is in your data folder and save it as gss22. Report its number of rows and columns.\nCreate a new data frame called gss22_advfront that only contains the variables advfront, educ, and polviews. Then, use the drop_na() function to remove rows that contain NAs from this new data frame. Report the number of rows and columns of gss22_advfront. Additionally, report what percent of the observations were discarded at this step.\nRe-level the advfront variable such that it has two levels: “Strongly agree” and “Agree” combined into a new level called Agree and the remaining levels combined into ”Not agree”. Then, re-order the levels in the following order: “Agree” and “Not agree”. Finally, count() how many times each new level appears in the advfront variable.\n\n\n\n\n\n\n\nTip\n\n\n\nYou can do this in various ways. One option is to use the str_detect() function to detect the existence of words. Note that these sometimes show up with lowercase first letters and sometimes with upper case first letters. To detect either in the str_detect() function, you can use “[Aa]gree”. However, solve the problem however you like, this is just one option.\n\n\n\nCombine the levels of the polviews variable such that levels that have the word “liberal” in them are lumped into a level called “Liberal” and those that have the word conservative in them are lumped into a level called “Conservative”. Then, re-order the levels in the following order: “Conservative” , “Moderate”, and “Liberal”. Finally, count() how many times each new level appears in the polviews variable.\nQuestion 4\na. Fit a logistic regression model that predicts advfront from educ. Report the tidy output of the model.\nb. Write out the estimated model in proper notation.\nc. Using your estimated model, predict the probability of agreeing with the statement “Even if it brings no immediate benefits, scientific research that advances the frontiers of knowledge is necessary and should be supported by the federal government.” (Agree in advfront) for someone with 7 years of education.\nQuestion 5\na. Fit a model that adds the additional explanatory variable of polviews to your model from Question 9. Report the tidy output of the model.\nb. Now, predict the probability of agreeing with the following statement “Even if it brings no immediate benefits, scientific research that advances the frontiers of knowledge is necessary and should be supported by the federal government.” (Agree in advfront) for a Conservative person with 7 years of education.",
     "crumbs": [
       "Homework",
-      "Homework 4"
+      "Homework 6"
     ]
   },
   {
-    "objectID": "hw/hw-4.html#gapminder",
-    "href": "hw/hw-4.html#gapminder",
-    "title": "HW 4",
-    "section": "Gapminder!",
-    "text": "Gapminder!\nQuestion 2\nGapminder is a “fact tank” that uses publicly available world data to produce data visualizations and teaching resources on global development. We will use an excerpt of their data to explore relationships among world health metrics across countries and regions between the years 2000 and 2023. The data set is called gapminder and it’s in your lab repository’s data folder.\nIn this question you’ll prepare the dataset you’ll use in this part.\n\nRead: Read the data and save it as an object called gapminder_raw.\nFilter: For our analysis, we will only be working with data from 2023. Filter the data set so only values from the year 2023 are included. Save this data set as gapminder_raw_23 and use it for the remainder of this exercise and the following.\nGlimpse: Glimpse at gapminder_raw_23 and list the variables and their types. Comment on any unexpected features in the data.\nClean: First, figure out why gdp_percap is read in as a character variable and describe your findings in one sentence. Then, clean the gdp_percap variable and convert it to numeric values. Save the resulting data frame as gapminder_23.\nQuestion 3\nThis question relies on an earlier part of the assignment, where the gapminder dataframe is read in and transformed into gapminder23. We are interested in learning more about life expectancy in countries, and we’ll start by exploring the relationship between life expectancy and GDP.\n\nCreate two visualizations:\n\n\nScatter plot of life_exp vs. gdp_percap\nScatter plot of life_exp_log vs. gdp_percap, where life_exp_log is a new variable you add to the data set by taking the natural log of life_exp.\n\n\nFirst describe the relationship between each pair of the variables. Then, comment on which relationship would be better modeled using a linear model, and explain your reasoning.",
+    "objectID": "hw/hw-6.html#gapminder-again",
+    "href": "hw/hw-6.html#gapminder-again",
+    "title": "HW 6",
+    "section": "Gapminder, again",
+    "text": "Gapminder, again\nGapminder is a “fact tank” that uses publicly available world data to produce data visualizations and teaching resources on global development. We will use an excerpt of their data to explore relationships among world health metrics across countries and regions between the years 2000 and 2023. The data set is called gapminder and it’s in your HW repository’s data folder.\nThe next two questions rely on work you did back on HW 4, where the gapminder dataframe is read in and transformed into gapminder_23. This dataframe can be re-created with the code below:\n\ngapminder_raw &lt;- read_csv(\"data/gapminder.csv\")\n\ngapminder_raw_23 &lt;- gapminder_raw |&gt;\n  filter(year == 2023)\n\ngapminder_23 &lt;- gapminder_raw_23 |&gt; \n  mutate(\n    gdp_percap = if_else(\n      str_detect(gdp_percap, \"k\"),                      \n      as.numeric(str_replace(gdp_percap, \"k\", \"\")) * 1000,  \n      as.numeric(gdp_percap)                            \n    )\n  )\n\nQuestion 6\n\nData Prep: What happens when you take the natural log of 0? Remove rows of your data set where life_expectancy = 0, justifying why this is helpful.\nModel fitting: Fit a linear model predicting the natural log of life expectancy from gross domestic product. Display the tidy summary.\n\nModel evaluation:\n\nCalculate the R-squared of the model using two methods and confirm that the values match: first method is using the glance() function and the other method is based on the value of the correlation coefficient between the two variables.\nInterpret R-squared in the context of the data and the research question.\n\n\nQuestion 7\nNext, we want to examine if the relationship between life expectancy and GDP that we observed in the previous exercise holds across all continents in our data. We’ll continue to work with logged life expectancy (life_exp_log) and data from 2023.\n\nJustification: Create a scatter plot of life_exp_log vs. gdp_percap, where the points are colored by continent. Do you think the trend between life_exp_log and gdp_percap is different for different continents? Justify your answer with specific features of the plot.\n\nModel fitting and interpretation:\n\nRegardless of your answer in part (a), fit an additive model (main effects) that predicts life_exp_log from GDP per capita and continent (with Africas as the baseline level). Display a tidy summary of the model output.\nInterpret the intercept of the model, making sure that your interpretation is in the units of the original data (not on log scale).\nInterpret the slope of the model, making sure that your interpretation is in the units of the original data (not on log scale).\n\n\nPrediction: Predict the life expectancy of a country in Asia where the average GDP per capita is $70,000. Do this using R functions, not by manually plugging in numbers.",
     "crumbs": [
       "Homework",
-      "Homework 4"
+      "Homework 6"
     ]
   },
   {
-    "objectID": "hw/hw-4.html#packages-1",
-    "href": "hw/hw-4.html#packages-1",
-    "title": "HW 4",
-    "section": "Packages",
-    "text": "Packages\nIn this part you will work with the\n\n\ntidyverse package for doing data analysis in a “tidy” way,\n\nreadxl package for reading in Excel files,\n\njanitor package for cleaning up variable names, and\n\npalmerpenguins package for a dataset.\n\nYou may choose to load other packages as needed, particularly for improving your plots. If you do so, add the functions to load these packages in the code cell labeled load-packages-data.\n\nlibrary(tidyverse)\nlibrary(readxl)\nlibrary(janitor)\nlibrary(palmerpenguins)",
+    "objectID": "hw/hw-6.html#spam-spam-spam-spam",
+    "href": "hw/hw-6.html#spam-spam-spam-spam",
+    "title": "HW 6",
+    "section": "Spam spam spam spam",
+    "text": "Spam spam spam spam\nThe data come from incoming emails in David Diez’s (one of the authors of OpenIntro textbooks) Gmail account for the first three months of 2012. All personally identifiable information has been removed. The dataset is called email and it’s in the openintro package.\nThe outcome variable is spam, which takes the value 1 if the email is spam, 0 otherwise.\nQuestion 8\n\nWhat type of variable is spam? What percent of the emails are spam?\nWhat type of variable is dollar - number of times a dollar sign or the word “dollar” appeared in the email? Visualize and describe its distribution, supporting your description with the appropriate summary statistics.\nFit a logistic regression model predicting spam from dollar. Then, display the tidy output of the model.\nUsing this model and the predict() function, predict the probability the email is spam if it contains 5 dollar signs. Based on this probability, how does the model classify this email?\n\n\n\n\n\n\n\nNote\n\n\n\nTo obtain the predicted probability, you can set the type argument in predict() to “prob”.\n\n\nQuestion 9\n\nFit a logistic regression model predicting spam from dollar, winner (indicating whether “winner” appeared in the email), and urgent_subj (whether the word “urgent” is in the subject of the email). Then, display the tidy output of the model. Include the two predictors using an additive model, not an interaction model.\nUsing this model, predict spam / not spam for all emails in the email dataset with augment(). Store the resulting data frame with an appropriate name and display the data frame as well.\n\nUsing your data frame from the previous part, determine, in a single pipeline, and using count(), the numbers of emails:\n\nthat are labelled as spam that are actually spam\nthat are not labelled as spam that are actually spam\nthat are labelled as spam that are actually not spam\nthat are not labelled as spam that are actually not spam\n\n\n\nStore the resulting data frame with an appropriate name.\n\nIn a single pipeline, and using mutate(), calculate the false positive and false negative rates.\n\nIn addition to these numbers showing in your R output, you must write a sentence that explicitly states and identifies the two rates.\nQuestion 10\n\nFit a logistic regression model predicting spam from dollar and another variable you think would be a good predictor. Again, inclue the multiple predictors with an additive model. No interactions. Provide a 1-sentence justification for why you chose this variable. Display the tidy output of the model.\nUsing this model, predict spam / not spam for all emails in the email dataset with augment(). Store the resulting data frame with an appropriate name.\n\nUsing your data frame from the previous part, determine, in a single pipeline, and using count(), the numbers of emails:\n\nthat are labelled as spam that are actually spam\nthat are not labelled as spam that are actually spam\nthat are labelled as spam that are actually not spam\nthat are not labelled as spam that are actually not spam\n\nStore the resulting data frame with an appropriate name.\n\nIn a single pipeline, and using mutate(), calculate the false positive and false negative rates. In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identifies the two rates.\nBased on the false positive and false negatives rates of this model, comment, in 1-2 sentences, on which model (one from Question 9 or Question 10) is preferable and why.",
     "crumbs": [
       "Homework",
-      "Homework 4"
+      "Homework 6"
     ]
   },
   {
-    "objectID": "hw/hw-4.html#cars",
-    "href": "hw/hw-4.html#cars",
-    "title": "HW 4",
-    "section": "Cars!",
-    "text": "Cars!\nIn Questions 4 and 5, you’ll work with one of the most basic and overused datasets in R: mtcars. The data in this dataset come from the 1974 Motor Trend US magazine (so, yes, they’re old!) and provide information on fuel efficiency and other car characteristics.\nQuestion 4\nSince the dataset is used in many code examples, it’s not unexpected that some analyses of the data are good and some not so much.\n\n\n\n\n\n\nTip\n\n\n\nFor both parts of this question, you should review the data dictionary that is in the documentation for the dataset which you can find at https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html or by typing ?mtcars in your Console.\n\n\na. You come across the following visualization of these data. First, determine what is wrong with this visualization and describe it in one sentence (hint: it involves the am variable). Then, fix and improve the visualization. As part of your improvement, make sure your legend\n\nis on top of the plot,\nis informative, and\nlists levels in the order they appear in the plot (from left to right).\n\n\nggplot(mtcars, aes(x = wt, y = mpg, color = am)) +\n  geom_point() +\n  labs(\n    x = \"Weight (1000 lbs)\",\n    y = \"Miles / gallon\"\n  )\n\n\n\n\n\n\n\nTip\n\n\n\nYour answer must include all of the above code. You should add to it to make improvements, not create a completely different plot.\n\n\nb. Update your plot from part (a) further, this time using different shaped points for cars with V-shaped and straight engines. Once again, some requirements for your legend – it should be informative and moved to the right of the plot.\nQuestion 5\nYour task is to make your plot from Question 4b as ugly and as ineffective as possible. Like, seriously. I want something that is apocalyptically heinous, loathsome, and rotten. Change colors, axes, fonts, themes, or anything else you can think of. You can also search online for other themes, fonts, etc. that you want to tweak. The sky is truly the limit. I want Sauron, Voldemort, Cruella de Vil, Count Dracula, and Regina George all nodding in approval at how horrendous your plot is.\nYou must make at least 5 updates to the plot, and your answer must include:\n\na list of the at least 5 updates you’ve made to your plot from Question 4b, and\n1-2 sentence explanation of why the plot you created is ugly (to you, at least) and ineffective.\n\nDid I mention that the plot should be bad? A prize will be awarded for the worst submission, so get crackin’!\n\n\n\n\n\n\nTip\n\n\n\nThe tidyverse documentation on themes may give you ideas about how you can alter the various features of the plot. Furthermore, the solutions for AEs 6 and 8 demo some of the advanced layers you can add to tweak colors and positioning and so on.\n\n\n\nRender, commit, and push your changes. Make sure that you commit and push all changed documents and that your Git pane is completely empty before proceeding.",
-    "crumbs": [
-      "Homework",
-      "Homework 4"
-    ]
-  },
-  {
-    "objectID": "hw/hw-4.html#olympics",
-    "href": "hw/hw-4.html#olympics",
-    "title": "HW 4",
-    "section": "Olympics!",
-    "text": "Olympics!\nData\nFor this part of your homework, you’ll work with data from the rosters of Team USA from the 2020 and 2024 Olympics. The data come from https://www.teamusa.com and the rosters for the two games are in a single Excel file (team-usa.xlsx in your data folder), accross two separate spreadsheets within that file. Figure 2 shows screenshots of these spreadsheets.\n\n\n\n\n\n\nTeam USA 2020\n\n\n\n\n\nTeam USA 2024\n\n\n\n\n\nFigure 2: Excel file with two sheets for rosters of Team USA 2020 and 2024.\n\n\nYour goal is to answer questions about athletes who competed in both games and only one of the games.\nQuestion 6\n\nRead data from the two sheets of team-usa.xlsx as two separate data frames called team_usa_2020 and team_usa_2024.\n\n\n\n\n\n\n\nTip\n\n\n\nThe names of the sheets are shown in the screenshots in Figure 2, or you can use the excel_sheets() function to discover them. Additionally, note that the first row of the sheets contain a logo and a title describing the contents of the data, and not the header row containing variable names.\n\n\n\nRead the documentation for the clean_names() function from the janitor package at https://sfirke.github.io/janitor/reference/clean_names.html. Use this function to “clean” the variable names of team_usa_2020 and team_usa_2024 and save the data frames with the new variable names.\n\nCreate a new variable in both of the datasets called name that:\n\n\npaste()s together the first_name and last_name variables with a space in between and\nis the first variable in the resulting data frame.\n\n\nUsing the appropriate *_join() function, determine how many athletes participated in both Olympic Games?\n\n\n\n\n\n\n\nImportant\n\n\n\nYour answer to this question, based on the data frames you created, should be 0, even if it doesn’t make sense in context of actual Olympic athletes.\n\n\nQuestion 7\nIf you have even a passing knowledge of the Olympic Games, you might know that there are some athletes that participated in both the 2020 and 2024 games, e.g., Simone Biles, Katie Ledecky, etc.\n\nThe reason why athlete names didn’t match across the two data frames is that in one data frame, names are in UPPER CASE, and in the other, they’re in Title Case. Update the 2020 data frame to make name all upper case. Display the first 10 rows of team_usa_2020 with upper case names.\n\n\n\n\n\n\n\nImportant\n\n\n\nYour answer must use the str_to_upper() function.\n\n\n\nLet’s try that question again: How many athletes participated in both Olympic Games?\nHow many athletes participated in the 2020 Olympic Games but not the 2024 Olympic Games? How many athletes participated in the 2024 Olympic Games but not the 2020 Olympic Games?\n\n\nRender, commit, and push your changes. Make sure that you commit and push all changed documents and that your Git pane is completely empty before proceeding.",
-    "crumbs": [
-      "Homework",
-      "Homework 4"
-    ]
-  },
-  {
-    "objectID": "hw/hw-4.html#quarto",
-    "href": "hw/hw-4.html#quarto",
-    "title": "HW 4",
-    "section": "Quarto!",
-    "text": "Quarto!\nQuestion 8\nYou have the following code chunk:\n\nggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) + \n  geom_point()\n\nAdd the following code cell options, one at a time, and set each to false and then to true. After each value, render your document and observe its effect. Ultimately, choose the values that are the most appropriate for this code cell. Based on the behaviors you observe, describe what each code cell option does.\n\necho\nwarning\neval\nQuestion 9\n\nYou have the following code cell again.\n\n\nggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) + \n  geom_point()\n\nAdd fig-width and fig-asp as code chunk options. Try setting fig-width to values between 1 and 10. Try setting fig-asp to values between 0.1 and 1. Re-render the document after each value and observe its effect. Ultimately, choose values that make the plot look visually pleasing in the rendered document. Based on the behavior you observe, describe what each chunk option does.\n\n\n\n\n\n\nTip\n\n\n\nNow that you’ve had more practice with figure sizing in Quarto documents, review all of the plots you made in this lab and adjust their widths and aspect rations to improve how they look in your rendered document.\n\n\nb. You have the following code cell, but look carefully, it’s not exactly the same!\n\ngplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) + \n  geom_point()\n\nAdd error as a code chunk option and set it to false and then set it to true. After each value, render your document and observe its effect. Ultimately, choose the value that allows you to render your document without altering the code. Based on the behavior you observe, describe what this code chunk option does.\n\n\n\n\n\n\nTip\n\n\n\nReading the documentation might also be helpful.\n\n\n\nNow is another good time to render, commit, and push your changes to GitHub with an informative and concise commit message. And once again, make sure to commit and push all changed files so that your Git pane is empty afterward. We keep repeating this because it’s important and because we see students forget to do this. So take a moment to make sure you’re practicing good version control habits.",
-    "crumbs": [
-      "Homework",
-      "Homework 4"
-    ]
-  },
-  {
-    "objectID": "hw/hw-4.html#submission",
-    "href": "hw/hw-4.html#submission",
-    "title": "HW 4",
+    "objectID": "hw/hw-6.html#submission",
+    "href": "hw/hw-6.html#submission",
+    "title": "HW 6",
     "section": "Submission",
     "text": "Submission\nSubmit your PDF document to Gradescope by the deadline to be considered “on time”:\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials \\(\\rightarrow\\) Duke NetID and log in using your NetID credentials.\nClick on your STA 199 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with question. All the pages of your homework should be associated with at least one question (i.e., should be “checked”).\n\n\n\n\n\n\n\nChecklist\n\n\n\nMake sure you have:\n\nattempted all questions\nrendered your Quarto document\ncommitted and pushed everything to your GitHub repository such that the Git pane in RStudio is empty\nuploaded your PDF to Gradescope",
     "crumbs": [
       "Homework",
-      "Homework 4"
+      "Homework 6"
     ]
   },
   {
-    "objectID": "hw/hw-4.html#grading-and-feedback",
-    "href": "hw/hw-4.html#grading-and-feedback",
-    "title": "HW 4",
+    "objectID": "hw/hw-6.html#grading-and-feedback",
+    "href": "hw/hw-6.html#grading-and-feedback",
+    "title": "HW 6",
     "section": "Grading and feedback",
-    "text": "Grading and feedback\n\nQuestions 1 - 3 are not graded, but you should complete them to get practice.\n\nQuestions 4 - 9 are graded, and you will receive feedback on Gradescope from the course instructional team within a week.\n\nQuestions will be graded for accuracy and completeness.\nPartial credit will be given where appropriate.\nThere are also workflow points for:\n\ncommitting at least three times as you work through your homework,\nhaving your final version of .qmd and .pdf files in your GitHub repository, and\noverall organization.",
+    "text": "Grading and feedback\n\nQuestions 1-5 are not graded, but you should complete them to get practice.\n\nQuestions 6-10 are graded, and you will receive feedback on Gradescope from the course instructional team in about a week.\n\nQuestions will be graded for accuracy and completeness.\nPartial credit will be given where appropriate.\nThere are also workflow points for:\n\ncommitting at least three times as you work through your homework,\nhaving your final version of .qmd and .pdf files in your GitHub repository, and\noverall organization.",
     "crumbs": [
       "Homework",
-      "Homework 4"
+      "Homework 6"
     ]
   },
   {
@@ -9845,7 +10175,7 @@
     "href": "ae/ae-23-pokemon_infer.html",
     "title": "AE 23: Pokemon Inference",
     "section": "",
-    "text": "Today we’ll explore the question “Are taller Pokémon speedier or faster than shorter Pokémon?”\nPackages\n\nlibrary(tidyverse)\nlibrary(tidymodels)\n\nData\nThe data for this application exercise was originally gathered using the Complete Pokémon Dataset from Kaggle.\nFirst, let’s load the data:\n\npokemon &lt;- read_csv(\"data/pokemon.csv\")\n\nTo keep things simple, we’ll work with a subset of the data, the generation 4 Pokémon.\n\npokemon &lt;- pokemon |&gt;\n  filter(generation == 4)\n\nglimpse(pokemon)\n\nRows: 121\nColumns: 17\n$ name            &lt;chr&gt; \"Turtwig\", \"Grotle\", \"Torterra\", \"Chimchar\", \"Monferno…\n$ generation      &lt;dbl&gt; 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, …\n$ type_1          &lt;chr&gt; \"Grass\", \"Grass\", \"Grass\", \"Fire\", \"Fire\", \"Fire\", \"Wa…\n$ type_2          &lt;chr&gt; NA, NA, \"Ground\", NA, \"Fighting\", \"Fighting\", NA, NA, …\n$ height_m        &lt;dbl&gt; 0.4, 1.1, 2.2, 0.5, 0.9, 1.2, 0.4, 0.8, 1.7, 0.3, 0.6,…\n$ weight_kg       &lt;dbl&gt; 10.2, 97.0, 310.0, 6.2, 22.0, 55.0, 5.2, 23.0, 84.5, 2…\n$ total_points    &lt;dbl&gt; 318, 405, 525, 309, 405, 534, 314, 405, 530, 245, 340,…\n$ hp              &lt;dbl&gt; 55, 75, 95, 44, 64, 76, 53, 64, 84, 40, 55, 85, 59, 79…\n$ attack          &lt;dbl&gt; 68, 89, 109, 58, 78, 104, 51, 66, 86, 55, 75, 120, 45,…\n$ defense         &lt;dbl&gt; 64, 85, 105, 44, 52, 71, 53, 68, 88, 30, 50, 70, 40, 6…\n$ sp_attack       &lt;dbl&gt; 45, 55, 75, 58, 78, 104, 61, 81, 111, 30, 40, 50, 35, …\n$ sp_defense      &lt;dbl&gt; 55, 65, 85, 44, 52, 71, 56, 76, 101, 30, 40, 60, 40, 6…\n$ speed           &lt;dbl&gt; 31, 36, 56, 61, 81, 108, 40, 50, 60, 60, 80, 100, 31, …\n$ catch_rate      &lt;dbl&gt; 45, 45, 45, 45, 45, 45, 45, 45, 45, 255, 120, 45, 255,…\n$ base_friendship &lt;dbl&gt; 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70…\n$ base_experience &lt;dbl&gt; 64, 142, 236, 62, 142, 240, 63, 142, 239, 49, 119, 218…\n$ is_legendary    &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE…\n\n\nWe are interested in whether a Pokémon’s log height (measured in meters) can predict its speed (how fast it is).\nVisualize\n\nReview! Create a new variable for the Pokémon’s log height.\n\n\npokemon &lt;- pokemon |&gt;\n  mutate(log_height = log(height_m))\n\n\n\nYour turn: Plot the data and the line of best fit.\n\n\nggplot(pokemon, aes(x = log_height, y = speed)) + \n  geom_point() + \n  geom_smooth(method = \"lm\")\n\n\n\n\n\n\n\nPoint Estimation\n\n\nYour turn: Fit the linear model to these data:\n\n\nobserved_fit &lt;- pokemon |&gt;\n  specify(speed ~ log_height) |&gt;\n  fit()\nobserved_fit\n\n# A tibble: 2 × 2\n  term       estimate\n  &lt;chr&gt;         &lt;dbl&gt;\n1 intercept     72.4 \n2 log_height     7.39\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis gives the exact same numbers that you get if you use linear_reg() |&gt; fit(), but we need this new syntax because it plays nice with the tools we have for confidence intervals and hypothesis tests. I know, I hate it too, but it’s the way it is.\n\n\n\n\nYour turn: Typeset the equation for the model fit:\n\n\\[\n\\widehat{\\text{speed}} = 72.41 + 7.39\\times \\log(\\text{height})\n\\]\n\n\nYour turn: Interpret the slope and the intercept estimates:\n\nIf a Pokémon had 0 log(height) (equivalently 1 m tall), we predict that it would have a 72.41 speed stat on average;\nA $1 increase in log(height) is associated with a 7.39 increase in speed, on average.\n\n\nInterval Estimation\n\n\nDemo: Using seed 24601, generate 500 bootstrap samples, and store them in a new data frame called bstrap_samples.\n\n\nset.seed(24601)\nbstrap_samples &lt;- pokemon |&gt;\n  specify(speed ~ log_height) |&gt;\n  generate(reps = 500, type = \"bootstrap\")\n\n\n\nDemo: Fit a linear model to each of these bootstrap samples and store the estimates in a new data framed called bstrap_fits.\n\n\nbstrap_fits &lt;- bstrap_samples |&gt; \n  fit()\n\n\n\nYour turn: Use linear_reg() |&gt; fit(...) to fit a linear model to bootstrap sample number 347, and verify that you get the same estimates as the ones contained in bstrap_fits.\n\n\nreplicate_347 &lt;- bstrap_samples |&gt;\n  filter(\n    replicate == 347\n  )\n\nlinear_reg() |&gt;\n  fit(speed ~ log_height, data = replicate_347) |&gt;\n  tidy()\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)    71.6       2.61     27.4  2.64e-53\n2 log_height      6.46      3.09      2.09 3.84e- 2\n\nbstrap_fits |&gt;\n  filter(replicate == 347)\n\n# A tibble: 2 × 3\n# Groups:   replicate [1]\n  replicate term       estimate\n      &lt;int&gt; &lt;chr&gt;         &lt;dbl&gt;\n1       347 intercept     71.6 \n2       347 log_height     6.46\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe only point I’m making here is that this new bootstrap code is not performing a fundamentally new task. It’s performing an old task (fitting the linear model), but it’s repeating it A LOT. So the numbers you get here are not mysterious. They’re numbers you already know how to compute.\n\n\n\n\nDemo: Compute 95% confidence intervals for the slope and the intercept using the get_confidence_interval command.\n\n\nci_95 &lt;- get_confidence_interval(\n  bstrap_fits,\n  point_estimate = observed_fit,\n  level = 0.90,\n  type = \"percentile\"\n)\nci_95\n\n# A tibble: 2 × 3\n  term       lower_ci upper_ci\n  &lt;chr&gt;         &lt;dbl&gt;    &lt;dbl&gt;\n1 intercept     68.2      76.3\n2 log_height     2.22     12.4\n\n\n\n\nYour turn: Verify that you get the same numbers when you manually calculate the quantiles of the slope estimates using summarize and quantile. Pay attention to the grouping.\n\n\nbstrap_fits |&gt;\n  ungroup() |&gt;\n  group_by(term) |&gt;\n  summarize(\n    lower_ci = quantile(estimate, 0.05),\n    upper_ci = quantile(estimate, 0.95)\n  )\n\n# A tibble: 2 × 3\n  term       lower_ci upper_ci\n  &lt;chr&gt;         &lt;dbl&gt;    &lt;dbl&gt;\n1 intercept     68.2      76.3\n2 log_height     2.22     12.4\n\n\n\n\n\n\n\n\nNote\n\n\n\nSame point as before. There’s no magic here. get_confidence_interval is just a convenient way of doing something that you already knew how to do.s\n\n\n\n\nBONUS: You can visualize the confidence interval:\n\n\nvisualize(bstrap_fits) + \n  shade_confidence_interval(ci_95)\n\n\n\n\n\n\n\nHypothesis Testing\nLet’s consider the hypotheses:\n\\[\nH_0:\\beta_1=0\\quad vs\\quad H_A: \\beta_1\\neq 0.\n\\] The null hypothesis corresponds to the claim that log_height and speed are uncorrelated.\n\nSimulate and plot the null distribution for the slope:\n\n\nset.seed(24601)\nnull_dist &lt;- pokemon |&gt;\n  specify(speed ~ log_height) |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 500, type = \"permute\") |&gt;\n  fit()\n\nnull_dist |&gt;\n  filter(term == \"log_height\") |&gt;\n  ggplot(aes(x = estimate)) + \n  geom_histogram()\n\n\n\n\n\n\n\n\nAdd a vertical line to your plot indicating the point estimate of the slope from your original data analysis:\n\n\nvisualize(null_dist) +\n  shade_p_value(obs_stat = observed_fit, direction = \"two-sided\")\n\n\n\n\n\n\n\n\nCompute the \\(p\\)-value for this test and interpret it:\n\n\nnull_dist |&gt;\n  get_p_value(obs_stat = observed_fit, direction = \"two-sided\")\n\n# A tibble: 2 × 2\n  term       p_value\n  &lt;chr&gt;        &lt;dbl&gt;\n1 intercept    0.028\n2 log_height   0.028\n\n\nAnswer: If the null were true and \\(\\beta_1=0\\) (meaning log_height and speed are uncorrelated), the probability of getting an estimate as or more extreme than the one we got (\\(b_1=7.39\\)) is 0.028. So we reject the null hypothesis. Evidence is sufficient to conclude that \\(\\beta_1\\), whatever it is, is not equal to zero."
+    "text": "Today we’ll explore the question “Are taller Pokémon speedier than shorter Pokémon?”\nPackages\n\nlibrary(tidyverse)\nlibrary(tidymodels)\n\nData\nThe data for this application exercise was originally gathered using the Complete Pokémon Dataset from Kaggle.\nFirst, let’s load the data:\n\npokemon &lt;- read_csv(\"data/pokemon.csv\")\n\nTo keep things simple, we’ll work with a subset of the data, the generation 4 Pokémon.\n\npokemon &lt;- pokemon |&gt;\n  filter(generation == 4)\n\nglimpse(pokemon)\n\nRows: 121\nColumns: 17\n$ name            &lt;chr&gt; \"Turtwig\", \"Grotle\", \"Torterra\", \"Chimchar\", \"Monferno…\n$ generation      &lt;dbl&gt; 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, …\n$ type_1          &lt;chr&gt; \"Grass\", \"Grass\", \"Grass\", \"Fire\", \"Fire\", \"Fire\", \"Wa…\n$ type_2          &lt;chr&gt; NA, NA, \"Ground\", NA, \"Fighting\", \"Fighting\", NA, NA, …\n$ height_m        &lt;dbl&gt; 0.4, 1.1, 2.2, 0.5, 0.9, 1.2, 0.4, 0.8, 1.7, 0.3, 0.6,…\n$ weight_kg       &lt;dbl&gt; 10.2, 97.0, 310.0, 6.2, 22.0, 55.0, 5.2, 23.0, 84.5, 2…\n$ total_points    &lt;dbl&gt; 318, 405, 525, 309, 405, 534, 314, 405, 530, 245, 340,…\n$ hp              &lt;dbl&gt; 55, 75, 95, 44, 64, 76, 53, 64, 84, 40, 55, 85, 59, 79…\n$ attack          &lt;dbl&gt; 68, 89, 109, 58, 78, 104, 51, 66, 86, 55, 75, 120, 45,…\n$ defense         &lt;dbl&gt; 64, 85, 105, 44, 52, 71, 53, 68, 88, 30, 50, 70, 40, 6…\n$ sp_attack       &lt;dbl&gt; 45, 55, 75, 58, 78, 104, 61, 81, 111, 30, 40, 50, 35, …\n$ sp_defense      &lt;dbl&gt; 55, 65, 85, 44, 52, 71, 56, 76, 101, 30, 40, 60, 40, 6…\n$ speed           &lt;dbl&gt; 31, 36, 56, 61, 81, 108, 40, 50, 60, 60, 80, 100, 31, …\n$ catch_rate      &lt;dbl&gt; 45, 45, 45, 45, 45, 45, 45, 45, 45, 255, 120, 45, 255,…\n$ base_friendship &lt;dbl&gt; 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70…\n$ base_experience &lt;dbl&gt; 64, 142, 236, 62, 142, 240, 63, 142, 239, 49, 119, 218…\n$ is_legendary    &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE…\n\n\nWe are interested in whether a Pokémon’s log height (measured in meters) can predict its speed (how fast it is).\nVisualize\n\nReview! Create a new variable for the Pokémon’s log height.\n\n\npokemon &lt;- pokemon |&gt;\n  mutate(log_height = log(height_m))\n\n\n\nYour turn: Plot the data and the line of best fit.\n\n\nggplot(pokemon, aes(x = log_height, y = speed)) + \n  geom_point() + \n  geom_smooth(method = \"lm\")\n\n\n\n\n\n\n\nPoint Estimation\n\n\nYour turn: Fit the linear model to these data:\n\n\nobserved_fit &lt;- pokemon |&gt;\n  specify(speed ~ log_height) |&gt;\n  fit()\nobserved_fit\n\n# A tibble: 2 × 2\n  term       estimate\n  &lt;chr&gt;         &lt;dbl&gt;\n1 intercept     72.4 \n2 log_height     7.39\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis gives the exact same numbers that you get if you use linear_reg() |&gt; fit(), but we need this new syntax because it plays nice with the tools we have for confidence intervals and hypothesis tests. I know, I hate it too, but it’s the way it is.\n\n\n\n\nYour turn: Typeset the equation for the model fit:\n\n\\[\n\\widehat{\\text{speed}} = 72.41 + 7.39\\times \\log(\\text{height})\n\\]\n\n\nYour turn: Interpret the slope and the intercept estimates:\n\nIf a Pokémon had 0 log(height) (equivalently 1 m tall), we predict that it would have a 72.41 speed stat on average;\nA $1 increase in log(height) is associated with a 7.39 increase in speed, on average.\n\n\nHypothesis Testing\nLet’s consider the hypotheses:\n\\[\nH_0:\\beta_1=0\\quad vs\\quad H_A: \\beta_1\\neq 0.\n\\] The null hypothesis corresponds to the claim that log_height and speed are uncorrelated.\n\nSimulate and plot the null distribution for the slope:\n\n\nset.seed(24601)\nnull_dist &lt;- pokemon |&gt;\n  specify(speed ~ log_height) |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 500, type = \"permute\") |&gt;\n  fit()\n\nnull_dist |&gt;\n  filter(term == \"log_height\") |&gt;\n  ggplot(aes(x = estimate)) + \n  geom_histogram()\n\n\n\n\n\n\n\n\nAdd a vertical line to your plot indicating the point estimate of the slope from your original data analysis:\n\n\nvisualize(null_dist) +\n  shade_p_value(obs_stat = observed_fit, direction = \"two-sided\")\n\n\n\n\n\n\n\n\nCompute the \\(p\\)-value for this test and interpret it:\n\n\nnull_dist |&gt;\n  get_p_value(obs_stat = observed_fit, direction = \"two-sided\")\n\n# A tibble: 2 × 2\n  term       p_value\n  &lt;chr&gt;        &lt;dbl&gt;\n1 intercept    0.028\n2 log_height   0.028\n\n\nAnswer: If the null were true and \\(\\beta_1=0\\) (meaning log_height and speed are uncorrelated), the probability of getting an estimate as or more extreme than the one we got (\\(b_1=7.39\\)) is 0.028. So we reject the null hypothesis. Evidence is sufficient to conclude that \\(\\beta_1\\), whatever it is, is not equal to zero.\nInterval Estimation\n\n\nDemo: Using seed 24601, generate 500 bootstrap samples, and store them in a new data frame called bstrap_samples.\n\n\nset.seed(24601)\nbstrap_samples &lt;- pokemon |&gt;\n  specify(speed ~ log_height) |&gt;\n  generate(reps = 500, type = \"bootstrap\")\n\n\n\nDemo: Fit a linear model to each of these bootstrap samples and store the estimates in a new data framed called bstrap_fits.\n\n\nbstrap_fits &lt;- bstrap_samples |&gt; \n  fit()\n\n\n\nYour turn: Use linear_reg() |&gt; fit(...) to fit a linear model to bootstrap sample number 347, and verify that you get the same estimates as the ones contained in bstrap_fits.\n\n\nreplicate_347 &lt;- bstrap_samples |&gt;\n  filter(\n    replicate == 347\n  )\n\nlinear_reg() |&gt;\n  fit(speed ~ log_height, data = replicate_347) |&gt;\n  tidy()\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)    71.6       2.61     27.4  2.64e-53\n2 log_height      6.46      3.09      2.09 3.84e- 2\n\nbstrap_fits |&gt;\n  filter(replicate == 347)\n\n# A tibble: 2 × 3\n# Groups:   replicate [1]\n  replicate term       estimate\n      &lt;int&gt; &lt;chr&gt;         &lt;dbl&gt;\n1       347 intercept     71.6 \n2       347 log_height     6.46\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe only point I’m making here is that this new bootstrap code is not performing a fundamentally new task. It’s performing an old task (fitting the linear model), but it’s repeating it A LOT. So the numbers you get here are not mysterious. They’re numbers you already know how to compute.\n\n\n\n\nDemo: Compute 95% confidence intervals for the slope and the intercept using the get_confidence_interval command.\n\n\nci_95 &lt;- get_confidence_interval(\n  bstrap_fits,\n  point_estimate = observed_fit,\n  level = 0.95,\n  type = \"percentile\"\n)\nci_95\n\n# A tibble: 2 × 3\n  term       lower_ci upper_ci\n  &lt;chr&gt;         &lt;dbl&gt;    &lt;dbl&gt;\n1 intercept    67.4       76.6\n2 log_height    0.942     13.3\n\n\n\n\nYour turn: Verify that you get the same numbers when you manually calculate the quantiles of the slope estimates using summarize and quantile. Pay attention to the grouping.\n\n\nbstrap_fits |&gt;\n  ungroup() |&gt;\n  group_by(term) |&gt;\n  summarize(\n    lower_ci = quantile(estimate, 0.05),\n    upper_ci = quantile(estimate, 0.95)\n  )\n\n# A tibble: 2 × 3\n  term       lower_ci upper_ci\n  &lt;chr&gt;         &lt;dbl&gt;    &lt;dbl&gt;\n1 intercept     68.2      76.3\n2 log_height     2.22     12.4\n\n\n\n\n\n\n\n\nNote\n\n\n\nSame point as before. There’s no magic here. get_confidence_interval is just a convenient way of doing something that you already knew how to do.s\n\n\n\n\nBONUS: You can visualize the confidence interval:\n\n\nvisualize(bstrap_fits) + \n  shade_confidence_interval(ci_95)"
   },
   {
     "objectID": "ae/ae-09-age-gaps-import.html",
@@ -9911,113 +10241,91 @@
     "text": "Part 2 - Data analysis\nLet’s start by loading the packages we will need:\n\nlibrary(tidyverse)\n\n\nLoad the data you saved into the data folder and name it chronicle.\n\n\nchronicle &lt;- read_csv(\"data/chronicle.csv\")\n\n\nWho are the most prolific authors of the 500 most recent opinion articles in The Chronicle?\n\n\nchronicle |&gt;\n  count(author, sort = TRUE)\n\n# A tibble: 193 × 2\n   author             n\n   &lt;chr&gt;          &lt;int&gt;\n 1 Luke A. Powery    30\n 2 Anna Garziera     25\n 3 Aaron Siegle      23\n 4 Monday Monday     23\n 5 Advikaa Anand     15\n 6 Nik Narain        14\n 7 Leo Goldberg      13\n 8 Remembrances      13\n 9 Alex Berkman      11\n10 Heidi Smith       10\n# ℹ 183 more rows\n\n\n\nDraw a line plot of the number of opinion articles published per day in The Chronicle.\n\n\nchronicle |&gt;\n  count(date) |&gt;\n  ggplot(aes(x = date, y = n, group = 1)) +\n  geom_line()\n\n\n\n\n\n\n\n\nWhat percent of the most recent 500 opinion articles in The Chronicle mention “climate” in their title?\n\n\nchronicle |&gt;\n  mutate(\n    title = str_to_lower(title),\n    climate = if_else(\n      str_detect(title, \"climate\"),\n      \"mentioned\",\n      \"not mentioned\"\n    )\n  ) |&gt;\n  count(climate) |&gt;\n  mutate(prop = n / sum(n))\n\n# A tibble: 2 × 3\n  climate           n  prop\n  &lt;chr&gt;         &lt;int&gt; &lt;dbl&gt;\n1 mentioned         8 0.016\n2 not mentioned   492 0.984\n\n\n\nCome up with another question and try to answer it using the data.\n\n\n# add code here"
   },
   {
-    "objectID": "lab/lab-2.html",
-    "href": "lab/lab-2.html",
-    "title": "Lab 2",
+    "objectID": "lab/lab-3.html",
+    "href": "lab/lab-3.html",
+    "title": "Lab 3",
     "section": "",
-    "text": "Today you will double down on your data visualization skills, and you will also start playing with the pipe operator |&gt;.\n\n\nGain practice with\n\nthe data science workflow using R, RStudio, Git, and GitHub,\nwriting a reproducible report using Quarto, and\nversion control using Git and GitHub.\n\n\nCreate data visualizations with the tidyverse, specifically using ggplot2.\nDescribe in words what those visualizations teach us.\nWrite a simple data transformation pipeline with the tidyverse, specifically using dplyr.\n\nTo get started, follow the instructions below.\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA199 under My reservations to log into your container. You should now see the RStudio environment.\nGo to the course organization at github.com/sta199-s26 organization on GitHub. Click on the repo with the prefix lab-2. It contains the starter documents you need to complete the homework.\nClick on the green CODE button, select Use SSH. Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\n\nThen, click lab-2.qmd to open the template Quarto file and update the authors field to add your name first (first and last) and then your teammates’ names (first and last). Render the document. If you get a popup window error, click “Try again”. Examine the rendered document and make sure your name is updated in the document. Commit and push your changes with a meaningful commit message and push to GitHub.\n\n\nCode should follow the tidyverse style. Particularly,\n\nthere should be spaces before and line breaks after each + when building a ggplot,\nthere should also be spaces before and line breaks after each |&gt; in a data transformation pipeline,\ncode should be properly indented,\nthere should be spaces around = signs and spaces after commas.\n\nAdditionally, all code should be visible in the PDF output, i.e., should not run off the page on the PDF. Long lines that run off the page should be split across multiple lines with line breaks.1\n\n\nPlots should have an informative title and, if needed, also a subtitle.\nAxes and legends should be labeled with both the variable name and its units (if applicable).\nCareful consideration should be given to aesthetic choices.\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course.\n\nYou should have at least 3 commits with meaningful commit messages by the end of the assignment.\nFinal versions of both your .qmd file and the rendered PDF should be pushed to GitHub.",
+    "text": "This lab is a deep dive into group_by()!\nMake sure to upload your completed lab to Gradescope by the end of your lab session and commit and push your final version to GitHub.\n\nTo get started, follow the instructions below.\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA199 under My reservations to log into your container. You should now see the RStudio environment.\nGo to the course organization at github.com/sta199-s26 organization on GitHub. Click on the repo with the prefix lab-3. It contains the starter documents you need to complete the homework.\nClick on the green CODE button, select Use SSH. Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\n\nThen, click lab-3.qmd to open the template Quarto file and update the authors field to add your name first (first and last) and then your teammates’ names (first and last). Render the document. If you get a popup window error, click “Try again”. Examine the rendered document and make sure your name is updated in the document. Commit and push your changes with a meaningful commit message and push to GitHub.\n\n\nCode should follow the tidyverse style. Particularly,\n\nthere should be spaces before and line breaks after each + when building a ggplot,\nthere should also be spaces before and line breaks after each |&gt; in a data transformation pipeline,\ncode should be properly indented,\nthere should be spaces around = signs and spaces after commas.\n\nAdditionally, all code should be visible in the PDF output, i.e., should not run off the page on the PDF. Long lines that run off the page should be split across multiple lines with line breaks.1\n\n\nPlots should have an informative title and, if needed, also a subtitle.\nAxes and legends should be labeled with both the variable name and its units (if applicable).\nCareful consideration should be given to aesthetic choices.\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course.\n\nYou should have at least 3 commits with meaningful commit messages by the end of the assignment.\nFinal versions of both your .qmd file and the rendered PDF should be pushed to GitHub.",
     "crumbs": [
       "Lab",
-      "Lab 2"
+      "Lab 3"
     ]
   },
   {
-    "objectID": "lab/lab-2.html#learning-objectives",
-    "href": "lab/lab-2.html#learning-objectives",
-    "title": "Lab 2",
+    "objectID": "lab/lab-3.html#getting-started",
+    "href": "lab/lab-3.html#getting-started",
+    "title": "Lab 3",
     "section": "",
-    "text": "Gain practice with\n\nthe data science workflow using R, RStudio, Git, and GitHub,\nwriting a reproducible report using Quarto, and\nversion control using Git and GitHub.\n\n\nCreate data visualizations with the tidyverse, specifically using ggplot2.\nDescribe in words what those visualizations teach us.\nWrite a simple data transformation pipeline with the tidyverse, specifically using dplyr.",
+    "text": "To get started, follow the instructions below.\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA199 under My reservations to log into your container. You should now see the RStudio environment.\nGo to the course organization at github.com/sta199-s26 organization on GitHub. Click on the repo with the prefix lab-3. It contains the starter documents you need to complete the homework.\nClick on the green CODE button, select Use SSH. Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\n\nThen, click lab-3.qmd to open the template Quarto file and update the authors field to add your name first (first and last) and then your teammates’ names (first and last). Render the document. If you get a popup window error, click “Try again”. Examine the rendered document and make sure your name is updated in the document. Commit and push your changes with a meaningful commit message and push to GitHub.",
     "crumbs": [
       "Lab",
-      "Lab 2"
+      "Lab 3"
     ]
   },
   {
-    "objectID": "lab/lab-2.html#getting-started",
-    "href": "lab/lab-2.html#getting-started",
-    "title": "Lab 2",
-    "section": "",
-    "text": "To get started, follow the instructions below.\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA199 under My reservations to log into your container. You should now see the RStudio environment.\nGo to the course organization at github.com/sta199-s26 organization on GitHub. Click on the repo with the prefix lab-2. It contains the starter documents you need to complete the homework.\nClick on the green CODE button, select Use SSH. Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\n\nThen, click lab-2.qmd to open the template Quarto file and update the authors field to add your name first (first and last) and then your teammates’ names (first and last). Render the document. If you get a popup window error, click “Try again”. Examine the rendered document and make sure your name is updated in the document. Commit and push your changes with a meaningful commit message and push to GitHub.",
-    "crumbs": [
-      "Lab",
-      "Lab 2"
-    ]
-  },
-  {
-    "objectID": "lab/lab-2.html#guidelines",
-    "href": "lab/lab-2.html#guidelines",
-    "title": "Lab 2",
+    "objectID": "lab/lab-3.html#guidelines",
+    "href": "lab/lab-3.html#guidelines",
+    "title": "Lab 3",
     "section": "",
     "text": "Code should follow the tidyverse style. Particularly,\n\nthere should be spaces before and line breaks after each + when building a ggplot,\nthere should also be spaces before and line breaks after each |&gt; in a data transformation pipeline,\ncode should be properly indented,\nthere should be spaces around = signs and spaces after commas.\n\nAdditionally, all code should be visible in the PDF output, i.e., should not run off the page on the PDF. Long lines that run off the page should be split across multiple lines with line breaks.1\n\n\nPlots should have an informative title and, if needed, also a subtitle.\nAxes and legends should be labeled with both the variable name and its units (if applicable).\nCareful consideration should be given to aesthetic choices.\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course.\n\nYou should have at least 3 commits with meaningful commit messages by the end of the assignment.\nFinal versions of both your .qmd file and the rendered PDF should be pushed to GitHub.",
     "crumbs": [
       "Lab",
-      "Lab 2"
+      "Lab 3"
     ]
   },
   {
-    "objectID": "lab/lab-2.html#refresher-tidyverse",
-    "href": "lab/lab-2.html#refresher-tidyverse",
-    "title": "Lab 2",
-    "section": "Refresher: tidyverse",
-    "text": "Refresher: tidyverse\nThe tidyverse is a meta-package. When you load it you get nine packages loaded for you:\n\n\ndplyr: for data wrangling\n\nforcats: for dealing with factors\n\nggplot2: for data visualization\n\nlubridate: for dealing with dates\n\npurrr: for iteration with functional programming\n\nreadr: for reading and writing data\n\nstringr: for string manipulation\n\ntibble: for modern, tidy data frames\n\ntidyr: for data tidying and rectangling",
-    "crumbs": [
-      "Lab",
-      "Lab 2"
-    ]
-  },
-  {
-    "objectID": "lab/lab-2.html#question-1",
-    "href": "lab/lab-2.html#question-1",
-    "title": "Lab 2",
+    "objectID": "lab/lab-3.html#question-1",
+    "href": "lab/lab-3.html#question-1",
+    "title": "Lab 3",
     "section": "Question 1",
-    "text": "Question 1\n\nMake two well-labeled plots: a histogram and a boxplot of the median_hh_income variable.\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Q1, part a”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\nProvide written responses to the following questions related to the plots created in part a:\n\n\nIs the distribution of median household income in NC counties right-skewed, left-skewed, or approximately symmetric? Which plot(s) helped you determine this?\nIs the distribution of median household income in NC counties unimodal, bimodal, multimodal or uniform? Which plot(s) helped you determine this?\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Q1, part b”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\nIn a single pipeline, identify the counties with unusually high median household income (according to the boxplot) and display their names and median household income in descending order of income\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Q1, part c”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.",
+    "text": "Question 1\nGrouping by one variable.\nFor this question, you will work with the following dataset called df_1. The tibble() function creates the data frame (the tibble object) df_1 with two variables: member and hours. The following code is already included in your lab document.\n\ndf_1 &lt;- tibble(\n  member = c(\"A\", \"B\", \"B\", \"A\", \"B\"),\n  hours  = c(10, 5, 2, 7, 6)\n)\n\ndf_1\n\n\nWhat does the following pipeline do? Run it and analyze the result and articulate in words what arrange() does.\n\n\ndf_1 |&gt;\n  arrange(member)\n\n\n\n\n\n\n\nTip\n\n\n\nCheck out the R Documentation for arrange() by typing “?arrange” into the console. You should see the “Help” tab pop up in the bottom right pane of your RStudio environment. Read through the “Description” section to confirm your understanding of the function.\n\n\n\nWhat does the following pipeline do? Run it and analyze the result and articulate in words what group_by() does.\n\n\ndf_1 |&gt;\n  group_by(member)\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Q1, parts a and b”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.\n\n\nRun the following code cell and analyze the result.\n\nHow many rows does the output have?\nHow many columns does the output have?\nIs the output grouped? If so, how many groups does it have?\n\n\n\n\ndf_1 |&gt;\n  group_by(member) |&gt;\n  summarize(total_hours = sum(hours))\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nA visual representation of what group_by() does\n\n\n\n\nRun the following code cell and analyze the result.\n\nHow many rows does the output have?\nHow many columns does the output have?\nIs the output grouped? If so, how many groups does it have?\n\n\n\n\ndf_1 |&gt;\n  summarize(total_hours = sum(hours))\n\n\nRender, commit, and push your changes to GitHub with the commit message “Finished Q1”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.",
     "crumbs": [
       "Lab",
-      "Lab 2"
+      "Lab 3"
     ]
   },
   {
-    "objectID": "lab/lab-2.html#question-2",
-    "href": "lab/lab-2.html#question-2",
-    "title": "Lab 2",
+    "objectID": "lab/lab-3.html#question-2",
+    "href": "lab/lab-3.html#question-2",
+    "title": "Lab 3",
     "section": "Question 2",
-    "text": "Question 2\n\nGuess what the relationship the percentage of 25-44-year-olds with a bachelor’s degree and median household income might be – positive? negative? no relationship? Explain your reasoning.\nMake a scatter plot of median household income (median_hh_income on the y-axis) vs. percentage of 25-44-year-olds with a bachelor’s degree (p_edu_ba on the x-axis). Make sure to set an informative title and axis labels for your plot. Describe the relationship. Was your guess correct?\nAgain, make a scatter plot of median household income (median_hh_income on the y-axis) vs. percentage of 25-44-year-olds with a bachelor’s degree (p_edu_ba on the x-axis), this time coloring the points by county type (county_type). Based on the resultant plot, does the relationship between these two variables appear to differ by county type?\n(Optional) In a single pipeline, compute the average percentage of 25-44-year-olds with a bachelor’s degree and the average median household income across NC counties classified as “Suburban”. Similarly, in a separate pipeline compute the average percentage of 25-44-year-olds with a bachelor’s degree and the average median household income across NC counties classified as “Rural - Metro”. Comment on whether the results are what you would have expected.\n\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Q2”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.",
+    "text": "Question 2\nGrouping by two variables.\nFor this question, you will work with the following dataset called df_2. The tibble() function creates the data frame (the tibble object) df_2 with three variables: shift, member and hours. The following code is already included in your lab document.\n\ndf_2 &lt;- tibble(\n  shift  = c(\"day\", \"day\", \"night\", \"day\", \"night\", \"day\", \"night\", \"night\", \"day\", \"night\"),\n  member = c(\"A\", \"B\", \"B\", \"A\", \"B\", \"B\", \"B\", \"A\", \"A\", \"B\"),\n  hours  = c(10, 5, 2, 7, 6, 5, 4, 2, 3, 5)\n)\n\ndf_2\n\n\nHow many levels does member have? How many levels does shifthave? How many possible combinations are there of the levels of member and shift?\n\nRun the following code cell and analyze the result.\n\nHow many rows does the output have?\nHow many columns does the output have?\nIs the output grouped? If so, how many groups does it have?\nWhat does the message mean?\n\n\n\n\ndf_2 |&gt;\n  group_by(shift, member) |&gt;\n  summarize(mean_hours = mean(hours))\n\n\nRun the following code cell and analyze the result.\n\nHow many rows does the output have?\nHow many columns does the output have?\nIs the output grouped? If so, how many groups does it have?\n\n\n\n\ndf_2 |&gt;\n  group_by(shift, member) |&gt;\n  summarize(mean_hours = mean(hours), .groups = \"drop\")\n\n\nIn the following code cell, we add one more step to the data pipelines from the previous two parts. The new step uses slice_head(n = 1), which is designed to give the first row of the output. Run each and analyze the result. You will notice the results are different. Why?\n\n\n# pipeline from part b + slice_head()\ndf_2 |&gt;\n  group_by(shift, member) |&gt;\n  summarize(mean_hours = mean(hours)) |&gt;\n  slice_head(n = 1)\n\n# pipeline from part c + slice_head()\ndf_2 |&gt;\n  group_by(shift, member) |&gt;\n  summarize(mean_hours = mean(hours), .groups = \"drop\") |&gt;\n  slice_head(n = 1)\n\n\nRun the following code cell and analyze the result.\n\nHow many rows does the output have?\nHow many columns does the output have?\nIs the output grouped? If so, how many groups does it have?\nArticulate the difference between summarize() and mutate().\n\n\n\n\ndf_2 |&gt;\n  group_by(shift, member) |&gt;\n  mutate(mean_hours = mean(hours)) |&gt;\n  arrange(shift, member)\n\n\nRender, commit, and push your changes to GitHub with a meaningful commit message.",
     "crumbs": [
       "Lab",
-      "Lab 2"
+      "Lab 3"
     ]
   },
   {
-    "objectID": "lab/lab-2.html#submission",
-    "href": "lab/lab-2.html#submission",
-    "title": "Lab 2",
+    "objectID": "lab/lab-3.html#submission",
+    "href": "lab/lab-3.html#submission",
+    "title": "Lab 3",
     "section": "Submission",
     "text": "Submission\nSubmit your PDF document to Gradescope by the end of the lab to be considered “on time”:\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials \\(\\rightarrow\\) Duke NetID and log in using your NetID credentials.\nClick on your STA 199 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with question. All the pages of your lab should be associated with at least one question (i.e., should be “checked”).\n\n\n\n\n\n\n\nChecklist\n\n\n\nMake sure you have:\n\nattempted all questions\nrendered your Quarto document\ncommitted and pushed everything to your GitHub repository such that the Git pane in RStudio is empty\nuploaded your PDF to Gradescope",
     "crumbs": [
       "Lab",
-      "Lab 2"
+      "Lab 3"
     ]
   },
   {
-    "objectID": "lab/lab-2.html#grading-and-feedback",
-    "href": "lab/lab-2.html#grading-and-feedback",
-    "title": "Lab 2",
+    "objectID": "lab/lab-3.html#grading-and-feedback",
+    "href": "lab/lab-3.html#grading-and-feedback",
+    "title": "Lab 3",
     "section": "Grading and feedback",
-    "text": "Grading and feedback\n\nThis lab is worth 30 points:\n\n10 points for being in lab and turning in something – no partial credit for this part.\n20 points for:\n\nanswering the questions correctly – there is partial credit for this part.\nfollowing the workflow – there is partial credit for this part.\n\n\n\n\nThe workflow points are for:\n\ncommitting at least three times as you work through your lab,\nhaving your final version of .qmd and .pdf files in your GitHub repository, and\noverall organization.\n\n\nYou’ll receive feedback on your lab on Gradescope within a week.\n\nGood luck, and work together!",
+    "text": "Grading and feedback\n\nThis lab is worth 30 points:\n\n10 points for being in lab and turning in something – no partial credit for this part.\n20 points for:\n\nanswering the questions correctly – there is partial credit for this part.\nfollowing the workflow – there is partial credit for this part.\n\n\n\n\nThe workflow points are for:\n\ncommitting at least three times as you work through your lab,\nhaving your final version of .qmd and .pdf files in your GitHub repository, and\noverall organization.\n\n\nYou’ll receive feedback on your lab on Gradescope within a week.\n\nGood luck, and have fun with it!",
     "crumbs": [
       "Lab",
-      "Lab 2"
+      "Lab 3"
     ]
   },
   {
-    "objectID": "lab/lab-2.html#footnotes",
-    "href": "lab/lab-2.html#footnotes",
-    "title": "Lab 2",
+    "objectID": "lab/lab-3.html#footnotes",
+    "href": "lab/lab-3.html#footnotes",
+    "title": "Lab 3",
     "section": "Footnotes",
     "text": "Footnotes\n\nRemember, haikus not novellas when writing code!↩︎",
     "crumbs": [
       "Lab",
-      "Lab 2"
+      "Lab 3"
     ]
   },
   {

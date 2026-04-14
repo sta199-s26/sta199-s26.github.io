@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>AE 23: Pokemon Inference – STA 199 Spring 2026</title>
+<meta name="description" content="Due: Wed, Apr 29, 11:59 pm">
+<title>HW 7 – STA 199 Spring 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -121,12 +122,9 @@ window.Quarto = {
   typesetMath
 };
 </script>
-<meta property="og:title" content="AE 23: Pokemon Inference – STA 199 Spring 2026">
-<meta property="og:description" content="Homepage for STA 199 Introduction to Data Science at Duke University, Spring 2026.">
-<meta property="og:image" content="https://sta199-s26.github.io/ae/ae-23-pokemon_infer_files/figure-html/unnamed-chunk-3-1.png">
+<meta property="og:title" content="HW 7 – STA 199 Spring 2026">
+<meta property="og:description" content="Due: Wed, Apr 29, 11:59 pm">
 <meta property="og:site_name" content="STA 199 Spring 2026">
-<meta property="og:image:height" content="960">
-<meta property="og:image:width" content="1344">
 </head>
 <body class="nav-sidebar docked quarto-light">
 
@@ -135,7 +133,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">AE 23: Pokemon Inference</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">HW 7</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -466,19 +464,74 @@ window.Quarto = {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-<li><a href="#packages" id="toc-packages" class="nav-link active" data-scroll-target="#packages">Packages</a></li>
+<li>
+<a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+<li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a></li>
+  <li><a href="#plots" id="toc-plots" class="nav-link" data-scroll-target="#plots">Plots</a></li>
+  <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow">Workflow</a></li>
+  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#part-1-feedback-from-ai" id="toc-part-1-feedback-from-ai" class="nav-link" data-scroll-target="#part-1-feedback-from-ai">Part 1 – Feedback from AI</a>
+  <ul class="collapse">
+<li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#visualize" id="toc-visualize" class="nav-link" data-scroll-target="#visualize">Visualize</a></li>
-  <li><a href="#point-estimation" id="toc-point-estimation" class="nav-link" data-scroll-target="#point-estimation">Point Estimation</a></li>
-  <li><a href="#hypothesis-testing" id="toc-hypothesis-testing" class="nav-link" data-scroll-target="#hypothesis-testing">Hypothesis Testing</a></li>
-  <li><a href="#interval-estimation" id="toc-interval-estimation" class="nav-link" data-scroll-target="#interval-estimation">Interval Estimation</a></li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/ae/ae-23-pokemon_infer.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+  <li>
+<a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a>
+  <ul class="collapse">
+<li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
+  </ul>
+</li>
+  </ul>
+</li>
+  <li>
+<a href="#part-2-feedback-from-humans" id="toc-part-2-feedback-from-humans" class="nav-link" data-scroll-target="#part-2-feedback-from-humans">Part 2 – Feedback from Humans</a>
+  <ul class="collapse">
+<li><a href="#packages-1" id="toc-packages-1" class="nav-link" data-scroll-target="#packages-1">Packages</a></li>
+  <li>
+<a href="#more-lemurs" id="toc-more-lemurs" class="nav-link" data-scroll-target="#more-lemurs">More Lemurs</a>
+  <ul class="collapse">
+<li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5">Question 5 🤖</a></li>
+  <li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6">Question 6 🧑🏽‍🏫</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#babies" id="toc-babies" class="nav-link" data-scroll-target="#babies">Babies</a>
+  <ul class="collapse">
+<li><a href="#question-7" id="toc-question-7" class="nav-link" data-scroll-target="#question-7">Question 7 🤖</a></li>
+  <li><a href="#question-8" id="toc-question-8" class="nav-link" data-scroll-target="#question-8">Question 8 🤖</a></li>
+  <li><a href="#question-9" id="toc-question-9" class="nav-link" data-scroll-target="#question-9">Question 9 🧑🏽‍🏫</a></li>
+  </ul>
+</li>
+  </ul>
+</li>
+  <li>
+<a href="#wrap-up" id="toc-wrap-up" class="nav-link" data-scroll-target="#wrap-up">Wrap-up</a>
+  <ul class="collapse">
+<li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
+  <li><a href="#grading-and-feedback" id="toc-grading-and-feedback" class="nav-link" data-scroll-target="#grading-and-feedback">Grading and feedback</a></li>
+  </ul>
+</li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/hw/hw-7.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">AE 23: Pokemon Inference</h1>
-</div>
+<h1 class="title">HW 7</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">HW</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Due: Wed, Apr 29, 11:59 pm
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -490,304 +543,267 @@ window.Quarto = {
   
 
 
-</header><p>Today we’ll explore the question “Are taller Pokémon speedier than shorter Pokémon?”</p>
-<section id="packages" class="level1"><h1>Packages</h1>
+</header><section id="introduction" class="level1"><h1>Introduction</h1>
+<p>This is a two-part homework assignment:</p>
+<ul>
+<li><p><strong>Part 1 – 🤖 Feedback from AI:</strong> Not graded, for practice, you get immediate feedback with AI, based on rubrics designed by the course instructor. Complete in <code>hw-7-part-1.qmd</code>, no submission required.</p></li>
+<li><p><strong>Part 2 – 🧑🏽‍🏫 Feedback from Humans:</strong> Graded, you get feedback from the course instructional team in about a week. Complete in <code>hw-7-part-2.qmd</code>, submit on Gradescope.</p></li>
+</ul>
+<p>By now you should be familiar with how to get started with a homework assignment by cloning the GitHub repo for the assignment.</p>
+<details><summary>
+Click to expand if you need a refresher on how to get started with a homework assignment.
+</summary><ul>
+<li>Go to <a href="https://cmgr.oit.duke.edu/containers" class="uri">https://cmgr.oit.duke.edu/containers</a> and login with your Duke NetID and Password.</li>
+<li>Click <code>STA199</code> under My reservations to log into your container. You should now see the RStudio environment.</li>
+<li>Go to the course organization at <a href="https://github.com/sta199-s26">github.com/sta199-s26</a> organization on GitHub. Click on the repo with the prefix <strong>hw-7</strong>. It contains the starter documents you need to complete the homework.</li>
+<li>Click on the green <strong>CODE</strong> button, select <strong>Use SSH</strong>. Click on the clipboard icon to copy the repo URL.</li>
+<li>In RStudio, go to <em>File</em> ➛ <em>New Project</em> ➛<em>Version Control</em> ➛ <em>Git</em>.</li>
+<li>Copy and paste the URL of your assignment repo into the dialog box <em>Repository URL</em>. Again, please make sure to have <em>SSH</em> highlighted under <em>Clone</em> when you copy the address.</li>
+<li>Click <em>Create Project</em>, and the files from your GitHub repo will be displayed in the <em>Files</em> pane in RStudio.</li>
+</ul></details><p>By now you should also be familiar with guidelines for formatting your code and plots as well as your Git and Gradescope workflow.</p>
+<details><summary>
+Click to expand if you need a refresher on assignment guidelines.
+</summary><section id="code" class="level3"><h3 class="anchored" data-anchor-id="code">Code</h3>
+<p>Code should follow the <a href="https://style.tidyverse.org/">tidyverse style</a>. Particularly,</p>
+<ul>
+<li>there should be spaces before and line breaks after each <code>+</code> when building a <code>ggplot</code>,</li>
+<li>there should also be spaces before and line breaks after each <code>|&gt;</code> in a data transformation pipeline,</li>
+<li>code should be properly indented,</li>
+<li>there should be spaces around <code>=</code> signs and spaces after commas.</li>
+</ul>
+<p>Additionally, all code should be visible in the PDF output, i.e., should not run off the page on the PDF. Long lines that run off the page should be split across multiple lines with line breaks.</p>
+</section><section id="plots" class="level3"><h3 class="anchored" data-anchor-id="plots">Plots</h3>
+<ul>
+<li>Plots should have an informative title and, if needed, also a subtitle.</li>
+<li>Axes and legends should be labeled with both the variable name and its units (if applicable).</li>
+<li>Careful consideration should be given to aesthetic choices.</li>
+</ul></section><section id="workflow" class="level3"><h3 class="anchored" data-anchor-id="workflow">Workflow</h3>
+<p>Continuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course.</p>
+<ul>
+<li>You should have at least 3 commits with meaningful commit messages by the end of the assignment.</li>
+<li>Final versions of both your <code>.qmd</code> file and the rendered PDF should be pushed to GitHub.</li>
+</ul></section></details></section><section id="packages" class="level2"><h2 class="anchored" data-anchor-id="packages">Packages</h2>
+<p>In this homework you will work with the <strong>tidyverse</strong> and <strong>tidymodels</strong> packages.</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidymodels.tidymodels.org">tidymodels</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="data" class="level1"><h1>Data</h1>
-<p>The data for this application exercise was originally gathered using the <a href="https://www.kaggle.com/datasets/rounakbanik/pokemon"><strong>Complete Pokémon Dataset</strong></a> from Kaggle.</p>
-<p>First, let’s load the data:</p>
+</section><section id="part-1-feedback-from-ai" class="level1"><h1>Part 1 – Feedback from AI</h1>
+<p>Your answers to the questions in this part should go in the file <code>hw-7-part-1.qmd</code>.</p>
+<section id="instructions" class="level2"><h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<p>Write your answer to each question in the appropriate section of the <code>hw-7-part-1.qmd</code> file. Then, highlight your answer to a question, click on <em>Addins &gt; AIFEEDR &gt; Get feedback</em>. In the app that opens, select the appropriate homework number (4) and question number. Then click on <em>Get Feedback</em>. Please be patient, feedback generation can take a few seconds. Once you read the feedback, you can go back to your Quarto document to improve your answer based on the feedback. You will then need to click the red X on the top left corner of the Viewer pane to stop the feedback app from running before you can re-render your Quarto document.</p>
+<details><summary>
+Click to expand if you want to review the video that demonstrates how to use the AI feedback tool.
+</summary><div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/EyT6QQN1ouQ?si=DsG-laE30BykMJby" title="aifeedr" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</details></section><section id="data" class="level2"><h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>In this part, you’ll work with data from the <a href="https://lemur.duke.edu/">Duke Lemur Center</a>, which houses over 200 lemurs across 14 species – the most diverse population of lemurs on Earth, outside their native Madagascar.</p>
+<blockquote class="blockquote">
+<p>Lemurs are the most threatened group of mammals on the planet, and 95% of lemur species are at risk of extinction. Our mission is to learn everything we can about lemurs – because the more we learn, the better we can work to save them from extinction. They are endemic only to Madagascar, so it’s essentially a one-shot deal: once lemurs are gone from Madagascar, they are gone from the wild.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>By studying the variables that most affect their health, reproduction, and social dynamics, the Duke Lemur Center learns how to most effectively focus <a href="https://lemur.duke.edu/protect/overview-madagascar-conservation-programs/">their conservation efforts</a>. And the more we learn about lemurs, the better we can educate the public around the world about just how amazing these animals are, why they need to be protected, and how each and every one of us can make a difference in their survival.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Source: <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-08-24/readme.md">TidyTuesday</a></p>
+</blockquote>
+<p>While the TidyTuesday project used the full dataset, you’ll work with a subset. The dataset, called <code>lemurs.csv</code>, can be found in the <code>data</code> folder. You can learn more about the data at <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-08-24" class="uri">https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-08-24</a>. A data dictionary has been included in the README of the <code>data</code> folder of your repository.</p>
+</section><section id="questions" class="level2"><h2 class="anchored" data-anchor-id="questions">Questions</h2>
+<div class="render-commit-push">
+<p>Do not forget to render, commit, and push regularly, after each substantial change to your document (e.g., after answering each question). Use succinct and informative commit messages. Make sure to commit and push all changed files so that your Git pane is empty afterward.</p>
+</div>
+<section id="question-1" class="level3"><h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
+<p>Load the <code>lemurs</code> data from your <code>data</code> folder and save it as <code>lemurs</code>. Then, report which “types” of lemurs are represented in the sample and how many of each. Note that this information is in the <code>taxon</code> variable. You should refer back to the linked data dictionary to understand what the different values of <code>taxon</code> mean. Your response should be a tibble with at least three columns, <code>taxon</code>, <code>taxon_name</code> (a new variable you create that contains the description of the <code>taxon</code>, e.g., <code>EMON</code> is <code>Mongoose lemur</code>), and <code>n</code> (number of lemurs with that taxon).</p>
+</section><section id="question-2" class="level3"><h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
+<p>What is the slope of the regression line for predicting weights of lemurs (<code>weight_g</code>) from the ages of lemurs (in years) when their weight was measured (<code>age_at_wt_y</code>)? Calculate and interpret a 95% bootstrap bootstrap confidence interval. Also report your point estimate. Don’t forget to set a seed and use 1,000 bootstrap samples (<code>reps = 1000</code>) when simulating your bootstrap distribution.</p>
+</section><section id="question-3" class="level3"><h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
+<p>What are the slopes of the regression line for predicting weights of lemurs (<code>weight_g</code>) from the ages of lemurs (in years) when their weight was measured (<code>age_at_wt_y</code>) and their types (<code>taxon</code>)? Calculate and interpret a 95% bootstrap bootstrap confidence interval. Also report your point estimate. Don’t forget to set a seed and use 1,000 bootstrap samples (<code>reps = 1000</code>) when simulating your bootstrap distribution.</p>
+</section><section id="question-4" class="level3"><h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
+<p>What is the <strong>median</strong> weight of red-bellied lemurs? What is the <strong>median</strong> weight of ring-tailed lemurs? What is the <strong>median</strong> weight of mongoose lemurs? Calculate and interpret a 95% bootstrap bootstrap confidence intervals. Also report your point estimates. Don’t forget to set a seed and use 1,000 bootstrap samples (<code>reps = 1000</code>) when simulating your bootstrap distribution.</p>
+<div class="render-commit-push">
+<p>Now is another good time to render, commit, and push your changes to GitHub with an informative and concise commit message. And once again, make sure to commit and push all changed files so that your Git pane is empty afterward. We keep repeating this because it’s important and because we see students forget to do this. So take a moment to make sure you’re practicing good version control habits.</p>
+</div>
+</section></section></section><section id="part-2-feedback-from-humans" class="level1"><h1>Part 2 – Feedback from Humans</h1>
+<p>Your answers to the questions in this part should go in the file <code>hw-7-part-2.qmd</code>.</p>
+<section id="packages-1" class="level2"><h2 class="anchored" data-anchor-id="packages-1">Packages</h2>
+<p>You will work with the following packages:</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pokemon</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/pokemon.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidymodels.tidymodels.org">tidymodels</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/">knitr</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>To keep things simple, we’ll work with a subset of the data, the generation 4 Pokémon.</p>
-<div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pokemon</span> <span class="op">&lt;-</span> <span class="va">pokemon</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">generation</span> <span class="op">==</span> <span class="fl">4</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">pokemon</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 121
-Columns: 17
-$ name            &lt;chr&gt; "Turtwig", "Grotle", "Torterra", "Chimchar", "Monferno…
-$ generation      &lt;dbl&gt; 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, …
-$ type_1          &lt;chr&gt; "Grass", "Grass", "Grass", "Fire", "Fire", "Fire", "Wa…
-$ type_2          &lt;chr&gt; NA, NA, "Ground", NA, "Fighting", "Fighting", NA, NA, …
-$ height_m        &lt;dbl&gt; 0.4, 1.1, 2.2, 0.5, 0.9, 1.2, 0.4, 0.8, 1.7, 0.3, 0.6,…
-$ weight_kg       &lt;dbl&gt; 10.2, 97.0, 310.0, 6.2, 22.0, 55.0, 5.2, 23.0, 84.5, 2…
-$ total_points    &lt;dbl&gt; 318, 405, 525, 309, 405, 534, 314, 405, 530, 245, 340,…
-$ hp              &lt;dbl&gt; 55, 75, 95, 44, 64, 76, 53, 64, 84, 40, 55, 85, 59, 79…
-$ attack          &lt;dbl&gt; 68, 89, 109, 58, 78, 104, 51, 66, 86, 55, 75, 120, 45,…
-$ defense         &lt;dbl&gt; 64, 85, 105, 44, 52, 71, 53, 68, 88, 30, 50, 70, 40, 6…
-$ sp_attack       &lt;dbl&gt; 45, 55, 75, 58, 78, 104, 61, 81, 111, 30, 40, 50, 35, …
-$ sp_defense      &lt;dbl&gt; 55, 65, 85, 44, 52, 71, 56, 76, 101, 30, 40, 60, 40, 6…
-$ speed           &lt;dbl&gt; 31, 36, 56, 61, 81, 108, 40, 50, 60, 60, 80, 100, 31, …
-$ catch_rate      &lt;dbl&gt; 45, 45, 45, 45, 45, 45, 45, 45, 45, 255, 120, 45, 255,…
-$ base_friendship &lt;dbl&gt; 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70…
-$ base_experience &lt;dbl&gt; 64, 142, 236, 62, 142, 240, 63, 142, 239, 49, 119, 218…
-$ is_legendary    &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE…</code></pre>
+<div class="render-commit-push">
+<p>Do not forget to render, commit, and push regularly, after each substantial change to your document (e.g., after answering each question). Use succinct and informative commit messages. Make sure to commit and push all changed files so that your Git pane is empty afterward.</p>
 </div>
-</div>
-<p>We are interested in whether a Pokémon’s log height (measured in meters) can predict its speed (how fast it is).</p>
-</section><section id="visualize" class="level1"><h1>Visualize</h1>
+</section><section id="more-lemurs" class="level2"><h2 class="anchored" data-anchor-id="more-lemurs">More Lemurs</h2>
+<p>Questions 5 and 6 use the <code>lemurs</code> data from Part 1 of this homework. You can refer to the background information provided above for context, and load the data from <code>lemurs.csv</code> in your data folder.</p>
+<section id="question-5" class="level3"><h3 class="anchored" data-anchor-id="question-5">Question 5 🤖</h3>
+<p>The goal of this question is to answer the following research question:</p>
+<blockquote class="blockquote">
+<p>Do female lemurs differ in weight from male lemurs, on average?</p>
+</blockquote>
+<p>More specifically, we want to answer whether the data provide convincing evidence of a discernible difference between the average weights of female and male lemurs.</p>
 <ol type="a">
-<li>Review! Create a new variable for the Pokémon’s log height.</li>
-</ol>
-<div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pokemon</span> <span class="op">&lt;-</span> <span class="va">pokemon</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>log_height <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html">log</a></span><span class="op">(</span><span class="va">height_m</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<li><p>Conduct a hypothesis test to answer this question at 5% discernability level. Clearly state your hypotheses in the context of the data and the research question, simulate a randomization distribution, find the p-value, and make a decision on your hypotheses based on this p-value. Provide a one-sentence conclusion for your hypothesis test in the context of the data and the research question. Don’t forget to set a seed and use 1,000 resamples (<code>reps = 1000</code>) when simulating your randomization distribution.</p></li>
+<li><p>Based on your answer to Part (a), would you expect a 95% confidence interval for the difference in means of female and male lemurs to include 0? Explain your reasoning.</p></li>
+<li><p>Construct and interpret a 95% bootstrap confidence interval for the difference in means of female and male lemurs. Does it include 0? Does this align with your answer to Part (b)? Don’t forget to set a seed and use 1,000 resamples (<code>reps = 1000</code>) when simulating your bootstrap distribution.</p></li>
+</ol></section><section id="question-6" class="level3"><h3 class="anchored" data-anchor-id="question-6">Question 6 🧑🏽‍🏫</h3>
+<p>The goal of this question is to answer the following research question:</p>
+<blockquote class="blockquote">
+<p>Does the median weight of female lemurs differ from that of male lemurs?</p>
+</blockquote>
+<p>More specifically, we want to answer whether the data provide convincing evidence of a discernible difference between the median weights of female and male lemurs.</p>
 <ol type="a">
+<li><p>Conduct a hypothesis test to answer this question at 5% discernability level. Clearly state your hypotheses in the context of the data and the research question, simulate a randomization distribution, find the p-value, and make a decision on your hypotheses based on this p-value. Provide a one-sentence conclusion for your hypothesis test in the context of the data and the research question. Don’t forget to set a seed and use 1,000 resamples (<code>reps = 1000</code>) when simulating your randomization distribution.</p></li>
+<li><p>Based on your answer to Part (a), would you expect a 95% confidence interval for the difference in medians of female and male lemurs to include 0? Explain your reasoning.</p></li>
+<li><p>Construct and interpret a 95% bootstrap confidence interval for the difference in medians of female and male lemurs. Does it include 0? Does this align with your answer to Part (b)? Don’t forget to set a seed and use 1,000 resamples (<code>reps = 1000</code>) when simulating your bootstrap distribution.</p></li>
+</ol></section></section><section id="babies" class="level2"><h2 class="anchored" data-anchor-id="babies">Babies</h2>
+<p>Every year, the US releases to the public a large dataset containing information on births recorded in the country. This dataset has been of interest to medical researchers who are studying the relation between habits and practices of expectant mothers and the birth of their children.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> This is a random sample of 1,000 cases from the dataset released in 2014.</p>
+<p>The data are available your <code>data</code> folder in <code>births14.csv</code>. Questions 3-10 use these data.</p>
+<p>The variables in the data are as follows:</p>
+<ul>
 <li>
-<strong>Your turn</strong>: Plot the data and the line of best fit.</li>
-</ol>
-<div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">pokemon</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">log_height</span>, y <span class="op">=</span> <span class="va">speed</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ae-23-pokemon_infer_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="point-estimation" class="level1"><h1>Point Estimation</h1>
-<ol type="a">
+<code>fage</code>: Father’s age in years.</li>
 <li>
-<strong>Your turn</strong>: Fit the linear model to these data:</li>
+<code>mage</code>: Mother’s age in years.</li>
+<li>
+<code>mature</code>: Maturity status of mother.</li>
+<li>
+<code>weeks</code>: Length of pregnancy in weeks.</li>
+<li>
+<code>premie</code>: Whether the birth was classified as premature (premie) or full-term.</li>
+<li>
+<code>visits</code>: Number of hospital visits during pregnancy.</li>
+<li>
+<code>gained</code>: Weight gained by mother during pregnancy in pounds.</li>
+<li>
+<code>weight</code>: Weight of the baby at birth in pounds.</li>
+<li>
+<code>lowbirthweight</code>: Whether baby was classified as low birthweight (low) or not (⁠not low⁠).</li>
+<li>
+<code>sex</code>: Sex of the baby, female or male.</li>
+<li>
+<code>habit</code>: Status of the mother as a nonsmoker or a smoker.</li>
+<li>
+<code>marital</code>: Whether mother is married or ⁠not married⁠ at birth.</li>
+<li>
+<code>whitemom</code>: Whether mom is white or ⁠not white⁠.</li>
+</ul>
+<section id="question-7" class="level3"><h3 class="anchored" data-anchor-id="question-7">Question 7 🤖</h3>
+<ol type="a">
+<li>First, read the data in and store it as <code>births14_raw</code>.</li>
 </ol>
-<div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">observed_fit</span> <span class="op">&lt;-</span> <span class="va">pokemon</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">specify</span><span class="op">(</span><span class="va">speed</span> <span class="op">~</span> <span class="va">log_height</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">fit</span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="va">observed_fit</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 2
-  term       estimate
-  &lt;chr&gt;         &lt;dbl&gt;
-1 intercept     72.4 
-2 log_height     7.39</code></pre>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
+<p>Then, in a single pipeline, filter for any rows of the <code>births14</code> data frame where one or more of the following variables has an <code>NA</code> value: <code>mage</code>, <code>weight</code>, <code>habit</code>, <code>mature</code>, <code>lowbirthweight</code>, then select only these five variables to display.</p>
+<ol start="2" type="a">
+<li>In a single pipeline, remove any rows of the <code>births14_raw</code> data frame with <code>NA</code> values among those you identified as having <code>NA</code> values in the previous question, and save the results as <code>births14</code>.</li>
+</ol>
+<p>Then, find and state the numbers of rows of columns of <code>births14</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This gives the exact same numbers that you get if you use <code>linear_reg() |&gt; fit()</code>, but we need this new syntax because it plays nice with the tools we have for confidence intervals and hypothesis tests. I know, I hate it too, but it’s the way it is.</p>
+<p>You should end up with 981 rows. If you do not, revisit your earlier work to make sure you have removed all rows with <code>NA</code> values in any of the specified columns.</p>
 </div>
 </div>
-<ol start="2" type="a">
-<li>
-<strong>Your turn</strong>: Typeset the equation for the model fit:</li>
-</ol>
-<p><span class="math display">\[
-\widehat{\text{speed}} = 72.41 + 7.39\times \log(\text{height})
-\]</span></p>
 <ol start="3" type="a">
-<li>
-<p><strong>Your turn</strong>: Interpret the slope and the intercept estimates:</p>
+<li><p>One of the variables in the data is <code>mature</code>, indicating whether the mom is considered “mature” or “younger”. This categorization is based on a medical threshold used for pregnancies. Using the data alone (not medical knowledge or external resources), determine the threshold age used to categorize moms as “mature” vs.&nbsp;“younger”. Describe your process, include any evidence (summary statistics and/or visualization), and clearly state the threshold you determined.</p></li>
+<li><p>Another variable in the data is <code>lowbirthweight</code>, indicating whether the baby’s weight is considered “low” or “not low” at birth. This categorization is based on a medical threshold used for births. Using the data alone (not medical knowledge or external resources), determine the threshold weight used to categorize baby weights as “low” vs.&nbsp;“now low”. Describe your process, include any evidence (summary statistics and/or visualization), and clearly state the threshold you determined.</p></li>
+<li><p>In a single pipeline, recode the variables <code>mature</code>, <code>habit</code>, and <code>lowbirthweight</code> in the <code>births14</code> data frame as follows:</p></li>
+</ol>
 <ul>
-<li>If a Pokémon had 0 log(height) (equivalently 1 m tall), we predict that it would have a 72.41 speed stat on average;</li>
-<li>A $1 increase in log(height) is associated with a 7.39 increase in speed, on average.</li>
+<li>
+<code>mature</code> : “mature mom” → “35 and over”, “younger mom” → “34 and under”</li>
+<li>
+<code>habit</code> : “smoker” → “Smoker”, “nonsmoker” → “Non-smoker”</li>
+<li>
+<code>lowbirthweight</code> : “low” → “Low”, “not low” → “Not low”</li>
+</ul>
+<p>In that same pipeline, relocate these three variables to be the first three columns of the data frame.</p>
+<p>Save the result back to <code>births14</code> and display the first 10 rows (and however many columns fit across the page) of <code>births14</code>.</p>
+</section><section id="question-8" class="level3"><h3 class="anchored" data-anchor-id="question-8">Question 8 🤖</h3>
+<p>In this question you will conduct inference for a slope in a model with a single predictor.</p>
+<ol type="a">
+<li><p>Fit a model for predicting baby weight (<code>weight</code>) from mother’s age category (<code>mature</code>). Display the tidy model output.</p></li>
+<li><p>Construct a 95% confidence interval for the slope the model from part (a), using bootstrapping with 1,000 resamples and the percentile method. Dislay the bounds of the interval and interpret it in the context of the data and the research question.</p></li>
+<li><p>Visualize the bootstrap distribution you used to construct the confidence interval. Comment on its shape and center.</p></li>
+<li><p>Based on your interval from Part (b), do these data provide convincing evidence of a discernible difference between the average weights of babies born to mothers who are 35 years and older vs.&nbsp;those born to mothers who are 34 years and younger? Explain your reasoning. Note: You do not need to a hypothesis test to answer this question, justify your answer with your confidence interval only.</p></li>
+</ol></section><section id="question-9" class="level3"><h3 class="anchored" data-anchor-id="question-9">Question 9 🧑🏽‍🏫</h3>
+<p>In this question you will conduct inference for slopes in a model with a two predictors.</p>
+<ol type="a">
+<li><p>Fit a model for predicting baby weight (<code>weight</code>) from mother’s age (<code>mage</code>) and smoking status (<code>habit</code>). Display the tidy model output.</p></li>
+<li><p>Construct 95% confidence intervals for the slopes the model from part (a), using bootstrapping with 1,000 resamples and the percentile method. Dislay the bounds of the intervals and interpret them in the context of the data and the research question.</p></li>
+<li><p>Visualize the bootstrap distributions you used to construct the confidence intervals. Comment on their shapes and centers.</p></li>
+</ol></section></section></section><section id="wrap-up" class="level1"><h1>Wrap-up</h1>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before you wrap up the assignment, make sure that you render, commit, and push one final time so that the final versions of both your <code>.qmd</code> file and the rendered PDF are pushed to GitHub and your Git pane is empty. We will be checking these to make sure you have been practicing how to commit and push changes.</p>
+</div>
+</div>
+<section id="submission" class="level2"><h2 class="anchored" data-anchor-id="submission">Submission</h2>
+<p>Submit your PDF document to Gradescope by the deadline to be considered “on time”:</p>
+<ul>
+<li>Go to <a href="http://www.gradescope.com" class="uri">http://www.gradescope.com</a> and click <em>Log in</em> in the top right corner.</li>
+<li>Click <em>School Credentials</em> <span class="math inline">\(\rightarrow\)</span> <em>Duke NetID</em> and log in using your NetID credentials.</li>
+<li>Click on your <em>STA 199</em> course.</li>
+<li>Click on the assignment, and you’ll be prompted to submit it.</li>
+<li>Mark all the pages associated with question. All the pages of your homework should be associated with at least one question (i.e., should be “checked”).</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Checklist
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make sure you have:</p>
+<ul>
+<li>attempted all questions</li>
+<li>rendered your Quarto document</li>
+<li>committed and pushed everything to your GitHub repository such that the Git pane in RStudio is empty</li>
+<li>uploaded your PDF to Gradescope</li>
+</ul>
+</div>
+</div>
+</section><section id="grading-and-feedback" class="level2"><h2 class="anchored" data-anchor-id="grading-and-feedback">Grading and feedback</h2>
+<ul>
+<li><p>Questions 1-4 are not graded, but you should complete them to get practice.</p></li>
+<li>
+<p>Questions 5-9 are graded, and you will receive feedback on Gradescope from the course instructional team in about a week.</p>
+<ul>
+<li>Questions will be graded for accuracy and completeness.</li>
+<li>Partial credit will be given where appropriate.</li>
+<li>There are also workflow points for:
+<ul>
+<li>committing at least three times as you work through your homework,</li>
+<li>having your final version of <code>.qmd</code> and <code>.pdf</code> files in your GitHub repository, and</li>
+<li>overall organization.</li>
 </ul>
 </li>
-</ol></section><section id="hypothesis-testing" class="level1"><h1>Hypothesis Testing</h1>
-<p>Let’s consider the hypotheses:</p>
-<p><span class="math display">\[
-H_0:\beta_1=0\quad vs\quad H_A: \beta_1\neq 0.
-\]</span> The null hypothesis corresponds to the claim that log_height and speed are uncorrelated.</p>
-<ol type="a">
-<li>Simulate and plot the null distribution for the slope:</li>
-</ol>
-<div class="cell">
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">24601</span><span class="op">)</span></span>
-<span><span class="va">null_dist</span> <span class="op">&lt;-</span> <span class="va">pokemon</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">specify</span><span class="op">(</span><span class="va">speed</span> <span class="op">~</span> <span class="va">log_height</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">hypothesize</span><span class="op">(</span>null <span class="op">=</span> <span class="st">"independence"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">generate</span><span class="op">(</span>reps <span class="op">=</span> <span class="fl">500</span>, type <span class="op">=</span> <span class="st">"permute"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">fit</span><span class="op">(</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">null_dist</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">term</span> <span class="op">==</span> <span class="st">"log_height"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">estimate</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ae-23-pokemon_infer_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<ol start="2" type="a">
-<li>Add a vertical line to your plot indicating the point estimate of the slope from your original data analysis:</li>
-</ol>
-<div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">visualize</span><span class="op">(</span><span class="va">null_dist</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">shade_p_value</span><span class="op">(</span>obs_stat <span class="op">=</span> <span class="va">observed_fit</span>, direction <span class="op">=</span> <span class="st">"two-sided"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ae-23-pokemon_infer_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<ol start="3" type="a">
-<li>Compute the <span class="math inline">\(p\)</span>-value for this test and interpret it:</li>
-</ol>
-<div class="cell">
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">null_dist</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">get_p_value</span><span class="op">(</span>obs_stat <span class="op">=</span> <span class="va">observed_fit</span>, direction <span class="op">=</span> <span class="st">"two-sided"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 2
-  term       p_value
-  &lt;chr&gt;        &lt;dbl&gt;
-1 intercept    0.028
-2 log_height   0.028</code></pre>
-</div>
-</div>
-<p><strong>Answer</strong>: If the null were true and <span class="math inline">\(\beta_1=0\)</span> (meaning log_height and speed are uncorrelated), the probability of getting an estimate as or more extreme than the one we got (<span class="math inline">\(b_1=7.39\)</span>) is 0.028. So we reject the null hypothesis. Evidence is sufficient to conclude that <span class="math inline">\(\beta_1\)</span>, whatever it is, is not equal to zero.</p>
-</section><section id="interval-estimation" class="level1"><h1>Interval Estimation</h1>
-<ol type="a">
-<li>
-<strong>Demo</strong>: Using seed <code>24601</code>, generate <code>500</code> bootstrap samples, and store them in a new data frame called <code>bstrap_samples</code>.</li>
-</ol>
-<div class="cell">
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">24601</span><span class="op">)</span></span>
-<span><span class="va">bstrap_samples</span> <span class="op">&lt;-</span> <span class="va">pokemon</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">specify</span><span class="op">(</span><span class="va">speed</span> <span class="op">~</span> <span class="va">log_height</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">generate</span><span class="op">(</span>reps <span class="op">=</span> <span class="fl">500</span>, type <span class="op">=</span> <span class="st">"bootstrap"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ol start="2" type="a">
-<li>
-<strong>Demo</strong>: Fit a linear model to each of these bootstrap samples and store the estimates in a new data framed called <code>bstrap_fits</code>.</li>
-</ol>
-<div class="cell">
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">bstrap_fits</span> <span class="op">&lt;-</span> <span class="va">bstrap_samples</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu">fit</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ol start="3" type="a">
-<li>
-<strong>Your turn</strong>: Use <code>linear_reg() |&gt; fit(...)</code> to fit a linear model to bootstrap sample number <em>347</em>, and verify that you get the same estimates as the ones contained in <code>bstrap_fits</code>.</li>
-</ol>
-<div class="cell">
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">replicate_347</span> <span class="op">&lt;-</span> <span class="va">bstrap_samples</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span></span>
-<span>    <span class="va">replicate</span> <span class="op">==</span> <span class="fl">347</span></span>
-<span>  <span class="op">)</span></span>
-<span></span>
-<span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">speed</span> <span class="op">~</span> <span class="va">log_height</span>, data <span class="op">=</span> <span class="va">replicate_347</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">tidy</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 5
-  term        estimate std.error statistic  p.value
-  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
-1 (Intercept)    71.6       2.61     27.4  2.64e-53
-2 log_height      6.46      3.09      2.09 3.84e- 2</code></pre>
-</div>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">bstrap_fits</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">replicate</span> <span class="op">==</span> <span class="fl">347</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 3
-# Groups:   replicate [1]
-  replicate term       estimate
-      &lt;int&gt; &lt;chr&gt;         &lt;dbl&gt;
-1       347 intercept     71.6 
-2       347 log_height     6.46</code></pre>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The only point I’m making here is that this new bootstrap code is not performing a fundamentally new task. It’s performing an old task (fitting the linear model), but it’s repeating it A LOT. So the numbers you get here are not mysterious. They’re numbers you already know how to compute.</p>
-</div>
-</div>
-<ol start="4" type="a">
-<li>
-<strong>Demo</strong>: Compute 95% confidence intervals for the slope and the intercept using the <code>get_confidence_interval</code> command.</li>
-</ol>
-<div class="cell">
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">ci_95</span> <span class="op">&lt;-</span> <span class="fu">get_confidence_interval</span><span class="op">(</span></span>
-<span>  <span class="va">bstrap_fits</span>,</span>
-<span>  point_estimate <span class="op">=</span> <span class="va">observed_fit</span>,</span>
-<span>  level <span class="op">=</span> <span class="fl">0.95</span>,</span>
-<span>  type <span class="op">=</span> <span class="st">"percentile"</span></span>
-<span><span class="op">)</span></span>
-<span><span class="va">ci_95</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 3
-  term       lower_ci upper_ci
-  &lt;chr&gt;         &lt;dbl&gt;    &lt;dbl&gt;
-1 intercept    67.4       76.6
-2 log_height    0.942     13.3</code></pre>
-</div>
-</div>
-<ol start="5" type="a">
-<li>
-<strong>Your turn</strong>: Verify that you get the same numbers when you manually calculate the quantiles of the slope estimates using <code>summarize</code> and <code>quantile</code>. <em>Pay attention to the grouping</em>.</li>
-</ol>
-<div class="cell">
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">bstrap_fits</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">term</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span></span>
-<span>    lower_ci <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">estimate</span>, <span class="fl">0.05</span><span class="op">)</span>,</span>
-<span>    upper_ci <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">estimate</span>, <span class="fl">0.95</span><span class="op">)</span></span>
-<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 3
-  term       lower_ci upper_ci
-  &lt;chr&gt;         &lt;dbl&gt;    &lt;dbl&gt;
-1 intercept     68.2      76.3
-2 log_height     2.22     12.4</code></pre>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Same point as before. There’s no magic here. <code>get_confidence_interval</code> is just a convenient way of doing something that you already knew how to do.s</p>
-</div>
-</div>
-<ol start="6" type="a">
-<li>
-<strong>BONUS</strong>: You can visualize the confidence interval:</li>
-</ol>
-<div class="cell">
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">visualize</span><span class="op">(</span><span class="va">bstrap_fits</span><span class="op">)</span> <span class="op">+</span> </span>
-<span>  <span class="fu">shade_confidence_interval</span><span class="op">(</span><span class="va">ci_95</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ae-23-pokemon_infer_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
+</ul>
+</li>
+</ul>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<ol>
+<li id="fn1"><p>United States Department of Health and Human Services. Centers for Disease Control and Prevention. National Center for Health Statistics. Natality Detail File, 2014 United States. Inter-university Consortium for Political and Social Research, 2016-10-07. doi:10.3886/ICPSR36461.v1.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1193,7 +1209,7 @@ Note
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/ae/ae-23-pokemon_infer.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/hw/hw-7.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

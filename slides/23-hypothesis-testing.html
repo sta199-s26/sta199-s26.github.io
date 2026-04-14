@@ -486,15 +486,26 @@ window.Quarto = {
   <li><a href="#calculate-observed-slope" id="toc-calculate-observed-slope" class="nav-link" data-scroll-target="#calculate-observed-slope">Calculate observed slope</a></li>
   <li><a href="#simulate-null-distribution" id="toc-simulate-null-distribution" class="nav-link" data-scroll-target="#simulate-null-distribution">Simulate null distribution</a></li>
   <li><a href="#wait-so-whats-a-null-distribution" id="toc-wait-so-whats-a-null-distribution" class="nav-link" data-scroll-target="#wait-so-whats-a-null-distribution">Wait, so what’s a null distribution?</a></li>
+  <li><a href="#participate" id="toc-participate" class="nav-link" data-scroll-target="#participate">Participate 📱💻</a></li>
+  <li><a href="#shuffling-is-cool-trust" id="toc-shuffling-is-cool-trust" class="nav-link" data-scroll-target="#shuffling-is-cool-trust">Shuffling is cool, trust</a></li>
+  <li><a href="#every-day-im-shuffling" id="toc-every-day-im-shuffling" class="nav-link" data-scroll-target="#every-day-im-shuffling">Every day I’m shuffling</a></li>
+  <li><a href="#every-day-im-shuffling-1" id="toc-every-day-im-shuffling-1" class="nav-link" data-scroll-target="#every-day-im-shuffling-1">Every day I’m shuffling</a></li>
+  <li><a href="#wait-whats-that-new-function" id="toc-wait-whats-that-new-function" class="nav-link" data-scroll-target="#wait-whats-that-new-function">Wait, what’s that new function</a></li>
+  <li><a href="#what-if-this-was-my-shuffle" id="toc-what-if-this-was-my-shuffle" class="nav-link" data-scroll-target="#what-if-this-was-my-shuffle">What if this was my shuffle?</a></li>
+  <li><a href="#what-if-this-was-my-shuffle-instead" id="toc-what-if-this-was-my-shuffle-instead" class="nav-link" data-scroll-target="#what-if-this-was-my-shuffle-instead">What if this was my shuffle instead?</a></li>
+  <li><a href="#what-if-this-was-my-shuffle-instead-1" id="toc-what-if-this-was-my-shuffle-instead-1" class="nav-link" data-scroll-target="#what-if-this-was-my-shuffle-instead-1">What if this was my shuffle instead?</a></li>
+  <li><a href="#rinse-and-repeat-10000-times" id="toc-rinse-and-repeat-10000-times" class="nav-link" data-scroll-target="#rinse-and-repeat-10000-times">Rinse and repeat 10000 times…</a></li>
   <li><a href="#view-null-distribution" id="toc-view-null-distribution" class="nav-link" data-scroll-target="#view-null-distribution">View null distribution</a></li>
   <li><a href="#visualize-null-distribution" id="toc-visualize-null-distribution" class="nav-link" data-scroll-target="#visualize-null-distribution">Visualize null distribution</a></li>
+  <li><a href="#reminder-observed-fit" id="toc-reminder-observed-fit" class="nav-link" data-scroll-target="#reminder-observed-fit">Reminder: observed fit</a></li>
   <li><a href="#visualize-null-distribution-alternative" id="toc-visualize-null-distribution-alternative" class="nav-link" data-scroll-target="#visualize-null-distribution-alternative">Visualize null distribution (alternative)</a></li>
   <li><a href="#get-p-value" id="toc-get-p-value" class="nav-link" data-scroll-target="#get-p-value">Get p-value</a></li>
   <li><a href="#make-a-decision" id="toc-make-a-decision" class="nav-link" data-scroll-target="#make-a-decision">Make a decision</a></li>
+  <li><a href="#how-small-is-small-enough" id="toc-how-small-is-small-enough" class="nav-link" data-scroll-target="#how-small-is-small-enough">How small is small enough?</a></li>
   <li><a href="#sometimes-the-test-will-be-wrong" id="toc-sometimes-the-test-will-be-wrong" class="nav-link" data-scroll-target="#sometimes-the-test-will-be-wrong">Sometimes the test will be wrong</a></li>
   <li><a href="#think-about-the-judge" id="toc-think-about-the-judge" class="nav-link" data-scroll-target="#think-about-the-judge">Think about the judge</a></li>
   <li><a href="#think-about-the-doctor" id="toc-think-about-the-doctor" class="nav-link" data-scroll-target="#think-about-the-doctor">Think about the doctor</a></li>
-  <li><a href="#how-do-we-negotiate-the-trade-off" id="toc-how-do-we-negotiate-the-trade-off" class="nav-link" data-scroll-target="#how-do-we-negotiate-the-trade-off">How do we negotiate the trade-off?</a></li>
+  <li><a href="#where-does-alpha-come-in-to-this" id="toc-where-does-alpha-come-in-to-this" class="nav-link" data-scroll-target="#where-does-alpha-come-in-to-this">Where does alpha come in to this?</a></li>
   </ul>
 </li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><img src="images/23/alpha.png" class="img-fluid"></a></li>
@@ -568,7 +579,7 @@ window.Quarto = {
 <ul class="incremental">
 <li>2nd Year PhD Student in Statistical Science</li>
 <li>Teaching this course in summer</li>
-<li>Fun fact: I’m a professional Saja Boy (Kpop Demon Hunter)</li>
+<li>Fun fact: I’m a professional Saja Boy (Kpop Demon Hunters)</li>
 <li><img src="images/23/saja.JPEG" class="img-fluid"></li>
 </ul>
 </div>
@@ -714,15 +725,177 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <div class="incremental">
 <ul class="incremental">
 <li><p>Simulating a universe under <span class="math inline">\(H_0\)</span>: the slope of the model for predicting the spike touch of FIVB athletes from their heights is 0, <span class="math inline">\(\beta_1 = 0\)</span>. I.e., no relationship between spike and height.</p></li>
-<li><p>If I “shuffle” the order of the spike variable, is there a relationship between spike and height?</p></li>
-<li><p>No! Spike is essentially random and unrelated to anything!</p></li>
-<li><p>Shuffle the spike variable, fit a model and get a slope, record the slope, repeat!</p></li>
-<li><p>More on this in STA 221L</p></li>
+<li><p>If I “shuffle” the order of the spike variable, is there a relationship between spike and height? Could height predict spike touch?</p></li>
 </ul>
 </div>
+</section><section id="participate" class="level2 small"><h2 class="small anchored" data-anchor-id="participate">Participate 📱💻</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div class="wooclap">
+<p>If I “shuffle” the order of the spike variable, is there a relationship between spike and height? Could height predict spike touch?</p>
+<div class="wooclap-choices">
+<ul>
+<li>On Average, Yes</li>
+<li>On Average, No</li>
+<li>Never</li>
+<li>I want lunch, stop talking about volleyball</li>
+</ul>
+</div>
+</div>
+</div><div class="column" style="width:30%;">
+<div id="" class="qrcode"></div>
+<script type="text/javascript">
+(function() {
+  var script = document.currentScript;
+  var qrcode = script.previousElementSibling;
+  qrcode.qrcode = new QRCode(qrcode, {"colorDark":"#000000","colorLight":"#ffffff","height":"300","text":"https://app.wooclap.com/TNRPMB?from=instruction-slide","width":"300"});
+  script.remove();
+})();
+</script><div class="small">
+<p>Scan the QR code or go <a href="https://app.wooclap.com/TNRPMB?from=instruction-slide">HERE</a>. Log in with your Duke NetID.</p>
+</div>
+</div>
+</div>
+</section><section id="shuffling-is-cool-trust" class="level2"><h2 class="anchored" data-anchor-id="shuffling-is-cool-trust">Shuffling is cool, trust</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>On avergage, no</p></li>
+<li><p>Shuffling breaks any link between spike and height (on average)</p></li>
+<li><p><code>type = "permute"</code></p></li>
+<li><p>Shuffle the spike variable, fit a model and get a slope, record the slope, repeat!</p></li>
+<li><p>More on this in STA 221L</p></li>
+<li><p>What if we shuffled height instead? Both?</p></li>
+</ul>
+</div>
+</section><section id="every-day-im-shuffling" class="level2"><h2 class="anchored" data-anchor-id="every-day-im-shuffling">Every day I’m shuffling</h2>
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">volleyball</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">height</span>, y <span class="op">=</span> <span class="va">spike</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="every-day-im-shuffling-1" class="level2"><h2 class="anchored" data-anchor-id="every-day-im-shuffling-1">Every day I’m shuffling</h2>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">volleyball</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">height</span>, y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">spike</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="wait-whats-that-new-function" class="level2"><h2 class="anchored" data-anchor-id="wait-whats-that-new-function">Wait, what’s that new function</h2>
+<div class="cell">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">8675309</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">rouges_gallery</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Josh Lim"</span>, <span class="st">"John Zito"</span>, <span class="st">"Sarah Wu"</span>, <span class="st">"Katie Solarz"</span><span class="op">)</span></span>
+<span><span class="va">rouges_gallery</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Josh Lim"     "John Zito"    "Sarah Wu"     "Katie Solarz"</code></pre>
+</div>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">rouges_gallery</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Katie Solarz" "Sarah Wu"     "John Zito"    "Josh Lim"    </code></pre>
+</div>
+</div>
+</section><section id="what-if-this-was-my-shuffle" class="level2"><h2 class="anchored" data-anchor-id="what-if-this-was-my-shuffle">What if this was my shuffle?</h2>
+<div class="columns">
+<div class="column" style="width:49%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  term        estimate
+  &lt;chr&gt;          &lt;dbl&gt;
+1 (Intercept)  336.   
+2 height        -0.231</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:49%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="what-if-this-was-my-shuffle-instead" class="level2"><h2 class="anchored" data-anchor-id="what-if-this-was-my-shuffle-instead">What if this was my shuffle instead?</h2>
+<div class="columns">
+<div class="column" style="width:49%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  term        estimate
+  &lt;chr&gt;          &lt;dbl&gt;
+1 (Intercept)  389.   
+2 height        -0.526</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:49%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="what-if-this-was-my-shuffle-instead-1" class="level2"><h2 class="anchored" data-anchor-id="what-if-this-was-my-shuffle-instead-1">What if this was my shuffle instead?</h2>
+<div class="columns">
+<div class="column" style="width:49%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  term        estimate
+  &lt;chr&gt;          &lt;dbl&gt;
+1 (Intercept)  242.   
+2 height         0.291</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:49%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="rinse-and-repeat-10000-times" class="level2"><h2 class="anchored" data-anchor-id="rinse-and-repeat-10000-times">Rinse and repeat 10000 times…</h2>
 </section><section id="view-null-distribution" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="view-null-distribution">View null distribution</h2>
 <div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">null_dist</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">null_dist</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 20,000 × 3
 # Groups:   replicate [10,000]
@@ -743,31 +916,47 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 </div>
 </section><section id="visualize-null-distribution" class="level2 smaller"><h2 class="smaller anchored" data-anchor-id="visualize-null-distribution">Visualize null distribution</h2>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">null_dist</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">null_dist</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">term</span> <span class="op">==</span> <span class="st">"height"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">estimate</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_histogram</span><span class="op">(</span>binwidth <span class="op">=</span> <span class="fl">0.2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
+</section><section id="reminder-observed-fit" class="level2"><h2 class="anchored" data-anchor-id="reminder-observed-fit">Reminder: observed fit</h2>
+<p>What was our estimate to begin with?</p>
+<div class="cell">
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">observed_fit</span> <span class="op">&lt;-</span> <span class="va">volleyball</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">specify</span><span class="op">(</span><span class="va">spike</span> <span class="op">~</span> <span class="va">height</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">observed_fit</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  term      estimate
+  &lt;chr&gt;        &lt;dbl&gt;
+1 intercept   0.0540
+2 height      1.62  </code></pre>
+</div>
+</div>
 </section><section id="visualize-null-distribution-alternative" class="level2"><h2 class="anchored" data-anchor-id="visualize-null-distribution-alternative">Visualize null distribution (alternative)</h2>
 <div class="cell">
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">visualize</span><span class="op">(</span><span class="va">null_dist</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">visualize</span><span class="op">(</span><span class="va">null_dist</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">shade_p_value</span><span class="op">(</span>obs_stat <span class="op">=</span> <span class="va">observed_fit</span>, direction <span class="op">=</span> <span class="st">"two-sided"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </section><section id="get-p-value" class="level2"><h2 class="anchored" data-anchor-id="get-p-value">Get p-value</h2>
 <div class="cell">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">null_dist</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">null_dist</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">get_p_value</span><span class="op">(</span>obs_stat <span class="op">=</span> <span class="va">observed_fit</span>, direction <span class="op">=</span> <span class="st">"two-sided"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 2
@@ -781,7 +970,20 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <div class="task">
 <p>Based on the p-value calculated, what is the conclusion of the hypothesis test?</p>
 </div>
-<p>Since <span class="math inline">\(p = 0.002\)</span>, we reject the null hypothesis and have evidence that there is a statistically significant relationship between an FIVB players spike touch and height.</p>
+<div class="incremental">
+<ul class="incremental">
+<li>Probability of observing your data or something more extreme given the null is true</li>
+<li>Since <span class="math inline">\(p = 0.002\)</span>, we reject the null hypothesis and have evidence that there is a statistically significant relationship between an FIVB players spike touch and height.</li>
+</ul>
+</div>
+</section><section id="how-small-is-small-enough" class="level2"><h2 class="anchored" data-anchor-id="how-small-is-small-enough">How small is small enough?</h2>
+<div class="incremental">
+<p>Pick a threshold <span class="math inline">\(\alpha\in[0,\,1]\)</span> called the <strong>discernibility level</strong> and threshold the <span class="math inline">\(p\)</span>-value:</p>
+<ul class="incremental">
+<li>If <span class="math inline">\(p\text{-value} &lt; \alpha\)</span>, reject null and accept alternative;</li>
+<li>If <span class="math inline">\(p\text{-value} \geq \alpha\)</span>, fail to reject null;</li>
+</ul>
+</div>
 </section><section id="sometimes-the-test-will-be-wrong" class="level2"><h2 class="anchored" data-anchor-id="sometimes-the-test-will-be-wrong">Sometimes the test will be wrong</h2>
 <p><img src="images/23/general.png" class="img-fluid"></p>
 </section><section id="think-about-the-judge" class="level2"><h2 class="anchored" data-anchor-id="think-about-the-judge">Think about the judge</h2>
@@ -790,15 +992,7 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 </section><section id="think-about-the-doctor" class="level2"><h2 class="anchored" data-anchor-id="think-about-the-doctor">Think about the doctor</h2>
 <p><span class="math inline">\(H_0\)</span> person well vs <span class="math inline">\(H_A\)</span> person sick.</p>
 <p><img src="images/23/doctor.png" class="img-fluid"></p>
-</section><section id="how-do-we-negotiate-the-trade-off" class="level2"><h2 class="anchored" data-anchor-id="how-do-we-negotiate-the-trade-off">How do we negotiate the trade-off?</h2>
-<div class="incremental">
-<p>Pick a threshold <span class="math inline">\(\alpha\in[0,\,1]\)</span> called the <strong>discernibility level</strong> and threshold the <span class="math inline">\(p\)</span>-value:</p>
-<ul class="incremental">
-<li>If <span class="math inline">\(p\text{-value} &lt; \alpha\)</span>, reject null and accept alternative;</li>
-<li>If <span class="math inline">\(p\text{-value} \geq \alpha\)</span>, fail to reject null;</li>
-</ul>
-</div>
-<p>. . .</p>
+</section><section id="where-does-alpha-come-in-to-this" class="level2"><h2 class="anchored" data-anchor-id="where-does-alpha-come-in-to-this">Where does alpha come in to this?</h2>
 </section></section><section id="section" class="level1"><h1><img src="images/23/alpha.png" class="img-fluid"></h1>
 
 
