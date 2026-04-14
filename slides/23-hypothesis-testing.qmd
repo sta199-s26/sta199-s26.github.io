@@ -83,7 +83,7 @@ A hypothesis test is a statistical technique used to evaluate *competing claims*
 
 Note: Hypotheses are always at the population level!
 
-## Running Example
+## Running Example {.small}
 
 ```{r}
 glimpse(volleyball)
@@ -233,6 +233,8 @@ If I "shuffle" the order of the spike variable, is there a relationship between 
 
 -  Shuffle the spike variable, fit a model and get a slope, record the slope, repeat!
 
+- If the null is true, the distribution of these slopes should be centered on zero!
+
 - More on this in STA 221L
 
 - What if we shuffled height instead? Both?
@@ -258,10 +260,15 @@ ggplot(volleyball, aes(x = height, y = sample(spike))) +
 ## Wait, what's that new function
 
 ```{r}
-set.seed(8675309)
-
 rouges_gallery <- c("Josh Lim", "John Zito", "Sarah Wu", "Katie Solarz")
 rouges_gallery
+```
+
+. . .
+
+
+```{r}
+set.seed(8675309)
 
 sample(rouges_gallery)
 ```
@@ -510,4 +517,4 @@ $H_0$ person well vs $H_A$ person sick.
 ## Where does alpha come in to this?
 
 ![](images/23/alpha.png)
-=======
+

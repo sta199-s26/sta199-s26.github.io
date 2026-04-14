@@ -1,3 +1,10 @@
+base
+methods
+datasets
+utils
+grDevices
+graphics
+stats
 tidyverse
 ggplot2
 tibble
@@ -7,6 +14,7 @@ purrr
 dplyr
 stringr
 forcats
+lubridate
 tidymodels
 broom
 scales
@@ -27,4 +35,3 @@ usdata
 openintro
 glue
 knitr
-lubridate
