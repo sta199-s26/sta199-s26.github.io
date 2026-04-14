@@ -50,7 +50,7 @@ pokemon <- pokemon |>
 ```
 
 
-a. **Your turn**: Plot the data and the line of best fit.
+b. **Your turn**: Plot the data and the line of best fit.
 
 ```{r}
 #| message: false
