@@ -1,0 +1,193 @@
+---
+title: Lab 8
+subtitle: "Leavin' on a jet plane, confidently"
+description: "Due: End of lab on Thurs, April 16"
+categories: Lab
+filters:
+  - ../remove-fmt-skip.lua
+draft: true
+execute:
+  echo: true
+  eval: true
+  message: false
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
+# Introduction
+
+In this lab you'll explore the relationship between distance and air time of flights out of RDU in 2024.
+
+And you'll work in what's considered a pretty unlikely situation: you have access to population data -- all flights out of RDU in 2024!
+But we'll ask you to pretend that you didn't actually have access and you need to work with sample data.
+How?
+Hang in there, get the population data loaded first, then we'll explain the next steps!
+
+## Getting started
+
+By now you should be familiar with how to get started with a lab assignment by cloning the GitHub repo for the assignment.
+If you're not sure how, refer back to an earlier lab.
+
+Open the *lab-8.qmd* template Quarto file and update the `authors` field to add your name first (first and last) and then your teammates' names (first and last).
+Render the document.
+Examine the rendered document and make sure your and your teammates' names are updated in the document.
+Commit and push your changes with a meaningful commit message and push to GitHub.
+
+<details>
+
+<summary>Click to expand if you need a refresher on assignment guidelines.</summary>
+
+{{< include _guidelines.qmd >}}
+
+</details>
+
+## Packages
+
+In this lab we will work with the **tidyverse** and **tidymodels** packages.
+
+```{r}
+#| eval: true
+#| message: false
+library(tidyverse)
+library(tidymodels)
+```
+
+## Population data
+
+The dataset, called `rdu-flights.csv`, can be found in the `data` folder.
+
+# Questions
+
+## Question 1 - Sample
+
+Take a random sample of 100 flights and store it as `rdu_flights_sample`.
+Make sure that you use the same seed as your teammates.
+
+::: callout-tip
+The following code allows you to obtain a random sample of N observations from a larger dataset.
+Update the code below to complete Question 1.
+
+```{r}
+#| eval: false
+
+set.seed(___)
+df_sample <- df_full |>
+  slice(sample(1:nrow(df_full), N))
+
+```
+:::
+
+## Question 2 - Visualize
+
+Visualize the relationship between `distance` (x) and `air_time` (y) using a scatter plot.
+Add a regression line to the scatter plot, but do not display the standard error ribbon around the regression line.
+
+## Question 3 - Bootstrap
+
+Compute a 95% bootstrap interval for the slope of the regression line for predicting `air_time` from `distance`.
+In your code, use 1,000 bootstrap samples when simulating your bootstrap distribution.
+
+In your narrative, provide an interpretation of the 95% confidence interval for the slope (hint: refer back to "notes 22" on the course website).
+
+::: callout-tip
+Below is a step-by-step recipe for constructing and visualizing a confidence interval.
+The code snippets shown are not "complete." They include some blanks you need to fill in, and they are just intended to guide you in the right direction.
+
+-   Step 1: Calculate the point estimate for the slope and the intercept of the regression line.
+
+```{r}
+#| eval: false
+obs_fit <- rdu_flights_sample |>
+  specify(______ ~ ______) |>
+  fit()
+```
+
+-   Step 2: Simulate a bootstrap distribution of regression estimates.
+
+```{r}
+#| eval: false
+set.seed(___)
+
+boot_dist <- rdu_flights_sample |>
+  specify(_____ ~ ______) |>
+  generate(reps = ____, type = _______) |>
+  fit()
+```
+
+-   Step 3: Calculate the bounds of the confidence interval.
+
+```{r}
+#| eval: false
+conf_ints <- 
+  get_confidence_interval(
+    ____, 
+    level = ___, 
+    point_estimate = ____
+  )
+```
+:::
+
+## Question 4: Hypothesize
+a.  Set the null hypothesis:
+
+    What if there was no relationship between `distance` and `air_time`? What would the true slope of the relationship be in that case? This is your null hypothesis. You can articulate it as:
+
+    $H_0:$ There is no relationship between distance and air time, the value of the true slope is \_\_\_\_, i.e., $\beta_1$ = \_\_\_\_.
+
+    Fill in the blanks.
+
+    ::: callout-tip
+    The null hypothesis **always** sets the true population parameter **equal** to a specific value.
+    :::
+
+b.  Set the alternative hypothesis:
+
+    What if there is a relationship between `distance` and `air_time`? This is your alternative hypothesis!
+
+    $H_A:$ There is a relationship between distance and air time, the value of the true slope is \_\_\_\_, i.e., $\beta_1$ \_\_\_\_\_\_.
+
+    Fill in the blanks.
+
+    ::: callout-tip
+    The alternative hypothesis **always** compares the true population parameter to the same specific value set in the null hypothesis.
+    This comparison can be "not equal to", "greater than", or "less than" and the choice depends on the research question.
+    In this case, our research question is whether there is *some* relationship between distance and air time.
+    :::
+
+c. Based on the 95% confidence interval you came up with in Question 3, would you expect to fail to reject or to reject the above null hypothesis at the 5% significance level? Explain your reasoning.
+
+# Wrap-up
+
+::: callout-warning
+Before you wrap up the assignment, make sure that you render, commit, and push one final time so that the final versions of both your `.qmd` file and the rendered PDF are pushed to GitHub and your Git pane is empty.
+We will be checking these to make sure you have been practicing how to commit and push changes.
+:::
+
+## Submission
+
+By now you should also be familiar with how to submit your assignment in Gradescope.
+
+<details>
+
+<summary>Click to expand if you need a refresher on how to get started with a lab assignment.</summary>
+
+{{< include _submission.qmd >}}
+
+</details>
+
+## Grading and feedback
+
+-   This lab is worth 30 points:
+    -   10 points for being in lab and turning in *something* -- no partial credit for this part.
+    -   20 points for:
+        -   answering the questions correctly -- there is partial credit for this part.
+        -   following the workflow -- there is partial credit for this part.
+-   The workflow points are for:
+    -   committing at least three times as you work through your lab,
+    -   having your final version of `.qmd` and `.pdf` files in your GitHub repository, and
+    -   overall organization.
+-   You'll receive feedback on your lab on Gradescope within a week.
+
+Good luck, and have fun with it!
+::::

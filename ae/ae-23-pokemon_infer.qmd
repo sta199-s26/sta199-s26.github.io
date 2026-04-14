@@ -85,6 +85,49 @@ c.  **Your turn**: Interpret the slope and the intercept estimates:
     -   If a Pokémon had 0 log(height) (equivalently 1 m tall), we predict that it would have a 72.41 speed stat on average;
     -   A \$1 increase in log(height) is associated with a 7.39 increase in speed, on average.
 
+
+# Hypothesis Testing
+
+Let's consider the hypotheses:
+
+$$
+H_0:\beta_1=0\quad vs\quad H_A: \beta_1\neq 0.
+$$ The null hypothesis corresponds to the claim that log_height and speed are uncorrelated.
+
+a.  Simulate and plot the null distribution for the slope:
+
+```{r}
+#| message: false
+set.seed(24601)
+null_dist <- pokemon |>
+  specify(speed ~ log_height) |>
+  hypothesize(null = "independence") |>
+  generate(reps = 500, type = "permute") |>
+  fit()
+
+null_dist |>
+  filter(term == "log_height") |>
+  ggplot(aes(x = estimate)) + 
+  geom_histogram()
+```
+
+b.  Add a vertical line to your plot indicating the point estimate of the slope from your original data analysis:
+
+```{r}
+visualize(null_dist) +
+  shade_p_value(obs_stat = observed_fit, direction = "two-sided")
+```
+
+c.  Compute the $p$-value for this test and interpret it:
+
+```{r}
+#| warning: false
+null_dist |>
+  get_p_value(obs_stat = observed_fit, direction = "two-sided")
+```
+
+**Answer**: If the null were true and $\beta_1=0$ (meaning log_height and speed are uncorrelated), the probability of getting an estimate as or more extreme than the one we got ($b_1=7.39$) is 0.028. So we reject the null hypothesis. Evidence is sufficient to conclude that $\beta_1$, whatever it is, is not equal to zero.
+
 # Interval Estimation
 
 a.  **Demo**: Using seed `24601`, generate `500` bootstrap samples, and store them in a new data frame called `bstrap_samples`.
@@ -129,7 +172,7 @@ d.  **Demo**: Compute 95% confidence intervals for the slope and the intercept u
 ci_95 <- get_confidence_interval(
   bstrap_fits,
   point_estimate = observed_fit,
-  level = 0.90,
+  level = 0.95,
   type = "percentile"
 )
 ci_95
@@ -159,44 +202,3 @@ visualize(bstrap_fits) +
 ```
 
 
-# Hypothesis Testing
-
-Let's consider the hypotheses:
-
-$$
-H_0:\beta_1=0\quad vs\quad H_A: \beta_1\neq 0.
-$$ The null hypothesis corresponds to the claim that log_height and speed are uncorrelated.
-
-a.  Simulate and plot the null distribution for the slope:
-
-```{r}
-#| message: false
-set.seed(24601)
-null_dist <- pokemon |>
-  specify(speed ~ log_height) |>
-  hypothesize(null = "independence") |>
-  generate(reps = 500, type = "permute") |>
-  fit()
-
-null_dist |>
-  filter(term == "log_height") |>
-  ggplot(aes(x = estimate)) + 
-  geom_histogram()
-```
-
-b.  Add a vertical line to your plot indicating the point estimate of the slope from your original data analysis:
-
-```{r}
-visualize(null_dist) +
-  shade_p_value(obs_stat = observed_fit, direction = "two-sided")
-```
-
-c.  Compute the $p$-value for this test and interpret it:
-
-```{r}
-#| warning: false
-null_dist |>
-  get_p_value(obs_stat = observed_fit, direction = "two-sided")
-```
-
-**Answer**: If the null were true and $\beta_1=0$ (meaning log_height and speed are uncorrelated), the probability of getting an estimate as or more extreme than the one we got ($b_1=7.39$) is 0.028. So we reject the null hypothesis. Evidence is sufficient to conclude that $\beta_1$, whatever it is, is not equal to zero.
