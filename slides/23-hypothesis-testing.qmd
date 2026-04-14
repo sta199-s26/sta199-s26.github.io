@@ -35,7 +35,7 @@ volleyball <- read_csv("data/volleyball_cut.csv")
 :::: {.column width="70%"}
 ::: wooclap
 
-TBD
+How confident are you about confidence intervals?
 
 ::: wooclap-choices
 - TBD
@@ -508,7 +508,6 @@ $H_0$ person well vs $H_A$ person sick.
 
 
 ## Where does alpha come in to this?
-
 
 ![](images/23/alpha.png)
 =======
