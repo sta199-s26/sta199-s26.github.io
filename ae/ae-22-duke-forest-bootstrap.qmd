@@ -147,5 +147,11 @@ get_confidence_interval(
     
     You want a wider interval, but a wider interval is less informative. If all you cared about was an interval that contained the truth with high confidence, then you could just say $(-\infty,\,\infty)$. The truth is guaranteed to be in there, but that interval is not at all informative about where the true value is likely to be.
     
-    
-    
+
+
+
+
+
+
+
+
