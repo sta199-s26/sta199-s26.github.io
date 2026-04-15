@@ -124,6 +124,28 @@ Calculate and interpret a 95% bootstrap bootstrap confidence intervals.
 Also report your point estimates.
 Don't forget to set a seed and use 1,000 bootstrap samples (`reps = 1000`) when simulating your bootstrap distribution.
 
+### Question 5 🤖
+
+The goal of this question is to answer the following research question:
+
+> Do female lemurs differ in weight from male lemurs, on average?
+
+More specifically, we want to answer whether the data provide convincing evidence of a discernible difference between the average weights of female and male lemurs.
+
+a.  Conduct a hypothesis test to answer this question at 5% discernability level.
+    Clearly state your hypotheses in the context of the data and the research question, simulate a randomization distribution, find the p-value, and make a decision on your hypotheses based on this p-value.
+    Provide a one-sentence conclusion for your hypothesis test in the context of the data and the research question.
+    Don’t forget to set a seed and use 1,000 resamples (`reps = 1000`) when simulating your randomization distribution.
+
+b.  Based on your answer to Part (a), would you expect a 95% confidence interval for the difference in means of female and male lemurs to include 0?
+    Explain your reasoning.
+
+c.  Construct and interpret a 95% bootstrap confidence interval for the difference in means of female and male lemurs.
+    Does it include 0?
+    Does this align with your answer to Part (b)?
+    Don’t forget to set a seed and use 1,000 resamples (`reps = 1000`) when simulating your bootstrap distribution.
+
+
 ::: render-commit-push
 Now is another good time to render, commit, and push your changes to GitHub with an informative and concise commit message.
 And once again, make sure to commit and push all changed files so that your Git pane is empty afterward.
@@ -154,29 +176,9 @@ Make sure to commit and push all changed files so that your Git pane is empty af
 
 ## More Lemurs
 
-Questions 5 and 6 use the `lemurs` data from Part 1 of this homework.
+Question 6 uses the `lemurs` data from Part 1 of this homework.
 You can refer to the background information provided above for context, and load the data from `lemurs.csv` in your data folder.
 
-### Question 5 🤖
-
-The goal of this question is to answer the following research question:
-
-> Do female lemurs differ in weight from male lemurs, on average?
-
-More specifically, we want to answer whether the data provide convincing evidence of a discernible difference between the average weights of female and male lemurs.
-
-a.  Conduct a hypothesis test to answer this question at 5% discernability level.
-    Clearly state your hypotheses in the context of the data and the research question, simulate a randomization distribution, find the p-value, and make a decision on your hypotheses based on this p-value.
-    Provide a one-sentence conclusion for your hypothesis test in the context of the data and the research question.
-    Don’t forget to set a seed and use 1,000 resamples (`reps = 1000`) when simulating your randomization distribution.
-
-b.  Based on your answer to Part (a), would you expect a 95% confidence interval for the difference in means of female and male lemurs to include 0?
-    Explain your reasoning.
-
-c.  Construct and interpret a 95% bootstrap confidence interval for the difference in means of female and male lemurs.
-    Does it include 0?
-    Does this align with your answer to Part (b)?
-    Don’t forget to set a seed and use 1,000 resamples (`reps = 1000`) when simulating your bootstrap distribution.
 
 ### Question 6 🧑🏽‍🏫
 
@@ -213,7 +215,6 @@ This is a random sample of 1,000 cases from the dataset released in 2014.
     doi:10.3886/ICPSR36461.v1.
 
 The data are available your `data` folder in `births14.csv`.
-Questions 3-10 use these data.
 
 The variables in the data are as follows:
 
@@ -309,9 +310,9 @@ We will be checking these to make sure you have been practicing how to commit an
 
 ## Grading and feedback
 
--   Questions 1-4 are not graded, but you should complete them to get practice.
+-   Questions 1-5 are not graded, but you should complete them to get practice.
 
--   Questions 5-9 are graded, and you will receive feedback on Gradescope from the course instructional team in about a week.
+-   Questions 6-9 are graded, and you will receive feedback on Gradescope from the course instructional team in about a week.
     -   Questions will be graded for accuracy and completeness.
     -   Partial credit will be given where appropriate.
     -   There are also workflow points for:
