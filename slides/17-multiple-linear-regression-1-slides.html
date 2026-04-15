@@ -304,21 +304,36 @@ John Zito
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span> </span>
 <span id="cb1-2"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
 
 </div>
-<img data-src="17-multiple-linear-regression-1_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section><section id="line-of-best-fit" class="slide level2"><h2>Line of best fit!</h2>
+<img data-src="17-multiple-linear-regression-1_files/figure-html/unnamed-chunk-2-1.png" width="672" class="r-stretch"></section><section id="line-of-best-fit" class="slide level2"><h2>Line of best fit!</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span> </span>
-<span id="cb2-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb2-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span> </span>
+<span id="cb3-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb3-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
 
 </div>
-<img data-src="17-multiple-linear-regression-1_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section><section id="concise-numerical-summary-correlation" class="slide level2"><h2>Concise numerical summary: correlation</h2>
+<img data-src="17-multiple-linear-regression-1_files/figure-html/unnamed-chunk-3-1.png" width="672" class="r-stretch"></section><section id="concise-numerical-summary-correlation" class="slide level2"><h2>Concise numerical summary: correlation</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb3-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(flipper_length_mm, body_mass_g, <span class="at">use =</span> <span class="st">"complete.obs"</span>)</span>
-<span id="cb3-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb7-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(flipper_length_mm, body_mass_g, <span class="at">use =</span> <span class="st">"complete.obs"</span>)</span>
+<span id="cb7-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
       r
@@ -329,10 +344,10 @@ John Zito
 <p>Measures the strength and direction of the linear association between two numerical variables. Strong and positive in this case.</p>
 </section><section id="model-fit" class="slide level2"><h2>Model fit</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>bm_fl_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb5-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm, <span class="at">data =</span> penguins)</span>
-<span id="cb5-3"><a></a></span>
-<span id="cb5-4"><a></a><span class="fu">tidy</span>(bm_fl_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>bm_fl_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm, <span class="at">data =</span> penguins)</span>
+<span id="cb9-3"><a></a></span>
+<span id="cb9-4"><a></a><span class="fu">tidy</span>(bm_fl_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 5
   term              estimate std.error statistic   p.value
@@ -350,9 +365,9 @@ John Zito
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>bm_fl_fit <span class="sc">|&gt;</span></span>
-<span id="cb7-2"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
-<span id="cb7-3"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>bm_fl_fit <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
+<span id="cb11-3"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   r.squared
@@ -362,11 +377,11 @@ John Zito
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb9-2"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb9-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(flipper_length_mm, body_mass_g, <span class="at">use =</span> <span class="st">"complete.obs"</span>),</span>
-<span id="cb9-4"><a></a>    <span class="at">R2 =</span> r<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb9-5"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb13-2"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb13-3"><a></a>    <span class="at">r =</span> <span class="fu">cor</span>(flipper_length_mm, body_mass_g, <span class="at">use =</span> <span class="st">"complete.obs"</span>),</span>
+<span id="cb13-4"><a></a>    <span class="at">R2 =</span> r<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb13-5"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 2
       r    R2
@@ -383,12 +398,25 @@ John Zito
 <li>Intercept: Penguins with 0 flipper length are expected, on average, to weigh -5,781 grams (makes no sense!);</li>
 <li>Slopes: For each additional millimeter of a penguin’s flipper length, the weight of the penguin is expected to be higher, on average, by 49.7 grams.</li>
 </ul></section><section id="prediction" class="slide level2"><h2>Prediction</h2>
-
-<img data-src="17-multiple-linear-regression-1_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section><section id="prediction-1" class="slide level2"><h2>Prediction</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">flipper_length_mm =</span> <span class="dv">205</span>)</span>
-<span id="cb11-2"><a></a></span>
-<span id="cb11-3"><a></a><span class="fu">predict</span>(bm_fl_fit, <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+
+</div>
+<img data-src="17-multiple-linear-regression-1_files/figure-html/unnamed-chunk-8-1.png" width="672" class="r-stretch"></section><section id="prediction-1" class="slide level2"><h2>Prediction</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">flipper_length_mm =</span> <span class="dv">205</span>)</span>
+<span id="cb18-2"><a></a></span>
+<span id="cb18-3"><a></a><span class="fu">predict</span>(bm_fl_fit, <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   .pred
@@ -416,7 +444,7 @@ John Zito
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">levels</span>(penguins<span class="sc">$</span>island)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">levels</span>(penguins<span class="sc">$</span>island)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Biscoe"    "Dream"     "Torgersen"</code></pre>
 </div>
@@ -456,41 +484,45 @@ John Zito
 <p>Visualize the relationship between body weight and island of penguins. Also calculate the average body weight per island.</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> island, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span> </span>
-<span id="cb15-2"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> island, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span> </span>
+<span id="cb22-2"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
 
 </div>
-<img data-src="17-multiple-linear-regression-1_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section><section id="boxplot" class="slide level2 smaller"><h2>Boxplot</h2>
+<img data-src="17-multiple-linear-regression-1_files/figure-html/unnamed-chunk-10-1.png" width="672" class="r-stretch"></section><section id="boxplot" class="slide level2 smaller"><h2>Boxplot</h2>
 <div class="question">
 <p>Visualize the relationship between body weight and island of penguins. Also calculate the average body weight per island.</p>
 </div>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb16-2"><a></a>  penguins,</span>
-<span id="cb16-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> island, <span class="at">y =</span> body_mass_g)</span>
-<span id="cb16-4"><a></a>) <span class="sc">+</span></span>
-<span id="cb16-5"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb16-6"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb16-7"><a></a>    <span class="at">x =</span> <span class="st">"Island"</span>,</span>
-<span id="cb16-8"><a></a>    <span class="at">y =</span> <span class="st">"Body mass (g)"</span>,</span>
-<span id="cb16-9"><a></a>    <span class="at">title =</span> <span class="st">"Body mass by island"</span></span>
-<span id="cb16-10"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb24-2"><a></a>  penguins,</span>
+<span id="cb24-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> island, <span class="at">y =</span> body_mass_g)</span>
+<span id="cb24-4"><a></a>) <span class="sc">+</span></span>
+<span id="cb24-5"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb24-6"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb24-7"><a></a>    <span class="at">x =</span> <span class="st">"Island"</span>,</span>
+<span id="cb24-8"><a></a>    <span class="at">y =</span> <span class="st">"Body mass (g)"</span>,</span>
+<span id="cb24-9"><a></a>    <span class="at">title =</span> <span class="st">"Body mass by island"</span></span>
+<span id="cb24-10"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="17-multiple-linear-regression-1_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
+<figure><p><img data-src="17-multiple-linear-regression-1_files/figure-html/unnamed-chunk-11-1.png" width="672"></p>
 </figure>
 </div>
 </div>
 </div></div>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb17-2"><a></a>  <span class="fu">group_by</span>(island) <span class="sc">|&gt;</span></span>
-<span id="cb17-3"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb17-4"><a></a>    <span class="at">bm_mean =</span> <span class="fu">mean</span>(body_mass_g, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb17-5"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb25-2"><a></a>  <span class="fu">group_by</span>(island) <span class="sc">|&gt;</span></span>
+<span id="cb25-3"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb25-4"><a></a>    <span class="at">bm_mean =</span> <span class="fu">mean</span>(body_mass_g, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb25-5"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
@@ -504,22 +536,22 @@ John Zito
 </section><section id="density-plot" class="slide level2 smaller"><h2>Density plot</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb19-2"><a></a>  penguins,</span>
-<span id="cb19-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, <span class="at">color =</span> island, <span class="at">fill =</span> island)</span>
-<span id="cb19-4"><a></a>) <span class="sc">+</span></span>
-<span id="cb19-5"><a></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb19-6"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb19-7"><a></a>  <span class="fu">scale_fill_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb19-8"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb19-9"><a></a>    <span class="at">x =</span> <span class="st">"Island"</span>,</span>
-<span id="cb19-10"><a></a>    <span class="at">y =</span> <span class="st">"Body mass (g)"</span>,</span>
-<span id="cb19-11"><a></a>    <span class="at">title =</span> <span class="st">"Body mass by island"</span></span>
-<span id="cb19-12"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb27-2"><a></a>  penguins,</span>
+<span id="cb27-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, <span class="at">color =</span> island, <span class="at">fill =</span> island)</span>
+<span id="cb27-4"><a></a>) <span class="sc">+</span></span>
+<span id="cb27-5"><a></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb27-6"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb27-7"><a></a>  <span class="fu">scale_fill_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb27-8"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb27-9"><a></a>    <span class="at">x =</span> <span class="st">"Island"</span>,</span>
+<span id="cb27-10"><a></a>    <span class="at">y =</span> <span class="st">"Body mass (g)"</span>,</span>
+<span id="cb27-11"><a></a>    <span class="at">title =</span> <span class="st">"Body mass by island"</span></span>
+<span id="cb27-12"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="17-multiple-linear-regression-1_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
+<figure><p><img data-src="17-multiple-linear-regression-1_files/figure-html/unnamed-chunk-13-1.png" width="672"></p>
 </figure>
 </div>
 </div>
@@ -527,20 +559,20 @@ John Zito
 </section><section id="violin-plot" class="slide level2 smaller"><h2>Violin plot</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb20-2"><a></a>  penguins,</span>
-<span id="cb20-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> island, <span class="at">y =</span> body_mass_g)</span>
-<span id="cb20-4"><a></a>) <span class="sc">+</span></span>
-<span id="cb20-5"><a></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
-<span id="cb20-6"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb20-7"><a></a>    <span class="at">x =</span> <span class="st">"Island"</span>,</span>
-<span id="cb20-8"><a></a>    <span class="at">y =</span> <span class="st">"Body mass (g)"</span>,</span>
-<span id="cb20-9"><a></a>    <span class="at">title =</span> <span class="st">"Body mass by island"</span></span>
-<span id="cb20-10"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb28-2"><a></a>  penguins,</span>
+<span id="cb28-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> island, <span class="at">y =</span> body_mass_g)</span>
+<span id="cb28-4"><a></a>) <span class="sc">+</span></span>
+<span id="cb28-5"><a></a>  <span class="fu">geom_violin</span>() <span class="sc">+</span></span>
+<span id="cb28-6"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb28-7"><a></a>    <span class="at">x =</span> <span class="st">"Island"</span>,</span>
+<span id="cb28-8"><a></a>    <span class="at">y =</span> <span class="st">"Body mass (g)"</span>,</span>
+<span id="cb28-9"><a></a>    <span class="at">title =</span> <span class="st">"Body mass by island"</span></span>
+<span id="cb28-10"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="17-multiple-linear-regression-1_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
+<figure><p><img data-src="17-multiple-linear-regression-1_files/figure-html/unnamed-chunk-14-1.png" width="672"></p>
 </figure>
 </div>
 </div>
@@ -548,23 +580,23 @@ John Zito
 </section><section id="multiple-geoms" class="slide level2 smaller"><h2>Multiple geoms</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb21-2"><a></a>  penguins,</span>
-<span id="cb21-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> island, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> island)</span>
-<span id="cb21-4"><a></a>) <span class="sc">+</span></span>
-<span id="cb21-5"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb21-6"><a></a>  <span class="fu">geom_beeswarm</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb21-7"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb21-8"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb21-9"><a></a>    <span class="at">x =</span> <span class="st">"Island"</span>,</span>
-<span id="cb21-10"><a></a>    <span class="at">y =</span> <span class="st">"Body mass (g)"</span>,</span>
-<span id="cb21-11"><a></a>    <span class="at">title =</span> <span class="st">"Body mass by island"</span></span>
-<span id="cb21-12"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb21-13"><a></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb29-2"><a></a>  penguins,</span>
+<span id="cb29-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> island, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> island)</span>
+<span id="cb29-4"><a></a>) <span class="sc">+</span></span>
+<span id="cb29-5"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb29-6"><a></a>  <span class="fu">geom_beeswarm</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb29-7"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb29-8"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb29-9"><a></a>    <span class="at">x =</span> <span class="st">"Island"</span>,</span>
+<span id="cb29-10"><a></a>    <span class="at">y =</span> <span class="st">"Body mass (g)"</span>,</span>
+<span id="cb29-11"><a></a>    <span class="at">title =</span> <span class="st">"Body mass by island"</span></span>
+<span id="cb29-12"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb29-13"><a></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="17-multiple-linear-regression-1_files/figure-revealjs/unnamed-chunk-15-1.png" width="960"></p>
+<figure><p><img data-src="17-multiple-linear-regression-1_files/figure-html/unnamed-chunk-15-1.png" width="672"></p>
 </figure>
 </div>
 </div>
@@ -574,10 +606,10 @@ John Zito
 <p>Fit a linear regression model predicting body weight from island and display the results. Why is Biscoe not on the output?</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>bm_island_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb22-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> island, <span class="at">data =</span> penguins)</span>
-<span id="cb22-3"><a></a></span>
-<span id="cb22-4"><a></a><span class="fu">tidy</span>(bm_island_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>bm_island_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb30-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> island, <span class="at">data =</span> penguins)</span>
+<span id="cb30-3"><a></a></span>
+<span id="cb30-4"><a></a><span class="fu">tidy</span>(bm_island_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 5
   term            estimate std.error statistic   p.value
@@ -592,15 +624,15 @@ John Zito
 </div>
 </section><section id="dummy-variables" class="slide level2 medium"><h2>Dummy variables</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>dummy_penguins <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span></span>
-<span id="cb24-2"><a></a>  <span class="fu">select</span>(body_mass_g, island) <span class="sc">|&gt;</span></span>
-<span id="cb24-3"><a></a>  <span class="fu">arrange</span>(body_mass_g) <span class="sc">|&gt;</span></span>
-<span id="cb24-4"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb24-5"><a></a>    <span class="at">islandDream =</span> <span class="fu">if_else</span>(island <span class="sc">==</span> <span class="st">"Dream"</span>, <span class="dv">1</span>, <span class="dv">0</span>),</span>
-<span id="cb24-6"><a></a>    <span class="at">islandTorgersen =</span> <span class="fu">if_else</span>(island <span class="sc">==</span> <span class="st">"Torgersen"</span>, <span class="dv">1</span>, <span class="dv">0</span>),</span>
-<span id="cb24-7"><a></a>  )</span>
-<span id="cb24-8"><a></a></span>
-<span id="cb24-9"><a></a>dummy_penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>dummy_penguins <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span></span>
+<span id="cb32-2"><a></a>  <span class="fu">select</span>(body_mass_g, island) <span class="sc">|&gt;</span></span>
+<span id="cb32-3"><a></a>  <span class="fu">arrange</span>(body_mass_g) <span class="sc">|&gt;</span></span>
+<span id="cb32-4"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb32-5"><a></a>    <span class="at">islandDream =</span> <span class="fu">if_else</span>(island <span class="sc">==</span> <span class="st">"Dream"</span>, <span class="dv">1</span>, <span class="dv">0</span>),</span>
+<span id="cb32-6"><a></a>    <span class="at">islandTorgersen =</span> <span class="fu">if_else</span>(island <span class="sc">==</span> <span class="st">"Torgersen"</span>, <span class="dv">1</span>, <span class="dv">0</span>),</span>
+<span id="cb32-7"><a></a>  )</span>
+<span id="cb32-8"><a></a></span>
+<span id="cb32-9"><a></a>dummy_penguins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 344 × 4
    body_mass_g island    islandDream islandTorgersen
@@ -620,12 +652,12 @@ John Zito
 </div>
 </section><section id="dummy-variables-1" class="slide level2 scrollable"><h2>Dummy variables</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb26-2"><a></a>  <span class="fu">fit</span>(</span>
-<span id="cb26-3"><a></a>    body_mass_g <span class="sc">~</span> islandDream <span class="sc">+</span> islandTorgersen, </span>
-<span id="cb26-4"><a></a>    dummy_penguins</span>
-<span id="cb26-5"><a></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb26-6"><a></a>  <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb34-2"><a></a>  <span class="fu">fit</span>(</span>
+<span id="cb34-3"><a></a>    body_mass_g <span class="sc">~</span> islandDream <span class="sc">+</span> islandTorgersen, </span>
+<span id="cb34-4"><a></a>    dummy_penguins</span>
+<span id="cb34-5"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb34-6"><a></a>  <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 5
   term            estimate std.error statistic   p.value
@@ -651,11 +683,11 @@ John Zito
 <p>What is the predicted body weight of a penguin on Biscoe island? What are the estimated body weights of penguins on Dream and Torgersen islands? Where have we seen these values before?</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a>new_penguins <span class="ot">=</span> <span class="fu">tibble</span>(</span>
-<span id="cb28-2"><a></a>  <span class="at">island =</span> <span class="fu">c</span>(<span class="st">"Biscoe"</span>, <span class="st">"Dream"</span>, <span class="st">"Torgersen"</span>)</span>
-<span id="cb28-3"><a></a>)</span>
-<span id="cb28-4"><a></a></span>
-<span id="cb28-5"><a></a><span class="fu">predict</span>(bm_island_fit, <span class="at">new_data =</span> new_penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>new_penguins <span class="ot">=</span> <span class="fu">tibble</span>(</span>
+<span id="cb36-2"><a></a>  <span class="at">island =</span> <span class="fu">c</span>(<span class="st">"Biscoe"</span>, <span class="st">"Dream"</span>, <span class="st">"Torgersen"</span>)</span>
+<span id="cb36-3"><a></a>)</span>
+<span id="cb36-4"><a></a></span>
+<span id="cb36-5"><a></a><span class="fu">predict</span>(bm_island_fit, <span class="at">new_data =</span> new_penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 1
   .pred
@@ -692,11 +724,11 @@ John Zito
 </div>
 </section><section id="look-familiar" class="slide level2"><h2>Look familiar?</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb30-2"><a></a>  <span class="fu">group_by</span>(island) <span class="sc">|&gt;</span></span>
-<span id="cb30-3"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb30-4"><a></a>    <span class="at">bm_mean =</span> <span class="fu">mean</span>(body_mass_g, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb30-5"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb38-2"><a></a>  <span class="fu">group_by</span>(island) <span class="sc">|&gt;</span></span>
+<span id="cb38-3"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb38-4"><a></a>    <span class="at">bm_mean =</span> <span class="fu">mean</span>(body_mass_g, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb38-5"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   island    bm_mean
@@ -758,10 +790,10 @@ cat_l=\begin{cases}
 <div class="wooclap">
 <p>What function goes in the blank to make “Dream” the baseline level in the <code>island</code> variable?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb32-2"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb32-3"><a></a>    <span class="at">island =</span> <span class="fu">___</span>(island, <span class="st">"Dream"</span>)</span>
-<span id="cb32-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb40-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb40-3"><a></a>    <span class="at">island =</span> <span class="fu">___</span>(island, <span class="st">"Dream"</span>)</span>
+<span id="cb40-4"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="wooclap-choices">
 <ul>
@@ -791,9 +823,9 @@ cat_l=\begin{cases}
 <div class="wooclap">
 <p>What is the baseline level of <code>island</code> in the following model??</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb33-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> island, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span></span>
-<span id="cb33-3"><a></a>  <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb41-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> island, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span></span>
+<span id="cb41-3"><a></a>  <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 5
   term         estimate std.error statistic   p.value
@@ -829,32 +861,68 @@ cat_l=\begin{cases}
 
 </section><section id="three-variables-on-one-2d-plot" class="slide level2"><h2>Three variables on one 2D plot</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">ggplot</span>(penguins, </span>
-<span id="cb35-2"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> island)</span>
-<span id="cb35-3"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb35-4"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a><span class="fu">ggplot</span>(penguins, </span>
+<span id="cb43-2"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> island)</span>
+<span id="cb43-3"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb43-4"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
 
 </div>
-<img data-src="17-multiple-linear-regression-1_files/figure-revealjs/unnamed-chunk-25-1.png" width="960" class="r-stretch"></section><section id="how-do-we-predict-using-more-than-one-predictor" class="slide level2 small"><h2>How do we predict using more than one predictor?</h2>
+<img data-src="17-multiple-linear-regression-1_files/figure-html/unnamed-chunk-25-1.png" width="672" class="r-stretch"></section><section id="how-do-we-predict-using-more-than-one-predictor" class="slide level2 small"><h2>How do we predict using more than one predictor?</h2>
 <p>Both of these models use <code>flipper_length_mm</code> <em>and</em> <code>island</code> to predict <code>body_mass_g</code>:</p>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range (`stat_smooth()`).
+Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
 <div class="cell quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img data-src="17-multiple-linear-regression-1_files/figure-revealjs/additive-interaction-viz-1.png" width="960"></p>
+<p><img data-src="17-multiple-linear-regression-1_files/figure-html/additive-interaction-viz-1.png" width="672"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img data-src="17-multiple-linear-regression-1_files/figure-revealjs/additive-interaction-viz-2.png" width="960"></p>
+<p><img data-src="17-multiple-linear-regression-1_files/figure-html/additive-interaction-viz-2.png" width="672"></p>
 </div>
 </div>
 </div>
 </section><section id="the-additive-model-parallel-lines-one-for-each-island" class="slide level2 small scrollable"><h2>The additive model: parallel lines, one for each island</h2>
-
-<img data-src="17-multiple-linear-regression-1_files/figure-revealjs/additive-viz-1.png" width="960" class="r-stretch"></section><section id="the-additive-model-parallel-lines-one-for-each-island-1" class="slide level2 small scrollable"><h2>The additive model: parallel lines, one for each island</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>bm_fl_island_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb36-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">+</span> island, <span class="at">data =</span> penguins)</span>
-<span id="cb36-3"><a></a></span>
-<span id="cb36-4"><a></a><span class="fu">tidy</span>(bm_fl_island_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+
+</div>
+<img data-src="17-multiple-linear-regression-1_files/figure-html/additive-viz-1.png" width="672" class="r-stretch"></section><section id="the-additive-model-parallel-lines-one-for-each-island-1" class="slide level2 small scrollable"><h2>The additive model: parallel lines, one for each island</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a></a>bm_fl_island_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb53-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">+</span> island, <span class="at">data =</span> penguins)</span>
+<span id="cb53-3"><a></a></span>
+<span id="cb53-4"><a></a><span class="fu">tidy</span>(bm_fl_island_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 5
   term              estimate std.error statistic  p.value
@@ -915,22 +983,33 @@ cat_l=\begin{cases}
 </div>
 </section><section id="the-interaction-model-different-lines-for-each-island" class="slide level2 medium scrollable"><h2>The interaction model: different lines for each island</h2>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb38-2"><a></a>  penguins, </span>
-<span id="cb38-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> island)</span>
-<span id="cb38-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb38-5"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb38-6"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb38-7"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Interaction model"</span>) <span class="sc">+</span></span>
-<span id="cb38-8"><a></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb55-2"><a></a>  penguins, </span>
+<span id="cb55-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> island)</span>
+<span id="cb55-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb55-5"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb55-6"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb55-7"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Interaction model"</span>) <span class="sc">+</span></span>
+<span id="cb55-8"><a></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
-<img data-src="17-multiple-linear-regression-1_files/figure-revealjs/interaction-viz-1.png" width="960" class="r-stretch"></section><section id="the-interaction-model-different-lines-for-each-island-1" class="slide level2 medium scrollable"><h2>The interaction model: different lines for each island</h2>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+
+</div>
+<img data-src="17-multiple-linear-regression-1_files/figure-html/interaction-viz-1.png" width="672" class="r-stretch"></section><section id="the-interaction-model-different-lines-for-each-island-1" class="slide level2 medium scrollable"><h2>The interaction model: different lines for each island</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a>bm_fl_island_int_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb39-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">*</span> island, <span class="at">data =</span> penguins)</span>
-<span id="cb39-3"><a></a></span>
-<span id="cb39-4"><a></a><span class="fu">tidy</span>(bm_fl_island_int_fit) <span class="sc">|&gt;</span> <span class="fu">select</span>(term, estimate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a></a>bm_fl_island_int_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb59-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">*</span> island, <span class="at">data =</span> penguins)</span>
+<span id="cb59-3"><a></a></span>
+<span id="cb59-4"><a></a><span class="fu">tidy</span>(bm_fl_island_int_fit) <span class="sc">|&gt;</span> <span class="fu">select</span>(term, estimate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 2
   term                              estimate
@@ -986,15 +1065,28 @@ cat_l=\begin{cases}
 \]</span></p>
 </div>
 </section><section id="prediction-on-biscoe-island" class="slide level2"><h2>Prediction on Biscoe island</h2>
-
-<img data-src="17-multiple-linear-regression-1_files/figure-revealjs/unnamed-chunk-28-1.png" width="960" class="r-stretch"></section><section id="prediction-on-biscoe-island-1" class="slide level2"><h2>Prediction on Biscoe island</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb41-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">205</span>,</span>
-<span id="cb41-3"><a></a>  <span class="at">island =</span> <span class="st">"Biscoe"</span></span>
-<span id="cb41-4"><a></a>)</span>
-<span id="cb41-5"><a></a></span>
-<span id="cb41-6"><a></a><span class="fu">predict</span>(bm_fl_island_int_fit, <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+
+</div>
+<img data-src="17-multiple-linear-regression-1_files/figure-html/unnamed-chunk-28-1.png" width="672" class="r-stretch"></section><section id="prediction-on-biscoe-island-1" class="slide level2"><h2>Prediction on Biscoe island</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb64-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">205</span>,</span>
+<span id="cb64-3"><a></a>  <span class="at">island =</span> <span class="st">"Biscoe"</span></span>
+<span id="cb64-4"><a></a>)</span>
+<span id="cb64-5"><a></a></span>
+<span id="cb64-6"><a></a><span class="fu">predict</span>(bm_fl_island_int_fit, <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   .pred
@@ -1006,15 +1098,28 @@ cat_l=\begin{cases}
 \widehat{body~mass} = -5464 + 48.5 \times 205.
 \]</span></p>
 </section><section id="prediction-on-dream-island" class="slide level2"><h2>Prediction on Dream island</h2>
-
-<img data-src="17-multiple-linear-regression-1_files/figure-revealjs/unnamed-chunk-30-1.png" width="960" class="r-stretch"></section><section id="prediction-on-dream-island-1" class="slide level2"><h2>Prediction on Dream island</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb43-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">205</span>,</span>
-<span id="cb43-3"><a></a>  <span class="at">island =</span> <span class="st">"Dream"</span></span>
-<span id="cb43-4"><a></a>)</span>
-<span id="cb43-5"><a></a></span>
-<span id="cb43-6"><a></a><span class="fu">predict</span>(bm_fl_island_int_fit, <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+
+</div>
+<img data-src="17-multiple-linear-regression-1_files/figure-html/unnamed-chunk-30-1.png" width="672" class="r-stretch"></section><section id="prediction-on-dream-island-1" class="slide level2"><h2>Prediction on Dream island</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb69-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">205</span>,</span>
+<span id="cb69-3"><a></a>  <span class="at">island =</span> <span class="st">"Dream"</span></span>
+<span id="cb69-4"><a></a>)</span>
+<span id="cb69-5"><a></a></span>
+<span id="cb69-6"><a></a><span class="fu">predict</span>(bm_fl_island_int_fit, <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   .pred
@@ -1026,15 +1131,28 @@ cat_l=\begin{cases}
 \widehat{body~mass} = (-5464 + 3551) + (48.5 - 19.4) \times 205.
 \]</span></p>
 </section><section id="prediction-on-torgersen-island" class="slide level2"><h2>Prediction on Torgersen island</h2>
-
-<img data-src="17-multiple-linear-regression-1_files/figure-revealjs/unnamed-chunk-32-1.png" width="960" class="r-stretch"></section><section id="prediction-on-torgersen-island-1" class="slide level2"><h2>Prediction on Torgersen island</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb45-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">205</span>,</span>
-<span id="cb45-3"><a></a>  <span class="at">island =</span> <span class="st">"Torgersen"</span></span>
-<span id="cb45-4"><a></a>)</span>
-<span id="cb45-5"><a></a></span>
-<span id="cb45-6"><a></a><span class="fu">predict</span>(bm_fl_island_int_fit, <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+
+</div>
+<img data-src="17-multiple-linear-regression-1_files/figure-html/unnamed-chunk-32-1.png" width="672" class="r-stretch"></section><section id="prediction-on-torgersen-island-1" class="slide level2"><h2>Prediction on Torgersen island</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb74-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">205</span>,</span>
+<span id="cb74-3"><a></a>  <span class="at">island =</span> <span class="st">"Torgersen"</span></span>
+<span id="cb74-4"><a></a>)</span>
+<span id="cb74-5"><a></a></span>
+<span id="cb74-6"><a></a><span class="fu">predict</span>(bm_fl_island_int_fit, <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   .pred
@@ -1049,10 +1167,10 @@ cat_l=\begin{cases}
 
 </section><section id="multiple-numerical-predictors" class="slide level2 scrollable"><h2>Multiple numerical predictors</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a>bm_fl_bl_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb47-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">+</span> bill_length_mm, <span class="at">data =</span> penguins)</span>
-<span id="cb47-3"><a></a></span>
-<span id="cb47-4"><a></a><span class="fu">tidy</span>(bm_fl_bl_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a></a>bm_fl_bl_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb76-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">+</span> bill_length_mm, <span class="at">data =</span> penguins)</span>
+<span id="cb76-3"><a></a></span>
+<span id="cb76-4"><a></a><span class="fu">tidy</span>(bm_fl_bl_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 5
   term              estimate std.error statistic  p.value
@@ -1081,12 +1199,12 @@ cat_l=\begin{cases}
 </div>
 </section><section id="prediction-2" class="slide level2"><h2>Prediction</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb49-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">200</span>,</span>
-<span id="cb49-3"><a></a>  <span class="at">bill_length_mm =</span> <span class="dv">45</span></span>
-<span id="cb49-4"><a></a>)</span>
-<span id="cb49-5"><a></a></span>
-<span id="cb49-6"><a></a><span class="fu">predict</span>(bm_fl_bl_fit, <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb78-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">200</span>,</span>
+<span id="cb78-3"><a></a>  <span class="at">bill_length_mm =</span> <span class="dv">45</span></span>
+<span id="cb78-4"><a></a>)</span>
+<span id="cb78-5"><a></a></span>
+<span id="cb78-6"><a></a><span class="fu">predict</span>(bm_fl_bl_fit, <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   .pred
@@ -1099,11 +1217,21 @@ cat_l=\begin{cases}
 \]</span></p>
 </section><section id="picture-its-not-pretty" class="slide level2"><h2>Picture? It’s not pretty…</h2>
 <p>2 predictors + 1 response = 3 dimensions. Ick!</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Unknown or uninitialised column: `color`.</code></pre>
+</div>
 
-<img data-src="17-multiple-linear-regression-1_files/figure-revealjs/unnamed-chunk-36-1.png" width="960" class="r-stretch"></section><section id="picture-its-not-pretty-1" class="slide level2"><h2>Picture? It’s not pretty…</h2>
+</div>
+<img data-src="17-multiple-linear-regression-1_files/figure-html/unnamed-chunk-36-1.png" width="672" class="r-stretch"></section><section id="picture-its-not-pretty-1" class="slide level2"><h2>Picture? It’s not pretty…</h2>
 <p>Instead of a line of best fit, it’s a <em>plane</em> of best fit. Double ick!</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Unknown or uninitialised column: `color`.</code></pre>
+</div>
 
-<img data-src="17-multiple-linear-regression-1_files/figure-revealjs/unnamed-chunk-37-1.png" width="960" class="r-stretch"></section></section><section><section id="multiple-linear-regression-in-general" class="title-slide slide level1 center"><h1>Multiple linear regression in general</h1>
+</div>
+<img data-src="17-multiple-linear-regression-1_files/figure-html/unnamed-chunk-37-1.png" width="672" class="r-stretch"></section></section><section><section id="multiple-linear-regression-in-general" class="title-slide slide level1 center"><h1>Multiple linear regression in general</h1>
 
 </section><section id="population-model" class="slide level2 medium"><h2>Population model</h2>
 <p><strong>Multiple linear regression</strong> captures the relationship between a numerical outcome <span class="math inline">\(Y\)</span> and <em>many</em> numerical predictors <span class="math inline">\(X_1\)</span>, <span class="math inline">\(X_2\)</span>, …, <span class="math inline">\(X_p\)</span>:</p>
@@ -1342,41 +1470,6 @@ cat_l=\begin{cases}
           RevealZoom
         ]
       });
-    </script><script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
     </script><script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

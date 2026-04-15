@@ -268,13 +268,26 @@ John Zito
 <p>This is your <em>best guess</em> at the true regression function based on the noisy, meager, imperfect data you actually have access to. We still compute the <span class="math inline">\(b_j\)</span> using the principle of least squares: pick the estimates that make the sum of squared residuals as small as possible.</p>
 </div>
 </section><section id="example-one-numerical-predictor" class="slide level2"><h2>Example: one numerical predictor</h2>
-
-<img data-src="18-multiple-linear-regression-2_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section><section id="example-one-numerical-predictor-1" class="slide level2"><h2>Example: one numerical predictor</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>bm_fl_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb1-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm, <span class="at">data =</span> penguins)</span>
-<span id="cb1-3"><a></a></span>
-<span id="cb1-4"><a></a><span class="fu">tidy</span>(bm_fl_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+
+</div>
+<img data-src="18-multiple-linear-regression-2_files/figure-html/unnamed-chunk-2-1.png" width="672" class="r-stretch"></section><section id="example-one-numerical-predictor-1" class="slide level2"><h2>Example: one numerical predictor</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>bm_fl_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm, <span class="at">data =</span> penguins)</span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a><span class="fu">tidy</span>(bm_fl_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 5
   term              estimate std.error statistic   p.value
@@ -290,21 +303,32 @@ John Zito
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="18-multiple-linear-regression-2_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+<figure><p><img data-src="18-multiple-linear-regression-2_files/figure-html/unnamed-chunk-4-1.png" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb3-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">205</span></span>
-<span id="cb3-3"><a></a>  )</span>
-<span id="cb3-4"><a></a></span>
-<span id="cb3-5"><a></a><span class="fu">predict</span>(bm_fl_fit, </span>
-<span id="cb3-6"><a></a>        new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb9-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">205</span></span>
+<span id="cb9-3"><a></a>  )</span>
+<span id="cb9-4"><a></a></span>
+<span id="cb9-5"><a></a><span class="fu">predict</span>(bm_fl_fit, </span>
+<span id="cb9-6"><a></a>        new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   .pred
@@ -314,14 +338,24 @@ John Zito
 </div>
 </div></div>
 </section><section id="example-one-categorical-predictor" class="slide level2"><h2>Example: “one categorical predictor”</h2>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_boxplot()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
 
-<img data-src="18-multiple-linear-regression-2_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section><section id="example-one-categorical-predictor-1" class="slide level2"><h2>Example: “one categorical predictor”</h2>
+</div>
+<img data-src="18-multiple-linear-regression-2_files/figure-html/unnamed-chunk-5-1.png" width="672" class="r-stretch"></section><section id="example-one-categorical-predictor-1" class="slide level2"><h2>Example: “one categorical predictor”</h2>
 <p>This actually gets treated as multiple <em>binary</em> (0/1) predictors:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>bm_island_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb5-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> island, <span class="at">data =</span> penguins)</span>
-<span id="cb5-3"><a></a></span>
-<span id="cb5-4"><a></a><span class="fu">tidy</span>(bm_island_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>bm_island_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb13-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> island, <span class="at">data =</span> penguins)</span>
+<span id="cb13-3"><a></a></span>
+<span id="cb13-4"><a></a><span class="fu">tidy</span>(bm_island_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 5
   term            estimate std.error statistic   p.value
@@ -341,11 +375,11 @@ John Zito
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb7-2"><a></a>  <span class="fu">group_by</span>(island) <span class="sc">|&gt;</span></span>
-<span id="cb7-3"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb7-4"><a></a>    <span class="at">avg_body_mass =</span> <span class="fu">mean</span>(body_mass_g, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb7-5"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb15-2"><a></a>  <span class="fu">group_by</span>(island) <span class="sc">|&gt;</span></span>
+<span id="cb15-3"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb15-4"><a></a>    <span class="at">avg_body_mass =</span> <span class="fu">mean</span>(body_mass_g, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb15-5"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   island    avg_body_mass
@@ -357,12 +391,12 @@ John Zito
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>new_penguins <span class="ot">=</span> <span class="fu">tibble</span>(</span>
-<span id="cb9-2"><a></a>  <span class="at">island =</span> <span class="fu">c</span>(<span class="st">"Biscoe"</span>, <span class="st">"Dream"</span>, <span class="st">"Torgersen"</span>)</span>
-<span id="cb9-3"><a></a>)</span>
-<span id="cb9-4"><a></a></span>
-<span id="cb9-5"><a></a><span class="fu">predict</span>(bm_island_fit, </span>
-<span id="cb9-6"><a></a>        new_penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>new_penguins <span class="ot">=</span> <span class="fu">tibble</span>(</span>
+<span id="cb17-2"><a></a>  <span class="at">island =</span> <span class="fu">c</span>(<span class="st">"Biscoe"</span>, <span class="st">"Dream"</span>, <span class="st">"Torgersen"</span>)</span>
+<span id="cb17-3"><a></a>)</span>
+<span id="cb17-4"><a></a></span>
+<span id="cb17-5"><a></a><span class="fu">predict</span>(bm_island_fit, </span>
+<span id="cb17-6"><a></a>        new_penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 1
   .pred
@@ -374,23 +408,42 @@ John Zito
 </div>
 </div></div>
 </section><section id="example-numerical-and-categorical-predictors" class="slide level2"><h2>Example: numerical and categorical predictors</h2>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range (`stat_smooth()`).
+Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
 <div class="cell quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img data-src="18-multiple-linear-regression-2_files/figure-revealjs/additive-interaction-viz-1.png" width="960"></p>
+<p><img data-src="18-multiple-linear-regression-2_files/figure-html/additive-interaction-viz-1.png" width="672"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img data-src="18-multiple-linear-regression-2_files/figure-revealjs/additive-interaction-viz-2.png" width="960"></p>
+<p><img data-src="18-multiple-linear-regression-2_files/figure-html/additive-interaction-viz-2.png" width="672"></p>
 </div>
 </div>
 </div>
 </section><section id="example-numerical-and-categorical-predictors-1" class="slide level2"><h2>Example: numerical and categorical predictors</h2>
 <p>The additive model:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>bm_fl_island_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb11-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">+</span> island, <span class="at">data =</span> penguins)</span>
-<span id="cb11-3"><a></a></span>
-<span id="cb11-4"><a></a><span class="fu">tidy</span>(bm_fl_island_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>bm_fl_island_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb24-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">+</span> island, <span class="at">data =</span> penguins)</span>
+<span id="cb24-3"><a></a></span>
+<span id="cb24-4"><a></a><span class="fu">tidy</span>(bm_fl_island_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 5
   term              estimate std.error statistic  p.value
@@ -411,10 +464,10 @@ John Zito
 </section><section id="example-numerical-and-categorical-predictors-2" class="slide level2 small"><h2>Example: numerical and categorical predictors</h2>
 <p>Change <em>one character</em> in the code, and you get the interaction model:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>bm_fl_island_int_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb13-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">*</span> island, <span class="at">data =</span> penguins)</span>
-<span id="cb13-3"><a></a></span>
-<span id="cb13-4"><a></a><span class="fu">tidy</span>(bm_fl_island_int_fit) <span class="sc">|&gt;</span> <span class="fu">select</span>(term, estimate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>bm_fl_island_int_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb26-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">*</span> island, <span class="at">data =</span> penguins)</span>
+<span id="cb26-3"><a></a></span>
+<span id="cb26-4"><a></a><span class="fu">tidy</span>(bm_fl_island_int_fit) <span class="sc">|&gt;</span> <span class="fu">select</span>(term, estimate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 2
   term                              estimate
@@ -441,13 +494,13 @@ John Zito
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb15-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">205</span>,</span>
-<span id="cb15-3"><a></a>  <span class="at">island =</span> <span class="st">"Biscoe"</span></span>
-<span id="cb15-4"><a></a>  )</span>
-<span id="cb15-5"><a></a></span>
-<span id="cb15-6"><a></a><span class="fu">predict</span>(bm_fl_island_fit, </span>
-<span id="cb15-7"><a></a>        <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb28-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">205</span>,</span>
+<span id="cb28-3"><a></a>  <span class="at">island =</span> <span class="st">"Biscoe"</span></span>
+<span id="cb28-4"><a></a>  )</span>
+<span id="cb28-5"><a></a></span>
+<span id="cb28-6"><a></a><span class="fu">predict</span>(bm_fl_island_fit, </span>
+<span id="cb28-7"><a></a>        <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   .pred
@@ -457,13 +510,13 @@ John Zito
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb17-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">205</span>,</span>
-<span id="cb17-3"><a></a>  <span class="at">island =</span> <span class="st">"Biscoe"</span></span>
-<span id="cb17-4"><a></a>  )</span>
-<span id="cb17-5"><a></a></span>
-<span id="cb17-6"><a></a><span class="fu">predict</span>(bm_fl_island_int_fit, </span>
-<span id="cb17-7"><a></a>        <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb30-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">205</span>,</span>
+<span id="cb30-3"><a></a>  <span class="at">island =</span> <span class="st">"Biscoe"</span></span>
+<span id="cb30-4"><a></a>  )</span>
+<span id="cb30-5"><a></a></span>
+<span id="cb30-6"><a></a><span class="fu">predict</span>(bm_fl_island_int_fit, </span>
+<span id="cb30-7"><a></a>        <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   .pred
@@ -474,13 +527,18 @@ John Zito
 </div></div>
 </section><section id="example-many-numerical-predictors" class="slide level2"><h2>Example: many numerical predictors</h2>
 <p>2 predictors + 1 response = 3 dimensions. Instead of a line of best fit, it’s a <em>plane</em> of best fit:</p>
-
-<img data-src="18-multiple-linear-regression-2_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section><section id="example-many-numerical-predictors-1" class="slide level2"><h2>Example: many numerical predictors</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>bm_fl_bl_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb19-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">+</span> bill_length_mm, <span class="at">data =</span> penguins)</span>
-<span id="cb19-3"><a></a></span>
-<span id="cb19-4"><a></a><span class="fu">tidy</span>(bm_fl_bl_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Unknown or uninitialised column: `color`.</code></pre>
+</div>
+
+</div>
+<img data-src="18-multiple-linear-regression-2_files/figure-html/unnamed-chunk-13-1.png" width="672" class="r-stretch"></section><section id="example-many-numerical-predictors-1" class="slide level2"><h2>Example: many numerical predictors</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>bm_fl_bl_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb33-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">+</span> bill_length_mm, <span class="at">data =</span> penguins)</span>
+<span id="cb33-3"><a></a></span>
+<span id="cb33-4"><a></a><span class="fu">tidy</span>(bm_fl_bl_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 5
   term              estimate std.error statistic  p.value
@@ -495,12 +553,12 @@ John Zito
 \]</span></p>
 </section><section id="example-many-numerical-predictors-2" class="slide level2"><h2>Example: many numerical predictors</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb21-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">200</span>,</span>
-<span id="cb21-3"><a></a>  <span class="at">bill_length_mm =</span> <span class="dv">45</span></span>
-<span id="cb21-4"><a></a>)</span>
-<span id="cb21-5"><a></a></span>
-<span id="cb21-6"><a></a><span class="fu">predict</span>(bm_fl_bl_fit, <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb35-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">200</span>,</span>
+<span id="cb35-3"><a></a>  <span class="at">bill_length_mm =</span> <span class="dv">45</span></span>
+<span id="cb35-4"><a></a>)</span>
+<span id="cb35-5"><a></a></span>
+<span id="cb35-6"><a></a><span class="fu">predict</span>(bm_fl_bl_fit, <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   .pred
@@ -523,10 +581,10 @@ John Zito
 <p>This matters, but we suppress the nuance in this class.</p>
 </section><section id="the-interaction-model" class="slide level2"><h2>The interaction model</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb23-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">*</span> island, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span></span>
-<span id="cb23-3"><a></a>  <span class="fu">tidy</span>() <span class="sc">|&gt;</span></span>
-<span id="cb23-4"><a></a>  <span class="fu">select</span>(term, estimate, std.error)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb37-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">*</span> island, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span></span>
+<span id="cb37-3"><a></a>  <span class="fu">tidy</span>() <span class="sc">|&gt;</span></span>
+<span id="cb37-4"><a></a>  <span class="fu">select</span>(term, estimate, std.error)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 3
   term                              estimate std.error
@@ -548,12 +606,12 @@ John Zito
 </section><section id="simple-regression-within-a-group" class="slide level2"><h2>Simple regression within a group</h2>
 <p>If we fit a simple model with the Biscoe subset of the data:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>penguins_biscoe <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span></span>
-<span id="cb25-2"><a></a>  <span class="fu">filter</span>(island <span class="sc">==</span> <span class="st">"Biscoe"</span>)</span>
-<span id="cb25-3"><a></a></span>
-<span id="cb25-4"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb25-5"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm, <span class="at">data =</span> penguins_biscoe) <span class="sc">|&gt;</span></span>
-<span id="cb25-6"><a></a>  <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a>penguins_biscoe <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span></span>
+<span id="cb39-2"><a></a>  <span class="fu">filter</span>(island <span class="sc">==</span> <span class="st">"Biscoe"</span>)</span>
+<span id="cb39-3"><a></a></span>
+<span id="cb39-4"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb39-5"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm, <span class="at">data =</span> penguins_biscoe) <span class="sc">|&gt;</span></span>
+<span id="cb39-6"><a></a>  <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 5
   term              estimate std.error statistic  p.value
@@ -565,12 +623,23 @@ John Zito
 <p>Same estimates, but different standard errors.</p>
 </section><section id="the-default-picture" class="slide level2"><h2>The default picture</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> island)) <span class="sc">+</span> </span>
-<span id="cb27-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb27-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> island)) <span class="sc">+</span> </span>
+<span id="cb41-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb41-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
 
 </div>
-<img data-src="18-multiple-linear-regression-2_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"><p>These are <em>separate</em> simple regressions within each group. The slopes and the intercepts are the same as the interaction model, but the uncertainty bands are different.</p>
+<img data-src="18-multiple-linear-regression-2_files/figure-html/unnamed-chunk-18-1.png" width="672" class="r-stretch"><p>These are <em>separate</em> simple regressions within each group. The slopes and the intercepts are the same as the interaction model, but the uncertainty bands are different.</p>
 </section></section><section><section id="a-second-look-at-r2" class="title-slide slide level1 center"><h1>A second look at <span class="math inline">\(R^2\)</span>
 </h1>
 
@@ -589,7 +658,7 @@ John Zito
 </section><section id="reminder-residuals" class="slide level2"><h2>Reminder: residuals</h2>
 <p>Every data point has one:</p>
 
-<img data-src="18-multiple-linear-regression-2_files/figure-revealjs/unnamed-chunk-19-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><p>Some are big, some are small. Some are above the line (positive), and some are below the line (negative).</p>
+<img data-src="18-multiple-linear-regression-2_files/figure-html/unnamed-chunk-19-1.png" class="quarto-figure quarto-figure-center r-stretch" width="672"><p>Some are big, some are small. Some are above the line (positive), and some are below the line (negative).</p>
 </section><section id="reminder-residuals-1" class="slide level2 scrollable"><h2>Reminder: residuals</h2>
 <p>The residuals are what’s left over after the model attempts to “explain” the response:</p>
 <p><span class="math display">\[
@@ -597,8 +666,8 @@ e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i.
 \]</span></p>
 <p>Every data point has one:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">augment</span>(bm_fl_fit, penguins) <span class="sc">|&gt;</span></span>
-<span id="cb28-2"><a></a>  <span class="fu">select</span>(flipper_length_mm, body_mass_g, .pred, .resid)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a><span class="fu">augment</span>(bm_fl_fit, penguins) <span class="sc">|&gt;</span></span>
+<span id="cb45-2"><a></a>  <span class="fu">select</span>(flipper_length_mm, body_mass_g, .pred, .resid)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 344 × 4
    flipper_length_mm body_mass_g .pred  .resid
@@ -619,7 +688,7 @@ e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i.
 </section><section id="how-it-started" class="slide level2 medium"><h2>How it started</h2>
 <p>The original distribution of the response. This is the mess we’re trying to clean up with a model:</p>
 
-<img data-src="18-multiple-linear-regression-2_files/figure-revealjs/unnamed-chunk-21-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div class="cell">
+<img data-src="18-multiple-linear-regression-2_files/figure-html/unnamed-chunk-21-1.png" class="quarto-figure quarto-figure-center r-stretch" width="672"><div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 3
   type        variance   std
@@ -630,7 +699,7 @@ e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i.
 </section><section id="how-its-going" class="slide level2 medium"><h2>How it’s going</h2>
 <p>The distribution of the residuals (the leftover mess) after the model tries to explain (clean up):</p>
 
-<img data-src="18-multiple-linear-regression-2_files/figure-revealjs/unnamed-chunk-23-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><div class="cell">
+<img data-src="18-multiple-linear-regression-2_files/figure-html/unnamed-chunk-23-1.png" class="quarto-figure quarto-figure-center r-stretch" width="672"><div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 3
   type        variance   std
@@ -653,7 +722,7 @@ e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i.
 </section><section id="r2approx-0" class="slide level2"><h2><span class="math inline">\(R^2\approx 0\)</span></h2>
 <p>Horrifically awful fit. The model didn’t explain (clean up) anything:</p>
 
-<img data-src="18-multiple-linear-regression-2_files/figure-revealjs/unnamed-chunk-25-1.png" width="960" class="r-stretch"><div class="cell">
+<img data-src="18-multiple-linear-regression-2_files/figure-html/unnamed-chunk-25-1.png" width="672" class="r-stretch"><div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 3
   var_y var_resid r.squared
@@ -663,7 +732,7 @@ e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i.
 </div>
 </section><section id="r2approx-0.28" class="slide level2"><h2><span class="math inline">\(R^2\approx 0.28\)</span></h2>
 
-<img data-src="18-multiple-linear-regression-2_files/figure-revealjs/unnamed-chunk-27-1.png" width="960" class="r-stretch"><div class="cell">
+<img data-src="18-multiple-linear-regression-2_files/figure-html/unnamed-chunk-27-1.png" width="672" class="r-stretch"><div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 3
   var_y var_resid r.squared
@@ -673,7 +742,7 @@ e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i.
 </div>
 </section><section id="r2approx-0.63" class="slide level2"><h2><span class="math inline">\(R^2\approx 0.63\)</span></h2>
 
-<img data-src="18-multiple-linear-regression-2_files/figure-revealjs/unnamed-chunk-29-1.png" width="960" class="r-stretch"><div class="cell">
+<img data-src="18-multiple-linear-regression-2_files/figure-html/unnamed-chunk-29-1.png" width="672" class="r-stretch"><div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 3
   var_y var_resid r.squared
@@ -683,7 +752,7 @@ e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i.
 </div>
 </section><section id="r2approx-0.97" class="slide level2"><h2><span class="math inline">\(R^2\approx 0.97\)</span></h2>
 
-<img data-src="18-multiple-linear-regression-2_files/figure-revealjs/unnamed-chunk-31-1.png" width="960" class="r-stretch"><div class="cell">
+<img data-src="18-multiple-linear-regression-2_files/figure-html/unnamed-chunk-31-1.png" width="672" class="r-stretch"><div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 3
   var_y var_resid r.squared
@@ -694,7 +763,7 @@ e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i.
 </section><section id="r2approx-1" class="slide level2"><h2><span class="math inline">\(R^2\approx 1\)</span></h2>
 <p>Perfect fit. The model explained (cleaned up) everything:</p>
 
-<img data-src="18-multiple-linear-regression-2_files/figure-revealjs/unnamed-chunk-33-1.png" width="960" class="r-stretch"><div class="cell">
+<img data-src="18-multiple-linear-regression-2_files/figure-html/unnamed-chunk-33-1.png" width="672" class="r-stretch"><div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 3
   var_y var_resid r.squared
@@ -730,12 +799,12 @@ e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i.
 \]</span></p>
 </section><section id="literally" class="slide level2 medium"><h2>Literally</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">augment</span>(bm_fl_fit, penguins) <span class="sc">|&gt;</span></span>
-<span id="cb37-2"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb37-3"><a></a>    <span class="at">var_y =</span> <span class="fu">var</span>(body_mass_g, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb37-4"><a></a>    <span class="at">var_e =</span> <span class="fu">var</span>(.resid, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb37-5"><a></a>    <span class="at">R2 =</span> <span class="dv">1</span> <span class="sc">-</span> var_e <span class="sc">/</span> var_y</span>
-<span id="cb37-6"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a></a><span class="fu">augment</span>(bm_fl_fit, penguins) <span class="sc">|&gt;</span></span>
+<span id="cb54-2"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb54-3"><a></a>    <span class="at">var_y =</span> <span class="fu">var</span>(body_mass_g, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb54-4"><a></a>    <span class="at">var_e =</span> <span class="fu">var</span>(.resid, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb54-5"><a></a>    <span class="at">R2 =</span> <span class="dv">1</span> <span class="sc">-</span> var_e <span class="sc">/</span> var_y</span>
+<span id="cb54-6"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 3
     var_y   var_e    R2
@@ -745,10 +814,10 @@ e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i.
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb39-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm, penguins) <span class="sc">|&gt;</span></span>
-<span id="cb39-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
-<span id="cb39-4"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb56-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm, penguins) <span class="sc">|&gt;</span></span>
+<span id="cb56-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
+<span id="cb56-4"><a></a>  <span class="fu">select</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   r.squared
@@ -810,9 +879,9 @@ e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i.
 </section><section id="tidymodels-reports-many-of-these-for-free" class="slide level2"><h2>
 <code>tidymodels</code> reports many of these for free</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a>bm_fl_fit <span class="sc">|&gt;</span></span>
-<span id="cb41-2"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
-<span id="cb41-3"><a></a>  <span class="fu">select</span>(r.squared, adj.r.squared, AIC, BIC)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a></a>bm_fl_fit <span class="sc">|&gt;</span></span>
+<span id="cb58-2"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
+<span id="cb58-3"><a></a>  <span class="fu">select</span>(r.squared, adj.r.squared, AIC, BIC)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 4
   r.squared adj.r.squared   AIC   BIC
@@ -826,10 +895,10 @@ e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i.
 </section><section id="adding-a-phony-variable" class="slide level2 medium"><h2>Adding a phony variable</h2>
 <p>The original model fit:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb43-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm, penguins) <span class="sc">|&gt;</span></span>
-<span id="cb43-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
-<span id="cb43-4"><a></a>  <span class="fu">pull</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb60-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm, penguins) <span class="sc">|&gt;</span></span>
+<span id="cb60-3"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
+<span id="cb60-4"><a></a>  <span class="fu">pull</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.7589925</code></pre>
 </div>
@@ -837,15 +906,15 @@ e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i.
 <div class="fragment">
 <p>Add a predictor that is literally just a bunch of random numbers:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a>noisy_penguins <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span></span>
-<span id="cb45-2"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb45-3"><a></a>    <span class="at">bullshit =</span> <span class="fu">rnorm</span>(<span class="fu">nrow</span>(penguins))</span>
-<span id="cb45-4"><a></a>  )</span>
-<span id="cb45-5"><a></a></span>
-<span id="cb45-6"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb45-7"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">+</span> bullshit, noisy_penguins) <span class="sc">|&gt;</span></span>
-<span id="cb45-8"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
-<span id="cb45-9"><a></a>  <span class="fu">pull</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a>noisy_penguins <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span></span>
+<span id="cb62-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb62-3"><a></a>    <span class="at">bullshit =</span> <span class="fu">rnorm</span>(<span class="fu">nrow</span>(penguins))</span>
+<span id="cb62-4"><a></a>  )</span>
+<span id="cb62-5"><a></a></span>
+<span id="cb62-6"><a></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb62-7"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">+</span> bullshit, noisy_penguins) <span class="sc">|&gt;</span></span>
+<span id="cb62-8"><a></a>  <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
+<span id="cb62-9"><a></a>  <span class="fu">pull</span>(r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.7600283</code></pre>
 </div>
@@ -867,37 +936,37 @@ e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i.
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a>bm_fl_fit <span class="sc">|&gt;</span> <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
-<span id="cb47-2"><a></a>  <span class="fu">pull</span>(adj.r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a></a>bm_fl_fit <span class="sc">|&gt;</span> <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
+<span id="cb64-2"><a></a>  <span class="fu">pull</span>(adj.r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.7582837</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a>bm_island_fit <span class="sc">|&gt;</span> <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
-<span id="cb49-2"><a></a>  <span class="fu">pull</span>(adj.r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a></a>bm_island_fit <span class="sc">|&gt;</span> <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
+<span id="cb66-2"><a></a>  <span class="fu">pull</span>(adj.r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.3899995</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a></a>bm_fl_island_fit <span class="sc">|&gt;</span> <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
-<span id="cb51-2"><a></a>  <span class="fu">pull</span>(adj.r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a></a>bm_fl_island_fit <span class="sc">|&gt;</span> <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
+<span id="cb68-2"><a></a>  <span class="fu">pull</span>(adj.r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.7722296</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a></a>bm_fl_island_int_fit <span class="sc">|&gt;</span> <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
-<span id="cb53-2"><a></a>  <span class="fu">pull</span>(adj.r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a></a>bm_fl_island_int_fit <span class="sc">|&gt;</span> <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
+<span id="cb70-2"><a></a>  <span class="fu">pull</span>(adj.r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.7825604</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a></a>bm_fl_bl_fit <span class="sc">|&gt;</span> <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
-<span id="cb55-2"><a></a>  <span class="fu">pull</span>(adj.r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a></a>bm_fl_bl_fit <span class="sc">|&gt;</span> <span class="fu">glance</span>() <span class="sc">|&gt;</span></span>
+<span id="cb72-2"><a></a>  <span class="fu">pull</span>(adj.r.squared)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.7585415</code></pre>
 </div>
@@ -1121,41 +1190,6 @@ e_i = \text{observed} - \text{predicted} = y_i - \hat{y}_i.
           RevealZoom
         ]
       });
-    </script><script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
     </script><script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

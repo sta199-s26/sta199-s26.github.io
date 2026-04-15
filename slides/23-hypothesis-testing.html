@@ -126,10 +126,8 @@ window.Quarto = {
 </script>
 <meta property="og:title" content="Hypothesis testing – STA 199 Spring 2026">
 <meta property="og:description" content="Lecture 23">
-<meta property="og:image" content="https://sta199-s26.github.io/slides/images/23/alpha.png">
+<meta property="og:image" content="https://sta199-s26.github.io/slides/images/23/saja.JPEG">
 <meta property="og:site_name" content="STA 199 Spring 2026">
-<meta property="og:image:height" content="618">
-<meta property="og:image:width" content="2138">
 </head>
 <body class="nav-sidebar docked quarto-light">
 
@@ -508,7 +506,6 @@ window.Quarto = {
   <li><a href="#where-does-alpha-come-in-to-this" id="toc-where-does-alpha-come-in-to-this" class="nav-link" data-scroll-target="#where-does-alpha-come-in-to-this">Where does alpha come in to this?</a></li>
   </ul>
 </li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><img src="images/23/alpha.png" class="img-fluid"></a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/slides/23-hypothesis-testing.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="23-hypothesis-testing-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
@@ -551,11 +548,14 @@ window.Quarto = {
 <div class="columns">
 <div class="column" style="width:70%;">
 <div class="wooclap">
-<p>TBD</p>
+<p>Sampling uncertainty refers to…</p>
 <div class="wooclap-choices">
 <ul>
-<li>TBD</li>
-<li>TBD</li>
+<li>uncertainty about the accuracy of data collection</li>
+<li>uncertainty about whether our statistical model is true</li>
+<li>sensitivity of results to human error</li>
+<li>variation in conclusions across different models</li>
+<li>variation in estimates across alternative datasets</li>
 </ul>
 </div>
 </div>
@@ -596,7 +596,7 @@ window.Quarto = {
 </div>
 <p>. . .</p>
 <p>Note: Hypotheses are always at the population level!</p>
-</section><section id="running-example" class="level2"><h2 class="anchored" data-anchor-id="running-example">Running Example</h2>
+</section><section id="running-example" class="level2 small"><h2 class="small anchored" data-anchor-id="running-example">Running Example</h2>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">glimpse</span><span class="op">(</span><span class="va">volleyball</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -763,6 +763,7 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <li><p>Shuffling breaks any link between spike and height (on average)</p></li>
 <li><p><code>type = "permute"</code></p></li>
 <li><p>Shuffle the spike variable, fit a model and get a slope, record the slope, repeat!</p></li>
+<li><p>If the null is true, the distribution of these slopes should be centered on zero!</p></li>
 <li><p>More on this in STA 221L</p></li>
 <li><p>What if we shuffled height instead? Both?</p></li>
 </ul>
@@ -793,14 +794,17 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 </div>
 </section><section id="wait-whats-that-new-function" class="level2"><h2 class="anchored" data-anchor-id="wait-whats-that-new-function">Wait, what’s that new function</h2>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">8675309</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">rouges_gallery</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Josh Lim"</span>, <span class="st">"John Zito"</span>, <span class="st">"Sarah Wu"</span>, <span class="st">"Katie Solarz"</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">rouges_gallery</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Josh Lim"</span>, <span class="st">"John Zito"</span>, <span class="st">"Sarah Wu"</span>, <span class="st">"Katie Solarz"</span><span class="op">)</span></span>
 <span><span class="va">rouges_gallery</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Josh Lim"     "John Zito"    "Sarah Wu"     "Katie Solarz"</code></pre>
 </div>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">rouges_gallery</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>. . .</p>
+<div class="cell">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">8675309</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">rouges_gallery</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Katie Solarz" "Sarah Wu"     "John Zito"    "Josh Lim"    </code></pre>
 </div>
@@ -811,7 +815,7 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
@@ -827,7 +831,7 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
@@ -840,7 +844,7 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
@@ -856,7 +860,7 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
@@ -869,7 +873,7 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
@@ -885,7 +889,7 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
@@ -922,7 +926,7 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <span>  <span class="fu">geom_histogram</span><span class="op">(</span>binwidth <span class="op">=</span> <span class="fl">0.2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
@@ -949,7 +953,7 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <span>  <span class="fu">shade_p_value</span><span class="op">(</span>obs_stat <span class="op">=</span> <span class="va">observed_fit</span>, direction <span class="op">=</span> <span class="st">"two-sided"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="960"></p>
+<figure class="figure"><p><img src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="960"></p>
 </figure>
 </div>
 </div>
@@ -993,10 +997,10 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <p><span class="math inline">\(H_0\)</span> person well vs <span class="math inline">\(H_A\)</span> person sick.</p>
 <p><img src="images/23/doctor.png" class="img-fluid"></p>
 </section><section id="where-does-alpha-come-in-to-this" class="level2"><h2 class="anchored" data-anchor-id="where-does-alpha-come-in-to-this">Where does alpha come in to this?</h2>
-</section></section><section id="section" class="level1"><h1><img src="images/23/alpha.png" class="img-fluid"></h1>
+<p><img src="images/23/alpha.png" class="img-fluid"></p>
 
 
-</section></main><!-- /main --><script>
+</section></section></main><!-- /main --><script>
   // htmlwidgets need to know to resize themselves when slides are shown/hidden.
   // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
   // slide changes (different for each slide format).

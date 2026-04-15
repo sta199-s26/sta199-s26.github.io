@@ -218,11 +218,14 @@ Josh Lim
 <div class="columns">
 <div class="column" style="width:70%;">
 <div class="wooclap">
-<p>TBD</p>
+<p>Sampling uncertainty refers to…</p>
 <div class="wooclap-choices">
 <ul>
-<li>TBD</li>
-<li>TBD</li>
+<li>uncertainty about the accuracy of data collection</li>
+<li>uncertainty about whether our statistical model is true</li>
+<li>sensitivity of results to human error</li>
+<li>variation in conclusions across different models</li>
+<li>variation in estimates across alternative datasets</li>
 </ul>
 </div>
 </div>
@@ -259,7 +262,7 @@ Josh Lim
 <div class="fragment">
 <p>Note: Hypotheses are always at the population level!</p>
 </div>
-</section><section id="running-example" class="slide level2"><h2>Running Example</h2>
+</section><section id="running-example" class="slide level2 small"><h2>Running Example</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">glimpse</span>(volleyball)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -421,6 +424,7 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <li class="fragment"><p>Shuffling breaks any link between spike and height (on average)</p></li>
 <li class="fragment"><p><code>type = "permute"</code></p></li>
 <li class="fragment"><p>Shuffle the spike variable, fit a model and get a slope, record the slope, repeat!</p></li>
+<li class="fragment"><p>If the null is true, the distribution of these slopes should be centered on zero!</p></li>
 <li class="fragment"><p>More on this in STA 221L</p></li>
 <li class="fragment"><p>What if we shuffled height instead? Both?</p></li>
 </ul></section><section id="every-day-im-shuffling" class="slide level2"><h2>Every day I’m shuffling</h2>
@@ -439,16 +443,20 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 </div>
 <img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section><section id="wait-whats-that-new-function" class="slide level2"><h2>Wait, what’s that new function</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">set.seed</span>(<span class="dv">8675309</span>)</span>
-<span id="cb10-2"><a></a></span>
-<span id="cb10-3"><a></a>rouges_gallery <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Josh Lim"</span>, <span class="st">"John Zito"</span>, <span class="st">"Sarah Wu"</span>, <span class="st">"Katie Solarz"</span>)</span>
-<span id="cb10-4"><a></a>rouges_gallery</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>rouges_gallery <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Josh Lim"</span>, <span class="st">"John Zito"</span>, <span class="st">"Sarah Wu"</span>, <span class="st">"Katie Solarz"</span>)</span>
+<span id="cb10-2"><a></a>rouges_gallery</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Josh Lim"     "John Zito"    "Sarah Wu"     "Katie Solarz"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">sample</span>(rouges_gallery)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">set.seed</span>(<span class="dv">8675309</span>)</span>
+<span id="cb12-2"><a></a></span>
+<span id="cb12-3"><a></a><span class="fu">sample</span>(rouges_gallery)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Katie Solarz" "Sarah Wu"     "John Zito"    "Josh Lim"    </code></pre>
+</div>
 </div>
 </div>
 </section><section id="what-if-this-was-my-shuffle" class="slide level2"><h2>What if this was my shuffle?</h2>
@@ -457,7 +465,7 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
+<figure><p><img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -473,7 +481,7 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+<figure><p><img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -485,7 +493,7 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
+<figure><p><img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -501,7 +509,7 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
+<figure><p><img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -513,7 +521,7 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
+<figure><p><img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -529,7 +537,7 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
+<figure><p><img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -565,7 +573,7 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <span id="cb19-4"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section><section id="reminder-observed-fit" class="slide level2"><h2>Reminder: observed fit</h2>
+<img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section><section id="reminder-observed-fit" class="slide level2"><h2>Reminder: observed fit</h2>
 <p>What was our estimate to begin with?</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>observed_fit <span class="ot">&lt;-</span> volleyball <span class="sc">|&gt;</span></span>
@@ -587,7 +595,7 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <span id="cb22-2"><a></a>  <span class="fu">shade_p_value</span>(<span class="at">obs_stat =</span> observed_fit, <span class="at">direction =</span> <span class="st">"two-sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section><section id="get-p-value" class="slide level2"><h2>Get p-value</h2>
+<img data-src="23-hypothesis-testing_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section><section id="get-p-value" class="slide level2"><h2>Get p-value</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>null_dist <span class="sc">|&gt;</span></span>
 <span id="cb23-2"><a></a>  <span class="fu">get_p_value</span>(<span class="at">obs_stat =</span> observed_fit, <span class="at">direction =</span> <span class="st">"two-sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -620,10 +628,10 @@ $ block  &lt;dbl&gt; 280, 240, 209, 286, 253, 285, 231, 295, 295, 300, 285, 281,
 <p><span class="math inline">\(H_0\)</span> person well vs <span class="math inline">\(H_A\)</span> person sick.</p>
 
 <img data-src="images/23/doctor.png" class="r-stretch"></section><section id="where-does-alpha-come-in-to-this" class="slide level2"><h2>Where does alpha come in to this?</h2>
-</section></section><section id="section" class="title-slide slide level1 center"><h1><img data-src="images/23/alpha.png"></h1>
 
 
-</section>
+
+<img data-src="images/23/alpha.png" class="r-stretch"></section></section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/logo.png" class="slide-logo"></p>

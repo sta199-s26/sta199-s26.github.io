@@ -320,7 +320,7 @@ y =
 \end{cases}
 \]</span></p>
 
-<img data-src="20-logistic-regression-2_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section><section id="new-model-logistic-regression" class="slide level2"><h2>New model: logistic regression</h2>
+<img data-src="20-logistic-regression-2_files/figure-html/unnamed-chunk-1-1.png" width="672" class="r-stretch"></section><section id="new-model-logistic-regression" class="slide level2"><h2>New model: logistic regression</h2>
 <p>S-curve for the probability of “success”:</p>
 <p><span class="math display">\[
 \hat{p}
@@ -402,9 +402,11 @@ b_0+b_1x.
 <p>Dump all the predictors in:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>full_logistic_fit <span class="ot">&lt;-</span> <span class="fu">logistic_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb7-2"><a></a>  <span class="fu">fit</span>(spam <span class="sc">~</span> ., <span class="at">data =</span> email)</span>
-<span id="cb7-3"><a></a></span>
-<span id="cb7-4"><a></a><span class="fu">tidy</span>(full_logistic_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-2"><a></a>  <span class="fu">fit</span>(spam <span class="sc">~</span> ., <span class="at">data =</span> email)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">tidy</span>(full_logistic_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 22 × 5
    term         estimate std.error statistic  p.value
@@ -495,8 +497,8 @@ b_0+b_1x.
 </ul></section><section id="the-augment-function-1" class="slide level2"><h2>The augment function</h2>
 <p>The <code>augment</code> function takes a data frame and “augments” it by adding three new columns on the left that describe the model predictions for each row:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>log_aug_full <span class="ot">&lt;-</span> <span class="fu">augment</span>(full_logistic_fit, email)</span>
-<span id="cb9-2"><a></a>log_aug_full</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>log_aug_full <span class="ot">&lt;-</span> <span class="fu">augment</span>(full_logistic_fit, email)</span>
+<span id="cb11-2"><a></a>log_aug_full</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3,921 × 24
    .pred_class .pred_0  .pred_1 spam  to_multiple from     cc sent_email
@@ -520,8 +522,8 @@ b_0+b_1x.
 </div>
 </section><section id="calculating-the-error-rates" class="slide level2"><h2>Calculating the error rates</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>log_aug_full <span class="sc">|&gt;</span></span>
-<span id="cb11-2"><a></a>  <span class="fu">count</span>(spam, .pred_class) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>log_aug_full <span class="sc">|&gt;</span></span>
+<span id="cb13-2"><a></a>  <span class="fu">count</span>(spam, .pred_class) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
   spam  .pred_class     n
@@ -534,9 +536,9 @@ b_0+b_1x.
 </div>
 </section><section id="calculating-the-error-rates-1" class="slide level2"><h2>Calculating the error rates</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>log_aug_full <span class="sc">|&gt;</span></span>
-<span id="cb13-2"><a></a>  <span class="fu">count</span>(spam, .pred_class) <span class="sc">|&gt;</span></span>
-<span id="cb13-3"><a></a>  <span class="fu">group_by</span>(spam)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>log_aug_full <span class="sc">|&gt;</span></span>
+<span id="cb15-2"><a></a>  <span class="fu">count</span>(spam, .pred_class) <span class="sc">|&gt;</span></span>
+<span id="cb15-3"><a></a>  <span class="fu">group_by</span>(spam)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
 # Groups:   spam [2]
@@ -550,10 +552,10 @@ b_0+b_1x.
 </div>
 </section><section id="calculating-the-error-rates-2" class="slide level2"><h2>Calculating the error rates</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>log_aug_full <span class="sc">|&gt;</span></span>
-<span id="cb15-2"><a></a>  <span class="fu">count</span>(spam, .pred_class) <span class="sc">|&gt;</span></span>
-<span id="cb15-3"><a></a>  <span class="fu">group_by</span>(spam) <span class="sc">|&gt;</span></span>
-<span id="cb15-4"><a></a>  <span class="fu">mutate</span>(<span class="at">p =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>log_aug_full <span class="sc">|&gt;</span></span>
+<span id="cb17-2"><a></a>  <span class="fu">count</span>(spam, .pred_class) <span class="sc">|&gt;</span></span>
+<span id="cb17-3"><a></a>  <span class="fu">group_by</span>(spam) <span class="sc">|&gt;</span></span>
+<span id="cb17-4"><a></a>  <span class="fu">mutate</span>(<span class="at">p =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 4
 # Groups:   spam [2]
@@ -567,17 +569,17 @@ b_0+b_1x.
 </div>
 </section><section id="calculating-the-error-rates-3" class="slide level2"><h2>Calculating the error rates</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>log_aug_full <span class="sc">|&gt;</span></span>
-<span id="cb17-2"><a></a>  <span class="fu">count</span>(spam, .pred_class) <span class="sc">|&gt;</span></span>
-<span id="cb17-3"><a></a>  <span class="fu">group_by</span>(spam) <span class="sc">|&gt;</span></span>
-<span id="cb17-4"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb17-5"><a></a>    <span class="at">p =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n),</span>
-<span id="cb17-6"><a></a>    <span class="at">decision =</span> <span class="fu">case_when</span>(</span>
-<span id="cb17-7"><a></a>      spam <span class="sc">==</span> <span class="st">"0"</span> <span class="sc">&amp;</span> .pred_class <span class="sc">==</span> <span class="st">"0"</span> <span class="sc">~</span> <span class="st">"True negative"</span>,</span>
-<span id="cb17-8"><a></a>      spam <span class="sc">==</span> <span class="st">"0"</span> <span class="sc">&amp;</span> .pred_class <span class="sc">==</span> <span class="st">"1"</span> <span class="sc">~</span> <span class="st">"False positive"</span>,</span>
-<span id="cb17-9"><a></a>      spam <span class="sc">==</span> <span class="st">"1"</span> <span class="sc">&amp;</span> .pred_class <span class="sc">==</span> <span class="st">"0"</span> <span class="sc">~</span> <span class="st">"False negative"</span>,</span>
-<span id="cb17-10"><a></a>      spam <span class="sc">==</span> <span class="st">"1"</span> <span class="sc">&amp;</span> .pred_class <span class="sc">==</span> <span class="st">"1"</span> <span class="sc">~</span> <span class="st">"True positive"</span></span>
-<span id="cb17-11"><a></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>log_aug_full <span class="sc">|&gt;</span></span>
+<span id="cb19-2"><a></a>  <span class="fu">count</span>(spam, .pred_class) <span class="sc">|&gt;</span></span>
+<span id="cb19-3"><a></a>  <span class="fu">group_by</span>(spam) <span class="sc">|&gt;</span></span>
+<span id="cb19-4"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb19-5"><a></a>    <span class="at">p =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n),</span>
+<span id="cb19-6"><a></a>    <span class="at">decision =</span> <span class="fu">case_when</span>(</span>
+<span id="cb19-7"><a></a>      spam <span class="sc">==</span> <span class="st">"0"</span> <span class="sc">&amp;</span> .pred_class <span class="sc">==</span> <span class="st">"0"</span> <span class="sc">~</span> <span class="st">"True negative"</span>,</span>
+<span id="cb19-8"><a></a>      spam <span class="sc">==</span> <span class="st">"0"</span> <span class="sc">&amp;</span> .pred_class <span class="sc">==</span> <span class="st">"1"</span> <span class="sc">~</span> <span class="st">"False positive"</span>,</span>
+<span id="cb19-9"><a></a>      spam <span class="sc">==</span> <span class="st">"1"</span> <span class="sc">&amp;</span> .pred_class <span class="sc">==</span> <span class="st">"0"</span> <span class="sc">~</span> <span class="st">"False negative"</span>,</span>
+<span id="cb19-10"><a></a>      spam <span class="sc">==</span> <span class="st">"1"</span> <span class="sc">&amp;</span> .pred_class <span class="sc">==</span> <span class="st">"1"</span> <span class="sc">~</span> <span class="st">"True positive"</span></span>
+<span id="cb19-11"><a></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 5
 # Groups:   spam [2]
@@ -592,13 +594,13 @@ b_0+b_1x.
 </section><section id="but-wait" class="slide level2"><h2>But wait!</h2>
 <p>If we change the classification threshold, we change the classifications, and we change the error rates:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19" data-code-line-numbers="2-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>log_aug_full <span class="sc">|&gt;</span></span>
-<span id="cb19-2"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb19-3"><a></a>    <span class="at">.pred_class =</span> <span class="fu">if_else</span>(.pred_1 <span class="sc">&lt;=</span> <span class="fl">0.25</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
-<span id="cb19-4"><a></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb19-5"><a></a>  <span class="fu">count</span>(spam, .pred_class) <span class="sc">|&gt;</span></span>
-<span id="cb19-6"><a></a>  <span class="fu">group_by</span>(spam) <span class="sc">|&gt;</span></span>
-<span id="cb19-7"><a></a>  <span class="fu">mutate</span>(<span class="at">p =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="2-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>log_aug_full <span class="sc">|&gt;</span></span>
+<span id="cb21-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb21-3"><a></a>    <span class="at">.pred_class =</span> <span class="fu">if_else</span>(.pred_1 <span class="sc">&lt;=</span> <span class="fl">0.25</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb21-4"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb21-5"><a></a>  <span class="fu">count</span>(spam, .pred_class) <span class="sc">|&gt;</span></span>
+<span id="cb21-6"><a></a>  <span class="fu">group_by</span>(spam) <span class="sc">|&gt;</span></span>
+<span id="cb21-7"><a></a>  <span class="fu">mutate</span>(<span class="at">p =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 4
 # Groups:   spam [2]
@@ -612,13 +614,13 @@ b_0+b_1x.
 </div>
 </section><section id="classification-threshold-0.00" class="slide level2"><h2>Classification threshold: 0.00</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="2-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>log_aug_full <span class="sc">|&gt;</span></span>
-<span id="cb21-2"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb21-3"><a></a>    <span class="at">.pred_class =</span> <span class="fu">if_else</span>(.pred_1 <span class="sc">&lt;=</span> <span class="fl">0.00</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
-<span id="cb21-4"><a></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb21-5"><a></a>  <span class="fu">count</span>(spam, .pred_class) <span class="sc">|&gt;</span></span>
-<span id="cb21-6"><a></a>  <span class="fu">group_by</span>(spam) <span class="sc">|&gt;</span></span>
-<span id="cb21-7"><a></a>  <span class="fu">mutate</span>(<span class="at">p =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23" data-code-line-numbers="2-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>log_aug_full <span class="sc">|&gt;</span></span>
+<span id="cb23-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb23-3"><a></a>    <span class="at">.pred_class =</span> <span class="fu">if_else</span>(.pred_1 <span class="sc">&lt;=</span> <span class="fl">0.00</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb23-4"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb23-5"><a></a>  <span class="fu">count</span>(spam, .pred_class) <span class="sc">|&gt;</span></span>
+<span id="cb23-6"><a></a>  <span class="fu">group_by</span>(spam) <span class="sc">|&gt;</span></span>
+<span id="cb23-7"><a></a>  <span class="fu">mutate</span>(<span class="at">p =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 4
 # Groups:   spam [2]
@@ -630,13 +632,13 @@ b_0+b_1x.
 </div>
 </section><section id="classification-threshold-0.25" class="slide level2"><h2>Classification threshold: 0.25</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23" data-code-line-numbers="2-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>log_aug_full <span class="sc">|&gt;</span></span>
-<span id="cb23-2"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb23-3"><a></a>    <span class="at">.pred_class =</span> <span class="fu">if_else</span>(.pred_1 <span class="sc">&lt;=</span> <span class="fl">0.25</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
-<span id="cb23-4"><a></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb23-5"><a></a>  <span class="fu">count</span>(spam, .pred_class) <span class="sc">|&gt;</span></span>
-<span id="cb23-6"><a></a>  <span class="fu">group_by</span>(spam) <span class="sc">|&gt;</span></span>
-<span id="cb23-7"><a></a>  <span class="fu">mutate</span>(<span class="at">p =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25" data-code-line-numbers="2-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>log_aug_full <span class="sc">|&gt;</span></span>
+<span id="cb25-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb25-3"><a></a>    <span class="at">.pred_class =</span> <span class="fu">if_else</span>(.pred_1 <span class="sc">&lt;=</span> <span class="fl">0.25</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb25-4"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb25-5"><a></a>  <span class="fu">count</span>(spam, .pred_class) <span class="sc">|&gt;</span></span>
+<span id="cb25-6"><a></a>  <span class="fu">group_by</span>(spam) <span class="sc">|&gt;</span></span>
+<span id="cb25-7"><a></a>  <span class="fu">mutate</span>(<span class="at">p =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 4
 # Groups:   spam [2]
@@ -650,13 +652,13 @@ b_0+b_1x.
 </div>
 </section><section id="classification-threshold-0.5" class="slide level2"><h2>Classification threshold: 0.5</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25" data-code-line-numbers="2-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>log_aug_full <span class="sc">|&gt;</span></span>
-<span id="cb25-2"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb25-3"><a></a>    <span class="at">.pred_class =</span> <span class="fu">if_else</span>(.pred_1 <span class="sc">&lt;=</span> <span class="fl">0.50</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
-<span id="cb25-4"><a></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb25-5"><a></a>  <span class="fu">count</span>(spam, .pred_class) <span class="sc">|&gt;</span></span>
-<span id="cb25-6"><a></a>  <span class="fu">group_by</span>(spam) <span class="sc">|&gt;</span></span>
-<span id="cb25-7"><a></a>  <span class="fu">mutate</span>(<span class="at">p =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27" data-code-line-numbers="2-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>log_aug_full <span class="sc">|&gt;</span></span>
+<span id="cb27-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb27-3"><a></a>    <span class="at">.pred_class =</span> <span class="fu">if_else</span>(.pred_1 <span class="sc">&lt;=</span> <span class="fl">0.50</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb27-4"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb27-5"><a></a>  <span class="fu">count</span>(spam, .pred_class) <span class="sc">|&gt;</span></span>
+<span id="cb27-6"><a></a>  <span class="fu">group_by</span>(spam) <span class="sc">|&gt;</span></span>
+<span id="cb27-7"><a></a>  <span class="fu">mutate</span>(<span class="at">p =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 4
 # Groups:   spam [2]
@@ -670,13 +672,13 @@ b_0+b_1x.
 </div>
 </section><section id="classification-threshold-0.75" class="slide level2"><h2>Classification threshold: 0.75</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27" data-code-line-numbers="2-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>log_aug_full <span class="sc">|&gt;</span></span>
-<span id="cb27-2"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb27-3"><a></a>    <span class="at">.pred_class =</span> <span class="fu">if_else</span>(.pred_1 <span class="sc">&lt;=</span> <span class="fl">0.75</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
-<span id="cb27-4"><a></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb27-5"><a></a>  <span class="fu">count</span>(spam, .pred_class) <span class="sc">|&gt;</span></span>
-<span id="cb27-6"><a></a>  <span class="fu">group_by</span>(spam) <span class="sc">|&gt;</span></span>
-<span id="cb27-7"><a></a>  <span class="fu">mutate</span>(<span class="at">p =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29" data-code-line-numbers="2-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>log_aug_full <span class="sc">|&gt;</span></span>
+<span id="cb29-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb29-3"><a></a>    <span class="at">.pred_class =</span> <span class="fu">if_else</span>(.pred_1 <span class="sc">&lt;=</span> <span class="fl">0.75</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb29-4"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb29-5"><a></a>  <span class="fu">count</span>(spam, .pred_class) <span class="sc">|&gt;</span></span>
+<span id="cb29-6"><a></a>  <span class="fu">group_by</span>(spam) <span class="sc">|&gt;</span></span>
+<span id="cb29-7"><a></a>  <span class="fu">mutate</span>(<span class="at">p =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 4
 # Groups:   spam [2]
@@ -690,13 +692,13 @@ b_0+b_1x.
 </div>
 </section><section id="classification-threshold-1.00" class="slide level2"><h2>Classification threshold: 1.00</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29" data-code-line-numbers="2-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>log_aug_full <span class="sc">|&gt;</span></span>
-<span id="cb29-2"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb29-3"><a></a>    <span class="at">.pred_class =</span> <span class="fu">if_else</span>(.pred_1 <span class="sc">&lt;=</span> <span class="fl">1.00</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
-<span id="cb29-4"><a></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb29-5"><a></a>  <span class="fu">count</span>(spam, .pred_class) <span class="sc">|&gt;</span></span>
-<span id="cb29-6"><a></a>  <span class="fu">group_by</span>(spam) <span class="sc">|&gt;</span></span>
-<span id="cb29-7"><a></a>  <span class="fu">mutate</span>(<span class="at">p =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31" data-code-line-numbers="2-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>log_aug_full <span class="sc">|&gt;</span></span>
+<span id="cb31-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb31-3"><a></a>    <span class="at">.pred_class =</span> <span class="fu">if_else</span>(.pred_1 <span class="sc">&lt;=</span> <span class="fl">1.00</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb31-4"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb31-5"><a></a>  <span class="fu">count</span>(spam, .pred_class) <span class="sc">|&gt;</span></span>
+<span id="cb31-6"><a></a>  <span class="fu">group_by</span>(spam) <span class="sc">|&gt;</span></span>
+<span id="cb31-7"><a></a>  <span class="fu">mutate</span>(<span class="at">p =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 4
 # Groups:   spam [2]
@@ -708,10 +710,10 @@ b_0+b_1x.
 </div>
 </section><section id="lets-plot-these-error-rates" class="slide level2"><h2>Let’s plot these error rates</h2>
 
-<img data-src="20-logistic-regression-2_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section><section id="roc-curve" class="slide level2 medium"><h2>ROC curve</h2>
+<img data-src="20-logistic-regression-2_files/figure-html/unnamed-chunk-17-1.png" width="672" class="r-stretch"></section><section id="roc-curve" class="slide level2 medium"><h2>ROC curve</h2>
 <p>If we repeat this process for “all” possible thresholds <span class="math inline">\(0\leq p^\star\leq 1\)</span>, we trace out the <strong>receiver operating characteristic curve</strong> (ROC curve), which assesses the model’s performance across a range of thresholds:</p>
 
-<img data-src="20-logistic-regression-2_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section><section id="roc-curve-1" class="slide level2 scrollable"><h2>ROC curve</h2>
+<img data-src="20-logistic-regression-2_files/figure-html/unnamed-chunk-18-1.png" width="672" class="r-stretch"></section><section id="roc-curve-1" class="slide level2 scrollable"><h2>ROC curve</h2>
 <div class="task">
 <p>Which corner of the plot indicates the best model performance?</p>
 </div>
@@ -721,9 +723,9 @@ b_0+b_1x.
 </div>
 </section><section id="roc-for-full-model" class="slide level2"><h2>ROC for full model</h2>
 
-<img data-src="20-logistic-regression-2_files/figure-revealjs/unnamed-chunk-19-1.png" width="960" class="r-stretch"></section><section id="roc-for-simple-model" class="slide level2"><h2>ROC for simple model</h2>
+<img data-src="20-logistic-regression-2_files/figure-html/unnamed-chunk-19-1.png" width="672" class="r-stretch"></section><section id="roc-for-simple-model" class="slide level2"><h2>ROC for simple model</h2>
 
-<img data-src="20-logistic-regression-2_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch"><p>Comparing these two curves, the full model is better.</p>
+<img data-src="20-logistic-regression-2_files/figure-html/unnamed-chunk-20-1.png" width="672" class="r-stretch"><p>Comparing these two curves, the full model is better.</p>
 </section><section id="model-comparison" class="slide level2"><h2>Model comparison</h2>
 <p>The farther up and to the left the ROC curve is, the better the classification accuracy. You can quantify this with the area under the curve.</p>
 <div class="callout callout-note callout-titled callout-style-default">
@@ -750,7 +752,7 @@ b_0+b_1x.
 </ul></section><section id="data-forested" class="slide level2 smaller"><h2>Data: <code>forested</code>
 </h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>forested</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>forested</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7,107 × 20
    forested  year elevation eastness northness roughness tree_no_tree dew_temp
@@ -775,7 +777,7 @@ b_0+b_1x.
 </section><section id="data-forested-1" class="slide level2 smaller"><h2>Data: <code>forested</code>
 </h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="fu">glimpse</span>(forested)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">glimpse</span>(forested)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 7,107
 Columns: 20
@@ -807,7 +809,7 @@ $ county           &lt;fct&gt; Ferry, Thurston, Whatcom, Skamania, Stevens, Stev
 </li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">levels</span>(forested<span class="sc">$</span>forested)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">levels</span>(forested<span class="sc">$</span>forested)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Yes" "No" </code></pre>
 </div>
@@ -864,9 +866,9 @@ $ county           &lt;fct&gt; Ferry, Thurston, Whatcom, Skamania, Stevens, Stev
 <li class="fragment"><p>Spending too much data in testing prevents us from computing a good estimate of model parameters.</p></li>
 </ul></section><section id="the-initial-split" class="slide level2"><h2>The initial split</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">set.seed</span>(<span class="dv">20241112</span>)</span>
-<span id="cb37-2"><a></a>forested_split <span class="ot">&lt;-</span> <span class="fu">initial_split</span>(forested)</span>
-<span id="cb37-3"><a></a>forested_split</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a><span class="fu">set.seed</span>(<span class="dv">20241112</span>)</span>
+<span id="cb39-2"><a></a>forested_split <span class="ot">&lt;-</span> <span class="fu">initial_split</span>(forested)</span>
+<span id="cb39-3"><a></a>forested_split</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;Training/Testing/Total&gt;
 &lt;5330/1777/7107&gt;</code></pre>
@@ -882,12 +884,12 @@ $ county           &lt;fct&gt; Ferry, Thurston, Whatcom, Skamania, Stevens, Stev
 <li class="fragment"><p>Which seed you pick doesn’t matter, as long as you don’t try a bunch of seeds and pick the one that gives you the best performance.</p></li>
 </ul></section><section id="accessing-the-data" class="slide level2"><h2>Accessing the data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a>forested_train <span class="ot">&lt;-</span> <span class="fu">training</span>(forested_split)</span>
-<span id="cb39-2"><a></a>forested_test <span class="ot">&lt;-</span> <span class="fu">testing</span>(forested_split)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a>forested_train <span class="ot">&lt;-</span> <span class="fu">training</span>(forested_split)</span>
+<span id="cb41-2"><a></a>forested_test <span class="ot">&lt;-</span> <span class="fu">testing</span>(forested_split)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="the-training-set" class="slide level2 smaller"><h2>The training set</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a>forested_train</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a>forested_train</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5,330 × 20
    forested  year elevation eastness northness roughness tree_no_tree dew_temp
@@ -911,7 +913,7 @@ $ county           &lt;fct&gt; Ferry, Thurston, Whatcom, Skamania, Stevens, Stev
 </div>
 </section><section id="the-testing-data" class="slide level2 smaller"><h2>The testing data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a>forested_test</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a>forested_test</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1,777 × 20
    forested  year elevation eastness northness roughness tree_no_tree dew_temp
@@ -949,18 +951,18 @@ $ county           &lt;fct&gt; Ferry, Thurston, Whatcom, Skamania, Stevens, Stev
 </section><section id="forested-1" class="slide level2"><h2><code>forested</code></h2>
 <p>What’s the distribution of the outcome, <code>forested</code>?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a><span class="fu">ggplot</span>(forested_train, <span class="fu">aes</span>(<span class="at">x =</span> forested)) <span class="sc">+</span></span>
-<span id="cb44-2"><a></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a><span class="fu">ggplot</span>(forested_train, <span class="fu">aes</span>(<span class="at">x =</span> forested)) <span class="sc">+</span></span>
+<span id="cb46-2"><a></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="20-logistic-regression-2_files/figure-revealjs/unnamed-chunk-26-1.png" width="960" class="r-stretch"></section><section id="forested-2" class="slide level2"><h2><code>forested</code></h2>
+<img data-src="20-logistic-regression-2_files/figure-html/unnamed-chunk-26-1.png" width="672" class="r-stretch"></section><section id="forested-2" class="slide level2"><h2><code>forested</code></h2>
 <p>What’s the distribution of the outcome, <code>forested</code>?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a>forested_train <span class="sc">|&gt;</span></span>
-<span id="cb45-2"><a></a>  <span class="fu">count</span>(forested) <span class="sc">|&gt;</span></span>
-<span id="cb45-3"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb45-4"><a></a>    <span class="at">p =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n)</span>
-<span id="cb45-5"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a>forested_train <span class="sc">|&gt;</span></span>
+<span id="cb47-2"><a></a>  <span class="fu">count</span>(forested) <span class="sc">|&gt;</span></span>
+<span id="cb47-3"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb47-4"><a></a>    <span class="at">p =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n)</span>
+<span id="cb47-5"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 3
   forested     n     p
@@ -972,76 +974,76 @@ $ county           &lt;fct&gt; Ferry, Thurston, Whatcom, Skamania, Stevens, Stev
 </section><section id="precip_annual" class="slide level2"><h2><code>precip_annual</code></h2>
 <p>What’s the distribution of <code>precip_annual</code>?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a><span class="fu">ggplot</span>(forested_train, <span class="fu">aes</span>(<span class="at">x =</span> precip_annual)) <span class="sc">+</span></span>
-<span id="cb47-2"><a></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a><span class="fu">ggplot</span>(forested_train, <span class="fu">aes</span>(<span class="at">x =</span> precip_annual)) <span class="sc">+</span></span>
+<span id="cb49-2"><a></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="20-logistic-regression-2_files/figure-revealjs/unnamed-chunk-28-1.png" width="960" class="r-stretch"></section><section id="forested-and-precip_annual" class="slide level2 smaller"><h2>
+<img data-src="20-logistic-regression-2_files/figure-html/unnamed-chunk-28-1.png" width="672" class="r-stretch"></section><section id="forested-and-precip_annual" class="slide level2 smaller"><h2>
 <code>forested</code> and <code>precip_annual</code>
 </h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb48-2"><a></a>  forested_train,</span>
-<span id="cb48-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> precip_annual, <span class="at">fill =</span> forested, <span class="at">group =</span> forested)</span>
-<span id="cb48-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb48-5"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">200</span>, <span class="at">position =</span> <span class="st">"identity"</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
-<span id="cb48-6"><a></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Yes"</span> <span class="ot">=</span> <span class="st">"forestgreen"</span>, <span class="st">"No"</span> <span class="ot">=</span> <span class="st">"gold2"</span>)) <span class="sc">+</span></span>
-<span id="cb48-7"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb50-2"><a></a>  forested_train,</span>
+<span id="cb50-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> precip_annual, <span class="at">fill =</span> forested, <span class="at">group =</span> forested)</span>
+<span id="cb50-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb50-5"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">200</span>, <span class="at">position =</span> <span class="st">"identity"</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb50-6"><a></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Yes"</span> <span class="ot">=</span> <span class="st">"forestgreen"</span>, <span class="st">"No"</span> <span class="ot">=</span> <span class="st">"gold2"</span>)) <span class="sc">+</span></span>
+<span id="cb50-7"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="20-logistic-regression-2_files/figure-revealjs/unnamed-chunk-29-1.png" width="960" class="r-stretch"></section><section id="forested-and-precip_annual-1" class="slide level2 smaller"><h2>
+<img data-src="20-logistic-regression-2_files/figure-html/unnamed-chunk-29-1.png" width="672" class="r-stretch"></section><section id="forested-and-precip_annual-1" class="slide level2 smaller"><h2>
 <code>forested</code> and <code>precip_annual</code>
 </h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb49" data-code-line-numbers="|5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb49-2"><a></a>  forested_train,</span>
-<span id="cb49-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> precip_annual, <span class="at">fill =</span> forested, <span class="at">group =</span> forested)</span>
-<span id="cb49-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb49-5"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">200</span>, <span class="at">position =</span> <span class="st">"fill"</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
-<span id="cb49-6"><a></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Yes"</span> <span class="ot">=</span> <span class="st">"forestgreen"</span>, <span class="st">"No"</span> <span class="ot">=</span> <span class="st">"gold2"</span>)) <span class="sc">+</span></span>
-<span id="cb49-7"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51" data-code-line-numbers="|5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a></a><span class="fu">ggplot</span>(</span>
+<span id="cb51-2"><a></a>  forested_train,</span>
+<span id="cb51-3"><a></a>  <span class="fu">aes</span>(<span class="at">x =</span> precip_annual, <span class="at">fill =</span> forested, <span class="at">group =</span> forested)</span>
+<span id="cb51-4"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb51-5"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">200</span>, <span class="at">position =</span> <span class="st">"fill"</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb51-6"><a></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Yes"</span> <span class="ot">=</span> <span class="st">"forestgreen"</span>, <span class="st">"No"</span> <span class="ot">=</span> <span class="st">"gold2"</span>)) <span class="sc">+</span></span>
+<span id="cb51-7"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="20-logistic-regression-2_files/figure-revealjs/unnamed-chunk-30-1.png" width="960" class="r-stretch"></section><section id="forested-and-tree_no_tree" class="slide level2 smaller"><h2>
+<img data-src="20-logistic-regression-2_files/figure-html/unnamed-chunk-30-1.png" width="672" class="r-stretch"></section><section id="forested-and-tree_no_tree" class="slide level2 smaller"><h2>
 <code>forested</code> and <code>tree_no_tree</code>
 </h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a><span class="fu">ggplot</span>(forested_train, <span class="fu">aes</span>(<span class="at">x =</span> tree_no_tree, <span class="at">fill =</span> forested)) <span class="sc">+</span></span>
-<span id="cb50-2"><a></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
-<span id="cb50-3"><a></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Yes"</span> <span class="ot">=</span> <span class="st">"forestgreen"</span>, <span class="st">"No"</span> <span class="ot">=</span> <span class="st">"gold2"</span>)) <span class="sc">+</span></span>
-<span id="cb50-4"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="20-logistic-regression-2_files/figure-revealjs/unnamed-chunk-31-1.png" width="960" class="r-stretch"></section><section id="forested-and-lat-lon" class="slide level2 smaller"><h2>
-<code>forested</code> and <code>lat</code> / <code>lon</code>
-</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a></a><span class="fu">ggplot</span>(forested_train, <span class="fu">aes</span>(<span class="at">x =</span> lon, <span class="at">y =</span> lat, <span class="at">color =</span> forested)) <span class="sc">+</span></span>
-<span id="cb51-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
-<span id="cb51-3"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Yes"</span> <span class="ot">=</span> <span class="st">"forestgreen"</span>, <span class="st">"No"</span> <span class="ot">=</span> <span class="st">"gold2"</span>)) <span class="sc">+</span></span>
-<span id="cb51-4"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="20-logistic-regression-2_files/figure-revealjs/unnamed-chunk-32-1.png" width="960" class="r-stretch"></section><section id="precip_annual-and-lat-lon" class="slide level2 smaller"><h2>
-<code>precip_annual</code> and <code>lat</code> / <code>lon</code>
-</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a><span class="fu">ggplot</span>(forested_train, <span class="fu">aes</span>(<span class="at">x =</span> lon, <span class="at">y =</span> lat, <span class="at">color =</span> precip_annual)) <span class="sc">+</span></span>
-<span id="cb52-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
-<span id="cb52-3"><a></a>  <span class="fu">labs</span>(<span class="at">color =</span> <span class="st">"annual</span><span class="sc">\n</span><span class="st">precipitation</span><span class="sc">\n</span><span class="st">(mm × 100)"</span>) <span class="sc">+</span></span>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a><span class="fu">ggplot</span>(forested_train, <span class="fu">aes</span>(<span class="at">x =</span> tree_no_tree, <span class="at">fill =</span> forested)) <span class="sc">+</span></span>
+<span id="cb52-2"><a></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
+<span id="cb52-3"><a></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Yes"</span> <span class="ot">=</span> <span class="st">"forestgreen"</span>, <span class="st">"No"</span> <span class="ot">=</span> <span class="st">"gold2"</span>)) <span class="sc">+</span></span>
 <span id="cb52-4"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="20-logistic-regression-2_files/figure-revealjs/unnamed-chunk-33-1.png" width="960" class="r-stretch"></section></section><section><section id="two-warnings-about-logistic-regression" class="title-slide slide level1 center"><h1>Two warnings about logistic regression</h1>
+<img data-src="20-logistic-regression-2_files/figure-html/unnamed-chunk-31-1.png" width="672" class="r-stretch"></section><section id="forested-and-lat-lon" class="slide level2 smaller"><h2>
+<code>forested</code> and <code>lat</code> / <code>lon</code>
+</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a></a><span class="fu">ggplot</span>(forested_train, <span class="fu">aes</span>(<span class="at">x =</span> lon, <span class="at">y =</span> lat, <span class="at">color =</span> forested)) <span class="sc">+</span></span>
+<span id="cb53-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb53-3"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Yes"</span> <span class="ot">=</span> <span class="st">"forestgreen"</span>, <span class="st">"No"</span> <span class="ot">=</span> <span class="st">"gold2"</span>)) <span class="sc">+</span></span>
+<span id="cb53-4"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="20-logistic-regression-2_files/figure-html/unnamed-chunk-32-1.png" width="672" class="r-stretch"></section><section id="precip_annual-and-lat-lon" class="slide level2 smaller"><h2>
+<code>precip_annual</code> and <code>lat</code> / <code>lon</code>
+</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a></a><span class="fu">ggplot</span>(forested_train, <span class="fu">aes</span>(<span class="at">x =</span> lon, <span class="at">y =</span> lat, <span class="at">color =</span> precip_annual)) <span class="sc">+</span></span>
+<span id="cb54-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb54-3"><a></a>  <span class="fu">labs</span>(<span class="at">color =</span> <span class="st">"annual</span><span class="sc">\n</span><span class="st">precipitation</span><span class="sc">\n</span><span class="st">(mm × 100)"</span>) <span class="sc">+</span></span>
+<span id="cb54-4"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="20-logistic-regression-2_files/figure-html/unnamed-chunk-33-1.png" width="672" class="r-stretch"></section></section><section><section id="two-warnings-about-logistic-regression" class="title-slide slide level1 center"><h1>Two warnings about logistic regression</h1>
 
 </section><section id="fyi-the-response-variable-must-be-a-factor" class="slide level2"><h2>FYI: the response variable <em>must</em> be a factor</h2>
 <p><code>forested</code> already comes as a factor, so we’re lucky:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a></a><span class="fu">class</span>(forested<span class="sc">$</span>forested)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a></a><span class="fu">class</span>(forested<span class="sc">$</span>forested)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "factor"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a></a><span class="fu">levels</span>(forested<span class="sc">$</span>forested)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a></a><span class="fu">levels</span>(forested<span class="sc">$</span>forested)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Yes" "No" </code></pre>
 </div>
@@ -1049,8 +1051,8 @@ $ county           &lt;fct&gt; Ferry, Thurston, Whatcom, Skamania, Stevens, Stev
 <div class="fragment">
 <p>But if it didn’t, things would not work:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a></a><span class="fu">logistic_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb57-2"><a></a>  <span class="fu">fit</span>(<span class="fu">as.numeric</span>(forested) <span class="sc">~</span> precip_annual, <span class="at">data =</span> forested_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a></a><span class="fu">logistic_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb59-2"><a></a>  <span class="fu">fit</span>(<span class="fu">as.numeric</span>(forested) <span class="sc">~</span> precip_annual, <span class="at">data =</span> forested_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <pre><code>Error in `check_outcome()`:
 ! For a classification model, the outcome should be a &lt;factor&gt;, not a
@@ -1061,7 +1063,7 @@ $ county           &lt;fct&gt; Ferry, Thurston, Whatcom, Skamania, Stevens, Stev
 </section><section id="fyi-the-base-level-is-treated-as-failure-0" class="slide level2 medium"><h2>FYI: the base level is treated as “failure” (0)</h2>
 <p>The base level here is “Yes”, so “No” is treated as “success” (1):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a></a><span class="fu">levels</span>(forested<span class="sc">$</span>forested)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a></a><span class="fu">levels</span>(forested<span class="sc">$</span>forested)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Yes" "No" </code></pre>
 </div>
@@ -1069,8 +1071,8 @@ $ county           &lt;fct&gt; Ferry, Thurston, Whatcom, Skamania, Stevens, Stev
 <div class="fragment">
 <p>As a result, this code:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a></a><span class="fu">logistic_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb61-2"><a></a>  <span class="fu">fit</span>(forested <span class="sc">~</span> precip_annual, <span class="at">data =</span> forested_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a></a><span class="fu">logistic_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb63-2"><a></a>  <span class="fu">fit</span>(forested <span class="sc">~</span> precip_annual, <span class="at">data =</span> forested_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="fragment">
@@ -1337,41 +1339,6 @@ $ county           &lt;fct&gt; Ferry, Thurston, Whatcom, Skamania, Stevens, Stev
           RevealZoom
         ]
       });
-    </script><script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
     </script><script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
