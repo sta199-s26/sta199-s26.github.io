@@ -81,12 +81,12 @@ df_sample <- df_full |>
 ## Question 2 - Visualize
 
 Visualize the relationship between `distance` (x) and `air_time` (y) using a scatter plot.
-Add a regression line to the scatter plot, but do not display the standard error ribbon around the regression line.
+Add a regression line to the scatter plot, but do not display the standard error ribbon around the regression line. Comment on the observed relationship.
 
 ## Question 3 - Bootstrap
 
 Compute a 95% bootstrap interval for the slope of the regression line for predicting `air_time` from `distance`.
-In your code, use 1,000 bootstrap samples when simulating your bootstrap distribution.
+In your code, use 1,000 bootstrap samples when simulating your bootstrap distribution. Note that you should have already set a seed in your answer to Question 1; thus, you should not set a new seed.
 
 In your narrative, provide an interpretation of the 95% confidence interval for the slope (hint: refer back to "notes 22" on the course website).
 
@@ -107,8 +107,6 @@ obs_fit <- rdu_flights_sample |>
 
 ```{r}
 #| eval: false
-set.seed(___)
-
 boot_dist <- rdu_flights_sample |>
   specify(_____ ~ ______) |>
   generate(reps = ____, type = _______) |>
