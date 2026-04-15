@@ -190,4 +190,4 @@ By now you should also be familiar with how to submit your assignment in Gradesc
 -   You'll receive feedback on your lab on Gradescope within a week.
 
 Good luck, and have fun with it!
-::::
+
