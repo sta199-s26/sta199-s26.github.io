@@ -97,6 +97,8 @@ website:
             text: Lab 6
           - href: lab/lab-7.qmd
             text: Lab 7
+          - href: lab/lab-8.qmd
+            text: Lab 8            
       - section: "Homework"
         contents:
           - href: hw/hw-1.qmd
@@ -111,6 +113,8 @@ website:
             text: Homework 5
           - href: hw/hw-6.qmd
             text: Homework 6
+          - href: hw/hw-7.qmd
+            text: Homework 7            
       - section: "Project"
         contents:
           - href: project/description.qmd
