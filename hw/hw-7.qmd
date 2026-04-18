@@ -1,6 +1,6 @@
 ---
 title: HW 7
-description: "Due: Wed, Apr 29, 11:59 pm"
+description: "Due: Wed, Apr 22, 11:59 pm"
 categories: HW
 filters:
   - ../remove-fmt-skip.lua
