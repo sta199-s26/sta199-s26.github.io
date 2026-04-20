@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="John Zito">
 <meta name="dcterms.date" content="2026-04-20">
-<title>Hypothesis testing – STA 199 Spring 2026</title>
+<title>Inference overview – STA 199 Spring 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -18,6 +18,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -63,10 +98,38 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<meta property="og:title" content="Hypothesis testing – STA 199 Spring 2026">
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+<meta property="og:title" content="Inference overview – STA 199 Spring 2026">
 <meta property="og:description" content="Lecture 24">
+<meta property="og:image" content="https://sta199-s26.github.io/slides/images/24/duke-chamber.png">
 <meta property="og:site_name" content="STA 199 Spring 2026">
+<meta property="og:image:height" content="1524">
+<meta property="og:image:width" content="1014">
 </head>
 <body class="nav-sidebar docked quarto-light">
 
@@ -75,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Hypothesis testing</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Inference overview</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -419,13 +482,59 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
 <li><a href="#while-you-wait-participate" id="toc-while-you-wait-participate" class="nav-link active" data-scroll-target="#while-you-wait-participate">While you wait: Participate 📱💻</a></li>
-  <li><a href="#summer-wanana" id="toc-summer-wanana" class="nav-link" data-scroll-target="#summer-wanana">Summer Wanana</a></li>
   <li><a href="#chamber-music-tonight-and-tomorrow" id="toc-chamber-music-tonight-and-tomorrow" class="nav-link" data-scroll-target="#chamber-music-tonight-and-tomorrow">Chamber music tonight and tomorrow</a></li>
+  <li><a href="#spread-the-word-summer-wanana" id="toc-spread-the-word-summer-wanana" class="nav-link" data-scroll-target="#spread-the-word-summer-wanana">Spread the word! Summer WANANA!</a></li>
+  <li><a href="#sorry-gang" id="toc-sorry-gang" class="nav-link" data-scroll-target="#sorry-gang">Sorry gang</a></li>
+  <li><a href="#the-final-exam" id="toc-the-final-exam" class="nav-link" data-scroll-target="#the-final-exam">The final exam</a></li>
+  <li>
+<a href="#recap-statistical-inference" id="toc-recap-statistical-inference" class="nav-link" data-scroll-target="#recap-statistical-inference">Recap: statistical inference</a>
+  <ul class="collapse">
+<li><a href="#the-bottom-line-at-the-top" id="toc-the-bottom-line-at-the-top" class="nav-link" data-scroll-target="#the-bottom-line-at-the-top">The bottom line, at the top</a></li>
+  <li><a href="#the-population-model-greek-letters-no-hats" id="toc-the-population-model-greek-letters-no-hats" class="nav-link" data-scroll-target="#the-population-model-greek-letters-no-hats">The population model (greek letters, no hats)</a></li>
+  <li><a href="#three-branches-of-statistical-government" id="toc-three-branches-of-statistical-government" class="nav-link" data-scroll-target="#three-branches-of-statistical-government">“Three branches of statistical government”</a></li>
+  <li><a href="#point-estimation-roman-letters-hats" id="toc-point-estimation-roman-letters-hats" class="nav-link" data-scroll-target="#point-estimation-roman-letters-hats">Point estimation (roman letters, hats!)</a></li>
+  <li><a href="#point-estimation" id="toc-point-estimation" class="nav-link" data-scroll-target="#point-estimation">Point estimation</a></li>
+  <li><a href="#point-estimation-1" id="toc-point-estimation-1" class="nav-link" data-scroll-target="#point-estimation-1">Point estimation</a></li>
+  <li><a href="#sampling-uncertainty" id="toc-sampling-uncertainty" class="nav-link" data-scroll-target="#sampling-uncertainty">Sampling uncertainty</a></li>
+  <li><a href="#bootstrap-distribution" id="toc-bootstrap-distribution" class="nav-link" data-scroll-target="#bootstrap-distribution">Bootstrap distribution</a></li>
+  <li><a href="#confidence-interval" id="toc-confidence-interval" class="nav-link" data-scroll-target="#confidence-interval">Confidence interval</a></li>
+  <li><a href="#hypothesis-testing" id="toc-hypothesis-testing" class="nav-link" data-scroll-target="#hypothesis-testing">Hypothesis testing</a></li>
+  <li><a href="#hypothesis-testing-1" id="toc-hypothesis-testing-1" class="nav-link" data-scroll-target="#hypothesis-testing-1">Hypothesis testing</a></li>
+  <li><a href="#null-distribution" id="toc-null-distribution" class="nav-link" data-scroll-target="#null-distribution">Null distribution</a></li>
+  <li><a href="#null-distribution-versus-reality" id="toc-null-distribution-versus-reality" class="nav-link" data-scroll-target="#null-distribution-versus-reality">Null distribution versus reality</a></li>
+  <li><a href="#null-distribution-versus-reality-1" id="toc-null-distribution-versus-reality-1" class="nav-link" data-scroll-target="#null-distribution-versus-reality-1">Null distribution versus reality</a></li>
+  <li><a href="#null-distribution-versus-reality-2" id="toc-null-distribution-versus-reality-2" class="nav-link" data-scroll-target="#null-distribution-versus-reality-2">Null distribution versus reality</a></li>
+  <li><a href="#the-main-idea" id="toc-the-main-idea" class="nav-link" data-scroll-target="#the-main-idea">The main idea</a></li>
+  <li><a href="#p-value" id="toc-p-value" class="nav-link" data-scroll-target="#p-value"><em>p</em>-value</a></li>
+  <li><a href="#p-value-1" id="toc-p-value-1" class="nav-link" data-scroll-target="#p-value-1"><em>p</em>-value</a></li>
+  <li><a href="#p-value-2" id="toc-p-value-2" class="nav-link" data-scroll-target="#p-value-2"><em>p</em>-value</a></li>
+  <li><a href="#p-value-3" id="toc-p-value-3" class="nav-link" data-scroll-target="#p-value-3"><em>p</em>-value</a></li>
+  <li><a href="#discernibility-level" id="toc-discernibility-level" class="nav-link" data-scroll-target="#discernibility-level">Discernibility level</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#wooclap-a-palooza" id="toc-wooclap-a-palooza" class="nav-link" data-scroll-target="#wooclap-a-palooza">Wooclap-a-palooza</a>
+  <ul class="collapse">
+<li><a href="#get-in-there" id="toc-get-in-there" class="nav-link" data-scroll-target="#get-in-there">Get in there</a></li>
+  <li><a href="#what-is-b_1" id="toc-what-is-b_1" class="nav-link" data-scroll-target="#what-is-b_1">What is <span class="math inline">\(b_1\)</span>?</a></li>
+  <li><a href="#what-is-b_0" id="toc-what-is-b_0" class="nav-link" data-scroll-target="#what-is-b_0">What is <span class="math inline">\(b_0\)</span>?</a></li>
+  <li><a href="#which-of-these-could-be-a-bootstrap-sample" id="toc-which-of-these-could-be-a-bootstrap-sample" class="nav-link" data-scroll-target="#which-of-these-could-be-a-bootstrap-sample">Which of these could be a bootstrap sample?</a></li>
+  <li><a href="#which-is-a-98-confidence-interval" id="toc-which-is-a-98-confidence-interval" class="nav-link" data-scroll-target="#which-is-a-98-confidence-interval">Which is a 98% confidence interval?</a></li>
+  <li><a href="#match-the-picture-to-the-p-value." id="toc-match-the-picture-to-the-p-value." class="nav-link" data-scroll-target="#match-the-picture-to-the-p-value.">Match the picture to the p-value.</a></li>
+  <li><a href="#which-could-be-the-null-distribution-of-the-test" id="toc-which-could-be-the-null-distribution-of-the-test" class="nav-link" data-scroll-target="#which-could-be-the-null-distribution-of-the-test">Which could be the null distribution of the test?</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#application-exercise" id="toc-application-exercise" class="nav-link" data-scroll-target="#application-exercise">Application exercise</a>
+  <ul class="collapse">
+<li><a href="#ae-24-card-krueger" id="toc-ae-24-card-krueger" class="nav-link" data-scroll-target="#ae-24-card-krueger">ae-24-card-krueger</a></li>
+  </ul>
+</li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/slides/24-inference-overview.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="24-inference-overview-slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Hypothesis testing</h1>
+<h1 class="title">Inference overview</h1>
 <p class="subtitle lead">Lecture 24</p>
 </div>
 
@@ -463,11 +572,15 @@ ul.task-list li input[type="checkbox"] {
 <div class="columns">
 <div class="column" style="width:70%;">
 <div class="wooclap">
-<p>TBD</p>
+<p>What is a p-value?</p>
 <div class="wooclap-choices">
 <ul>
-<li>TBD</li>
-</ul>
+<li>The probability that the null hypothesis is true given your result.</li>
+<li>The probability of a result as or more extreme than the one you got.</li>
+<li>The probability of a result as or more extreme than the one you got assuming the null is true.</li>
+<li>
+</li><li>
+</li></ul>
 </div>
 </div>
 </div><div class="column" style="width:30%;">
@@ -484,14 +597,557 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-</section><section id="summer-wanana" class="level2"><h2 class="anchored" data-anchor-id="summer-wanana">Summer Wanana</h2>
-<p>What the summer kids get (young Lou)</p>
-<p>What you got (old Lou)</p>
 </section><section id="chamber-music-tonight-and-tomorrow" class="level2"><h2 class="anchored" data-anchor-id="chamber-music-tonight-and-tomorrow">Chamber music tonight and tomorrow</h2>
-<p>Several past, present, and future(!) students; Many bangers and bops, including JZ favorites by Ravel and Fauré.</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img src="images/24/duke-chamber.png" class="img-fluid"></p>
+</div><div class="column" style="width:60%;">
+<ul>
+<li>
+<a href="https://music.duke.edu/events/chamber-music-duke-concert-1">April 20 @ 6PM (Nelson Music Room on East)</a>;</li>
+<li>
+<a href="https://music.duke.edu/events/chamber-music-duke-concert-2">April 21 @ 7:30 PM (Baldwin)</a>;</li>
+<li>Several past, present, and future(!) students;</li>
+<li>Many bangers and bops, including JZ favorites by Ravel and Fauré.</li>
+</ul>
+</div>
+</div>
+</section><section id="spread-the-word-summer-wanana" class="level2"><h2 class="anchored" data-anchor-id="spread-the-word-summer-wanana">Spread the word! Summer WANANA!</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Summer Session 1</li>
+<li>May 13 - June 25</li>
+<li>Katie Solarz!</li>
+</ul>
+<p><img src="images/24/lab-7.jpg" class="img-fluid" style="width:75.0%"></p>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Summer Session 2</li>
+<li>June 29 - August 10</li>
+<li>Josh Lim!</li>
+</ul>
+<p><img src="images/24/josh.jpeg" class="img-fluid"></p>
+</div>
+</div>
+</section><section id="sorry-gang" class="level2"><h2 class="anchored" data-anchor-id="sorry-gang">Sorry gang</h2>
+<div class="columns">
+<div class="column fragment" style="width:50%;">
+<p>What the summer kids will get:</p>
+<p><img src="images/24/young-lou.png" class="img-fluid"></p>
+</div>
+<div class="column fragment" style="width:50%;">
+<p>What you got:</p>
+<p><img src="images/24/old-lou.png" class="img-fluid"></p>
+</div>
+</div>
+</section><section id="the-final-exam" class="level2"><h2 class="anchored" data-anchor-id="the-final-exam">The final exam</h2>
+<ul>
+<li>Monday May 1 @ 2pm in Griffith Theater</li>
+<li>Make Testing Center appointments now!</li>
+<li>Similar style and format to midterms</li>
+<li>Longer than midterm, but shouldn’t take full 3 hours</li>
+<li>Cumulative, with <em>a bit</em> more weight on the new inference stuff</li>
+<li>As before, you get both sides of one 8.5” x 11” sheet of notes, prepared however you want.</li>
+</ul></section><section id="recap-statistical-inference" class="level1"><h1>Recap: statistical inference</h1>
+<section id="the-bottom-line-at-the-top" class="level2"><h2 class="anchored" data-anchor-id="the-bottom-line-at-the-top">The bottom line, at the top</h2>
+<ul>
+<li>Data science is the messy, real-world <em>art</em> of converting data into knowledge;</li>
+<li>Statistics is the mathematical study of quantifying uncertainty about that knowledge to help guide decision-making.</li>
+</ul></section><section id="the-population-model-greek-letters-no-hats" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="the-population-model-greek-letters-no-hats">The population model (greek letters, no hats)</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>This is an <em>idealized</em> representation of the data: <span class="math display">\[
+y = \beta_0+\beta_1x +\varepsilon;
+\]</span></p></li>
+<li><p>There is some “true line” floating out there with a “true slope” <span class="math inline">\(\beta_1\)</span> and “true intercept” <span class="math inline">\(\beta_0\)</span>;</p></li>
+<li><p>With infinite amounts of perfectly measured data, we could know <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> exactly;</p></li>
+<li><p>We don’t have that, so we must use finite amounts of imperfect data to <em>estimate</em>;</p></li>
+<li><p>We are especially interested in <span class="math inline">\(\beta_1\)</span> because is characterizes the association between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, which is useful for <em>prediction</em>.</p></li>
+</ul>
+</div>
+</section><section id="three-branches-of-statistical-government" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="three-branches-of-statistical-government">“Three branches of statistical government”</h2>
+<p><span class="math inline">\(\beta_1\)</span> is an unknown quantity we are trying to learn about using noisy, imperfect data. Learning comes in three flavors:</p>
+<div class="incremental">
+<ul class="incremental">
+<li><p><strong>POINT ESTIMATION</strong>: get a single-number best guess for <span class="math inline">\(\beta_1\)</span>;</p></li>
+<li><p><strong>INTERVAL ESTIMATION</strong>: get a range of likely values for <span class="math inline">\(\beta_1\)</span> that characterizes (sampling) uncertainty;</p></li>
+<li><p><strong>HYPOTHESIS TESTING</strong>: use the data to distinguish competing claims about <span class="math inline">\(\beta_1\)</span>.</p></li>
+</ul>
+</div>
+</section><section id="point-estimation-roman-letters-hats" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="point-estimation-roman-letters-hats">Point estimation (roman letters, hats!)</h2>
+<p>We estimate <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> with the coefficients of the best fit line:</p>
+<p><span class="math display">\[
+\hat{y}=b_0+b_1x.
+\]</span></p>
+<p>“Best” means “least squares.” We pick the estimates so that the sum of squared residuals is as small as possible. <a href="https://seeing-theory.brown.edu/regression-analysis/index.html">Play around!</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/24/least_squares.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+</section><section id="point-estimation" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="point-estimation">Point estimation</h2>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">mtcars</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">wt</span>, y <span class="op">=</span> <span class="va">mpg</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_smooth</span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="24-inference-overview_files/figure-revealjs/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="point-estimation-1" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="point-estimation-1">Point estimation</h2>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">mpg</span> <span class="op">~</span> <span class="va">wt</span>, data <span class="op">=</span> <span class="va">mtcars</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">tidy</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  term        estimate std.error statistic  p.value
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)    37.3      1.88      19.9  8.24e-19
+2 wt             -5.34     0.559     -9.56 1.29e-10</code></pre>
+</div>
+</div>
+</section><section id="sampling-uncertainty" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="sampling-uncertainty">Sampling uncertainty</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>
+<p>How do our point estimates vary across alternative, hypothetical datasets?</p>
+<ul class="incremental">
+<li>If they vary alot, uncertainty is high, and results are unreliable;</li>
+<li>if they vary only a little, uncertainty is low, and results are more reliable.</li>
+</ul>
+</li>
+<li><p>We can use the <em>bootstrap</em> to construct alternative datasets and assess the sensitivity of our estimates to changes in the data.</p></li>
+</ul>
+</div>
+</section><section id="bootstrap-distribution" class="level2 medium scrollable"><h2 class="medium scrollable anchored" data-anchor-id="bootstrap-distribution">Bootstrap distribution</h2>
+<p>This histogram displays variation in the slope estimate across alternative datasets.</p>
+<ul>
+<li>Large spread &gt;&gt; high uncertainty;</li>
+<li>Small spread &gt;&gt; lower uncertainty.</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="24-inference-overview_files/figure-revealjs/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section id="confidence-interval" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="confidence-interval">Confidence interval</h2>
+<p>Pick a range that swallows up a large % of the histogram:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="24-inference-overview_files/figure-revealjs/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We use quantiles (think IQR) but there are other ways.</p>
+</section><section id="hypothesis-testing" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="hypothesis-testing">Hypothesis testing</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>Two competing claims about <span class="math inline">\(\beta_1\)</span>: <span class="math display">\[
+\begin{aligned}
+H_0&amp;: \beta_1=0\quad(\text{nothing going on})\\
+H_A&amp;: \beta_1\neq0\quad(\text{something going on})
+\end{aligned}
+\]</span></p></li>
+<li><p>Do the data strongly favor one or the other?</p></li>
+<li><p>How can we quantify this?</p></li>
+</ul>
+</div>
+</section><section id="hypothesis-testing-1" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="hypothesis-testing-1">Hypothesis testing</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>
+<p>Think hypothetically: if the null hypothesis were in fact true, would my results be out of the ordinary?</p>
+<ul class="incremental">
+<li>if no, then the null could be true;</li>
+<li>if yes, then the null might be bogus;</li>
+</ul>
+</li>
+<li><p>My results represent the reality of actual data. If they conflict with the null, then you throw out the null and stick with reality;</p></li>
+<li><p>How do we <em>quantify</em> “would my results be out of the ordinary”?</p></li>
+</ul>
+</div>
+</section><section id="null-distribution" class="level2 medium scrollable"><h2 class="medium scrollable anchored" data-anchor-id="null-distribution">Null distribution</h2>
+<p>If the null happened to be true, how would we expect our results to vary across datasets? We can use simulation to answer this:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="24-inference-overview_files/figure-revealjs/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This is how the world should look <em>if the null is true</em>.</p>
+</section><section id="null-distribution-versus-reality" class="level2 medium scrollable"><h2 class="medium scrollable anchored" data-anchor-id="null-distribution-versus-reality">Null distribution versus reality</h2>
+<p>Locate the <em>actual</em> results of your <em>actual</em> data analysis under the null distribution. Are they in the middle? Are they in the tails?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="24-inference-overview_files/figure-revealjs/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Are these results in harmony or conflict with the null?</p>
+</section><section id="null-distribution-versus-reality-1" class="level2 medium scrollable"><h2 class="medium scrollable anchored" data-anchor-id="null-distribution-versus-reality-1">Null distribution versus reality</h2>
+<p>Locate the <em>actual</em> results of your <em>actual</em> data analysis under the null distribution. Are they in the middle? Are they in the tails?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="24-inference-overview_files/figure-revealjs/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Are these results in harmony or conflict with the null?</p>
+</section><section id="null-distribution-versus-reality-2" class="level2 medium scrollable"><h2 class="medium scrollable anchored" data-anchor-id="null-distribution-versus-reality-2">Null distribution versus reality</h2>
+<p>Locate the <em>actual</em> results of your <em>actual</em> data analysis under the null distribution. Are they in the middle? Are they in the tails?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="24-inference-overview_files/figure-revealjs/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Are these results in harmony or conflict with the null?</p>
+</section><section id="the-main-idea" class="level2"><h2 class="anchored" data-anchor-id="the-main-idea">The main idea</h2>
+<ul>
+<li>The point estimate is <em>reality</em>. That’s what the data say;</li>
+<li>The null distribution is <em>hypothetical</em>;</li>
+<li>Are the reality and the hypothetical in harmony or conflict?
+<ul>
+<li>If harmony, the null remains plausible and cannot be dismissed;</li>
+<li>If conflict, go with reality (reject the null).</li>
+</ul>
+</li>
+<li>Instead of eyeballing a picture, how can we <em>quantity</em> the degree of “harmoniousness” between reality and the hypothetical?</li>
+</ul></section><section id="p-value" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="p-value">
+<em>p</em>-value</h2>
+<div class="incremental">
+<p>The <span class="math inline">\(p\)</span>-value is the probability of being <em>even farther out</em> in the tails of the null distribution than your results already were.</p>
+<ul class="incremental">
+<li><p>if this number is very low, then your results would be out of the ordinary if the null were true, so maybe the null was never true to begin with;</p></li>
+<li><p>if this number is high, then your results may be perfectly compatible with the null.</p></li>
+</ul>
+</div>
+</section><section id="p-value-1" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="p-value-1">
+<em>p</em>-value</h2>
+<p><em>p</em>-value is the fraction of the histogram area shaded red:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="24-inference-overview_files/figure-revealjs/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>. . .</p>
+<p>Big ol’ <em>p</em>-value. Null remains plausible</p>
+</section><section id="p-value-2" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="p-value-2">
+<em>p</em>-value</h2>
+<p><em>p</em>-value is the fraction of the histogram area shaded red:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="24-inference-overview_files/figure-revealjs/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>. . .</p>
+<p><em>p</em>-value is basically zero. Null looks bogus.</p>
+</section><section id="p-value-3" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="p-value-3">
+<em>p</em>-value</h2>
+<p><em>p</em>-value is the fraction of the histogram area shaded red:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="24-inference-overview_files/figure-revealjs/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>. . .</p>
+<p><em>p</em>-value is…kinda small? Null looks…?</p>
+</section><section id="discernibility-level" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="discernibility-level">Discernibility level</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>How do we decide if the <em>p</em>-value is big enough or small enough?</p></li>
+<li>
+<p>Pick a threshold <span class="math inline">\(\alpha\in[0,\,1]\)</span> called the <em>discernibility level</em>:</p>
+<ul class="incremental">
+<li>If <span class="math inline">\(p\text{-value} &lt; \alpha\)</span>, reject null and accept alternative;</li>
+<li>If <span class="math inline">\(p\text{-value} \geq \alpha\)</span>, fail to reject null;</li>
+</ul>
+</li>
+<li><p>Standard choices: <span class="math inline">\(\alpha=0.01, 0.05, 0.1, 0.15\)</span>.</p></li>
+</ul>
+</div>
+</section></section><section id="wooclap-a-palooza" class="level1"><h1>Wooclap-a-palooza</h1>
+<section id="get-in-there" class="level2"><h2 class="anchored" data-anchor-id="get-in-there">Get in there</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div id="" class="qrcode"></div>
+<script type="text/javascript">
+(function() {
+  var script = document.currentScript;
+  var qrcode = script.previousElementSibling;
+  qrcode.qrcode = new QRCode(qrcode, {"colorDark":"#000000","colorLight":"#ffffff","height":"500","text":"https://app.wooclap.com/TNRPMB?from=instruction-slide","width":"500"});
+  script.remove();
+})();
+</script>
+</div><div class="column" style="width:40%;">
+<p>Scan the QR code or go <a href="https://app.wooclap.com/TNRPMB?from=instruction-slide">HERE</a>. Log in with your Duke NetID.</p>
+</div>
+</div>
+</section><section id="what-is-b_1" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="what-is-b_1">What is <span class="math inline">\(b_1\)</span>?</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="24-inference-overview_files/figure-revealjs/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="columns">
+<div class="column">
+<ol type="a">
+<li>-1 / 2</li>
+<li>0</li>
+<li>1 / 4</li>
+</ol>
+</div><div class="column">
+<ol start="4" type="a">
+<li>1 / 2</li>
+<li>1</li>
+<li>2</li>
+</ol>
+</div>
+</div>
+</section><section id="what-is-b_0" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="what-is-b_0">What is <span class="math inline">\(b_0\)</span>?</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="24-inference-overview_files/figure-revealjs/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="columns">
+<div class="column">
+<ol type="a">
+<li>1</li>
+<li>1.75</li>
+</ol>
+</div><div class="column">
+<ol start="3" type="a">
+<li>2</li>
+<li>3</li>
+</ol>
+</div>
+</div>
+</section><section id="which-of-these-could-be-a-bootstrap-sample" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="which-of-these-could-be-a-bootstrap-sample">Which of these could be a bootstrap sample?</h2>
+<p>This is the original dataset:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 5
+Columns: 1
+$ scores &lt;dbl&gt; 1.563, -0.515, 1.206, -0.411, 0.523</code></pre>
+</div>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 12%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 12%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 12%">
+</colgroup>
+<thead><tr class="header">
+<th>A</th>
+<th></th>
+<th></th>
+<th>B</th>
+<th></th>
+<th></th>
+<th>C</th>
+<th></th>
+<th></th>
+<th>D</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>-0.515</td>
+<td></td>
+<td></td>
+<td>1.563</td>
+<td></td>
+<td></td>
+<td>-0.515</td>
+<td></td>
+<td></td>
+<td>-0.522</td>
+</tr>
+<tr class="even">
+<td>-0.411</td>
+<td></td>
+<td></td>
+<td>-0.411</td>
+<td></td>
+<td></td>
+<td>-0.411</td>
+<td></td>
+<td></td>
+<td>1.12</td>
+</tr>
+<tr class="odd">
+<td>1.563</td>
+<td></td>
+<td></td>
+<td>-0.515</td>
+<td></td>
+<td></td>
+<td>-0.411</td>
+<td></td>
+<td></td>
+<td>1.206</td>
+</tr>
+<tr class="even">
+<td>-0.515</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.563</td>
+<td></td>
+<td></td>
+<td>0.68</td>
+</tr>
+<tr class="odd">
+<td>-0.515</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.563</td>
+<td></td>
+<td></td>
+<td>0.83</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.523</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.563</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></section><section id="which-is-a-98-confidence-interval" class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="which-is-a-98-confidence-interval">Which is a 98% confidence interval?</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="24-inference-overview_files/figure-revealjs/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="columns">
+<div class="column">
+<ol type="a">
+<li><span class="math inline">\((q_{0.01},\,q_{0.91})\)</span></li>
+<li><span class="math inline">\((q_{0.01},\,q_{0.99})\)</span></li>
+</ol>
+</div><div class="column">
+<ol start="3" type="a">
+<li><span class="math inline">\((q_{0.09},\,q_{0.95})\)</span></li>
+<li><span class="math inline">\((q_{0.05},\,q_{0.99})\)</span></li>
+</ol>
+</div>
+</div>
+</section><section id="match-the-picture-to-the-p-value." class="level2 scrollable"><h2 class="scrollable anchored" data-anchor-id="match-the-picture-to-the-p-value.">Match the picture to the p-value.</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="24-inference-overview_files/figure-revealjs/unnamed-chunk-16-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="columns">
+<div class="column">
+<ol type="a">
+<li>0</li>
+<li>0.045</li>
+</ol>
+</div><div class="column">
+<ol start="3" type="a">
+<li>0.32</li>
+<li>0.62</li>
+</ol>
+</div>
+</div>
+</section><section id="which-could-be-the-null-distribution-of-the-test" class="level2 medium scrollable"><h2 class="medium scrollable anchored" data-anchor-id="which-could-be-the-null-distribution-of-the-test">Which could be the null distribution of the test?</h2>
+<p>For these hypotheses</p>
+<p><span class="math display">\[
+\begin{aligned}
+H_0&amp;: \beta_1=5\\
+H_A&amp;: \beta_1\neq 5.
+\end{aligned}
+\]</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="24-inference-overview_files/figure-revealjs/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section><section id="application-exercise" class="level1"><h1>Application exercise</h1>
+<section id="ae-24-card-krueger" class="level2"><h2 class="anchored" data-anchor-id="ae-24-card-krueger">ae-24-card-krueger</h2>
+<div class="appex">
+<ul>
+<li><p>Go to your ae project in RStudio.</p></li>
+<li><p>If you haven’t yet done so, make sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.</p></li>
+<li><p>If you haven’t yet done so, click Pull to get today’s application exercise file: <em>ae-24-card-krueger.qmd</em>.</p></li>
+<li><p>Work through the application exercise in class, and render, commit, and push your edits.</p></li>
+</ul>
+</div>
 
 
-</section></main><!-- /main --><script>
+</section></section></main><!-- /main --><script>
   // htmlwidgets need to know to resize themselves when slides are shown/hidden.
   // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
   // slide changes (different for each slide format).

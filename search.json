@@ -7786,7 +7786,7 @@
     "href": "index.html",
     "title": "STA 199 Introduction to Data Science and Statistical Thinking",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 7\n\n🧑‍🏫 Welcome!\n🖥️ slides 00\n\n\n\n\n\nThu, Jan 8\n\n💻 Lab 0\nlab 0\n\n\n\n1\nMon, Jan 12\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\n🧑‍🏫 Meet the toolkit\n🖥️ slides 01  🗒️ notes 01\n\n\n\n\n\nWed, Jan 14\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\n🧑‍🏫 Grammar of data visualization\n🖥️ slides 02  🗒️ notes 02\n\n\n\n\n\nThu, Jan 15\n\n💻 Lab 1\nlab 1\nLab 1 @ end of section\n\n\n2\nMon, Jan 19\n\n❌ MLK Day - No Lecture\n\n\n\n\n\n\nWed, Jan 21\n📗 r4ds - chp 2  📗 r4ds - chp 3.1-3.5  🎥 Grammar of data transformation  🎥 Code along :: Flights and pipes\n\n🧑‍🏫 Grammar of data transformation\n🖥️ slides 03  🗒️ notes 03  💃 ae 03\n\n\n\n\n\nThu, Jan 22\n\n💻 Lab 2\n\nlab 2 hw 1\n\nLab 2 @ end of section\n\n\n3\nMon, Jan 26\n📗 r4ds - chp 3.6-3.7  🎥 Visualizing and summarizing categorical data  🎥 Visualizing and summarizing numerical data  🎥 Visualizing and summarizing relationships  🎥 Code along :: Star Wars characters\n\n🧑‍🏫 Exploratory Data Analysis I\n🖥️ slides 04  🗒️ notes 04\n\n\n\n\n\nWed, Jan 28\n📘 ims - chp 5  📘 ims - chp 6  🎥 Code along :: Diving deeper with Palmer Penguins\n\n🧑‍🏫 Exploratory Data Analysis II\n🖥️ slides 05  🗒️ notes 05  🕺 ae 05\n\nHW 1 @ 11:59 pm\n\n\n\nThu, Jan 29\n\n💻 Lab 3\n\nlab 3 hw 2\n\nLab 3 @ end of section\n\n\n4\nMon, Feb 2\n🎥 Tidy data  🎥 Tidying data  🎥 Code along :: Country populations over time  📗 r4ds - chp 5\n\n🧑‍🏫 Tidying data\n🖥️ slides 06  🗒️ notes 06  🧞 ae 06\n\n\n\n\n\nWed, Feb 4\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\n🧑‍🏫 Joining data\n🖥️ slides 07  🗒️ notes 07  🦧 ae 07\n\nHW 2 @ 11:59 pm\n\n\n\nThu, Feb 5\n\n💻 Lab 4\n\nlab 4 hw 3\n\nLab 4 @ end of section\n\n\n5\nMon, Feb 9\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\n🧑‍🏫 Data types and classes\n🖥️ slides 08  🗒️ notes 08  😭 follow-up\n\n\n\n\n\nWed, Feb 11\n\n🧑‍🏫 More data types and classes\n🖥️ slides 09  🗒️ notes 09  🐙 ae 08\n\nHW 3 @ 11:59 pm\n\n\n\nThu, Feb 12\n\n💻 Lab 5\n\nlab 5 hw 4\n\nLab 5 @ end of section\n\n\n6\nMon, Feb 16\n🎥 Importing data  🎥 Code along :: Halving CO2 emissions  🎥 Code along :: Student survey  📗 r4ds - chp 7  📗 r4ds - chp 17.1 - 17.3\n\n🧑‍🏫 Importing and recoding data\n🖥️ slides 10  🗒️ notes 10  🐢 ae 09  🪐 ae 10\n\n\n\n\n\nWed, Feb 18\n🎥 Web scraping basics  🎥 Code along :: Scraping an eCommerce page  📗 r4ds - chp 24.1 - 24.6  🎥 Code along :: Scraping many eCommerce pages  🎥 Web scraping considerations  📗 r4ds - chp 25.1 - 25.2\n\n🧑‍🏫 Webscraping\n🖥️ slides 11  🗒️ notes 11  🌐 ae 11\n\nHW 4 @ 11:59 pm\n\n\n\nThu, Feb 19\n\n💻 Project Milestone 1 + 2\n🎉 Description  🪨 Milestone 1  🧗 Milestone 2\n\n\n\n\n7\nMon, Feb 23\n\n🧑‍🏫 Data science wrap-up\n🖥️ slides 12  🗒️ notes 12\n\n\n\n\n\nTue, Feb 24\n\n\n\nProject Proposal @ 11:59 pm\n\n\n\nWed, Feb 25\n💫 study guide\n\n📝 Midterm 1\n\n\n\n\n\n\nThu, Feb 26\n\n❌ No lab!\n\n\n\n\n\n\nSun, Mar 1\n\n\n\nTake-home 1 @ 11:59 pm\n\n\n8\nMon, Mar 2\n📘 ims - chp 6  📗 r4ds - chp 10\n\n🧑‍🏫 Communicating results\n🖥️ slides 13  🗒️ notes 13  🍊 ae 13  🤢 ae 14\n\nPeer evaluation 1 @ 11:59 pm\n\n\n\nWed, Mar 4\n🎥 Misrepresentation  🎥 Data privacy  🎥 Algorithmic bias  🎥 Code along :: Sectors and services\n\n🧑‍🏫 Data science ethics\n🖥️ slides 14\n\nMilestone 3 @ 11:59 pm\n\n\n\nThu, Mar 5\n\n💻 Project Milestone 4\n🪨 Milestone 4\n\nMilestone 4 @ end-of-lab\n\n\n9\nMon, Mar 9\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nWed, Mar 11\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nThu, Mar 12\n\n❌ Spring Break - No Lab\n\n\n\n\n\n10\nMon, Mar 16\n🎥 The language of models  🎥 Linear regression with a numerical predictor  📘 ims - chp 7.1\n\n🧑‍🏫 The language of models\n🖥️ slides 15  🗒️ notes 15  🧊 ae 15\n\nPeer evaluation 2 @ 11:59 pm\n\n\n\nWed, Mar 18\n🎥 Linear regression with a categorical predictor  🎥 Outliers in linear regression  🎥 Code along :: Modeling fish  📘 ims - chp 7.2\n\n🧑‍🏫 Simple linear regression\n🖥️ slides 16  🗒️ notes 16  🐧 ae 16\n\n\n\n\n\nThu, Mar 19\n\n💻 Lab 6\n\nlab 6 hw 5\n\nLab 6 @ end of section\n\n\n11\nMon, Mar 23\n🎥 Linear regression with multiple predictors  🎥 Main and interaction effects  📘 ims - chp 8.1-8.2  📘 ims - chp 8.3-8.5\n\n🧑‍🏫 Multiple linear regression I\n🖥️ slides 17  🗒️ notes 17\n\n\n\n\n\nWed, Mar 25\n🎥 Code along :: Modeling interest rates\n\n🧑‍🏫 Multiple linear regression II\n🖥️ slides 18  🗒️ notes 18 🤑 ae 18\n\nHW 5 @ 11:59 pm\n\n\n\nThu, Mar 26\n\n💻 Final Project Presentation\n\n\n\n\n\nSun, Mar 29\n\n\n\nFinal Project @ 11:59 pm\n\n\n12\nMon, Mar 30\n🎥 Logistic regression  🎥 Code along :: Building a spam filter  📘 ims - chp 9\n\n🧑‍🏫 Logistic regression I\n🖥️ slides 19  🗒️ notes 19  ✉️ ae 19\n\nPeer evaluation 3 @ 11:59 pm\n\n\n\nWed, Apr 1\n🎥 Clasification and decision errors  🎥 Overfitting and spending your data\n\n🧑‍🏫 Logistic regression II\n🖥️ slides 20  🗒️ notes 20  🌲 ae 20\n\n\n\n\n\nThu, Apr 2\n\n💻 Lab 7\n\nlab 7 hw 6\n\nLab 7 @ end of section\n\n\n13\nMon, Apr 6\n🎥 Code along :: Forest classification\n\n🧑‍🏫 Modeling wrap-up\n🖥️ slides 21  🗒️ notes 21\n\nHW 6 @ 11:59 pm\n\n\n\nWed, Apr 8\n💫 study guide\n\n📝 Midterm 2\n\n\n\n\n\n\nThu, Apr 9\n\n❌ We’re all tired - No lab!\n\n\n\n\n\n\nSun, Apr 12\n\n\n\nTake-home 2 @ 11:59 pm\n\n\n14\nMon, Apr 13\n🎥 Quantifying uncertainty  🎥 Bootstrapping  🎥 Code along :: Bootstrapping Duke Forest houses  📘 ims - chp 11  📘 ims - chp 12\n\n🧑‍🏫 Interval estimation\n🖥️ slides 22  🗒️ notes 22  🏠 ae 22\n\n\n\n\n\nWed, Apr 15\n🎥 Hypothesis testing  📘 ims - chp 11\n\n🧑‍🏫 Hypothesis testing\n🖥️ slides 23  🗒️ notes 23  🏠 ae 23\n\n\n\n\n\nThu, Apr 16\n\n💻 Lab 8\n\nlab 8 hw 7\n\nLab 8 @ end of section\n\n\n15\nMon, Apr 20\n\n🧑‍🏫 More inference\n\n\n\n\n\nWed, Apr 22\n\n🧑‍🏫 Farewell!\n\nHW 7 @ 11:59 pm\n\n\n\nThu, Apr 23\n\n❌ Reading Days - No Lab\n\n\n\n\n\n16\nFri, May 1\n\n📝 Final (2pm - 5pm)",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 7\n\n🧑‍🏫 Welcome!\n🖥️ slides 00\n\n\n\n\n\nThu, Jan 8\n\n💻 Lab 0\nlab 0\n\n\n\n1\nMon, Jan 12\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\n🧑‍🏫 Meet the toolkit\n🖥️ slides 01  🗒️ notes 01\n\n\n\n\n\nWed, Jan 14\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\n🧑‍🏫 Grammar of data visualization\n🖥️ slides 02  🗒️ notes 02\n\n\n\n\n\nThu, Jan 15\n\n💻 Lab 1\nlab 1\nLab 1 @ end of section\n\n\n2\nMon, Jan 19\n\n❌ MLK Day - No Lecture\n\n\n\n\n\n\nWed, Jan 21\n📗 r4ds - chp 2  📗 r4ds - chp 3.1-3.5  🎥 Grammar of data transformation  🎥 Code along :: Flights and pipes\n\n🧑‍🏫 Grammar of data transformation\n🖥️ slides 03  🗒️ notes 03  💃 ae 03\n\n\n\n\n\nThu, Jan 22\n\n💻 Lab 2\n\nlab 2 hw 1\n\nLab 2 @ end of section\n\n\n3\nMon, Jan 26\n📗 r4ds - chp 3.6-3.7  🎥 Visualizing and summarizing categorical data  🎥 Visualizing and summarizing numerical data  🎥 Visualizing and summarizing relationships  🎥 Code along :: Star Wars characters\n\n🧑‍🏫 Exploratory Data Analysis I\n🖥️ slides 04  🗒️ notes 04\n\n\n\n\n\nWed, Jan 28\n📘 ims - chp 5  📘 ims - chp 6  🎥 Code along :: Diving deeper with Palmer Penguins\n\n🧑‍🏫 Exploratory Data Analysis II\n🖥️ slides 05  🗒️ notes 05  🕺 ae 05\n\nHW 1 @ 11:59 pm\n\n\n\nThu, Jan 29\n\n💻 Lab 3\n\nlab 3 hw 2\n\nLab 3 @ end of section\n\n\n4\nMon, Feb 2\n🎥 Tidy data  🎥 Tidying data  🎥 Code along :: Country populations over time  📗 r4ds - chp 5\n\n🧑‍🏫 Tidying data\n🖥️ slides 06  🗒️ notes 06  🧞 ae 06\n\n\n\n\n\nWed, Feb 4\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\n🧑‍🏫 Joining data\n🖥️ slides 07  🗒️ notes 07  🦧 ae 07\n\nHW 2 @ 11:59 pm\n\n\n\nThu, Feb 5\n\n💻 Lab 4\n\nlab 4 hw 3\n\nLab 4 @ end of section\n\n\n5\nMon, Feb 9\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\n🧑‍🏫 Data types and classes\n🖥️ slides 08  🗒️ notes 08  😭 follow-up\n\n\n\n\n\nWed, Feb 11\n\n🧑‍🏫 More data types and classes\n🖥️ slides 09  🗒️ notes 09  🐙 ae 08\n\nHW 3 @ 11:59 pm\n\n\n\nThu, Feb 12\n\n💻 Lab 5\n\nlab 5 hw 4\n\nLab 5 @ end of section\n\n\n6\nMon, Feb 16\n🎥 Importing data  🎥 Code along :: Halving CO2 emissions  🎥 Code along :: Student survey  📗 r4ds - chp 7  📗 r4ds - chp 17.1 - 17.3\n\n🧑‍🏫 Importing and recoding data\n🖥️ slides 10  🗒️ notes 10  🐢 ae 09  🪐 ae 10\n\n\n\n\n\nWed, Feb 18\n🎥 Web scraping basics  🎥 Code along :: Scraping an eCommerce page  📗 r4ds - chp 24.1 - 24.6  🎥 Code along :: Scraping many eCommerce pages  🎥 Web scraping considerations  📗 r4ds - chp 25.1 - 25.2\n\n🧑‍🏫 Webscraping\n🖥️ slides 11  🗒️ notes 11  🌐 ae 11\n\nHW 4 @ 11:59 pm\n\n\n\nThu, Feb 19\n\n💻 Project Milestone 1 + 2\n🎉 Description  🪨 Milestone 1  🧗 Milestone 2\n\n\n\n\n7\nMon, Feb 23\n\n🧑‍🏫 Data science wrap-up\n🖥️ slides 12  🗒️ notes 12\n\n\n\n\n\nTue, Feb 24\n\n\n\nProject Proposal @ 11:59 pm\n\n\n\nWed, Feb 25\n💫 study guide\n\n📝 Midterm 1\n\n\n\n\n\n\nThu, Feb 26\n\n❌ No lab!\n\n\n\n\n\n\nSun, Mar 1\n\n\n\nTake-home 1 @ 11:59 pm\n\n\n8\nMon, Mar 2\n📘 ims - chp 6  📗 r4ds - chp 10\n\n🧑‍🏫 Communicating results\n🖥️ slides 13  🗒️ notes 13  🍊 ae 13  🤢 ae 14\n\nPeer evaluation 1 @ 11:59 pm\n\n\n\nWed, Mar 4\n🎥 Misrepresentation  🎥 Data privacy  🎥 Algorithmic bias  🎥 Code along :: Sectors and services\n\n🧑‍🏫 Data science ethics\n🖥️ slides 14\n\nMilestone 3 @ 11:59 pm\n\n\n\nThu, Mar 5\n\n💻 Project Milestone 4\n🪨 Milestone 4\n\nMilestone 4 @ end-of-lab\n\n\n9\nMon, Mar 9\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nWed, Mar 11\n\n❌ Spring Break - No Lecture\n\n\n\n\n\n\nThu, Mar 12\n\n❌ Spring Break - No Lab\n\n\n\n\n\n10\nMon, Mar 16\n🎥 The language of models  🎥 Linear regression with a numerical predictor  📘 ims - chp 7.1\n\n🧑‍🏫 The language of models\n🖥️ slides 15  🗒️ notes 15  🧊 ae 15\n\nPeer evaluation 2 @ 11:59 pm\n\n\n\nWed, Mar 18\n🎥 Linear regression with a categorical predictor  🎥 Outliers in linear regression  🎥 Code along :: Modeling fish  📘 ims - chp 7.2\n\n🧑‍🏫 Simple linear regression\n🖥️ slides 16  🗒️ notes 16  🐧 ae 16\n\n\n\n\n\nThu, Mar 19\n\n💻 Lab 6\n\nlab 6 hw 5\n\nLab 6 @ end of section\n\n\n11\nMon, Mar 23\n🎥 Linear regression with multiple predictors  🎥 Main and interaction effects  📘 ims - chp 8.1-8.2  📘 ims - chp 8.3-8.5\n\n🧑‍🏫 Multiple linear regression I\n🖥️ slides 17  🗒️ notes 17\n\n\n\n\n\nWed, Mar 25\n🎥 Code along :: Modeling interest rates\n\n🧑‍🏫 Multiple linear regression II\n🖥️ slides 18  🗒️ notes 18 🤑 ae 18\n\nHW 5 @ 11:59 pm\n\n\n\nThu, Mar 26\n\n💻 Final Project Presentation\n\n\n\n\n\nSun, Mar 29\n\n\n\nFinal Project @ 11:59 pm\n\n\n12\nMon, Mar 30\n🎥 Logistic regression  🎥 Code along :: Building a spam filter  📘 ims - chp 9\n\n🧑‍🏫 Logistic regression I\n🖥️ slides 19  🗒️ notes 19  ✉️ ae 19\n\nPeer evaluation 3 @ 11:59 pm\n\n\n\nWed, Apr 1\n🎥 Clasification and decision errors  🎥 Overfitting and spending your data\n\n🧑‍🏫 Logistic regression II\n🖥️ slides 20  🗒️ notes 20  🌲 ae 20\n\n\n\n\n\nThu, Apr 2\n\n💻 Lab 7\n\nlab 7 hw 6\n\nLab 7 @ end of section\n\n\n13\nMon, Apr 6\n🎥 Code along :: Forest classification\n\n🧑‍🏫 Modeling wrap-up\n🖥️ slides 21  🗒️ notes 21\n\nHW 6 @ 11:59 pm\n\n\n\nWed, Apr 8\n💫 study guide\n\n📝 Midterm 2\n\n\n\n\n\n\nThu, Apr 9\n\n❌ We’re all tired - No lab!\n\n\n\n\n\n\nSun, Apr 12\n\n\n\nTake-home 2 @ 11:59 pm\n\n\n14\nMon, Apr 13\n🎥 Quantifying uncertainty  🎥 Bootstrapping  🎥 Code along :: Bootstrapping Duke Forest houses  📘 ims - chp 11  📘 ims - chp 12\n\n🧑‍🏫 Interval estimation\n🖥️ slides 22  🗒️ notes 22  🏠 ae 22\n\n\n\n\n\nWed, Apr 15\n🎥 Hypothesis testing  📘 ims - chp 11\n\n🧑‍🏫 Hypothesis testing\n🖥️ slides 23  🗒️ notes 23  👹 ae 23\n\n\n\n\n\nThu, Apr 16\n\n💻 Lab 8\n\nlab 8 hw 7\n\nLab 8 @ end of section\n\n\n15\nMon, Apr 20\n\n🧑‍🏫 More inference\n🖥️ slides 24  🗒️ notes 24\n\n\n\n\n\nWed, Apr 22\n\n🧑‍🏫 Farewell!\n\nHW 7 @ 11:59 pm\n\n\n\nThu, Apr 23\n\n❌ Reading Days - No Lab\n\n\n\n\n\n16\nFri, May 1\n\n📝 Final (2pm - 5pm)",
     "crumbs": [
       "Syllabus",
       "Schedule"
@@ -17395,51 +17395,485 @@
   {
     "objectID": "slides/24-inference-overview.html",
     "href": "slides/24-inference-overview.html",
-    "title": "Hypothesis testing",
+    "title": "Inference overview",
     "section": "",
-    "text": "TBD\n\n\nTBD\n\n\n\n\n\n\nScan the QR code or go HERE. Log in with your Duke NetID."
+    "text": "What is a p-value?\n\n\nThe probability that the null hypothesis is true given your result.\nThe probability of a result as or more extreme than the one you got.\nThe probability of a result as or more extreme than the one you got assuming the null is true.\n\n\n\n\n\n\n\n\nScan the QR code or go HERE. Log in with your Duke NetID."
   },
   {
     "objectID": "slides/24-inference-overview.html#while-you-wait-participate",
     "href": "slides/24-inference-overview.html#while-you-wait-participate",
-    "title": "Hypothesis testing",
+    "title": "Inference overview",
     "section": "",
-    "text": "TBD\n\n\nTBD\n\n\n\n\n\n\nScan the QR code or go HERE. Log in with your Duke NetID."
-  },
-  {
-    "objectID": "slides/24-inference-overview.html#summer-wanana",
-    "href": "slides/24-inference-overview.html#summer-wanana",
-    "title": "Hypothesis testing",
-    "section": "Summer Wanana",
-    "text": "Summer Wanana\nWhat the summer kids get (young Lou)\nWhat you got (old Lou)"
+    "text": "What is a p-value?\n\n\nThe probability that the null hypothesis is true given your result.\nThe probability of a result as or more extreme than the one you got.\nThe probability of a result as or more extreme than the one you got assuming the null is true.\n\n\n\n\n\n\n\n\nScan the QR code or go HERE. Log in with your Duke NetID."
   },
   {
     "objectID": "slides/24-inference-overview.html#chamber-music-tonight-and-tomorrow",
     "href": "slides/24-inference-overview.html#chamber-music-tonight-and-tomorrow",
-    "title": "Hypothesis testing",
+    "title": "Inference overview",
     "section": "Chamber music tonight and tomorrow",
-    "text": "Chamber music tonight and tomorrow\nSeveral past, present, and future(!) students; Many bangers and bops, including JZ favorites by Ravel and Fauré."
+    "text": "Chamber music tonight and tomorrow\n\n\n\n\n\n\nApril 20 @ 6PM (Nelson Music Room on East);\n\nApril 21 @ 7:30 PM (Baldwin);\nSeveral past, present, and future(!) students;\nMany bangers and bops, including JZ favorites by Ravel and Fauré."
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#spread-the-word-summer-wanana",
+    "href": "slides/24-inference-overview.html#spread-the-word-summer-wanana",
+    "title": "Inference overview",
+    "section": "Spread the word! Summer WANANA!",
+    "text": "Spread the word! Summer WANANA!\n\n\n\nSummer Session 1\nMay 13 - June 25\nKatie Solarz!\n\n\n\n\nSummer Session 2\nJune 29 - August 10\nJosh Lim!"
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#sorry-gang",
+    "href": "slides/24-inference-overview.html#sorry-gang",
+    "title": "Inference overview",
+    "section": "Sorry gang",
+    "text": "Sorry gang\n\n\nWhat the summer kids will get:\n\n\n\nWhat you got:"
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#the-final-exam",
+    "href": "slides/24-inference-overview.html#the-final-exam",
+    "title": "Inference overview",
+    "section": "The final exam",
+    "text": "The final exam\n\nMonday May 1 @ 2pm in Griffith Theater\nMake Testing Center appointments now!\nSimilar style and format to midterms\nLonger than midterm, but shouldn’t take full 3 hours\nCumulative, with a bit more weight on the new inference stuff\nAs before, you get both sides of one 8.5” x 11” sheet of notes, prepared however you want."
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#the-bottom-line-at-the-top",
+    "href": "slides/24-inference-overview.html#the-bottom-line-at-the-top",
+    "title": "Inference overview",
+    "section": "The bottom line, at the top",
+    "text": "The bottom line, at the top\n\nData science is the messy, real-world art of converting data into knowledge;\nStatistics is the mathematical study of quantifying uncertainty about that knowledge to help guide decision-making."
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#the-population-model-greek-letters-no-hats",
+    "href": "slides/24-inference-overview.html#the-population-model-greek-letters-no-hats",
+    "title": "Inference overview",
+    "section": "The population model (greek letters, no hats)",
+    "text": "The population model (greek letters, no hats)\n\n\nThis is an idealized representation of the data: \\[\ny = \\beta_0+\\beta_1x +\\varepsilon;\n\\]\nThere is some “true line” floating out there with a “true slope” \\(\\beta_1\\) and “true intercept” \\(\\beta_0\\);\nWith infinite amounts of perfectly measured data, we could know \\(\\beta_0\\) and \\(\\beta_1\\) exactly;\nWe don’t have that, so we must use finite amounts of imperfect data to estimate;\nWe are especially interested in \\(\\beta_1\\) because is characterizes the association between \\(x\\) and \\(y\\), which is useful for prediction."
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#three-branches-of-statistical-government",
+    "href": "slides/24-inference-overview.html#three-branches-of-statistical-government",
+    "title": "Inference overview",
+    "section": "“Three branches of statistical government”",
+    "text": "“Three branches of statistical government”\n\\(\\beta_1\\) is an unknown quantity we are trying to learn about using noisy, imperfect data. Learning comes in three flavors:\n\n\nPOINT ESTIMATION: get a single-number best guess for \\(\\beta_1\\);\nINTERVAL ESTIMATION: get a range of likely values for \\(\\beta_1\\) that characterizes (sampling) uncertainty;\nHYPOTHESIS TESTING: use the data to distinguish competing claims about \\(\\beta_1\\)."
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#point-estimation-roman-letters-hats",
+    "href": "slides/24-inference-overview.html#point-estimation-roman-letters-hats",
+    "title": "Inference overview",
+    "section": "Point estimation (roman letters, hats!)",
+    "text": "Point estimation (roman letters, hats!)\nWe estimate \\(\\beta_0\\) and \\(\\beta_1\\) with the coefficients of the best fit line:\n\\[\n\\hat{y}=b_0+b_1x.\n\\]\n“Best” means “least squares.” We pick the estimates so that the sum of squared residuals is as small as possible. Play around!"
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#point-estimation",
+    "href": "slides/24-inference-overview.html#point-estimation",
+    "title": "Inference overview",
+    "section": "Point estimation",
+    "text": "Point estimation\n\nggplot(mtcars, aes(x = wt, y = mpg)) + \n  geom_point() +\n  geom_smooth(method = \"lm\")"
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#point-estimation-1",
+    "href": "slides/24-inference-overview.html#point-estimation-1",
+    "title": "Inference overview",
+    "section": "Point estimation",
+    "text": "Point estimation\n\nlinear_reg() |&gt;\n  fit(mpg ~ wt, data = mtcars) |&gt;\n  tidy()\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)    37.3      1.88      19.9  8.24e-19\n2 wt             -5.34     0.559     -9.56 1.29e-10"
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#sampling-uncertainty",
+    "href": "slides/24-inference-overview.html#sampling-uncertainty",
+    "title": "Inference overview",
+    "section": "Sampling uncertainty",
+    "text": "Sampling uncertainty\n\n\n\nHow do our point estimates vary across alternative, hypothetical datasets?\n\nIf they vary alot, uncertainty is high, and results are unreliable;\nif they vary only a little, uncertainty is low, and results are more reliable.\n\n\nWe can use the bootstrap to construct alternative datasets and assess the sensitivity of our estimates to changes in the data."
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#bootstrap-distribution",
+    "href": "slides/24-inference-overview.html#bootstrap-distribution",
+    "title": "Inference overview",
+    "section": "Bootstrap distribution",
+    "text": "Bootstrap distribution\nThis histogram displays variation in the slope estimate across alternative datasets.\n\nLarge spread &gt;&gt; high uncertainty;\nSmall spread &gt;&gt; lower uncertainty."
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#confidence-interval",
+    "href": "slides/24-inference-overview.html#confidence-interval",
+    "title": "Inference overview",
+    "section": "Confidence interval",
+    "text": "Confidence interval\nPick a range that swallows up a large % of the histogram:\n\n\n\n\n\n\n\n\nWe use quantiles (think IQR) but there are other ways."
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#hypothesis-testing",
+    "href": "slides/24-inference-overview.html#hypothesis-testing",
+    "title": "Inference overview",
+    "section": "Hypothesis testing",
+    "text": "Hypothesis testing\n\n\nTwo competing claims about \\(\\beta_1\\): \\[\n\\begin{aligned}\nH_0&: \\beta_1=0\\quad(\\text{nothing going on})\\\\\nH_A&: \\beta_1\\neq0\\quad(\\text{something going on})\n\\end{aligned}\n\\]\nDo the data strongly favor one or the other?\nHow can we quantify this?"
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#hypothesis-testing-1",
+    "href": "slides/24-inference-overview.html#hypothesis-testing-1",
+    "title": "Inference overview",
+    "section": "Hypothesis testing",
+    "text": "Hypothesis testing\n\n\n\nThink hypothetically: if the null hypothesis were in fact true, would my results be out of the ordinary?\n\nif no, then the null could be true;\nif yes, then the null might be bogus;\n\n\nMy results represent the reality of actual data. If they conflict with the null, then you throw out the null and stick with reality;\nHow do we quantify “would my results be out of the ordinary”?"
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#null-distribution",
+    "href": "slides/24-inference-overview.html#null-distribution",
+    "title": "Inference overview",
+    "section": "Null distribution",
+    "text": "Null distribution\nIf the null happened to be true, how would we expect our results to vary across datasets? We can use simulation to answer this:\n\n\n\n\n\n\n\n\nThis is how the world should look if the null is true."
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#null-distribution-versus-reality",
+    "href": "slides/24-inference-overview.html#null-distribution-versus-reality",
+    "title": "Inference overview",
+    "section": "Null distribution versus reality",
+    "text": "Null distribution versus reality\nLocate the actual results of your actual data analysis under the null distribution. Are they in the middle? Are they in the tails?\n\n\n\n\n\n\n\n\nAre these results in harmony or conflict with the null?"
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#null-distribution-versus-reality-1",
+    "href": "slides/24-inference-overview.html#null-distribution-versus-reality-1",
+    "title": "Inference overview",
+    "section": "Null distribution versus reality",
+    "text": "Null distribution versus reality\nLocate the actual results of your actual data analysis under the null distribution. Are they in the middle? Are they in the tails?\n\n\n\n\n\n\n\n\nAre these results in harmony or conflict with the null?"
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#null-distribution-versus-reality-2",
+    "href": "slides/24-inference-overview.html#null-distribution-versus-reality-2",
+    "title": "Inference overview",
+    "section": "Null distribution versus reality",
+    "text": "Null distribution versus reality\nLocate the actual results of your actual data analysis under the null distribution. Are they in the middle? Are they in the tails?\n\n\n\n\n\n\n\n\nAre these results in harmony or conflict with the null?"
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#the-main-idea",
+    "href": "slides/24-inference-overview.html#the-main-idea",
+    "title": "Inference overview",
+    "section": "The main idea",
+    "text": "The main idea\n\nThe point estimate is reality. That’s what the data say;\nThe null distribution is hypothetical;\nAre the reality and the hypothetical in harmony or conflict?\n\nIf harmony, the null remains plausible and cannot be dismissed;\nIf conflict, go with reality (reject the null).\n\n\nInstead of eyeballing a picture, how can we quantity the degree of “harmoniousness” between reality and the hypothetical?"
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#p-value",
+    "href": "slides/24-inference-overview.html#p-value",
+    "title": "Inference overview",
+    "section": "\np-value",
+    "text": "p-value\n\nThe \\(p\\)-value is the probability of being even farther out in the tails of the null distribution than your results already were.\n\nif this number is very low, then your results would be out of the ordinary if the null were true, so maybe the null was never true to begin with;\nif this number is high, then your results may be perfectly compatible with the null."
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#p-value-1",
+    "href": "slides/24-inference-overview.html#p-value-1",
+    "title": "Inference overview",
+    "section": "\np-value",
+    "text": "p-value\np-value is the fraction of the histogram area shaded red:\n\n\n\n\n\n\n\n\n. . .\nBig ol’ p-value. Null remains plausible"
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#p-value-2",
+    "href": "slides/24-inference-overview.html#p-value-2",
+    "title": "Inference overview",
+    "section": "\np-value",
+    "text": "p-value\np-value is the fraction of the histogram area shaded red:\n\n\n\n\n\n\n\n\n. . .\np-value is basically zero. Null looks bogus."
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#p-value-3",
+    "href": "slides/24-inference-overview.html#p-value-3",
+    "title": "Inference overview",
+    "section": "\np-value",
+    "text": "p-value\np-value is the fraction of the histogram area shaded red:\n\n\n\n\n\n\n\n\n. . .\np-value is…kinda small? Null looks…?"
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#discernibility-level",
+    "href": "slides/24-inference-overview.html#discernibility-level",
+    "title": "Inference overview",
+    "section": "Discernibility level",
+    "text": "Discernibility level\n\n\nHow do we decide if the p-value is big enough or small enough?\n\nPick a threshold \\(\\alpha\\in[0,\\,1]\\) called the discernibility level:\n\nIf \\(p\\text{-value} &lt; \\alpha\\), reject null and accept alternative;\nIf \\(p\\text{-value} \\geq \\alpha\\), fail to reject null;\n\n\nStandard choices: \\(\\alpha=0.01, 0.05, 0.1, 0.15\\)."
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#get-in-there",
+    "href": "slides/24-inference-overview.html#get-in-there",
+    "title": "Inference overview",
+    "section": "Get in there",
+    "text": "Get in there\n\n\n\n\n\nScan the QR code or go HERE. Log in with your Duke NetID."
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#what-is-b_1",
+    "href": "slides/24-inference-overview.html#what-is-b_1",
+    "title": "Inference overview",
+    "section": "What is \\(b_1\\)?",
+    "text": "What is \\(b_1\\)?\n\n\n\n\n\n\n\n\n\n\n\n-1 / 2\n0\n1 / 4\n\n\n\n1 / 2\n1\n2"
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#what-is-b_0",
+    "href": "slides/24-inference-overview.html#what-is-b_0",
+    "title": "Inference overview",
+    "section": "What is \\(b_0\\)?",
+    "text": "What is \\(b_0\\)?\n\n\n\n\n\n\n\n\n\n\n\n1\n1.75\n\n\n\n2\n3"
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#which-of-these-could-be-a-bootstrap-sample",
+    "href": "slides/24-inference-overview.html#which-of-these-could-be-a-bootstrap-sample",
+    "title": "Inference overview",
+    "section": "Which of these could be a bootstrap sample?",
+    "text": "Which of these could be a bootstrap sample?\nThis is the original dataset:\n\n\nRows: 5\nColumns: 1\n$ scores &lt;dbl&gt; 1.563, -0.515, 1.206, -0.411, 0.523\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA\n\n\nB\n\n\nC\n\n\nD\n\n\n\n-0.515\n\n\n1.563\n\n\n-0.515\n\n\n-0.522\n\n\n-0.411\n\n\n-0.411\n\n\n-0.411\n\n\n1.12\n\n\n1.563\n\n\n-0.515\n\n\n-0.411\n\n\n1.206\n\n\n-0.515\n\n\n\n\n\n1.563\n\n\n0.68\n\n\n-0.515\n\n\n\n\n\n1.563\n\n\n0.83\n\n\n\n\n\n\n\n\n0.523\n\n\n\n\n\n\n\n\n\n\n\n1.563"
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#which-is-a-98-confidence-interval",
+    "href": "slides/24-inference-overview.html#which-is-a-98-confidence-interval",
+    "title": "Inference overview",
+    "section": "Which is a 98% confidence interval?",
+    "text": "Which is a 98% confidence interval?\n\n\n\n\n\n\n\n\n\n\n\n\\((q_{0.01},\\,q_{0.91})\\)\n\\((q_{0.01},\\,q_{0.99})\\)\n\n\n\n\\((q_{0.09},\\,q_{0.95})\\)\n\\((q_{0.05},\\,q_{0.99})\\)"
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#match-the-picture-to-the-p-value.",
+    "href": "slides/24-inference-overview.html#match-the-picture-to-the-p-value.",
+    "title": "Inference overview",
+    "section": "Match the picture to the p-value.",
+    "text": "Match the picture to the p-value.\n\n\n\n\n\n\n\n\n\n\n\n0\n0.045\n\n\n\n0.32\n0.62"
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#which-could-be-the-null-distribution-of-the-test",
+    "href": "slides/24-inference-overview.html#which-could-be-the-null-distribution-of-the-test",
+    "title": "Inference overview",
+    "section": "Which could be the null distribution of the test?",
+    "text": "Which could be the null distribution of the test?\nFor these hypotheses\n\\[\n\\begin{aligned}\nH_0&: \\beta_1=5\\\\\nH_A&: \\beta_1\\neq 5.\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/24-inference-overview.html#ae-24-card-krueger",
+    "href": "slides/24-inference-overview.html#ae-24-card-krueger",
+    "title": "Inference overview",
+    "section": "ae-24-card-krueger",
+    "text": "ae-24-card-krueger\n\n\nGo to your ae project in RStudio.\nIf you haven’t yet done so, make sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.\nIf you haven’t yet done so, click Pull to get today’s application exercise file: ae-24-card-krueger.qmd.\nWork through the application exercise in class, and render, commit, and push your edits."
   },
   {
     "objectID": "slides/24-inference-overview-slides.html#while-you-wait-participate",
     "href": "slides/24-inference-overview-slides.html#while-you-wait-participate",
-    "title": "Hypothesis testing",
+    "title": "Inference overview",
     "section": "While you wait: Participate 📱💻",
-    "text": "While you wait: Participate 📱💻\n\n\n\nTBD\n\n\nTBD\n\n\n\n\n\n\nScan the QR code or go HERE. Log in with your Duke NetID."
-  },
-  {
-    "objectID": "slides/24-inference-overview-slides.html#summer-wanana",
-    "href": "slides/24-inference-overview-slides.html#summer-wanana",
-    "title": "Hypothesis testing",
-    "section": "Summer Wanana",
-    "text": "Summer Wanana\nWhat the summer kids get (young Lou)\nWhat you got (old Lou)"
+    "text": "While you wait: Participate 📱💻\n\n\n\nWhat is a p-value?\n\n\nThe probability that the null hypothesis is true given your result.\nThe probability of a result as or more extreme than the one you got.\nThe probability of a result as or more extreme than the one you got assuming the null is true.\n\n\n\n\n\n\n\n\nScan the QR code or go HERE. Log in with your Duke NetID."
   },
   {
     "objectID": "slides/24-inference-overview-slides.html#chamber-music-tonight-and-tomorrow",
     "href": "slides/24-inference-overview-slides.html#chamber-music-tonight-and-tomorrow",
-    "title": "Hypothesis testing",
+    "title": "Inference overview",
     "section": "Chamber music tonight and tomorrow",
-    "text": "Chamber music tonight and tomorrow\nSeveral past, present, and future(!) students; Many bangers and bops, including JZ favorites by Ravel and Fauré."
+    "text": "Chamber music tonight and tomorrow\n\n\n\n\n\n\nApril 20 @ 6PM (Nelson Music Room on East);\n\nApril 21 @ 7:30 PM (Baldwin);\nSeveral past, present, and future(!) students;\nMany bangers and bops, including JZ favorites by Ravel and Fauré."
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#spread-the-word-summer-wanana",
+    "href": "slides/24-inference-overview-slides.html#spread-the-word-summer-wanana",
+    "title": "Inference overview",
+    "section": "Spread the word! Summer WANANA!",
+    "text": "Spread the word! Summer WANANA!\n\n\n\nSummer Session 1\nMay 13 - June 25\nKatie Solarz!\n\n\n\n\nSummer Session 2\nJune 29 - August 10\nJosh Lim!"
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#sorry-gang",
+    "href": "slides/24-inference-overview-slides.html#sorry-gang",
+    "title": "Inference overview",
+    "section": "Sorry gang",
+    "text": "Sorry gang\n\n\nWhat the summer kids will get:\n\n\nWhat you got:"
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#the-final-exam",
+    "href": "slides/24-inference-overview-slides.html#the-final-exam",
+    "title": "Inference overview",
+    "section": "The final exam",
+    "text": "The final exam\n\nMonday May 1 @ 2pm in Griffith Theater\nMake Testing Center appointments now!\nSimilar style and format to midterms\nLonger than midterm, but shouldn’t take full 3 hours\nCumulative, with a bit more weight on the new inference stuff\nAs before, you get both sides of one 8.5” x 11” sheet of notes, prepared however you want."
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#the-bottom-line-at-the-top",
+    "href": "slides/24-inference-overview-slides.html#the-bottom-line-at-the-top",
+    "title": "Inference overview",
+    "section": "The bottom line, at the top",
+    "text": "The bottom line, at the top\n\nData science is the messy, real-world art of converting data into knowledge;\nStatistics is the mathematical study of quantifying uncertainty about that knowledge to help guide decision-making."
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#the-population-model-greek-letters-no-hats",
+    "href": "slides/24-inference-overview-slides.html#the-population-model-greek-letters-no-hats",
+    "title": "Inference overview",
+    "section": "The population model (greek letters, no hats)",
+    "text": "The population model (greek letters, no hats)\n\nThis is an idealized representation of the data: \\[\ny = \\beta_0+\\beta_1x +\\varepsilon;\n\\]\nThere is some “true line” floating out there with a “true slope” \\(\\beta_1\\) and “true intercept” \\(\\beta_0\\);\nWith infinite amounts of perfectly measured data, we could know \\(\\beta_0\\) and \\(\\beta_1\\) exactly;\nWe don’t have that, so we must use finite amounts of imperfect data to estimate;\nWe are especially interested in \\(\\beta_1\\) because is characterizes the association between \\(x\\) and \\(y\\), which is useful for prediction."
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#three-branches-of-statistical-government",
+    "href": "slides/24-inference-overview-slides.html#three-branches-of-statistical-government",
+    "title": "Inference overview",
+    "section": "“Three branches of statistical government”",
+    "text": "“Three branches of statistical government”\n\\(\\beta_1\\) is an unknown quantity we are trying to learn about using noisy, imperfect data. Learning comes in three flavors:\n\nPOINT ESTIMATION: get a single-number best guess for \\(\\beta_1\\);\nINTERVAL ESTIMATION: get a range of likely values for \\(\\beta_1\\) that characterizes (sampling) uncertainty;\nHYPOTHESIS TESTING: use the data to distinguish competing claims about \\(\\beta_1\\)."
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#point-estimation-roman-letters-hats",
+    "href": "slides/24-inference-overview-slides.html#point-estimation-roman-letters-hats",
+    "title": "Inference overview",
+    "section": "Point estimation (roman letters, hats!)",
+    "text": "Point estimation (roman letters, hats!)\nWe estimate \\(\\beta_0\\) and \\(\\beta_1\\) with the coefficients of the best fit line:\n\\[\n\\hat{y}=b_0+b_1x.\n\\]\n“Best” means “least squares.” We pick the estimates so that the sum of squared residuals is as small as possible. Play around!"
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#point-estimation",
+    "href": "slides/24-inference-overview-slides.html#point-estimation",
+    "title": "Inference overview",
+    "section": "Point estimation",
+    "text": "Point estimation\n\nggplot(mtcars, aes(x = wt, y = mpg)) + \n  geom_point() +\n  geom_smooth(method = \"lm\")"
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#point-estimation-1",
+    "href": "slides/24-inference-overview-slides.html#point-estimation-1",
+    "title": "Inference overview",
+    "section": "Point estimation",
+    "text": "Point estimation\n\nlinear_reg() |&gt;\n  fit(mpg ~ wt, data = mtcars) |&gt;\n  tidy()\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)    37.3      1.88      19.9  8.24e-19\n2 wt             -5.34     0.559     -9.56 1.29e-10"
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#sampling-uncertainty",
+    "href": "slides/24-inference-overview-slides.html#sampling-uncertainty",
+    "title": "Inference overview",
+    "section": "Sampling uncertainty",
+    "text": "Sampling uncertainty\n\n\nHow do our point estimates vary across alternative, hypothetical datasets?\n\nIf they vary alot, uncertainty is high, and results are unreliable;\nif they vary only a little, uncertainty is low, and results are more reliable.\n\n\nWe can use the bootstrap to construct alternative datasets and assess the sensitivity of our estimates to changes in the data."
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#bootstrap-distribution",
+    "href": "slides/24-inference-overview-slides.html#bootstrap-distribution",
+    "title": "Inference overview",
+    "section": "Bootstrap distribution",
+    "text": "Bootstrap distribution\nThis histogram displays variation in the slope estimate across alternative datasets.\n\nLarge spread &gt;&gt; high uncertainty;\nSmall spread &gt;&gt; lower uncertainty."
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#confidence-interval",
+    "href": "slides/24-inference-overview-slides.html#confidence-interval",
+    "title": "Inference overview",
+    "section": "Confidence interval",
+    "text": "Confidence interval\nPick a range that swallows up a large % of the histogram:\n\nWe use quantiles (think IQR) but there are other ways."
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#hypothesis-testing",
+    "href": "slides/24-inference-overview-slides.html#hypothesis-testing",
+    "title": "Inference overview",
+    "section": "Hypothesis testing",
+    "text": "Hypothesis testing\n\nTwo competing claims about \\(\\beta_1\\): \\[\n\\begin{aligned}\nH_0&: \\beta_1=0\\quad(\\text{nothing going on})\\\\\nH_A&: \\beta_1\\neq0\\quad(\\text{something going on})\n\\end{aligned}\n\\]\nDo the data strongly favor one or the other?\nHow can we quantify this?"
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#hypothesis-testing-1",
+    "href": "slides/24-inference-overview-slides.html#hypothesis-testing-1",
+    "title": "Inference overview",
+    "section": "Hypothesis testing",
+    "text": "Hypothesis testing\n\n\nThink hypothetically: if the null hypothesis were in fact true, would my results be out of the ordinary?\n\nif no, then the null could be true;\nif yes, then the null might be bogus;\n\n\nMy results represent the reality of actual data. If they conflict with the null, then you throw out the null and stick with reality;\nHow do we quantify “would my results be out of the ordinary”?"
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#null-distribution",
+    "href": "slides/24-inference-overview-slides.html#null-distribution",
+    "title": "Inference overview",
+    "section": "Null distribution",
+    "text": "Null distribution\nIf the null happened to be true, how would we expect our results to vary across datasets? We can use simulation to answer this:\n\nThis is how the world should look if the null is true."
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#null-distribution-versus-reality",
+    "href": "slides/24-inference-overview-slides.html#null-distribution-versus-reality",
+    "title": "Inference overview",
+    "section": "Null distribution versus reality",
+    "text": "Null distribution versus reality\nLocate the actual results of your actual data analysis under the null distribution. Are they in the middle? Are they in the tails?\n\nAre these results in harmony or conflict with the null?"
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#null-distribution-versus-reality-1",
+    "href": "slides/24-inference-overview-slides.html#null-distribution-versus-reality-1",
+    "title": "Inference overview",
+    "section": "Null distribution versus reality",
+    "text": "Null distribution versus reality\nLocate the actual results of your actual data analysis under the null distribution. Are they in the middle? Are they in the tails?\n\nAre these results in harmony or conflict with the null?"
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#null-distribution-versus-reality-2",
+    "href": "slides/24-inference-overview-slides.html#null-distribution-versus-reality-2",
+    "title": "Inference overview",
+    "section": "Null distribution versus reality",
+    "text": "Null distribution versus reality\nLocate the actual results of your actual data analysis under the null distribution. Are they in the middle? Are they in the tails?\n\nAre these results in harmony or conflict with the null?"
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#the-main-idea",
+    "href": "slides/24-inference-overview-slides.html#the-main-idea",
+    "title": "Inference overview",
+    "section": "The main idea",
+    "text": "The main idea\n\nThe point estimate is reality. That’s what the data say;\nThe null distribution is hypothetical;\nAre the reality and the hypothetical in harmony or conflict?\n\nIf harmony, the null remains plausible and cannot be dismissed;\nIf conflict, go with reality (reject the null).\n\n\nInstead of eyeballing a picture, how can we quantity the degree of “harmoniousness” between reality and the hypothetical?"
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#p-value",
+    "href": "slides/24-inference-overview-slides.html#p-value",
+    "title": "Inference overview",
+    "section": "\np-value",
+    "text": "p-value\nThe \\(p\\)-value is the probability of being even farther out in the tails of the null distribution than your results already were.\n\nif this number is very low, then your results would be out of the ordinary if the null were true, so maybe the null was never true to begin with;\nif this number is high, then your results may be perfectly compatible with the null."
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#p-value-1",
+    "href": "slides/24-inference-overview-slides.html#p-value-1",
+    "title": "Inference overview",
+    "section": "\np-value",
+    "text": "p-value\np-value is the fraction of the histogram area shaded red:\n\n\nBig ol’ p-value. Null remains plausible"
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#p-value-2",
+    "href": "slides/24-inference-overview-slides.html#p-value-2",
+    "title": "Inference overview",
+    "section": "\np-value",
+    "text": "p-value\np-value is the fraction of the histogram area shaded red:\n\n\np-value is basically zero. Null looks bogus."
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#p-value-3",
+    "href": "slides/24-inference-overview-slides.html#p-value-3",
+    "title": "Inference overview",
+    "section": "\np-value",
+    "text": "p-value\np-value is the fraction of the histogram area shaded red:\n\n\np-value is…kinda small? Null looks…?"
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#discernibility-level",
+    "href": "slides/24-inference-overview-slides.html#discernibility-level",
+    "title": "Inference overview",
+    "section": "Discernibility level",
+    "text": "Discernibility level\n\nHow do we decide if the p-value is big enough or small enough?\n\nPick a threshold \\(\\alpha\\in[0,\\,1]\\) called the discernibility level:\n\nIf \\(p\\text{-value} &lt; \\alpha\\), reject null and accept alternative;\nIf \\(p\\text{-value} \\geq \\alpha\\), fail to reject null;\n\n\nStandard choices: \\(\\alpha=0.01, 0.05, 0.1, 0.15\\)."
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#get-in-there",
+    "href": "slides/24-inference-overview-slides.html#get-in-there",
+    "title": "Inference overview",
+    "section": "Get in there",
+    "text": "Get in there\n\n\n\n\n\nScan the QR code or go HERE. Log in with your Duke NetID."
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#what-is-b_1",
+    "href": "slides/24-inference-overview-slides.html#what-is-b_1",
+    "title": "Inference overview",
+    "section": "What is \\(b_1\\)?",
+    "text": "What is \\(b_1\\)?\n\n\n\n\n-1 / 2\n0\n1 / 4\n\n\n\n1 / 2\n1\n2"
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#what-is-b_0",
+    "href": "slides/24-inference-overview-slides.html#what-is-b_0",
+    "title": "Inference overview",
+    "section": "What is \\(b_0\\)?",
+    "text": "What is \\(b_0\\)?\n\n\n\n\n1\n1.75\n\n\n\n2\n3"
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#which-of-these-could-be-a-bootstrap-sample",
+    "href": "slides/24-inference-overview-slides.html#which-of-these-could-be-a-bootstrap-sample",
+    "title": "Inference overview",
+    "section": "Which of these could be a bootstrap sample?",
+    "text": "Which of these could be a bootstrap sample?\nThis is the original dataset:\n\n\nRows: 5\nColumns: 1\n$ scores &lt;dbl&gt; 1.563, -0.515, 1.206, -0.411, 0.523\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA\n\n\nB\n\n\nC\n\n\nD\n\n\n\n-0.515\n\n\n1.563\n\n\n-0.515\n\n\n-0.522\n\n\n-0.411\n\n\n-0.411\n\n\n-0.411\n\n\n1.12\n\n\n1.563\n\n\n-0.515\n\n\n-0.411\n\n\n1.206\n\n\n-0.515\n\n\n\n\n\n1.563\n\n\n0.68\n\n\n-0.515\n\n\n\n\n\n1.563\n\n\n0.83\n\n\n\n\n\n\n\n\n0.523\n\n\n\n\n\n\n\n\n\n\n\n1.563"
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#which-is-a-98-confidence-interval",
+    "href": "slides/24-inference-overview-slides.html#which-is-a-98-confidence-interval",
+    "title": "Inference overview",
+    "section": "Which is a 98% confidence interval?",
+    "text": "Which is a 98% confidence interval?\n\n\n\n\n\\((q_{0.01},\\,q_{0.91})\\)\n\\((q_{0.01},\\,q_{0.99})\\)\n\n\n\n\\((q_{0.09},\\,q_{0.95})\\)\n\\((q_{0.05},\\,q_{0.99})\\)"
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#match-the-picture-to-the-p-value.",
+    "href": "slides/24-inference-overview-slides.html#match-the-picture-to-the-p-value.",
+    "title": "Inference overview",
+    "section": "Match the picture to the p-value.",
+    "text": "Match the picture to the p-value.\n\n\n\n\n0\n0.045\n\n\n\n0.32\n0.62"
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#which-could-be-the-null-distribution-of-the-test",
+    "href": "slides/24-inference-overview-slides.html#which-could-be-the-null-distribution-of-the-test",
+    "title": "Inference overview",
+    "section": "Which could be the null distribution of the test?",
+    "text": "Which could be the null distribution of the test?\nFor these hypotheses\n\\[\n\\begin{aligned}\nH_0&: \\beta_1=5\\\\\nH_A&: \\beta_1\\neq 5.\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/24-inference-overview-slides.html#ae-24-card-krueger",
+    "href": "slides/24-inference-overview-slides.html#ae-24-card-krueger",
+    "title": "Inference overview",
+    "section": "ae-24-card-krueger",
+    "text": "ae-24-card-krueger\n\n\nGo to your ae project in RStudio.\nIf you haven’t yet done so, make sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.\nIf you haven’t yet done so, click Pull to get today’s application exercise file: ae-24-card-krueger.qmd.\nWork through the application exercise in class, and render, commit, and push your edits."
   },
   {
     "objectID": "slides/12-wrap-up.html",
