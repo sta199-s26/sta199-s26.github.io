@@ -39,8 +39,8 @@ What is a p-value?
 - The probability that the null hypothesis is true given your result.
 - The probability of a result as or more extreme than the one you got.
 - The probability of a result as or more extreme than the one you got assuming the null is true.
-- 
-- 
+- The probability that the alternative hypothesis is true given your result.
+- The probability that the null hypothesis and alternative hypothesis are both true given your result.
 :::
 
 :::
