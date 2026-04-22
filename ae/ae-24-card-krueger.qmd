@@ -207,4 +207,5 @@ null_dist |>
   get_p_value(obs_stat = empdiff_state_fit, direction = "two-sided")
 ```
 
-If the null hypothesis were true, and there was indeed no difference between PA and NJ, then the probability of a result as or more extreme than the one we computed would be about 7%%. This is low, which brings the plausibility of the null in doubt, but nevertheless is above standard discernibility levels like 5%, and so strictly speaking our conclusion is that we fail to reject the null. The null remains a possibility worth considering. We can't just reject it out of hand. The data don't speak that strongly in this case.
+If the null hypothesis were true, and there was indeed no difference between PA and NJ, then the probability of a result as or more extreme than the one we computed would be about 7%. This is low, which brings the plausibility of the null in doubt, but nevertheless, the p-value is above standard discernibility levels like 5%. So strictly speaking, our conclusion is that we fail to reject the null. The null remains a possibility worth considering. We can't just reject it out of hand. The data don't speak that strongly in this case.
+
