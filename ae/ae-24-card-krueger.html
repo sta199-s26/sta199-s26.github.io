@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>AE 18: Modelling loan interest rates – STA 199 Spring 2026</title>
+<title>AE 24: minimum wage – STA 199 Spring 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -121,9 +121,9 @@ window.Quarto = {
   typesetMath
 };
 </script>
-<meta property="og:title" content="AE 18: Modelling loan interest rates – STA 199 Spring 2026">
-<meta property="og:description" content="Suggested answers">
-<meta property="og:image" content="https://sta199-s26.github.io/ae/ae-18-modeling-loans_files/figure-html/explore-loans-1.png">
+<meta property="og:title" content="AE 24: minimum wage – STA 199 Spring 2026">
+<meta property="og:description" content="Homepage for STA 199 Introduction to Data Science at Duke University, Spring 2026.">
+<meta property="og:image" content="https://sta199-s26.github.io/ae/ae-24-card-krueger_files/figure-html/unnamed-chunk-3-1.png">
 <meta property="og:site_name" content="STA 199 Spring 2026">
 <meta property="og:image:height" content="960">
 <meta property="og:image:width" content="1344">
@@ -135,7 +135,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">AE 18: Modelling loan interest rates</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">AE 24: minimum wage</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -478,29 +478,31 @@ window.Quarto = {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-<li><a href="#get-to-know-the-data" id="toc-get-to-know-the-data" class="nav-link active" data-scroll-target="#get-to-know-the-data">Get to know the data</a></li>
-  <li><a href="#interest-rate-vs.-credit-utilization-ratio" id="toc-interest-rate-vs.-credit-utilization-ratio" class="nav-link" data-scroll-target="#interest-rate-vs.-credit-utilization-ratio">Interest rate vs.&nbsp;credit utilization ratio</a></li>
-  <li><a href="#interest-rate-vs.-homeownership" id="toc-interest-rate-vs.-homeownership" class="nav-link" data-scroll-target="#interest-rate-vs.-homeownership">Interest rate vs.&nbsp;homeownership</a></li>
+<li><a href="#packages" id="toc-packages" class="nav-link active" data-scroll-target="#packages">Packages</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   <li>
-<a href="#interest-rate-vs.-credit-utilization-and-homeownership" id="toc-interest-rate-vs.-credit-utilization-and-homeownership" class="nav-link" data-scroll-target="#interest-rate-vs.-credit-utilization-and-homeownership">Interest rate vs.&nbsp;credit utilization and homeownership</a>
+<a href="#explore-and-visualize" id="toc-explore-and-visualize" class="nav-link" data-scroll-target="#explore-and-visualize">Explore and visualize</a>
   <ul class="collapse">
-<li><a href="#main-effects-model" id="toc-main-effects-model" class="nav-link" data-scroll-target="#main-effects-model">Main effects model</a></li>
-  <li><a href="#interaction-effects-model" id="toc-interaction-effects-model" class="nav-link" data-scroll-target="#interaction-effects-model">Interaction effects model</a></li>
-  <li><a href="#choosing-a-model" id="toc-choosing-a-model" class="nav-link" data-scroll-target="#choosing-a-model">Choosing a model</a></li>
+<li><a href="#compare-chain-composition" id="toc-compare-chain-composition" class="nav-link" data-scroll-target="#compare-chain-composition">Compare chain composition</a></li>
+  <li><a href="#same-proportion-of-company-owned" id="toc-same-proportion-of-company-owned" class="nav-link" data-scroll-target="#same-proportion-of-company-owned">Same proportion of company owned?</a></li>
+  <li><a href="#compare-meal-prices" id="toc-compare-meal-prices" class="nav-link" data-scroll-target="#compare-meal-prices">Compare meal prices</a></li>
   </ul>
 </li>
-  <li><a href="#another-model-to-consider" id="toc-another-model-to-consider" class="nav-link" data-scroll-target="#another-model-to-consider">Another model to consider</a></li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/ae/ae-18-modeling-loans.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+  <li>
+<a href="#point-estimate" id="toc-point-estimate" class="nav-link" data-scroll-target="#point-estimate">Point estimate</a>
+  <ul class="collapse">
+<li><a href="#fit-an-alternative-model-with-multiple-predictors" id="toc-fit-an-alternative-model-with-multiple-predictors" class="nav-link" data-scroll-target="#fit-an-alternative-model-with-multiple-predictors">Fit an alternative model with multiple predictors</a></li>
+  <li><a href="#which-model-is-best" id="toc-which-model-is-best" class="nav-link" data-scroll-target="#which-model-is-best">Which model is “best”</a></li>
+  </ul>
+</li>
+  <li><a href="#interval-estimate" id="toc-interval-estimate" class="nav-link" data-scroll-target="#interval-estimate">Interval estimate</a></li>
+  <li><a href="#hypothesis-test" id="toc-hypothesis-test" class="nav-link" data-scroll-target="#hypothesis-test">Hypothesis test</a></li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/ae/ae-24-card-krueger.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">AE 18: Modelling loan interest rates</h1>
-<p class="subtitle lead">Suggested answers</p>
-  <div class="quarto-categories">
-    <div class="quarto-category">Application exercise</div>
-    <div class="quarto-category">Answers</div>
-  </div>
-  </div>
+<h1 class="title">AE 24: minimum wage</h1>
+</div>
 
 
 
@@ -513,353 +515,284 @@ window.Quarto = {
   
 
 
-</header><div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>These are suggested answers. This document should be used as reference only, it’s not designed to be an exhaustive key.</p>
-</div>
-</div>
-<p>In this application exercise we will be studying loan interest rates. The dataset is one you’ve come across before in your reading – the dataset about loans from the peer-to-peer lender, Lending Club, from the <strong>openintro</strong> package. We will use <strong>tidyverse</strong> and <strong>tidymodels</strong> for data exploration and modeling, respectively.</p>
+</header><p>Card and Krueger (1994 AER) is a famous study on the impact of minimum wage increases on employment. The abstract reads:</p>
+<blockquote class="blockquote">
+<p>On April 1, 1992, New Jersey’s minimum wage rose from $4.25 to $5.05 per hour. To evaluate the impact of the law we surveyed 410 fast-food restaurants in New Jersey and eastern Pennsylvania before and after the rise. Comparisons of employment growth at stores in New Jersey and Pennsylvania (where the minimum wage was constant) provide simple estimates of the effect of the higher minimum wage. We also compare employment changes at stores in New Jersey that were initially paying high wages (above $5) to the changes at lower-wage stores. We find no indication that the rise in the minimum wage reduced employment.</p>
+</blockquote>
+<p>The data in Card and Krueger are purely observational, but the main idea is that the arbitrary placement of otherwise similar restaurants on either side of the PA/NJ border acts as if a controlled, randomized experiment were performed, and so we can use these data to draw causal conclusions about the impact of minimum wage policy on employment.</p>
+<p>You already played with these data on HW 5, but that was before we had begun working with <em>multiple</em> linear regression, and before we had studied statistical inference. So let us revisit this study with our new tools.</p>
+<section id="packages" class="level1"><h1>Packages</h1>
+<p>You know the drill:</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidymodels.tidymodels.org">tidymodels</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://openintrostat.github.io/openintro/">openintro</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidymodels.tidymodels.org">tidymodels</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Before we use the dataset, we’ll make a few transformations to it.</p>
-<ul>
-<li>
-<strong>Your turn:</strong> Review the code below with your neighbor and write a summary of the data transformation pipeline.</li>
-</ul>
-<p><em>Add response here.</em></p>
+</section><section id="data" class="level1"><h1>Data</h1>
+<p>Load in dat data:</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">loans</span> <span class="op">&lt;-</span> <span class="va">loans_full_schema</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
-<span>    credit_util <span class="op">=</span> <span class="va">total_credit_utilized</span> <span class="op">/</span> <span class="va">total_credit_limit</span>,</span>
-<span>    bankruptcy <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="va">public_record_bankrupt</span> <span class="op">==</span> <span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span>,</span>
-<span>    verified_income <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/droplevels.html">droplevels</a></span><span class="op">(</span><span class="va">verified_income</span><span class="op">)</span>,</span>
-<span>    homeownership <span class="op">=</span> <span class="fu"><a href="https://stringr.tidyverse.org/reference/case.html">str_to_title</a></span><span class="op">(</span><span class="va">homeownership</span><span class="op">)</span>,</span>
-<span>    homeownership <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_relevel.html">fct_relevel</a></span><span class="op">(</span><span class="va">homeownership</span>, <span class="st">"Rent"</span>, <span class="st">"Mortgage"</span>, <span class="st">"Own"</span><span class="op">)</span></span>
-<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>credit_checks <span class="op">=</span> <span class="va">inquiries_last_12m</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span></span>
-<span>    <span class="va">interest_rate</span>, <span class="va">loan_amount</span>, <span class="va">verified_income</span>, </span>
-<span>    <span class="va">debt_to_income</span>, <span class="va">credit_util</span>, <span class="va">bankruptcy</span>, <span class="va">term</span>, </span>
-<span>    <span class="va">credit_checks</span>, <span class="va">issue_month</span>, <span class="va">homeownership</span></span>
-<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Here is a glimpse at the data:</p>
-<div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">loans</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 10,000
-Columns: 10
-$ interest_rate   &lt;dbl&gt; 14.07, 12.61, 17.09, 6.72, 14.07, 6.72, 13.59, 11.99, …
-$ loan_amount     &lt;int&gt; 28000, 5000, 2000, 21600, 23000, 5000, 24000, 20000, 2…
-$ verified_income &lt;fct&gt; Verified, Not Verified, Source Verified, Not Verified,…
-$ debt_to_income  &lt;dbl&gt; 18.01, 5.04, 21.15, 10.16, 57.96, 6.46, 23.66, 16.19, …
-$ credit_util     &lt;dbl&gt; 0.54759517, 0.15003472, 0.66134832, 0.19673228, 0.7549…
-$ bankruptcy      &lt;fct&gt; 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, …
-$ term            &lt;dbl&gt; 60, 36, 36, 36, 36, 36, 60, 60, 36, 36, 60, 60, 36, 60…
-$ credit_checks   &lt;int&gt; 6, 1, 4, 0, 7, 6, 1, 1, 3, 0, 4, 4, 8, 6, 0, 0, 4, 6, …
-$ issue_month     &lt;fct&gt; Mar-2018, Feb-2018, Feb-2018, Jan-2018, Mar-2018, Jan-…
-$ homeownership   &lt;fct&gt; Mortgage, Rent, Rent, Rent, Rent, Own, Mortgage, Mortg…</code></pre>
-</div>
-</div>
-<section id="get-to-know-the-data" class="level1"><h1>Get to know the data</h1>
-<ul>
-<li>
-<strong>Your turn:</strong> What is a typical interest rate in this dataset? What are some attributes of a typical loan and a typical borrower. Give yourself no more than 5 minutes for this exploration and share 1-2 findings.</li>
-</ul>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">loans</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">interest_rate</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span>binwidth <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">loans</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">loan_amount</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span>binwidth <span class="op">=</span> <span class="fl">5000</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">loans</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">term</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">loans</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">issue_month</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="ae-18-modeling-loans_files/figure-html/explore-loans-1.png" class="img-fluid" width="672"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="ae-18-modeling-loans_files/figure-html/explore-loans-2.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="ae-18-modeling-loans_files/figure-html/explore-loans-3.png" class="img-fluid" width="672"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="ae-18-modeling-loans_files/figure-html/explore-loans-4.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</div>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">loans</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">credit_util</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span>binwidth <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">loans</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">verified_income</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">loans</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">debt_to_income</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span>binwidth <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">loans</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">bankruptcy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">loans</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">credit_checks</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">loans</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">homeownership</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="ae-18-modeling-loans_files/figure-html/explore-borrowers-1.png" class="img-fluid" width="672"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="ae-18-modeling-loans_files/figure-html/explore-borrowers-2.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="ae-18-modeling-loans_files/figure-html/explore-borrowers-3.png" class="img-fluid" width="672"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="ae-18-modeling-loans_files/figure-html/explore-borrowers-4.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="ae-18-modeling-loans_files/figure-html/explore-borrowers-5.png" class="img-fluid" width="672"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="ae-18-modeling-loans_files/figure-html/explore-borrowers-6.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</div>
-</section><section id="interest-rate-vs.-credit-utilization-ratio" class="level1"><h1>Interest rate vs.&nbsp;credit utilization ratio</h1>
-<p>The regression model for interest rate vs.&nbsp;credit utilization is as follows.</p>
-<div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">rate_util_fit</span> <span class="op">&lt;-</span> <span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">interest_rate</span> <span class="op">~</span> <span class="va">credit_util</span>, data <span class="op">=</span> <span class="va">loans</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">card_krueger</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/card-krueger.csv"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">tidy</span><span class="op">(</span><span class="va">rate_util_fit</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="va">card_krueger</span> <span class="op">&lt;-</span> <span class="va">card_krueger</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    state <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_relevel.html">fct_relevel</a></span><span class="op">(</span><span class="va">state</span>, <span class="st">"PA"</span>, <span class="st">"NJ"</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">card_krueger</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 5
-  term        estimate std.error statistic   p.value
-  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-1 (Intercept)    10.5     0.0871     121.  0        
-2 credit_util     4.73    0.180       26.3 1.18e-147</code></pre>
+<pre><code>Rows: 351
+Columns: 13
+$ id          &lt;dbl&gt; 56, 61, 445, 451, 455, 458, 462, 468, 469, 470, 474, 481, …
+$ chain       &lt;chr&gt; "Wendy's", "Wendy's", "Burger King", "Burger King", "KFC",…
+$ co_owned    &lt;dbl&gt; 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1…
+$ state       &lt;fct&gt; PA, PA, PA, PA, PA, PA, PA, PA, PA, PA, PA, PA, PA, PA, PA…
+$ emp_diff    &lt;dbl&gt; -14.00, 11.50, -41.50, 13.00, 0.00, -0.50, 2.00, -29.00, 4…
+$ wage_st     &lt;dbl&gt; 5.00, 5.50, 5.00, 5.00, 5.25, 5.00, 5.00, 5.00, 5.00, 5.50…
+$ wage_st2    &lt;dbl&gt; 5.25, 4.75, 4.75, 5.00, 5.00, 5.00, 4.75, 5.00, 4.50, 4.75…
+$ hrsopen     &lt;dbl&gt; 12.0, 12.0, 18.0, 24.0, 10.0, 10.0, 12.5, 18.0, 18.0, 18.0…
+$ hrsopen2    &lt;dbl&gt; 12.0, 12.0, 18.0, 24.0, 11.0, 10.5, 12.0, 18.0, 18.0, 18.0…
+$ fte         &lt;dbl&gt; 34.00, 24.00, 70.50, 23.50, 11.00, 9.00, 15.50, 58.00, 26.…
+$ fte2        &lt;dbl&gt; 20.0, 35.5, 29.0, 36.5, 11.0, 8.5, 17.5, 29.0, 30.5, 26.0,…
+$ meal_price  &lt;dbl&gt; 3.48, 3.29, 2.86, 2.85, 3.78, 3.99, 3.17, 2.84, 2.60, 2.75…
+$ meal_price2 &lt;dbl&gt; 2.58, 2.80, 2.84, 2.89, 4.10, 3.95, 2.91, 2.67, 2.60, 2.81…</code></pre>
 </div>
 </div>
-<p>And here is the model visualized:</p>
+<p>Variables include:</p>
+<ul>
+<li>
+<code>id</code>: a unique identifier for each restaurant;</li>
+<li>
+<code>state</code>: which state is the restaurant in?</li>
+<li>
+<code>chain</code>: which restaurant chain does the store belong to?</li>
+<li>
+<code>co_owned</code>: is the restaurant company owned?</li>
+<li>
+<code>wage_st</code> and <code>wage_st2</code>: the starting wage in US dollars before and after policy change;</li>
+<li>
+<code>fte</code> and <code>fte2</code>: full-time-equivalent employment before and after the change, calculated as the number of full-time workers (including managers) plus 0.5 times the number of part-time workers;</li>
+<li>
+<code>hrsopen</code> and <code>hrsopen2</code>: number of hours open per day;</li>
+<li>
+<code>meal_price</code> and <code>meal_price2</code>: the price of a meal (soda, fries, entree);</li>
+<li>
+<code>emp_diff</code>: <code>fte2-fte</code>.</li>
+</ul>
+<p><strong>Question</strong>: are these data tidy?</p>
+</section><section id="explore-and-visualize" class="level1"><h1>Explore and visualize</h1>
+<p>The core claim of the study is that the two groups of restaurants are indistinguishable in all respects except for the minimum wage policy, and so any differences in employment can be ascribed to the causal impact of that policy. Let’s see how the states compare.</p>
+<section id="compare-chain-composition" class="level2"><h2 class="anchored" data-anchor-id="compare-chain-composition">Compare chain composition</h2>
+<p>Do both states have roughly the same proportions of each restaurants in each chain? Create a figure that answers this question.</p>
 <div class="cell">
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">loans</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">credit_util</span>, y <span class="op">=</span> <span class="va">interest_rate</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">card_krueger</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">state</span>, fill <span class="op">=</span> <span class="va">chain</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"fill"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="ae-18-modeling-loans_files/figure-html/rate-util-plot-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="ae-24-card-krueger_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<ul>
-<li>
-<strong>Your turn:</strong> Interpret the intercept and the slope.</li>
-</ul>
-<p>Intercept: Borrowers with 0 credit utilization are predicted, on average, to get an interest rate of 10.5%.</p>
-<p>Slope: For each additional point credit utilization is higher, interest rate is predicted to be higher, on average, by 4.73 percentage points.</p>
-</section><section id="interest-rate-vs.-homeownership" class="level1"><h1>Interest rate vs.&nbsp;homeownership</h1>
-<p>Next we predict interest rates from homeownership, which is a categorical predictor with three levels:</p>
+</section><section id="same-proportion-of-company-owned" class="level2"><h2 class="anchored" data-anchor-id="same-proportion-of-company-owned">Same proportion of company owned?</h2>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/levels.html">levels</a></span><span class="op">(</span><span class="va">loans</span><span class="op">$</span><span class="va">homeownership</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">card_krueger</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">state</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">co_owned</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    prop <span class="op">=</span> <span class="va">n</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "Rent"     "Mortgage" "Own"     </code></pre>
+<pre><code># A tibble: 4 × 4
+# Groups:   state [2]
+  state co_owned     n  prop
+  &lt;fct&gt;    &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt;
+1 PA           0    42 0.636
+2 PA           1    24 0.364
+3 NJ           0   185 0.649
+4 NJ           1   100 0.351</code></pre>
 </div>
 </div>
-<ul>
-<li>
-<strong>Demo:</strong> Fit the linear regression model to predict interest rate from homeownership and display a tidy summary of the model. Write the estimated model output below.</li>
-</ul>
+</section><section id="compare-meal-prices" class="level2"><h2 class="anchored" data-anchor-id="compare-meal-prices">Compare meal prices</h2>
+<p>How did the distribution of meal prices in each state compare before and after the policy change?</p>
 <div class="cell">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">rate_home_fit</span> <span class="op">&lt;-</span> <span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">interest_rate</span> <span class="op">~</span> <span class="va">homeownership</span>, data <span class="op">=</span> <span class="va">loans</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">card_krueger</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">meal_price</span>, color <span class="op">=</span> <span class="va">state</span>, fill <span class="op">=</span> <span class="va">state</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/lims.html">xlim</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">6</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ae-24-card-krueger_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">card_krueger</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">meal_price2</span>, color <span class="op">=</span> <span class="va">state</span>, fill <span class="op">=</span> <span class="va">state</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/lims.html">xlim</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">6</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ae-24-card-krueger_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Investigate</strong>: Why is the distribution bimodal?</p>
+<p>There is a lurking categorical variable that explains the multiple modes:</p>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">card_krueger</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">state</span> <span class="op">==</span> <span class="st">"NJ"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">meal_price</span>, color <span class="op">=</span> <span class="va">chain</span>, fill <span class="op">=</span> <span class="va">chain</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/lims.html">xlim</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">6</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ae-24-card-krueger_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section><section id="point-estimate" class="level1"><h1>Point estimate</h1>
+<p>Here is the simple linear regression that you fit on HW 5:</p>
+<div class="cell">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">simple_fit</span> <span class="op">&lt;-</span> <span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">emp_diff</span> <span class="op">~</span> <span class="va">state</span>, data <span class="op">=</span> <span class="va">card_krueger</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">tidy</span><span class="op">(</span><span class="va">rate_home_fit</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="fu">tidy</span><span class="op">(</span><span class="va">simple_fit</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 5
-  term                  estimate std.error statistic  p.value
-  &lt;chr&gt;                    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
-1 (Intercept)             12.9      0.0803    161.   0       
-2 homeownershipMortgage   -0.866    0.108      -8.03 1.08e-15
-3 homeownershipOwn        -0.611    0.158      -3.88 1.06e- 4</code></pre>
+<pre><code># A tibble: 2 × 5
+  term        estimate std.error statistic p.value
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+1 (Intercept)    -1.88      1.07     -1.75  0.0807
+2 stateNJ         2.28      1.19      1.91  0.0566</code></pre>
 </div>
 </div>
-<ul>
-<li>
-<p><strong>Your turn:</strong> Interpret each coefficient in context of the problem.</p>
-<ul>
-<li><p>Intercept: Loan applicants who rent are predicted to receive an interest rate of 12.9%, on average.</p></li>
-<li>
-<p>Slopes:</p>
-<ul>
-<li><p>The model predicts that loan applicants who have a mortgage for their home receive 0.866% lower interest rate than those who rent their home, on average.</p></li>
-<li><p>The model predicts that loan applicants who own their home receive 0.611% lower interest rate than those who rent their home, on average.</p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul></section><section id="interest-rate-vs.-credit-utilization-and-homeownership" class="level1"><h1>Interest rate vs.&nbsp;credit utilization and homeownership</h1>
-<section id="main-effects-model" class="level2"><h2 class="anchored" data-anchor-id="main-effects-model">Main effects model</h2>
-<ul>
-<li>
-<strong>Demo:</strong> Fit a model to predict interest rate from credit utilization and homeownership, <strong>without</strong> an interaction effect between the two predictors. Display the summary output and write out the estimated regression equation.</li>
-</ul>
+<p>These numbers are not mysterious:</p>
 <div class="cell">
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">rate_util_home_fit</span> <span class="op">&lt;-</span> <span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">interest_rate</span> <span class="op">~</span> <span class="va">credit_util</span> <span class="op">+</span> <span class="va">homeownership</span>, data <span class="op">=</span> <span class="va">loans</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">tidy</span><span class="op">(</span><span class="va">rate_util_home_fit</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">card_krueger</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">state</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>mean_emp_diff <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">emp_diff</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 4 × 5
-  term                  estimate std.error statistic   p.value
-  &lt;chr&gt;                    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-1 (Intercept)              9.93      0.140    70.8   0        
-2 credit_util              5.34      0.207    25.7   2.20e-141
-3 homeownershipMortgage    0.696     0.121     5.76  8.71e-  9
-4 homeownershipOwn         0.128     0.155     0.827 4.08e-  1</code></pre>
+<pre><code># A tibble: 2 × 2
+  state mean_emp_diff
+  &lt;fct&gt;         &lt;dbl&gt;
+1 PA           -1.88 
+2 NJ            0.398</code></pre>
 </div>
 </div>
-<p><span class="math display">\[
-\widehat{interest~rate} = 9.93 + 5.34 \times credit~util + 0.696 \times Mortgage + 0.128 \times Own
-\]</span></p>
-<ul>
-<li>
-<strong>Demo:</strong> Write the estimated regression equation for loan applications from each of the homeownership groups separately.
-<ul>
-<li>Rent: <span class="math inline">\(\widehat{interest~rate} = 9.93 + 5.34 \times credit~util\)</span>
-</li>
-<li>Mortgage: <span class="math inline">\(\widehat{interest~rate} = 10.626 + 5.34 \times credit~util\)</span>
-</li>
-<li>Own: <span class="math inline">\(\widehat{interest~rate} = 10.058 + 5.34 \times credit~util\)</span>
-</li>
-</ul>
-</li>
-<li>
-<strong>Question:</strong> How does the model predict the interest rate to vary as credit utilization varies for loan applicants with different homeownership status. Are the rates the same or different?</li>
-</ul>
-<p>The same.</p>
-</section><section id="interaction-effects-model" class="level2"><h2 class="anchored" data-anchor-id="interaction-effects-model">Interaction effects model</h2>
-<ul>
-<li>
-<strong>Demo:</strong> Fit a model to predict interest rate from credit utilization and homeownership, <strong>with</strong> an interaction effect between the two predictors. Display the summary output and write out the estimated regression equation.</li>
-</ul>
+<p>So the intercept in the original regression fit is just the mean <code>emp_diff</code> amongst PA restaurants, and the slope is the difference between this mean and the mean amongst NJ restaurants.</p>
+<section id="fit-an-alternative-model-with-multiple-predictors" class="level2"><h2 class="anchored" data-anchor-id="fit-an-alternative-model-with-multiple-predictors">Fit an alternative model with multiple predictors</h2>
+<p>Fit a new model that controls for the restaurant chain and whether or not it is company owned:</p>
 <div class="cell">
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">rate_util_home_int_fit</span> <span class="op">&lt;-</span> <span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">interest_rate</span> <span class="op">~</span> <span class="va">credit_util</span> <span class="op">*</span> <span class="va">homeownership</span>, data <span class="op">=</span> <span class="va">loans</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">multiple_fit</span> <span class="op">&lt;-</span> <span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">emp_diff</span> <span class="op">~</span> <span class="va">state</span> <span class="op">+</span> <span class="va">chain</span> <span class="op">+</span> <span class="va">co_owned</span>, data <span class="op">=</span> <span class="va">card_krueger</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">tidy</span><span class="op">(</span><span class="va">rate_util_home_int_fit</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="fu">tidy</span><span class="op">(</span><span class="va">multiple_fit</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 5
-  term                              estimate std.error statistic  p.value
-  &lt;chr&gt;                                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
-1 (Intercept)                          9.44      0.199     47.5  0       
-2 credit_util                          6.20      0.325     19.1  1.01e-79
-3 homeownershipMortgage                1.39      0.228      6.11 1.04e- 9
-4 homeownershipOwn                     0.697     0.316      2.20 2.75e- 2
-5 credit_util:homeownershipMortgage   -1.64      0.457     -3.58 3.49e- 4
-6 credit_util:homeownershipOwn        -1.06      0.590     -1.80 7.24e- 2</code></pre>
+  term         estimate std.error statistic p.value
+  &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+1 (Intercept)    -1.45       1.21    -1.20   0.232 
+2 stateNJ         2.28       1.20     1.91   0.0575
+3 chainKFC        0.235      1.30     0.181  0.857 
+4 chainRoy's     -2.08       1.32    -1.58   0.116 
+5 chainWendy's   -0.757      1.49    -0.507  0.612 
+6 co_owned        0.373      1.10     0.339  0.735 </code></pre>
 </div>
 </div>
+</section><section id="which-model-is-best" class="level2"><h2 class="anchored" data-anchor-id="which-model-is-best">Which model is “best”</h2>
+<div class="cell">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">glance</span><span class="op">(</span><span class="va">simple_fit</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC
+      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1    0.0104       0.00754  8.71      3.66  0.0566     1 -1257. 2520. 2532.
+# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">glance</span><span class="op">(</span><span class="va">multiple_fit</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic p.value    df logLik   AIC   BIC
+      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1    0.0204       0.00619  8.72      1.44   0.211     5 -1255. 2524. 2551.
+# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
+</div>
+</div>
+<p>The simpler model has higher adjusted <span class="math inline">\(R^2\)</span>, so we prefer it.</p>
+</section></section><section id="interval-estimate" class="level1"><h1>Interval estimate</h1>
+<p>Compute and visualize a 95% confidence interval for the change in average employment before and after the policy change:</p>
+<div class="cell">
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">empdiff_state_fit</span> <span class="op">&lt;-</span> <span class="va">card_krueger</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">specify</span><span class="op">(</span><span class="va">emp_diff</span> <span class="op">~</span> <span class="va">state</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">8675309</span><span class="op">)</span></span>
+<span><span class="va">boot_fits</span> <span class="op">&lt;-</span> <span class="va">card_krueger</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">specify</span><span class="op">(</span><span class="va">emp_diff</span> <span class="op">~</span> <span class="va">state</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">generate</span><span class="op">(</span>reps <span class="op">=</span> <span class="fl">1000</span>, type <span class="op">=</span> <span class="st">"bootstrap"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">ci_90</span> <span class="op">&lt;-</span> <span class="fu">get_confidence_interval</span><span class="op">(</span></span>
+<span>  <span class="va">boot_fits</span>,</span>
+<span>  point_estimate <span class="op">=</span> <span class="va">empdiff_state_fit</span>,</span>
+<span>  level <span class="op">=</span> <span class="fl">0.95</span>,</span>
+<span>  type <span class="op">=</span> <span class="st">"percentile"</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">ci_90</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 3
+  term      lower_ci upper_ci
+  &lt;chr&gt;        &lt;dbl&gt;    &lt;dbl&gt;
+1 intercept   -4.64     0.825
+2 stateNJ     -0.640    5.08 </code></pre>
+</div>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">visualize</span><span class="op">(</span><span class="va">boot_fits</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">shade_confidence_interval</span><span class="op">(</span><span class="va">ci_90</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ae-24-card-krueger_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We are 95% confident that the true difference in <code>emp_diff</code> between PA and NJ is between -0.64 and 5.08. So, while our best guess (point estimate) based on this noisy, meager, imperfect dataset is 2.2, we shouldn’t be surprised if further investigation yields a better estimate somehwere between -0.64 and 5.08. Based on the information we currenty have, we cannot rule that out.</p>
+</section><section id="hypothesis-test" class="level1"><h1>Hypothesis test</h1>
+<p>Test these hypotheses at a 5% discernibility level:</p>
 <p><span class="math display">\[
-\widehat{interest~rate} = 9.44 + 6.20 \times credit~util + 1.39 \times Mortgage + 0.697 \times Own - 1.64 \times credit_util:Mortgage - 1.06 \times credit_util:Own
+\begin{aligned}
+H_0&amp;: \beta_1=0 \quad(\text{no change})\\
+H_0&amp;: \beta_1\neq0 \quad(\text{some change})
+\end{aligned}
 \]</span></p>
-<ul>
-<li>
-<strong>Demo:</strong> Write the estimated regression equation for loan applications from each of the homeownership groups separately.
-<ul>
-<li>Rent: <span class="math inline">\(\widehat{interest~rate} = 9.44 + 6.20 \times credit~util\)</span>
-</li>
-<li>Mortgage: <span class="math inline">\(\widehat{interest~rate} = 10.83 + 4.56 \times credit~util\)</span>
-</li>
-<li>Own: <span class="math inline">\(\widehat{interest~rate} = 10.137 + 5.14 \times credit~util\)</span>
-</li>
-</ul>
-</li>
-<li>
-<strong>Question:</strong> How does the model predict the interest rate to vary as credit utilization varies for loan applicants with different homeownership status. Are the rates the same or different?</li>
-</ul>
-<p>Different.</p>
-</section><section id="choosing-a-model" class="level2"><h2 class="anchored" data-anchor-id="choosing-a-model">Choosing a model</h2>
-<p>Rule of thumb: <strong>Occam’s Razor</strong> - Don’t overcomplicate the situation! We prefer the <em>simplest</em> best model.</p>
+<p>Compute, visualize, and interpret the p-value.</p>
 <div class="cell">
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">glance</span><span class="op">(</span><span class="va">rate_util_fit</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span></span>
+<span><span class="va">null_dist</span> <span class="op">&lt;-</span> <span class="va">card_krueger</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">specify</span><span class="op">(</span><span class="va">emp_diff</span> <span class="op">~</span> <span class="va">state</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">hypothesize</span><span class="op">(</span>null <span class="op">=</span> <span class="st">"independence"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">generate</span><span class="op">(</span>reps <span class="op">=</span> <span class="fl">5000</span>, type <span class="op">=</span> <span class="st">"permute"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">visualize</span><span class="op">(</span><span class="va">null_dist</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">shade_p_value</span><span class="op">(</span>obs_stat <span class="op">=</span> <span class="va">empdiff_state_fit</span>, direction <span class="op">=</span> <span class="st">"two-sided"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="ae-24-card-krueger_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">null_dist</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">get_p_value</span><span class="op">(</span>obs_stat <span class="op">=</span> <span class="va">empdiff_state_fit</span>, direction <span class="op">=</span> <span class="st">"two-sided"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 12
-  r.squared adj.r.squared sigma statistic   p.value    df  logLik    AIC    BIC
-      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
-1    0.0648        0.0647  4.84      693. 1.18e-147     1 -29944. 59893. 59915.
-# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
-</div>
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">glance</span><span class="op">(</span><span class="va">rate_home_fit</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 12
-  r.squared adj.r.squared sigma statistic  p.value    df  logLik    AIC    BIC
-      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
-1   0.00649       0.00629  4.99      32.6 7.35e-15     2 -30253. 60514. 60543.
-# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
-</div>
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">glance</span><span class="op">(</span><span class="va">rate_util_home_fit</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 12
-  r.squared adj.r.squared sigma statistic   p.value    df  logLik    AIC    BIC
-      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
-1    0.0682        0.0679  4.83      244. 1.25e-152     3 -29926. 59861. 59897.
-# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
-</div>
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">glance</span><span class="op">(</span><span class="va">rate_util_home_int_fit</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 12
-  r.squared adj.r.squared sigma statistic   p.value    df  logLik    AIC    BIC
-      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
-1    0.0694        0.0689  4.83      149. 4.79e-153     5 -29919. 59852. 59903.
-# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
+<pre><code># A tibble: 2 × 2
+  term      p_value
+  &lt;chr&gt;       &lt;dbl&gt;
+1 intercept  0.0672
+2 stateNJ    0.0672</code></pre>
 </div>
 </div>
-<ul>
-<li>
-<strong>Review:</strong> What is R-squared? What is adjusted R-squared?</li>
-</ul>
-<p>R-squared is the percent variability in the response that is explained by our model. (Can use when models have same number of variables for model selection)</p>
-<p>Adjusted R-squared is similar, but has a penalty for the number of variables in the model. (Should use for model selection when models have different numbers of variables).</p>
-<ul>
-<li>
-<strong>Question:</strong> Based on the adjusted <span class="math inline">\(R^2\)</span>s of the four models we’ve seen so far, which one do we prefer?</li>
-</ul>
-<p>The interaction effects model, though just barely.</p>
-</section></section><section id="another-model-to-consider" class="level1"><h1>Another model to consider</h1>
-<ul>
-<li>
-<strong>Your turn:</strong> Let’s add one more model to the variable – issue month. Should we add this variable to the interaction effects model from earlier?</li>
-</ul>
-<div class="cell">
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">interest_rate</span> <span class="op">~</span> <span class="va">credit_util</span> <span class="op">*</span> <span class="va">homeownership</span> <span class="op">+</span> <span class="va">issue_month</span>, data <span class="op">=</span> <span class="va">loans</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">glance</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 12
-  r.squared adj.r.squared sigma statistic   p.value    df  logLik    AIC    BIC
-      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
-1    0.0694        0.0688  4.83      106. 5.62e-151     7 -29919. 59856. 59921.
-# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
-</div>
-</div>
-<p>No, the adjusted R-squared goes down.</p>
+<p>If the null hypothesis were true, and there was indeed no difference between PA and NJ, then the probability of a result as or more extreme than the one we computed would be about 7%%. This is low, which brings the plausibility of the null in doubt, but nevertheless is above standard discernibility levels like 5%, and so strictly speaking our conclusion is that we fail to reject the null. The null remains a possibility worth considering. We can’t just reject it out of hand. The data don’t speak that strongly in this case.</p>
 
 
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
@@ -1268,7 +1201,7 @@ $ homeownership   &lt;fct&gt; Mortgage, Rent, Rent, Rent, Rent, Own, Mortgage, M
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/ae/ae-18-modeling-loans.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/ae/ae-24-card-krueger.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
