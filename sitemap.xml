@@ -201,127 +201,23 @@
     <lastmod>2026-04-13T01:45:08.507Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s26.github.io/index.html</loc>
-    <lastmod>2026-04-13T01:45:08.457Z</lastmod>
+    <loc>https://sta199-s26.github.io/slides/05-exploring-data-2-slides.html</loc>
+    <lastmod>2026-04-13T01:45:08.508Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s26.github.io/lab/lab-7.html</loc>
+    <loc>https://sta199-s26.github.io/slides/05-exploring-data-2.html</loc>
+    <lastmod>2026-04-13T01:45:08.508Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/lab/lab-6.html</loc>
     <lastmod>2026-04-13T01:45:08.480Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s26.github.io/lab/lab-4.html</loc>
+    <loc>https://sta199-s26.github.io/lab/lab-5.html</loc>
     <lastmod>2026-04-13T01:45:08.480Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s26.github.io/lab/lab-1.html</loc>
-    <lastmod>2026-04-13T01:45:08.479Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/lab/lab-3.html</loc>
-    <lastmod>2026-04-13T01:45:08.479Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/lab/lab-8.html</loc>
-    <lastmod>2026-04-16T11:36:41.579Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/ae/ae-11-chronicle-scrape.html</loc>
-    <lastmod>2026-04-13T01:45:08.426Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/ae/ae-09-age-gaps-import.html</loc>
-    <lastmod>2026-04-13T01:45:08.426Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/ae/ae-10-sales-import.html</loc>
-    <lastmod>2026-04-13T01:45:08.426Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/ae/ae-15-icecover-model.html</loc>
-    <lastmod>2026-04-13T01:45:08.426Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/ae/ae-16-modeling-penguins.html</loc>
-    <lastmod>2026-04-13T01:45:08.426Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/ae/ae-08-durham-climate-factors.html</loc>
-    <lastmod>2026-04-13T01:45:08.426Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/ae/ae-22-duke-forest-bootstrap.html</loc>
-    <lastmod>2026-04-15T08:35:10.240Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/ae/ae-18-modeling-loans.html</loc>
-    <lastmod>2026-04-13T01:45:08.427Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/hw/hw-2.html</loc>
-    <lastmod>2026-04-13T01:45:08.447Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/hw/hw-7.html</loc>
-    <lastmod>2026-04-18T19:52:39.703Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/hw/hw-4.html</loc>
-    <lastmod>2026-04-13T01:45:08.448Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/hw/hw-5.html</loc>
-    <lastmod>2026-04-13T01:45:08.448Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/hw/hw-6.html</loc>
-    <lastmod>2026-04-13T01:45:08.448Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/hw/hw-3.html</loc>
-    <lastmod>2026-04-13T01:45:08.448Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/hw/hw-1.html</loc>
-    <lastmod>2026-04-13T01:45:08.447Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/ae/ae-06-majors-tidy.html</loc>
-    <lastmod>2026-04-13T01:45:08.425Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/ae/ae-05-gerrymander-explore-II.html</loc>
-    <lastmod>2026-04-13T01:45:08.425Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/ae/ae-03-bechdel-dataviz.html</loc>
-    <lastmod>2026-04-13T01:45:08.425Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/ae/ae-07-taxes-join.html</loc>
-    <lastmod>2026-04-13T01:45:08.426Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/ae/ae-13-stupid-plots.html</loc>
-    <lastmod>2026-04-13T01:45:08.426Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/ae/ae-23-pokemon-infer.html</loc>
-    <lastmod>2026-04-14T17:31:44.717Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/ae/ae-14-effective-dataviz.html</loc>
-    <lastmod>2026-04-13T01:45:08.426Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/ae/ae-20-forest-classification.html</loc>
-    <lastmod>2026-04-15T11:21:21.854Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/ae/ae-19-spam-filter.html</loc>
-    <lastmod>2026-04-13T01:45:08.427Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s26.github.io/lab/lab-2.html</loc>
+    <loc>https://sta199-s26.github.io/lab/lab-0.html</loc>
     <lastmod>2026-04-13T01:45:08.479Z</lastmod>
   </url>
   <url>
@@ -329,24 +225,136 @@
     <lastmod>2026-04-14T16:31:29.964Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s26.github.io/lab/lab-0.html</loc>
+    <loc>https://sta199-s26.github.io/lab/lab-2.html</loc>
     <lastmod>2026-04-13T01:45:08.479Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s26.github.io/lab/lab-5.html</loc>
+    <loc>https://sta199-s26.github.io/ae/ae-19-spam-filter.html</loc>
+    <lastmod>2026-04-13T01:45:08.427Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/ae/ae-20-forest-classification.html</loc>
+    <lastmod>2026-04-15T11:21:21.854Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/ae/ae-14-effective-dataviz.html</loc>
+    <lastmod>2026-04-13T01:45:08.426Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/ae/ae-23-pokemon-infer.html</loc>
+    <lastmod>2026-04-14T17:31:44.717Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/ae/ae-13-stupid-plots.html</loc>
+    <lastmod>2026-04-13T01:45:08.426Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/ae/ae-07-taxes-join.html</loc>
+    <lastmod>2026-04-13T01:45:08.426Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/ae/ae-03-bechdel-dataviz.html</loc>
+    <lastmod>2026-04-13T01:45:08.425Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/ae/ae-05-gerrymander-explore-II.html</loc>
+    <lastmod>2026-04-13T01:45:08.425Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/ae/ae-06-majors-tidy.html</loc>
+    <lastmod>2026-04-13T01:45:08.425Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/hw/hw-1.html</loc>
+    <lastmod>2026-04-13T01:45:08.447Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/hw/hw-3.html</loc>
+    <lastmod>2026-04-13T01:45:08.448Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/hw/hw-6.html</loc>
+    <lastmod>2026-04-13T01:45:08.448Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/hw/hw-5.html</loc>
+    <lastmod>2026-04-13T01:45:08.448Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/hw/hw-4.html</loc>
+    <lastmod>2026-04-13T01:45:08.448Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/hw/hw-7.html</loc>
+    <lastmod>2026-04-18T19:52:39.703Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/hw/hw-2.html</loc>
+    <lastmod>2026-04-13T01:45:08.447Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/ae/ae-18-modeling-loans.html</loc>
+    <lastmod>2026-04-13T01:45:08.427Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/ae/ae-22-duke-forest-bootstrap.html</loc>
+    <lastmod>2026-04-15T08:35:10.240Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/ae/ae-08-durham-climate-factors.html</loc>
+    <lastmod>2026-04-13T01:45:08.426Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/ae/ae-16-modeling-penguins.html</loc>
+    <lastmod>2026-04-13T01:45:08.426Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/ae/ae-15-icecover-model.html</loc>
+    <lastmod>2026-04-13T01:45:08.426Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/ae/ae-10-sales-import.html</loc>
+    <lastmod>2026-04-13T01:45:08.426Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/ae/ae-09-age-gaps-import.html</loc>
+    <lastmod>2026-04-13T01:45:08.426Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/ae/ae-11-chronicle-scrape.html</loc>
+    <lastmod>2026-04-13T01:45:08.426Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/lab/lab-8.html</loc>
+    <lastmod>2026-04-16T11:36:41.579Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/lab/lab-3.html</loc>
+    <lastmod>2026-04-13T01:45:08.479Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/lab/lab-1.html</loc>
+    <lastmod>2026-04-13T01:45:08.479Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/lab/lab-4.html</loc>
     <lastmod>2026-04-13T01:45:08.480Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s26.github.io/lab/lab-6.html</loc>
+    <loc>https://sta199-s26.github.io/lab/lab-7.html</loc>
     <lastmod>2026-04-13T01:45:08.480Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s26.github.io/slides/05-exploring-data-2.html</loc>
-    <lastmod>2026-04-13T01:45:08.508Z</lastmod>
+    <loc>https://sta199-s26.github.io/index.html</loc>
+    <lastmod>2026-04-13T01:45:08.457Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s26.github.io/slides/05-exploring-data-2-slides.html</loc>
-    <lastmod>2026-04-13T01:45:08.508Z</lastmod>
+    <loc>https://sta199-s26.github.io/slides/25-inference-conclusion.html</loc>
+    <lastmod>2026-04-22T14:11:12.036Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s26.github.io/slides/25-inference-conclusion-slides.html</loc>
+    <lastmod>2026-04-22T14:11:12.036Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s26.github.io/slides/22-interval-estimation.html</loc>
@@ -426,11 +434,11 @@
   </url>
   <url>
     <loc>https://sta199-s26.github.io/slides/24-inference-overview.html</loc>
-    <lastmod>2026-04-20T15:17:45.110Z</lastmod>
+    <lastmod>2026-04-20T17:53:09.856Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s26.github.io/slides/24-inference-overview-slides.html</loc>
-    <lastmod>2026-04-20T15:17:45.110Z</lastmod>
+    <lastmod>2026-04-20T17:53:09.856Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s26.github.io/slides/12-wrap-up.html</loc>
