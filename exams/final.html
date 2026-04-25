@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.34">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>final – STA 199 Spring 2026</title>
+<title>Final Exam Study Guide – STA 199 Spring 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,8 +17,42 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
-
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -29,6 +60,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../exams/midterm-2.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -38,8 +70,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ad8df1012cc34949a7a0ac4d54234c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-9f26b6341e16faa20df3ce7a36debf59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap-9f26b6341e16faa20df3ce7a36debf59.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -65,39 +96,58 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-
-<meta property="og:title" content="final – STA 199 Spring 2026">
+}</script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+<meta property="og:title" content="Final Exam Study Guide – STA 199 Spring 2026">
+<meta property="og:description" content="Homepage for STA 199 Introduction to Data Science at Duke University, Spring 2026.">
+<meta property="og:image" content="https://sta199-s26.github.io/exams/final_files/figure-html/unnamed-chunk-3-1.png">
 <meta property="og:site_name" content="STA 199 Spring 2026">
+<meta property="og:image:height" content="1228">
+<meta property="og:image:width" content="1536">
 </head>
-
 <body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">final</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exams/midterm-1.html">Exam Study Guides</a></li><li class="breadcrumb-item"><a href="../exams/final.html">Final</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/sta199-s26" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio containers" class="quarto-navigation-tool px-1" aria-label="RStudio containers"><i class="bi bi-code-square"></i></a>
@@ -105,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="dropdown">
       <a href="" title="Support" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Support"><i class="bi bi-life-preserver"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-          <li>
+<li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://docs.google.com/spreadsheets/d/1bbCCaRtyUzPbB-SqcjseiwVLwFlgQbvCMaMWnvT3EG8/edit?usp=sharing">
               <i class="bi bi-person-raised-hand pe-1"></i>
             Office hours
@@ -118,11 +168,11 @@ ul.task-list li input[type="checkbox"] {
             </a>
           </li>
       </ul>
-    </div>
+</div>
     <div class="dropdown">
       <a href="" title="Canvas" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Canvas"><i class="bi bi-file-check-fill"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
-          <li>
+<li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://canvas.duke.edu/courses/72135/announcements">
               <i class="bi bi-megaphone-fill pe-1"></i>
             Announcements
@@ -141,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
             </a>
           </li>
       </ul>
-    </div>
+</div>
 </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -151,7 +201,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
+<li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Syllabus</span></a>
@@ -159,8 +209,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../syllabus/syllabus-overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
@@ -209,7 +259,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
@@ -218,8 +268,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../computing/coding-access.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Access</span></a>
@@ -232,7 +282,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -241,8 +291,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lab/lab-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 0</span></a>
@@ -297,7 +347,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
@@ -306,8 +356,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../hw/hw-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homework 1</span></a>
@@ -350,7 +400,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
@@ -359,8 +409,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../project/description.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Description</span></a>
@@ -397,17 +447,17 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Exam Study Guides</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../exams/midterm-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm 1</span></a>
@@ -419,22 +469,119 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Midterm 2</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../exams/final.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Final</span></a>
+  </div>
+</li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li>
+<a href="#concepts-and-main-ideas" id="toc-concepts-and-main-ideas" class="nav-link active" data-scroll-target="#concepts-and-main-ideas">Concepts and main ideas</a>
+  <ul class="collapse">
+<li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#visual-understanding" id="toc-visual-understanding" class="nav-link" data-scroll-target="#visual-understanding">Visual understanding</a>
+  <ul class="collapse">
+<li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#code-doctor" id="toc-code-doctor" class="nav-link" data-scroll-target="#code-doctor">Code doctor</a>
+  <ul class="collapse">
+<li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
+  <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5">Question 5</a></li>
+  <li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6">Question 6</a></li>
+  <li><a href="#question-7" id="toc-question-7" class="nav-link" data-scroll-target="#question-7">Question 7</a></li>
+  <li><a href="#question-8" id="toc-question-8" class="nav-link" data-scroll-target="#question-8">Question 8</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#stat-doctor" id="toc-stat-doctor" class="nav-link" data-scroll-target="#stat-doctor">Stat doctor</a>
+  <ul class="collapse">
+<li><a href="#question-9" id="toc-question-9" class="nav-link" data-scroll-target="#question-9">Question 9</a></li>
+  <li><a href="#question-10" id="toc-question-10" class="nav-link" data-scroll-target="#question-10">Question 10</a></li>
+  <li><a href="#question-11" id="toc-question-11" class="nav-link" data-scroll-target="#question-11">Question 11</a></li>
+  <li><a href="#question-12" id="toc-question-12" class="nav-link" data-scroll-target="#question-12">Question 12</a></li>
+  <li><a href="#question-13" id="toc-question-13" class="nav-link" data-scroll-target="#question-13">Question 13</a></li>
+  <li><a href="#question-14" id="toc-question-14" class="nav-link" data-scroll-target="#question-14">Question 14</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis">Data analysis</a>
+  <ul class="collapse">
+<li>
+<a href="#duke-forest-homes" id="toc-duke-forest-homes" class="nav-link" data-scroll-target="#duke-forest-homes">Duke Forest homes</a>
+  <ul class="collapse">
+<li><a href="#question-15" id="toc-question-15" class="nav-link" data-scroll-target="#question-15">Question 15</a></li>
+  <li><a href="#question-16" id="toc-question-16" class="nav-link" data-scroll-target="#question-16">Question 16</a></li>
+  <li><a href="#question-17" id="toc-question-17" class="nav-link" data-scroll-target="#question-17">Question 17</a></li>
+  <li><a href="#question-18" id="toc-question-18" class="nav-link" data-scroll-target="#question-18">Question 18</a></li>
+  <li><a href="#question-19" id="toc-question-19" class="nav-link" data-scroll-target="#question-19">Question 19</a></li>
+  <li><a href="#question-20" id="toc-question-20" class="nav-link" data-scroll-target="#question-20">Question 20</a></li>
+  <li><a href="#question-21" id="toc-question-21" class="nav-link" data-scroll-target="#question-21">Question 21</a></li>
+  <li><a href="#question-22" id="toc-question-22" class="nav-link" data-scroll-target="#question-22">Question 22</a></li>
+  <li><a href="#question-23" id="toc-question-23" class="nav-link" data-scroll-target="#question-23">Question 23</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#holiday-movies" id="toc-holiday-movies" class="nav-link" data-scroll-target="#holiday-movies">Holiday movies</a>
+  <ul class="collapse">
+<li><a href="#question-24" id="toc-question-24" class="nav-link" data-scroll-target="#question-24">Question 24</a></li>
+  <li><a href="#question-25" id="toc-question-25" class="nav-link" data-scroll-target="#question-25">Question 25</a></li>
+  <li><a href="#question-26" id="toc-question-26" class="nav-link" data-scroll-target="#question-26">Question 26</a></li>
+  <li><a href="#question-27" id="toc-question-27" class="nav-link" data-scroll-target="#question-27">Question 27</a></li>
+  <li><a href="#question-28" id="toc-question-28" class="nav-link" data-scroll-target="#question-28">Question 28</a></li>
+  <li><a href="#question-29" id="toc-question-29" class="nav-link" data-scroll-target="#question-29">Question 29</a></li>
+  <li><a href="#question-30" id="toc-question-30" class="nav-link" data-scroll-target="#question-30">Question 30</a></li>
+  <li><a href="#question-31" id="toc-question-31" class="nav-link" data-scroll-target="#question-31">Question 31</a></li>
+  <li><a href="#question-32" id="toc-question-32" class="nav-link" data-scroll-target="#question-32">Question 32</a></li>
+  <li><a href="#question-33" id="toc-question-33" class="nav-link" data-scroll-target="#question-33">Question 33</a></li>
+  <li><a href="#question-34" id="toc-question-34" class="nav-link" data-scroll-target="#question-34">Question 34</a></li>
+  <li><a href="#question-35" id="toc-question-35" class="nav-link" data-scroll-target="#question-35">Question 35</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#general-social-survey" id="toc-general-social-survey" class="nav-link" data-scroll-target="#general-social-survey">General Social Survey</a>
+  <ul class="collapse">
+<li><a href="#question-36" id="toc-question-36" class="nav-link" data-scroll-target="#question-36">Question 36</a></li>
+  <li><a href="#question-37" id="toc-question-37" class="nav-link" data-scroll-target="#question-37">Question 37</a></li>
+  <li><a href="#question-38" id="toc-question-38" class="nav-link" data-scroll-target="#question-38">Question 38</a></li>
+  <li><a href="#question-39" id="toc-question-39" class="nav-link" data-scroll-target="#question-39">Question 39</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#miscellaneous" id="toc-miscellaneous" class="nav-link" data-scroll-target="#miscellaneous">Miscellaneous</a>
+  <ul class="collapse">
+<li><a href="#question-40" id="toc-question-40" class="nav-link" data-scroll-target="#question-40">Question 40</a></li>
+  <li><a href="#question-41" id="toc-question-41" class="nav-link" data-scroll-target="#question-41">Question 41</a></li>
+  <li><a href="#question-42" id="toc-question-42" class="nav-link" data-scroll-target="#question-42">Question 42</a></li>
+  <li><a href="#question-43" id="toc-question-43" class="nav-link" data-scroll-target="#question-43">Question 43</a></li>
+  <li><a href="#question-44" id="toc-question-44" class="nav-link" data-scroll-target="#question-44">Question 44</a></li>
+  <li><a href="#question-45" id="toc-question-45" class="nav-link" data-scroll-target="#question-45">Question 45</a></li>
+  <li><a href="#question-46" id="toc-question-46" class="nav-link" data-scroll-target="#question-46">Question 46</a></li>
+  <li><a href="#question-47" id="toc-question-47" class="nav-link" data-scroll-target="#question-47">Question 47</a></li>
+  </ul>
+</li>
+  </ul>
+</li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/exams/final.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">final</h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../exams/midterm-1.html">Exam Study Guides</a></li><li class="breadcrumb-item"><a href="../exams/final.html">Final</a></li></ol></nav><div class="quarto-title">
+<h1 class="title">Final Exam Study Guide</h1>
 </div>
 
 
@@ -448,14 +595,1552 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header>
+</header><p>Our final exam is on Friday May 1 from 2pm to 5pm in Griffith Theater (our usual classroom). Here’s what you need to know:</p>
+<ul>
+<li>The exam is all multiple choice;</li>
+<li>The exam is similar in style and format to the in-class components of the two midterms;</li>
+<li>The exam should not take the full three hours to complete;</li>
+<li>The only resource you are allowed is both sides of a single 8.5” x 11” sheet of notes (prepared however you want);</li>
+<li>The exam is cumulative, with slightly disproportionate emphasis on our last topic, statistical inference;</li>
+<li>I can just tell you right now that webscraping will not appear on the exam, so don’t even worry about it.</li>
+</ul>
+<p>The study advice <a href="https://edstem.org/us/courses/90224/discussion/7626328">here</a> still applies. Below are 47 new practice problems to sink your teeth into, but because the final exam is cumulative, the study guides for Midterms <a href="../exams/midterm-1.html">1</a> and <a href="../exams/midterm-2.html">2</a> remain very relevant. You should regard the <em>true</em> final exam study guide as the “full join” of all three guides.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Try this first
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To start, attempt all of the problems below <em>without resources</em>. Make note of your pain points and blind spots along the way. That might give you an idea of the stuff you would benefit from if you had it on a cheat sheet.</p>
+</div>
+</div>
+<section id="concepts-and-main-ideas" class="level1"><h1>Concepts and main ideas</h1>
+<section id="question-1" class="level3"><h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
+<p>Can you define these terms?</p>
+<ol type="a">
+<li>tidy data;</li>
+<li>computational reproducibility;</li>
+<li>scientific replicability;</li>
+<li>observational data;</li>
+<li>quantile;</li>
+<li>ROC curve;</li>
+<li>discernibility level;</li>
+<li>sampling uncertainty;</li>
+<li>bootstrap distribution;</li>
+<li>null distribution;</li>
+<li>p-value;</li>
+<li>type 1 error</li>
+<li>type 2 error</li>
+</ol></section></section><section id="visual-understanding" class="level1"><h1>Visual understanding</h1>
+<section id="question-2" class="level3"><h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
+<p>Match the histogram to the set of numerical summaries. There is exactly one unique match for each.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="final_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;">choice</th>
+<th style="text-align: right;">mean</th>
+<th style="text-align: right;">median</th>
+<th style="text-align: right;">standard deviation</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">a</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">3.3</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">b</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">c</td>
+<td style="text-align: right;">-3.0</td>
+<td style="text-align: right;">-3.3</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">d</td>
+<td style="text-align: right;">-3.0</td>
+<td style="text-align: right;">-3.0</td>
+<td style="text-align: right;">0.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">e</td>
+<td style="text-align: right;">-1.7</td>
+<td style="text-align: right;">-2.8</td>
+<td style="text-align: right;">2.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">f</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">1.9</td>
+<td style="text-align: right;">1.2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="question-3" class="level3"><h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
+<p>Here’s a nonsense dataset that I made up:</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">glimpse</span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 65
+Columns: 3
+$ x     &lt;dbl&gt; 4.892947, 4.232442, 1.892767, 4.730670, 5.373811, 4.156704, 4.44…
+$ y     &lt;dbl&gt; 8.197365, 39.317266, 9.828075, 18.352456, 20.915403, 19.258701, …
+$ color &lt;fct&gt; forestgreen, blue, forestgreen, red, red, red, blue, red, forest…</code></pre>
+</div>
+</div>
+<p>Imagine you run this code:</p>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="va">x</span> <span class="op">+</span> <span class="va">color</span>, <span class="va">df</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">tidy</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The output would be a lil’ table like this:</p>
+<div class="center-table">
+<table class="caption-top table">
+<thead><tr class="header">
+<th><code>term</code></th>
+<th style="text-align: left;"><code>estimate</code></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>(Intercept)</code></td>
+<td style="text-align: left;"><span class="math inline">\(b_0\)</span></td>
+</tr>
+<tr class="even">
+<td><code>x</code></td>
+<td style="text-align: left;"><span class="math inline">\(b_1\)</span></td>
+</tr>
+<tr class="odd">
+<td><code>colorblue</code></td>
+<td style="text-align: left;"><span class="math inline">\(b_2\)</span></td>
+</tr>
+<tr class="even">
+<td><code>colorforestgreen</code></td>
+<td style="text-align: left;"><span class="math inline">\(b_3\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>A plot of the model fit might look something like this:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="final_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Match the labeled features of the plot to the correct quantity listed below:</p>
+<ol type="a">
+<li><span class="math inline">\(b_0\)</span></li>
+<li><span class="math inline">\(b_1\)</span></li>
+<li><span class="math inline">\(b_2\)</span></li>
+<li><span class="math inline">\(b_3\)</span></li>
+<li><span class="math inline">\(b_0 + b_1\)</span></li>
+<li><span class="math inline">\(b_0 + b_2\)</span></li>
+<li><span class="math inline">\(b_0 + b_3\)</span></li>
+<li><span class="math inline">\(b_1 + b_2\)</span></li>
+<li><span class="math inline">\(b_1 + b_3\)</span></li>
+<li><span class="math inline">\(b_2 + b_3\)</span></li>
+<li><span class="math inline">\(b_2 - b_3\)</span></li>
+</ol>
+<p><strong>Note</strong>: Some of these quantities might go unused, and some might be used more than once.</p>
+</section></section><section id="code-doctor" class="level1"><h1>Code doctor</h1>
+<p>Below are five examples of code that returns an error or a warning or otherwise behaves in a strange and unexpected way. In each case, identify the mistake and explain how it should be fixed.</p>
+<section id="question-4" class="level3"><h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
+<p>Consider these:</p>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">students</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+     id name 
+  &lt;int&gt; &lt;chr&gt;
+1     1 Ana  
+2     2 Ben  
+3     3 Chris</code></pre>
+</div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">grades</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  id    grade
+  &lt;chr&gt; &lt;chr&gt;
+1 1     A    
+2 2     B    
+3 3     A    </code></pre>
+</div>
+</div>
+<p>It seems like a lovely day for some joining, but then disaster strikes:</p>
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">left_join</span><span class="op">(</span><span class="va">students</span>, <span class="va">grades</span>, by <span class="op">=</span> <span class="st">"id"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `left_join()`:
+! Can't join `x$id` with `y$id` due to incompatible types.
+ℹ `x$id` is a &lt;integer&gt;.
+ℹ `y$id` is a &lt;character&gt;.</code></pre>
+</div>
+</div>
+<p>Why?</p>
+</section><section id="question-5" class="level3"><h3 class="anchored" data-anchor-id="question-5">Question 5</h3>
+<p>1,500 people responded to a survey asking “Overall, how would you describe the impact of the many changes (transfer portal, athlete name, image and likeness (NIL) compensation, conference realignments) taking place in Division I college athletics?” Here is the summary of responses:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 3
+   age   opinion               n
+   &lt;fct&gt; &lt;fct&gt;             &lt;dbl&gt;
+ 1 18-44 Very positive        78
+ 2 18-44 Somewhat positive   176
+ 3 18-44 Neutral             162
+ 4 18-44 Somewhat negative    50
+ 5 18-44 Very negative        36
+ 6 18-44 Unsure              197
+ 7 45+   Very positive        41
+ 8 45+   Somewhat positive   121
+ 9 45+   Neutral             186
+10 45+   Somewhat negative   146
+11 45+   Very negative        97
+12 45+   Unsure              210</code></pre>
+</div>
+</div>
+<p>How come this doesn’t give us the stacked barchart visualizing the breakdown of responses by age?</p>
+<div class="cell">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">survey_counts</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">age</span>, y <span class="op">=</span> <span class="va">n</span>, fill <span class="op">=</span> <span class="va">opinion</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_bar</span><span class="op">(</span>position <span class="op">=</span> <span class="st">"fill"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in `geom_bar()`:
+! Problem while computing stat.
+ℹ Error occurred in the 1st layer.
+Caused by error in `setup_params()`:
+! `stat_count()` must only have an x or y aesthetic.</code></pre>
+</div>
+</div>
+</section><section id="question-6" class="level3"><h3 class="anchored" data-anchor-id="question-6">Question 6</h3>
+<p>Consider these two datasets:</p>
+<div class="cell">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sales_taxes</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"data/sales-taxes-25.csv"</span><span class="op">)</span></span>
+<span><span class="va">us_regions</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"data/us-regions.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">glimpse</span><span class="op">(</span><span class="va">sales_taxes</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 51
+Columns: 7
+$ state              &lt;chr&gt; "Alabama", "Alaska", "Arizona", "Arkansas", "Califo…
+$ state_tax_rate     &lt;dbl&gt; 4.000, 0.000, 5.600, 6.500, 7.250, 2.900, 6.350, 0.…
+$ state_tax_rank     &lt;dbl&gt; 40, 46, 28, 9, 1, 45, 12, 46, 17, 40, 40, 17, 13, 2…
+$ avg_local_tax_rate &lt;dbl&gt; 5.44, 1.82, 2.92, 2.98, 1.73, 4.96, 0.00, 0.00, 1.0…
+$ max_local          &lt;dbl&gt; 11.000, 7.850, 5.300, 6.125, 5.250, 8.300, 0.000, 0…
+$ combined_tax_rate  &lt;dbl&gt; 9.44, 1.82, 8.52, 9.48, 8.98, 7.86, 6.35, 0.00, 7.0…
+$ combined_rank      &lt;dbl&gt; 5, 46, 11, 3, 7, 16, 33, 47, 24, 19, 45, 37, 8, 25,…</code></pre>
+</div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">glimpse</span><span class="op">(</span><span class="va">us_regions</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 50
+Columns: 2
+$ state_name &lt;chr&gt; "Maine", "New Hampshire", "Vermont", "Massachusetts", "Rhod…
+$ region     &lt;chr&gt; "Northeast", "Northeast", "Northeast", "Northeast", "Northe…</code></pre>
+</div>
+</div>
+<p>Why didn’t this work to join the two data frames?</p>
+<div class="cell">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sales_taxes</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">full_join</span><span class="op">(</span><span class="va">us_regions</span>, </span>
+<span>            by <span class="op">=</span> <span class="va">state</span> <span class="op">==</span> <span class="va">state_name</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error: object 'state' not found</code></pre>
+</div>
+</div>
+</section><section id="question-7" class="level3"><h3 class="anchored" data-anchor-id="question-7">Question 7</h3>
+<p>Imagine we wanted to pivot <em>wider</em> this lil’ baby data frame:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 7 × 3
+  student quiz  score
+  &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;
+1 Alice   Quiz1    90
+2 Alice   Quiz1    95
+3 Alice   Quiz2    88
+4 Bob     Quiz1    70
+5 Bob     Quiz2    75
+6 Charlie Quiz1    85
+7 Charlie Quiz2    92</code></pre>
+</div>
+</div>
+<p>Why is it screaming at me?</p>
+<div class="cell">
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">pivot_wider</span><span class="op">(</span></span>
+<span>    names_from <span class="op">=</span> <span class="va">quiz</span>,</span>
+<span>    values_from <span class="op">=</span> <span class="va">score</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Values from `score` are not uniquely identified; output will contain list-cols.
+• Use `values_fn = list` to suppress this warning.
+• Use `values_fn = {summary_fun}` to summarise duplicates.
+• Use the following dplyr code to identify duplicates.
+  {data} |&gt;
+  dplyr::summarise(n = dplyr::n(), .by = c(student, quiz)) |&gt;
+  dplyr::filter(n &gt; 1L)</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+  student Quiz1     Quiz2    
+  &lt;chr&gt;   &lt;list&gt;    &lt;list&gt;   
+1 Alice   &lt;dbl [2]&gt; &lt;dbl [1]&gt;
+2 Bob     &lt;dbl [1]&gt; &lt;dbl [1]&gt;
+3 Charlie &lt;dbl [1]&gt; &lt;dbl [1]&gt;</code></pre>
+</div>
+</div>
+</section><section id="question-8" class="level3"><h3 class="anchored" data-anchor-id="question-8">Question 8</h3>
+<p>Recall the dataset on spam emails:</p>
+<div class="cell">
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">email</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3,921 × 21
+   spam  exclaim_mess to_multiple from     cc sent_email time               
+   &lt;fct&gt;        &lt;dbl&gt; &lt;fct&gt;       &lt;fct&gt; &lt;int&gt; &lt;fct&gt;      &lt;dttm&gt;             
+ 1 0                0 0           1         0 0          2012-01-01 01:16:41
+ 2 0                1 0           1         0 0          2012-01-01 02:03:59
+ 3 0                6 0           1         0 0          2012-01-01 11:00:32
+ 4 0               48 0           1         0 0          2012-01-01 04:09:49
+ 5 0                1 0           1         0 0          2012-01-01 05:00:01
+ 6 0                1 0           1         0 0          2012-01-01 05:04:46
+ 7 0                1 1           1         0 1          2012-01-01 12:55:06
+ 8 0               18 1           1         1 1          2012-01-01 13:45:21
+ 9 0                1 0           1         0 0          2012-01-01 16:08:59
+10 0                0 0           1         0 0          2012-01-01 13:12:00
+# ℹ 3,911 more rows
+# ℹ 14 more variables: image &lt;dbl&gt;, attach &lt;dbl&gt;, dollar &lt;dbl&gt;, winner &lt;fct&gt;,
+#   inherit &lt;dbl&gt;, viagra &lt;dbl&gt;, password &lt;dbl&gt;, num_char &lt;dbl&gt;,
+#   line_breaks &lt;int&gt;, format &lt;fct&gt;, re_subj &lt;fct&gt;, exclaim_subj &lt;dbl&gt;,
+#   urgent_subj &lt;fct&gt;, number &lt;fct&gt;</code></pre>
+</div>
+</div>
+<p>Here is a regression model trained on all of these data:</p>
+<div class="cell">
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">log_fit</span> <span class="op">&lt;-</span> <span class="fu">logistic_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">spam</span> <span class="op">~</span> <span class="va">.</span>, data <span class="op">=</span> <span class="va">email</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The <em>in-sample</em> predictions of the model are here:</p>
+<div class="cell">
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">email_aug</span> <span class="op">&lt;-</span> <span class="fu">augment</span><span class="op">(</span><span class="va">log_fit</span>, <span class="va">email</span><span class="op">)</span></span>
+<span><span class="va">email_aug</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3,921 × 24
+   .pred_class .pred_0  .pred_1 spam  exclaim_mess to_multiple from     cc
+   &lt;fct&gt;         &lt;dbl&gt;    &lt;dbl&gt; &lt;fct&gt;        &lt;dbl&gt; &lt;fct&gt;       &lt;fct&gt; &lt;int&gt;
+ 1 0             0.867 1.33e- 1 0                0 0           1         0
+ 2 0             0.943 5.70e- 2 0                1 0           1         0
+ 3 0             0.942 5.78e- 2 0                6 0           1         0
+ 4 0             0.920 7.96e- 2 0               48 0           1         0
+ 5 0             0.903 9.74e- 2 0                1 0           1         0
+ 6 0             0.901 9.87e- 2 0                1 0           1         0
+ 7 0             1.000 7.89e-12 0                1 1           1         0
+ 8 0             1.000 1.24e-12 0               18 1           1         1
+ 9 0             0.862 1.38e- 1 0                1 0           1         0
+10 0             0.922 7.76e- 2 0                0 0           1         0
+# ℹ 3,911 more rows
+# ℹ 16 more variables: sent_email &lt;fct&gt;, time &lt;dttm&gt;, image &lt;dbl&gt;,
+#   attach &lt;dbl&gt;, dollar &lt;dbl&gt;, winner &lt;fct&gt;, inherit &lt;dbl&gt;, viagra &lt;dbl&gt;,
+#   password &lt;dbl&gt;, num_char &lt;dbl&gt;, line_breaks &lt;int&gt;, format &lt;fct&gt;,
+#   re_subj &lt;fct&gt;, exclaim_subj &lt;dbl&gt;, urgent_subj &lt;fct&gt;, number &lt;fct&gt;</code></pre>
+</div>
+</div>
+<p>To see how well the model did, we can compute the classification error rates for different thresholds and summarize the results with the ROC curve:</p>
+<div class="cell">
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">email_aug</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">roc_curve</span><span class="op">(</span>truth <span class="op">=</span> <span class="va">spam</span>, <span class="va">.pred_0</span>, event_level <span class="op">=</span> <span class="st">"second"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="fl">1</span> <span class="op">-</span> <span class="va">specificity</span>, y <span class="op">=</span> <span class="va">sensitivity</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_path</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_abline</span><span class="op">(</span>lty <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">coord_equal</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="st">"1 - specificity"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"sensitivity"</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="final_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Why does this model suck so hard?</p>
+</section></section><section id="stat-doctor" class="level1"><h1>Stat doctor</h1>
+<p>Recall the Pokémon data from <a href="../ae/ae-23-pokemon-infer.html">AE 23</a>:</p>
+<div class="cell">
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pokemon</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"data/pokemon.csv"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">mutate</span><span class="op">(</span></span>
+<span>    is_legendary <span class="op">=</span> <span class="fu">as_factor</span><span class="op">(</span><span class="va">is_legendary</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span></span>
+<span><span class="fu">glimpse</span><span class="op">(</span><span class="va">pokemon</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 924
+Columns: 17
+$ name            &lt;chr&gt; "Bulbasaur", "Ivysaur", "Venusaur", "Mega Venusaur", "…
+$ generation      &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …
+$ type_1          &lt;chr&gt; "Grass", "Grass", "Grass", "Grass", "Fire", "Fire", "F…
+$ type_2          &lt;chr&gt; "Poison", "Poison", "Poison", "Poison", NA, NA, "Flyin…
+$ height_m        &lt;dbl&gt; 0.7, 1.0, 2.0, 2.4, 0.6, 1.1, 1.7, 1.7, 1.7, 0.5, 1.0,…
+$ weight_kg       &lt;dbl&gt; 6.9, 13.0, 100.0, 155.5, 8.5, 19.0, 90.5, 110.5, 100.5…
+$ total_points    &lt;dbl&gt; 318, 405, 525, 625, 309, 405, 534, 634, 634, 314, 405,…
+$ hp              &lt;dbl&gt; 45, 60, 80, 80, 39, 58, 78, 78, 78, 44, 59, 79, 79, 45…
+$ attack          &lt;dbl&gt; 49, 62, 82, 100, 52, 64, 84, 130, 104, 48, 63, 83, 103…
+$ defense         &lt;dbl&gt; 49, 63, 83, 123, 43, 58, 78, 111, 78, 65, 80, 100, 120…
+$ sp_attack       &lt;dbl&gt; 65, 80, 100, 122, 60, 80, 109, 130, 159, 50, 65, 85, 1…
+$ sp_defense      &lt;dbl&gt; 65, 80, 100, 120, 50, 65, 85, 85, 115, 64, 80, 105, 11…
+$ speed           &lt;dbl&gt; 45, 60, 80, 80, 65, 80, 100, 100, 100, 43, 58, 78, 78,…
+$ catch_rate      &lt;dbl&gt; 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 25…
+$ base_friendship &lt;dbl&gt; 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70, 70…
+$ base_experience &lt;dbl&gt; 64, 142, 236, 281, 62, 142, 240, 285, 285, 63, 142, 23…
+$ is_legendary    &lt;fct&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE…</code></pre>
+</div>
+</div>
+<p>Apart from seeing <a href="https://en.wikipedia.org/wiki/Pok%C3%A9mon:_The_First_Movie"><em>Pokémon: The First Movie</em></a> in the theater with my mom in 1999, I don’t actually know that much about Pokémon. At some point in the recent past, my little brother informed me that the new Pokémon included a fellow named Garbodor:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/garbodor.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>With all due respect to Garbodor, I must confess that this news did somewhat blunt my interest in Pokémon going forward.</p>
+<p>Anyway, below are several failed attempts at interpreting statistical results for these data. Diagnose the problem and fix it if possible.</p>
+<section id="question-9" class="level3"><h3 class="anchored" data-anchor-id="question-9">Question 9</h3>
+<div class="cell">
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">observed_fit</span> <span class="op">&lt;-</span> <span class="va">pokemon</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">specify</span><span class="op">(</span><span class="va">speed</span> <span class="op">~</span> <span class="va">defense</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">observed_fit</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  term      estimate
+  &lt;chr&gt;        &lt;dbl&gt;
+1 intercept  69.7   
+2 defense    -0.0144</code></pre>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>A Pokémon with speed of 0 will have defense of 69.66.</p>
+</blockquote>
+</section><section id="question-10" class="level3"><h3 class="anchored" data-anchor-id="question-10">Question 10</h3>
+<div class="cell">
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">logistic_fit</span> <span class="op">&lt;-</span> <span class="fu">logistic_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">is_legendary</span> <span class="op">~</span> <span class="va">hp</span> <span class="op">+</span> <span class="va">attack</span> <span class="op">+</span> <span class="va">defense</span>, <span class="va">pokemon</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">tidy</span><span class="op">(</span><span class="va">logistic_fit</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 5
+  term        estimate std.error statistic  p.value
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)  -7.77     0.609      -12.8  3.07e-37
+2 hp            0.0274   0.00423      6.48 8.92e-11
+3 attack        0.0230   0.00389      5.92 3.25e- 9
+4 defense       0.0162   0.00380      4.25 2.10e- 5</code></pre>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>A one unit increase in hp is associated with a 0.027 increase in the probability that the Pokémon is not legendary, on average.</p>
+</blockquote>
+</section><section id="question-11" class="level3"><h3 class="anchored" data-anchor-id="question-11">Question 11</h3>
+<div class="cell">
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">logistic_fit</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">augment</span><span class="op">(</span><span class="va">pokemon</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">roc_auc</span><span class="op">(</span></span>
+<span>    truth <span class="op">=</span> <span class="va">is_legendary</span>, </span>
+<span>    <span class="va">.pred_TRUE</span>, </span>
+<span>    event_level <span class="op">=</span> <span class="st">"second"</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  .metric .estimator .estimate
+  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;
+1 roc_auc binary         0.852</code></pre>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>About 85% of the variation in the response is explained by the model.</p>
+</blockquote>
+</section><section id="question-12" class="level3"><h3 class="anchored" data-anchor-id="question-12">Question 12</h3>
+<div class="cell">
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">12345</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">pokemon</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">specify</span><span class="op">(</span><span class="va">speed</span> <span class="op">~</span> <span class="va">defense</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">generate</span><span class="op">(</span>reps <span class="op">=</span> <span class="fl">500</span>, type <span class="op">=</span> <span class="st">"bootstrap"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">get_confidence_interval</span><span class="op">(</span></span>
+<span>    point_estimate <span class="op">=</span> <span class="va">observed_fit</span>,</span>
+<span>    level <span class="op">=</span> <span class="fl">0.9</span>,</span>
+<span>    type <span class="op">=</span> <span class="st">"percentile"</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">term</span> <span class="op">==</span> <span class="st">"defense"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  term    lower_ci upper_ci
+  &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;
+1 defense  -0.0657   0.0458</code></pre>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>We are confident that 95% of our data lies between -0.065 and 0.046.</p>
+</blockquote>
+</section><section id="question-13" class="level3"><h3 class="anchored" data-anchor-id="question-13">Question 13</h3>
+<div class="cell">
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">24601</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">pokemon</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">specify</span><span class="op">(</span><span class="va">speed</span> <span class="op">~</span> <span class="va">defense</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">hypothesize</span><span class="op">(</span>null <span class="op">=</span> <span class="st">"independence"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">generate</span><span class="op">(</span>reps <span class="op">=</span> <span class="fl">500</span>, type <span class="op">=</span> <span class="st">"permute"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">get_p_value</span><span class="op">(</span>obs_stat <span class="op">=</span> <span class="va">observed_fit</span>, direction <span class="op">=</span> <span class="st">"two-sided"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  term      p_value
+  &lt;chr&gt;       &lt;dbl&gt;
+1 defense     0.532
+2 intercept   0.532</code></pre>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>The probability that the null hypothesis is true (meaning <code>defense</code> and <code>speed</code> are uncorrelated) is about 53%.</p>
+</blockquote>
+</section><section id="question-14" class="level3"><h3 class="anchored" data-anchor-id="question-14">Question 14</h3>
+<blockquote class="blockquote">
+<p>Because the p-value is greater than 50%, we reject the alternative hypothesis.</p>
+</blockquote>
+</section></section><section id="data-analysis" class="level1"><h1>Data analysis</h1>
+<section id="duke-forest-homes" class="level2"><h2 class="anchored" data-anchor-id="duke-forest-homes">Duke Forest homes</h2>
+<p>In this part of the exam you’ll work with a dataset you’ve seen before: sale prices and other features of 98 homes in Duke Forest. The data come from Zillow. The name of the data frame is <code>duke_forest</code> and it contains the variables described in the table below.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 80%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>price</code></td>
+<td style="text-align: left;">Sale price, in USD</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>bed</code></td>
+<td style="text-align: left;">Number of bedrooms</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>bath</code></td>
+<td style="text-align: left;">Number of bathrooms</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>area</code></td>
+<td style="text-align: left;">Area of home, in square feet</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>year_built</code></td>
+<td style="text-align: left;">Year the home was built</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>heating</code></td>
+<td style="text-align: left;">Heating sytem</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>cooling</code></td>
+<td style="text-align: left;">Cooling system (<code>Central</code> or <code>Non-central</code>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>parking</code></td>
+<td style="text-align: left;">Type of parking available and number of parking spaces</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>lot</code></td>
+<td style="text-align: left;">Area of the entire property, in acres</td>
+</tr>
+</tbody>
+</table>
+<p>A peek at the data is shown below.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 98 × 9
+     price   bed  bath  area year_built heating  cooling parking   lot
+     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;    &lt;fct&gt;   &lt;chr&gt;   &lt;dbl&gt;
+ 1 1520000     3     4  6040       1972 Other, … Central 0 spac…  0.97
+ 2 1030000     5     4  4475       1969 Forced … Central Carpor…  1.38
+ 3  420000     2     3  1745       1959 Forced … Central Garage…  0.51
+ 4  680000     4     3  2091       1961 Heat pu… Central Carpor…  0.84
+ 5  428500     4     3  1772       2020 Forced … Central 0 spac…  0.16
+ 6  456000     3     3  1950       2014 Forced … Central Off-st…  0.45
+ 7 1270000     5     5  3909       1968 Forced … Central Carpor…  0.94
+ 8  557450     4     3  2841       1973 Heat pu… Central Carpor…  0.79
+ 9  697500     4     5  3924       1972 Other, … Central Covered  0.53
+10  650000     3     2  2173       1964 Forced … Non-ce… 0 spac…  0.73
+# ℹ 88 more rows</code></pre>
+</div>
+</div>
+<p>Suppose you’re working in a team of three students, exploring and modeling prices of homes in Duke Forest. During your initial exploration, your team finds out that only a small number of homes in your sample have very few or very many bedrooms – only 4 homes with 2 bedrooms, 30 with 3 bedrooms, 52 with 4 bedrooms, 11 with 5 bedrooms, and just 1 with 6 bedrooms.</p>
+<p>Therefore, you decide to create a new variable, called <code>bed_new</code>, with the following logic:</p>
+<ul>
+<li>If a home has 2 or 3 bedrooms, label it <code>"2 or 3"</code>
+</li>
+<li>If a home has 4 bedrooms, label it <code>"4"</code>
+</li>
+<li>If a home has 5 or more bedrooms, label it <code>"5+</code>
+</li>
+</ul>
+<p>You ask your TA how to implement this logic, and they give you the following data transformation pipeline as a hint.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>duke_forest <span class="ot">&lt;-</span> duke_forest <span class="sc">|&gt;</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>  __[BLANK <span class="dv">1</span>]<span class="fu">__</span>(</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">bed_new =</span> __[BLANK <span class="dv">2</span>]<span class="fu">__</span>(</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>      bed <span class="sc">==</span> <span class="dv">2</span> __[BLANK <span class="dv">3</span>]__ bed <span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="st">"2 or 3"</span>,</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>      bed __[BLANK <span class="dv">4</span>]__ <span class="dv">4</span>             <span class="sc">~</span> <span class="st">"4"</span>,</span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>      bed <span class="sc">&gt;=</span> <span class="dv">5</span>                        <span class="sc">~</span> <span class="st">"5+"</span></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>  __[BLANK <span class="dv">5</span>]<span class="fu">__</span>(bed, bed_new)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The first ten rows and the first few columns of the resulting, updated <code>duke_forest</code> data frame are shown below, with the variable types suppressed (since you’ll be asked about them later).</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 98 × 10
+     bed bed_new  price  bath  area year_built heating cooling parking
+ 1     3 2 or 3  1.52e6     4  6040       1972 Other,… Central 0 spac…
+ 2     5 5+      1.03e6     4  4475       1969 Forced… Central Carpor…
+ 3     2 2 or 3  4.20e5     3  1745       1959 Forced… Central Garage…
+ 4     4 4       6.80e5     3  2091       1961 Heat p… Central Carpor…
+ 5     4 4       4.29e5     3  1772       2020 Forced… Central 0 spac…
+ 6     3 2 or 3  4.56e5     3  1950       2014 Forced… Central Off-st…
+ 7     5 5+      1.27e6     5  3909       1968 Forced… Central Carpor…
+ 8     4 4       5.57e5     3  2841       1973 Heat p… Central Carpor…
+ 9     4 4       6.97e5     5  3924       1972 Other,… Central Covered
+10     3 2 or 3  6.5 e5     2  2173       1964 Forced… Non-ce… 0 spac…
+# ℹ 88 more rows
+# ℹ 1 more variable: lot</code></pre>
+</div>
+</div>
+<p>Answer the next chunk of questions based on the pipeline above and its result.</p>
+<section id="question-15" class="level3"><h3 class="anchored" data-anchor-id="question-15">Question 15</h3>
+<p><code>[BLANK 1]</code> should be:</p>
+<ol type="a">
+<li><p><code>assign</code></p></li>
+<li><p><code>filter</code></p></li>
+<li><p><code>mutate</code></p></li>
+<li><p><code>select</code></p></li>
+<li><p><code>summarize</code></p></li>
+</ol></section><section id="question-16" class="level3"><h3 class="anchored" data-anchor-id="question-16">Question 16</h3>
+<p><code>[BLANK 2]</code> should be:</p>
+<ol type="a">
+<li><p><code>case_when</code></p></li>
+<li><p><code>if_else</code></p></li>
+<li><p><code>ifelse</code></p></li>
+<li><p><code>read.csv</code></p></li>
+<li><p><code>rename</code></p></li>
+</ol></section><section id="question-17" class="level3"><h3 class="anchored" data-anchor-id="question-17">Question 17</h3>
+<p><code>[BLANK 3]</code> should be:</p>
+<ol type="a">
+<li><p><code>%in%</code></p></li>
+<li><p><code>==</code></p></li>
+<li><p><code>|</code></p></li>
+<li><p><code>&amp;</code></p></li>
+<li><p><code>=</code></p></li>
+</ol></section><section id="question-18" class="level3"><h3 class="anchored" data-anchor-id="question-18">Question 18</h3>
+<p><code>[BLANK 4]</code> should be:</p>
+<ol type="a">
+<li><p><code>==</code></p></li>
+<li><p><code>&gt;=</code></p></li>
+<li><p><code>=</code></p></li>
+<li><p><code>&gt;</code></p></li>
+<li><p><code>&gt;&gt;</code></p></li>
+</ol></section><section id="question-19" class="level3"><h3 class="anchored" data-anchor-id="question-19">Question 19</h3>
+<p><code>[BLANK 5]</code> should be:</p>
+<ol type="a">
+<li><p><code>after</code></p></li>
+<li><p><code>select</code></p></li>
+<li><p><code>group_by</code></p></li>
+<li><p><code>summarize</code></p></li>
+<li><p><code>relocate</code></p></li>
+</ol></section><section id="question-20" class="level3"><h3 class="anchored" data-anchor-id="question-20">Question 20</h3>
+<p>Which of the following is the type of the <code>bed_new</code> variable?</p>
+<ol type="a">
+<li><p><code>character</code></p></li>
+<li><p><code>double</code></p></li>
+<li><p><code>factor</code></p></li>
+<li><p><code>integer</code></p></li>
+<li><p><code>numeric</code></p></li>
+</ol></section><section id="question-21" class="level3"><h3 class="anchored" data-anchor-id="question-21">Question 21</h3>
+<p>Next, you turn your attention to exploring the relationship between <code>cooling</code> systems and prices of Duke Forest homes.</p>
+<ul>
+<li>You write the following data transformation pipeline:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cooling_median_prices</span> <span class="op">&lt;-</span> <span class="va">duke_forest</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">cooling</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">summarize</span><span class="op">(</span>median_price <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">price</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="co"># calculate median price</span></span>
+<span>  <span class="fu">arrange</span><span class="op">(</span><span class="fu">desc</span><span class="op">(</span><span class="va">median_price</span><span class="op">)</span><span class="op">)</span>                <span class="co"># arrange in descending order</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>One of your teammates makes writes the following data transformation pipeline:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cooling_max_prices</span> <span class="op">&lt;-</span> <span class="va">duke_forest</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">cooling</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">summarize</span><span class="op">(</span>max_price <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">price</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span>       <span class="co"># calculate max price</span></span>
+<span>  <span class="fu">arrange</span><span class="op">(</span><span class="va">max_price</span><span class="op">)</span>                         <span class="co"># arrange in ascending order</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>And your other teammate makes the following visualization:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">duke_forest</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">price</span>, y <span class="op">=</span> <span class="va">cooling</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_boxplot</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="final_files/figure-html/unnamed-chunk-53-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Which of the following is <u><strong>TRUE</strong></u>? <strong>Select all that apply.</strong></p>
+<ol type="a">
+<li><p><code>cooling_median_prices</code> is grouped by <code>cooling</code>.</p></li>
+<li><p><code>cooling_median_prices</code> has two rows.</p></li>
+<li><p><code>cooling_median_prices</code> and <code>cooling_max_prices</code> have the same number of columns.</p></li>
+<li><p>First row of the <code>cooling</code> variable in <code>cooling_median_prices</code> has the value <code>"Central"</code>.</p></li>
+<li><p>First row of the <code>cooling</code> variable in <code>cooling_max_prices</code> has the value <code>"Central"</code>.</p></li>
+</ol></section><section id="question-22" class="level3"><h3 class="anchored" data-anchor-id="question-22">Question 22</h3>
+<p>You conclude your exploration by examining the relationship between number of bedrooms, cooling type, and prices of homes in Duke Forest.</p>
+<div class="cell">
+<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">duke_forest</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">bed_new</span>, <span class="va">cooling</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">summarize</span><span class="op">(</span>median_price <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">price</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Which of the following is <u><strong>TRUE</strong></u> about the resulting data frame? <strong>Select all that apply.</strong></p>
+<ol type="a">
+<li><p>The data frame has 6 rows.</p></li>
+<li><p>The data frame has 3 columns.</p></li>
+<li><p>The <code>median_price</code> variable tells us the median prices of homes for each level of <code>cooling</code>.</p></li>
+<li><p>The <code>median_price</code> variable tells us the median prices of homes for each level of <code>bed_new</code>.</p></li>
+<li><p>The <code>median_price</code> variable tells us the median prices of homes for each distinct combination of levels of <code>bed_new</code> and <code>cooling</code>.</p></li>
+</ol></section><section id="question-23" class="level3"><h3 class="anchored" data-anchor-id="question-23">Question 23</h3>
+<p>Suppose you want to predict <code>price</code>s of homes from <code>area</code> and <code>cooling</code>, and you are considering two models:</p>
+<ul>
+<li>Model 1: Without an interaction between <code>area</code> and <code>cooling</code>
+</li>
+<li>Model 2: With an interaction between <code>area</code> and <code>cooling</code>
+</li>
+</ul>
+<p>Which of the following <u><strong>must</strong></u> be true? <strong>Select all that apply.</strong></p>
+<ol type="a">
+<li><p>Model 2 will estimate more slope coefficients compared to Model 1.</p></li>
+<li><p>Model 2 will have a higher <span class="math inline">\(R^2\)</span> compared to Model 1.</p></li>
+<li><p>Model 2 will have a higher adjusted <span class="math inline">\(R^2\)</span> compared to Model 1.</p></li>
+<li><p>Model 2 will have best fit lines that are parallel.</p></li>
+<li><p>Model 2 will have best fit lines that could cross.</p></li>
+</ol></section></section><section id="holiday-movies" class="level2"><h2 class="anchored" data-anchor-id="holiday-movies">Holiday movies</h2>
+<p>Happy (almost) holidays!</p>
+<p>A team of five data scientists is working together to explore, model, and make inferences about holiday movies using a dataset on 1835 holiday movies; movies with “holiday”, “Christmas”, “Hanukkah”, or “Kwanzaa” (or variants thereof) in their title. Each member of the team is responsible for a different part of the analysis. The data come from the Internet Movie Database (IMDb). The data frame is called <code>holiday_movies</code> and it contains the variables described in the table below.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 80%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>id</code></td>
+<td style="text-align: left;">IMDb ID of movie</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>title_type</code></td>
+<td style="text-align: left;">Type of the title (Feature Film or TV Movie)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>title</code></td>
+<td style="text-align: left;">Title used on promotional materials at the point of release</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>year</code></td>
+<td style="text-align: left;">Release year of a title</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>runtime</code></td>
+<td style="text-align: left;">Primary runtime of the title, in minutes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>genre</code></td>
+<td style="text-align: left;">Primary genre associated with the title</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>score</code></td>
+<td style="text-align: left;">Weighted average of all the individual user ratings on IMDb</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>num_votes</code></td>
+<td style="text-align: left;">Number of votes the title has received on IMDb</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>christmas</code></td>
+<td style="text-align: left;">Whether the title includes “christmas”, “xmas”, “x mas”, etc.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>hanukkah</code></td>
+<td style="text-align: left;">Whether the title includes “hanukkah”, “chanukah”, etc.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>kwanzaa</code></td>
+<td style="text-align: left;">Whether the title includes “kwanzaa”</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>holiday</code></td>
+<td style="text-align: left;">Whether the title includes the word “holiday”</td>
+</tr>
+</tbody>
+</table>
+<p>A peek at the data is shown below.</p>
+<div class="cell">
+<div class="sourceCode" id="cb48"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">holiday_movies</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,835 × 12
+   id        title_type   title     year runtime genre score num_votes
+   &lt;chr&gt;     &lt;chr&gt;        &lt;chr&gt;    &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;     &lt;dbl&gt;
+ 1 tt0020356 Feature Film Sailor'…  1929      58 Come…   5.4        55
+ 2 tt0020823 Feature Film The Dev…  1930      80 Drama   6         242
+ 3 tt0020985 Feature Film Holiday   1930      91 Come…   6.3       638
+ 4 tt0021268 Feature Film Holiday…  1930      83 Come…   7.4       256
+ 5 tt0021377 Feature Film Sin Tak…  1930      81 Come…   6.1       740
+ 6 tt0021381 Feature Film Sinners…  1930      60 Other   6.3       688
+ 7 tt0023039 Feature Film Husband…  1931      70 Drama   6.4        27
+ 8 tt0024869 Feature Film Beggar'…  1934      60 Other   5.6        15
+ 9 tt0025006 Feature Film Cowboy …  1934      56 Other   4.8        74
+10 tt0025037 Feature Film Death T…  1934      79 Drama   6.9      2361
+# ℹ 1,825 more rows
+# ℹ 4 more variables: christmas &lt;lgl&gt;, hanukkah &lt;lgl&gt;, kwanzaa &lt;lgl&gt;,
+#   holiday &lt;lgl&gt;</code></pre>
+</div>
+</div>
+<section id="question-24" class="level3"><h3 class="anchored" data-anchor-id="question-24">Question 24</h3>
+<p>The first team member is working on exploration They use the full dataset for their analysis. Answer the questions in this part for this team member’s portion of the analysis.</p>
+<p>Which of the following plots would be appropriate for visualizing the distribution of scores of these movies? <strong>Select all that apply.</strong></p>
+<ol type="a">
+<li><p>Waffle plot</p></li>
+<li><p>Violin plot</p></li>
+<li><p>Pie chart</p></li>
+<li><p>Scatter plot</p></li>
+<li><p>Density plot</p></li>
+</ol></section><section id="question-25" class="level3"><h3 class="anchored" data-anchor-id="question-25">Question 25</h3>
+<p>Which of the following is <u><strong>TRUE</strong></u> about the code and its result? <strong>Select all that apply.</strong></p>
+<div class="cell">
+<div class="sourceCode" id="cb50"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">holiday_movies</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">count</span><span class="op">(</span><span class="va">title_type</span>, <span class="va">genre</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">pivot_wider</span><span class="op">(</span>names_from <span class="op">=</span> <span class="va">genre</span>, values_from <span class="op">=</span> <span class="va">n</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 7
+  title_type   Animation Comedy Drama Family Other Romance
+  &lt;chr&gt;            &lt;int&gt;  &lt;int&gt; &lt;int&gt;  &lt;int&gt; &lt;int&gt;   &lt;int&gt;
+1 Feature Film        24    334   130     60   153      20
+2 TV Movie            99    453   287     65   127      83</code></pre>
+</div>
+</div>
+<ol type="a">
+<li><p>Each row of the output is a movie from this sample.</p></li>
+<li><p>The most common title type and genre combination in this sample is TV Movies that are Comedies.</p></li>
+<li><p>Without the last step of the pipeline, the result would be tibble with 12 rows and 3 columns.</p></li>
+<li><p>The output shows that there are six distinct genres in the dataset.</p></li>
+<li><p>A box plot can be used to visualize the distribution of title types across various genres.</p></li>
+</ol></section><section id="question-26" class="level3"><h3 class="anchored" data-anchor-id="question-26">Question 26</h3>
+<p>The visualizations below show the relationship between <code>score</code> and <code>runtime</code> for movies with Drama and Family <code>genre</code>s. Additionally, the lines of best fit are overlaid on the visualizations.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="final_files/figure-html/unnamed-chunk-62-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The correlation coefficients of these relationships are calculated below, though some of the code and the output are missing.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>holiday_movies <span class="sc">|&gt;</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(genre __[BLANK <span class="dv">1</span>]__ <span class="fu">c</span>(<span class="st">"Drama"</span>, <span class="st">"Family"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(genre) <span class="sc">|&gt;</span></span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>  __[BLANK <span class="dv">2</span>]<span class="fu">__</span>(<span class="at">r =</span> <span class="fu">cor</span>(runtime, score))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code># A tibble: 2 × 2
+  genre        r
+  &lt;chr&gt;    &lt;dbl&gt;
+1 Drama  -0.0361
+2 Family -0.384     </code></pre>
+<p>Which of the following goes in <code>__[BLANK 1]__</code>?</p>
+<ol type="a">
+<li><p><code>==</code></p></li>
+<li><p><code>|</code></p></li>
+<li><p><code>&amp;</code></p></li>
+<li><p><code>%in%</code></p></li>
+<li><p><code>=</code></p></li>
+</ol></section><section id="question-27" class="level3"><h3 class="anchored" data-anchor-id="question-27">Question 27</h3>
+<p>Which of the following goes in <code>__[BLANK 2]__</code>?</p>
+<ol type="a">
+<li><p><code>mutate</code></p></li>
+<li><p><code>arrange</code></p></li>
+<li><p><code>filter</code></p></li>
+<li><p><code>slice</code></p></li>
+<li><p><code>summarize</code></p></li>
+</ol></section><section id="question-28" class="level3"><h3 class="anchored" data-anchor-id="question-28">Question 28</h3>
+<p>The second team member is working on inference, focusing on comparing <code>score</code>s between Feature Films and TV Movies using the full dataset. They use the full dataset for their analysis. Answer the questions in this part for this team member’s portion of the analysis.</p>
+<p>The density curves below show the distributions of <code>score</code>s in Feature Films and TV Movies. The means are overlaid on these distributions: a mean score of 5.65 for Feature Films and a mean score of 6.21 for TV Movies. The observed difference between these scores (TV Movies - Feature Films) is 0.56.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="final_files/figure-html/unnamed-chunk-68-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>A bootstrap distribution of the difference between the mean scores of holiday TV Movies and Feature Films is generated using the code below:</p>
+<div class="cell">
+<div class="sourceCode" id="cb54"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">1234</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">boot_dist</span> <span class="op">&lt;-</span> <span class="va">holiday_movies</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">specify</span><span class="op">(</span><span class="va">score</span> <span class="op">~</span> <span class="va">title_type</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">generate</span><span class="op">(</span>reps <span class="op">=</span> <span class="fl">1000</span>, type <span class="op">=</span> <span class="st">"bootstrap"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">calculate</span><span class="op">(</span></span>
+<span>    stat <span class="op">=</span> <span class="st">"diff in means"</span>, </span>
+<span>    order <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"TV Movie"</span>, <span class="st">"Feature Film"</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The plot below visualizes the bootstrap distribution. The 95% confidence interval is (0.442, 0.670). The bounds for this interval are overlaid on the plot.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="final_files/figure-html/unnamed-chunk-71-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Noting that this exam is written in Quarto with all figures and tables produced with code, which of the following is <u><strong>TRUE</strong></u> about this analysis? <strong>Select all that apply.</strong></p>
+<ol type="a">
+<li><p>We are 95% confident that 44.2% to 67% of holiday movies are TV Movies.</p></li>
+<li><p>The upper bound of the interval marks the 2.5th percentile of the bootstrap distribution.</p></li>
+<li><p>We are 95% confident that the mean score of holiday TV Movies is 0.442 points to 0.67 points higher than holiday Feature Films.</p></li>
+<li><p>If this document is rendered again, we might get slightly different values for the bounds of the confidence interval.</p></li>
+<li><p>1,000 bootstrap samples were taken when constructing this confidence interval.</p></li>
+</ol></section><section id="question-29" class="level3"><h3 class="anchored" data-anchor-id="question-29">Question 29</h3>
+<p>A post in a data science blog states that holiday TV movies score discernibly differently than holiday Feature Films, on average. Suppose you want to evaluate this claim using a hypothesis test so you write the following code to simulate the null distribution.</p>
+<div class="cell">
+<div class="sourceCode" id="cb55"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">1234</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">null_dist</span> <span class="op">&lt;-</span> <span class="va">holiday_movies</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">specify</span><span class="op">(</span><span class="va">score</span> <span class="op">~</span> <span class="va">title_type</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">hypothesize</span><span class="op">(</span>null <span class="op">=</span> <span class="st">"independence"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">generate</span><span class="op">(</span>reps <span class="op">=</span> <span class="fl">1000</span>, type <span class="op">=</span> <span class="st">"permute"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">calculate</span><span class="op">(</span></span>
+<span>    stat <span class="op">=</span> <span class="st">"diff in means"</span>, </span>
+<span>    order <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"TV Movie"</span>, <span class="st">"Feature Film"</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The plot below visualizes the null distribution.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="final_files/figure-html/unnamed-chunk-74-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Which of the following is <u><strong>TRUE</strong></u> about this analysis? <strong>Select all that apply.</strong></p>
+<ol type="a">
+<li><p>The null hypothesis states that the mean score of all holiday TV movies is equal to the mean score of all holiday Feature Films.</p></li>
+<li><p>The alternative hypothesis states that the mean score of all holiday TV movies is different than the mean score of all holiday Feature Films.</p></li>
+<li><p>The p-value is approximately 0.</p></li>
+<li><p>The data provide discernible evidence that the mean score of all holiday TV movies is equal to the mean score of all holiday Feature Films.</p></li>
+<li><p>The confidence interval from the previous question and the result of the hypothesis test in this question do not agree with each other.</p></li>
+</ol></section><section id="question-30" class="level3"><h3 class="anchored" data-anchor-id="question-30">Question 30</h3>
+<p>The third team member is working on modeling, predicting <code>score</code>. They first split up the data into training and testing sets.</p>
+<div class="cell">
+<div class="sourceCode" id="cb56"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">199</span><span class="op">)</span></span>
+<span><span class="va">holiday_movies_split</span> <span class="op">&lt;-</span> <span class="fu">initial_split</span><span class="op">(</span><span class="va">holiday_movies</span><span class="op">)</span></span>
+<span><span class="va">holiday_movies_train</span> <span class="op">&lt;-</span> <span class="fu">training</span><span class="op">(</span><span class="va">holiday_movies_split</span><span class="op">)</span></span>
+<span><span class="va">holiday_movies_test</span> <span class="op">&lt;-</span> <span class="fu">testing</span><span class="op">(</span><span class="va">holiday_movies_split</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>They then fit a model predicting <code>score</code> from <code>runtime</code> and <code>genre</code> (categorized as Comedy, Drama, Other, Animation, Family, and Romance), and name it <code>score_runtime_genre_fit</code>, using the training data. Answer the questions in this part for this team member’s portion of the analysis.</p>
+<div class="cell">
+<div class="sourceCode" id="cb57"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">score_runtime_genre_fit</span> <span class="op">&lt;-</span> <span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">score</span> <span class="op">~</span> <span class="va">runtime</span> <span class="op">*</span> <span class="va">genre</span>, data <span class="op">=</span> <span class="va">holiday_movies_train</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The model output for <code>score_runtime_genre_fit</code> is shown below.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead><tr class="header">
+<th style="text-align: left;">term</th>
+<th style="text-align: right;">estimate</th>
+<th style="text-align: right;">std.error</th>
+<th style="text-align: right;">statistic</th>
+<th style="text-align: right;">p.value</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: right;">7.327</td>
+<td style="text-align: right;">0.258</td>
+<td style="text-align: right;">28.360</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">runtime</td>
+<td style="text-align: right;">-0.018</td>
+<td style="text-align: right;">0.006</td>
+<td style="text-align: right;">-3.183</td>
+<td style="text-align: right;">0.001</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">genreComedy</td>
+<td style="text-align: right;">-1.001</td>
+<td style="text-align: right;">0.369</td>
+<td style="text-align: right;">-2.714</td>
+<td style="text-align: right;">0.007</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">genreDrama</td>
+<td style="text-align: right;">-1.177</td>
+<td style="text-align: right;">0.506</td>
+<td style="text-align: right;">-2.327</td>
+<td style="text-align: right;">0.020</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">genreFamily</td>
+<td style="text-align: right;">-0.086</td>
+<td style="text-align: right;">0.497</td>
+<td style="text-align: right;">-0.172</td>
+<td style="text-align: right;">0.863</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">genreOther</td>
+<td style="text-align: right;">-0.609</td>
+<td style="text-align: right;">0.331</td>
+<td style="text-align: right;">-1.841</td>
+<td style="text-align: right;">0.066</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">genreRomance</td>
+<td style="text-align: right;">1.216</td>
+<td style="text-align: right;">1.580</td>
+<td style="text-align: right;">0.770</td>
+<td style="text-align: right;">0.442</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">runtime:genreComedy</td>
+<td style="text-align: right;">0.012</td>
+<td style="text-align: right;">0.006</td>
+<td style="text-align: right;">1.928</td>
+<td style="text-align: right;">0.054</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">runtime:genreDrama</td>
+<td style="text-align: right;">0.018</td>
+<td style="text-align: right;">0.007</td>
+<td style="text-align: right;">2.377</td>
+<td style="text-align: right;">0.018</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">runtime:genreFamily</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">0.008</td>
+<td style="text-align: right;">0.064</td>
+<td style="text-align: right;">0.949</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">runtime:genreOther</td>
+<td style="text-align: right;">0.008</td>
+<td style="text-align: right;">0.006</td>
+<td style="text-align: right;">1.264</td>
+<td style="text-align: right;">0.206</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">runtime:genreRomance</td>
+<td style="text-align: right;">-0.012</td>
+<td style="text-align: right;">0.019</td>
+<td style="text-align: right;">-0.644</td>
+<td style="text-align: right;">0.520</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Which of the following is <u><strong>true</strong></u> about the intercept of <code>score_runtime_genre_fit</code>? <strong>Select all that apply.</strong></p>
+<ol type="a">
+<li><p>The intercept is meaningless in context of the data.</p></li>
+<li><p>Animation movies that are 0 minutes in length are predicted to score, on average, 7.327 points.</p></li>
+<li><p>All else held constant, movies that are 0 minutes in length are predicted to score, on average, 7.327 points.</p></li>
+<li><p>Movies without a genre that are 0 minutes in length are predicted to score, on average, 7.327 points.</p></li>
+<li><p>Keeping runtime constant, animation movies are predicted to score, on average, 7.327 points.</p></li>
+</ol></section><section id="question-31" class="level3"><h3 class="anchored" data-anchor-id="question-31">Question 31</h3>
+<p>Fill in the blank:</p>
+<blockquote class="blockquote">
+<p>Adjusted R-squared for <code>score_runtime_genre_fit</code> (the model predicting <code>score</code> from <code>runtime</code> and <code>genre</code>) _________ the adjusted R-squared of the model <code>score_runtime_fit</code> (for predicting <code>score</code> from <code>runtime</code> alone).</p>
+</blockquote>
+<ol type="a">
+<li><p>is equal to</p></li>
+<li><p>is less than</p></li>
+<li><p>is greater than</p></li>
+<li><p>is both greater than and less than</p></li>
+<li><p>cannot be compared (based on the information provided) to</p></li>
+</ol></section><section id="question-32" class="level3"><h3 class="anchored" data-anchor-id="question-32">Question 32</h3>
+<p>The fourth team member is also working on modeling, but they classifying movies as either Feature Films or TV Movies (<code>title_type</code>) based on their <code>runtime</code>, <code>score</code>, and <code>num_votes</code>. Their code and output is shown below.</p>
+<div class="cell">
+<div class="sourceCode" id="cb58"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># make title_type a factor</span></span>
+<span><span class="va">holiday_movies</span> <span class="op">&lt;-</span> <span class="va">holiday_movies</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">mutate</span><span class="op">(</span>title_type <span class="op">=</span> <span class="fu">fct_relevel</span><span class="op">(</span><span class="va">title_type</span>, <span class="st">"TV Movie"</span>, <span class="st">"Feature Film"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># split the data into training and testing</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">221</span><span class="op">)</span></span>
+<span><span class="va">holiday_movies_split</span> <span class="op">&lt;-</span> <span class="fu">initial_split</span><span class="op">(</span><span class="va">holiday_movies</span><span class="op">)</span></span>
+<span><span class="va">holiday_movies_train</span> <span class="op">&lt;-</span> <span class="fu">training</span><span class="op">(</span><span class="va">holiday_movies_split</span><span class="op">)</span></span>
+<span><span class="va">holiday_movies_test</span> <span class="op">&lt;-</span> <span class="fu">testing</span><span class="op">(</span><span class="va">holiday_movies_split</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># fit model to training data</span></span>
+<span><span class="va">title_type_fit</span> <span class="op">&lt;-</span> <span class="fu">logistic_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">title_type</span> <span class="op">~</span> <span class="va">runtime</span> <span class="op">+</span> <span class="va">score</span> <span class="op">+</span> <span class="va">num_votes</span>, data <span class="op">=</span> <span class="va">holiday_movies_train</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># make predictions for testing data</span></span>
+<span><span class="va">holiday_movies_aug</span> <span class="op">&lt;-</span> <span class="fu">augment</span><span class="op">(</span><span class="va">title_type_fit</span>, new_data <span class="op">=</span> <span class="va">holiday_movies_test</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># summarize predictions</span></span>
+<span><span class="va">holiday_movies_aug</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">count</span><span class="op">(</span><span class="va">title_type</span>, <span class="va">.pred_class</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 3
+  title_type   .pred_class      n
+  &lt;fct&gt;        &lt;fct&gt;        &lt;int&gt;
+1 TV Movie     TV Movie       256
+2 TV Movie     Feature Film    30
+3 Feature Film TV Movie        95
+4 Feature Film Feature Film    78</code></pre>
+</div>
+</div>
+<p>Which of the following is the <strong>false positive rate</strong> of the model for this testing set?</p>
+<ol type="a">
+<li><p>30 / (30 + 256) = 0.1</p></li>
+<li><p>256 / (30 + 256) = 0.9</p></li>
+<li><p>95 / (95 + 78) = 0.55</p></li>
+<li><p>78 / (95 + 78) = 0.45</p></li>
+<li><p>78 / (30 + 78) = 0.72</p></li>
+</ol></section><section id="question-33" class="level3"><h3 class="anchored" data-anchor-id="question-33">Question 33</h3>
+<p>Suppose you fit one other model, predicting <code>title_type</code> from <code>runtime</code> and <code>score</code> only. You should choose this model over the original model if …</p>
+<ol type="a">
+<li><p>it has a higher adjusted R-squared</p></li>
+<li><p>it has a higher R-squared</p></li>
+<li><p>it has a lower false positive rate</p></li>
+<li><p>it has a higher false negative rate</p></li>
+<li><p>it has a higher area under the ROC curve</p></li>
+</ol></section><section id="question-34" class="level3"><h3 class="anchored" data-anchor-id="question-34">Question 34</h3>
+<p>Finally, the fifth team member is preparing the data to hand off to another team who is only interested in holiday movies that are comedies, dramas, and family movies. They start with the full dataset for their analysis. Answer the questions in this part for this team member’s portion of the work.</p>
+<p>The team member creates the following vector of genres.</p>
+<div class="cell">
+<div class="sourceCode" id="cb60"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">genres_of_interest_vec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Comedy"</span>, <span class="st">"Drama"</span>, <span class="st">"Family"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then, using this vector, they want to create a new data frame, <code>holiday_movies_cdf</code>, that contains only movies from these genres and write the data frame to a CSV file called <code>holiday-movies-cdf.csv</code> in their <code>data</code> folder. Which of the following pipelines will accomplish this goal correctly?</p>
+<ol type="a">
+<li>
+</li></ol>
+<div class="cell">
+<div class="sourceCode" id="cb61"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">holiday_movies</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">genre</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">genres_of_interest_vec</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">write_csv</span><span class="op">(</span><span class="va">holiday_movies_cdf</span>, <span class="st">"data/holiday-movies-cdf.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="a">
+<li>
+</li></ol>
+<div class="cell">
+<div class="sourceCode" id="cb62"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">holiday_movies_cdf</span> <span class="op">&lt;-</span> <span class="va">holiday_movies</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">genre</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">genres_of_interest_vec</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">write_csv</span><span class="op">(</span><span class="va">holiday_movies_cdf</span>, <span class="st">"data/holiday-movies-cdf.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="3" type="a">
+<li>
+</li></ol>
+<div class="cell">
+<div class="sourceCode" id="cb63"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">holiday_movies_cdf</span> <span class="op">&lt;-</span> <span class="va">holiday_movies</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">inner_join</span><span class="op">(</span><span class="va">genres_of_interest_vec</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">write_csv</span><span class="op">(</span><span class="va">holiday_movies_cdf</span>, <span class="st">"data/holiday-movies-cdf.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="4" type="a">
+<li>
+</li></ol>
+<div class="cell">
+<div class="sourceCode" id="cb64"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">holiday_movies_cdf</span> <span class="op">&lt;-</span> <span class="va">holiday_movies</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">select</span><span class="op">(</span><span class="va">genres_of_interest_vec</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">write_csv</span><span class="op">(</span><span class="va">holiday_movies_cdf</span>, <span class="st">"data/holiday-movies-cdf.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="5" type="a">
+<li>None of the above.</li>
+</ol></section><section id="question-35" class="level3"><h3 class="anchored" data-anchor-id="question-35">Question 35</h3>
+<p>They then realize they should be able to accomplish the same goal with a join operation. They create the following <code>genres_of_interest_df</code> data frame.</p>
+<div class="cell">
+<div class="sourceCode" id="cb65"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">genres_of_interest_df</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>genre <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Comedy"</span>, <span class="st">"Drama"</span>, <span class="st">"Family"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">genres_of_interest_df</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 1
+  genre 
+  &lt;chr&gt; 
+1 Comedy
+2 Drama 
+3 Family</code></pre>
+</div>
+</div>
+<p>Using <code>genres_of_interest_df</code> and a join operation, which of the following pipelines will accomplish their goal of obtaining <code>holiday_movies_cdf</code> – subset of <code>holiday_movies</code> that only contains comedies, dramas, and family movies? <strong>Select all that apply.</strong></p>
+<ol type="a">
+<li>
+</li></ol>
+<div class="cell">
+<div class="sourceCode" id="cb67"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">holiday_movies_cdf</span> <span class="op">&lt;-</span> <span class="va">holiday_movies</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">inner_join</span><span class="op">(</span><span class="va">genres_of_interest_df</span>, by <span class="op">=</span> <span class="fu">join_by</span><span class="op">(</span><span class="va">genre</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="a">
+<li>
+</li></ol>
+<div class="cell">
+<div class="sourceCode" id="cb68"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">holiday_movies_cdf</span> <span class="op">&lt;-</span> <span class="va">holiday_movies</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">left_join</span><span class="op">(</span><span class="va">genres_of_interest_df</span>, by <span class="op">=</span> <span class="fu">join_by</span><span class="op">(</span><span class="va">genre</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="3" type="a">
+<li>
+</li></ol>
+<div class="cell">
+<div class="sourceCode" id="cb69"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">holiday_movies_cdf</span> <span class="op">&lt;-</span> <span class="va">holiday_movies</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">right_join</span><span class="op">(</span><span class="va">genres_of_interest_df</span>, by <span class="op">=</span> <span class="fu">join_by</span><span class="op">(</span><span class="va">genre</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="4" type="a">
+<li>
+</li></ol>
+<div class="cell">
+<div class="sourceCode" id="cb70"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">holiday_movies_cdf</span> <span class="op">&lt;-</span> <span class="va">holiday_movies</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">full_join</span><span class="op">(</span><span class="va">genres_of_interest_df</span>, by <span class="op">=</span> <span class="fu">join_by</span><span class="op">(</span><span class="va">genre</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="5" type="a">
+<li>None of the above.</li>
+</ol></section></section><section id="general-social-survey" class="level2"><h2 class="anchored" data-anchor-id="general-social-survey">General Social Survey</h2>
+<p>The General Social Survey is a high-quality survey which gathers data on American society and opinions, conducted since 1972. This data set is a sample of 500 entries from the GSS, spanning years 1973-2018, including demographic markers and some economic variables<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb71"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">gss</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 500 × 11
+    year   age sex   college partyid hompop hours income class finrela
+   &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt; &lt;fct&gt;   &lt;fct&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;ord&gt;  &lt;fct&gt; &lt;fct&gt;  
+ 1  2014    36 male  degree  ind          3    50 $2500… midd… below …
+ 2  1994    34 fema… no deg… rep          4    31 $2000… work… below …
+ 3  1998    24 male  degree  ind          1    40 $2500… work… below …
+ 4  1996    42 male  no deg… ind          4    40 $2500… work… above …
+ 5  1994    31 male  degree  rep          2    40 $2500… midd… above …
+ 6  1996    32 fema… no deg… rep          4    53 $2500… midd… average
+ 7  1990    48 fema… no deg… dem          2    32 $2500… work… below …
+ 8  2016    36 fema… degree  ind          1    20 $2500… midd… above …
+ 9  2000    30 fema… degree  rep          5    40 $2500… midd… average
+10  1998    33 fema… no deg… dem          2    40 $1500… work… far be…
+# ℹ 490 more rows
+# ℹ 1 more variable: weight &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<p>Suppose you want to estimate the correlation between <code>hours</code> (number of hours worked in week before survey, truncated at 89) and <code>age</code> (age at time of survey, truncated at 89).</p>
+<section id="question-36" class="level3"><h3 class="anchored" data-anchor-id="question-36">Question 36</h3>
+<p>Which of the following is the <strong>best</strong> estimate of the correlation between <code>hours</code> and <code>age</code>?</p>
+<div class="cell">
+<div class="sourceCode" id="cb73"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">gss</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">age</span>, y <span class="op">=</span> <span class="va">hours</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="final_files/figure-html/unnamed-chunk-97-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol type="a">
+<li>-0.7</li>
+<li>0</li>
+<li>0.9</li>
+<li>0.6</li>
+</ol></section><section id="question-37" class="level3"><h3 class="anchored" data-anchor-id="question-37">Question 37</h3>
+<p>Fill in the blank for the code below for computing the correlation between <code>hours</code> and <code>age</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>gss <span class="sc">|&gt;</span></span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">_____</span>(<span class="at">r =</span> <span class="fu">cor</span>(hours, age))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol type="a">
+<li><code>filter</code></li>
+<li><code>mutate</code></li>
+<li><code>summarize</code></li>
+<li><code>group_by</code></li>
+</ol></section><section id="question-38" class="level3"><h3 class="anchored" data-anchor-id="question-38">Question 38</h3>
+<p>Fill in the blanks for the code below for simulating the bootstrap distribution of the correlation between <code>hours</code> and <code>age</code> using 10,000 bootstrap samples.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>gss <span class="sc">|&gt;</span></span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">specify</span>(hours <span class="sc">~</span> age) <span class="sc">|&gt;</span> </span>
+<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a>   _[BLANK <span class="dv">1</span>]<span class="fu">_</span>(<span class="at">reps =</span> <span class="dv">1000</span>, <span class="at">type =</span> <span class="st">"_[BLANK 2]_"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb75-4"><a href="#cb75-4" aria-hidden="true" tabindex="-1"></a>   <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"correlation"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol type="a">
+<li>BLANK 1: <code>hypothesize</code>, BLANK 2: <code>"bootstrap"</code>
+</li>
+<li>BLANK 1: <code>mutate</code>, BLANK 2: <code>"permute"</code>
+</li>
+<li>BLANK 1: <code>generate</code>, BLANK 2: <code>"bootstrap"</code>
+</li>
+<li>BLANK 1: <code>generate</code>, BLANK 2: <code>"permute"</code>
+</li>
+</ol></section><section id="question-39" class="level3"><h3 class="anchored" data-anchor-id="question-39">Question 39</h3>
+<p>The bootstrap distribution from the previous question is visualized below. What is the approximate 95% confidence interval for the correlation between <code>hours</code> and <code>age</code>?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="final_files/figure-html/unnamed-chunk-103-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol type="a">
+<li>(-0.15, 0.15)</li>
+<li>(-0.10, 0.10)</li>
+<li>(-0.05, 0.05)</li>
+<li>(0.05, 0.15)</li>
+</ol></section></section><section id="miscellaneous" class="level2"><h2 class="anchored" data-anchor-id="miscellaneous">Miscellaneous</h2>
+<section id="question-40" class="level3"><h3 class="anchored" data-anchor-id="question-40">Question 40</h3>
+<p>The <code>mpg</code> data frame contains fuel economy data for 234 cars. For this analysis, you will only use three variables from the data frame. These variables are described below.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 80%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Description</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>city</code></td>
+<td style="text-align: left;">City miles per gallon</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>displacement</code></td>
+<td style="text-align: left;">Engine displacement, in litres</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>drive</code></td>
+<td style="text-align: left;">Type of drive train with levels <code>Front-wheel drive</code>, <code>Rear-wheel drive</code>, and <code>Four-wheel drive</code>
+</td>
+</tr>
+</tbody>
+</table>
+<p>A peek at the first five rows of these columns is shown below.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 3
+   city displacement drive            
+  &lt;int&gt;        &lt;dbl&gt; &lt;chr&gt;            
+1    15          7   Rear-wheel drive 
+2    14          4   Four-wheel drive 
+3    19          3.5 Front-wheel drive
+4    24          1.6 Front-wheel drive
+5    21          2.4 Front-wheel drive</code></pre>
+</div>
+</div>
+<p>You fit and summarize the following model to predict city miles per gallon from engine displacement and type of drive train.</p>
+<div class="cell">
+<div class="sourceCode" id="cb77"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">mpg_fit</span> <span class="op">&lt;-</span> <span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="va">city</span> <span class="op">~</span> <span class="va">displacement</span> <span class="op">+</span> <span class="va">drive</span>, data <span class="op">=</span> <span class="va">mpg</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">tidy</span><span class="op">(</span><span class="va">mpg_fit</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 5
+  term                   estimate std.error statistic  p.value
+  &lt;chr&gt;                     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)               23.7      0.699     33.9  2.48e-91
+2 displacement              -2.34     0.165    -14.2  3.88e-33
+3 driveFront-wheel drive     2.28     0.401      5.68 4.14e- 8
+4 driveRear-wheel drive      2.50     0.555      4.51 1.03e- 5</code></pre>
+</div>
+</div>
+<p>Which of the following is <u><strong>true</strong></u> about this model? <strong>Select all that apply.</strong></p>
+<ol type="a">
+<li><p>This model estimates different slopes for the relationship between <code>city</code> and <code>displacement</code> for cars with different types of drive train.</p></li>
+<li><p>The baseline level of <code>drive</code> is <code>"Four-wheel drive"</code>.</p></li>
+<li><p>The model predicts a city mileage of 23.7 miles per gallon, on average, for all cars with 0 liters of displacement.</p></li>
+<li><p>This model estimates the same slope for the relationship between <code>city</code> and <code>displacement</code> for cars with different types of drive train.</p></li>
+<li><p>The model predicts a city mileage of 23.7 miles per gallon, on average, for four-wheel drive cars with 0 liters of displacement.</p></li>
+</ol></section><section id="question-41" class="level3"><h3 class="anchored" data-anchor-id="question-41">Question 41</h3>
+<p>You have the following data frames about Duke Women’s Basketball team coaches who have finished their terms:</p>
+<div class="quarto-layout-panel" data-layout="[ 0.5,-0.1, 0.4 ]">
+<div class="quarto-layout-row">
+<div id="first-column" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p>Data frame 1 - <code>coach_years</code>:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 3
+  name               start_year end_year
+  &lt;chr&gt;                   &lt;dbl&gt;    &lt;dbl&gt;
+1 Joanne P. McCallie       2007     2019
+2 Gail Goestenkors         1992     2006
+3 Debbie Leonard           1977     1991
+4 Emma Howard              1974     1976
+5 Calla Raynor             1972     1973</code></pre>
+</div>
+</div>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 10.0%;justify-content: flex-start;">
+<p>&nbsp;</p>
+</div>
+<div id="first-column" class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
+<p>Data frame 2 - <code>coach_records</code>:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 2
+  name               record   
+  &lt;chr&gt;              &lt;chr&gt;    
+1 Joanne P. McCallie 330-107-0
+2 Gail Goestenkors   396-99-0 
+3 Debbie Leonard     212-190-0
+4 Emma Howard        11-35-0  
+5 Calla Raynor       10-12-0  </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>You want a joined data frame that contains all five coaches exactly once, includes <code>name</code>, <code>start_year</code>, <code>end_year</code>, and <code>record</code> columns, and has no missing values for any columns.</p>
+<p>Which of the following join operations will give you this result? <strong>Select all that apply.</strong></p>
+<ol type="a">
+<li><p><code>coach_years |&gt; inner_join(coach_records, by = join_by(name))</code></p></li>
+<li><p><code>coach_years |&gt; right_join(coach_records, by = join_by(record))</code></p></li>
+<li><p><code>coach_years |&gt; semi_join(coach_records, by = join_by(name))</code></p></li>
+<li><p><code>coach_years |&gt; left_join(coach_records, by = join_by(start_year))</code></p></li>
+<li><p><code>coach_records |&gt; full_join(coach_years, by = join_by(name))</code></p></li>
+</ol></section><section id="question-42" class="level3"><h3 class="anchored" data-anchor-id="question-42">Question 42</h3>
+<p>In STA 199, you learned that in logistic regression the outcome is 0 or 1. For example, “win” or “loss” for the Duke Women’s Basketball team in a given game.</p>
+<p>Imagine you’re explaining this to a friend who asks:</p>
+<blockquote class="blockquote">
+<p>“So, if the model predicts a 0.8 for a game… Does that mean the Duke Women’s Basketball team will win 80% of the game?”</p>
+</blockquote>
+<p>Which of the following is the best response?</p>
+<ol type="a">
+<li><p>“Yes, the model predicts the Duke Women’s Basketball team will win 80% of the game.”</p></li>
+<li><p>“No, the model predicts the probability that the Women’s Basketball team wins the game is 0.8.”</p></li>
+<li><p>“No, the model predicts that the Duke Women’s Basketball team will win 8 out of 10 games.”</p></li>
+<li><p>“Yes, the model predicts that the Duke Women’s Basketball team will score 80 points in the game.”</p></li>
+<li><p>“No, the model predicts that the Duke Women’s Basketball team will win 0.8 games.”</p></li>
+</ol></section><section id="question-43" class="level3"><h3 class="anchored" data-anchor-id="question-43">Question 43</h3>
+<p>Consider the following data frame about book titles:</p>
+<div class="cell">
+<div class="sourceCode" id="cb81"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">books</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span></span>
+<span>  title <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>    <span class="st">"Introduction to R"</span>, </span>
+<span>    <span class="st">"Advanced Python Programming"</span>,</span>
+<span>    <span class="st">"Data Science with R"</span>, </span>
+<span>    <span class="st">"Python for Beginners"</span>,</span>
+<span>    <span class="st">"Machine Learning in R"</span>, </span>
+<span>    <span class="st">"introduction to python programming"</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">books</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 1
+  title                             
+  &lt;chr&gt;                             
+1 Introduction to R                 
+2 Advanced Python Programming       
+3 Data Science with R               
+4 Python for Beginners              
+5 Machine Learning in R             
+6 introduction to python programming</code></pre>
+</div>
+</div>
+<p>You want to filter the <code>books</code> data frame to only include titles that contain the word “Python” (case-sensitive). Which of the following code snippets will accomplish this correctly?</p>
+<ol type="a">
+<li><p><code>books |&gt; filter(title == "Python")</code></p></li>
+<li><p><code>books |&gt; filter(str_detect(title, "Python"))</code></p></li>
+<li><p><code>books |&gt; filter(str_count(title, "Python") &gt; 0)</code></p></li>
+<li><p><code>books |&gt; select(str_detect(title, "Python"))</code></p></li>
+<li><p><code>books |&gt; filter(title %in% "Python")</code></p></li>
+</ol></section><section id="question-44" class="level3"><h3 class="anchored" data-anchor-id="question-44">Question 44</h3>
+<p>Consider the following data frame:</p>
+<div class="cell">
+<div class="sourceCode" id="cb83"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">mixed_data</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span></span>
+<span>  id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"1"</span>, <span class="st">"2"</span>, <span class="st">"3"</span><span class="op">)</span>,</span>
+<span>  category <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  value <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"4"</span>, <span class="st">"5.5"</span>, <span class="st">"6"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">mixed_data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+  id    category value
+  &lt;chr&gt; &lt;fct&gt;    &lt;chr&gt;
+1 1     A        4    
+2 2     B        5.5  
+3 3     C        6    </code></pre>
+</div>
+</div>
+<p>Which of the following statements are TRUE about type coercion and conversion in R? <strong>Select all that apply.</strong></p>
+<ol type="a">
+<li><p><code>mixed_data |&gt; mutate(id = as.numeric(id))</code> will convert the <code>id</code> column to numeric values <code>1</code>, <code>2</code>, <code>3</code>.</p></li>
+<li><p><code>mixed_data |&gt; mutate(category = as.numeric(category))</code> will convert the <code>category</code> column to numeric values <code>1</code>, <code>2</code>, <code>3</code>.</p></li>
+<li><p><code>mixed_data |&gt; mutate(category = as.character(category))</code> will convert the <code>category</code> column to character values <code>"A"</code>, <code>"B"</code>, <code>"C"</code>.</p></li>
+<li><p><code>mixed_data |&gt; mutate(value = as.integer(value))</code> will convert the <code>value</code> column to numeric values <code>4</code>, <code>5.5</code>, <code>6</code>.</p></li>
+<li><p><code>mixed_data |&gt; mutate(value = as.double(value))</code> will convert the <code>value</code> column to numeric values <code>4</code>, <code>5.5</code>, <code>6</code>.</p></li>
+</ol></section><section id="question-45" class="level3"><h3 class="anchored" data-anchor-id="question-45">Question 45</h3>
+<p>Consider the width of two bootstrap confidence intervals constructed based on the same sample and the same unimodal and symmetric bootstrap distribution with non-zero variability. One of the intervals is at the 90% confidence level and the other is at the 99% confidence level. The width of the 99% interval ____ the width of the 90% interval.</p>
+<ol type="a">
+<li><p>is smaller than</p></li>
+<li><p>is approximately equal to</p></li>
+<li><p>is exactly equal to</p></li>
+<li><p>is larger than</p></li>
+<li><p>is both smaller than and larger than</p></li>
+</ol></section><section id="question-46" class="level3"><h3 class="anchored" data-anchor-id="question-46">Question 46</h3>
+<p>A news organization is creating visualizations to accompany their data stories. Which of the following visualization practices would be considered misleading or problematic? <strong>Select all that apply.</strong></p>
+<ol type="a">
+<li><p>Using a bar chart with a y-axis that starts at 50 instead of 0 to make small differences appear larger.</p></li>
+<li><p>Showing data for only the most recent 3 months when 5 years of data are available, without explaining why.</p></li>
+<li><p>Including error bars or confidence intervals on a plot to show uncertainty in estimates.</p></li>
+<li><p>Creating a map showing election results by geographic area without accounting for population density, making sparsely populated areas appear more important.</p></li>
+<li><p>Using a logarithmic scale on a plot when displaying data that spans several orders of magnitude and clearly labeling it as log scale.</p></li>
+</ol></section><section id="question-47" class="level3"><h3 class="anchored" data-anchor-id="question-47">Question 47</h3>
+<p>A company develops a machine learning algorithm to screen job applications by training it on data from successful employees hired over the past 10 years. The algorithm consistently ranks applications from certain demographic groups lower, even when qualifications are similar. Which statement best explains this issue?</p>
+<ol type="a">
+<li><p>Machine learning algorithms are inherently objective and cannot be biased.</p></li>
+<li><p>The algorithm learned patterns from historical hiring data that may reflect past biases, demonstrating the “garbage in, garbage out” principle.</p></li>
+<li><p>This outcome proves the algorithm is working correctly by identifying the most qualified candidates.</p></li>
+<li><p>Algorithmic bias can be completely eliminated by using more sophisticated machine learning techniques.</p></li>
+<li><p>The problem can be solved simply by removing demographic information from the training data.</p></li>
+</ol>
 
 
-
-
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></section></section><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<ol>
+<li id="fn1"><p>Note that this data is included for demonstration only, and should not be assumed to provide accurate estimates relating to the GSS. However, due to the high quality of the GSS, the unweighted data will approximate the weighted data in some analyses.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -853,23 +2538,27 @@ ul.task-list li input[type="checkbox"] {
       }
     }
   });
-  </script>
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="../exams/midterm-2.html" class="pagination-link" aria-label="Midterm 2">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Midterm 2</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2026 Mine Çetinkaya-Rundel, Mary Knox, Marie Neubrander, John Zito</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/exams/final.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/edit/main/exams/final.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s26/sta199-s26.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>
