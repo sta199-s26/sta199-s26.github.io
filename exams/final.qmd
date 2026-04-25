@@ -518,7 +518,7 @@ pokemon <- read_csv("data/pokemon.csv") |>
 glimpse(pokemon)
 ```
 
-Apart from seeing [*Pokémon: The First Movie*](https://en.wikipedia.org/wiki/Pokémon:_The_First_Movie) in the theater with my mom in 1999, I don't actually know that much about Pokémon. At some point in the recent past, my little brother informed me that the new Pokémon included a fellow named Garbodor:
+Apart from seeing [*Pokémon: The First Movie*](https://en.wikipedia.org/wiki/Pokémon:_The_First_Movie) in the theater with my mom in 1999, I don't actually know that much about Pokémon. At some point in the recent past, my little brother informed me that the new generations of Pokémon included a fellow named Garbodor:
 
 ![](images/garbodor.jpg){fig-align="center"}
 
