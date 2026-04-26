@@ -647,7 +647,7 @@ duke_forest <- openintro::duke_forest |>
   select(-address, -type, -hoa, -url)
 ```
 
-In this part of the exam you'll work with a dataset you've seen before: sale prices and other features of `{r} nrow(duke_forest)` homes in Duke Forest.
+In this part of the guide you'll work with a dataset you've seen before: sale prices and other features of `{r} nrow(duke_forest)` homes in Duke Forest.
 The data come from Zillow.
 The name of the data frame is `duke_forest` and it contains the variables described in the table below.
 
@@ -1272,7 +1272,7 @@ ggplot(boot_dist, aes(x = stat)) +
   geom_vline(xintercept = c(ci$lower, ci$upper), linewidth = 1.5)
 ```
 
-Noting that this exam is written in Quarto with all figures and tables produced with code, which of the following is [**TRUE**]{.underline} about this analysis?
+Noting that this guide is written in Quarto with all figures and tables produced with code, which of the following is [**TRUE**]{.underline} about this analysis?
 **Select all that apply.**
 
 a.  We are 95% confident that 44.2% to 67% of holiday movies are TV Movies.
