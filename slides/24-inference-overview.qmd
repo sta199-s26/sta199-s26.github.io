@@ -269,6 +269,8 @@ H_A&: \beta_1\neq0\quad(\text{something going on})
 \end{aligned}
 $$
 
+- In words: "are x and y correlated or not?"
+
 - Do the data strongly favor one or the other? 
 
 - How can we quantify this?

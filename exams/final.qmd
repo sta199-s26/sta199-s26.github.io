@@ -1,5 +1,2052 @@
 ---
-title: "final"
-format: html
+title: "Final Exam Study Guide"
 ---
+
+
+```{r}
+#| label: load-packages
+#| message: false
+#| echo: false
+
+library(tidyverse)
+library(tidymodels)
+library(knitr)
+library(scales)
+library(conflicted)
+library(palmerpenguins)
+library(openintro)
+library(glue)
+conflicts_prefer(
+  dplyr::select(),
+  dplyr::filter(),
+  palmerpenguins::penguins
+)
+```
+
+Our final exam is on Friday May 1 from 2pm to 5pm in Griffith Theater (our usual classroom). Here's what you need to know:
+
+- The exam is all multiple choice;
+- The exam is similar in style and format to the in-class components of the two midterms;
+- The exam should not take the full three hours to complete;
+- The only resource you are allowed is both sides of a single 8.5" x 11" sheet of notes (prepared however you want);
+- The exam is cumulative, with slightly disproportionate emphasis on our last topic, statistical inference;
+- I can just tell you right now that webscraping will not appear on the exam, so don't even worry about it.
+
+The study advice [here](https://edstem.org/us/courses/90224/discussion/7626328) still applies. Below are 47 new practice problems to sink your teeth into, but because the final exam is cumulative, the study guides for Midterms [1](/exams/midterm-1.html) and [2](/exams/midterm-2.html) remain very relevant. You should regard the *true* final exam study guide as the "full join" of all three guides.
+
+::: callout-tip
+## Try this first
+
+To start, attempt all of the problems below *without resources*. Make note of your pain points and blind spots along the way. That might give you an idea of the stuff you would benefit from if you had it on a cheat sheet.
+:::
+
+
+# Concepts and main ideas
+
+```{r}
+#| include: false
+q_no <- 1
+```
+
+### Question `{r} q_no` 
+
+Can you define these terms?
+
+a. tidy data;
+a. computational reproducibility;
+a. scientific replicability;
+a. observational data;
+a. quantile;
+a. ROC curve;
+a. discernibility level;
+a. sampling uncertainty;
+a. bootstrap distribution;
+a. null distribution;
+a. p-value;
+a. type 1 error
+a. type 2 error
+
+# Visual understanding 
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+```
+
+### Question `{r} q_no`
+
+
+Match the histogram to the set of numerical summaries. There is exactly one unique match for each.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-width: 8
+#| fig-asp: 0.8
+
+set.seed(12345)
+
+n_fig <- 6
+n <- 3000
+
+d <- rbinom(n, 1, 0.75)
+
+x1 <- rnorm(n)
+x2 <- rexp(n) - 4
+x3 <- -rexp(n) + 4
+x4 <- d * rnorm(n, -3, 0.5) + (1 - d) * rnorm(n, 2, 0.5)
+x5 <- runif(n, 0, 4)
+x6 <- rnorm(n, -3, 0.4)
+
+hist_match <- tibble(
+  hist = sort(rep(c("i", "ii", "iii", "iv", "v", "vi"), n)),
+  x = c(x1, x2, x6, x4, x5, x3)
+)
+
+# plot histograms
+
+ggplot(hist_match, aes(x = x)) + 
+  geom_histogram() +
+  facet_wrap(~hist)
+
+# plot answer choices
+
+hist_match |>
+  group_by(hist) |>
+  summarize(
+    mean = mean(x),
+    median = median(x),
+    `standard deviation` = sd(x)
+  ) |>
+  slice(sample(1:n())) |>
+  add_column(
+    choice = c("a", "b", "c", "d", "e", "f")
+  ) |>
+  relocate(choice) |>
+  select(!hist) |>
+  knitr::kable(digits = 1)
+```
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+```
+
+### Question `{r} q_no`
+
+
+```{r}
+#| echo: false
+set.seed(1234567)
+my_colors <- c("red", "blue", "forestgreen")
+subsamps <- c(10, 20, 35)
+b0 <- 12 + c(2, 6, -3)
+b1 <- c(1, 5, -0.2)
+
+y <- c()
+x <- c()
+cl <- c()
+
+for(i in 1:length(my_colors)){
+  x_sub <- rnorm(subsamps[i], 4, 1)
+  y <- c(y, b0[i] + b1[i] * x_sub + rnorm(subsamps[i], 0, 1))
+  x <- c(x, x_sub)
+  cl <- c(cl, rep(my_colors[i], subsamps[i]))
+}
+
+df <- tibble(
+  x = x, y = y, color = fct_relevel(cl, my_colors)
+)
+df <- df[sample(1:nrow(df)), ]
+```
+
+Here's a nonsense dataset that I made up:
+
+```{r}
+glimpse(df)
+```
+
+Imagine you run this code:
+
+```{r}
+#| eval: false
+linear_reg() |>
+  fit(y ~ x + color, df) |>
+  tidy()
+```
+
+The output would be a lil' table like this:
+
+::: {.center-table}
+| `term` | `estimate` | 
+|---------|:-----|
+| `(Intercept)`      | $b_0$   |   
+| `x`     | $b_1$  |  
+| `colorblue`       | $b_2$   |   
+| `colorforestgreen`       | $b_3$    |   
+:::
+
+A plot of the model fit might look something like this:
+
+```{r}
+#| fig-asp: 1
+#| echo: false
+#| fig-align: center
+
+add_slope_wedge <- function(intercept, slope, x0,
+                            run = NULL,       # horizontal length of wedge
+                            cex = 1,          # text size
+                            col = "black",
+                            lwd = 2,
+                            label = TRUE) {
+
+  # If run not supplied, choose something that looks reasonable
+  if (is.null(run)) {
+    usr <- par("usr")              # current plot limits
+    run <- 0.08 * (usr[2] - usr[1])
+  }
+  
+  # Point on the line where wedge attaches
+  y0 <- intercept + slope * x0
+  
+  # End of horizontal "run"
+  x1 <- x0 + run
+  y1 <- y0
+  
+  # Vertical "rise"
+  rise <- slope * run
+  x2 <- x1
+  y2 <- y1 + rise
+  
+  # Draw the triangle edges
+  segments(x0, y0, x1, y1, col = col, lwd = lwd)  # run
+  segments(x1, y1, x2, y2, col = col, lwd = lwd)  # rise
+  segments(x0, y0, x2, y2, col = col, lwd = lwd)  # hypotenuse (optional but nice)
+  
+  # Optional labels
+  if (label) {
+    text((x0 + x1)/2, y0, "run", pos = 1, cex = cex, col = col)
+    text(x1, (y1 + y2)/2, "rise", pos = 4, cex = cex, col = col)
+  }
+}
+
+my_fit <- linear_reg() |>
+  fit(y ~ x + color, df) |>
+  tidy()
+
+cepts <- c(my_fit$estimate[1], my_fit$estimate[1] + my_fit$estimate[3], my_fit$estimate[1] + my_fit$estimate[4])
+slope <- my_fit$estimate[2]
+
+plot(x, y, col = cl, pch = 19, xaxt = "n", yaxt = "n", bty = "n", xlim = c(-4, 1.4 * max(x)), ylim = c(-5, max(y)), cex = 1)
+add_slope_wedge(cepts[1], slope, 7, label = FALSE)
+add_slope_wedge(cepts[2], slope, 7, label = FALSE)
+add_slope_wedge(cepts[3], slope, 7, label = FALSE)
+abline(v = 0, lwd = 2)
+abline(h = 0, lwd = 2)
+abline(a = cepts[1], b = slope, col = my_colors[1], lwd = 2)
+abline(a = cepts[2], b = slope, col = my_colors[2], lwd = 2)
+abline(a = cepts[3], b = slope, col = my_colors[3], lwd = 2)
+points(numeric(length(cepts)), 
+       cepts, 
+       cex = 2, pch = 19)
+arrows(-1, 0.95 * cepts[2] + slope * (-1), -1, 1.1 * cepts[1] + slope * (-1), lwd = 2, code = 3)
+arrows(-1, 0.95 * cepts[1] + slope * (-1), -1, 1.1 * cepts[3] + slope * (-1), lwd = 2, code = 3)
+arrows(-3, 0.95 * cepts[2] + slope * (-3), -3, 1.1 * cepts[3] + slope * (-3), lwd = 2, code = 3)
+
+
+#text(0.5, 1.5 + cepts[2] + slope * 0.5, "IV")
+
+text(-4, 0.5*cepts[1] + 0.5*cepts[2], "I")
+text(-2, 0.5*cepts[1] + 0.5*cepts[2], "II")
+text(-2, 0.5*cepts[1] + 0.5*cepts[3], "III")
+
+text(0.5, 1.5 + cepts[2] + slope * 0.5, "IV")
+text(0.5, 1.5 + cepts[1] + slope * 0.5, "V")
+text(0.5, 1.5 + cepts[3] + slope * 0.5, "VI")
+
+text(7.5, cepts[2] + slope * 7 - 2, "VII")
+text(7.5, cepts[1] + slope * 7 - 2, "VIII")
+text(7.5, cepts[3] + slope * 7 - 2, "IX")
+```
+
+Match the labeled features of the plot to the correct quantity listed below:
+
+a. $b_0$
+a. $b_1$
+a. $b_2$
+a. $b_3$
+a. $b_0 + b_1$
+a. $b_0 + b_2$
+a. $b_0 + b_3$
+a. $b_1 + b_2$
+a. $b_1 + b_3$
+a. $b_2 + b_3$
+a. $b_2 - b_3$
+
+**Note**: Some of these quantities might go unused, and some might be used more than once.
+
+
+
+
+# Code doctor 
+
+Below are five examples of code that returns an error or a warning or otherwise behaves in a strange and unexpected way. In each case, identify the mistake and explain how it should be fixed.
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+```
+
+### Question `{r} q_no`
+
+Consider these:
+
+```{r}
+#| echo: false
+students <- tibble(id = 1:3, name = c("Ana","Ben","Chris"))
+grades   <- tibble(id = c("1","2","3"), grade = c("A","B","A"))
+```
+
+```{r}
+students 
+
+grades
+```
+
+It seems like a lovely day for some joining, but then disaster strikes:
+
+```{r}
+#| error: true
+left_join(students, grades, by = "id")
+```
+
+Why?
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+```
+
+### Question `{r} q_no`
+
+1,500 people responded to a survey asking "Overall, how would you describe the impact of the many changes (transfer portal, athlete name, image and likeness (NIL) compensation, conference realignments) taking place in Division I college athletics?" Here is the summary of responses:
+
+```{r}
+#| echo: false
+
+survey_counts <- tribble(
+  ~age,    ~opinion,            ~n,
+  "18-44", "Very positive",     78,
+  "18-44", "Somewhat positive", 176,
+  "18-44", "Neutral",           162,
+  "18-44", "Somewhat negative", 50,
+  "18-44", "Very negative",     36,
+  "18-44", "Unsure",            197,
+  "45+",   "Very positive",     41,
+  "45+",   "Somewhat positive", 121,
+  "45+",   "Neutral",           186,
+  "45+",   "Somewhat negative", 146,
+  "45+",   "Very negative",     97,
+  "45+",   "Unsure",            210
+) |>
+  mutate(
+    age     = fct_relevel(age, "18-44", "45+"),
+    opinion = fct_relevel(opinion, "Very positive", "Somewhat positive", "Neutral", "Somewhat negative", "Very negative", "Unsure")
+  )
+
+survey_counts
+```
+
+How come this doesn't give us the stacked barchart visualizing the breakdown of responses by age?
+
+```{r}
+#| error: true
+ggplot(survey_counts, aes(x = age, y = n, fill = opinion)) +
+  geom_bar(position = "fill")
+```
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+```
+
+### Question `{r} q_no`
+
+Consider these two datasets:
+
+```{r}
+#| message: false
+#| warning: false
+sales_taxes <- read_csv("data/sales-taxes-25.csv")
+us_regions <- read_csv("data/us-regions.csv")
+
+glimpse(sales_taxes)
+glimpse(us_regions)
+```
+
+Why didn't this work to join the two data frames?
+
+```{r}
+#| error: true
+sales_taxes |>
+  full_join(us_regions, 
+            by = state == state_name)
+```
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+```
+
+### Question `{r} q_no`
+
+
+Imagine we wanted to pivot *wider* this lil' baby data frame:
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+
+df <- tibble(
+  student = c("Alice","Alice","Alice",
+              "Bob","Bob",
+              "Charlie","Charlie"),
+  quiz = c("Quiz1","Quiz1","Quiz2",
+           "Quiz1","Quiz2",
+           "Quiz1","Quiz2"),
+  score = c(90, 95, 88,
+            70, 75,
+            85, 92)
+)
+
+df
+```
+
+
+Why is it screaming at me?
+
+```{r}
+df |>
+  pivot_wider(
+    names_from = quiz,
+    values_from = score
+  )
+```
+
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+```
+
+### Question `{r} q_no`
+
+```{r}
+#| echo: false
+email <- email |> relocate(spam, exclaim_mess)
+```
+
+
+Recall the dataset on spam emails:
+
+```{r}
+#| echo: true
+email
+```
+
+Here is a regression model trained on all of these data:
+
+```{r}
+#| echo: true
+#| warning: false
+#| message: false
+log_fit <- logistic_reg() |>
+  fit(spam ~ ., data = email)
+```
+
+The *in-sample* predictions of the model are here:
+
+```{r}
+#| echo: true
+email_aug <- augment(log_fit, email)
+email_aug
+```
+
+To see how well the model did, we can compute the classification error rates for different thresholds and summarize the results with the ROC curve:
+
+```{r}
+#| echo: true
+
+email_aug |>
+  roc_curve(truth = spam, .pred_0, event_level = "second") |>
+  ggplot(aes(x = 1 - specificity, y = sensitivity)) +
+  geom_path() +
+  geom_abline(lty = 3) +
+  coord_equal() + 
+  labs(
+    x = "1 - specificity",
+    y = "sensitivity"
+  )
+```
+
+Why does this model suck so hard?
+
+
+
+
+
+
+
+# Stat doctor 
+
+Recall the Pokémon data from [AE 23](/ae/ae-23-pokemon-infer.html):
+
+```{r}
+#| message: false
+pokemon <- read_csv("data/pokemon.csv") |>
+  mutate(
+    is_legendary = as_factor(is_legendary)
+  )
+
+glimpse(pokemon)
+```
+
+In 1999 my mom took me to see [*Pokémon: The First Movie*](https://en.wikipedia.org/wiki/Pokémon:_The_First_Movie) in the theater, but apart from that, I don't really know that much about Pokémon. At some point in the recent past, my little brother informed me that the new generations of Pokémon include a fellow named Garbodor:
+
+![](images/garbodor.jpg){fig-align="center"}
+
+With all due respect to Garbodor, this news did somewhat blunt my interest in Pokémon going forward. 
+
+Anyway, below are several failed attempts at interpreting statistical results for these data. Diagnose the problem and fix it if possible.
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+```
+
+### Question `{r} q_no`
+
+```{r}
+observed_fit <- pokemon |>
+  specify(speed ~ defense) |>
+  fit()
+
+observed_fit
+```
+
+> A Pokémon with speed of 0 will have defense of 69.66.
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+```
+
+### Question `{r} q_no`
+
+```{r}
+logistic_fit <- logistic_reg() |>
+  fit(is_legendary ~ hp + attack + defense, pokemon)
+
+tidy(logistic_fit)
+```
+
+> A one unit increase in hp is associated with a 0.027 increase in the probability that the Pokémon is not legendary, on average.
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+```
+
+### Question `{r} q_no`
+
+```{r}
+logistic_fit |>
+  augment(pokemon) |>
+  roc_auc(
+    truth = is_legendary, 
+    .pred_TRUE, 
+    event_level = "second"
+  )
+```
+
+> About 85% of the variation in the response is explained by the model.
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+```
+
+### Question `{r} q_no`
+
+```{r}
+set.seed(12345)
+
+pokemon |>
+  specify(speed ~ defense) |>
+  generate(reps = 500, type = "bootstrap") |>
+  fit() |>
+  get_confidence_interval(
+    point_estimate = observed_fit,
+    level = 0.9,
+    type = "percentile"
+  ) |>
+  filter(term == "defense")
+```
+
+> We are confident that 95% of our data lies between -0.065 and 0.046.
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+```
+
+### Question `{r} q_no`
+
+```{r}
+set.seed(24601)
+
+pokemon |>
+  specify(speed ~ defense) |>
+  hypothesize(null = "independence") |>
+  generate(reps = 500, type = "permute") |>
+  fit() |>
+  get_p_value(obs_stat = observed_fit, direction = "two-sided")
+
+```
+
+> The probability that the null hypothesis is true (meaning `defense` and `speed` are uncorrelated) is about 53%.
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+```
+
+### Question `{r} q_no`
+
+> Because the p-value is greater than 50%, we reject the alternative hypothesis. 
+
+# Data analysis
+
+## Duke Forest homes
+
+```{r}
+#| include: false
+duke_forest <- openintro::duke_forest |>
+  mutate(
+    cooling = if_else(cooling == "central", "Central", "Non-central"),
+    cooling = fct_relevel(cooling, "Non-central", "Central")
+  ) |>
+  select(-address, -type, -hoa, -url)
+```
+
+In this part of the guide you'll work with a dataset you've seen before: sale prices and other features of `{r} nrow(duke_forest)` homes in Duke Forest.
+The data come from Zillow.
+The name of the data frame is `duke_forest` and it contains the variables described in the table below.
+
+| Variable     | Description                                            |
+|:-------------|:-------------------------------------------------------|
+| `price`      | Sale price, in USD                                     |
+| `bed`        | Number of bedrooms                                     |
+| `bath`       | Number of bathrooms                                    |
+| `area`       | Area of home, in square feet                           |
+| `year_built` | Year the home was built                                |
+| `heating`    | Heating sytem                                          |
+| `cooling`    | Cooling system (`Central` or `Non-central`)            |
+| `parking`    | Type of parking available and number of parking spaces |
+| `lot`        | Area of the entire property, in acres                  |
+
+: {tbl-colwidths="\[20,80\]"}
+
+A peek at the data is shown below.
+
+```{r}
+#| echo: false
+options(width=70)
+duke_forest
+```
+
+Suppose you're working in a team of three students, exploring and modeling prices of homes in Duke Forest. During your initial exploration, your team finds out that only a small number of homes in your sample have very few or very many bedrooms -- only 4 homes with 2 bedrooms, 30 with 3 bedrooms, 52 with 4 bedrooms, 11 with 5 bedrooms, and just 1 with 6 bedrooms.
+
+Therefore, you decide to create a new variable, called `bed_new`, with the following logic:
+
+-   If a home has 2 or 3 bedrooms, label it `"2 or 3"`
+-   If a home has 4 bedrooms, label it `"4"`
+-   If a home has 5 or more bedrooms, label it `"5+`
+
+You ask your TA how to implement this logic, and they give you the following data transformation pipeline as a hint.
+
+```{r}
+#| eval: false
+duke_forest <- duke_forest |>
+  __[BLANK 1]__(
+    bed_new = __[BLANK 2]__(
+      bed == 2 __[BLANK 3]__ bed == 3 ~ "2 or 3",
+      bed __[BLANK 4]__ 4             ~ "4",
+      bed >= 5                        ~ "5+"
+    )
+  ) |>
+  __[BLANK 5]__(bed, bed_new)
+```
+
+The first ten rows and the first few columns of the resulting, updated `duke_forest` data frame are shown below, with the variable types suppressed (since you'll be asked about them later).
+
+```{r}
+#| echo: false
+duke_forest <- duke_forest |>
+  mutate(
+    bed_new = case_when(
+      bed == 2 | bed == 3 ~ "2 or 3",
+      bed == 4            ~ "4",
+      bed >= 5            ~ "5+"
+    ),
+  ) |>
+  relocate(bed, bed_new)
+
+format(as_tibble(duke_forest))[-3L] |>
+  str_remove_all(" <.*?>") |>
+  cat(sep = "\n")
+```
+
+Answer the next chunk of questions based on the pipeline above and its result.
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+```
+
+### Question `{r} q_no` 
+
+`[BLANK 1]` should be:
+
+a.  `assign`
+
+b.  `filter`
+
+c.  `mutate`
+
+d.  `select`
+
+e.  `summarize`
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+```
+
+### Question `{r} q_no`
+
+`[BLANK 2]` should be:
+
+a.  `case_when`
+
+b.  `if_else`
+
+c.  `ifelse`
+
+d.  `read.csv`
+
+e.  `rename`
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+`[BLANK 3]` should be:
+
+a.  `%in%`
+
+b.  `==`
+
+c.  `|`
+
+d.  `&`
+
+e.  `=`
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+```
+
+### Question `{r} q_no`
+
+`[BLANK 4]` should be:
+
+a.  `==`
+
+b.  `>=`
+
+c.  `=`
+
+d.  `>`
+
+e.  `>>`
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+`[BLANK 5]` should be:
+
+a.  `after`
+
+b.  `select`
+
+c.  `group_by`
+
+d.  `summarize`
+
+e.  `relocate`
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+Which of the following is the type of the `bed_new` variable?
+
+a.  `character`
+
+b.  `double`
+
+c.  `factor`
+
+d.  `integer`
+
+e.  `numeric`
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+```
+
+### Question `{r} q_no` 
+
+Next, you turn your attention to exploring the relationship between `cooling` systems and prices of Duke Forest homes.
+
+-   You write the following data transformation pipeline:
+
+```{r}
+cooling_median_prices <- duke_forest |>
+  group_by(cooling) |>
+  summarize(median_price = median(price)) |> # calculate median price
+  arrange(desc(median_price))                # arrange in descending order
+```
+
+-   One of your teammates makes writes the following data transformation pipeline:
+
+```{r}
+cooling_max_prices <- duke_forest |>
+  group_by(cooling) |>
+  summarize(max_price = max(price)) |>       # calculate max price
+  arrange(max_price)                         # arrange in ascending order
+```
+
+-   And your other teammate makes the following visualization:
+
+```{r}
+#| fig-asp: 0.3
+ggplot(duke_forest, aes(x = price, y = cooling)) +
+  geom_boxplot()
+```
+
+Which of the following is [**TRUE**]{.underline}?
+**Select all that apply.**
+
+a.  `cooling_median_prices` is grouped by `cooling`.
+
+b.  `cooling_median_prices` has two rows.
+
+c.  `cooling_median_prices` and `cooling_max_prices` have the same number of columns.
+
+d.  First row of the `cooling` variable in `cooling_median_prices` has the value `"Central"`. 
+
+e.  First row of the `cooling` variable in `cooling_max_prices` has the value `"Central"`.
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+You conclude your exploration by examining the relationship between number of bedrooms, cooling type, and prices of homes in Duke Forest.
+
+```{r}
+#| label: duke-forest-group-by-summarize
+#| results: hide 
+#| message: false
+duke_forest |> 
+  group_by(bed_new, cooling) |> 
+  summarize(median_price = median(price))
+```
+
+Which of the following is [**TRUE**]{.underline} about the resulting data frame?
+**Select all that apply.**
+
+a.  The data frame has 6 rows.
+
+b.  The data frame has 3 columns.
+
+c.  The `median_price` variable tells us the median prices of homes for each level of `cooling`.
+
+d.  The `median_price` variable tells us the median prices of homes for each level of `bed_new`.
+
+e.  The `median_price` variable tells us the median prices of homes for each distinct combination of levels of `bed_new` and `cooling`.
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+Suppose you want to predict `price`s of homes from `area` and `cooling`, and you are considering two models:
+
+- Model 1: Without an interaction between `area` and `cooling`
+- Model 2: With an interaction between `area` and `cooling`
+
+Which of the following [**must**]{.underline} be true?
+**Select all that apply.**
+
+a. Model 2 will estimate more slope coefficients compared to Model 1.
+
+b. Model 2 will have a higher $R^2$ compared to Model 1. 
+
+c. Model 2 will have a higher adjusted $R^2$ compared to Model 1.
+
+d. Model 2 will have best fit lines that are parallel. 
+
+e. Model 2 will have best fit lines that could cross. 
+
+
+
+## Holiday movies
+
+
+
+```{r}
+#| include: false
+holiday_movies <- read_csv("data/holiday-movies.csv")
+```
+
+Happy (almost) holidays!
+
+A team of five data scientists is working together to explore, model, and make inferences about holiday movies using a dataset on `{r} nrow(holiday_movies)` holiday movies; movies with "holiday", "Christmas", "Hanukkah", or "Kwanzaa" (or variants thereof) in their title.
+Each member of the team is responsible for a different part of the analysis.
+The data come from the Internet Movie Database (IMDb).
+The data frame is called `holiday_movies` and it contains the variables described in the table below.
+
+| Variable | Description |
+|:-----------------|:-----------------------------------------------------|
+| `id` | IMDb ID of movie |
+| `title_type` | Type of the title (Feature Film or TV Movie) |
+| `title` | Title used on promotional materials at the point of release |
+| `year` | Release year of a title |
+| `runtime` | Primary runtime of the title, in minutes |
+| `genre` | Primary genre associated with the title |
+| `score` | Weighted average of all the individual user ratings on IMDb |
+| `num_votes` | Number of votes the title has received on IMDb |
+| `christmas` | Whether the title includes "christmas", "xmas", "x mas", etc. |
+| `hanukkah` | Whether the title includes "hanukkah", "chanukah", etc. |
+| `kwanzaa` | Whether the title includes "kwanzaa" |
+| `holiday` | Whether the title includes the word "holiday" |
+
+: {tbl-colwidths="\[20,80\]"}
+
+
+
+A peek at the data is shown below.
+
+```{r}
+holiday_movies
+```
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+The first team member is working on exploration
+They use the full dataset for their analysis.
+Answer the questions in this part for this team member's portion of the analysis.
+
+
+
+Which of the following plots would be appropriate for visualizing the distribution of scores of these movies? 
+**Select all that apply.**
+
+a.  Waffle plot
+
+b.  Violin plot
+
+c.  Pie chart
+
+d.  Scatter plot
+
+e.  Density plot
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+Which of the following is [**TRUE**]{.underline} about the code and its result?
+**Select all that apply.**
+
+```{r}
+holiday_movies |>
+  count(title_type, genre) |>
+  pivot_wider(names_from = genre, values_from = n)
+```
+
+a.  Each row of the output is a movie from this sample.
+
+b.  The most common title type and genre combination in this sample is TV Movies that are Comedies.
+
+c.  Without the last step of the pipeline, the result would be tibble with 12 rows and 3 columns.
+
+d.  The output shows that there are six distinct genres in the dataset.
+
+e.  A box plot can be used to visualize the distribution of title types across various genres.
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+
+The visualizations below show the relationship between `score` and `runtime` for movies with Drama and Family `genre`s.
+Additionally, the lines of best fit are overlaid on the visualizations.
+
+```{r}
+#| echo: false
+#| message: false
+#| fig-asp: 0.5
+holiday_movies |>
+  filter(genre %in% c("Drama", "Family")) |>
+  ggplot(aes(x = runtime, y = score)) +
+  geom_point(alpha = 0.5, color = "gray40") +
+  facet_wrap(~genre, ncol = 2) +
+  geom_smooth(method = "lm", se = FALSE, color = "black", linewidth = 1.2)
+```
+
+The correlation coefficients of these relationships are calculated below, though some of the code and the output are missing.
+
+```{r}
+#| include: false
+holiday_movies |>
+  filter(genre %in% c("Drama", "Family")) |>
+  group_by(genre) |>
+  summarize(r = cor(runtime, score))
+```
+
+```{r}
+#| eval: false
+holiday_movies |>
+  filter(genre __[BLANK 1]__ c("Drama", "Family")) |>
+  group_by(genre) |>
+  __[BLANK 2]__(r = cor(runtime, score))
+```
+
+```         
+# A tibble: 2 × 2
+  genre        r
+  <chr>    <dbl>
+1 Drama  -0.0361
+2 Family -0.384     
+```
+
+
+
+
+Which of the following goes in `__[BLANK 1]__`?
+
+a.  `==`
+
+b.  `|`
+
+c.  `&`
+
+d.  `%in%` 
+
+e.  `=`
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+Which of the following goes in `__[BLANK 2]__`?
+
+a.  `mutate`
+
+b.  `arrange`
+
+c.  `filter`
+
+d.  `slice`
+
+e.  `summarize` 
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+
+
+The second team member is working on inference, focusing on comparing `score`s between Feature Films and TV Movies using the full dataset.
+They use the full dataset for their analysis.
+Answer the questions in this part for this team member's portion of the analysis.
+
+```{r}
+#| include: false
+holiday_means <- holiday_movies |>
+  group_by(title_type) |>
+  summarize(mean_score = mean(score))
+
+holiday_ff_mean <- holiday_means |> 
+  filter(title_type == "Feature Film") |> 
+  pull(mean_score) |> 
+  round(2)
+
+holiday_tv_mean <- holiday_means |> 
+  filter(title_type == "TV Movie") |> 
+  pull(mean_score) |> 
+  round(2)
+```
+
+The density curves below show the distributions of `score`s in Feature Films and TV Movies.
+The means are overlaid on these distributions: a mean score of `{r} holiday_ff_mean` for Feature Films and a mean score of `{r} holiday_tv_mean` for TV Movies.
+The observed difference between these scores (TV Movies - Feature Films) is `{r} holiday_tv_mean - holiday_ff_mean`.
+
+```{r}
+#| echo: false
+#| fig-asp: 0.45
+#| fig-width: 8
+ggplot(
+  holiday_movies,
+  aes(x = score, fill = title_type, color = title_type)
+  ) +
+  geom_density(alpha = 0.5) +
+  scale_fill_manual(
+    values = c("Feature Film" = "black", "TV Movie" = "gray70")
+  ) +
+  scale_color_manual(
+    values = c("Feature Film" = "black", "TV Movie" = "gray70")
+  ) +
+  annotate(
+    geom = "segment",
+    x = holiday_ff_mean, xend = holiday_ff_mean,
+    y = 0, yend = 0.6,
+    color = "black", linewidth = 1.5
+  ) +
+  annotate(
+    geom = "label",
+    x = holiday_ff_mean - 2.5, y = 0.55,
+    label = glue('Mean score for\nFeature Films: {holiday_ff_mean}'),
+    color = "black", fill = "white", size = 4
+  ) +
+  annotate(
+    geom = "segment",
+    x = holiday_tv_mean, xend = holiday_tv_mean,
+    y = 0, yend = 0.6,
+    color = "gray70", linewidth = 1.5
+  ) +
+  annotate(
+    geom = "label",
+    x = holiday_tv_mean + 2.2, y = 0.55,
+    label = glue('Mean score for\nTV Movies: {holiday_tv_mean}'),
+    color = "black", fill = "gray70", alpha = 0.5, size = 4
+  ) +
+  coord_cartesian(clip = "off") +
+  scale_x_continuous(limits = c(0, 10.5)) +
+  labs(y = NULL)
+```
+
+
+
+
+
+
+
+A bootstrap distribution of the difference between the mean scores of holiday TV Movies and Feature Films is generated using the code below:
+
+```{r}
+set.seed(1234)
+
+boot_dist <- holiday_movies |>
+  specify(score ~ title_type) |>
+  generate(reps = 1000, type = "bootstrap") |>
+  calculate(
+    stat = "diff in means", 
+    order = c("TV Movie", "Feature Film")
+  )
+```
+
+
+```{r}
+#| include: false
+ci <- boot_dist |>
+  summarize(
+    lower = quantile(stat, 0.025),
+    upper = quantile(stat, 0.975),
+  )
+```
+
+The plot below visualizes the bootstrap distribution.
+The 95% confidence interval is (0.442, 0.670).
+The bounds for this interval are overlaid on the plot.
+
+```{r}
+#| echo: false
+#| fig-asp: 0.5
+ggplot(boot_dist, aes(x = stat)) +
+  geom_histogram(binwidth = 0.05, color = "gray") +
+  scale_x_continuous(breaks = round(seq(-0.6, 0.6, 0.1), 1)) +
+  scale_y_continuous(breaks = seq(0, 300, 50)) +
+  geom_vline(xintercept = c(ci$lower, ci$upper), linewidth = 1.5)
+```
+
+Noting that this guide is written in Quarto with all figures and tables produced with code, which of the following is [**TRUE**]{.underline} about this analysis?
+**Select all that apply.**
+
+a.  We are 95% confident that 44.2% to 67% of holiday movies are TV Movies.
+
+b.  The upper bound of the interval marks the 2.5th percentile of the bootstrap distribution.
+
+c.  We are 95% confident that the mean score of holiday TV Movies is 0.442 points to 0.67 points higher than holiday Feature Films.
+
+d.  If this document is rendered again, we might get slightly different values for the bounds of the confidence interval.
+
+e.  1,000 bootstrap samples were taken when constructing this confidence interval.
+    
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+A post in a data science blog states that holiday TV movies score discernibly differently than holiday Feature Films, on average.
+Suppose you want to evaluate this claim using a hypothesis test so you write the following code to simulate the null distribution.
+
+```{r}
+set.seed(1234)
+
+null_dist <- holiday_movies |>
+  specify(score ~ title_type) |>
+  hypothesize(null = "independence") |>
+  generate(reps = 1000, type = "permute") |>
+  calculate(
+    stat = "diff in means", 
+    order = c("TV Movie", "Feature Film")
+  )
+```
+
+The plot below visualizes the null distribution.
+
+```{r}
+#| echo: false
+#| fig-asp: 0.5
+visualize(null_dist)
+```
+
+Which of the following is [**TRUE**]{.underline} about this analysis?
+**Select all that apply.**
+
+a.  The null hypothesis states that the mean score of all holiday TV movies is equal to the mean score of all holiday Feature Films.    
+
+b.  The alternative hypothesis states that the mean score of all holiday TV movies is different than the mean score of all holiday Feature Films. 
+
+c.  The p-value is approximately 0.
+
+d.  The data provide discernible evidence that the mean score of all holiday TV movies is equal to the mean score of all holiday Feature Films.
+
+e.  The confidence interval from the previous question and the result of the hypothesis test in this question do not agree with each other.
+
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+The third team member is working on modeling, predicting `score`.
+They first split up the data into training and testing sets.
+
+```{r}
+set.seed(199)
+holiday_movies_split <- initial_split(holiday_movies)
+holiday_movies_train <- training(holiday_movies_split)
+holiday_movies_test <- testing(holiday_movies_split)
+```
+
+They then fit a model predicting `score` from `runtime` and `genre` (categorized as Comedy, Drama, Other, Animation, Family, and Romance), and name it `score_runtime_genre_fit`,
+using the training data.
+Answer the questions in this part for this team member's portion of the analysis.
+
+```{r}
+score_runtime_genre_fit <- linear_reg() |>
+  fit(score ~ runtime * genre, data = holiday_movies_train)
+```
+
+The model output for `score_runtime_genre_fit` is shown below.
+
+```{r}
+#| echo: false
+tidy(score_runtime_genre_fit) |>
+  knitr::kable(digits = 3)
+```
+
+
+
+
+Which of the following is [**true**]{.underline} about the intercept of `score_runtime_genre_fit`?
+**Select all that apply.**
+
+a.  The intercept is meaningless in context of the data.
+
+b.  Animation movies that are 0 minutes in length are predicted to score, on average, 7.327 points. 
+
+c.  All else held constant, movies that are 0 minutes in length are predicted to score, on average, 7.327 points.
+
+d.  Movies without a genre that are 0 minutes in length are predicted to score, on average, 7.327 points.
+
+e.  Keeping runtime constant, animation movies are predicted to score, on average, 7.327 points.
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+Fill in the blank:
+
+> Adjusted R-squared for `score_runtime_genre_fit` (the model predicting `score` from `runtime` and `genre`) \_\_\_\_\_\_\_\_\_ the adjusted R-squared of the model `score_runtime_fit` (for predicting `score` from `runtime` alone).
+
+a.  is equal to
+
+b.  is less than
+
+c.  is greater than
+
+d.  is both greater than and less than
+
+e.  cannot be compared (based on the information provided) to 
+
+
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+The fourth team member is also working on modeling, but they classifying movies as either Feature Films or TV Movies (`title_type`) based on their `runtime`, `score`, and  `num_votes`.
+Their code and output is shown below.
+
+```{r}
+# make title_type a factor
+holiday_movies <- holiday_movies |>
+  mutate(title_type = fct_relevel(title_type, "TV Movie", "Feature Film"))
+
+# split the data into training and testing
+set.seed(221)
+holiday_movies_split <- initial_split(holiday_movies)
+holiday_movies_train <- training(holiday_movies_split)
+holiday_movies_test <- testing(holiday_movies_split)
+
+# fit model to training data
+title_type_fit <- logistic_reg() |>
+  fit(title_type ~ runtime + score + num_votes, data = holiday_movies_train)
+
+# make predictions for testing data
+holiday_movies_aug <- augment(title_type_fit, new_data = holiday_movies_test)
+
+# summarize predictions
+holiday_movies_aug |>
+  count(title_type, .pred_class)
+```
+
+
+
+
+
+Which of the following is the **false positive rate** of the model for this testing set?
+
+a.  30 / (30 + 256) = `{r} round(30 / (30 + 256) , 2)` 
+
+b.  256 / (30 + 256) = `{r} round(256 / (30 + 256) , 2)`
+
+c.  95 / (95 + 78) = `{r} round(95 / (95 + 78) , 2)`
+
+d.  78 / (95 + 78) = `{r} round(78 / (95 + 78) , 2)`
+
+e.  78 / (30 + 78) = `{r} round(78 / (30 + 78) , 2)`
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+Suppose you fit one other model, predicting `title_type` from `runtime` and `score` only.
+You should choose this model over the original model if ...
+
+a.  it has a higher adjusted R-squared
+
+b.  it has a higher R-squared
+
+c.  it has a lower false positive rate
+
+d.  it has a higher false negative rate
+
+e.  it has a higher area under the ROC curve
+
+
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+Finally, the fifth team member is preparing the data to hand off to another team who is only interested in holiday movies that are comedies, dramas, and family movies.
+They start with the full dataset for their analysis.
+Answer the questions in this part for this team member's portion of the work.
+
+
+
+
+
+The team member creates the following vector of genres.
+
+```{r}
+genres_of_interest_vec <- c("Comedy", "Drama", "Family")
+```
+
+Then, using this vector, they want to create a new data frame, `holiday_movies_cdf`, that contains only movies from these genres and write the data frame to a CSV file called `holiday-movies-cdf.csv` in their `data` folder.
+Which of the following pipelines will accomplish this goal correctly?
+
+a. 
+
+```{r}
+#| eval: false
+holiday_movies |>
+  filter(genre %in% genres_of_interest_vec)
+
+write_csv(holiday_movies_cdf, "data/holiday-movies-cdf.csv")
+```
+
+b.
+
+```{r}
+#| eval: false
+holiday_movies_cdf <- holiday_movies |>
+  filter(genre %in% genres_of_interest_vec)
+
+write_csv(holiday_movies_cdf, "data/holiday-movies-cdf.csv")
+```
+
+c. 
+
+```{r}
+#| eval: false
+holiday_movies_cdf <- holiday_movies |>
+  inner_join(genres_of_interest_vec)
+
+write_csv(holiday_movies_cdf, "data/holiday-movies-cdf.csv")
+```
+
+d.
+                                                                              
+```{r}
+#| eval: false
+holiday_movies_cdf <- holiday_movies |>
+  select(genres_of_interest_vec)
+
+write_csv(holiday_movies_cdf, "data/holiday-movies-cdf.csv")
+```
+
+e. None of the above. 
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+
+
+### Question `{r} q_no` 
+
+They then realize they should be able to accomplish the same goal with a join operation.
+They create the following `genres_of_interest_df` data frame.
+
+```{r}
+genres_of_interest_df <- tibble(genre = c("Comedy", "Drama", "Family"))
+
+genres_of_interest_df
+```
+
+Using `genres_of_interest_df` and a join operation, which of the following pipelines will accomplish their goal of obtaining `holiday_movies_cdf` -- subset of `holiday_movies` that only contains comedies, dramas, and family movies?
+**Select all that apply.**
+
+a.
+
+```{r}
+#| eval: false
+holiday_movies_cdf <- holiday_movies |>
+  inner_join(genres_of_interest_df, by = join_by(genre))
+```
+
+b. 
+
+```{r}
+#| eval: false
+holiday_movies_cdf <- holiday_movies |>
+  left_join(genres_of_interest_df, by = join_by(genre))
+```
+
+c.
+
+```{r}
+#| eval: false
+holiday_movies_cdf <- holiday_movies |>
+  right_join(genres_of_interest_df, by = join_by(genre))
+```
+
+d. 
+
+```{r}
+#| eval: false
+holiday_movies_cdf <- holiday_movies |>
+  full_join(genres_of_interest_df, by = join_by(genre))
+```
+
+e. None of the above.
+
+
+## General Social Survey
+
+The General Social Survey is a high-quality survey which gathers data on American society and opinions, conducted since 1972. This data set is a sample of 500 entries from the GSS, spanning years 1973-2018, including demographic markers and some economic variables[^1].
+
+[^1]: Note that this data is included for demonstration only, and should not be assumed to provide accurate estimates relating to the GSS. However, due to the high quality of the GSS, the unweighted data will approximate the weighted data in some analyses.
+
+```{r}
+#| echo: true
+gss
+```
+
+Suppose you want to estimate the correlation between `hours` (number of hours worked in week before survey, truncated at 89) and `age` (age at time of survey, truncated at 89).
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+Which of the following is the **best** estimate of the correlation between `hours` and `age`?
+
+```{r}
+ggplot(gss, aes(x = age, y = hours)) +
+  geom_point()
+```
+
+a. -0.7
+b. 0
+c. 0.9
+d. 0.6
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+Fill in the blank for the code below for computing the correlation between `hours` and `age`.
+
+```{r}
+#| eval: false
+#| echo: true
+gss |>
+  _____(r = cor(hours, age))
+```
+
+a. `filter`
+b. `mutate`
+c. `summarize`
+d. `group_by`
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+Fill in the blanks for the code below for simulating the bootstrap distribution of the correlation between `hours` and `age` using 10,000 bootstrap samples.
+
+```{r}
+#| eval: false
+#| echo: true
+gss |>
+   specify(hours ~ age) |> 
+   _[BLANK 1]_(reps = 1000, type = "_[BLANK 2]_") |>
+   calculate(stat = "correlation")
+```
+
+a. BLANK 1: `hypothesize`, BLANK 2: `"bootstrap"`
+b. BLANK 1: `mutate`, BLANK 2: `"permute"`
+c. BLANK 1: `generate`, BLANK 2: `"bootstrap"`
+d. BLANK 1: `generate`, BLANK 2: `"permute"`
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+The bootstrap distribution from the previous question is visualized below. What is the approximate 95% confidence interval for the correlation between `hours` and `age`?
+
+```{r}
+#| fig-asp: 0.5
+#| echo: false
+set.seed(1234)
+boot_dist <- gss |>
+   specify(hours ~ age) |> 
+   generate(reps = 1000, type = "bootstrap") |>
+   calculate(stat = "correlation")
+
+visualize(boot_dist) +
+  scale_x_continuous(breaks = round(seq(-0.15, 0.15, 0.05),2))
+```
+
+a. (-0.15, 0.15)
+b. (-0.10, 0.10)
+c. (-0.05, 0.05)
+d. (0.05, 0.15)
+
+
+## Miscellaneous
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+```{r}
+#| include: false
+set.seed(1234)
+mpg <- ggplot2::mpg |>
+  mutate(
+    drv = case_when(
+      drv == "f" ~ "Front-wheel drive",
+      drv == "r" ~ "Rear-wheel drive",
+      drv == "4" ~ "Four-wheel drive"
+    )
+  ) |>
+  rename(city = cty, displacement = displ, drive = drv) |>
+  sample_n(size = nrow(ggplot2::mpg))
+```
+
+The `mpg` data frame contains fuel economy data for `{r} nrow(mpg)` cars.
+For this analysis, you will only use three variables from the data frame.
+These variables are described below.
+
+| Variable       | Description                                            |
+|:---------------|:-------------------------------------------------------|
+| `city`         | City miles per gallon                                  |
+| `displacement` | Engine displacement, in litres                         |
+| `drive`        | Type of drive train with levels `Front-wheel drive`, `Rear-wheel drive`, and `Four-wheel drive`     |
+
+: {tbl-colwidths="\[20,80\]"}
+
+A peek at the first five rows of these columns is shown below.
+
+```{r}
+#| echo: false
+mpg |> select(city, displacement, drive) |> slice_head(n = 5)
+```
+
+You fit and summarize the following model to predict city miles per gallon from engine displacement and type of drive train.
+
+```{r}
+mpg_fit <- linear_reg() |>
+  fit(city ~ displacement + drive, data = mpg)
+
+tidy(mpg_fit)
+```
+
+
+Which of the following is [**true**]{.underline} about this model?
+**Select all that apply.**
+
+a.  This model estimates different slopes for the relationship between `city` and `displacement` for cars with different types of drive train.
+
+b.  The baseline level of `drive` is `"Four-wheel drive"`.
+
+c.  The model predicts a city mileage of 23.7 miles per gallon, on average, for all cars with 0 liters of displacement.
+
+d.  This model estimates the same slope for the relationship between `city` and `displacement` for cars with different types of drive train. 
+
+e.  The model predicts a city mileage of 23.7 miles per gallon, on average, for four-wheel drive cars with 0 liters of displacement. 
+
+
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no` 
+
+You have the following data frames about Duke Women's Basketball team coaches who have finished their terms:
+
+```{r}
+#| include: false
+coach_years <- tribble(
+  ~name,                 ~start_year, ~end_year,
+  "Joanne P. McCallie",   2007,        2019,
+  "Gail Goestenkors",     1992,        2006,
+  "Debbie Leonard",       1977,        1991,
+  "Emma Howard",          1974,        1976,
+  "Calla Raynor",         1972,        1973
+)
+
+coach_records <- tribble(
+  ~name,                 ~record,
+  "Joanne P. McCallie",  "330-107-0",
+  "Gail Goestenkors",    "396-99-0",
+  "Debbie Leonard",      "212-190-0",
+  "Emma Howard",         "11-35-0",
+  "Calla Raynor",        "10-12-0"
+)
+```
+
+:::: {layout="[ 0.5,-0.1, 0.4 ]"}
+
+::: {#first-column}
+
+Data frame 1 - `coach_years`:
+
+```{r}
+#| echo: false
+coach_years
+```
+
+:::
+
+::: {#first-column}
+
+Data frame 2 - `coach_records`:
+
+```{r}
+#| echo: false
+coach_records
+```
+
+:::
+
+:::
+
+You want a joined data frame that contains all five coaches exactly once, includes `name`, `start_year`, `end_year`, and `record` columns, and has no missing values for any columns.
+
+Which of the following join operations will give you this result?
+**Select all that apply.**
+
+a. `coach_years |> inner_join(coach_records, by = join_by(name))`
+
+b. `coach_years |> right_join(coach_records, by = join_by(record))`
+
+c. `coach_years |> semi_join(coach_records, by = join_by(name))`
+
+d. `coach_years |> left_join(coach_records, by = join_by(start_year))`
+
+e. `coach_records |> full_join(coach_years, by = join_by(name))`
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+```
+
+### Question `{r} q_no` 
+
+In STA 199, you learned that in logistic regression the outcome is 0 or 1.
+For example, "win" or "loss" for the Duke Women's Basketball team in a given game.
+
+Imagine you're explaining this to a friend who asks:
+
+> "So, if the model predicts a 0.8 for a game... Does that mean the Duke Women's Basketball team will win 80% of the game?"
+
+Which of the following is the best response?
+
+a. "Yes, the model predicts the Duke Women's Basketball team will win 80% of the game."
+
+b. "No, the model predicts the probability that the Women's Basketball team wins the game is 0.8."
+
+c. "No, the model predicts that the Duke Women's Basketball team will win 8 out of 10 games."
+
+d. "Yes, the model predicts that the Duke Women's Basketball team will score 80 points in the game."
+
+e. "No, the model predicts that the Duke Women's Basketball team will win 0.8 games."
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+### Question `{r} q_no`
+
+Consider the following data frame about book titles:
+
+```{r}
+books <- tibble(
+  title = c(
+    "Introduction to R", 
+    "Advanced Python Programming",
+    "Data Science with R", 
+    "Python for Beginners",
+    "Machine Learning in R", 
+    "introduction to python programming"
+  )
+)
+books
+```
+
+
+
+You want to filter the `books` data frame to only include titles that contain the word "Python" (case-sensitive).
+Which of the following code snippets will accomplish this correctly?
+
+a.  `books |> filter(title == "Python")`
+
+b.  `books |> filter(str_detect(title, "Python"))`
+
+c.  `books |> filter(str_count(title, "Python") > 0)`
+
+d.  `books |> select(str_detect(title, "Python"))`
+
+e.  `books |> filter(title %in% "Python")`
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+```
+
+### Question `{r} q_no`
+
+Consider the following data frame:
+
+```{r}
+mixed_data <- tibble(
+  id = c("1", "2", "3"),
+  category = as.factor(c("A", "B", "C")),
+  value = c("4", "5.5", "6")
+)
+
+mixed_data
+```
+
+Which of the following statements are TRUE about type coercion and conversion in R?
+**Select all that apply.**
+
+```{r}
+#| include: false
+mixed_data |> mutate(id = as.numeric(id))
+mixed_data |> mutate(category = as.numeric(category))
+mixed_data |> mutate(category = as.character(category))
+mixed_data |> mutate(value = as.integer(value))
+mixed_data |> mutate(value = as.double(value))
+```
+
+a.  `mixed_data |> mutate(id = as.numeric(id))` will convert the `id` column to numeric values `1`, `2`, `3`.
+
+b.  `mixed_data |> mutate(category = as.numeric(category))` will convert the `category` column to numeric values `1`, `2`, `3`.
+
+c.  `mixed_data |> mutate(category = as.character(category))` will convert the `category` column to character values `"A"`, `"B"`, `"C"`.
+
+d.  `mixed_data |> mutate(value = as.integer(value))` will convert the `value` column to numeric values `4`, `5.5`, `6`.
+
+e.  `mixed_data |> mutate(value = as.double(value))` will convert the `value` column to numeric values `4`, `5.5`, `6`.
+
+
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+```
+
+### Question `{r} q_no` 
+
+Consider the width of two bootstrap confidence intervals constructed based on the same sample and the same unimodal and symmetric bootstrap distribution with non-zero variability.
+One of the intervals is at the 90% confidence level and the other is at the 99% confidence level.
+The width of the 99% interval \_\_\_\_ the width of the 90% interval.
+
+a.  is smaller than
+
+b.  is approximately equal to
+
+c.  is exactly equal to
+
+d.  is larger than
+
+e.  is both smaller than and larger than
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+
+
+### Question `{r} q_no` 
+
+A news organization is creating visualizations to accompany their data stories.
+Which of the following visualization practices would be considered misleading or problematic?
+**Select all that apply.**
+
+a.  Using a bar chart with a y-axis that starts at 50 instead of 0 to make small differences appear larger.
+
+b.  Showing data for only the most recent 3 months when 5 years of data are available, without explaining why.
+
+c.  Including error bars or confidence intervals on a plot to show uncertainty in estimates.
+
+d.  Creating a map showing election results by geographic area without accounting for population density, making sparsely populated areas appear more important.
+
+e.  Using a logarithmic scale on a plot when displaying data that spans several orders of magnitude and clearly labeling it as log scale.
+
+```{r}
+#| include: false
+q_no <- q_no + 1
+
+```
+
+
+
+### Question `{r} q_no` 
+
+A company develops a machine learning algorithm to screen job applications by training it on data from successful employees hired over the past 10 years.
+The algorithm consistently ranks applications from certain demographic groups lower, even when qualifications are similar.
+Which statement best explains this issue?
+
+a.  Machine learning algorithms are inherently objective and cannot be biased.
+
+b.  The algorithm learned patterns from historical hiring data that may reflect past biases, demonstrating the "garbage in, garbage out" principle.
+
+c.  This outcome proves the algorithm is working correctly by identifying the most qualified candidates.
+
+d.  Algorithmic bias can be completely eliminated by using more sophisticated machine learning techniques.
+
+e.  The problem can be solved simply by removing demographic information from the training data.
+
+
 

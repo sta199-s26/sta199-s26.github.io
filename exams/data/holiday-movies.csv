@@ -1,0 +1,1836 @@
+id,title_type,title,year,runtime,genre,score,num_votes,christmas,hanukkah,kwanzaa,holiday
+tt0020356,Feature Film,Sailor's Holiday,1929,58,Comedy,5.4,55,FALSE,FALSE,FALSE,TRUE
+tt0020823,Feature Film,The Devil's Holiday,1930,80,Drama,6,242,FALSE,FALSE,FALSE,TRUE
+tt0020985,Feature Film,Holiday,1930,91,Comedy,6.3,638,FALSE,FALSE,FALSE,TRUE
+tt0021268,Feature Film,Holiday of St. Jorgen,1930,83,Comedy,7.4,256,FALSE,FALSE,FALSE,TRUE
+tt0021377,Feature Film,Sin Takes a Holiday,1930,81,Comedy,6.1,740,FALSE,FALSE,FALSE,TRUE
+tt0021381,Feature Film,Sinners' Holiday,1930,60,Other,6.3,688,FALSE,FALSE,FALSE,TRUE
+tt0023039,Feature Film,Husband's Holiday,1931,70,Drama,6.4,27,FALSE,FALSE,FALSE,TRUE
+tt0024869,Feature Film,Beggar's Holiday,1934,60,Other,5.6,15,FALSE,FALSE,FALSE,TRUE
+tt0025006,Feature Film,Cowboy Holiday,1934,56,Other,4.8,74,FALSE,FALSE,FALSE,TRUE
+tt0025037,Feature Film,Death Takes a Holiday,1934,79,Drama,6.9,2361,FALSE,FALSE,FALSE,TRUE
+tt0027456,Feature Film,College Holiday,1936,86,Comedy,5.7,190,FALSE,FALSE,FALSE,TRUE
+tt0027923,Feature Film,Mad Holiday,1936,71,Comedy,6,212,FALSE,FALSE,FALSE,TRUE
+tt0028310,Feature Film,Stolen Holiday,1937,80,Drama,6.3,615,FALSE,FALSE,FALSE,TRUE
+tt0028576,Feature Film,Angel's Holiday,1937,76,Comedy,6.4,32,FALSE,FALSE,FALSE,TRUE
+tt0028763,Feature Film,Dangerous Holiday,1937,58,Drama,5.8,57,FALSE,FALSE,FALSE,TRUE
+tt0028843,Feature Film,Every Day's a Holiday,1937,79,Comedy,6.2,466,FALSE,FALSE,FALSE,TRUE
+tt0029894,Feature Film,Bank Holiday,1938,86,Comedy,6.4,530,FALSE,FALSE,FALSE,TRUE
+tt0029992,Feature Film,A Christmas Carol,1938,69,Drama,7.5,8312,TRUE,FALSE,FALSE,FALSE
+tt0030027,Feature Film,Crime Takes a Holiday,1938,59,Other,6.5,25,FALSE,FALSE,FALSE,TRUE
+tt0030241,Feature Film,Holiday,1938,95,Comedy,7.7,17619,FALSE,FALSE,FALSE,TRUE
+tt0030897,Feature Film,Tropic Holiday,1938,78,Comedy,5.5,106,FALSE,FALSE,FALSE,TRUE
+tt0031490,Feature Film,Inspector Hornleigh on Holiday,1939,90,Comedy,6.8,232,FALSE,FALSE,FALSE,TRUE
+tt0032338,Feature Film,Christmas in July,1940,67,Comedy,7.4,4172,TRUE,FALSE,FALSE,FALSE
+tt0034862,Feature Film,Holiday Inn,1942,100,Comedy,7.3,16722,FALSE,FALSE,FALSE,TRUE
+tt0036014,Feature Film,Hoosier Holiday,1943,65,Comedy,6.7,19,FALSE,FALSE,FALSE,TRUE
+tt0036711,Feature Film,Christmas Holiday,1944,93,Other,6.5,1583,TRUE,FALSE,FALSE,TRUE
+tt0036988,Feature Film,Knickerbocker Holiday,1944,85,Comedy,5.3,196,FALSE,FALSE,FALSE,TRUE
+tt0037242,Feature Film,Sailor's Holiday,1944,60,Comedy,6,21,FALSE,FALSE,FALSE,TRUE
+tt0037595,Feature Film,Christmas in Connecticut,1945,101,Comedy,7.3,11196,TRUE,FALSE,FALSE,FALSE
+tt0038125,Feature Film,Strange Holiday,1945,61,Drama,5.4,239,FALSE,FALSE,FALSE,TRUE
+tt0038606,Feature Film,Holiday in Mexico,1946,128,Comedy,6.1,490,FALSE,FALSE,FALSE,TRUE
+tt0038833,Feature Film,Perilous Holiday,1946,89,Other,6,33,FALSE,FALSE,FALSE,TRUE
+tt0039203,Feature Film,Blondie's Holiday,1947,67,Comedy,6.5,195,FALSE,FALSE,FALSE,TRUE
+tt0039231,Feature Film,Bush Christmas,1947,80,Other,6.2,515,TRUE,FALSE,FALSE,FALSE
+tt0039266,Feature Film,Christmas Eve,1947,90,Comedy,5.7,805,TRUE,FALSE,FALSE,FALSE
+tt0039473,Feature Film,Hoppy's Holiday,1947,60,Other,6.5,148,FALSE,FALSE,FALSE,TRUE
+tt0039562,Feature Film,A Christmas Carol,1947,80,Drama,5.4,32,TRUE,FALSE,FALSE,FALSE
+tt0040443,Feature Film,Holiday Camp,1947,93,Other,6.6,537,FALSE,FALSE,FALSE,TRUE
+tt0040848,Feature Film,Summer Holiday,1948,93,Other,5.8,638,FALSE,FALSE,FALSE,TRUE
+tt0041473,Feature Film,Holiday Affair,1949,87,Comedy,7.1,6591,FALSE,FALSE,FALSE,TRUE
+tt0041475,Feature Film,Holiday in Havana,1949,73,Comedy,5.9,125,FALSE,FALSE,FALSE,TRUE
+tt0041528,Feature Film,Johnny Holiday,1949,92,Other,7.3,104,FALSE,FALSE,FALSE,TRUE
+tt0042568,Feature Film,Holiday Rhythm,1950,60,Other,6.6,34,FALSE,FALSE,FALSE,TRUE
+tt0042665,Feature Film,Last Holiday,1950,88,Drama,7.3,2067,FALSE,FALSE,FALSE,TRUE
+tt0044008,Feature Film,A Christmas Carol,1951,86,Drama,8.1,24671,TRUE,FALSE,FALSE,FALSE
+tt0044708,Feature Film,Holiday Week,1952,82,Drama,6.1,206,FALSE,FALSE,FALSE,TRUE
+tt0044715,Feature Film,Holiday for Sinners,1952,72,Drama,5.9,184,FALSE,FALSE,FALSE,TRUE
+tt0046250,Feature Film,Roman Holiday,1953,118,Comedy,8,145289,FALSE,FALSE,FALSE,TRUE
+tt0046487,Feature Film,Monsieur Hulot's Holiday,1953,114,Comedy,7.3,19875,FALSE,FALSE,FALSE,TRUE
+tt0047673,Feature Film,White Christmas,1954,120,Comedy,7.6,47688,TRUE,FALSE,FALSE,FALSE
+tt0047939,Feature Film,Cinerama Holiday,1955,119,Other,7.3,142,FALSE,FALSE,FALSE,TRUE
+tt0048104,Feature Film,Holiday for Henrietta,1952,118,Comedy,7.4,391,FALSE,FALSE,FALSE,TRUE
+tt0051147,Feature Film,Holiday Island,1957,105,Comedy,6.1,70,FALSE,FALSE,FALSE,TRUE
+tt0051493,Feature Film,Country Music Holiday,1958,81,Other,5.9,82,FALSE,FALSE,FALSE,TRUE
+tt0052047,Feature Film,Paris Holiday,1958,103,Other,5.7,513,FALSE,FALSE,FALSE,TRUE
+tt0052284,Feature Film,"At That Time, at Christmas...",1958,85,Drama,6.5,20,TRUE,FALSE,FALSE,FALSE
+tt0052897,Feature Film,Holiday for Lovers,1959,103,Comedy,5.6,426,FALSE,FALSE,FALSE,TRUE
+tt0054271,Feature Film,Holiday in Spain,1960,125,Other,5.5,399,FALSE,FALSE,FALSE,TRUE
+tt0056334,Feature Film,Passion Holiday,1963,75,Comedy,6.1,12,FALSE,FALSE,FALSE,TRUE
+tt0057541,Feature Film,Summer Holiday,1963,107,Comedy,6.1,1816,FALSE,FALSE,FALSE,TRUE
+tt0057637,Feature Film,The Night Before Christmas,1961,68,Comedy,7.5,1934,TRUE,FALSE,FALSE,FALSE
+tt0057916,TV Movie,Carol for Another Christmas,1964,84,Drama,6.5,1246,TRUE,FALSE,FALSE,FALSE
+tt0058197,Feature Film,Holiday in St. Tropez,1964,96,Comedy,5.7,37,FALSE,FALSE,FALSE,TRUE
+tt0059004,Feature Film,Every Day Is a Holiday,1965,90,Comedy,5.4,70,FALSE,FALSE,FALSE,TRUE
+tt0059026,TV Movie,A Charlie Brown Christmas,1965,25,Animation,8.3,42101,TRUE,FALSE,FALSE,FALSE
+tt0059032,Feature Film,The Christmas That Almost Wasn't,1966,94,Family,3.5,917,TRUE,FALSE,FALSE,FALSE
+tt0060236,Feature Film,The Christmas Tree,1966,59,Family,6.4,168,TRUE,FALSE,FALSE,FALSE
+tt0060345,TV Movie,How the Grinch Stole Christmas!,1966,26,Animation,8.3,56692,TRUE,FALSE,FALSE,FALSE
+tt0061844,Feature Film,The Christmas Kid,1967,85,Drama,5.4,66,TRUE,FALSE,FALSE,FALSE
+tt0064037,Feature Film,The Christmas Tree,1969,110,Drama,6.3,719,TRUE,FALSE,FALSE,FALSE
+tt0065040,Feature Film,Strange Holiday,1970,75,Other,4.4,85,FALSE,FALSE,FALSE,TRUE
+tt0066975,TV Movie,Death Takes a Holiday,1971,73,Drama,7.2,291,FALSE,FALSE,FALSE,TRUE
+tt0067209,TV Movie,The Homecoming: A Christmas Story,1971,100,Drama,8.3,2039,TRUE,FALSE,FALSE,FALSE
+tt0067400,Feature Film,The Christmas Martian,1971,65,Family,4.8,186,TRUE,FALSE,FALSE,FALSE
+tt0068683,Feature Film,Main Thing Holidays,1972,103,Comedy,4.8,90,FALSE,FALSE,FALSE,TRUE
+tt0068708,TV Movie,Home for the Holidays,1972,73,Drama,6.2,1265,FALSE,FALSE,FALSE,TRUE
+tt0068720,TV Movie,The House Without a Christmas Tree,1972,75,Drama,8,874,TRUE,FALSE,FALSE,FALSE
+tt0070004,TV Movie,A Dream for Christmas,1973,100,Drama,6.7,112,TRUE,FALSE,FALSE,FALSE
+tt0071222,Feature Film,Black Christmas,1974,98,Other,7.1,46105,TRUE,FALSE,FALSE,FALSE
+tt0071613,Feature Film,Holiday on the Buses,1973,87,Comedy,5.8,2020,FALSE,FALSE,FALSE,TRUE
+tt0073751,TV Movie,The First Christmas: The Story of the First Christmas Snow,1975,22,Animation,6.8,579,TRUE,FALSE,FALSE,FALSE
+tt0074813,Feature Film,Olympian Holiday,1976,113,Comedy,6.5,413,FALSE,FALSE,FALSE,TRUE
+tt0075128,Feature Film,Journey to the Christmas Star,1976,92,Other,6.5,1355,TRUE,FALSE,FALSE,FALSE
+tt0075449,TV Movie,Young Pioneers' Christmas,1976,100,Drama,6.9,86,TRUE,FALSE,FALSE,FALSE
+tt0075846,TV Movie,"Christmas Miracle in Caufield, U.S.A.",1977,97,Drama,5.8,171,TRUE,FALSE,FALSE,FALSE
+tt0075875,Feature Film,Confessions from a Holiday Camp,1977,88,Comedy,4.2,1030,FALSE,FALSE,FALSE,TRUE
+tt0075988,TV Movie,Emmet Otter's Jug-Band Christmas,1977,48,Comedy,8.2,4460,TRUE,FALSE,FALSE,FALSE
+tt0076213,TV Movie,It Happened One Christmas,1977,109,Comedy,6,969,TRUE,FALSE,FALSE,FALSE
+tt0076448,TV Movie,"Nestor, the Long-Eared Christmas Donkey",1977,24,Animation,6.9,2335,TRUE,FALSE,FALSE,FALSE
+tt0076783,TV Movie,Sunshine Christmas,1977,120,Drama,7.8,93,TRUE,FALSE,FALSE,FALSE
+tt0077281,Feature Film,Blue Christmas,1978,133,Other,6.2,124,TRUE,FALSE,FALSE,FALSE
+tt0077333,TV Movie,A Christmas to Remember,1978,100,Drama,6.4,171,TRUE,FALSE,FALSE,FALSE
+tt0077465,Feature Film,Where Are You Going on Holiday?,1978,127,Comedy,6.3,563,FALSE,FALSE,FALSE,TRUE
+tt0077710,Feature Film,Holiday Hotel,1978,110,Comedy,6,347,FALSE,FALSE,FALSE,TRUE
+tt0078132,Feature Film,The Night Before Christmas,1978,100,Drama,6.1,71,TRUE,FALSE,FALSE,FALSE
+tt0078764,TV Movie,An American Christmas Carol,1979,98,Drama,6.8,1616,TRUE,FALSE,FALSE,FALSE
+tt0078968,TV Movie,Christmas Lilies of the Field,1979,120,Drama,6.5,107,TRUE,FALSE,FALSE,FALSE
+tt0079828,TV Movie,Rudolph and Frosty's Christmas in July,1979,97,Other,6.3,2547,TRUE,FALSE,FALSE,FALSE
+tt0080531,Feature Film,Christmas Mountain,1981,90,Other,6.5,148,TRUE,FALSE,FALSE,FALSE
+tt0080532,TV Movie,A Christmas Without Snow,1980,120,Drama,5.7,401,TRUE,FALSE,FALSE,FALSE
+tt0080822,Feature Film,Crazy Swedish Holidays in Paris,1980,94,Comedy,4.7,31,FALSE,FALSE,FALSE,TRUE
+tt0081190,TV Movie,Mr. Krueger's Christmas,1980,26,Drama,7.9,1092,TRUE,FALSE,FALSE,FALSE
+tt0081340,TV Movie,Pinocchio's Christmas,1980,49,Animation,6.4,752,TRUE,FALSE,FALSE,FALSE
+tt0081793,Feature Film,Christmas Evil,1980,100,Other,5.5,8110,TRUE,FALSE,FALSE,FALSE
+tt0085231,TV Movie,The Best Christmas Pageant Ever,1983,48,Comedy,7.2,789,TRUE,FALSE,FALSE,FALSE
+tt0085282,Feature Film,Bush Christmas,1983,91,Drama,5.2,384,TRUE,FALSE,FALSE,FALSE
+tt0085334,Feature Film,A Christmas Story,1983,93,Comedy,7.9,163273,TRUE,FALSE,FALSE,FALSE
+tt0085593,TV Movie,The Gift of Love: A Christmas Story,1983,96,Drama,6.7,357,TRUE,FALSE,FALSE,FALSE
+tt0085933,Feature Film,Merry Christmas Mr. Lawrence,1983,123,Drama,7.2,19475,TRUE,FALSE,FALSE,FALSE
+tt0087056,TV Movie,A Christmas Carol,1984,100,Drama,7.8,17146,TRUE,FALSE,FALSE,FALSE
+tt0087548,TV Movie,Kenny & Dolly: A Christmas to Remember,1984,60,Other,8.3,139,TRUE,FALSE,FALSE,FALSE
+tt0087797,TV Movie,The Night They Saved Christmas,1984,92,Drama,6.5,1605,TRUE,FALSE,FALSE,FALSE
+tt0088106,Feature Film,Merry Christmas,1984,96,Comedy,6.6,170,TRUE,FALSE,FALSE,FALSE
+tt0089038,Feature Film,Don't Open Till Christmas,1984,86,Other,4.7,2804,TRUE,FALSE,FALSE,FALSE
+tt0089285,Feature Film,Holidays in Amsterdam,1986,87,Drama,5.3,11,FALSE,FALSE,FALSE,TRUE
+tt0089731,Feature Film,One Magic Christmas,1985,89,Family,6.4,4233,TRUE,FALSE,FALSE,FALSE
+tt0090838,TV Movie,Christmas Eve,1986,93,Drama,7.3,427,TRUE,FALSE,FALSE,FALSE
+tt0090839,TV Movie,The Christmas Gift,1986,120,Drama,6.5,768,TRUE,FALSE,FALSE,FALSE
+tt0090840,Feature Film,The Christmas Star,1986,94,Drama,6.1,770,TRUE,FALSE,FALSE,FALSE
+tt0091975,TV Movie,A Smoky Mountain Christmas,1986,94,Other,6.9,1290,TRUE,FALSE,FALSE,FALSE
+tt0092167,Feature Film,Merry Christmas Octopus,1987,92,Comedy,6.8,191,TRUE,FALSE,FALSE,FALSE
+tt0092756,TV Movie,Christmas Comes to Willow Creek,1987,93,Drama,6.4,619,TRUE,FALSE,FALSE,FALSE
+tt0093198,TV Movie,A Hobo's Christmas,1987,100,Drama,6.4,427,TRUE,FALSE,FALSE,FALSE
+tt0093877,TV Movie,Roman Holiday,1987,100,Comedy,5,156,FALSE,FALSE,FALSE,TRUE
+tt0094754,TV Movie,Blackadder's Christmas Carol,1988,43,Comedy,7.9,13712,TRUE,FALSE,FALSE,FALSE
+tt0094873,TV Movie,The Christmas Wife,1988,73,Drama,6.2,408,TRUE,FALSE,FALSE,FALSE
+tt0095107,Feature Film,Ernest Saves Christmas,1988,95,Comedy,5.7,12392,TRUE,FALSE,FALSE,FALSE
+tt0095347,TV Movie,I'll Be Home for Christmas,1988,96,Drama,6.5,292,TRUE,FALSE,FALSE,FALSE
+tt0095416,TV Movie,Julie Andrews: The Sound of Christmas,1987,48,Family,8.9,125,TRUE,FALSE,FALSE,FALSE
+tt0095589,TV Movie,"Marcus Welby, M.D.: A Holiday Affair",1988,100,Drama,6,49,FALSE,FALSE,FALSE,TRUE
+tt0096376,TV Movie,A Very Brady Christmas,1988,100,Comedy,5.9,2120,TRUE,FALSE,FALSE,FALSE
+tt0097126,Feature Film,Cripples Go Christmas,1987,100,Drama,6.6,14,TRUE,FALSE,FALSE,FALSE
+tt0097157,TV Movie,Dark Holiday,1989,100,Drama,5.4,183,FALSE,FALSE,FALSE,TRUE
+tt0097601,TV Movie,It Nearly Wasn't Christmas,1989,100,Other,5.7,246,TRUE,FALSE,FALSE,FALSE
+tt0097958,Feature Film,National Lampoon's Christmas Vacation,1989,97,Comedy,7.5,209533,TRUE,FALSE,FALSE,FALSE
+tt0099263,TV Movie,The Christmas Toy,1986,50,Family,7.8,1404,TRUE,FALSE,FALSE,FALSE
+tt0099711,TV Movie,Guess Who's Coming for Christmas?,1990,95,Comedy,5.1,105,TRUE,FALSE,FALSE,FALSE
+tt0099780,Feature Film,Holidays on the River Yarra,1991,88,Drama,6,56,FALSE,FALSE,FALSE,TRUE
+tt0099787,TV Movie,Home for Christmas,1990,95,Drama,5.7,223,TRUE,FALSE,FALSE,FALSE
+tt0099930,TV Movie,The Kid Who Loved Christmas,1990,118,Drama,6.3,304,TRUE,FALSE,FALSE,FALSE
+tt0100173,TV Movie,A Mom for Christmas,1990,96,Comedy,6.5,1209,TRUE,FALSE,FALSE,FALSE
+tt0101301,Feature Film,All I Want for Christmas,1991,92,Comedy,5.9,5420,TRUE,FALSE,FALSE,FALSE
+tt0101348,Feature Film,The Comic Book Christmas Caper,1990,104,Other,6.6,60,TRUE,FALSE,FALSE,FALSE
+tt0101580,TV Movie,Christmas on Division Street,1991,120,Drama,6.7,567,TRUE,FALSE,FALSE,FALSE
+tt0102285,Feature Film,Lena's Holiday,1991,100,Comedy,5.5,314,FALSE,FALSE,FALSE,TRUE
+tt0102821,Feature Film,Russian Holiday,1993,89,Other,3.5,267,FALSE,FALSE,FALSE,TRUE
+tt0103960,TV Movie,The Christmas Stallion,1992,95,Drama,5.7,118,TRUE,FALSE,FALSE,FALSE
+tt0103961,TV Movie,Christmas in Connecticut,1992,93,Comedy,4.8,1565,TRUE,FALSE,FALSE,FALSE
+tt0104940,Feature Film,The Muppet Christmas Carol,1992,85,Comedy,7.7,66015,TRUE,FALSE,FALSE,FALSE
+tt0105694,Feature Film,Unforgetful Holiday,1992,94,Comedy,5.3,24,FALSE,FALSE,FALSE,TRUE
+tt0107688,Feature Film,The Nightmare Before Christmas,1993,76,Animation,7.9,367288,TRUE,FALSE,FALSE,FALSE
+tt0109425,TV Movie,A Christmas Romance,1994,94,Comedy,6.1,867,TRUE,FALSE,FALSE,FALSE
+tt0110732,TV Movie,One Christmas,1994,90,Drama,6,751,TRUE,FALSE,FALSE,FALSE
+tt0112509,Feature Film,Billy's Holiday,1995,92,Other,5.1,164,FALSE,FALSE,FALSE,TRUE
+tt0112667,TV Movie,The Christmas Box,1995,100,Drama,7,1270,TRUE,FALSE,FALSE,FALSE
+tt0113321,Feature Film,Home for the Holidays,1995,103,Comedy,6.6,14315,FALSE,FALSE,FALSE,TRUE
+tt0115891,TV Movie,Christmas Every Day,1996,95,Comedy,6.2,1128,TRUE,FALSE,FALSE,FALSE
+tt0115892,TV Movie,The Christmas Tree,1996,93,Drama,6.9,437,TRUE,FALSE,FALSE,FALSE
+tt0116092,Feature Film,The Devil Takes a Holiday,1996,102,Comedy,6.1,34,FALSE,FALSE,FALSE,TRUE
+tt0116544,TV Movie,Holiday Affair,1996,87,Comedy,6.3,420,FALSE,FALSE,FALSE,TRUE
+tt0116717,Feature Film,The Christmas Party,1996,84,Comedy,7,451,TRUE,FALSE,FALSE,FALSE
+tt0117109,TV Movie,The Munsters' Scary Little Christmas,1996,91,Comedy,4.9,654,TRUE,FALSE,FALSE,FALSE
+tt0118201,Feature Film,Will It Snow for Christmas?,1996,90,Drama,7,881,TRUE,FALSE,FALSE,FALSE
+tt0120489,Feature Film,Christmas Fever,1997,90,Comedy,6.5,65,TRUE,FALSE,FALSE,FALSE
+tt0122244,TV Movie,Scrooge's Rock 'N' Roll Christmas,1984,44,Other,4.7,50,TRUE,FALSE,FALSE,FALSE
+tt0122260,TV Movie,Skyward Christmas,1981,60,Drama,6.8,18,TRUE,FALSE,FALSE,FALSE
+tt0122272,TV Movie,Stubby Pringle's Christmas,1978,55,Drama,7.5,118,TRUE,FALSE,FALSE,FALSE
+tt0122494,Feature Film,How the Toys Saved Christmas,1996,93,Other,6.5,585,TRUE,FALSE,FALSE,FALSE
+tt0123179,TV Movie,Mister Magoo's Christmas Carol,1962,53,Animation,7.6,3103,TRUE,FALSE,FALSE,FALSE
+tt0124013,TV Movie,Mr. Willowby's Christmas Tree,1995,30,Comedy,6.1,270,TRUE,FALSE,FALSE,FALSE
+tt0125465,Feature Film,Last Holiday,1996,65,Drama,7.6,25,FALSE,FALSE,FALSE,TRUE
+tt0125945,Feature Film,Holiday Hookers,1976,97,Comedy,5.4,98,FALSE,FALSE,FALSE,TRUE
+tt0126946,TV Movie,Holiday in Your Heart,1997,96,Drama,5.6,318,FALSE,FALSE,FALSE,TRUE
+tt0128083,Feature Film,The Boy Who Saved Christmas,1998,94,Comedy,3.1,198,TRUE,FALSE,FALSE,FALSE
+tt0128995,TV Movie,The Christmas Raccoons,1980,30,Animation,7,156,TRUE,FALSE,FALSE,FALSE
+tt0129145,Feature Film,Holiday's with Pay,1948,115,Comedy,5.5,41,FALSE,FALSE,FALSE,TRUE
+tt0129359,TV Movie,On the 2nd Day of Christmas,1997,96,Comedy,6.1,894,TRUE,FALSE,FALSE,FALSE
+tt0129827,TV Movie,A Christmas Reunion,1994,132,Drama,6,87,TRUE,FALSE,FALSE,FALSE
+tt0135187,TV Movie,A Christmas Memory,1997,96,Drama,7,792,TRUE,FALSE,FALSE,FALSE
+tt0135412,Feature Film,Apollo Goes on Holiday,1968,88,Comedy,6,223,FALSE,FALSE,FALSE,TRUE
+tt0135467,TV Movie,I'll Be Home for Christmas,1997,94,Drama,6.3,321,TRUE,FALSE,FALSE,FALSE
+tt0135636,TV Movie,Christopher's Christmas Mission,1975,23,Animation,8,2726,TRUE,FALSE,FALSE,FALSE
+tt0136399,TV Movie,"Merry Christmas, George Bailey",1997,60,Other,7.3,151,TRUE,FALSE,FALSE,FALSE
+tt0136444,TV Movie,The Christmas Orange,1996,119,Comedy,7.1,42,TRUE,FALSE,FALSE,FALSE
+tt0136755,TV Movie,The Christmas List,1997,96,Comedy,6.7,1449,TRUE,FALSE,FALSE,FALSE
+tt0137000,TV Movie,A Holiday for Love,1996,105,Drama,6.4,737,FALSE,FALSE,FALSE,TRUE
+tt0137044,Feature Film,Home for Christmas,1975,89,Drama,6.5,102,TRUE,FALSE,FALSE,FALSE
+tt0137098,Feature Film,Bloody Christmas,1951,95,Drama,6.7,61,TRUE,FALSE,FALSE,FALSE
+tt0139393,TV Movie,Johann's Gift to Christmas,1991,23,Animation,6.2,26,TRUE,FALSE,FALSE,FALSE
+tt0140605,TV Movie,The Teddy Bears' Christmas,1992,30,Animation,8.1,142,TRUE,FALSE,FALSE,FALSE
+tt0140825,Feature Film,Christmas in August,1998,97,Drama,7.6,3855,TRUE,FALSE,FALSE,FALSE
+tt0144827,TV Movie,John Grin's Christmas,1986,50,Family,8.9,37,TRUE,FALSE,FALSE,FALSE
+tt0155570,TV Movie,Bugs Bunny's Holiday Diet,1979,30,Animation,6.4,118,FALSE,FALSE,FALSE,TRUE
+tt0155753,Feature Film,I'll Be Home for Christmas,1998,86,Comedy,5.5,11463,TRUE,FALSE,FALSE,FALSE
+tt0156400,TV Movie,The Christmas Wish,1998,93,Drama,6.9,768,TRUE,FALSE,FALSE,FALSE
+tt0158515,TV Movie,Nilus the Sandman: The Boy Who Dreamed Christmas,1991,30,Animation,6.8,41,TRUE,FALSE,FALSE,FALSE
+tt0158530,Feature Film,Merry Christmas... Happy New Year,1989,100,Comedy,6.2,130,TRUE,FALSE,FALSE,FALSE
+tt0164648,TV Movie,A Holiday to Remember,1995,90,Drama,6.1,669,FALSE,FALSE,FALSE,TRUE
+tt0164654,Feature Film,Hot Pants Holiday,1971,84,Drama,3.5,15,FALSE,FALSE,FALSE,TRUE
+tt0170016,Feature Film,How the Grinch Stole Christmas,2000,104,Comedy,6.3,276568,TRUE,FALSE,FALSE,FALSE
+tt0170547,Feature Film,Santa's Christmas Circus,1966,60,Family,2,187,TRUE,FALSE,FALSE,FALSE
+tt0172238,TV Movie,A Child's Christmas in Wales,1987,55,Drama,7.7,629,TRUE,FALSE,FALSE,FALSE
+tt0173731,TV Movie,Christmas at Home,1990,60,Other,8.5,36,TRUE,FALSE,FALSE,FALSE
+tt0174550,TV Movie,A Christmas for Boomer,1979,48,Other,7.7,20,TRUE,FALSE,FALSE,FALSE
+tt0176292,TV Movie,Christmas Wafer,1977,64,Family,7.3,29,TRUE,FALSE,FALSE,FALSE
+tt0176987,TV Movie,A Merry Mirthworm Christmas,1984,24,Animation,7,58,TRUE,FALSE,FALSE,FALSE
+tt0178787,Feature Film,The Poor People's Christmas,1947,71,Comedy,5.4,25,TRUE,FALSE,FALSE,FALSE
+tt0179682,TV Movie,"Bluetoes, the Christmas Elf",1988,23,Animation,7.5,96,TRUE,FALSE,FALSE,FALSE
+tt0180860,TV Movie,Naked City: A Killer Christmas,1998,95,Other,5.1,214,TRUE,FALSE,FALSE,FALSE
+tt0180984,Feature Film,Scream Queens' Naked Christmas,1996,60,Other,4.4,67,TRUE,FALSE,FALSE,FALSE
+tt0181570,TV Movie,"Happy Christmas, Miss King",1998,120,Drama,7.5,625,TRUE,FALSE,FALSE,FALSE
+tt0182015,TV Movie,A Cosmic Christmas,1977,26,Animation,6.7,235,TRUE,FALSE,FALSE,FALSE
+tt0182307,Feature Film,Husband's Holiday,1975,90,Comedy,6.3,65,FALSE,FALSE,FALSE,TRUE
+tt0182983,TV Movie,Inheritance Up Christmas,1995,90,Comedy,5.4,442,TRUE,FALSE,FALSE,FALSE
+tt0183681,Feature Film,Friday Is No Holiday,1980,83,Comedy,5.8,51,FALSE,FALSE,FALSE,TRUE
+tt0187774,TV Movie,Carry on Christmas,1973,50,Comedy,5.9,257,TRUE,FALSE,FALSE,FALSE
+tt0187775,TV Movie,Carry on Christmas: Carry on Stuffing,1972,50,Comedy,5.5,205,TRUE,FALSE,FALSE,FALSE
+tt0188504,TV Movie,A Christmas Carol,1977,58,Drama,6.5,555,TRUE,FALSE,FALSE,FALSE
+tt0189741,Feature Film,Future Memories: Last Christmas,1992,118,Romance,6.9,56,TRUE,FALSE,FALSE,FALSE
+tt0193163,TV Movie,A Flintstone Christmas,1977,60,Animation,6.8,925,TRUE,FALSE,FALSE,FALSE
+tt0193164,TV Movie,A Flintstones Christmas Carol,1994,69,Animation,6.8,1558,TRUE,FALSE,FALSE,FALSE
+tt0193430,Feature Film,Holiday in Sarajevo,1991,87,Drama,7.2,185,FALSE,FALSE,FALSE,TRUE
+tt0193524,TV Movie,The Star Wars Holiday Special,1978,97,Other,2.1,16397,FALSE,FALSE,FALSE,TRUE
+tt0195039,Feature Film,Magic Christmas Tree,1964,60,Family,2.4,308,TRUE,FALSE,FALSE,FALSE
+tt0196565,Feature Film,Mediterranean Holiday,1962,158,Other,7.5,87,FALSE,FALSE,FALSE,TRUE
+tt0198321,TV Movie,"Bah, Humbug!: The Story of Charles Dickens' 'A Christmas Carol'",1994,58,Family,7.7,54,TRUE,FALSE,FALSE,FALSE
+tt0199161,TV Movie,Yogi's First Christmas,1980,98,Animation,7.1,996,TRUE,FALSE,FALSE,FALSE
+tt0200245,Feature Film,Christmas Vacation 2000,1999,110,Comedy,4.3,1182,TRUE,FALSE,FALSE,FALSE
+tt0208654,TV Movie,'Twas the Night Before Christmas,1974,25,Animation,7.3,3608,TRUE,FALSE,FALSE,FALSE
+tt0213965,TV Movie,A Holiday Romance,1999,91,Drama,6.5,489,FALSE,FALSE,FALSE,TRUE
+tt0214227,Feature Film,The Last Day of School Before Christmas,1975,88,Drama,6,35,TRUE,FALSE,FALSE,FALSE
+tt0216621,TV Movie,A Christmas Carol,1999,95,Drama,7.4,10364,TRUE,FALSE,FALSE,FALSE
+tt0216735,Feature Film,Holiday,1999,105,Comedy,6.4,67,FALSE,FALSE,FALSE,TRUE
+tt0217978,Feature Film,'R Xmas,2001,85,Other,5.7,1588,TRUE,FALSE,FALSE,FALSE
+tt0218066,Feature Film,A Calcutta Christmas,1999,53,Other,6.8,15,TRUE,FALSE,FALSE,FALSE
+tt0220159,TV Movie,Winnie the Pooh & Christmas Too,1991,26,Other,7.3,1616,TRUE,FALSE,FALSE,FALSE
+tt0220616,Feature Film,A Little Christmas Story,1999,58,Family,6.3,176,TRUE,FALSE,FALSE,FALSE
+tt0221074,Feature Film,Christmas in the Clouds,2001,96,Comedy,6.4,863,TRUE,FALSE,FALSE,FALSE
+tt0223623,TV Movie,Last Christmas,1999,80,Drama,5.8,84,TRUE,FALSE,FALSE,FALSE
+tt0223634,TV Movie,The Leprechauns' Christmas Gold,1981,25,Animation,6.2,719,TRUE,FALSE,FALSE,FALSE
+tt0225394,TV Movie,The Christmas Carol,1949,25,Drama,6,409,TRUE,FALSE,FALSE,FALSE
+tt0228332,TV Movie,Trans-Siberian Orchestra: The Ghosts of Christmas Eve,1999,46,Other,8.2,533,TRUE,FALSE,FALSE,FALSE
+tt0231364,TV Movie,Christmas in Disneyland,1976,60,Comedy,6.2,25,TRUE,FALSE,FALSE,FALSE
+tt0233828,Feature Film,The Long Holiday,2000,145,Other,7.9,116,FALSE,FALSE,FALSE,TRUE
+tt0235846,Feature Film,Unnikrishnante Adyathe Christmas,1988,130,Drama,5.1,26,TRUE,FALSE,FALSE,FALSE
+tt0237604,Feature Film,Holiday for a Dog,1981,78,Comedy,6.5,100,FALSE,FALSE,FALSE,TRUE
+tt0238121,Feature Film,A Christmas Tree and a Wedding,2000,90,Drama,8.3,57,TRUE,FALSE,FALSE,FALSE
+tt0240878,TV Movie,Santa's Last Christmas,1999,30,Animation,6.7,44,TRUE,FALSE,FALSE,FALSE
+tt0241966,TV Movie,A Snow White Christmas,1980,60,Other,5.8,186,TRUE,FALSE,FALSE,FALSE
+tt0242389,TV Movie,The Country Mouse & the City Mouse: A Christmas Tale,1993,25,Animation,8.3,49,TRUE,FALSE,FALSE,FALSE
+tt0242848,TV Movie,Once Upon a Christmas,2000,90,Comedy,5.3,931,TRUE,FALSE,FALSE,FALSE
+tt0243372,TV Movie,Lamb Chop's Chanukah and Passover Surprise,1996,60,Comedy,7,33,FALSE,TRUE,FALSE,FALSE
+tt0243375,TV Movie,Lamb Chop's Special Chanukah,1995,60,Family,8.5,42,FALSE,TRUE,FALSE,FALSE
+tt0245836,TV Movie,The Christmas Angel: A Story on Ice,1998,45,Family,7,43,TRUE,FALSE,FALSE,FALSE
+tt0249991,Feature Film,The Story of Christmas,1994,47,Animation,6.9,50,TRUE,FALSE,FALSE,FALSE
+tt0250425,TV Movie,Holiday Heart,2000,96,Drama,7.4,1379,FALSE,FALSE,FALSE,TRUE
+tt0250948,TV Movie,Aliens First Christmas,1991,23,Animation,6.8,65,TRUE,FALSE,FALSE,FALSE
+tt0251021,TV Movie,Christmas Unwrapped: The History of Christmas,1997,50,Other,7.4,135,TRUE,FALSE,FALSE,FALSE
+tt0251282,TV Movie,A Muppet Family Christmas,1987,47,Comedy,8.1,4471,TRUE,FALSE,FALSE,FALSE
+tt0251640,TV Movie,Christmas at Pee-wee's Playhouse,1988,49,Comedy,7.7,1552,TRUE,FALSE,FALSE,FALSE
+tt0252028,Feature Film,Surviving Christmas,2004,91,Comedy,5.4,26588,TRUE,FALSE,FALSE,FALSE
+tt0256466,TV Movie,The Ultimate Christmas Present,2000,85,Comedy,5.6,1911,TRUE,FALSE,FALSE,FALSE
+tt0257255,Feature Film,A Very Christmas Story,2000,82,Other,5.1,59,TRUE,FALSE,FALSE,FALSE
+tt0257484,TV Movie,Christmas Snow,1986,60,Drama,7.3,408,TRUE,FALSE,FALSE,FALSE
+tt0259459,TV Movie,Nearly No Christmas,1983,60,Drama,2.4,125,TRUE,FALSE,FALSE,FALSE
+tt0259741,Feature Film,Summer Holiday,2000,98,Comedy,5.7,518,FALSE,FALSE,FALSE,TRUE
+tt0259929,Feature Film,Christmas Carol: The Movie,2001,81,Animation,5.3,2097,TRUE,FALSE,FALSE,FALSE
+tt0260824,TV Movie,A Cool Like That Christmas,1993,22,Animation,6.6,65,TRUE,FALSE,FALSE,FALSE
+tt0261823,TV Movie,How to Marry a Billionaire: A Christmas Tale,2000,100,Comedy,4.6,466,TRUE,FALSE,FALSE,FALSE
+tt0261843,Feature Film,Bingo! Holiday Kids!,1984,103,Other,4.6,18,FALSE,FALSE,FALSE,TRUE
+tt0264483,Feature Film,The Christmas Path,1998,95,Family,3.9,159,TRUE,FALSE,FALSE,FALSE
+tt0267978,TV Movie,Timothy Tweedle the First Christmas Elf,2000,51,Other,6.3,53,TRUE,FALSE,FALSE,FALSE
+tt0268096,TV Movie,Christmas in Tattertown,1988,29,Other,6.2,96,TRUE,FALSE,FALSE,FALSE
+tt0268948,TV Movie,Arthur's Perfect Christmas,2000,60,Animation,7.8,586,TRUE,FALSE,FALSE,FALSE
+tt0269988,TV Movie,Tukiki and His Search for a Merry Christmas,1979,30,Animation,7.2,24,TRUE,FALSE,FALSE,FALSE
+tt0270278,TV Movie,Christmas Carol,1978,50,Comedy,7.4,399,TRUE,FALSE,FALSE,FALSE
+tt0270281,TV Movie,The Christmas Tree Train,1983,30,Other,7,69,TRUE,FALSE,FALSE,FALSE
+tt0270317,TV Movie,A Diva's Christmas Carol,2000,120,Comedy,6.4,1337,TRUE,FALSE,FALSE,FALSE
+tt0270884,Feature Film,Christmas Present,1985,70,Comedy,5.5,27,TRUE,FALSE,FALSE,FALSE
+tt0272046,TV Movie,The Christmas Secret,2000,83,Drama,5.7,471,TRUE,FALSE,FALSE,FALSE
+tt0273726,Feature Film,Christmas Nightmare,2001,90,Other,3.6,88,TRUE,FALSE,FALSE,FALSE
+tt0275225,TV Movie,Benji's Very Own Christmas Story,1978,25,Family,5.3,316,TRUE,FALSE,FALSE,FALSE
+tt0276016,TV Movie,He-Man and She-Ra: A Christmas Special,1985,51,Other,6.6,1689,TRUE,FALSE,FALSE,FALSE
+tt0276338,TV Movie,Mole's Christmas,1994,30,Animation,7.9,104,TRUE,FALSE,FALSE,FALSE
+tt0278150,TV Movie,A Wind at My Back Christmas,2001,91,Drama,6.3,160,TRUE,FALSE,FALSE,FALSE
+tt0281766,TV Movie,The Dangerous Christmas of Red Riding Hood,1965,50,Other,6.5,53,TRUE,FALSE,FALSE,FALSE
+tt0283285,TV Movie,Christmas Night with the Two Ronnies,1987,50,Comedy,5.6,64,TRUE,FALSE,FALSE,FALSE
+tt0283620,TV Movie,Take Peace! A Corgi Cottage Christmas with Tasha Tudor,1998,45,Family,6.9,19,TRUE,FALSE,FALSE,FALSE
+tt0285192,TV Movie,Holiday Affair,2001,90,Other,4.3,49,FALSE,FALSE,FALSE,TRUE
+tt0285225,TV Movie,Inspector Gadget Saves Christmas,1992,22,Other,5.6,295,TRUE,FALSE,FALSE,FALSE
+tt0289700,TV Movie,The Elf Who Saved Christmas,1992,30,Family,6.6,39,TRUE,FALSE,FALSE,FALSE
+tt0290182,TV Movie,Edith Ann's Christmas (Just Say Noël),1996,30,Animation,5,74,TRUE,FALSE,FALSE,FALSE
+tt0290321,TV Movie,A Town Without Christmas,2001,91,Drama,6.2,870,TRUE,FALSE,FALSE,FALSE
+tt0291029,TV Movie,Babar and Father Christmas,1986,30,Animation,6.6,117,TRUE,FALSE,FALSE,FALSE
+tt0291816,TV Movie,A Christmas Carol,2000,75,Drama,6.8,601,TRUE,FALSE,FALSE,FALSE
+tt0295473,Feature Film,Merry Christmas,2001,98,Comedy,4.5,1077,TRUE,FALSE,FALSE,FALSE
+tt0296867,TV Movie,Christmas Box,1976,60,Comedy,6.2,15,TRUE,FALSE,FALSE,FALSE
+tt0297017,TV Movie,The Bear Who Slept Through Christmas,1973,30,Animation,6.7,271,TRUE,FALSE,FALSE,FALSE
+tt0298580,TV Movie,Twice Upon a Christmas,2001,90,Comedy,5.3,683,TRUE,FALSE,FALSE,FALSE
+tt0299947,TV Movie,The Greatest Christmas Moments of All Time!,1997,60,Other,6.2,11,TRUE,FALSE,FALSE,FALSE
+tt0301475,TV Movie,A Disney Channel Christmas!!!!,1983,90,Animation,7.5,191,TRUE,FALSE,FALSE,FALSE
+tt0302411,TV Movie,The Christmas Messenger,1975,30,Animation,8.6,52,TRUE,FALSE,FALSE,FALSE
+tt0303318,Feature Film,Christmas at Wapos Bay,2002,50,Other,6.5,10,TRUE,FALSE,FALSE,FALSE
+tt0303725,TV Movie,The Bears Who Saved Christmas,1994,22,Other,7.2,110,TRUE,FALSE,FALSE,FALSE
+tt0304496,TV Movie,Once Upon a Christmas Time,1959,60,Family,7.5,21,TRUE,FALSE,FALSE,FALSE
+tt0305390,TV Movie,Coping with Christmas,1995,25,Comedy,5.3,13,TRUE,FALSE,FALSE,FALSE
+tt0305767,TV Movie,The Little Crooked Christmas Tree,1990,24,Animation,6.3,23,TRUE,FALSE,FALSE,FALSE
+tt0306424,TV Movie,12 Tiny Christmas Tales,2001,23,Animation,6.8,104,TRUE,FALSE,FALSE,FALSE
+tt0308246,TV Movie,A Family Circus Christmas,1979,30,Animation,6.5,129,TRUE,FALSE,FALSE,FALSE
+tt0308823,TV Movie,A Rugrats Kwanzaa Special,2001,23,Animation,6.7,65,FALSE,FALSE,TRUE,FALSE
+tt0314176,Feature Film,Holiday in Seoul,1997,98,Drama,6.7,67,FALSE,FALSE,FALSE,TRUE
+tt0315398,TV Movie,Christmas Rush,2002,100,Other,5.1,793,TRUE,FALSE,FALSE,FALSE
+tt0316352,Feature Film,One Hell of a Christmas,2002,95,Other,3.2,332,TRUE,FALSE,FALSE,FALSE
+tt0319404,TV Movie,Father Knows Best: Home for Christmas,1977,88,Comedy,7.8,206,TRUE,FALSE,FALSE,FALSE
+tt0321305,Feature Film,Killers on Holiday,2002,95,Comedy,7,80,FALSE,FALSE,FALSE,TRUE
+tt0324344,TV Movie,The Twelve Days of Christmas,1993,22,Animation,7.6,107,TRUE,FALSE,FALSE,FALSE
+tt0326163,TV Movie,Skinflint: A Country Christmas Carol,1979,120,Family,4.2,52,TRUE,FALSE,FALSE,FALSE
+tt0328116,TV Movie,Mary Christmas,2002,100,Drama,6.6,538,TRUE,FALSE,FALSE,FALSE
+tt0329634,TV Movie,A Special Sesame Street Christmas,1978,60,Comedy,7.3,147,TRUE,FALSE,FALSE,FALSE
+tt0329737,TV Movie,It's a Very Merry Muppet Christmas Movie,2002,100,Other,6.3,4484,TRUE,FALSE,FALSE,FALSE
+tt0330149,TV Movie,A Christmas Carol,1950,120,Drama,7,42,TRUE,FALSE,FALSE,FALSE
+tt0330151,TV Movie,A Christmas Carol,1981,110,Drama,4.4,33,TRUE,FALSE,FALSE,FALSE
+tt0330152,TV Movie,The Christmas Shoes,2002,100,Drama,6.6,2818,TRUE,FALSE,FALSE,FALSE
+tt0330768,TV Movie,A Pink Christmas,1978,30,Animation,7.1,429,TRUE,FALSE,FALSE,FALSE
+tt0331185,TV Movie,B.C.: A Special Christmas,1981,30,Animation,6.4,70,TRUE,FALSE,FALSE,FALSE
+tt0331217,TV Movie,Christmas Eve on Sesame Street,1978,60,Comedy,8.4,1052,TRUE,FALSE,FALSE,FALSE
+tt0331997,Feature Film,A Christmas Tail,2000,91,Other,6.2,124,TRUE,FALSE,FALSE,FALSE
+tt0335093,TV Movie,The Fat Albert Christmas Special,1977,22,Animation,6.5,219,TRUE,FALSE,FALSE,FALSE
+tt0336166,TV Movie,A Christmas Carol at Ford's Theatre,1979,120,Drama,3.1,21,TRUE,FALSE,FALSE,FALSE
+tt0337689,Feature Film,Christmas on the Nile,2002,100,Comedy,4.1,1754,TRUE,FALSE,FALSE,FALSE
+tt0339343,TV Movie,The Man Who Saved Christmas,2002,100,Other,6.5,548,TRUE,FALSE,FALSE,FALSE
+tt0343531,TV Movie,A Christmas Visitor,2002,100,Drama,6.9,1267,TRUE,FALSE,FALSE,FALSE
+tt0345037,TV Movie,A Christmas Carol,1943,60,Drama,5.1,48,TRUE,FALSE,FALSE,FALSE
+tt0345039,TV Movie,A Christmas Carol,1982,87,Drama,5,57,TRUE,FALSE,FALSE,FALSE
+tt0346706,TV Movie,Carry on Again Christmas,1970,50,Comedy,5.4,175,TRUE,FALSE,FALSE,FALSE
+tt0346707,TV Movie,Carry on Christmas,1969,50,Comedy,5.9,321,TRUE,FALSE,FALSE,FALSE
+tt0346750,Feature Film,Christmas Child,2004,96,Drama,6.2,641,TRUE,FALSE,FALSE,FALSE
+tt0348254,TV Movie,The True Meaning of Christmas Specials,2002,44,Comedy,6.6,95,TRUE,FALSE,FALSE,FALSE
+tt0349502,TV Movie,The Great Christmas Movies,1998,90,Other,6.1,33,TRUE,FALSE,FALSE,FALSE
+tt0352082,Feature Film,Blue Collar White Christmas,2002,80,Comedy,7,29,TRUE,FALSE,FALSE,FALSE
+tt0355327,TV Movie,Christmas in Hawaii,1981,60,Comedy,6.2,27,TRUE,FALSE,FALSE,FALSE
+tt0356408,TV Movie,The Berenstain Bears' Christmas Tree,1979,30,Other,7.2,263,TRUE,FALSE,FALSE,FALSE
+tt0359409,TV Movie,A Grandfather for Christmas,2002,90,Family,4.8,28,TRUE,FALSE,FALSE,FALSE
+tt0363240,Feature Film,Christmas on Mars,2008,83,Other,5.2,814,TRUE,FALSE,FALSE,FALSE
+tt0364998,TV Movie,Black Christmas,1977,50,Drama,6.1,23,TRUE,FALSE,FALSE,FALSE
+tt0365390,TV Movie,Finding John Christmas,2003,90,Drama,6.3,851,TRUE,FALSE,FALSE,FALSE
+tt0366307,TV Movie,The Christmas Orange,2002,22,Animation,6.7,33,TRUE,FALSE,FALSE,FALSE
+tt0367623,TV Movie,Christmas Vacation 2: Cousin Eddie's Island Adventure,2003,83,Comedy,2.7,3749,TRUE,FALSE,FALSE,FALSE
+tt0369000,Feature Film,Stella on Holiday,1986,84,Comedy,7.2,333,FALSE,FALSE,FALSE,TRUE
+tt0369436,Feature Film,Four Christmases,2008,88,Comedy,5.7,77785,TRUE,FALSE,FALSE,FALSE
+tt0372004,TV Movie,Undercover Christmas,2003,87,Comedy,6.3,990,TRUE,FALSE,FALSE,FALSE
+tt0379215,Feature Film,Christmas,2003,89,Comedy,7.2,96,TRUE,FALSE,FALSE,FALSE
+tt0380728,TV Movie,Stealing Christmas,2003,89,Comedy,5.7,972,TRUE,FALSE,FALSE,FALSE
+tt0381268,Feature Film,If It Snows on Christmas,1998,101,Romance,4.5,19,TRUE,FALSE,FALSE,FALSE
+tt0381942,TV Movie,A Carol Christmas,2003,92,Comedy,5.1,1272,TRUE,FALSE,FALSE,FALSE
+tt0385567,TV Movie,A Boyfriend for Christmas,2004,94,Comedy,6.4,3389,TRUE,FALSE,FALSE,FALSE
+tt0385737,Feature Film,Happy Ero Christmas,2003,109,Comedy,4.1,179,TRUE,FALSE,FALSE,FALSE
+tt0386282,TV Movie,An American Idol Christmas,2003,60,Other,4.6,85,TRUE,FALSE,FALSE,FALSE
+tt0387301,TV Movie,"I Want a Dog for Christmas, Charlie Brown",2003,43,Animation,7,1616,TRUE,FALSE,FALSE,FALSE
+tt0388419,Feature Film,Christmas with the Kranks,2004,99,Comedy,5.4,54829,TRUE,FALSE,FALSE,FALSE
+tt0390302,TV Movie,The Nick at Nite Holiday Special,2003,60,Comedy,7.9,80,FALSE,FALSE,FALSE,TRUE
+tt0390954,TV Movie,Casper's First Christmas,1979,30,Animation,6.7,268,TRUE,FALSE,FALSE,FALSE
+tt0392009,TV Movie,A Flintstone Family Christmas,1993,23,Animation,6.4,469,TRUE,FALSE,FALSE,FALSE
+tt0392794,TV Movie,The Spirit of Christmas,1950,27,Family,8,312,TRUE,FALSE,FALSE,FALSE
+tt0392819,TV Movie,T.Bag's Christmas Carol,1989,22,Other,5.4,30,TRUE,FALSE,FALSE,FALSE
+tt0393249,TV Movie,EastEnders: Christmas Party,2003,65,Comedy,6.2,25,TRUE,FALSE,FALSE,FALSE
+tt0395968,TV Movie,The Christmas Truce,2002,50,Other,7.6,36,TRUE,FALSE,FALSE,FALSE
+tt0396209,Feature Film,Holiday in Seoul,1956,90,Other,5.9,40,FALSE,FALSE,FALSE,TRUE
+tt0396517,TV Movie,Busted: Christmas for Everyone,2003,30,Other,7.6,29,TRUE,FALSE,FALSE,FALSE
+tt0396826,Feature Film,Holiday with Minka,1963,87,Other,7.8,11,FALSE,FALSE,FALSE,TRUE
+tt0396888,TV Movie,T.Bag's Christmas Ding Dong,1990,25,Other,7.1,14,TRUE,FALSE,FALSE,FALSE
+tt0396889,TV Movie,T.Bag's Christmas Turkey,1991,25,Comedy,7,13,TRUE,FALSE,FALSE,FALSE
+tt0398094,TV Movie,Andy Williams - Best of Christmas,2001,60,Other,8.3,78,TRUE,FALSE,FALSE,FALSE
+tt0398311,TV Movie,Scrooge: A Christmas Sarah,1990,30,Comedy,5.9,40,TRUE,FALSE,FALSE,FALSE
+tt0403452,Feature Film,Christmas Rematch,2004,99,Comedy,6.8,899,TRUE,FALSE,FALSE,FALSE
+tt0405006,TV Movie,Headin' Home for the Holidays,1986,50,Comedy,6.7,17,FALSE,FALSE,FALSE,TRUE
+tt0405096,Feature Film,Ladybirds' Christmas,2001,54,Animation,7.1,248,TRUE,FALSE,FALSE,FALSE
+tt0405673,TV Movie,"All This, and Christmas Too!",1971,60,Comedy,5.6,57,TRUE,FALSE,FALSE,FALSE
+tt0406649,TV Movie,A Christmas Carol: The Musical,2004,97,Drama,6.3,2131,TRUE,FALSE,FALSE,FALSE
+tt0407043,TV Movie,The Night B4 Christmas,2003,70,Animation,5.2,62,TRUE,FALSE,FALSE,FALSE
+tt0408814,TV Movie,George and the Christmas Star,1985,25,Other,7.4,84,TRUE,FALSE,FALSE,FALSE
+tt0408985,Feature Film,Last Holiday,2006,112,Comedy,6.5,35192,FALSE,FALSE,FALSE,TRUE
+tt0412366,TV Movie,Samantha: An American Girl Holiday,2004,86,Drama,7,2159,FALSE,FALSE,FALSE,TRUE
+tt0413447,TV Movie,Daddy Wanted for Christmas,2003,90,Family,6.6,64,TRUE,FALSE,FALSE,FALSE
+tt0414243,TV Movie,Love Hina Christmas Special: Silent Eve,2000,46,Animation,6.9,488,TRUE,FALSE,FALSE,FALSE
+tt0418599,Feature Film,Christmas in Love,2004,118,Comedy,4.2,1074,TRUE,FALSE,FALSE,FALSE
+tt0420550,Feature Film,Christmas at Maxwell's,2006,94,Drama,4.3,124,TRUE,FALSE,FALSE,FALSE
+tt0421151,TV Movie,A Very Married Christmas,2004,85,Drama,5,286,TRUE,FALSE,FALSE,FALSE
+tt0427224,TV Movie,Eve's Christmas,2004,96,Comedy,5.9,1198,TRUE,FALSE,FALSE,FALSE
+tt0427430,TV Movie,Karroll's Christmas,2004,87,Comedy,6,641,TRUE,FALSE,FALSE,FALSE
+tt0431438,TV Movie,Very Cool Christmas,2004,90,Other,3.7,519,TRUE,FALSE,FALSE,FALSE
+tt0435616,TV Movie,Christmas at Water's Edge,2004,87,Family,5.3,197,TRUE,FALSE,FALSE,FALSE
+tt0436855,TV Movie,The Twelve Days of Christmas Eve,2004,85,Comedy,5.7,1096,TRUE,FALSE,FALSE,FALSE
+tt0439334,TV Movie,The Wish That Changed Christmas,1991,30,Other,8,108,TRUE,FALSE,FALSE,FALSE
+tt0439856,TV Movie,The Trailer Park Boys Christmas Special,2004,57,Comedy,8,3753,TRUE,FALSE,FALSE,FALSE
+tt0440084,TV Movie,A Beachcombers Christmas,2004,120,Other,6.7,47,TRUE,FALSE,FALSE,FALSE
+tt0440205,TV Movie,Christmas Lights,2004,68,Comedy,6.7,315,TRUE,FALSE,FALSE,FALSE
+tt0440444,TV Movie,Grumpy Old Women at Christmas,2004,60,Other,7.7,33,TRUE,FALSE,FALSE,FALSE
+tt0441610,TV Movie,The City That Forgot About Christmas,1974,25,Animation,6.5,69,TRUE,FALSE,FALSE,FALSE
+tt0441634,TV Movie,Home for Christmas,2002,55,Drama,7.1,23,TRUE,FALSE,FALSE,FALSE
+tt0442666,TV Movie,Essential Poems for Christmas,2004,60,Family,7.9,23,TRUE,FALSE,FALSE,FALSE
+tt0443495,TV Movie,EastEnders: Christmas Party,2004,60,Comedy,9,18,TRUE,FALSE,FALSE,FALSE
+tt0443734,Feature Film,A Christmas Carol,2004,75,Comedy,5.1,139,TRUE,FALSE,FALSE,FALSE
+tt0444765,TV Movie,On Christmas Eve,2005,45,Romance,6.4,18,TRUE,FALSE,FALSE,FALSE
+tt0445929,TV Movie,A Bear's Christmas Tail,2004,45,Comedy,5.2,81,TRUE,FALSE,FALSE,FALSE
+tt0449042,TV Movie,An Italian Christmas with Mario and Giada,2004,60,Family,7.9,11,TRUE,FALSE,FALSE,FALSE
+tt0450827,TV Movie,A Christmas Tale,2005,71,Comedy,6.2,1767,TRUE,FALSE,FALSE,FALSE
+tt0451073,Feature Film,A Halfway House Christmas,2005,50,Comedy,3.9,135,TRUE,FALSE,FALSE,FALSE
+tt0452599,TV Movie,A Christmas Carol,1969,45,Animation,7.1,266,TRUE,FALSE,FALSE,FALSE
+tt0453451,Feature Film,Mr. Bean's Holiday,2007,90,Comedy,6.4,132186,FALSE,FALSE,FALSE,TRUE
+tt0454082,Feature Film,Black Christmas,2006,95,Other,4.7,29580,TRUE,FALSE,FALSE,FALSE
+tt0457939,Feature Film,The Holiday,2006,136,Comedy,6.9,308807,FALSE,FALSE,FALSE,TRUE
+tt0459502,Feature Film,Stolen Holidays,2006,90,Comedy,6.4,82,FALSE,FALSE,FALSE,TRUE
+tt0462263,Feature Film,Dreaming on Christmas,2005,100,Comedy,8.6,48,TRUE,FALSE,FALSE,FALSE
+tt0464929,TV Movie,David Letterman's 2nd Annual Holiday Film Festival,1986,60,Comedy,7.4,74,FALSE,FALSE,FALSE,TRUE
+tt0464930,TV Movie,David Letterman's Holiday Film Festival,1985,60,Comedy,8.1,72,FALSE,FALSE,FALSE,TRUE
+tt0467516,Feature Film,Christmas in August,2005,102,Drama,5.7,40,TRUE,FALSE,FALSE,FALSE
+tt0475969,TV Movie,Home for the Holidays,2005,87,Drama,5.8,272,FALSE,FALSE,FALSE,TRUE
+tt0479152,TV Movie,Crazy for Christmas,2005,90,Comedy,6.3,1349,TRUE,FALSE,FALSE,FALSE
+tt0480008,TV Movie,Chasing Christmas,2005,81,Comedy,5.2,882,TRUE,FALSE,FALSE,FALSE
+tt0480844,TV Movie,Recipe for a Perfect Christmas,2005,120,Comedy,6.4,926,TRUE,FALSE,FALSE,FALSE
+tt0486292,TV Movie,A Christmas Wedding,2006,89,Comedy,5.3,711,TRUE,FALSE,FALSE,FALSE
+tt0491718,TV Movie,A Fairy Tale Christmas,2005,47,Other,2.4,259,TRUE,FALSE,FALSE,FALSE
+tt0493294,TV Movie,Red Boots for Christmas,1995,28,Animation,6.9,78,TRUE,FALSE,FALSE,FALSE
+tt0494208,Feature Film,Holiday Baggage,2008,110,Drama,4.9,403,FALSE,FALSE,FALSE,TRUE
+tt0494214,TV Movie,Brer Rabbit's Christmas Carol,1992,58,Animation,6,62,TRUE,FALSE,FALSE,FALSE
+tt0494662,TV Movie,Bring Back... The Christmas Number One,2005,65,Other,7.9,34,TRUE,FALSE,FALSE,FALSE
+tt0496411,Feature Film,A Merry Little Christmas,2006,85,Comedy,3.2,212,TRUE,FALSE,FALSE,FALSE
+tt0497025,TV Movie,Christmas in Boston,2005,90,Comedy,6.1,2384,TRUE,FALSE,FALSE,FALSE
+tt0497030,TV Movie,His and Her Christmas,2005,89,Comedy,5.1,715,TRUE,FALSE,FALSE,FALSE
+tt0498361,Feature Film,The Christmas Miracle of Jonathan Toomey,2007,91,Family,6.4,1200,TRUE,FALSE,FALSE,FALSE
+tt0499003,TV Movie,Christmas Comes to PacLand,1982,24,Animation,5.7,169,TRUE,FALSE,FALSE,FALSE
+tt0499064,TV Movie,"Odmori se, zasluzio si: Christmas Special",2005,45,Comedy,8.4,45,TRUE,FALSE,FALSE,FALSE
+tt0499437,TV Movie,Best Ever Christmas Films,2005,47,Other,5.8,19,TRUE,FALSE,FALSE,FALSE
+tt0756632,TV Movie,The Christmas Blessing,2005,96,Drama,6.2,1202,TRUE,FALSE,FALSE,FALSE
+tt0757223,Feature Film,Holiday,2006,122,Other,6.4,537,FALSE,FALSE,FALSE,TRUE
+tt0758776,TV Movie,QTN Holiday Reel,2005,30,Comedy,7.7,13,FALSE,FALSE,FALSE,TRUE
+tt0760178,TV Movie,The Night Before Christmas,1968,26,Other,6.9,126,TRUE,FALSE,FALSE,FALSE
+tt0766251,TV Movie,Tom's Christmas Tree,2006,26,Family,9.2,34,TRUE,FALSE,FALSE,FALSE
+tt0770729,TV Movie,Chanukah Stories,2005,30,Family,8.4,81,FALSE,TRUE,FALSE,FALSE
+tt0772176,Feature Film,Christmas Story,2007,83,Drama,7,4512,TRUE,FALSE,FALSE,FALSE
+tt0783494,TV Movie,The Christmas Card,2006,84,Drama,6.9,4407,TRUE,FALSE,FALSE,FALSE
+tt0788133,Feature Film,Holiday Dreaming,2004,99,Comedy,7.1,84,FALSE,FALSE,FALSE,TRUE
+tt0791333,TV Movie,Saving the Christmas Goose,2006,93,Family,6.2,30,TRUE,FALSE,FALSE,FALSE
+tt0800058,Feature Film,Happy Holidays,2008,103,Comedy,7,59,FALSE,FALSE,FALSE,TRUE
+tt0800115,TV Movie,The Road to Christmas,2006,88,Comedy,6.3,1402,TRUE,FALSE,FALSE,FALSE
+tt0807735,TV Movie,A Very Fairy Christmas,2006,48,Animation,6.3,35,TRUE,FALSE,FALSE,FALSE
+tt0810927,Feature Film,The Crumbs - A Very Crumby Christmas,2006,90,Other,4.3,228,TRUE,FALSE,FALSE,FALSE
+tt0814039,TV Movie,Cabbage Patch Kids: First Christmas,1984,23,Animation,6.9,105,TRUE,FALSE,FALSE,FALSE
+tt0816577,TV Movie,A Dad for Christmas,2006,90,Drama,6.6,484,TRUE,FALSE,FALSE,FALSE
+tt0817495,TV Movie,Christmas,1996,60,Drama,6.2,10,TRUE,FALSE,FALSE,FALSE
+tt0817520,TV Movie,Snowden's Christmas,1999,22,Animation,6.7,44,TRUE,FALSE,FALSE,FALSE
+tt0837156,Feature Film,Pee-wee's Big Holiday,2016,90,Comedy,6.1,8952,FALSE,FALSE,FALSE,TRUE
+tt0840303,TV Movie,Christmas Do-Over,2006,90,Comedy,5.6,1383,TRUE,FALSE,FALSE,FALSE
+tt0841032,Feature Film,The Perfect Holiday,2007,96,Comedy,4.7,3260,FALSE,FALSE,FALSE,TRUE
+tt0856282,Feature Film,Inspector Tahar's Holiday,1972,110,Comedy,8,159,FALSE,FALSE,FALSE,TRUE
+tt0860458,Feature Film,Rupert's Magic Christmas,2006,85,Comedy,6.8,13,TRUE,FALSE,FALSE,FALSE
+tt0860474,Feature Film,Christmas Tree Upside Down,2006,127,Drama,6.3,161,TRUE,FALSE,FALSE,FALSE
+tt0871968,Feature Film,Christmas on July 24th Avenue,2006,110,Comedy,5.4,97,TRUE,FALSE,FALSE,FALSE
+tt0872243,TV Movie,All She Wants for Christmas,2006,91,Comedy,4.8,766,TRUE,FALSE,FALSE,FALSE
+tt0878836,TV Movie,What We Did on Our Holiday,2006,93,Comedy,8.2,76,FALSE,FALSE,FALSE,TRUE
+tt0884775,TV Movie,Camp Christmas,1993,51,Comedy,4.7,50,TRUE,FALSE,FALSE,FALSE
+tt0884793,TV Movie,A Christmas Carol,1982,75,Animation,6.5,235,TRUE,FALSE,FALSE,FALSE
+tt0885415,Feature Film,The Flight Before Christmas,2008,80,Other,6.1,3738,TRUE,FALSE,FALSE,FALSE
+tt0893404,TV Movie,Home by Christmas,2006,95,Drama,6.3,916,TRUE,FALSE,FALSE,FALSE
+tt0899195,TV Movie,The Making of 'the Nightmare Before Christmas',1993,25,Family,7.8,29,TRUE,FALSE,FALSE,FALSE
+tt0900916,TV Movie,Christmas on Chestnut Street,2006,89,Comedy,4.9,438,TRUE,FALSE,FALSE,FALSE
+tt0906599,TV Movie,Holiday Wishes,2006,90,Drama,5.2,383,FALSE,FALSE,FALSE,TRUE
+tt0910885,Feature Film,A Merry Friggin' Christmas,2014,88,Comedy,5.1,7835,TRUE,FALSE,FALSE,FALSE
+tt0913441,TV Movie,What Have You Done?: The Remaking of 'Black Christmas',2006,28,Other,8,48,TRUE,FALSE,FALSE,FALSE
+tt0920737,TV Movie,Laura's Christmas Star,2006,50,Animation,6.2,50,TRUE,FALSE,FALSE,FALSE
+tt0920894,TV Movie,A Very Barry Christmas,2005,45,Animation,6.5,66,TRUE,FALSE,FALSE,FALSE
+tt0928364,Feature Film,Heber Holiday,2007,97,Comedy,3.2,129,FALSE,FALSE,FALSE,TRUE
+tt0937375,Feature Film,This Christmas,2007,119,Comedy,6.3,10155,TRUE,FALSE,FALSE,FALSE
+tt0938666,TV Movie,Holiday in Handcuffs,2006,86,Comedy,6.1,7196,FALSE,FALSE,FALSE,TRUE
+tt0939616,TV Movie,Grumpy Old Men at Christmas,2003,60,Comedy,6.9,26,TRUE,FALSE,FALSE,FALSE
+tt0950740,TV Movie,A Grandpa for Christmas,2007,84,Comedy,6.8,1285,TRUE,FALSE,FALSE,FALSE
+tt0961738,Feature Film,Messy Christmas,2007,96,Comedy,6.1,524,TRUE,FALSE,FALSE,FALSE
+tt0991150,Feature Film,Christmas in Wonderland,2006,95,Comedy,4.7,2422,TRUE,FALSE,FALSE,FALSE
+tt0992992,TV Movie,Lost Holiday: The Jim & Suzanne Shemwell Story,2007,90,Drama,5.4,296,FALSE,FALSE,FALSE,TRUE
+tt0993789,Feature Film,A Christmas Tale,2008,152,Comedy,7,7458,TRUE,FALSE,FALSE,FALSE
+tt0999872,Feature Film,Thomas Kinkade's Christmas Cottage,2008,103,Other,6.3,2776,TRUE,FALSE,FALSE,FALSE
+tt10006006,Feature Film,A Christmas Prince: The Royal Baby,2019,84,Family,5.4,7622,TRUE,FALSE,FALSE,FALSE
+tt10060094,Feature Film,The Knight Before Christmas,2019,92,Other,5.6,19715,TRUE,FALSE,FALSE,FALSE
+tt10091530,Feature Film,Holiday Rush,2019,92,Comedy,5,3067,FALSE,FALSE,FALSE,TRUE
+tt10118110,TV Movie,Christmas Wedding Runaway,2019,86,Drama,5.7,502,TRUE,FALSE,FALSE,FALSE
+tt10136898,TV Movie,Christmas Wishes and Mistletoe Kisses,2019,84,Drama,6.5,1849,TRUE,FALSE,FALSE,FALSE
+tt10149756,TV Movie,Matchmaker Christmas,2019,90,Drama,6.1,647,TRUE,FALSE,FALSE,FALSE
+tt10154790,TV Movie,Picture Perfect Royal Christmas,2020,85,Romance,5.5,498,TRUE,FALSE,FALSE,FALSE
+tt10156020,Feature Film,Holiday Heist,2019,87,Other,5.7,160,FALSE,FALSE,FALSE,TRUE
+tt10157552,TV Movie,A Larceny Christmas,2019,90,Other,6.7,297,TRUE,FALSE,FALSE,FALSE
+tt1016032,TV Movie,The Ugly Duckling's Christmas Wish,1996,70,Animation,6.5,47,TRUE,FALSE,FALSE,FALSE
+tt10161708,TV Movie,A Mermaid for Christmas,2019,88,Other,6.6,77,TRUE,FALSE,FALSE,FALSE
+tt10165624,Feature Film,Christmas Coupon,2019,92,Romance,3.3,249,TRUE,FALSE,FALSE,FALSE
+tt10176734,TV Movie,A Storybook Christmas,2019,83,Comedy,6.6,949,TRUE,FALSE,FALSE,FALSE
+tt10177634,TV Movie,A Christmas Princess,2019,90,Comedy,5.5,858,TRUE,FALSE,FALSE,FALSE
+tt10187208,Feature Film,A Boy Called Christmas,2021,106,Other,6.7,25274,TRUE,FALSE,FALSE,FALSE
+tt10203940,Feature Film,Elfette Saves Christmas,2019,103,Comedy,3.3,160,TRUE,FALSE,FALSE,FALSE
+tt1020940,Feature Film,Between Christmas and New Year's,2000,86,Drama,5.8,10,TRUE,FALSE,FALSE,FALSE
+tt1020981,TV Movie,O Christmas Tree,1994,30,Animation,7.2,59,TRUE,FALSE,FALSE,FALSE
+tt10210182,TV Movie,Christmas a la Mode,2019,87,Drama,6.4,1063,TRUE,FALSE,FALSE,FALSE
+tt10272460,Feature Film,"Infernal Guidon, or Cossack Christmas",2019,110,Family,6.9,295,TRUE,FALSE,FALSE,FALSE
+tt10295168,TV Movie,A Very Vintage Christmas,2019,87,Comedy,6.2,670,TRUE,FALSE,FALSE,FALSE
+tt10309574,Feature Film,A Christmas Winter Song,2019,90,Drama,6.6,475,TRUE,FALSE,FALSE,FALSE
+tt10319778,Feature Film,Homeless at Christmas,2018,86,Other,7.9,10,TRUE,FALSE,FALSE,FALSE
+tt10328320,Feature Film,The Christmas Project Reunion,2020,87,Comedy,4.7,182,TRUE,FALSE,FALSE,FALSE
+tt10338176,Feature Film,Christmas Time,2023,95,Comedy,5.7,97,TRUE,FALSE,FALSE,FALSE
+tt10344956,TV Movie,Christmas in Rome,2019,86,Drama,6.6,2442,TRUE,FALSE,FALSE,FALSE
+tt10344986,TV Movie,Christmas Town,2019,80,Drama,6.7,2121,TRUE,FALSE,FALSE,FALSE
+tt10345008,TV Movie,Write Before Christmas,2019,84,Drama,6.9,3134,TRUE,FALSE,FALSE,FALSE
+tt10383902,TV Movie,The Christmas Chalet,2019,90,Drama,6.6,955,TRUE,FALSE,FALSE,FALSE
+tt10399114,Feature Film,A Christmas Hero,2020,85,Drama,4.3,328,TRUE,FALSE,FALSE,FALSE
+tt10433222,TV Movie,A Merry Christmas Match,2019,82,Comedy,5.9,1369,TRUE,FALSE,FALSE,FALSE
+tt1046243,Feature Film,It's Christmas,2007,90,Family,5,11,TRUE,FALSE,FALSE,FALSE
+tt10471748,TV Movie,Random Acts of Christmas,2019,88,Drama,6.5,1106,TRUE,FALSE,FALSE,FALSE
+tt10476682,Feature Film,A Christmas Carol,2019,75,Drama,5.1,118,TRUE,FALSE,FALSE,FALSE
+tt10481792,TV Movie,Christmas with a Prince: Becoming Royal,2019,93,Romance,5.8,658,TRUE,FALSE,FALSE,FALSE
+tt10481868,Feature Film,Black Christmas,2019,92,Other,3.5,18244,TRUE,FALSE,FALSE,FALSE
+tt10482348,TV Movie,A Christmas Wish,2019,90,Comedy,6.3,1056,TRUE,FALSE,FALSE,FALSE
+tt10504966,Feature Film,I'll Be Home for Christmas,2019,113,Drama,6.2,1024,TRUE,FALSE,FALSE,FALSE
+tt1051215,TV Movie,Christmas Every Day,1986,22,Animation,7.1,38,TRUE,FALSE,FALSE,FALSE
+tt10516322,TV Movie,A Little Christmas Charm,2020,84,Romance,6.8,1732,TRUE,FALSE,FALSE,FALSE
+tt1053429,TV Movie,Larry the Cable Guy's Christmas Spectacular,2007,60,Comedy,3.5,267,TRUE,FALSE,FALSE,FALSE
+tt1054055,TV Movie,The Trolls and the Christmas Express,1981,30,Animation,7.2,46,TRUE,FALSE,FALSE,FALSE
+tt10545474,Feature Film,A Holiday Change,2019,87,Romance,5.8,28,FALSE,FALSE,FALSE,TRUE
+tt10553910,TV Movie,Picture a Perfect Christmas,2019,84,Comedy,6.9,1847,TRUE,FALSE,FALSE,FALSE
+tt10571920,TV Movie,Nostalgic Christmas,2019,84,Drama,6.3,1417,TRUE,FALSE,FALSE,FALSE
+tt10583460,TV Movie,Radio Christmas,2019,87,Drama,6.1,541,TRUE,FALSE,FALSE,FALSE
+tt10623478,TV Movie,Christmas Love Letter,2019,86,Comedy,6.1,611,TRUE,FALSE,FALSE,FALSE
+tt10627548,Feature Film,Christmas on the Square,2020,98,Comedy,5.2,2992,TRUE,FALSE,FALSE,FALSE
+tt10627564,TV Movie,Christmas at Dollywood,2019,83,Drama,6.1,1356,TRUE,FALSE,FALSE,FALSE
+tt10635588,Feature Film,A Christmas Wish,2021,90,Family,6.9,58,TRUE,FALSE,FALSE,FALSE
+tt10642154,TV Movie,Christmas Reservations,2019,86,Comedy,6,906,TRUE,FALSE,FALSE,FALSE
+tt10642244,TV Movie,Snowbound for Christmas,2019,83,Comedy,5.3,715,TRUE,FALSE,FALSE,FALSE
+tt10650924,TV Movie,"Same Time, Next Christmas",2019,90,Comedy,6,1506,TRUE,FALSE,FALSE,FALSE
+tt10659766,TV Movie,The Christmas High Note,2020,85,Romance,5.2,283,TRUE,FALSE,FALSE,FALSE
+tt10667026,TV Movie,The Christmas Club,2019,84,Comedy,6.7,1563,TRUE,FALSE,FALSE,FALSE
+tt1067106,Feature Film,A Christmas Carol,2009,96,Other,6.8,125562,TRUE,FALSE,FALSE,FALSE
+tt1067769,TV Movie,Christmas Caper,2006,88,Comedy,5.7,1038,TRUE,FALSE,FALSE,FALSE
+tt10700392,TV Movie,The Road Home for Christmas,2019,84,Drama,6.8,754,TRUE,FALSE,FALSE,FALSE
+tt10733770,Feature Film,All I Want for Christmas 2,2020,92,Other,5.7,120,TRUE,FALSE,FALSE,FALSE
+tt10742934,Feature Film,Bad Christmas,2021,93,Comedy,6.4,443,TRUE,FALSE,FALSE,FALSE
+tt10754206,Feature Film,Hip Hop Holiday,2019,87,Comedy,6.9,97,FALSE,FALSE,FALSE,TRUE
+tt10768194,TV Movie,A New York Christmas Wedding,2020,88,Drama,5.3,1386,TRUE,FALSE,FALSE,FALSE
+tt10768208,TV Movie,A Christmas Duet,2019,84,Drama,5.9,814,TRUE,FALSE,FALSE,FALSE
+tt10768278,TV Movie,Christmas Scavenger Hunt,2019,82,Comedy,6.1,1396,TRUE,FALSE,FALSE,FALSE
+tt10768312,TV Movie,Check Inn to Christmas,2019,84,Drama,6.8,1634,TRUE,FALSE,FALSE,FALSE
+tt10768328,TV Movie,Double Holiday,2019,84,Drama,6.8,1509,FALSE,FALSE,FALSE,TRUE
+tt10768410,TV Movie,Christmas at Graceland: Home for the Holidays,2019,84,Other,6.2,1123,TRUE,FALSE,FALSE,TRUE
+tt10768456,TV Movie,Holiday Date,2019,84,Comedy,6.4,1770,FALSE,FALSE,FALSE,TRUE
+tt1077081,TV Movie,Elmo's Christmas Countdown,2007,60,Family,6.2,340,TRUE,FALSE,FALSE,FALSE
+tt10771556,TV Movie,A Very Corgi Christmas,2019,90,Drama,5.4,685,TRUE,FALSE,FALSE,FALSE
+tt10778144,Feature Film,A Christmas Carol,2019,73,Comedy,4.8,45,TRUE,FALSE,FALSE,FALSE
+tt10799008,TV Movie,A Date by Christmas Eve,2019,93,Comedy,5.8,611,TRUE,FALSE,FALSE,FALSE
+tt10804410,TV Movie,No Time Like Christmas,2019,85,Comedy,5.6,419,TRUE,FALSE,FALSE,FALSE
+tt10808294,Feature Film,Christmas on the Range,2019,90,Romance,6.3,665,TRUE,FALSE,FALSE,FALSE
+tt1082815,Feature Film,A Jersey Christmas,2008,81,Comedy,5.2,74,TRUE,FALSE,FALSE,FALSE
+tt1083448,TV Movie,A Princess for Christmas,2011,91,Comedy,6.3,8966,TRUE,FALSE,FALSE,FALSE
+tt1083992,TV Movie,Holiday Switch,2007,88,Comedy,5.4,771,FALSE,FALSE,FALSE,TRUE
+tt10840162,Feature Film,Perfect Christmas,2019,95,Comedy,5.4,434,TRUE,FALSE,FALSE,FALSE
+tt10854916,TV Movie,A Christmas Crush,2019,87,Comedy,4.5,757,TRUE,FALSE,FALSE,FALSE
+tt10872952,TV Movie,The Gift of Christmas,2020,101,Drama,5.2,160,TRUE,FALSE,FALSE,FALSE
+tt10873852,TV Movie,Staging Christmas,2019,85,Drama,5.5,554,TRUE,FALSE,FALSE,FALSE
+tt10875028,TV Movie,Rock and Roll Christmas,2019,85,Comedy,5.4,486,TRUE,FALSE,FALSE,FALSE
+tt1087847,TV Movie,For Better or for Worse: A Christmas Angel,1992,30,Animation,8,56,TRUE,FALSE,FALSE,FALSE
+tt10887838,TV Movie,Rediscovering Christmas,2019,87,Comedy,5.8,452,TRUE,FALSE,FALSE,FALSE
+tt10887846,TV Movie,Christmas Hotel,2019,88,Comedy,6,506,TRUE,FALSE,FALSE,FALSE
+tt10887870,TV Movie,A Sweet Christmas Romance,2019,87,Comedy,6.3,801,TRUE,FALSE,FALSE,FALSE
+tt10887880,TV Movie,Merry Liddle Christmas,2019,87,Comedy,5.9,652,TRUE,FALSE,FALSE,FALSE
+tt1091175,TV Movie,Christopher the Christmas Tree,1993,30,Animation,7,134,TRUE,FALSE,FALSE,FALSE
+tt10921042,TV Movie,Christmas at the Plaza,2019,84,Drama,6.5,3273,TRUE,FALSE,FALSE,FALSE
+tt10921256,TV Movie,Always and Forever Christmas,2019,87,Comedy,5.4,534,TRUE,FALSE,FALSE,FALSE
+tt10922620,TV Movie,A Christmas Miracle,2019,83,Romance,6.4,642,TRUE,FALSE,FALSE,FALSE
+tt10922632,TV Movie,Angel Falls: A Novel Holiday,2019,84,Other,6.1,1060,FALSE,FALSE,FALSE,TRUE
+tt10922658,TV Movie,Christmas Under the Stars,2019,82,Drama,6.7,2275,TRUE,FALSE,FALSE,FALSE
+tt10925434,TV Movie,Holiday Hearts,2019,86,Romance,6.5,1142,FALSE,FALSE,FALSE,TRUE
+tt10925460,TV Movie,Christmas in Evergreen: Tidings of Joy,2019,85,Romance,6.4,1766,TRUE,FALSE,FALSE,FALSE
+tt10925838,Feature Film,A Beauty & The Beast Christmas,2019,90,Comedy,4.6,359,TRUE,FALSE,FALSE,FALSE
+tt10926350,TV Movie,Another Christmas Coincidence,2019,85,Drama,6.9,1773,TRUE,FALSE,FALSE,FALSE
+tt10926390,TV Movie,A Family Christmas Gift,2019,84,Romance,5.9,445,TRUE,FALSE,FALSE,FALSE
+tt10936658,TV Movie,A Blue Ridge Mountain Christmas,2019,84,Family,6.2,1326,TRUE,FALSE,FALSE,FALSE
+tt10952042,TV Movie,It's Beginning to Look a Lot Like Christmas,2019,83,Comedy,6.1,1069,TRUE,FALSE,FALSE,FALSE
+tt10953626,TV Movie,Christmas in Louisiana,2019,90,Romance,5.8,597,TRUE,FALSE,FALSE,FALSE
+tt10963938,TV Movie,Sweet Mountain Christmas,2019,88,Romance,6.3,684,TRUE,FALSE,FALSE,FALSE
+tt10963986,TV Movie,Magical Christmas Shoes,2019,87,Comedy,6.3,619,TRUE,FALSE,FALSE,FALSE
+tt10964186,TV Movie,Christmas 9 to 5,2019,87,Drama,6.2,663,TRUE,FALSE,FALSE,FALSE
+tt10964214,TV Movie,A Doggone Christmas,2019,86,Romance,5.7,518,TRUE,FALSE,FALSE,FALSE
+tt10964346,TV Movie,Grounded for Christmas,2019,86,Comedy,6.3,1194,TRUE,FALSE,FALSE,FALSE
+tt10964516,TV Movie,You Light Up My Christmas,2019,90,Drama,5.7,417,TRUE,FALSE,FALSE,FALSE
+tt10964532,TV Movie,The Christmas Temp,2019,87,Comedy,5.5,465,TRUE,FALSE,FALSE,FALSE
+tt10979386,TV Movie,Christmas Matchmakers,2019,87,Family,5.5,460,TRUE,FALSE,FALSE,FALSE
+tt10993786,Feature Film,Middleton Christmas,2020,92,Romance,5.5,282,TRUE,FALSE,FALSE,FALSE
+tt10997536,Feature Film,Alone at Christmas,2019,51,Comedy,5,10,TRUE,FALSE,FALSE,FALSE
+tt11020096,TV Movie,Twas the Chaos before Christmas,2019,83,Family,7.1,163,TRUE,FALSE,FALSE,FALSE
+tt1105269,TV Movie,Christmas in Paradise,2007,89,Comedy,6.2,440,TRUE,FALSE,FALSE,FALSE
+tt11057644,Feature Film,The Christmas Chronicles: Part Two,2020,112,Other,6,34047,TRUE,FALSE,FALSE,FALSE
+tt11060704,TV Movie,A Christmas Recipe for Romance,2019,88,Romance,5.6,575,TRUE,FALSE,FALSE,FALSE
+tt11068326,TV Movie,Time for You to Come Home for Christmas,2019,84,Drama,7,1234,TRUE,FALSE,FALSE,FALSE
+tt11090230,TV Movie,Baking Christmas,2019,84,Comedy,6.1,177,TRUE,FALSE,FALSE,FALSE
+tt11096888,TV Movie,A Christmas Movie Christmas,2019,88,Comedy,5.6,1489,TRUE,FALSE,FALSE,FALSE
+tt11100776,TV Movie,Christmas on My Mind,2019,84,Comedy,6.5,1706,TRUE,FALSE,FALSE,FALSE
+tt11120440,TV Movie,Christmas Belles,2019,85,Comedy,6.2,164,TRUE,FALSE,FALSE,FALSE
+tt1112097,TV Movie,All I Want for Christmas,2007,86,Family,5.5,1136,TRUE,FALSE,FALSE,FALSE
+tt11125908,Feature Film,Merry Christmas Officer Hansel,2022,91,Comedy,6.3,30,TRUE,FALSE,FALSE,FALSE
+tt11151688,TV Movie,Christmas in Montana,2019,82,Drama,6.6,1195,TRUE,FALSE,FALSE,FALSE
+tt11171322,TV Movie,Our Christmas Love Song,2019,82,Drama,6.3,1082,TRUE,FALSE,FALSE,FALSE
+tt11192428,Feature Film,The Christmas Doodle,2021,60,Family,4.4,50,TRUE,FALSE,FALSE,FALSE
+tt11193190,TV Movie,A Homecoming for the Holidays,2019,84,Drama,6.6,1008,FALSE,FALSE,FALSE,TRUE
+tt11193888,TV Movie,A Family Reunion Christmas,2019,28,Comedy,5.9,279,TRUE,FALSE,FALSE,FALSE
+tt11225428,TV Movie,The Kacey Musgraves Christmas Show,2019,45,Other,7.2,520,TRUE,FALSE,FALSE,FALSE
+tt11230402,TV Movie,My Best Friend's Christmas,2019,90,Comedy,5.1,564,TRUE,FALSE,FALSE,FALSE
+tt11241514,TV Movie,A Cheerful Christmas,2019,83,Drama,5,1085,TRUE,FALSE,FALSE,FALSE
+tt11260886,Feature Film,The Christmas Dance,2021,94,Drama,4.7,283,TRUE,FALSE,FALSE,FALSE
+tt11290298,TV Movie,Christmas Stars,2019,88,Comedy,6.2,439,TRUE,FALSE,FALSE,FALSE
+tt11324626,Feature Film,The Last Christmas Party,2020,84,Drama,3.8,134,TRUE,FALSE,FALSE,FALSE
+tt1132578,Feature Film,Summer Holiday,2008,103,Comedy,7,2204,FALSE,FALSE,FALSE,TRUE
+tt11354244,Feature Film,Community Theater Christmas,2019,103,Comedy,7.5,55,TRUE,FALSE,FALSE,FALSE
+tt11357028,Feature Film,12 Pups of Christmas,2019,85,Drama,4,882,TRUE,FALSE,FALSE,FALSE
+tt1136606,TV Movie,Carols for Christmas,1985,59,Other,6.5,11,TRUE,FALSE,FALSE,FALSE
+tt11371224,Feature Film,"Merry Christmas, Yiwu",2020,93,Other,6.7,83,TRUE,FALSE,FALSE,FALSE
+tt11378154,Feature Film,The App That Stole Christmas,2020,63,Comedy,2.7,759,TRUE,FALSE,FALSE,FALSE
+tt11383142,Feature Film,Greyson Family Christmas,2021,87,Comedy,6,156,TRUE,FALSE,FALSE,FALSE
+tt1139113,TV Movie,The Little Rascals' Christmas Special,1979,30,Animation,7.1,51,TRUE,FALSE,FALSE,FALSE
+tt1141984,TV Movie,My Friends Tigger and Pooh - Super Sleuth Christmas Movie,2007,44,Other,5.3,254,TRUE,FALSE,FALSE,FALSE
+tt11422336,TV Movie,Christmas in Vienna,2019,90,Drama,5.9,557,TRUE,FALSE,FALSE,FALSE
+tt11427974,Feature Film,The Christmas Ride,2020,70,Drama,5.5,82,TRUE,FALSE,FALSE,FALSE
+tt11437784,Feature Film,Christmas Cars,2019,99,Family,3.1,197,TRUE,FALSE,FALSE,FALSE
+tt11455096,TV Movie,A Berry Royal Christmas,2019,58,Other,8.6,26,TRUE,FALSE,FALSE,FALSE
+tt11457736,Feature Film,My Dad's Christmas Date,2020,91,Comedy,5.5,2007,TRUE,FALSE,FALSE,FALSE
+tt1146294,TV Movie,A Scooby-Doo! Christmas,2002,22,Other,6.8,427,TRUE,FALSE,FALSE,FALSE
+tt11488988,TV Movie,A Merry Tudor Christmas with Lucy Worsley,2019,60,Other,8,162,TRUE,FALSE,FALSE,FALSE
+tt1149589,TV Movie,Christmas Is,1970,30,Animation,4.8,128,TRUE,FALSE,FALSE,FALSE
+tt11508080,TV Movie,A Crafty Christmas Romance,2020,84,Romance,5.5,578,TRUE,FALSE,FALSE,FALSE
+tt1150958,TV Movie,Radio City Christmas Spectacular,2007,84,Family,7,111,TRUE,FALSE,FALSE,FALSE
+tt1151915,Feature Film,Nothing Like the Holidays,2008,98,Comedy,6.1,4523,FALSE,FALSE,FALSE,TRUE
+tt1152404,Feature Film,"X-mas, Inc.",2008,110,Comedy,5.4,136,TRUE,FALSE,FALSE,FALSE
+tt11540284,Feature Film,8-Bit Christmas,2021,97,Comedy,6.7,20097,TRUE,FALSE,FALSE,FALSE
+tt1155051,TV Movie,Christmas at the Riviera,2007,94,Comedy,6.1,223,TRUE,FALSE,FALSE,FALSE
+tt1157557,TV Movie,Story of the Christmas Carol,1955,29,Other,4.7,10,TRUE,FALSE,FALSE,FALSE
+tt11585172,TV Movie,Much Ado About Christmas,2021,85,Drama,6.8,991,TRUE,FALSE,FALSE,FALSE
+tt11585200,TV Movie,The Christmas Waltz,2020,83,Drama,7,2315,TRUE,FALSE,FALSE,FALSE
+tt1159198,TV Movie,An Accidental Christmas,2007,90,Comedy,4.5,606,TRUE,FALSE,FALSE,FALSE
+tt1159925,TV Movie,Christmas at Cadillac Jack's,2007,58,Family,6.7,278,TRUE,FALSE,FALSE,FALSE
+tt11615500,TV Movie,Candy Cane Christmas,2020,91,Comedy,5.6,744,TRUE,FALSE,FALSE,FALSE
+tt11637974,TV Movie,A Taste of Christmas,2020,91,Comedy,5.6,608,TRUE,FALSE,FALSE,FALSE
+tt11640628,Feature Film,The Business of Christmas,2020,105,Family,5.9,55,TRUE,FALSE,FALSE,FALSE
+tt1164729,TV Movie,Charles Dickens & the Invention of Christmas,2007,59,Other,7.7,41,TRUE,FALSE,FALSE,FALSE
+tt1164730,TV Movie,The Comedy Christmas,2007,69,Other,4.8,12,TRUE,FALSE,FALSE,FALSE
+tt11666938,TV Movie,Inn Love by Christmas,2020,88,Comedy,5.9,765,TRUE,FALSE,FALSE,FALSE
+tt11667022,TV Movie,The Christmas Ball,2020,87,Drama,5.3,390,TRUE,FALSE,FALSE,FALSE
+tt1169852,TV Movie,The Filmmaker's Holiday,1974,37,Other,6.5,46,FALSE,FALSE,FALSE,TRUE
+tt11702278,Feature Film,A Wrestling Christmas Miracle,2020,90,Comedy,2.2,154,TRUE,FALSE,FALSE,FALSE
+tt11738870,TV Movie,Christmas on Ice,2020,87,Romance,6.1,1086,TRUE,FALSE,FALSE,FALSE
+tt11753704,TV Movie,The Christmas Listing,2020,84,Drama,5.2,589,TRUE,FALSE,FALSE,FALSE
+tt1175514,TV Movie,The First Christmas,1979,25,Animation,7,18,TRUE,FALSE,FALSE,FALSE
+tt11764856,Feature Film,A Christmas Cancellation,2020,92,Drama,4.2,81,TRUE,FALSE,FALSE,FALSE
+tt11766316,TV Movie,White Christmas,1995,26,Other,6.1,20,TRUE,FALSE,FALSE,FALSE
+tt1177949,TV Movie,The Smurfs Christmas Special,1982,23,Other,6.4,326,TRUE,FALSE,FALSE,FALSE
+tt1179275,TV Movie,Lollipop Dragon: The Great Christmas Race,1985,22,Animation,7,20,TRUE,FALSE,FALSE,FALSE
+tt1180340,TV Movie,Madeline's Christmas,1990,24,Other,7.6,74,TRUE,FALSE,FALSE,FALSE
+tt11828420,TV Movie,Christmas on the Vine,2020,87,Drama,6.1,613,TRUE,FALSE,FALSE,FALSE
+tt1184384,TV Movie,The Light Before Christmas,2007,28,Animation,6.1,63,TRUE,FALSE,FALSE,FALSE
+tt11847642,TV Movie,Deliver by Christmas,2020,84,Comedy,6.6,1339,TRUE,FALSE,FALSE,FALSE
+tt11869546,Feature Film,Miracle on Christmas,2020,87,Drama,5.8,243,TRUE,FALSE,FALSE,FALSE
+tt11877948,Feature Film,Cupid for Christmas,2021,87,Comedy,5.6,234,TRUE,FALSE,FALSE,FALSE
+tt11927670,Feature Film,Ace & the Christmas Miracle,2021,91,Comedy,4.5,114,TRUE,FALSE,FALSE,FALSE
+tt11929008,TV Movie,A Very Charming Christmas Town,2020,88,Comedy,5.9,923,TRUE,FALSE,FALSE,FALSE
+tt11947282,TV Movie,A Loud House Christmas,2021,64,Comedy,4.4,1738,TRUE,FALSE,FALSE,FALSE
+tt1198337,Feature Film,Christmas in Paris,2008,120,Other,4.6,75,TRUE,FALSE,FALSE,FALSE
+tt12014644,Feature Film,A Meowy Christmas Vacation,2020,50,Family,6.5,21,TRUE,FALSE,FALSE,FALSE
+tt1205608,TV Movie,Yogi Bear's All-Star Comedy Christmas Caper,1982,24,Other,6.7,267,TRUE,FALSE,FALSE,FALSE
+tt12092722,Feature Film,A New Husband for Christmas,2020,103,Comedy,5.6,95,TRUE,FALSE,FALSE,FALSE
+tt12110636,TV Movie,A Royal Christmas Engagement,2020,86,Family,4.8,474,TRUE,FALSE,FALSE,FALSE
+tt12228496,TV Movie,Christmas by Chance,2020,97,Comedy,6.2,335,TRUE,FALSE,FALSE,FALSE
+tt12269268,TV Movie,The Maltese Holiday,2021,83,Romance,4.9,200,FALSE,FALSE,FALSE,TRUE
+tt1230119,TV Movie,A Christmas Story,1972,30,Animation,6.6,108,TRUE,FALSE,FALSE,FALSE
+tt1232802,TV Movie,A Tudor Feast at Christmas,2006,59,Other,8.3,178,TRUE,FALSE,FALSE,FALSE
+tt12362248,Feature Film,Christmas vs. The Walters,2021,91,Comedy,4.5,360,TRUE,FALSE,FALSE,FALSE
+tt12389030,TV Movie,A Very Country Christmas: Homecoming,2020,84,Comedy,6.1,435,TRUE,FALSE,FALSE,FALSE
+tt12418270,Feature Film,A Christmas Tree Love Story,2020,70,Romance,4.4,32,TRUE,FALSE,FALSE,FALSE
+tt1249300,TV Movie,"Merry Christmas, Drake & Josh",2008,90,Comedy,6.7,4390,TRUE,FALSE,FALSE,FALSE
+tt12557978,TV Movie,A Christmas Tree Grows in Colorado,2020,85,Drama,5.6,822,TRUE,FALSE,FALSE,FALSE
+tt12579258,TV Movie,Lonestar Christmas,2020,87,Comedy,5.8,530,TRUE,FALSE,FALSE,FALSE
+tt12637024,TV Movie,A Cape Cod Christmas,2021,89,Drama,5.9,380,TRUE,FALSE,FALSE,FALSE
+tt12670178,Feature Film,Christmas by the Book,2022,81,Comedy,5.4,24,TRUE,FALSE,FALSE,FALSE
+tt12677210,Feature Film,Christmas Freak,2021,91,Other,3.1,131,TRUE,FALSE,FALSE,FALSE
+tt1268799,Feature Film,A Very Harold & Kumar Christmas,2011,90,Other,6.2,71895,TRUE,FALSE,FALSE,FALSE
+tt12712408,Feature Film,Christmas in Carolina,2020,76,Comedy,4.1,218,TRUE,FALSE,FALSE,FALSE
+tt12717050,Feature Film,The Key to Christmas,2020,80,Family,5.4,117,TRUE,FALSE,FALSE,FALSE
+tt1274299,TV Movie,Our First Christmas,2008,89,Drama,5.9,595,TRUE,FALSE,FALSE,FALSE
+tt12763660,Feature Film,A Christmas Sunset,2021,90,Drama,7.3,19,TRUE,FALSE,FALSE,FALSE
+tt12766346,TV Movie,If I Only Had Christmas,2020,84,Drama,6.3,1692,TRUE,FALSE,FALSE,FALSE
+tt12766850,TV Movie,Holiday Heartbreak,2020,93,Comedy,6.2,73,FALSE,FALSE,FALSE,TRUE
+tt12773628,TV Movie,One Royal Holiday,2020,87,Drama,7,2354,FALSE,FALSE,FALSE,TRUE
+tt12780384,Feature Film,Holidays on Mars,2020,94,Comedy,2.7,687,FALSE,FALSE,FALSE,TRUE
+tt12792442,TV Movie,Christmas Unwrapped,2020,87,Comedy,6.1,975,TRUE,FALSE,FALSE,FALSE
+tt12803902,TV Movie,The Christmas Star,2020,91,Comedy,6.3,206,TRUE,FALSE,FALSE,FALSE
+tt12807538,Feature Film,A Rich Christmas,2021,91,Drama,4.9,168,TRUE,FALSE,FALSE,FALSE
+tt12821388,TV Movie,Merry Liddle Christmas Wedding,2020,87,Drama,5.9,444,TRUE,FALSE,FALSE,FALSE
+tt12822926,TV Movie,On the 12th Date of Christmas,2020,84,Comedy,7.2,2289,TRUE,FALSE,FALSE,FALSE
+tt12824160,Feature Film,Busman's Holiday,2020,107,Drama,7.3,10,FALSE,FALSE,FALSE,TRUE
+tt12843484,TV Movie,Let's Meet Again on Christmas Eve,2020,87,Drama,5.8,411,TRUE,FALSE,FALSE,FALSE
+tt1284976,TV Movie,A Christmas Proposal,2008,84,Comedy,4.6,604,TRUE,FALSE,FALSE,FALSE
+tt1285125,TV Movie,Louis Theroux's African Hunting Holiday,2008,58,Other,7.1,1138,FALSE,FALSE,FALSE,TRUE
+tt1285239,TV Movie,The Christmas Choir,2008,90,Drama,6.7,664,TRUE,FALSE,FALSE,FALSE
+tt12885438,TV Movie,The Lego Star Wars Holiday Special,2020,44,Other,6.4,7574,FALSE,FALSE,FALSE,TRUE
+tt12906940,Feature Film,Christmas Zombies,2020,66,Other,5.1,99,TRUE,FALSE,FALSE,FALSE
+tt12921552,Feature Film,Christmas Comes Home,2020,84,Comedy,5.8,326,TRUE,FALSE,FALSE,FALSE
+tt1292569,TV Movie,A Muppets Christmas: Letters to Santa,2008,60,Comedy,6.3,2377,TRUE,FALSE,FALSE,FALSE
+tt12932534,TV Movie,Christmas in the Rockies,2020,85,Romance,5.5,479,TRUE,FALSE,FALSE,FALSE
+tt12932550,TV Movie,A Christmas Exchange,2020,87,Drama,6,652,TRUE,FALSE,FALSE,FALSE
+tt1294693,TV Movie,Little Spirit: Christmas in New York,2008,60,Animation,4.6,142,TRUE,FALSE,FALSE,FALSE
+tt12950902,TV Movie,The Christmas House,2020,84,Drama,6,2534,TRUE,FALSE,FALSE,FALSE
+tt12953542,TV Movie,My Sweet Holiday,2020,84,Drama,5.4,604,FALSE,FALSE,FALSE,TRUE
+tt12965420,TV Movie,Dashing Home for Christmas,2020,91,Romance,6,688,TRUE,FALSE,FALSE,FALSE
+tt12968696,TV Movie,Christmas on the Menu,2020,88,Comedy,6.2,684,TRUE,FALSE,FALSE,FALSE
+tt12981586,Feature Film,Avenger Dogs Christmas,2020,67,Animation,4.1,12,TRUE,FALSE,FALSE,FALSE
+tt12986254,Feature Film,Christmas with a Crown,2020,89,Romance,5.4,1180,TRUE,FALSE,FALSE,FALSE
+tt12987036,TV Movie,The Christmas Yule Blog,2020,87,Romance,5.5,461,TRUE,FALSE,FALSE,FALSE
+tt12988016,TV Movie,A Welcome Home Christmas,2020,88,Drama,6.8,954,TRUE,FALSE,FALSE,FALSE
+tt12997976,TV Movie,Dear Christmas,2020,86,Comedy,6,1418,TRUE,FALSE,FALSE,FALSE
+tt1300160,TV Movie,Kenny Rogers: Keep Christmas with You,1993,45,Other,7.8,10,TRUE,FALSE,FALSE,FALSE
+tt13040330,TV Movie,Cross Country Christmas,2020,83,Comedy,6.7,1883,TRUE,FALSE,FALSE,FALSE
+tt13055780,Feature Film,A California Christmas,2020,106,Comedy,5.8,11026,TRUE,FALSE,FALSE,FALSE
+tt13070602,Feature Film,A Castle for Christmas,2021,98,Other,5.6,14676,TRUE,FALSE,FALSE,FALSE
+tt13097858,TV Movie,Christmas She Wrote,2020,84,Drama,5.8,1224,TRUE,FALSE,FALSE,FALSE
+tt13103340,Feature Film,Father Christmas Is Back,2021,105,Comedy,4.5,7016,TRUE,FALSE,FALSE,FALSE
+tt13109730,TV Movie,Good Morning Christmas!,2020,86,Drama,6.9,1734,TRUE,FALSE,FALSE,FALSE
+tt13121702,TV Movie,The Christmas Edition,2020,88,Drama,6.1,694,TRUE,FALSE,FALSE,FALSE
+tt1313243,Feature Film,Routine Holiday,2008,75,Drama,6.8,51,FALSE,FALSE,FALSE,TRUE
+tt1314171,TV Movie,A Christmas Calendar,1987,60,Family,6,19,TRUE,FALSE,FALSE,FALSE
+tt13142446,TV Movie,The Dog Days of Christmas,2021,88,Family,5.2,303,TRUE,FALSE,FALSE,FALSE
+tt13147656,TV Movie,The Christmas Setup,2020,85,Drama,6.8,2731,TRUE,FALSE,FALSE,FALSE
+tt13147954,TV Movie,A Sugar & Spice Holiday,2020,84,Comedy,6.3,561,FALSE,FALSE,FALSE,TRUE
+tt13148548,TV Movie,Cooking Up Christmas,2020,90,Comedy,6.1,270,TRUE,FALSE,FALSE,FALSE
+tt1315049,TV Movie,A Martian Christmas,2009,48,Other,7.9,24,TRUE,FALSE,FALSE,FALSE
+tt13159820,TV Movie,First Christmas,2020,83,Drama,6.4,120,TRUE,FALSE,FALSE,FALSE
+tt13169850,TV Movie,Time for Us to Come Home for Christmas,2020,83,Romance,7,1632,TRUE,FALSE,FALSE,FALSE
+tt13189624,TV Movie,Homemade Christmas,2020,85,Comedy,5.8,689,TRUE,FALSE,FALSE,FALSE
+tt13189798,TV Movie,Spotlight on Christmas,2020,84,Drama,6.1,894,TRUE,FALSE,FALSE,FALSE
+tt13190948,TV Movie,Christmas at Maple Creek,2020,88,Comedy,5.7,527,TRUE,FALSE,FALSE,FALSE
+tt13192538,TV Movie,Never Kiss a Man in a Christmas Sweater,2020,84,Comedy,6.7,2060,TRUE,FALSE,FALSE,FALSE
+tt13194940,TV Movie,Christmas in Evergreen: Bells Are Ringing,2020,84,Drama,5.8,941,TRUE,FALSE,FALSE,FALSE
+tt13197624,TV Movie,A Glenbrooke Christmas,2020,85,Drama,6.6,1657,TRUE,FALSE,FALSE,FALSE
+tt13201832,TV Movie,Christmas Beneath the Stars,2021,89,Romance,4.6,199,TRUE,FALSE,FALSE,FALSE
+tt13206476,TV Movie,Christmas by Starlight,2020,84,Comedy,7.2,2201,TRUE,FALSE,FALSE,FALSE
+tt13236566,Feature Film,Operation Christmas Drop,2020,95,Comedy,5.8,12658,TRUE,FALSE,FALSE,FALSE
+tt13243610,TV Movie,Meet Me at Christmas,2020,82,Drama,6.4,1127,TRUE,FALSE,FALSE,FALSE
+tt13246926,TV Movie,Unlocking Christmas,2020,85,Other,6.4,1345,TRUE,FALSE,FALSE,FALSE
+tt13247248,Feature Film,Christmas Collision,2021,95,Drama,3.5,217,TRUE,FALSE,FALSE,FALSE
+tt13260836,Feature Film,Angela's Christmas Wish,2020,47,Other,7.1,1697,TRUE,FALSE,FALSE,FALSE
+tt13267034,TV Movie,The Christmas Ring,2020,84,Drama,6.4,1205,TRUE,FALSE,FALSE,FALSE
+tt13273702,TV Movie,Too Close For Christmas,2020,88,Drama,5.7,2905,TRUE,FALSE,FALSE,FALSE
+tt13273744,TV Movie,A Christmas Carousel,2020,85,Drama,6.1,1161,TRUE,FALSE,FALSE,FALSE
+tt1327811,TV Movie,The Side Show Christmas,2010,48,Animation,6.1,18,TRUE,FALSE,FALSE,FALSE
+tt13280552,Feature Film,Katherine Jenkins Christmas Spectacular,2020,140,Other,8.6,77,TRUE,FALSE,FALSE,FALSE
+tt13286622,TV Movie,Heart of the Holidays,2020,84,Romance,6.2,1075,FALSE,FALSE,FALSE,TRUE
+tt13290168,Feature Film,High School Musical: The Musical: The Holiday Special,2020,45,Comedy,5.6,457,FALSE,FALSE,FALSE,TRUE
+tt13293184,Feature Film,Christmas Staycation,2020,77,Comedy,4.5,983,TRUE,FALSE,FALSE,FALSE
+tt13298482,TV Movie,Marry Me This Christmas,2020,89,Comedy,6.3,86,TRUE,FALSE,FALSE,FALSE
+tt1330044,TV Movie,On Christmas Eve,1992,30,Animation,8.1,22,TRUE,FALSE,FALSE,FALSE
+tt13309552,TV Movie,Christmas Together,2020,87,Romance,5.5,590,TRUE,FALSE,FALSE,FALSE
+tt1332026,TV Movie,A Miser Brothers' Christmas,2008,45,Animation,6.1,1266,TRUE,FALSE,FALSE,FALSE
+tt13320784,TV Movie,Five Star Christmas,2020,84,Comedy,6.9,2489,TRUE,FALSE,FALSE,FALSE
+tt13327258,Feature Film,The Jinkx and DeLa Holiday Special,2020,65,Comedy,7.6,540,FALSE,FALSE,FALSE,TRUE
+tt13341368,TV Movie,Christmas on Wheels,2020,86,Romance,5.8,456,TRUE,FALSE,FALSE,FALSE
+tt13341400,TV Movie,Christmas in Vienna,2020,83,Drama,6.4,1660,TRUE,FALSE,FALSE,FALSE
+tt13341408,TV Movie,The Christmas Doctor,2020,84,Drama,6.9,891,TRUE,FALSE,FALSE,FALSE
+tt13341414,TV Movie,A Timeless Christmas,2020,84,Comedy,7,3136,TRUE,FALSE,FALSE,FALSE
+tt13341432,TV Movie,A Nashville Christmas Carol,2020,84,Drama,6.3,1315,TRUE,FALSE,FALSE,FALSE
+tt13341592,TV Movie,USS Christmas,2020,84,Other,6.6,1615,TRUE,FALSE,FALSE,FALSE
+tt13341848,TV Movie,"A Godwink Christmas: Second Chance, First Love",2020,87,Drama,6.8,1231,TRUE,FALSE,FALSE,FALSE
+tt13341908,TV Movie,Christmas Ever After,2020,87,Drama,6.1,835,TRUE,FALSE,FALSE,FALSE
+tt13342004,TV Movie,Christmas Comes Twice,2020,84,Drama,6.1,745,TRUE,FALSE,FALSE,FALSE
+tt13342118,TV Movie,Swept Up by Christmas,2019,84,Comedy,6.2,950,TRUE,FALSE,FALSE,FALSE
+tt13342180,TV Movie,A Christmas Break,2020,89,Drama,5.7,597,TRUE,FALSE,FALSE,FALSE
+tt13342190,TV Movie,"Love, Lights, Hanukkah!",2020,84,Drama,6.8,1100,FALSE,TRUE,FALSE,FALSE
+tt13342238,TV Movie,Project Christmas Wish,2020,85,Drama,6.9,1449,TRUE,FALSE,FALSE,FALSE
+tt13344860,TV Movie,Christmas Tree Lane,2020,84,Comedy,6.4,1357,TRUE,FALSE,FALSE,FALSE
+tt13350688,TV Movie,Chateau Christmas,2020,84,Comedy,6.4,1825,TRUE,FALSE,FALSE,FALSE
+tt13354204,Feature Film,Just Another Christmas,2020,100,Comedy,6.7,5236,TRUE,FALSE,FALSE,FALSE
+tt13356044,TV Movie,Cranberry Christmas,2020,84,Comedy,6.5,1144,TRUE,FALSE,FALSE,FALSE
+tt13357258,TV Movie,The Christmas Bow,2020,83,Drama,6.7,1221,TRUE,FALSE,FALSE,FALSE
+tt13360162,Feature Film,A Very Quarantwinned Christmas,2020,75,Family,8.6,13,TRUE,FALSE,FALSE,FALSE
+tt1336989,TV Movie,The Christmas Sweater: A Return to Redemption,2009,150,Family,2.7,126,TRUE,FALSE,FALSE,FALSE
+tt13381368,TV Movie,Christmas with the Darlings,2020,84,Comedy,7.1,1675,TRUE,FALSE,FALSE,FALSE
+tt13389538,TV Movie,A Christmas Surprise,2020,89,Comedy,5.9,128,TRUE,FALSE,FALSE,FALSE
+tt13391592,TV Movie,A Christmas for Mary,2020,90,Drama,5.8,172,TRUE,FALSE,FALSE,FALSE
+tt13397452,Feature Film,Estella Scrooge: A Christmas Carol with a Twist,2020,130,Other,4.9,40,TRUE,FALSE,FALSE,FALSE
+tt13400476,Feature Film,Teri Diwali Meri Christmas,2020,68,Other,5.8,26,TRUE,FALSE,FALSE,FALSE
+tt13401252,Feature Film,Christmas in the Pines,2021,90,Romance,6.3,485,TRUE,FALSE,FALSE,FALSE
+tt13403210,TV Movie,The Christmas Aunt,2020,86,Romance,5.7,310,TRUE,FALSE,FALSE,FALSE
+tt13403782,TV Movie,The Christmas Lottery,2020,88,Comedy,5.8,192,TRUE,FALSE,FALSE,FALSE
+tt1340579,Feature Film,Happy Holidays,2007,72,Romance,8.1,13,FALSE,FALSE,FALSE,TRUE
+tt13407590,Feature Film,Malou's Christmas,2020,88,Comedy,6.1,100,TRUE,FALSE,FALSE,FALSE
+tt13409094,Feature Film,A Sunburnt Christmas,2020,91,Comedy,6.9,779,TRUE,FALSE,FALSE,FALSE
+tt13411942,TV Movie,Chico Bon Bon and the Very Berry Holiday,2020,25,Animation,6.2,43,FALSE,FALSE,FALSE,TRUE
+tt13428892,Feature Film,A Christmas Love,2020,65,Drama,4,1141,TRUE,FALSE,FALSE,FALSE
+tt1343029,TV Movie,The Christmas Clause,2008,84,Comedy,4.7,589,TRUE,FALSE,FALSE,FALSE
+tt13437988,Feature Film,Christmas at Cattle Hill,2020,68,Animation,5.9,100,TRUE,FALSE,FALSE,FALSE
+tt13438634,Feature Film,Christmas in the Wilds,2021,86,Romance,5.5,302,TRUE,FALSE,FALSE,FALSE
+tt13439940,TV Movie,The Christmas Letter,2019,26,Animation,6.4,116,TRUE,FALSE,FALSE,FALSE
+tt13446424,Feature Film,Christmas Crossfire,2020,105,Comedy,4.8,1577,TRUE,FALSE,FALSE,FALSE
+tt13464336,Feature Film,A Tiny House Christmas,2021,91,Comedy,5.4,86,TRUE,FALSE,FALSE,FALSE
+tt13465140,TV Movie,Christmas Again,2021,94,Other,5.2,1120,TRUE,FALSE,FALSE,FALSE
+tt1346854,TV Movie,The Monster's Christmas,1981,47,Other,5.9,75,TRUE,FALSE,FALSE,FALSE
+tt13469472,Feature Film,A Carolina Christmas,2020,141,Family,5.1,561,TRUE,FALSE,FALSE,FALSE
+tt13528040,Feature Film,Bo Bear Celebrates Christmas,2020,65,Family,6.7,25,TRUE,FALSE,FALSE,FALSE
+tt1353789,Feature Film,Everyday Is a Holiday,2009,80,Drama,6.2,102,FALSE,FALSE,FALSE,TRUE
+tt13557370,Feature Film,Christmas Thieves,2021,77,Animation,3.9,184,TRUE,FALSE,FALSE,FALSE
+tt13562844,TV Movie,Banking on Christmas,2021,99,Drama,6.1,49,TRUE,FALSE,FALSE,FALSE
+tt1356395,TV Movie,The Dog Who Saved Christmas,2009,89,Other,4.2,967,TRUE,FALSE,FALSE,FALSE
+tt13569424,TV Movie,A Christmas Carol,1954,49,Family,6,179,TRUE,FALSE,FALSE,FALSE
+tt13571948,Feature Film,A Christmas Carol,2019,77,Drama,3.4,29,TRUE,FALSE,FALSE,FALSE
+tt13586346,Feature Film,Unwrapping Christmas,2020,66,Drama,6,28,TRUE,FALSE,FALSE,FALSE
+tt13607632,TV Movie,An Unremarkable Christmas,2020,82,Comedy,3.3,157,TRUE,FALSE,FALSE,FALSE
+tt1361330,TV Movie,Santa Baby 2: Christmas Maybe,2009,80,Comedy,5.3,1154,TRUE,FALSE,FALSE,FALSE
+tt13624384,TV Movie,A Christmas Wish in Hudson,2021,90,Romance,5.4,287,TRUE,FALSE,FALSE,FALSE
+tt13632182,Feature Film,Christmas at the Ranch,2021,94,Romance,5.5,625,TRUE,FALSE,FALSE,FALSE
+tt13635666,TV Movie,A VHS Christmas Carol,2020,42,Other,6.9,54,TRUE,FALSE,FALSE,FALSE
+tt13652894,TV Movie,The Christmas Sitters,2020,80,Comedy,5.4,242,TRUE,FALSE,FALSE,FALSE
+tt1365471,Feature Film,The Christmas Party,2009,86,Comedy,3.7,1499,TRUE,FALSE,FALSE,FALSE
+tt13665354,Feature Film,13 Slays Till X-Mas,2020,106,Other,4.2,143,TRUE,FALSE,FALSE,FALSE
+tt1369647,Feature Film,Christmas Angel,2009,87,Drama,6.6,1717,TRUE,FALSE,FALSE,FALSE
+tt13701958,TV Movie,A Baby Reindeer's First Christmas,2020,47,Other,9,10,TRUE,FALSE,FALSE,FALSE
+tt13701962,Feature Film,A California Christmas: City Lights,2021,106,Comedy,5.5,3167,TRUE,FALSE,FALSE,FALSE
+tt13708060,Feature Film,Andre Rieu: Christmas in London,2016,88,Other,7.9,29,TRUE,FALSE,FALSE,FALSE
+tt1373383,TV Movie,Elf Sparkle Meets Christmas the Horse,2009,22,Animation,8.3,14,TRUE,FALSE,FALSE,FALSE
+tt13779034,TV Movie,Hot Chocolate Holiday,2021,95,Comedy,6.3,402,FALSE,FALSE,FALSE,TRUE
+tt13782052,Feature Film,1000 Miles from Christmas,2021,102,Comedy,5.8,1923,TRUE,FALSE,FALSE,FALSE
+tt1380832,TV Movie,Gavin & Stacey: 12 Days of Christmas,2008,29,Other,6.6,63,TRUE,FALSE,FALSE,FALSE
+tt13814142,Feature Film,Carol's Christmas,2021,70,Drama,2.2,61,TRUE,FALSE,FALSE,FALSE
+tt13838038,Feature Film,Dracula on Holiday,2021,91,Comedy,3.7,15,FALSE,FALSE,FALSE,TRUE
+tt1384926,TV Movie,The Christmas Hope,2009,90,Drama,6.5,831,TRUE,FALSE,FALSE,FALSE
+tt13918522,TV Movie,A Christmas Mission,2020,89,Drama,5.5,313,TRUE,FALSE,FALSE,FALSE
+tt13937754,TV Movie,Christmas at the Golden Dragon,2022,84,Comedy,6.6,956,TRUE,FALSE,FALSE,FALSE
+tt1397220,TV Movie,Santa's First Christmas,1992,24,Animation,4.8,21,TRUE,FALSE,FALSE,FALSE
+tt13972332,Feature Film,Some Kind of Christmas!,2020,90,Drama,6.5,13,TRUE,FALSE,FALSE,FALSE
+tt14016930,Feature Film,Christmas on My Block,2021,95,Drama,5.6,30,TRUE,FALSE,FALSE,FALSE
+tt14034732,Feature Film,How the Gringo Stole Christmas,2023,81,Comedy,3.2,202,TRUE,FALSE,FALSE,FALSE
+tt14036172,TV Movie,A Holiday Homecoming,2021,85,Family,4.9,63,FALSE,FALSE,FALSE,TRUE
+tt14059632,Feature Film,A Lot Like Christmas,2018,106,Romance,5.3,12,TRUE,FALSE,FALSE,FALSE
+tt14060006,TV Movie,A Great North Christmas,2021,83,Drama,4.9,162,TRUE,FALSE,FALSE,FALSE
+tt14060986,TV Movie,It Takes a Christmas Village,2021,87,Comedy,6.5,520,TRUE,FALSE,FALSE,FALSE
+tt14061008,Feature Film,Last Train to Christmas,2021,110,Comedy,6,3085,TRUE,FALSE,FALSE,FALSE
+tt14065740,Feature Film,Christmas in Florida,2021,90,Comedy,5.9,360,TRUE,FALSE,FALSE,FALSE
+tt14074562,TV Movie,The Picture of Christmas,2021,85,Comedy,5.9,401,TRUE,FALSE,FALSE,FALSE
+tt1410013,TV Movie,Christmas in Canaan,2009,86,Drama,6.9,628,TRUE,FALSE,FALSE,FALSE
+tt1410207,Feature Film,Christmas,2009,99,Drama,6,294,TRUE,FALSE,FALSE,FALSE
+tt1414143,Feature Film,A Christmas Family Tragedy,2006,75,Other,5.9,22,TRUE,FALSE,FALSE,FALSE
+tt14142950,Feature Film,Christmas Next Door,2021,98,Comedy,6.1,32,TRUE,FALSE,FALSE,FALSE
+tt14163772,Feature Film,A Christmas Tale,2021,104,Comedy,6.3,1189,TRUE,FALSE,FALSE,FALSE
+tt14187584,TV Movie,Love at the Christmas Contest,2022,90,Comedy,5.7,451,TRUE,FALSE,FALSE,FALSE
+tt14194876,Feature Film,The Good Witch of Christmas,2022,77,Comedy,3.6,208,TRUE,FALSE,FALSE,FALSE
+tt14219486,Feature Film,A Christmas Karen,2022,98,Comedy,4.9,562,TRUE,FALSE,FALSE,FALSE
+tt14256092,TV Movie,Snowed in for Christmas,2021,86,Romance,6.1,668,TRUE,FALSE,FALSE,FALSE
+tt14300966,Feature Film,A Fiancé for Christmas,2021,85,Comedy,6.5,467,TRUE,FALSE,FALSE,FALSE
+tt1430607,Feature Film,Arthur Christmas,2011,97,Other,7.1,64751,TRUE,FALSE,FALSE,FALSE
+tt14435184,Feature Film,Christmas with Felicity,2021,86,Drama,5,244,TRUE,FALSE,FALSE,FALSE
+tt14444182,TV Movie,Blending Christmas,2021,85,Comedy,5.5,479,TRUE,FALSE,FALSE,FALSE
+tt1446093,TV Movie,A Holiday Romance,2007,89,Drama,5.4,15,FALSE,FALSE,FALSE,TRUE
+tt1446201,TV Movie,12 Men of Christmas,2009,95,Comedy,5.5,2556,TRUE,FALSE,FALSE,FALSE
+tt14482374,TV Movie,Holiday in Santa Fe,2021,85,Comedy,6.1,1081,FALSE,FALSE,FALSE,TRUE
+tt14483394,Feature Film,The Christmas Pitch,2021,83,Comedy,4.1,119,TRUE,FALSE,FALSE,FALSE
+tt14502376,TV Movie,Christmas in Washington,2021,87,Romance,5.6,438,TRUE,FALSE,FALSE,FALSE
+tt1451381,TV Movie,Cranberry Christmas,2008,30,Other,5.9,64,TRUE,FALSE,FALSE,FALSE
+tt14558558,Feature Film,13th Day of Christmas,2021,120,Other,6.8,15,TRUE,FALSE,FALSE,FALSE
+tt14577152,Feature Film,A Match Made at Christmas,2021,115,Comedy,5.3,796,TRUE,FALSE,FALSE,FALSE
+tt14586176,Feature Film,A Christmas Number One,2021,112,Comedy,5.6,1022,TRUE,FALSE,FALSE,FALSE
+tt14591614,Feature Film,Christmas on the Carousel,2021,71,Comedy,4.5,146,TRUE,FALSE,FALSE,FALSE
+tt14596220,TV Movie,UnPerfect Christmas Wish,2021,90,Comedy,5.2,234,TRUE,FALSE,FALSE,FALSE
+tt1459922,TV Movie,Lady Day: The Many Faces of Billie Holiday,1990,59,Other,7.9,44,FALSE,FALSE,FALSE,TRUE
+tt14609676,Feature Film,All I Want for Christmas,2021,90,Comedy,5.9,74,TRUE,FALSE,FALSE,FALSE
+tt1461344,TV Movie,Postman Pat's Magic Christmas,2004,25,Animation,7.4,24,TRUE,FALSE,FALSE,FALSE
+tt14641148,TV Movie,A Snowy Christmas,2021,84,Romance,5.1,499,TRUE,FALSE,FALSE,FALSE
+tt14662334,Feature Film,The Business of Christmas 2,2021,85,Drama,8.2,30,TRUE,FALSE,FALSE,FALSE
+tt14668196,Feature Film,Prancer: A Christmas Tale,2022,102,Drama,6,361,TRUE,FALSE,FALSE,FALSE
+tt14681620,TV Movie,A Christmas Dance Reunion,2021,87,Drama,6.1,466,TRUE,FALSE,FALSE,FALSE
+tt1468385,TV Movie,Christmas in Arabia,2010,90,Comedy,5.3,45,TRUE,FALSE,FALSE,FALSE
+tt1470024,Feature Film,"Tuesday, After Christmas",2010,99,Drama,6.9,4890,TRUE,FALSE,FALSE,FALSE
+tt14715170,Feature Film,Falling for Christmas,2022,93,Comedy,5.2,26530,TRUE,FALSE,FALSE,FALSE
+tt14721936,TV Movie,Writing Around the Christmas Tree,2021,89,Comedy,5,243,TRUE,FALSE,FALSE,FALSE
+tt14729484,TV Movie,A Christmas Letter,2021,89,Comedy,6.7,76,TRUE,FALSE,FALSE,FALSE
+tt14758476,TV Movie,A Chance for Christmas,2021,92,Comedy,5.9,542,TRUE,FALSE,FALSE,FALSE
+tt14758624,TV Movie,A Christmas Stray,2021,84,Drama,6.2,324,TRUE,FALSE,FALSE,FALSE
+tt14777678,TV Movie,Welcome to the Christmas Family Reunion,2021,87,Comedy,5.1,298,TRUE,FALSE,FALSE,FALSE
+tt14777778,TV Movie,When Christmas Was Young,2022,87,Comedy,6.1,373,TRUE,FALSE,FALSE,FALSE
+tt14785488,TV Movie,A Sisterly Christmas,2021,83,Drama,5.6,175,TRUE,FALSE,FALSE,FALSE
+tt14785638,Feature Film,A Holiday Chance,2021,110,Comedy,7.1,102,FALSE,FALSE,FALSE,TRUE
+tt14789426,TV Movie,Christmas in Pine Valley,2022,85,Comedy,4.9,475,TRUE,FALSE,FALSE,FALSE
+tt14807078,TV Movie,A Christmas Proposal,2021,87,Romance,7,729,TRUE,FALSE,FALSE,FALSE
+tt14850192,TV Movie,Christmas with a Prince: The Royal Baby,2021,90,Romance,5.7,341,TRUE,FALSE,FALSE,FALSE
+tt1486805,TV Movie,A Child's Christmas,2008,28,Animation,6,10,TRUE,FALSE,FALSE,FALSE
+tt1489248,TV Movie,A Golden Christmas,2009,95,Comedy,5.5,1357,TRUE,FALSE,FALSE,FALSE
+tt14909414,TV Movie,Serving Up the Holidays,2021,89,Comedy,5.1,407,FALSE,FALSE,FALSE,TRUE
+tt1492952,TV Movie,Larry the Cable Guy's Hula-Palooza Christmas Luau,2009,71,Comedy,5.3,78,TRUE,FALSE,FALSE,FALSE
+tt14932820,TV Movie,A Clüsterfünke Christmas,2021,87,Comedy,6.2,893,TRUE,FALSE,FALSE,FALSE
+tt14945492,Feature Film,"Christmas, No Filter",2022,90,Family,5.5,75,TRUE,FALSE,FALSE,FALSE
+tt14996100,Feature Film,Christmas Proposal,2021,96,Comedy,4.2,90,TRUE,FALSE,FALSE,FALSE
+tt14999558,Feature Film,Anything But Christmas,2021,92,Comedy,6.8,27,TRUE,FALSE,FALSE,FALSE
+tt15010346,TV Movie,Christmas on 5th Avenue,2021,84,Romance,6.5,448,TRUE,FALSE,FALSE,FALSE
+tt15012044,TV Movie,Christmas Takes Flight,2021,86,Comedy,5.8,433,TRUE,FALSE,FALSE,FALSE
+tt15042590,TV Movie,A Christmas Treasure,2021,84,Drama,5.8,684,TRUE,FALSE,FALSE,FALSE
+tt1504362,Feature Film,Christmas in Beverly Hills,2009,110,Comedy,3.7,793,TRUE,FALSE,FALSE,FALSE
+tt15047782,Feature Film,Perfect Messy Holiday,2021,85,Comedy,6.6,17,FALSE,FALSE,FALSE,TRUE
+tt15049912,TV Movie,A Chestnut Family Christmas,2021,83,Comedy,5.9,203,TRUE,FALSE,FALSE,FALSE
+tt1508256,Feature Film,A Grandpa for Christmas,2009,85,Family,5.7,14,TRUE,FALSE,FALSE,FALSE
+tt15091462,TV Movie,The Enchanted Christmas Cake,2021,84,Romance,5.4,636,TRUE,FALSE,FALSE,FALSE
+tt15127022,TV Movie,A Picture Perfect Holiday,2021,87,Drama,5.8,347,FALSE,FALSE,FALSE,TRUE
+tt15128214,Feature Film,Holiday Hideaway,2022,96,Family,8.2,44,FALSE,FALSE,FALSE,TRUE
+tt15133668,TV Movie,Christmas Déjà Vu,2021,92,Comedy,5.5,150,TRUE,FALSE,FALSE,FALSE
+tt15133684,Feature Film,A Jenkins Family Christmas,2021,94,Comedy,5.6,158,TRUE,FALSE,FALSE,FALSE
+tt1516541,Feature Film,Homeless for the Holidays,2009,105,Comedy,3.2,515,FALSE,FALSE,FALSE,TRUE
+tt15167640,Feature Film,Country Roads Christmas,2022,85,Comedy,6.2,57,TRUE,FALSE,FALSE,FALSE
+tt15185022,Feature Film,See You Next Christmas,2021,99,Comedy,5.5,275,TRUE,FALSE,FALSE,FALSE
+tt15186426,Feature Film,Christmas Is Canceled,2021,95,Comedy,4.8,1569,TRUE,FALSE,FALSE,FALSE
+tt15187842,TV Movie,Toying with the Holidays,2021,86,Comedy,6.3,649,FALSE,FALSE,FALSE,TRUE
+tt1519929,TV Movie,A Dog Named Christmas,2009,95,Drama,7.4,1373,TRUE,FALSE,FALSE,FALSE
+tt15205430,TV Movie,Coyote Creek Christmas,2021,84,Drama,5.7,1480,TRUE,FALSE,FALSE,FALSE
+tt15205728,TV Movie,Fixing Up Christmas,2021,86,Comedy,5.9,478,TRUE,FALSE,FALSE,FALSE
+tt15226096,TV Movie,The Nine Kittens of Christmas,2021,84,Comedy,6.6,1779,TRUE,FALSE,FALSE,FALSE
+tt15233326,TV Movie,Furry Little Christmas,2021,87,Comedy,5.7,491,TRUE,FALSE,FALSE,FALSE
+tt15235708,TV Movie,A Dickens of a Holiday!,2021,84,Romance,7.3,1399,FALSE,FALSE,FALSE,TRUE
+tt15245738,Feature Film,The Holiday Fix Up,2021,84,Drama,6.5,1003,FALSE,FALSE,FALSE,TRUE
+tt15254212,TV Movie,Christmas in Tune,2021,87,Drama,7,698,TRUE,FALSE,FALSE,FALSE
+tt15279930,Feature Film,Another Christmas,2021,73,Comedy,5.1,18,TRUE,FALSE,FALSE,FALSE
+tt15289090,TV Movie,Christmas on the Farm,2021,86,Comedy,5.2,898,TRUE,FALSE,FALSE,FALSE
+tt15294458,Feature Film,Black Christmas: 2021 Remake,2021,54,Other,3.9,31,TRUE,FALSE,FALSE,FALSE
+tt15302344,TV Movie,Candy Coated Christmas,2021,83,Comedy,5.8,574,TRUE,FALSE,FALSE,FALSE
+tt15316422,TV Movie,The Christmas Contest,2021,83,Drama,5.8,1263,TRUE,FALSE,FALSE,FALSE
+tt15348352,TV Movie,The Christmas Promise,2021,84,Drama,6.7,1222,TRUE,FALSE,FALSE,FALSE
+tt15353214,Feature Film,'Twas the Fight Before Christmas,2021,91,Other,6.3,755,TRUE,FALSE,FALSE,FALSE
+tt15359506,TV Movie,The Great Christmas Switch,2021,84,Comedy,6,506,TRUE,FALSE,FALSE,FALSE
+tt15379406,Feature Film,Christmas at the Holly Day Inn,2023,88,Comedy,5.3,88,TRUE,FALSE,FALSE,FALSE
+tt15388610,Feature Film,Zoey's Extraordinary Christmas,2021,99,Comedy,7.2,2232,TRUE,FALSE,FALSE,FALSE
+tt1539985,TV Movie,Christmas with the King Family,2009,60,Other,8.2,14,TRUE,FALSE,FALSE,FALSE
+tt15412176,TV Movie,"Next Stop, Christmas",2021,84,Comedy,7,2580,TRUE,FALSE,FALSE,FALSE
+tt1541785,TV Movie,Mid Life Christmas,2009,59,Comedy,6.5,108,TRUE,FALSE,FALSE,FALSE
+tt15420960,TV Movie,A Christmas Together with You,2021,83,Drama,6.5,1169,TRUE,FALSE,FALSE,FALSE
+tt1542347,Feature Film,A Carol of Christmas,2005,101,Comedy,5.3,24,TRUE,FALSE,FALSE,FALSE
+tt15425920,TV Movie,Christmas in Harmony,2021,84,Drama,5.5,734,TRUE,FALSE,FALSE,FALSE
+tt15450798,TV Movie,Hot Mess Holiday,2021,70,Comedy,5.6,446,FALSE,FALSE,FALSE,TRUE
+tt15463198,TV Movie,Our Christmas Journey,2021,84,Drama,6.6,471,TRUE,FALSE,FALSE,FALSE
+tt15484422,TV Movie,"You, Me & the Christmas Trees",2021,84,Romance,6.3,1289,TRUE,FALSE,FALSE,FALSE
+tt15485160,TV Movie,A Holiday in Harlem,2021,84,Drama,5.5,583,FALSE,FALSE,FALSE,TRUE
+tt15502006,TV Movie,A Mrs. Miracle Christmas,2021,84,Drama,7.3,946,TRUE,FALSE,FALSE,FALSE
+tt1550321,Feature Film,The Night Before Christmas,1951,49,Animation,7.3,289,TRUE,FALSE,FALSE,FALSE
+tt15508150,TV Movie,My Christmas Family Tree,2021,84,Drama,7.6,2338,TRUE,FALSE,FALSE,FALSE
+tt15515030,TV Movie,An Ice Wine Christmas,2021,84,Comedy,5.1,350,TRUE,FALSE,FALSE,FALSE
+tt15515260,TV Movie,Saying Yes to Christmas,2021,87,Drama,5.8,351,TRUE,FALSE,FALSE,FALSE
+tt15515414,TV Movie,Kirk Franklin's A Gospel Christmas,2021,87,Drama,6.5,316,TRUE,FALSE,FALSE,FALSE
+tt15515460,TV Movie,My Favorite Christmas Melody,2021,87,Comedy,5.5,260,TRUE,FALSE,FALSE,FALSE
+tt15515522,TV Movie,Christmas Movie Magic,2021,87,Comedy,6.3,659,TRUE,FALSE,FALSE,FALSE
+tt15515750,TV Movie,Ghosts of Christmas Past,2021,87,Comedy,6.4,701,TRUE,FALSE,FALSE,FALSE
+tt15515882,TV Movie,Under the Christmas Tree,2021,87,Drama,5.8,875,TRUE,FALSE,FALSE,FALSE
+tt1552113,TV Movie,Surviving the Holidays with Lewis Black,2009,97,Comedy,6.6,74,FALSE,FALSE,FALSE,TRUE
+tt15524132,Feature Film,Who Is Christmas Eve?,2021,90,Drama,6.9,75,TRUE,FALSE,FALSE,FALSE
+tt15565510,TV Movie,A Kiss Before Christmas,2021,83,Comedy,7.1,1812,TRUE,FALSE,FALSE,FALSE
+tt15565704,Feature Film,A Naija Christmas,2021,121,Comedy,4.9,440,TRUE,FALSE,FALSE,FALSE
+tt15565724,Feature Film,Grumpy Christmas,2021,87,Comedy,4.5,433,TRUE,FALSE,FALSE,FALSE
+tt15568228,Feature Film,Saving Christmas Spirit,2022,90,Comedy,5.7,456,TRUE,FALSE,FALSE,FALSE
+tt15655480,TV Movie,Christmas in My Heart,2021,84,Romance,6.5,1194,TRUE,FALSE,FALSE,FALSE
+tt1567140,TV Movie,The Night Before the Night Before Christmas,2010,88,Family,5.6,723,TRUE,FALSE,FALSE,FALSE
+tt15691922,TV Movie,Christmas CEO,2021,84,Romance,5.6,1050,TRUE,FALSE,FALSE,FALSE
+tt1570352,TV Movie,Christmas Dreams,2009,60,Family,6.6,30,TRUE,FALSE,FALSE,FALSE
+tt15706104,TV Movie,Boyfriends of Christmas Past,2021,84,Comedy,6,1299,TRUE,FALSE,FALSE,FALSE
+tt1570964,TV Movie,Curious George: A Very Monkey Christmas,2009,58,Other,6.3,623,TRUE,FALSE,FALSE,FALSE
+tt15716528,TV Movie,Joy for Christmas,2021,86,Comedy,6.2,745,TRUE,FALSE,FALSE,FALSE
+tt1572008,TV Movie,A Nanny for Christmas,2010,90,Comedy,5.3,1821,TRUE,FALSE,FALSE,FALSE
+tt15720718,TV Movie,Trolls Holiday in Harmony,2021,26,Other,6.1,536,FALSE,FALSE,FALSE,TRUE
+tt1573475,Feature Film,"Love, Guns & Christmas",2015,83,Other,6.3,16,TRUE,FALSE,FALSE,FALSE
+tt15739494,TV Movie,Christmas in Tahoe,2021,83,Drama,6.3,1228,TRUE,FALSE,FALSE,FALSE
+tt15758364,TV Movie,Christmas Sail,2021,84,Drama,6.2,1138,TRUE,FALSE,FALSE,FALSE
+tt15758400,TV Movie,Open by Christmas,2021,84,Romance,6.9,1393,TRUE,FALSE,FALSE,FALSE
+tt15766640,TV Movie,An Unexpected Christmas,2021,83,Romance,6.9,2580,TRUE,FALSE,FALSE,FALSE
+tt1577038,TV Movie,A Christmas Wish,2011,97,Comedy,6.5,2059,TRUE,FALSE,FALSE,FALSE
+tt15771862,Feature Film,Lacy's Christmas Do-Over,2021,93,Comedy,5.5,80,TRUE,FALSE,FALSE,FALSE
+tt15771958,Feature Film,Christmas in the Caribbean,2022,90,Comedy,4.3,50,TRUE,FALSE,FALSE,FALSE
+tt15772866,Feature Film,Christmas with the Chosen: The Messengers,2021,123,Other,7.8,881,TRUE,FALSE,FALSE,FALSE
+tt15783694,TV Movie,Merry Liddle Christmas Baby,2021,84,Comedy,6.5,329,TRUE,FALSE,FALSE,FALSE
+tt1579220,TV Movie,A Christmas Celebration: Send Round the Song,1992,60,Other,7.9,10,TRUE,FALSE,FALSE,FALSE
+tt1579947,TV Movie,Dora's Christmas Carol Adventure,2009,48,Other,4.5,56,TRUE,FALSE,FALSE,FALSE
+tt15800166,Feature Film,Adventures in Christmasing,2021,87,Drama,6.5,110,TRUE,FALSE,FALSE,FALSE
+tt15800254,TV Movie,The Bitch Who Stole Christmas,2021,86,Comedy,5.5,861,TRUE,FALSE,FALSE,FALSE
+tt15800378,TV Movie,Hip Hop Family Christmas,2021,89,Drama,5.1,139,TRUE,FALSE,FALSE,FALSE
+tt15800610,Feature Film,A Family Matters Christmas,2022,86,Comedy,5.3,54,TRUE,FALSE,FALSE,FALSE
+tt1581275,Feature Film,Christmas with Walt Disney,2009,51,Other,8,54,TRUE,FALSE,FALSE,FALSE
+tt15819904,TV Movie,Royally Wrapped for Christmas,2021,85,Romance,6.3,813,TRUE,FALSE,FALSE,FALSE
+tt15824322,Feature Film,Christmas with You,2022,89,Comedy,5.6,7205,TRUE,FALSE,FALSE,FALSE
+tt15829734,TV Movie,A Royal Queens Christmas,2021,84,Drama,6.5,1416,TRUE,FALSE,FALSE,FALSE
+tt15857304,TV Movie,Shaun the Sheep: The Flight Before Christmas,2021,30,Animation,7.3,2437,TRUE,FALSE,FALSE,FALSE
+tt15891306,TV Movie,Christmas in Toyland,2022,85,Comedy,6.4,782,TRUE,FALSE,FALSE,FALSE
+tt15904522,TV Movie,Christmas Time Is Here,2021,85,Comedy,5.4,702,TRUE,FALSE,FALSE,FALSE
+tt1590844,TV Movie,A Child's Christmases in Wales,2009,59,Comedy,7.3,160,TRUE,FALSE,FALSE,FALSE
+tt15943556,TV Movie,Christmas at Castle Hart,2021,84,Comedy,6.2,1907,TRUE,FALSE,FALSE,FALSE
+tt15978102,TV Movie,Angel Falls Christmas,2021,84,Drama,5,3701,TRUE,FALSE,FALSE,FALSE
+tt15979222,TV Movie,A Kindhearted Christmas,2021,84,Comedy,6.1,1847,TRUE,FALSE,FALSE,FALSE
+tt1601195,Feature Film,Home by Christmas,2010,95,Other,7.1,87,TRUE,FALSE,FALSE,FALSE
+tt16047114,TV Movie,A Godwink Christmas: Miracle of Love,2021,84,Comedy,6.2,854,TRUE,FALSE,FALSE,FALSE
+tt16047292,TV Movie,Christmas for Keeps,2021,84,Comedy,5.2,593,TRUE,FALSE,FALSE,FALSE
+tt16047670,TV Movie,Time for Them to Come Home for Christmas,2021,84,Comedy,7.2,1660,TRUE,FALSE,FALSE,FALSE
+tt16048864,Feature Film,A Christmas Carol,2021,50,Other,4.2,15,TRUE,FALSE,FALSE,FALSE
+tt16057434,TV Movie,A Christmas Witness,2021,84,Romance,5.4,254,TRUE,FALSE,FALSE,FALSE
+tt1606191,Feature Film,A Christmas Snow,2009,110,Comedy,6,874,TRUE,FALSE,FALSE,FALSE
+tt16103310,TV Movie,The Christmas Thief,2021,84,Family,5.6,204,TRUE,FALSE,FALSE,FALSE
+tt16117078,Feature Film,Days of Our Lives: A Very Salem Christmas,2021,78,Drama,6.1,147,TRUE,FALSE,FALSE,FALSE
+tt16148580,Feature Film,Christmas Trees 8,2021,94,Comedy,3.1,357,TRUE,FALSE,FALSE,FALSE
+tt16150870,TV Movie,A Lot Like Christmas,2021,86,Comedy,6.3,879,TRUE,FALSE,FALSE,FALSE
+tt16150878,TV Movie,A Christmas Star,2021,84,Romance,6.5,914,TRUE,FALSE,FALSE,FALSE
+tt1617154,Feature Film,On Holiday,2010,85,Comedy,7.6,61,FALSE,FALSE,FALSE,TRUE
+tt1623143,TV Movie,Christmas Spirits,1981,45,Other,6.5,39,TRUE,FALSE,FALSE,FALSE
+tt1626240,Feature Film,Summertime Christmas,2010,111,Comedy,3.1,115,TRUE,FALSE,FALSE,FALSE
+tt16274720,Feature Film,Save Christmas,2022,90,Comedy,8.9,260,TRUE,FALSE,FALSE,FALSE
+tt16275882,TV Movie,A Christmas Miracle for Daisy,2021,85,Romance,5.9,2602,TRUE,FALSE,FALSE,FALSE
+tt16280514,TV Movie,Christmas Is You,2021,84,Family,5.8,401,TRUE,FALSE,FALSE,FALSE
+tt16282114,TV Movie,Eight Gifts of Hanukkah,2021,84,Drama,6.9,1081,FALSE,TRUE,FALSE,FALSE
+tt16365840,TV Movie,The Christmas House 2: Deck Those Halls,2021,84,Comedy,6.4,1083,TRUE,FALSE,FALSE,FALSE
+tt16376618,TV Movie,A Very Boy Band Holiday,2021,41,Other,6.5,109,FALSE,FALSE,FALSE,TRUE
+tt1640116,Feature Film,Christmas with a Capital C,2011,81,Comedy,4.3,1107,TRUE,FALSE,FALSE,FALSE
+tt1640714,Feature Film,The Christmas Bunny,2010,98,Drama,6,853,TRUE,FALSE,FALSE,FALSE
+tt16410192,TV Movie,Someday at Christmas,2021,120,Romance,6.8,49,TRUE,FALSE,FALSE,FALSE
+tt16451308,Feature Film,The Love of a King Christmas Movie Musical,2021,66,Other,7.6,13,TRUE,FALSE,FALSE,FALSE
+tt1651084,Feature Film,Holiday,2010,90,Comedy,5.7,208,FALSE,FALSE,FALSE,TRUE
+tt1651146,TV Movie,The Christmas Tree,1991,43,Animation,1.4,854,TRUE,FALSE,FALSE,FALSE
+tt1656695,Feature Film,Nixon and Hogan Smoke Christmas,2010,71,Comedy,3.9,34,TRUE,FALSE,FALSE,FALSE
+tt1663628,Feature Film,Christmas Mail,2010,89,Comedy,5.3,1891,TRUE,FALSE,FALSE,FALSE
+tt1678037,Feature Film,A Holiday Heist,2011,90,Comedy,3.9,349,FALSE,FALSE,FALSE,TRUE
+tt1681372,Feature Film,Caesar and Otto's Deadly Xmas,2012,83,Comedy,3.6,194,TRUE,FALSE,FALSE,FALSE
+tt1691012,TV Movie,The Dog Who Saved Christmas Vacation,2010,89,Comedy,3.7,466,TRUE,FALSE,FALSE,FALSE
+tt1692235,Feature Film,A Cadaver Christmas,2011,85,Comedy,4.6,833,TRUE,FALSE,FALSE,FALSE
+tt16985078,Feature Film,No Good Deed: A Crowdfunding Holiday Heist,2021,53,Other,7.8,47,FALSE,FALSE,FALSE,TRUE
+tt16985198,Feature Film,The Christmas Spirit,2022,89,Family,6.8,17,TRUE,FALSE,FALSE,FALSE
+tt1699511,Feature Film,Haunted Holiday,2010,100,Comedy,3.4,659,FALSE,FALSE,FALSE,TRUE
+tt1699746,TV Movie,Christmas Cupid,2010,85,Comedy,5.4,4018,TRUE,FALSE,FALSE,FALSE
+tt17013954,TV Movie,LEGO Friends: Holiday Special,2021,21,Animation,6,27,FALSE,FALSE,FALSE,TRUE
+tt17057126,Feature Film,Christmas at the Holly Hotel,2022,85,Comedy,3.9,303,TRUE,FALSE,FALSE,FALSE
+tt17058290,TV Movie,Christmas with the Sex Pistols,2013,60,Other,7.1,11,TRUE,FALSE,FALSE,FALSE
+tt1708658,TV Movie,November Christmas,2010,96,Drama,7.5,2033,TRUE,FALSE,FALSE,FALSE
+tt1711525,Feature Film,Office Christmas Party,2016,105,Comedy,5.9,85255,TRUE,FALSE,FALSE,FALSE
+tt1717155,TV Movie,Holly and Hal Moose: Our Uplifting Christmas Adventure,2008,50,Family,6.8,19,TRUE,FALSE,FALSE,FALSE
+tt1720276,TV Movie,The Town Christmas Forgot,2010,84,Comedy,5.7,876,TRUE,FALSE,FALSE,FALSE
+tt17220704,Feature Film,A Christmas Story Christmas,2022,98,Comedy,6.7,16778,TRUE,FALSE,FALSE,FALSE
+tt1722515,Feature Film,Home for Christmas,2010,90,Comedy,6.1,1123,TRUE,FALSE,FALSE,FALSE
+tt1730762,TV Movie,On Strike for Christmas,2010,87,Comedy,5.2,965,TRUE,FALSE,FALSE,FALSE
+tt1733111,TV Movie,Cancel Christmas,2010,87,Comedy,5.5,608,TRUE,FALSE,FALSE,FALSE
+tt17371496,TV Movie,Meeting Mr. Christmas,2022,90,Romance,6,304,TRUE,FALSE,FALSE,FALSE
+tt1738298,Feature Film,Christmas in South Africa,2010,105,Comedy,3.3,813,TRUE,FALSE,FALSE,FALSE
+tt17542540,Feature Film,Christmas with the Campbells,2022,88,Comedy,5.4,1422,TRUE,FALSE,FALSE,FALSE
+tt1754658,Feature Film,The Magic of Christmas II,2010,74,Family,7.6,11,TRUE,FALSE,FALSE,FALSE
+tt1754946,Feature Film,Holidays by the Sea,2011,77,Comedy,5.6,411,FALSE,FALSE,FALSE,TRUE
+tt1756835,Feature Film,The Wizard's Christmas,2014,90,Animation,5.2,42,TRUE,FALSE,FALSE,FALSE
+tt17663776,TV Movie,A Royal Christmas Match,2022,85,Comedy,5.5,293,TRUE,FALSE,FALSE,FALSE
+tt1785287,TV Movie,An Old Fashioned Christmas,2010,88,Drama,5.9,467,TRUE,FALSE,FALSE,FALSE
+tt1790621,TV Movie,A Kiss for Christmas,2011,96,Comedy,6.1,4940,TRUE,FALSE,FALSE,FALSE
+tt1795004,Feature Film,The Last Holiday,2009,50,Other,7.1,45,FALSE,FALSE,FALSE,TRUE
+tt1806954,Feature Film,Lost Christmas,2011,89,Drama,7,1494,TRUE,FALSE,FALSE,FALSE
+tt18077672,TV Movie,Jolly Good Christmas,2022,90,Comedy,6.6,1335,TRUE,FALSE,FALSE,FALSE
+tt1807892,TV Movie,Holiday Engagement,2011,97,Comedy,6,4150,FALSE,FALSE,FALSE,TRUE
+tt1813195,TV Movie,Bob Hope's Cross-Country Christmas,1991,60,Other,8.2,15,TRUE,FALSE,FALSE,FALSE
+tt1813773,TV Movie,At Home for Christmas,2011,84,Comedy,5.8,113,TRUE,FALSE,FALSE,FALSE
+tt18178194,TV Movie,A Tiny Home Christmas,2022,90,Drama,5.3,252,TRUE,FALSE,FALSE,FALSE
+tt18239364,Feature Film,The Christmas Challenge,2022,86,Comedy,4.8,42,TRUE,FALSE,FALSE,FALSE
+tt1825712,TV Movie,Christmas Spirit,2011,88,Drama,3.8,154,TRUE,FALSE,FALSE,FALSE
+tt18260368,Feature Film,A Christmas Gift,2022,90,Family,6.2,45,TRUE,FALSE,FALSE,FALSE
+tt18278400,TV Movie,Cloudy with a Chance of Christmas,2022,90,Comedy,5.6,337,TRUE,FALSE,FALSE,FALSE
+tt1828976,TV Movie,"Good Luck Charlie, It's Christmas!",2011,90,Comedy,6.3,7057,TRUE,FALSE,FALSE,FALSE
+tt1829005,TV Movie,Maxine's Christmas Carol,2000,30,Animation,5.7,32,TRUE,FALSE,FALSE,FALSE
+tt18315972,TV Movie,A Merry Single Christmas,2022,88,Romance,5.1,215,TRUE,FALSE,FALSE,FALSE
+tt1834319,Feature Film,The Christmas Tango,2011,102,Drama,7.1,3697,TRUE,FALSE,FALSE,FALSE
+tt18350906,TV Movie,A Country Christmas Harmony,2022,87,Drama,5.2,352,TRUE,FALSE,FALSE,FALSE
+tt18350946,TV Movie,Steppin' Into the Holiday,2022,87,Comedy,6.4,713,FALSE,FALSE,FALSE,TRUE
+tt18350998,Feature Film,Cupid's Christmas,2022,84,Comedy,5.1,66,TRUE,FALSE,FALSE,FALSE
+tt18361702,TV Movie,A Holiday Spectacular,2022,84,Comedy,7.2,1220,FALSE,FALSE,FALSE,TRUE
+tt18396434,Feature Film,A Home for the Holidays,2023,93,Drama,6,38,FALSE,FALSE,FALSE,TRUE
+tt1846442,TV Movie,12 Dates of Christmas,2011,90,Comedy,6.3,7803,TRUE,FALSE,FALSE,FALSE
+tt1847615,Feature Film,All I Want Is Christmas,2012,100,Comedy,5.4,588,TRUE,FALSE,FALSE,FALSE
+tt18546988,Feature Film,Christmas in Wolf Creek,2022,86,Comedy,4.6,54,TRUE,FALSE,FALSE,FALSE
+tt1856053,Feature Film,"Little Brother, Big Trouble: A Christmas Adventure",2012,79,Other,5.6,1306,TRUE,FALSE,FALSE,FALSE
+tt18687904,Feature Film,Holidays,2022,87,Other,7.1,15,FALSE,FALSE,FALSE,TRUE
+tt18884832,TV Movie,Christmas Class Reunion,2022,84,Comedy,6.1,955,TRUE,FALSE,FALSE,FALSE
+tt18938222,Feature Film,The Christmas Tapes,2022,100,Comedy,5.8,93,TRUE,FALSE,FALSE,FALSE
+tt18949684,Feature Film,The Sound of Christmas,2022,95,Drama,7.1,194,TRUE,FALSE,FALSE,FALSE
+tt1895321,TV Movie,Christmas Lodge,2011,86,Comedy,6,2693,TRUE,FALSE,FALSE,FALSE
+tt19037878,TV Movie,Sappy Holiday,2022,91,Comedy,6.5,387,FALSE,FALSE,FALSE,TRUE
+tt1918936,TV Movie,Mariah Carey: Merry Christmas to You,2010,60,Other,4.9,61,TRUE,FALSE,FALSE,FALSE
+tt19264600,TV Movie,Catering Christmas,2022,86,Comedy,6.4,1794,TRUE,FALSE,FALSE,FALSE
+tt1926540,TV Movie,Extreme Christmas Trees,2011,60,Other,6.5,41,TRUE,FALSE,FALSE,FALSE
+tt19394150,TV Movie,A Cozy Christmas Inn,2022,84,Comedy,6.1,973,TRUE,FALSE,FALSE,FALSE
+tt19408396,TV Movie,A Royal Christmas on Ice,2022,85,Comedy,5.2,451,TRUE,FALSE,FALSE,FALSE
+tt1942787,TV Movie,3 Holiday Tails,2011,88,Comedy,5.6,828,FALSE,FALSE,FALSE,TRUE
+tt19499500,TV Movie,Fit for Christmas,2022,88,Comedy,5.7,588,TRUE,FALSE,FALSE,FALSE
+tt19499664,TV Movie,Must Love Christmas,2022,87,Comedy,6.5,504,TRUE,FALSE,FALSE,FALSE
+tt19511660,Feature Film,A True Christmas,2022,86,Drama,5.7,20,TRUE,FALSE,FALSE,FALSE
+tt19514490,TV Movie,Christmas on Mistletoe Lake,2022,87,Comedy,5.6,347,TRUE,FALSE,FALSE,FALSE
+tt1954334,Feature Film,Christmas with the Dead,2012,88,Other,6.1,90,TRUE,FALSE,FALSE,FALSE
+tt1957867,Feature Film,Christmas in Compton,2012,93,Comedy,4.6,320,TRUE,FALSE,FALSE,FALSE
+tt19723342,Feature Film,Delivery by Christmas,2022,97,Comedy,5.5,862,TRUE,FALSE,FALSE,FALSE
+tt1982735,Feature Film,Killer Holiday,2013,89,Other,3.1,678,FALSE,FALSE,FALSE,TRUE
+tt19867870,Feature Film,A Miracle Before Christmas,2022,103,Drama,5.6,136,TRUE,FALSE,FALSE,FALSE
+tt19895682,TV Movie,My Favorite Christmas Tree,2022,90,Comedy,6,446,TRUE,FALSE,FALSE,FALSE
+tt19898828,TV Movie,A Merry Christmas Wish,2022,86,Comedy,6.1,951,TRUE,FALSE,FALSE,FALSE
+tt2006707,TV Movie,Christmas Comes Home to Canaan,2011,85,Drama,5.6,494,TRUE,FALSE,FALSE,FALSE
+tt2008491,TV Movie,Trading Christmas,2010,87,Comedy,6.9,1839,TRUE,FALSE,FALSE,FALSE
+tt20115364,TV Movie,Campfire Christmas,2022,84,Other,5.4,639,TRUE,FALSE,FALSE,FALSE
+tt20191820,Feature Film,Colorado Christmas,2023,94,Drama,4.6,72,TRUE,FALSE,FALSE,FALSE
+tt20193354,TV Movie,Ghosts of Christmas Always,2022,84,Other,7.6,1567,TRUE,FALSE,FALSE,FALSE
+tt20220954,TV Movie,Scentsational Christmas,2022,87,Comedy,5.6,294,TRUE,FALSE,FALSE,FALSE
+tt2022482,Feature Film,Nothing for Christmas,2011,94,Drama,7.9,32,TRUE,FALSE,FALSE,FALSE
+tt2024354,TV Movie,A Christmas Wedding Tail,2011,90,Comedy,4.3,715,TRUE,FALSE,FALSE,FALSE
+tt20258516,TV Movie,We Need A Little Christmas,2022,85,Comedy,6.6,623,TRUE,FALSE,FALSE,FALSE
+tt2034761,Feature Film,Journey to the Christmas Star,2012,80,Other,5.7,1681,TRUE,FALSE,FALSE,FALSE
+tt2039366,TV Movie,Lucky Christmas,2011,86,Comedy,5.5,1284,TRUE,FALSE,FALSE,FALSE
+tt2039389,TV Movie,The Case for Christmas,2011,88,Comedy,5.9,753,TRUE,FALSE,FALSE,FALSE
+tt2039390,TV Movie,The Christmas Pageant,2011,87,Comedy,5.5,599,TRUE,FALSE,FALSE,FALSE
+tt2043993,TV Movie,No Sleep 'Til Christmas,2018,90,Comedy,6.5,2905,TRUE,FALSE,FALSE,FALSE
+tt20445598,Feature Film,Christmas on Repeat,2022,89,Comedy,5.4,208,TRUE,FALSE,FALSE,FALSE
+tt2048854,Feature Film,Hercules Saves Christmas,2012,79,Family,3.1,178,TRUE,FALSE,FALSE,FALSE
+tt20561114,Feature Film,Christmas on Mistletoe Farm,2022,102,Comedy,4.5,1722,TRUE,FALSE,FALSE,FALSE
+tt2072025,TV Movie,12 Wishes of Christmas,2011,87,Comedy,5.4,846,TRUE,FALSE,FALSE,FALSE
+tt20782936,Feature Film,Christmas Holidate,2023,84,Comedy,2.8,14,TRUE,FALSE,FALSE,FALSE
+tt2078672,TV Movie,Love's Christmas Journey,2011,172,Drama,6.4,809,TRUE,FALSE,FALSE,FALSE
+tt2079513,TV Movie,hoops&yoyo Ruin Christmas,2011,22,Animation,6,116,TRUE,FALSE,FALSE,FALSE
+tt2081367,Feature Film,So This Is Christmas,2013,115,Comedy,4.1,797,TRUE,FALSE,FALSE,FALSE
+tt2083355,Feature Film,The Best Man Holiday,2013,123,Comedy,6.6,16657,FALSE,FALSE,FALSE,TRUE
+tt20866718,TV Movie,The Christmas Checklist,2022,90,Drama,6.7,43,TRUE,FALSE,FALSE,FALSE
+tt2086905,Feature Film,"Ryang-kang-do: Merry Christmas, North!",2011,95,Comedy,8.7,42,TRUE,FALSE,FALSE,FALSE
+tt20876910,TV Movie,We Wish You a Married Christmas,2022,84,Comedy,5.9,1085,TRUE,FALSE,FALSE,FALSE
+tt20876930,TV Movie,"Planes, Trains, and Christmas Trees",2022,85,Comedy,5.8,291,TRUE,FALSE,FALSE,FALSE
+tt20892688,TV Movie,Inventing the Christmas Prince,2022,84,Comedy,6.6,701,TRUE,FALSE,FALSE,FALSE
+tt20917338,Feature Film,Scrooge: A Christmas Carol,2022,96,Other,6.2,6795,TRUE,FALSE,FALSE,FALSE
+tt2094052,Feature Film,Mandie and the Forgotten Christmas,2011,107,Drama,5,400,TRUE,FALSE,FALSE,FALSE
+tt2094146,TV Movie,The Heart of Christmas,2011,86,Drama,6.8,1225,TRUE,FALSE,FALSE,FALSE
+tt2098799,Feature Film,A Country Christmas,2013,91,Family,5.4,407,TRUE,FALSE,FALSE,FALSE
+tt2100546,TV Movie,Ice Age: A Mammoth Christmas,2011,26,Other,6.4,11016,TRUE,FALSE,FALSE,FALSE
+tt21054736,Feature Film,Teddy's Christmas,2022,76,Other,6.2,265,TRUE,FALSE,FALSE,FALSE
+tt21058846,TV Movie,My Grown-Up Christmas List,2022,85,Comedy,6.6,1196,TRUE,FALSE,FALSE,FALSE
+tt21063466,TV Movie,A Royal Corgi Christmas,2022,84,Comedy,5.8,713,TRUE,FALSE,FALSE,FALSE
+tt21072238,TV Movie,A Christmas to Treasure,2022,89,Comedy,4.9,486,TRUE,FALSE,FALSE,FALSE
+tt2110388,Feature Film,All American Christmas Carol,2013,88,Comedy,4.5,616,TRUE,FALSE,FALSE,FALSE
+tt2112127,TV Movie,Christmas Magic,2011,84,Drama,6.6,1587,TRUE,FALSE,FALSE,FALSE
+tt21148452,TV Movie,Christmas Plus One,2022,92,Comedy,6.2,425,TRUE,FALSE,FALSE,FALSE
+tt21156616,TV Movie,Christmas Party Crashers,2022,84,Comedy,5.7,157,TRUE,FALSE,FALSE,FALSE
+tt2119555,Feature Film,The Unusual Calling of Charlie Christmas,2012,108,Other,8.2,37,TRUE,FALSE,FALSE,FALSE
+tt21220756,TV Movie,A Christmas Masquerade,2022,88,Comedy,5.3,341,TRUE,FALSE,FALSE,FALSE
+tt2131447,Feature Film,A Christmas Carol,1979,89,Other,3.2,25,TRUE,FALSE,FALSE,FALSE
+tt2131450,TV Movie,A Night at the Movies: Merry Christmas!,2011,58,Other,7.2,157,TRUE,FALSE,FALSE,FALSE
+tt21329252,TV Movie,Destined at Christmas,2022,86,Comedy,6.9,817,TRUE,FALSE,FALSE,FALSE
+tt21334846,TV Movie,The Christmas Retreat,2022,90,Comedy,6.1,493,TRUE,FALSE,FALSE,FALSE
+tt2134036,TV Movie,A Very Pink Christmas,2011,22,Animation,6.6,103,TRUE,FALSE,FALSE,FALSE
+tt21365892,Feature Film,It's Christmas Again,2022,88,Drama,7.2,59,TRUE,FALSE,FALSE,FALSE
+tt2136823,TV Movie,Christmas at River Cottage,1999,24,Other,8.8,20,TRUE,FALSE,FALSE,FALSE
+tt21373340,TV Movie,Christmas in Rockwell,2022,83,Comedy,6.2,76,TRUE,FALSE,FALSE,FALSE
+tt21374064,Feature Film,Christmas Lucky Charm,2022,90,Comedy,5.4,174,TRUE,FALSE,FALSE,FALSE
+tt21430254,Feature Film,Our Christmas Love Story,2022,110,Comedy,7.9,17,TRUE,FALSE,FALSE,FALSE
+tt2145851,TV Movie,RiffTrax Live: Christmas Shorts-stravaganza!,2009,95,Comedy,7.8,220,TRUE,FALSE,FALSE,FALSE
+tt2148871,Feature Film,Bloody Christmas,2012,90,Other,4.7,38,TRUE,FALSE,FALSE,FALSE
+tt2156911,Feature Film,The Elf Who Stole Christmas,2011,69,Animation,6.9,14,TRUE,FALSE,FALSE,FALSE
+tt2156981,Feature Film,Silent Night: The Story of the First Christmas,2000,50,Animation,6.8,51,TRUE,FALSE,FALSE,FALSE
+tt21603520,TV Movie,Time for Him to Come Home for Christmas,2022,84,Comedy,7.5,1728,TRUE,FALSE,FALSE,FALSE
+tt2160409,TV Movie,The Toys That Made Christmas,2011,90,Other,7.1,28,TRUE,FALSE,FALSE,FALSE
+tt21663620,Feature Film,The Holiday Dating Guide,2022,90,Comedy,6.2,410,FALSE,FALSE,FALSE,TRUE
+tt2170474,Feature Film,Walter & Tandoori's Christmas,2011,85,Animation,5.8,36,TRUE,FALSE,FALSE,FALSE
+tt2170758,TV Movie,Celtic Thunder: Christmas,2009,61,Other,8.3,40,TRUE,FALSE,FALSE,FALSE
+tt21817374,Feature Film,Christmas Ransom,2022,84,Other,4.6,254,TRUE,FALSE,FALSE,FALSE
+tt2181853,TV Movie,"It's Christmas, Carol!",2012,87,Drama,5.8,1011,TRUE,FALSE,FALSE,FALSE
+tt21821260,Feature Film,A Christmas Open House,2022,88,Drama,5.1,244,TRUE,FALSE,FALSE,FALSE
+tt21821322,TV Movie,Designing Christmas,2022,87,Drama,5.9,264,TRUE,FALSE,FALSE,FALSE
+tt21821424,Feature Film,A Gingerbread Christmas,2022,85,Drama,6,331,TRUE,FALSE,FALSE,FALSE
+tt21821886,Feature Film,One Delicious Christmas,2022,84,Drama,6.1,152,TRUE,FALSE,FALSE,FALSE
+tt21841642,TV Movie,A Maple Valley Christmas,2022,85,Comedy,6.3,1120,TRUE,FALSE,FALSE,FALSE
+tt2186358,Feature Film,The Unattainably Perfect Gay Christmas,2013,69,Comedy,6.6,102,TRUE,FALSE,FALSE,FALSE
+tt21868598,Feature Film,My Christmas Fiancé,2022,92,Comedy,4.6,235,TRUE,FALSE,FALSE,FALSE
+tt21871754,Feature Film,All I Want for Christmas,2022,86,Family,6,46,TRUE,FALSE,FALSE,FALSE
+tt21906206,Feature Film,Hotel for the Holidays,2022,84,Comedy,5.2,1210,FALSE,FALSE,FALSE,TRUE
+tt21933082,TV Movie,Dolly Parton's Mountain Magic Christmas,2022,85,Other,5.7,513,TRUE,FALSE,FALSE,FALSE
+tt21935558,TV Movie,The Art of Christmas,2022,85,Romance,5.9,275,TRUE,FALSE,FALSE,FALSE
+tt21950514,TV Movie,A Hollywood Christmas,2022,91,Comedy,5.2,1290,TRUE,FALSE,FALSE,FALSE
+tt21974122,TV Movie,A Christmas Spark,2022,85,Comedy,6,463,TRUE,FALSE,FALSE,FALSE
+tt21974146,Feature Film,The Night Before Christmas,2022,87,Comedy,6.5,201,TRUE,FALSE,FALSE,FALSE
+tt21994906,Feature Film,Your Christmas or Mine?,2022,95,Comedy,6.4,7452,TRUE,FALSE,FALSE,FALSE
+tt22005252,Feature Film,The Christmas Clapback,2022,79,Comedy,7.2,73,TRUE,FALSE,FALSE,FALSE
+tt2201034,TV Movie,Holiday Spin,2012,89,Drama,5.7,477,FALSE,FALSE,FALSE,TRUE
+tt2202798,TV Movie,Christmas Twister,2012,86,Other,3.5,1156,TRUE,FALSE,FALSE,FALSE
+tt22028080,TV Movie,I'm Glad It's Christmas,2022,85,Comedy,6.4,635,TRUE,FALSE,FALSE,FALSE
+tt22037802,Feature Film,All I Want for Christmas: The Magic Time Machine,2022,92,Other,5.7,65,TRUE,FALSE,FALSE,FALSE
+tt22042742,Feature Film,Christmas Bloody Christmas,2022,86,Other,5.1,4796,TRUE,FALSE,FALSE,FALSE
+tt22050856,TV Movie,A Christmas... Present,2022,85,Comedy,5.9,976,TRUE,FALSE,FALSE,FALSE
+tt22072268,TV Movie,Christmas on Candy Cane Lane,2022,85,Comedy,5.6,363,TRUE,FALSE,FALSE,FALSE
+tt22166882,TV Movie,All Saints Christmas,2022,84,Comedy,5.8,438,TRUE,FALSE,FALSE,FALSE
+tt22167232,Feature Film,Reporting for Christmas,2023,86,Drama,5.8,261,TRUE,FALSE,FALSE,FALSE
+tt22168286,Feature Film,Amityville Christmas Vacation,2022,47,Comedy,4.7,93,TRUE,FALSE,FALSE,FALSE
+tt22176928,Feature Film,Uninvited for the Holidays,2022,72,Comedy,7.7,421,FALSE,FALSE,FALSE,TRUE
+tt22192262,TV Movie,The Case of the Christmas Diamond,2022,90,Comedy,5.2,224,TRUE,FALSE,FALSE,FALSE
+tt22196454,TV Movie,A Kismet Christmas,2022,84,Comedy,6.5,859,TRUE,FALSE,FALSE,FALSE
+tt22207152,Feature Film,A Christmas Mystery,2022,87,Comedy,5.9,866,TRUE,FALSE,FALSE,FALSE
+tt22207828,TV Movie,A Christmas Cookie Catastrophe,2022,84,Comedy,6.3,896,TRUE,FALSE,FALSE,FALSE
+tt2224111,Feature Film,Christmas. Uncensored,2012,86,Drama,5.5,467,TRUE,FALSE,FALSE,FALSE
+tt22245568,TV Movie,The Great Holiday Bake War,2022,84,Comedy,6.1,109,FALSE,FALSE,FALSE,TRUE
+tt22245614,TV Movie,A Christmas Fumble,2022,83,Comedy,5.9,205,TRUE,FALSE,FALSE,FALSE
+tt22246514,TV Movie,A Magical Christmas Village,2022,84,Comedy,6.1,1000,TRUE,FALSE,FALSE,FALSE
+tt22246560,TV Movie,"Lights, Camera, Christmas!",2022,84,Comedy,6.6,1074,TRUE,FALSE,FALSE,FALSE
+tt22247502,TV Movie,When I Think of Christmas,2022,84,Comedy,5.8,787,TRUE,FALSE,FALSE,FALSE
+tt22247540,TV Movie,My Southern Family Christmas,2022,84,Comedy,7.1,1216,TRUE,FALSE,FALSE,FALSE
+tt22247650,TV Movie,A Tale of Two Christmases,2022,84,Comedy,5.6,717,TRUE,FALSE,FALSE,FALSE
+tt22258178,TV Movie,Christmas Bedtime Stories,2022,84,Comedy,5,877,TRUE,FALSE,FALSE,FALSE
+tt22258198,TV Movie,Our Italian Christmas Memories,2022,84,Comedy,6.2,757,TRUE,FALSE,FALSE,FALSE
+tt22261236,TV Movie,A Prince and Pauper Christmas,2022,88,Comedy,5.5,190,TRUE,FALSE,FALSE,FALSE
+tt22262600,TV Movie,A Big Fat Family Christmas,2022,85,Comedy,6.6,770,TRUE,FALSE,FALSE,FALSE
+tt2228450,TV Movie,Christmas Angel,2012,88,Drama,6.7,1252,TRUE,FALSE,FALSE,FALSE
+tt22295836,TV Movie,A Fabled Holiday,2022,84,Comedy,6.6,1137,FALSE,FALSE,FALSE,TRUE
+tt22295902,TV Movie,Undercover Holiday,2022,84,Comedy,5.4,750,FALSE,FALSE,FALSE,TRUE
+tt22296044,TV Movie,The Holiday Sitter,2022,84,Comedy,6.6,1878,FALSE,FALSE,FALSE,TRUE
+tt22302170,Feature Film,This Is Christmas,2022,111,Comedy,6.9,2057,TRUE,FALSE,FALSE,FALSE
+tt22307204,TV Movie,Holiday Heritage,2022,84,Comedy,5.9,351,FALSE,FALSE,FALSE,TRUE
+tt22307338,TV Movie,Twas the Night Before Christmas,2022,84,Comedy,6.7,763,TRUE,FALSE,FALSE,FALSE
+tt22307422,TV Movie,Hanukkah on Rye,2022,85,Comedy,7.3,1059,FALSE,TRUE,FALSE,FALSE
+tt22307560,TV Movie,Long Lost Christmas,2022,84,Comedy,6.8,926,TRUE,FALSE,FALSE,FALSE
+tt22308008,TV Movie,The Holiday Stocking,2022,84,Comedy,6.7,478,FALSE,FALSE,FALSE,TRUE
+tt22309256,Feature Film,Christmas in Paradise,2022,89,Comedy,3.6,390,TRUE,FALSE,FALSE,FALSE
+tt22325454,Feature Film,A Savage Christmas,2023,90,Comedy,7.3,75,TRUE,FALSE,FALSE,FALSE
+tt22495080,Feature Film,For the Love of Christmas,2022,123,Comedy,6.3,17,TRUE,FALSE,FALSE,FALSE
+tt22499672,TV Movie,Christmas at the Drive-In,2022,85,Comedy,6,805,TRUE,FALSE,FALSE,FALSE
+tt22499790,TV Movie,Aisle Be Home for Christmas,2022,85,Comedy,5.2,207,TRUE,FALSE,FALSE,FALSE
+tt22499914,TV Movie,Crown Prince of Christmas,2022,85,Comedy,5.3,352,TRUE,FALSE,FALSE,FALSE
+tt22500220,TV Movie,A Brush with Christmas,2022,83,Comedy,5.9,647,TRUE,FALSE,FALSE,FALSE
+tt22505680,Feature Film,Christmas at the Greenbrier,2022,90,Comedy,7.3,65,TRUE,FALSE,FALSE,FALSE
+tt22505724,Feature Film,A Perfect Christmas Pairing,2023,85,Romance,6.1,69,TRUE,FALSE,FALSE,FALSE
+tt22527810,TV Movie,The 12 Days of Christmas Eve,2022,90,Comedy,6.2,694,TRUE,FALSE,FALSE,FALSE
+tt2256703,TV Movie,Hitched for the Holidays,2012,87,Drama,6.5,2245,FALSE,FALSE,FALSE,TRUE
+tt2263430,Feature Film,Christmas Grace,2013,84,Drama,4.3,629,TRUE,FALSE,FALSE,FALSE
+tt22688146,Feature Film,A Nashville Country Christmas,2022,86,Comedy,7.6,77,TRUE,FALSE,FALSE,FALSE
+tt2273641,Feature Film,Christmas Miracle,2012,92,Family,5.3,694,TRUE,FALSE,FALSE,FALSE
+tt22740828,TV Movie,Well Suited for Christmas,2022,88,Comedy,6.4,529,TRUE,FALSE,FALSE,FALSE
+tt22751010,TV Movie,Record Breaking Christmas,2022,90,Family,5.4,222,TRUE,FALSE,FALSE,FALSE
+tt2278803,Feature Film,A Dog for Christmas,2015,89,Comedy,4.8,752,TRUE,FALSE,FALSE,FALSE
+tt22814692,Feature Film,Holiday Harmony,2022,110,Comedy,6.2,1199,FALSE,FALSE,FALSE,TRUE
+tt2289406,TV Movie,Baby's First Christmas,2012,85,Family,5.4,723,TRUE,FALSE,FALSE,FALSE
+tt2294459,Feature Film,A Christmas Carol,2012,82,Drama,3.5,203,TRUE,FALSE,FALSE,FALSE
+tt2294853,TV Movie,The Dog Who Saved the Holidays,2012,83,Comedy,4.5,308,FALSE,FALSE,FALSE,TRUE
+tt2299368,TV Movie,A Fairly Odd Christmas,2012,68,Comedy,4.3,1011,TRUE,FALSE,FALSE,FALSE
+tt23029064,TV Movie,Dognapped: Hound for the Holidays,2022,86,Other,4.6,157,FALSE,FALSE,FALSE,TRUE
+tt2304098,TV Movie,Holly's Holiday,2011,85,Other,5.4,1340,FALSE,FALSE,FALSE,TRUE
+tt2306587,TV Movie,Jingle & Bell's Christmas Star,2012,30,Animation,7.2,82,TRUE,FALSE,FALSE,FALSE
+tt2308733,TV Movie,Home Alone: The Holiday Heist,2012,87,Comedy,3.5,11891,FALSE,FALSE,FALSE,TRUE
+tt23099300,TV Movie,All I Didn't Want for Christmas,2022,89,Comedy,6,215,TRUE,FALSE,FALSE,FALSE
+tt23101288,TV Movie,A New Diva's Christmas Carol,2022,84,Comedy,5.2,148,TRUE,FALSE,FALSE,FALSE
+tt2315500,TV Movie,A Golden Christmas 3,2012,88,Comedy,5.6,883,TRUE,FALSE,FALSE,FALSE
+tt2316383,Feature Film,Adventures of Bailey: Christmas Hero,2012,87,Family,6.2,118,TRUE,FALSE,FALSE,FALSE
+tt2316852,Feature Film,What She Wants for Christmas,2012,84,Family,4,147,TRUE,FALSE,FALSE,FALSE
+tt23204056,TV Movie,The Holiday Swap,2022,91,Drama,5.9,123,FALSE,FALSE,FALSE,TRUE
+tt2325491,Feature Film,12 Dogs of Christmas: Great Puppy Rescue,2012,102,Other,5.1,490,TRUE,FALSE,FALSE,FALSE
+tt2325993,TV Movie,The 12 Disasters of Christmas,2012,90,Other,3.7,1242,TRUE,FALSE,FALSE,FALSE
+tt2327655,Feature Film,Xmas Without China,2013,70,Comedy,7.5,46,TRUE,FALSE,FALSE,FALSE
+tt2328727,Feature Film,A Christmas Tree Miracle,2013,102,Family,6.5,917,TRUE,FALSE,FALSE,FALSE
+tt2329032,TV Movie,The March Sisters at Christmas,2012,91,Comedy,5.4,740,TRUE,FALSE,FALSE,FALSE
+tt2331880,Feature Film,The Fitzgerald Family Christmas,2012,99,Drama,6.3,1638,TRUE,FALSE,FALSE,FALSE
+tt23328642,Feature Film,Christmas with the Carters,2022,97,Comedy,5.9,21,TRUE,FALSE,FALSE,FALSE
+tt2333408,Feature Film,Christmas Oranges,2012,101,Drama,6.7,694,TRUE,FALSE,FALSE,FALSE
+tt2334090,TV Movie,A Christmas Wedding Date,2012,83,Comedy,5.2,1403,TRUE,FALSE,FALSE,FALSE
+tt23546646,TV Movie,The Boss Baby: Christmas Bonus,2022,45,Other,5.2,732,TRUE,FALSE,FALSE,FALSE
+tt23556786,Feature Film,Christmas Full of Grace,2022,105,Comedy,4.4,738,TRUE,FALSE,FALSE,FALSE
+tt2355762,TV Movie,Christmas with Holly,2012,88,Drama,7,3608,TRUE,FALSE,FALSE,FALSE
+tt2361175,TV Movie,Britain's Favourite Christmas Songs,2011,180,Other,5.4,20,TRUE,FALSE,FALSE,FALSE
+tt2374486,TV Movie,Help for the Holidays,2012,90,Drama,6.6,2350,FALSE,FALSE,FALSE,TRUE
+tt23746764,Feature Film,Christmas Carol,2022,131,Other,6.2,535,TRUE,FALSE,FALSE,FALSE
+tt23752770,TV Movie,Christmas Carole,2022,66,Comedy,6.3,612,TRUE,FALSE,FALSE,FALSE
+tt2376246,TV Movie,Christmas Song,2012,88,Drama,5.5,843,TRUE,FALSE,FALSE,FALSE
+tt2376272,TV Movie,Christmas Dance,2012,86,Family,6.2,999,TRUE,FALSE,FALSE,FALSE
+tt23790418,Feature Film,Christmas as Usual,2023,88,Comedy,5.6,187,TRUE,FALSE,FALSE,FALSE
+tt2380249,TV Movie,The Christmas Consultant,2012,88,Comedy,5.1,623,TRUE,FALSE,FALSE,FALSE
+tt23808016,Feature Film,A Not So Merry Christmas,2022,100,Comedy,4.7,949,TRUE,FALSE,FALSE,FALSE
+tt2382246,Feature Film,Merry Christmas,2013,83,Comedy,6.6,38,TRUE,FALSE,FALSE,FALSE
+tt2383446,TV Movie,The Cat in the Hat Knows a Lot About Christmas!,2012,60,Animation,4.8,145,TRUE,FALSE,FALSE,FALSE
+tt23838598,TV Movie,Hip Hop Family Christmas Wedding,2022,86,Comedy,5.2,131,TRUE,FALSE,FALSE,FALSE
+tt23854182,TV Movie,An Eclectic Christmas,2022,90,Drama,5.6,92,TRUE,FALSE,FALSE,FALSE
+tt23873758,TV Movie,Christmas on the Rocks,2022,90,Romance,5.7,116,TRUE,FALSE,FALSE,FALSE
+tt2391116,TV Movie,Anything But Christmas,2012,90,Comedy,5.2,347,TRUE,FALSE,FALSE,FALSE
+tt2395123,TV Movie,A Heartland Christmas,2010,90,Family,7.4,1109,TRUE,FALSE,FALSE,FALSE
+tt2403841,Feature Film,Cowboy Christmas,2013,75,Other,7.3,13,TRUE,FALSE,FALSE,FALSE
+tt2406468,Feature Film,Scoot & Kassie's Christmas Adventure,2013,86,Family,4.8,416,TRUE,FALSE,FALSE,FALSE
+tt2415112,TV Movie,A Bride for Christmas,2012,84,Comedy,6.5,4522,TRUE,FALSE,FALSE,FALSE
+tt2415468,TV Movie,The Christmas Heart,2012,90,Drama,6,691,TRUE,FALSE,FALSE,FALSE
+tt2421026,Feature Film,I'll Be Homeless for Christmas,2012,55,Family,4.8,50,TRUE,FALSE,FALSE,FALSE
+tt2431074,Feature Film,Christmas Slay,2015,95,Other,2.6,231,TRUE,FALSE,FALSE,FALSE
+tt2439334,TV Movie,Kenny Everett's Christmas Carol,1985,29,Comedy,7.2,20,TRUE,FALSE,FALSE,FALSE
+tt2444354,TV Movie,All About Christmas Eve,2012,88,Comedy,5.7,1271,TRUE,FALSE,FALSE,FALSE
+tt2445310,TV Movie,Abominable Christmas,2012,43,Other,5.1,310,TRUE,FALSE,FALSE,FALSE
+tt2450412,Feature Film,Merry F@#$ing Christmas,2012,83,Other,5.6,28,TRUE,FALSE,FALSE,FALSE
+tt24511122,TV Movie,Mr Bear's Christmas,2022,11,Animation,8.4,11,TRUE,FALSE,FALSE,FALSE
+tt2460976,TV Movie,Love at the Christmas Table,2012,89,Comedy,6.4,2689,TRUE,FALSE,FALSE,FALSE
+tt2475914,TV Movie,Holiday High School Reunion,2012,88,Comedy,4.9,1400,FALSE,FALSE,FALSE,TRUE
+tt24802780,Feature Film,Christmas Party,2023,80,Comedy,5.9,157,TRUE,FALSE,FALSE,FALSE
+tt2486490,TV Movie,Christmas Bounty,2013,90,Other,4.4,1099,TRUE,FALSE,FALSE,FALSE
+tt2505818,Feature Film,An Evergreen Christmas,2014,98,Family,5.8,479,TRUE,FALSE,FALSE,FALSE
+tt25147828,Feature Film,Cheap vs. Expensive Xmas Day,2022,107,Comedy,9.5,14,TRUE,FALSE,FALSE,FALSE
+tt2550838,Feature Film,The Worst Christmas of My Life,2012,86,Comedy,5.4,1203,TRUE,FALSE,FALSE,FALSE
+tt2556308,Feature Film,Holiday,2014,160,Other,7.2,29676,FALSE,FALSE,FALSE,TRUE
+tt2556836,TV Movie,The Cast of a Christmas Story: Where Are They Now?,2012,60,Other,6.3,11,TRUE,FALSE,FALSE,FALSE
+tt2562146,Feature Film,Hanukkah,2019,106,Other,3.3,188,FALSE,TRUE,FALSE,FALSE
+tt2566858,TV Movie,A Star for Christmas,2012,88,Comedy,5.1,1109,TRUE,FALSE,FALSE,FALSE
+tt2571966,Feature Film,A Little Christmas Business,2013,75,Drama,3.7,294,TRUE,FALSE,FALSE,FALSE
+tt2573268,Feature Film,Fireplace for your Home: Christmas Music,2010,46,Other,7.2,32,TRUE,FALSE,FALSE,FALSE
+tt2578608,Feature Film,Krampus: The Christmas Devil,2013,82,Other,1.6,1963,TRUE,FALSE,FALSE,FALSE
+tt2585850,TV Movie,The Cow That Almost Missed Christmas,2012,28,Animation,6.5,28,TRUE,FALSE,FALSE,FALSE
+tt2609758,Feature Film,A Madea Christmas,2013,100,Comedy,5,6906,TRUE,FALSE,FALSE,FALSE
+tt2622952,TV Movie,Uncle Wormsley's Christmas,2012,30,Animation,7.8,22,TRUE,FALSE,FALSE,FALSE
+tt2627630,Feature Film,A Christmas Carol: Scrooge's Ghostly Tale,2006,48,Animation,5.6,67,TRUE,FALSE,FALSE,FALSE
+tt26541686,TV Movie,Coupled Up for Christmas,2023,88,Romance,7.4,47,TRUE,FALSE,FALSE,FALSE
+tt2665200,TV Movie,Oh Christmas Tree!,2013,87,Comedy,6.3,2469,TRUE,FALSE,FALSE,FALSE
+tt26935480,TV Movie,A Cowboy Christmas,2023,82,Drama,6,24,TRUE,FALSE,FALSE,FALSE
+tt2725962,Feature Film,What We Did on Our Holiday,2014,95,Comedy,6.9,23980,FALSE,FALSE,FALSE,TRUE
+tt2739338,Feature Film,The Christmas Candle,2013,100,Drama,6.2,2542,TRUE,FALSE,FALSE,FALSE
+tt27411794,Feature Film,Christmas Angel,2023,90,Drama,8.2,41,TRUE,FALSE,FALSE,FALSE
+tt27496114,TV Movie,"Where Are You, Christmas?",2023,84,Comedy,6.4,727,TRUE,FALSE,FALSE,FALSE
+tt27542956,TV Movie,My Christmas Hero,2023,90,Family,6.9,310,TRUE,FALSE,FALSE,FALSE
+tt27557250,TV Movie,Take Me Back for Christmas,2023,84,Comedy,7.1,840,TRUE,FALSE,FALSE,FALSE
+tt27563124,TV Movie,The Heiress of Christmas,2023,88,Comedy,7.3,24,TRUE,FALSE,FALSE,FALSE
+tt27649527,Feature Film,Christmas with Jerks,2023,86,Comedy,8.6,23,TRUE,FALSE,FALSE,FALSE
+tt27698813,TV Movie,A World Record Christmas,2023,84,Drama,7,508,TRUE,FALSE,FALSE,FALSE
+tt27728751,TV Movie,Christmas Casanova,2023,89,Romance,5.9,138,TRUE,FALSE,FALSE,FALSE
+tt27773299,TV Movie,The Fabric of Christmas,2023,91,Romance,6.3,124,TRUE,FALSE,FALSE,FALSE
+tt27804299,Feature Film,The Christmas Classic,2023,86,Comedy,6.4,43,TRUE,FALSE,FALSE,FALSE
+tt27813285,TV Movie,Mystic Christmas,2023,84,Romance,6.4,713,TRUE,FALSE,FALSE,FALSE
+tt27911907,TV Movie,Flipping for Christmas,2023,90,Romance,5.9,596,TRUE,FALSE,FALSE,FALSE
+tt28077855,TV Movie,A Royal Christmas Crush,2023,120,Romance,5.5,667,TRUE,FALSE,FALSE,FALSE
+tt28237077,TV Movie,A Merry Scottish Christmas,2023,120,Comedy,6.7,1130,TRUE,FALSE,FALSE,FALSE
+tt28256240,Feature Film,The Christmas Venue,2023,84,Family,5.1,144,TRUE,FALSE,FALSE,FALSE
+tt28364747,Feature Film,The Christmas Break,2023,99,Comedy,5.4,38,TRUE,FALSE,FALSE,FALSE
+tt2838678,TV Movie,A Royal Christmas,2014,90,Comedy,6.5,4852,TRUE,FALSE,FALSE,FALSE
+tt28421048,TV Movie,Christmas in Scotland,2023,86,Romance,5.6,143,TRUE,FALSE,FALSE,FALSE
+tt28428635,TV Movie,Just Like a Christmas Movie,2023,89,Comedy,6.8,37,TRUE,FALSE,FALSE,FALSE
+tt2844004,Feature Film,Holidays,2010,84,Other,6.9,10,FALSE,FALSE,FALSE,TRUE
+tt28503022,Feature Film,Holiday,2023,102,Other,6.7,20,FALSE,FALSE,FALSE,TRUE
+tt28504093,TV Movie,A Christmas Blessing,2023,75,Family,4.4,36,TRUE,FALSE,FALSE,FALSE
+tt28506794,TV Movie,Jones Family Christmas,2023,97,Comedy,5.9,85,TRUE,FALSE,FALSE,FALSE
+tt2857720,Feature Film,A Bulldog for Christmas,2013,83,Comedy,3.8,112,TRUE,FALSE,FALSE,FALSE
+tt28651158,TV Movie,Ms. Christmas Comes to Town,2023,84,Romance,6.8,585,TRUE,FALSE,FALSE,FALSE
+tt28664948,Feature Film,The Taste of Christmas,2023,100,Comedy,6.9,46,TRUE,FALSE,FALSE,FALSE
+tt28668784,TV Movie,Merry Magic Christmas,2023,88,Romance,5.5,97,TRUE,FALSE,FALSE,FALSE
+tt28711128,Feature Film,The Christmas Pledge,2023,99,Romance,4.9,72,TRUE,FALSE,FALSE,FALSE
+tt29007820,TV Movie,Christmas at the Chalet,2023,84,Romance,6.6,289,TRUE,FALSE,FALSE,FALSE
+tt2907922,TV Movie,Christmas with Tucker,2013,87,Drama,6.7,698,TRUE,FALSE,FALSE,FALSE
+tt29144851,TV Movie,How to Fall in Love by Christmas,2023,90,Romance,6,218,TRUE,FALSE,FALSE,FALSE
+tt29231347,TV Movie,A Heidelberg Holiday,2023,88,Family,6.8,623,FALSE,FALSE,FALSE,TRUE
+tt29233347,TV Movie,Christmas in Notting Hill,2023,84,Romance,6.4,628,TRUE,FALSE,FALSE,FALSE
+tt29258080,TV Movie,Under the Christmas Sky,2023,85,Comedy,5.8,558,TRUE,FALSE,FALSE,FALSE
+tt2928084,Feature Film,Christmas Rose,2013,90,Other,5.9,457,TRUE,FALSE,FALSE,FALSE
+tt29353026,TV Movie,My Christmas Guide,2023,84,Romance,7.2,720,TRUE,FALSE,FALSE,FALSE
+tt29378386,TV Movie,Christmas Island,2023,84,Romance,6.7,939,TRUE,FALSE,FALSE,FALSE
+tt29379064,TV Movie,Ladies of the '80s: A Divas Christmas,2023,85,Comedy,5.4,160,TRUE,FALSE,FALSE,FALSE
+tt29392874,TV Movie,Christmas by Design,2023,84,Comedy,6.1,591,TRUE,FALSE,FALSE,FALSE
+tt29513309,TV Movie,Our Christmas Mural,2023,84,Romance,6.2,323,TRUE,FALSE,FALSE,FALSE
+tt29513328,TV Movie,Time for Her to Come Home for Christmas,2023,84,Romance,6.7,290,TRUE,FALSE,FALSE,FALSE
+tt29520836,TV Movie,Everything Christmas,2023,85,Romance,6,606,TRUE,FALSE,FALSE,FALSE
+tt29536228,Feature Film,EXmas,2023,93,Comedy,5.7,2513,TRUE,FALSE,FALSE,FALSE
+tt2955096,Feature Film,Happy Christmas,2014,82,Comedy,5.4,8701,TRUE,FALSE,FALSE,FALSE
+tt29593677,TV Movie,A Not So Royal Christmas,2023,84,Romance,6.1,316,TRUE,FALSE,FALSE,FALSE
+tt2964654,TV Movie,Finding Christmas,2013,120,Drama,6.4,2071,TRUE,FALSE,FALSE,FALSE
+tt2966312,TV Movie,Christmas Eve Dinner,2011,90,Other,5.8,44,TRUE,FALSE,FALSE,FALSE
+tt29721553,TV Movie,Strawberry Shortcake's Perfect Holiday,2023,45,Family,7.3,10,FALSE,FALSE,FALSE,TRUE
+tt2979338,Feature Film,Tin Holiday,2018,90,Other,7.9,28,FALSE,FALSE,FALSE,TRUE
+tt2990140,Feature Film,The Christmas Chronicles,2018,104,Other,7,80002,TRUE,FALSE,FALSE,FALSE
+tt29904237,Feature Film,Merry Mystery Christmas,2023,84,Romance,6.2,53,TRUE,FALSE,FALSE,FALSE
+tt2993674,TV Movie,Christmas on the Bayou,2013,86,Drama,6.2,1440,TRUE,FALSE,FALSE,FALSE
+tt3003470,Feature Film,Christmas for a Dollar,2013,101,Drama,6.9,681,TRUE,FALSE,FALSE,FALSE
+tt3004544,TV Movie,Pete's Christmas,2013,86,Comedy,6,2005,TRUE,FALSE,FALSE,FALSE
+tt3004720,TV Movie,Coming Home for Christmas,2013,87,Family,5.7,844,TRUE,FALSE,FALSE,FALSE
+tt3012526,Feature Film,A Very Larry Christmas,2013,82,Comedy,6.3,47,TRUE,FALSE,FALSE,FALSE
+tt3015110,TV Movie,Christmas in the City,2013,87,Comedy,5.7,1621,TRUE,FALSE,FALSE,FALSE
+tt3019796,Feature Film,Nicholas on Holiday,2014,97,Comedy,6.2,3422,FALSE,FALSE,FALSE,TRUE
+tt3025744,Feature Film,Wings of Christmas,2013,110,Drama,5.9,182,TRUE,FALSE,FALSE,FALSE
+tt3042886,Feature Film,Christmas Ride,2013,108,Comedy,6.2,22,TRUE,FALSE,FALSE,FALSE
+tt3043594,TV Movie,Kristin's Christmas Past,2013,86,Other,6.2,1260,TRUE,FALSE,FALSE,FALSE
+tt3068466,TV Movie,Christmas Belle,2013,85,Drama,5.1,2091,TRUE,FALSE,FALSE,FALSE
+tt3072182,TV Movie,Christmas in Conway,2013,97,Drama,6.7,2044,TRUE,FALSE,FALSE,FALSE
+tt3074118,Feature Film,Christmas Tears,2014,77,Drama,6.5,15,TRUE,FALSE,FALSE,FALSE
+tt3076718,TV Movie,A Country Christmas Story,2013,120,Drama,6.3,656,TRUE,FALSE,FALSE,FALSE
+tt3101386,TV Movie,The Christmas Spirit,2013,84,Comedy,5.8,1050,TRUE,FALSE,FALSE,FALSE
+tt3118746,TV Movie,A Snow Globe Christmas,2013,89,Comedy,5.4,1261,TRUE,FALSE,FALSE,FALSE
+tt3131532,TV Movie,Catch a Christmas Star,2013,84,Comedy,6.2,1882,TRUE,FALSE,FALSE,FALSE
+tt3162180,Feature Film,6 Hours to Christmas,2010,128,Drama,5.8,11,TRUE,FALSE,FALSE,FALSE
+tt3169000,TV Movie,Hats Off to Christmas!,2013,85,Drama,5.9,1901,TRUE,FALSE,FALSE,FALSE
+tt3188768,Feature Film,Holidays in the Sun,2014,94,Drama,5.6,1065,FALSE,FALSE,FALSE,TRUE
+tt3210376,TV Movie,Holiday Road Trip,2013,88,Comedy,5.4,630,FALSE,FALSE,FALSE,TRUE
+tt3210602,TV Movie,All I Want for Christmas,2013,92,Comedy,5.2,735,TRUE,FALSE,FALSE,FALSE
+tt3226430,Feature Film,A Christmas Wedding,2013,80,Comedy,3.9,69,TRUE,FALSE,FALSE,FALSE
+tt3238996,Feature Film,A Wonderful Christmas Time,2014,85,Comedy,5.5,130,TRUE,FALSE,FALSE,FALSE
+tt3255590,Feature Film,El Camino Christmas,2017,89,Comedy,5.7,10269,TRUE,FALSE,FALSE,FALSE
+tt3256812,Feature Film,A Belle for Christmas,2014,91,Comedy,4.7,552,TRUE,FALSE,FALSE,FALSE
+tt3268828,TV Movie,Lady Gaga & the Muppets' Holiday Spectacular,2013,90,Comedy,5.2,649,FALSE,FALSE,FALSE,TRUE
+tt3270636,Feature Film,Headed South for Christmas,2013,64,Comedy,6.3,83,TRUE,FALSE,FALSE,FALSE
+tt3274632,TV Movie,Guess Who's Coming to Christmas,2013,90,Comedy,5.8,845,TRUE,FALSE,FALSE,FALSE
+tt3289944,TV Movie,The Christmas Ornament,2013,83,Romance,6.8,2151,TRUE,FALSE,FALSE,FALSE
+tt3294206,Feature Film,Casper and Emma's Wonderful Christmas,2014,73,Family,5.6,114,TRUE,FALSE,FALSE,FALSE
+tt3294662,TV Movie,Mouse and Mole at Christmas Time,2013,28,Animation,6.4,44,TRUE,FALSE,FALSE,FALSE
+tt3302348,Feature Film,The Christmas Colt,2013,85,Drama,3.7,78,TRUE,FALSE,FALSE,FALSE
+tt3326892,Feature Film,Christmas in Hollywood,2014,85,Other,4.3,51,TRUE,FALSE,FALSE,FALSE
+tt3338444,Feature Film,Dollywood's a Christmas Carol,2013,45,Other,7.1,34,TRUE,FALSE,FALSE,FALSE
+tt3341268,TV Movie,The Twelve Trees of Christmas,2013,87,Drama,5.8,924,TRUE,FALSE,FALSE,FALSE
+tt3361702,TV Movie,All I Want for Christmas,2014,86,Comedy,5,136,TRUE,FALSE,FALSE,FALSE
+tt3395648,Feature Film,Christmas at Rosemont,2015,95,Drama,6.7,880,TRUE,FALSE,FALSE,FALSE
+tt3396114,Feature Film,The Christmas Trap,2018,112,Comedy,5.8,1611,TRUE,FALSE,FALSE,FALSE
+tt3407630,Feature Film,Dismembering Christmas,2015,74,Other,4.1,222,TRUE,FALSE,FALSE,FALSE
+tt3409640,Feature Film,Christmas Cruelty!,2013,96,Other,4.6,280,TRUE,FALSE,FALSE,FALSE
+tt3438088,TV Movie,Greatest Ever Christmas Movies,2013,165,Other,5.8,21,TRUE,FALSE,FALSE,FALSE
+tt3458194,TV Movie,Marry Me for Christmas,2013,120,Comedy,5.4,375,TRUE,FALSE,FALSE,FALSE
+tt3482032,Feature Film,Christmas with the Karountzoses,2015,110,Comedy,6.3,108,TRUE,FALSE,FALSE,FALSE
+tt3493870,Feature Film,Family Holiday,2014,90,Drama,5.3,69,FALSE,FALSE,FALSE,TRUE
+tt3503454,Feature Film,Christmas All Over Again,2016,78,Comedy,3.7,306,TRUE,FALSE,FALSE,FALSE
+tt3509662,Feature Film,Holiday,2014,82,Drama,5.8,427,FALSE,FALSE,FALSE,TRUE
+tt3545504,Feature Film,The Christmas King: In Full Armor,2015,93,Other,5.3,265,TRUE,FALSE,FALSE,FALSE
+tt3562266,Feature Film,Christmas in Palm Springs,2014,84,Comedy,5,484,TRUE,FALSE,FALSE,FALSE
+tt3579250,TV Movie,The Tree That Saved Christmas,2014,88,Drama,6.1,1218,TRUE,FALSE,FALSE,FALSE
+tt3579698,Feature Film,12 Dog Days Till Christmas,2014,90,Comedy,4.7,538,TRUE,FALSE,FALSE,FALSE
+tt3596436,Feature Film,Home for Christmas,2014,102,Comedy,5.5,345,TRUE,FALSE,FALSE,FALSE
+tt3626180,TV Movie,The Christmas Secret,2014,86,Drama,7.3,3706,TRUE,FALSE,FALSE,FALSE
+tt3683386,Feature Film,The Borrowed Christmas,2014,95,Drama,4,202,TRUE,FALSE,FALSE,FALSE
+tt3688406,Feature Film,A Christmas Horror Story,2015,99,Other,5.8,11802,TRUE,FALSE,FALSE,FALSE
+tt3703148,Feature Film,Christmas Eve,2015,95,Comedy,5,2780,TRUE,FALSE,FALSE,FALSE
+tt3725224,TV Movie,One Christmas Eve,2014,86,Comedy,6,1584,TRUE,FALSE,FALSE,FALSE
+tt3783740,Feature Film,Christmas Wedding Baby,2014,112,Comedy,6,75,TRUE,FALSE,FALSE,FALSE
+tt3786326,Feature Film,The Christmas Switch,2014,97,Family,5.4,418,TRUE,FALSE,FALSE,FALSE
+tt3801438,TV Movie,Grumpy Cat's Worst Christmas Ever,2014,87,Other,5,2585,TRUE,FALSE,FALSE,FALSE
+tt3812404,TV Movie,Tom and Jerry Christmas Special,1987,60,Animation,6.8,19,TRUE,FALSE,FALSE,FALSE
+tt3875310,Feature Film,Kidnap - Bo's Most Exciting Holiday Ever,2015,87,Other,6.5,213,FALSE,FALSE,FALSE,TRUE
+tt3889642,TV Movie,The Nine Lives of Christmas,2014,86,Comedy,7.2,4388,TRUE,FALSE,FALSE,FALSE
+tt3894188,Feature Film,"Christmas, Again",2014,80,Drama,6.6,1180,TRUE,FALSE,FALSE,FALSE
+tt3915160,TV Movie,Correcting Christmas,2014,86,Drama,5.6,1253,TRUE,FALSE,FALSE,FALSE
+tt3917316,Feature Film,Barcelona Christmas Night,2015,95,Romance,6.5,1012,TRUE,FALSE,FALSE,FALSE
+tt3918686,Feature Film,The Christmas Dragon,2014,106,Other,4.5,800,TRUE,FALSE,FALSE,FALSE
+tt3922320,TV Movie,An En Vogue Christmas,2014,86,Drama,5.7,223,TRUE,FALSE,FALSE,FALSE
+tt3961102,TV Movie,O. Henry's Christmas,1996,85,Drama,5.9,12,TRUE,FALSE,FALSE,FALSE
+tt3970280,Feature Film,A Magic Christmas,2014,80,Family,5.1,242,TRUE,FALSE,FALSE,FALSE
+tt3991066,Feature Film,A Dogwalker's Christmas Tale,2015,86,Comedy,5.1,1638,TRUE,FALSE,FALSE,FALSE
+tt3993802,TV Movie,Christmas Icetastrophe,2014,86,Other,3.8,1585,TRUE,FALSE,FALSE,FALSE
+tt4001526,Feature Film,The Wizard's Christmas: Return of the Snow King,2016,80,Animation,5.2,40,TRUE,FALSE,FALSE,FALSE
+tt4009460,Feature Film,Kirk Cameron's Saving Christmas,2014,79,Comedy,1.3,16608,TRUE,FALSE,FALSE,FALSE
+tt4012254,TV Movie,A Cookie Cutter Christmas,2014,84,Comedy,5.9,2033,TRUE,FALSE,FALSE,FALSE
+tt4049534,Feature Film,Mule-Tide Christmas,2014,74,Animation,4,35,TRUE,FALSE,FALSE,FALSE
+tt4057146,Feature Film,I'll Be Next Door for Christmas,2018,100,Comedy,5,808,TRUE,FALSE,FALSE,FALSE
+tt4065316,TV Movie,Best Christmas Party Ever,2014,84,Comedy,6.3,2041,TRUE,FALSE,FALSE,FALSE
+tt4065324,TV Movie,The Christmas Parade,2014,85,Comedy,5.9,1455,TRUE,FALSE,FALSE,FALSE
+tt4065336,TV Movie,"Signed, Sealed, Delivered for Christmas",2014,84,Drama,7.5,1580,TRUE,FALSE,FALSE,FALSE
+tt4067684,Feature Film,A Christmas to Remember,2015,94,Comedy,5.4,70,TRUE,FALSE,FALSE,FALSE
+tt4076824,Feature Film,Beverly Hills Christmas,2015,86,Family,3.2,531,TRUE,FALSE,FALSE,FALSE
+tt4105700,Feature Film,Holiday Breakup,2016,88,Comedy,4.4,622,FALSE,FALSE,FALSE,TRUE
+tt4159212,TV Movie,One Starry Christmas,2014,83,Comedy,6.5,2297,TRUE,FALSE,FALSE,FALSE
+tt4177742,TV Movie,Christmas at Cartwright's,2014,84,Comedy,6.3,2084,TRUE,FALSE,FALSE,FALSE
+tt4179824,TV Movie,A Christmas Mystery,2014,88,Drama,4.9,588,TRUE,FALSE,FALSE,FALSE
+tt4180032,TV Movie,Christmas Under Wraps,2014,88,Comedy,6.2,6116,TRUE,FALSE,FALSE,FALSE
+tt4194954,Feature Film,Home Before the Holiday,2017,45,Other,8.4,12,FALSE,FALSE,FALSE,TRUE
+tt4200996,TV Movie,A Christmas Tail,2014,87,Family,5.2,384,TRUE,FALSE,FALSE,FALSE
+tt4222522,TV Movie,The Christmas Shepherd,2014,84,Drama,6.7,1327,TRUE,FALSE,FALSE,FALSE
+tt4227386,Feature Film,The Christmas Family,2014,90,Comedy,5,193,TRUE,FALSE,FALSE,FALSE
+tt4228832,Feature Film,Keith Lowell Jensen: Atheist Christmas,2014,58,Comedy,7.9,19,TRUE,FALSE,FALSE,FALSE
+tt4248606,TV Movie,Second Chance Christmas,2014,90,Drama,6.9,206,TRUE,FALSE,FALSE,FALSE
+tt4250046,Feature Film,Xmas Meier,2013,51,Other,8.4,10,TRUE,FALSE,FALSE,FALSE
+tt4264544,TV Movie,Marry Us for Christmas,2014,90,Comedy,5.5,188,TRUE,FALSE,FALSE,FALSE
+tt4270254,Feature Film,Red Christmas,2014,60,Other,4.6,41,TRUE,FALSE,FALSE,FALSE
+tt4276834,TV Movie,A Perfect Christmas List,2014,88,Comedy,5.6,1235,TRUE,FALSE,FALSE,FALSE
+tt4280430,TV Movie,A Christmas Kiss II,2014,88,Comedy,5.9,2176,TRUE,FALSE,FALSE,FALSE
+tt4305318,TV Movie,A Christmas Dream,1984,60,Family,4.9,34,TRUE,FALSE,FALSE,FALSE
+tt4321264,Feature Film,Renfroe's Christmas,1997,72,Drama,4.6,21,TRUE,FALSE,FALSE,FALSE
+tt4387314,Feature Film,A Christmas Carol,2018,75,Other,4.1,391,TRUE,FALSE,FALSE,FALSE
+tt4419364,Feature Film,Holidays,2016,105,Other,5.1,11754,FALSE,FALSE,FALSE,TRUE
+tt4434688,TV Movie,The Spirit of Christmas,2015,91,Drama,6.4,7788,TRUE,FALSE,FALSE,FALSE
+tt4453560,Feature Film,A Horse for Christmas,2015,88,Family,5.1,65,TRUE,FALSE,FALSE,FALSE
+tt4587740,TV Movie,A Christmas Melody,2015,83,Comedy,6,2372,TRUE,FALSE,FALSE,FALSE
+tt4591840,Feature Film,A Christmas Star,2017,82,Family,5.1,2019,TRUE,FALSE,FALSE,FALSE
+tt4648986,TV Movie,A Prince for Christmas,2015,87,Comedy,6,2038,TRUE,FALSE,FALSE,FALSE
+tt4649416,Feature Film,Almost Christmas,2016,111,Comedy,6.1,7546,TRUE,FALSE,FALSE,FALSE
+tt4675324,Feature Film,The Christmas Reunion,2016,96,Drama,5.2,51,TRUE,FALSE,FALSE,FALSE
+tt4677298,Feature Film,Christmas Dreams,2015,80,Other,5.4,82,TRUE,FALSE,FALSE,FALSE
+tt4690134,Feature Film,A Christmas Eve Miracle,2015,80,Comedy,3.7,346,TRUE,FALSE,FALSE,FALSE
+tt4700190,Feature Film,Wish for Christmas,2016,96,Drama,4.9,959,TRUE,FALSE,FALSE,FALSE
+tt4760804,TV Movie,Dogstar: Christmas in Space,2016,93,Animation,7.4,30,TRUE,FALSE,FALSE,FALSE
+tt4764944,TV Movie,Two Movie Guys' Intergalactic Holiday Showdown,2011,30,Comedy,5.9,10,FALSE,FALSE,FALSE,TRUE
+tt4766018,TV Movie,Family for Christmas,2015,82,Drama,6.2,2543,TRUE,FALSE,FALSE,FALSE
+tt4767950,TV Movie,A Christmas Detour,2015,85,Comedy,6.1,3373,TRUE,FALSE,FALSE,FALSE
+tt4776578,Feature Film,A Christmas Carol,2015,59,Drama,3.7,98,TRUE,FALSE,FALSE,FALSE
+tt4843046,TV Movie,Northpole: Open for Christmas,2015,83,Drama,6.1,2013,TRUE,FALSE,FALSE,FALSE
+tt4858404,Feature Film,Holiday,2021,108,Drama,4.5,61,FALSE,FALSE,FALSE,TRUE
+tt4885784,Feature Film,Paris Holiday,2015,114,Comedy,5.6,180,FALSE,FALSE,FALSE,TRUE
+tt4906164,Feature Film,Mercy Christmas,2017,83,Other,5.3,964,TRUE,FALSE,FALSE,FALSE
+tt4921846,TV Movie,Christmas Truce,2015,88,Drama,5.6,501,TRUE,FALSE,FALSE,FALSE
+tt4923846,Feature Film,Christmas in the Smokies,2015,88,Drama,5.8,1667,TRUE,FALSE,FALSE,FALSE
+tt4942404,Feature Film,Black Christmas: The Night Billy Came Home,2016,90,Other,4.5,75,TRUE,FALSE,FALSE,FALSE
+tt4943236,TV Movie,Girlfriends of Christmas Past,2016,90,Comedy,5.1,953,TRUE,FALSE,FALSE,FALSE
+tt4945886,TV Movie,Billie Holiday: A Sensation,2015,52,Other,6.3,30,FALSE,FALSE,FALSE,TRUE
+tt4982260,TV Movie,A Gert Lush Christmas,2015,60,Comedy,5.8,303,TRUE,FALSE,FALSE,FALSE
+tt4994884,Feature Film,The X Mas Files,2016,86,Animation,7.8,13,TRUE,FALSE,FALSE,FALSE
+tt5014528,TV Movie,Just in Time for Christmas,2015,96,Comedy,6.4,2824,TRUE,FALSE,FALSE,FALSE
+tt5031014,TV Movie,Ice Sculpture Christmas,2015,83,Comedy,6.5,2318,TRUE,FALSE,FALSE,FALSE
+tt5033114,TV Movie,Once Upon a Holiday,2015,84,Comedy,6.2,3495,FALSE,FALSE,FALSE,TRUE
+tt5062804,TV Movie,The Christmas Note,2015,85,Drama,6.7,1468,TRUE,FALSE,FALSE,FALSE
+tt5086384,Feature Film,A Christmas in New York,2016,81,Romance,4.7,190,TRUE,FALSE,FALSE,FALSE
+tt5097970,TV Movie,Angel of Christmas,2015,84,Comedy,6.2,2306,TRUE,FALSE,FALSE,FALSE
+tt5120400,Feature Film,Red Christmas,2016,82,Other,4.3,2288,TRUE,FALSE,FALSE,FALSE
+tt5123344,Feature Film,The 12 Slays of Christmas,2016,102,Other,4.4,103,TRUE,FALSE,FALSE,FALSE
+tt5123866,Feature Film,A Miracle on Christmas Lake,2016,110,Family,4.4,283,TRUE,FALSE,FALSE,FALSE
+tt5130174,TV Movie,A Christmas Reunion,2015,86,Comedy,5.1,813,TRUE,FALSE,FALSE,FALSE
+tt5133572,TV Movie,Crown for Christmas,2015,86,Comedy,6.9,5429,TRUE,FALSE,FALSE,FALSE
+tt5133810,TV Movie,12 Gifts of Christmas,2015,83,Comedy,6.3,5127,TRUE,FALSE,FALSE,FALSE
+tt5156770,TV Movie,Charming Christmas,2015,85,Drama,6.2,1923,TRUE,FALSE,FALSE,FALSE
+tt5170710,TV Movie,A Baby for Christmas,2015,85,Family,5.4,178,TRUE,FALSE,FALSE,FALSE
+tt5178596,Feature Film,Operation Christmas List,2016,88,Comedy,4.6,95,TRUE,FALSE,FALSE,FALSE
+tt5182120,TV Movie,I'm Not Ready for Christmas,2015,84,Comedy,6,2124,TRUE,FALSE,FALSE,FALSE
+tt5186076,TV Movie,Michael Bublé's Christmas in Hollywood,2015,60,Other,6.2,46,TRUE,FALSE,FALSE,FALSE
+tt5190038,TV Movie,The 84th Annual Hollywood Christmas Parade,2015,120,Other,6.6,16,TRUE,FALSE,FALSE,FALSE
+tt5192136,TV Movie,The Moo Family Holiday Hoe-Down,1992,23,Animation,4.5,20,FALSE,FALSE,FALSE,TRUE
+tt5194920,TV Movie,I Love Lucy Christmas Special,2015,45,Comedy,8.4,42,TRUE,FALSE,FALSE,FALSE
+tt5204384,TV Movie,Christmas Incorporated,2015,85,Comedy,6.4,2271,TRUE,FALSE,FALSE,FALSE
+tt5210078,TV Movie,On the Twelfth Day of Christmas,2015,84,Comedy,6.8,2183,TRUE,FALSE,FALSE,FALSE
+tt5225868,TV Movie,Ms. Velma's Most Incredibly Magnificent Christmas Week,1976,59,Family,2.2,52,TRUE,FALSE,FALSE,FALSE
+tt5231402,TV Movie,The Flight Before Christmas,2015,88,Comedy,5.9,2006,TRUE,FALSE,FALSE,FALSE
+tt5232538,TV Movie,Bing Crosby and the Sounds of Christmas,1971,60,Other,7.6,44,TRUE,FALSE,FALSE,FALSE
+tt5235574,TV Movie,One Christmas Wish,2015,86,Drama,6.7,560,TRUE,FALSE,FALSE,FALSE
+tt5237552,TV Movie,A Gift Wrapped Christmas,2015,87,Comedy,7.1,1867,TRUE,FALSE,FALSE,FALSE
+tt5239710,TV Movie,The Christmas Gift,2015,85,Drama,5.3,764,TRUE,FALSE,FALSE,FALSE
+tt5252134,TV Movie,Nickelodeon's Ho Ho Holiday Special,2015,47,Comedy,6.1,220,FALSE,FALSE,FALSE,TRUE
+tt5265662,TV Movie,Christmas Land,2015,84,Comedy,5.8,2883,TRUE,FALSE,FALSE,FALSE
+tt5266444,TV Movie,Last Chance for Christmas,2015,87,Family,6.1,833,TRUE,FALSE,FALSE,FALSE
+tt5269490,TV Movie,The Curse of Clara: A Holiday Tale,2015,30,Animation,7.7,13,FALSE,FALSE,FALSE,TRUE
+tt5269968,TV Movie,Wish Upon a Christmas,2015,86,Drama,5.8,780,TRUE,FALSE,FALSE,FALSE
+tt5271120,Feature Film,The Christmas Project,2016,92,Comedy,5.5,536,TRUE,FALSE,FALSE,FALSE
+tt5283212,TV Movie,A Norman Rockwell Christmas Story,1995,52,Family,6.9,364,TRUE,FALSE,FALSE,FALSE
+tt5295412,Feature Film,Christmas with Cookie,2016,53,Comedy,4.7,82,TRUE,FALSE,FALSE,FALSE
+tt5310622,TV Movie,Disney Parks Unforgettable Christmas Celebration,2015,85,Family,6.6,18,TRUE,FALSE,FALSE,FALSE
+tt5314484,Feature Film,Project: Puppies for Christmas,2019,93,Family,7.4,61,TRUE,FALSE,FALSE,FALSE
+tt5334126,Feature Film,Christmas in New York,2005,88,Other,5.3,75,TRUE,FALSE,FALSE,FALSE
+tt5485456,TV Movie,The Rooftop Christmas Tree,2016,88,Family,6.2,1117,TRUE,FALSE,FALSE,FALSE
+tt5531536,Feature Film,Santa Swap: Merry Christmas Mr. Andersen,2016,70,Other,6.3,820,TRUE,FALSE,FALSE,FALSE
+tt5565200,Feature Film,Let's Kill Grandpa This Christmas,2017,79,Comedy,4.2,215,TRUE,FALSE,FALSE,FALSE
+tt5574012,TV Movie,Falling for Christmas,2016,87,Drama,6.2,1644,TRUE,FALSE,FALSE,FALSE
+tt5637212,Feature Film,Christmas Apparition,2018,72,Other,4.3,62,TRUE,FALSE,FALSE,FALSE
+tt5675936,TV Movie,Christmas Cookies,2016,84,Drama,6.4,2541,TRUE,FALSE,FALSE,FALSE
+tt5676118,TV Movie,A Wish For Christmas,2016,84,Drama,5.9,5042,TRUE,FALSE,FALSE,FALSE
+tt5713426,TV Movie,Dolly Parton's Christmas of Many Colors: Circle of Love,2016,85,Drama,7.7,1009,TRUE,FALSE,FALSE,FALSE
+tt5732522,Feature Film,Holiday Makers,2016,121,Comedy,6.8,351,FALSE,FALSE,FALSE,TRUE
+tt5757556,Feature Film,A Unicorn for Christmas,2021,87,Drama,6.3,290,TRUE,FALSE,FALSE,FALSE
+tt5801302,Feature Film,Santa Stole Our Dog: A Merry Doggone Christmas!,2017,94,Family,4.4,188,TRUE,FALSE,FALSE,FALSE
+tt5813808,Feature Film,A Detour for Christmas,2016,96,Other,4.6,228,TRUE,FALSE,FALSE,FALSE
+tt5822856,Feature Film,The Christmas Family 2,2016,90,Other,4.5,120,TRUE,FALSE,FALSE,FALSE
+tt5845712,TV Movie,A Firehouse Christmas,2016,88,Comedy,5.1,960,TRUE,FALSE,FALSE,FALSE
+tt5853124,Feature Film,A Doggone Christmas,2016,82,Family,4.2,229,TRUE,FALSE,FALSE,FALSE
+tt5860940,TV Movie,I'll Be Home for Christmas,2016,84,Drama,6.1,2677,TRUE,FALSE,FALSE,FALSE
+tt5863634,TV Movie,A Perfect Christmas,2016,84,Comedy,6.1,1405,TRUE,FALSE,FALSE,FALSE
+tt5902138,TV Movie,Christmas List,2016,84,Comedy,6.2,2139,TRUE,FALSE,FALSE,FALSE
+tt5918710,TV Movie,Hank Zipzer's Christmas Catastrophe,2016,84,Comedy,6.5,117,TRUE,FALSE,FALSE,FALSE
+tt5944496,TV Movie,Christmas Homecoming,2017,85,Drama,6.5,1576,TRUE,FALSE,FALSE,FALSE
+tt5949946,TV Movie,My Christmas Dream,2016,82,Comedy,6.2,2094,TRUE,FALSE,FALSE,FALSE
+tt5952626,TV Movie,"Merry Christmas, Baby",2015,82,Family,5.4,148,TRUE,FALSE,FALSE,FALSE
+tt5981802,TV Movie,A Christmas in Vermont,2016,86,Comedy,5.5,1207,TRUE,FALSE,FALSE,FALSE
+tt5990458,TV Movie,Holiday Joy,2016,87,Comedy,5.4,1017,FALSE,FALSE,FALSE,TRUE
+tt5997848,TV Movie,The Christmas Cottage,2017,90,Comedy,6.3,2310,TRUE,FALSE,FALSE,FALSE
+tt6014166,Feature Film,This Is Our Christmas,2018,79,Family,3.3,188,TRUE,FALSE,FALSE,FALSE
+tt6066786,Feature Film,Tom and Jerry: Paws for a Holiday,2003,46,Animation,7.6,44,FALSE,FALSE,FALSE,TRUE
+tt6095976,Feature Film,Merry Christmas Mr. Mo,2016,101,Comedy,6.9,77,TRUE,FALSE,FALSE,FALSE
+tt6104760,TV Movie,My Christmas Love,2016,85,Comedy,6.3,2848,TRUE,FALSE,FALSE,FALSE
+tt6111830,TV Movie,A Husband for Christmas,2016,87,Comedy,5,661,TRUE,FALSE,FALSE,FALSE
+tt6119048,TV Movie,An American Girl Story: Maryellen 1955 - Extraordinary Christmas,2016,48,Family,6.7,160,TRUE,FALSE,FALSE,FALSE
+tt6131148,TV Movie,Love You Like Christmas,2016,90,Drama,6.4,2113,TRUE,FALSE,FALSE,FALSE
+tt6132948,TV Movie,A Nutcracker Christmas,2016,86,Other,6.5,1712,TRUE,FALSE,FALSE,FALSE
+tt6144460,Feature Film,Smart Christmas,2018,90,Comedy,4.5,156,TRUE,FALSE,FALSE,FALSE
+tt6167116,TV Movie,Broadcasting Christmas,2016,84,Comedy,6,1992,TRUE,FALSE,FALSE,FALSE
+tt6172696,Feature Film,Once Upon a Time at Christmas,2017,97,Other,3.5,642,TRUE,FALSE,FALSE,FALSE
+tt6185074,TV Movie,A Cinderella Christmas,2016,93,Comedy,6.2,3448,TRUE,FALSE,FALSE,FALSE
+tt6215212,TV Movie,Every Christmas Has a Story,2016,82,Comedy,6.1,1919,TRUE,FALSE,FALSE,FALSE
+tt6217490,TV Movie,Looks Like Christmas,2016,84,Comedy,5.8,1094,TRUE,FALSE,FALSE,FALSE
+tt6225520,Feature Film,The Man Who Invented Christmas,2017,104,Other,7,17908,TRUE,FALSE,FALSE,FALSE
+tt6228890,Feature Film,Christmas Blood,2017,104,Comedy,4.2,465,TRUE,FALSE,FALSE,FALSE
+tt6245488,TV Movie,Finding Father Christmas,2016,86,Drama,6.8,2558,TRUE,FALSE,FALSE,FALSE
+tt6253814,TV Movie,A Christmas Carol,1962,60,Drama,6.4,22,TRUE,FALSE,FALSE,FALSE
+tt6260218,TV Movie,Sound of Christmas,2016,84,Drama,6.4,1187,TRUE,FALSE,FALSE,FALSE
+tt6263260,TV Movie,A Heavenly Christmas,2016,93,Drama,6.4,2048,TRUE,FALSE,FALSE,FALSE
+tt6269192,TV Movie,Journey Back to Christmas,2016,84,Drama,7,3145,TRUE,FALSE,FALSE,FALSE
+tt6269700,TV Movie,Operation Christmas,2016,84,Romance,6.8,1792,TRUE,FALSE,FALSE,FALSE
+tt6273004,TV Movie,Christmas in Homestead,2016,84,Romance,6.6,2648,TRUE,FALSE,FALSE,FALSE
+tt6275674,TV Movie,A Puppy for Christmas,2016,85,Comedy,5.9,1149,TRUE,FALSE,FALSE,FALSE
+tt6278764,Feature Film,Red Christmas: Making 'Better Watch Out',2017,56,Other,7.5,12,TRUE,FALSE,FALSE,FALSE
+tt6279602,TV Movie,A Dream of Christmas,2016,84,Comedy,6.7,2655,TRUE,FALSE,FALSE,FALSE
+tt6284950,TV Movie,A Rose for Christmas,2017,84,Drama,6,1676,TRUE,FALSE,FALSE,FALSE
+tt6285546,TV Movie,"Ruff-Ruff, Tweet and Dave: A Christmas Adventure",2016,22,Animation,7.2,12,TRUE,FALSE,FALSE,FALSE
+tt6287174,Feature Film,Pixi Saves Christmas,2016,91,Other,7.2,81,TRUE,FALSE,FALSE,FALSE
+tt6288876,TV Movie,A Christmas to Remember,2016,84,Comedy,6.5,2648,TRUE,FALSE,FALSE,FALSE
+tt6299366,Feature Film,Lilly's Bewitched Christmas,2017,100,Comedy,5.6,93,TRUE,FALSE,FALSE,FALSE
+tt6301524,TV Movie,Christmas Cookie Challenge,2015,60,Family,6.6,10,TRUE,FALSE,FALSE,FALSE
+tt6306564,Feature Film,Wild Kratts: A Creature Christmas,2015,47,Family,6.4,34,TRUE,FALSE,FALSE,FALSE
+tt6319942,TV Movie,Once Upon a Sesame Street Christmas,2016,51,Comedy,6.5,118,TRUE,FALSE,FALSE,FALSE
+tt6321108,TV Movie,Hearts of Christmas,2016,84,Drama,6.8,1895,TRUE,FALSE,FALSE,FALSE
+tt6339052,TV Movie,Joe Pera Helps You Find the Perfect Christmas Tree,2016,23,Comedy,8.3,154,TRUE,FALSE,FALSE,FALSE
+tt6359956,Feature Film,A Bad Moms Christmas,2017,104,Comedy,5.6,56205,TRUE,FALSE,FALSE,FALSE
+tt6397364,Feature Film,Faith Filled Christmas,2017,95,Drama,4.7,38,TRUE,FALSE,FALSE,FALSE
+tt6398464,TV Movie,The Perfect Christmas Present,2017,82,Drama,6.3,1838,TRUE,FALSE,FALSE,FALSE
+tt6411322,Feature Film,Irving Berlin's Holiday Inn The Broadway Musical,2017,128,Other,7.3,252,FALSE,FALSE,FALSE,TRUE
+tt6420742,Feature Film,The Keys of Christmas,2016,47,Comedy,5.9,86,TRUE,FALSE,FALSE,FALSE
+tt6436270,Feature Film,Christmas Time,2017,90,Comedy,5.9,486,TRUE,FALSE,FALSE,FALSE
+tt6456768,Feature Film,Killer Christmas,2017,84,Other,3.1,200,TRUE,FALSE,FALSE,FALSE
+tt6478538,TV Movie,A Taste of Christmas,2017,84,Comedy,5.9,1543,TRUE,FALSE,FALSE,FALSE
+tt6540706,TV Movie,Sister Swap: A Hometown Holiday,2021,83,Romance,6.3,1393,FALSE,FALSE,FALSE,TRUE
+tt6540724,TV Movie,Sister Swap: Christmas in the City,2021,84,Comedy,5.9,1028,TRUE,FALSE,FALSE,FALSE
+tt6569946,Feature Film,Christmas with Cookie: Locked Away,2017,64,Comedy,5.5,20,TRUE,FALSE,FALSE,FALSE
+tt6594244,Feature Film,Megan's Christmas Miracle,2018,87,Family,5,76,TRUE,FALSE,FALSE,FALSE
+tt6605352,TV Movie,Christmas in the Air,2017,84,Comedy,6.2,1458,TRUE,FALSE,FALSE,FALSE
+tt6615240,TV Movie,Second Chance Christmas,2017,90,Comedy,5.6,818,TRUE,FALSE,FALSE,FALSE
+tt6634632,TV Movie,Home for Christmas Day,2017,84,Drama,6.3,1551,TRUE,FALSE,FALSE,FALSE
+tt6645614,TV Movie,Trolls Holiday,2017,26,Other,6.1,3175,FALSE,FALSE,FALSE,TRUE
+tt6646106,Feature Film,Clara's Ultimate Christmas,2018,77,Family,4.2,28,TRUE,FALSE,FALSE,FALSE
+tt6649794,Feature Film,Sunday Holiday,2017,135,Comedy,7.1,1513,FALSE,FALSE,FALSE,TRUE
+tt6658510,TV Movie,A Song for Christmas,2017,89,Comedy,5.9,956,TRUE,FALSE,FALSE,FALSE
+tt6672584,Feature Film,Christmas in July,2019,99,Family,7.6,41,TRUE,FALSE,FALSE,FALSE
+tt6709502,Feature Film,Christmas on the Coast,2017,92,Drama,5.8,409,TRUE,FALSE,FALSE,FALSE
+tt6710606,Feature Film,Kiwi Christmas,2017,89,Family,5.1,257,TRUE,FALSE,FALSE,FALSE
+tt6727816,TV Movie,Tiny Christmas,2017,66,Comedy,4.8,290,TRUE,FALSE,FALSE,FALSE
+tt6759380,TV Movie,A Song for Christmas,2017,84,Drama,6.5,1771,TRUE,FALSE,FALSE,FALSE
+tt6791000,TV Movie,Marry Me at Christmas,2017,84,Comedy,6.5,2247,TRUE,FALSE,FALSE,FALSE
+tt6803170,Feature Film,Saving Christmas,2017,88,Family,3.3,279,TRUE,FALSE,FALSE,FALSE
+tt6877088,Feature Film,Dreaming of a Jewish Christmas,2017,51,Drama,7.3,121,TRUE,FALSE,FALSE,FALSE
+tt6881890,TV Movie,A Christmas Story Live!,2017,133,Other,4.8,1607,TRUE,FALSE,FALSE,FALSE
+tt6899068,TV Movie,2nd Chance for Christmas,2019,85,Drama,4.9,414,TRUE,FALSE,FALSE,FALSE
+tt6958760,TV Movie,Engaging Father Christmas,2017,85,Drama,6.7,1789,TRUE,FALSE,FALSE,FALSE
+tt6998650,Feature Film,Christmas Presence,2018,85,Comedy,3.8,545,TRUE,FALSE,FALSE,FALSE
+tt7001906,TV Movie,A Very Country Christmas,2017,84,Comedy,6.1,1941,TRUE,FALSE,FALSE,FALSE
+tt7006938,TV Movie,A Gift for Christmas,2017,89,Comedy,6.6,2473,TRUE,FALSE,FALSE,FALSE
+tt7014694,Feature Film,Lost Holiday,2019,75,Comedy,4.5,396,FALSE,FALSE,FALSE,TRUE
+tt7029820,Feature Film,Scream for Christmas,2000,67,Other,3.2,19,TRUE,FALSE,FALSE,FALSE
+tt7030416,TV Movie,Enchanted Christmas,2017,84,Romance,5.9,1429,TRUE,FALSE,FALSE,FALSE
+tt7030432,TV Movie,The Sweetest Christmas,2017,90,Comedy,6.3,2621,TRUE,FALSE,FALSE,FALSE
+tt7038606,TV Movie,Switched for Christmas,2017,83,Drama,6.6,3293,TRUE,FALSE,FALSE,FALSE
+tt7038614,TV Movie,Coming Home for Christmas,2017,86,Drama,6.7,2349,TRUE,FALSE,FALSE,FALSE
+tt7038632,TV Movie,Christmas Festival of Ice,2017,84,Romance,5.9,1328,TRUE,FALSE,FALSE,FALSE
+tt7038762,Feature Film,Best. Christmas. Ever!,2023,82,Comedy,4.3,6389,TRUE,FALSE,FALSE,FALSE
+tt7074092,TV Movie,Christmas Wedding Planner,2017,86,Romance,4.4,6631,TRUE,FALSE,FALSE,FALSE
+tt7123974,TV Movie,The Christmas Cure,2017,87,Drama,6.2,1690,TRUE,FALSE,FALSE,FALSE
+tt7207076,TV Movie,Christmas Princess,2017,86,Drama,5.8,339,TRUE,FALSE,FALSE,FALSE
+tt7243468,Feature Film,How the Wrong Brothers Saved Christmas,2016,46,Comedy,2.1,34,TRUE,FALSE,FALSE,FALSE
+tt7254064,Feature Film,A Christmas Story Documentary: Road Trip for Ralphie,2008,81,Other,7.2,97,TRUE,FALSE,FALSE,FALSE
+tt7281126,Feature Film,Miss Me This Christmas,2017,87,Comedy,4.4,524,TRUE,FALSE,FALSE,FALSE
+tt7281472,Feature Film,You Can't Fight Christmas,2017,87,Comedy,4.6,866,TRUE,FALSE,FALSE,FALSE
+tt7286474,Feature Film,Worst. Christmas. Ever.,2020,80,Comedy,3.7,238,TRUE,FALSE,FALSE,FALSE
+tt7328154,Feature Film,Holiday,2018,93,Other,5.7,4456,FALSE,FALSE,FALSE,TRUE
+tt7370936,TV Movie,The Christmas Train,2017,99,Drama,6.4,3261,TRUE,FALSE,FALSE,FALSE
+tt7396738,TV Movie,A Christmas Cruise,2017,90,Comedy,4.7,602,TRUE,FALSE,FALSE,FALSE
+tt7399040,Feature Film,This Is Christmas,2017,128,Drama,3.9,27,TRUE,FALSE,FALSE,FALSE
+tt7404820,TV Movie,Runaway Christmas Bride,2017,89,Comedy,4.4,634,TRUE,FALSE,FALSE,FALSE
+tt7421814,TV Movie,Snowed-Inn Christmas,2017,86,Comedy,7.3,3186,TRUE,FALSE,FALSE,FALSE
+tt7422638,TV Movie,48 Christmas Wishes,2017,84,Other,3.9,1234,TRUE,FALSE,FALSE,FALSE
+tt7435168,Feature Film,Christmas Down Under,2021,85,Comedy,4.4,925,TRUE,FALSE,FALSE,FALSE
+tt7440948,TV Movie,Christmas in Evergreen,2017,84,Drama,6.5,2999,TRUE,FALSE,FALSE,FALSE
+tt7476494,Feature Film,A Frozen Christmas 2,2017,70,Animation,4.4,53,TRUE,FALSE,FALSE,FALSE
+tt7534150,Feature Film,Our Happy Holiday,2018,102,Comedy,5.9,2062,FALSE,FALSE,FALSE,TRUE
+tt7549006,Feature Film,Hope for the Holidays,2020,91,Drama,8.1,99,FALSE,FALSE,FALSE,TRUE
+tt7557728,TV Movie,Christmas at Holly Lodge,2017,84,Comedy,6.5,1742,TRUE,FALSE,FALSE,FALSE
+tt7588798,TV Movie,Miss Christmas,2017,84,Drama,6.6,2280,TRUE,FALSE,FALSE,FALSE
+tt7605066,TV Movie,Wrapped Up in Christmas,2017,87,Comedy,6,891,TRUE,FALSE,FALSE,FALSE
+tt7605144,TV Movie,A Royal Christmas Ball,2017,86,Drama,4.6,1037,TRUE,FALSE,FALSE,FALSE
+tt7608418,Feature Film,A Christmas Prince,2017,92,Comedy,5.8,21264,TRUE,FALSE,FALSE,FALSE
+tt7608534,Feature Film,Christmas Inheritance,2017,104,Comedy,5.7,12963,TRUE,FALSE,FALSE,FALSE
+tt7616668,TV Movie,Christmas Next Door,2017,86,Family,6.5,2730,TRUE,FALSE,FALSE,FALSE
+tt7620598,Feature Film,The Nights Before Christmas,2019,103,Other,3.8,386,TRUE,FALSE,FALSE,FALSE
+tt7621886,TV Movie,Christmas in Mississippi,2017,90,Drama,6.4,1798,TRUE,FALSE,FALSE,FALSE
+tt7630836,TV Movie,Christmas Connection,2017,83,Comedy,6.4,2000,TRUE,FALSE,FALSE,FALSE
+tt7642542,TV Movie,Magical Christmas Ornaments,2017,90,Drama,6.3,1878,TRUE,FALSE,FALSE,FALSE
+tt7642558,TV Movie,Four Christmases and a Wedding,2017,90,Comedy,5.9,1387,TRUE,FALSE,FALSE,FALSE
+tt7643644,TV Movie,Rocky Mountain Christmas,2017,90,Romance,6.5,1820,TRUE,FALSE,FALSE,FALSE
+tt7647000,TV Movie,"With Love, Christmas",2017,84,Comedy,6.7,2211,TRUE,FALSE,FALSE,FALSE
+tt7650288,TV Movie,CMA Country Christmas,2017,121,Other,6.8,21,TRUE,FALSE,FALSE,FALSE
+tt7656706,Feature Film,Christmas Wander,2017,90,Drama,6.6,56,TRUE,FALSE,FALSE,FALSE
+tt7657462,TV Movie,A Bramble House Christmas,2017,84,Drama,7.1,2593,TRUE,FALSE,FALSE,FALSE
+tt7658836,TV Movie,Hit Mom: Murderous Christmas,2017,90,Comedy,5.9,94,TRUE,FALSE,FALSE,FALSE
+tt7685176,TV Movie,The Christmas Hot Dog,2017,22,Comedy,7.2,17,TRUE,FALSE,FALSE,FALSE
+tt7688990,TV Movie,Christmas Getaway,2017,90,Comedy,7,3417,TRUE,FALSE,FALSE,FALSE
+tt7690328,Feature Film,A Meowy Christmas,2017,60,Comedy,5.8,62,TRUE,FALSE,FALSE,FALSE
+tt7692814,TV Movie,My Christmas Prince,2017,85,Comedy,5.2,1089,TRUE,FALSE,FALSE,FALSE
+tt7696976,TV Movie,A Joyous Christmas,2017,84,Drama,6.2,1484,TRUE,FALSE,FALSE,FALSE
+tt7697712,TV Movie,Sharing Christmas,2017,90,Drama,6.1,1433,TRUE,FALSE,FALSE,FALSE
+tt7704762,TV Movie,Christmas in Angel Falls,2017,84,Comedy,6.5,1704,TRUE,FALSE,FALSE,FALSE
+tt7708960,Feature Film,Santa's Christmas Elf (Named Calvin),1971,70,Other,2.4,68,TRUE,FALSE,FALSE,FALSE
+tt7713204,TV Movie,Home: For the Holidays,2017,45,Other,4.9,177,FALSE,FALSE,FALSE,TRUE
+tt7714136,TV Movie,Karen Kingsbury's Maggie's Christmas Miracle,2017,83,Drama,6.9,2179,TRUE,FALSE,FALSE,FALSE
+tt7714138,TV Movie,Christmas Encore,2017,83,Drama,5.7,1364,TRUE,FALSE,FALSE,FALSE
+tt7736496,Feature Film,Jingle Jangle: A Christmas Journey,2020,122,Family,6.5,20013,TRUE,FALSE,FALSE,FALSE
+tt7736656,TV Movie,Christmas Cupcakes,2018,88,Comedy,5.7,710,TRUE,FALSE,FALSE,FALSE
+tt7766092,TV Movie,A Christmas Carol Goes Wrong,2017,49,Comedy,7.4,863,TRUE,FALSE,FALSE,FALSE
+tt7771558,Feature Film,Twelve Days of Christmas,2020,88,Comedy,4,103,TRUE,FALSE,FALSE,FALSE
+tt7776712,Feature Film,Charlie's Christmas Wish,2020,94,Drama,4.8,140,TRUE,FALSE,FALSE,FALSE
+tt7785870,Feature Film,A Frozen Christmas,2016,76,Animation,6.4,73,TRUE,FALSE,FALSE,FALSE
+tt7790040,Feature Film,Dead by Christmas,2018,59,Other,3.1,86,TRUE,FALSE,FALSE,FALSE
+tt7820614,Feature Film,A Christmas Carol,2017,57,Other,5,35,TRUE,FALSE,FALSE,FALSE
+tt7831530,Feature Film,Christmas at the Royal Hotel,2018,108,Drama,4.1,151,TRUE,FALSE,FALSE,FALSE
+tt7833914,Feature Film,Our Dream Christmas,2017,98,Drama,5.5,53,TRUE,FALSE,FALSE,FALSE
+tt7841536,Feature Film,Holiday Hell,2019,100,Other,4.4,536,FALSE,FALSE,FALSE,TRUE
+tt7872704,TV Movie,Christmas Perfection,2018,90,Comedy,5.5,1016,TRUE,FALSE,FALSE,FALSE
+tt7944518,Feature Film,A Quarantined Christmas,2020,94,Other,6.8,17,TRUE,FALSE,FALSE,FALSE
+tt7949540,TV Movie,Benidorm: 10 Years on Holiday,2018,60,Other,7.9,45,FALSE,FALSE,FALSE,TRUE
+tt7963848,Feature Film,All I Want for Christmas,2018,92,Other,5.6,280,TRUE,FALSE,FALSE,FALSE
+tt7987702,Feature Film,3 Bears Christmas,2019,84,Family,5,62,TRUE,FALSE,FALSE,FALSE
+tt7999950,Feature Film,Every Other Holiday,2018,90,Drama,6.9,966,FALSE,FALSE,FALSE,TRUE
+tt8011424,Feature Film,Helene Fischer: Christmas - Live from the Hofburg Vienna,2015,140,Other,8,10,TRUE,FALSE,FALSE,FALSE
+tt8022676,TV Movie,Marrying Father Christmas,2018,85,Drama,6.3,1535,TRUE,FALSE,FALSE,FALSE
+tt8041006,TV Movie,Christmas with a View,2018,91,Drama,5.2,5249,TRUE,FALSE,FALSE,FALSE
+tt8042004,Feature Film,Killer Raccoons! 2! Dark Christmas in the Dark!,2020,96,Comedy,3.7,131,TRUE,FALSE,FALSE,FALSE
+tt8079790,Feature Film,Four Cousins & a Christmas,2021,90,Comedy,2.9,182,TRUE,FALSE,FALSE,FALSE
+tt8123506,Feature Film,The Golden Holiday,2020,106,Other,5.4,365,FALSE,FALSE,FALSE,TRUE
+tt8190860,Feature Film,Holiday Monday,2021,95,Other,5,611,FALSE,FALSE,FALSE,TRUE
+tt8232648,Feature Film,A Christmas Carol,2018,81,Drama,7.6,150,TRUE,FALSE,FALSE,FALSE
+tt8244578,TV Movie,Christmas Break-In,2018,87,Family,4.5,1683,TRUE,FALSE,FALSE,FALSE
+tt8255490,Feature Film,Christmas Survival,2018,101,Comedy,5.1,1097,TRUE,FALSE,FALSE,FALSE
+tt8262802,Feature Film,The Holiday Calendar,2018,95,Drama,5.7,11120,FALSE,FALSE,FALSE,TRUE
+tt8291022,Feature Film,London Mitchell's Christmas,2019,90,Family,5.9,74,TRUE,FALSE,FALSE,FALSE
+tt8295976,TV Movie,A Very Nutty Christmas,2018,90,Comedy,5.9,1488,TRUE,FALSE,FALSE,FALSE
+tt8300786,TV Movie,"It's Christmas, Eve",2018,84,Drama,6.6,1561,TRUE,FALSE,FALSE,FALSE
+tt8322908,TV Movie,Christmas Catch,2018,87,Comedy,5.4,1769,TRUE,FALSE,FALSE,FALSE
+tt8354006,TV Movie,Christmas Camp,2018,81,Drama,5.7,815,TRUE,FALSE,FALSE,FALSE
+tt8377698,Feature Film,Rekindling Christmas,2020,103,Romance,6.9,22,TRUE,FALSE,FALSE,FALSE
+tt8395220,TV Movie,A Christmas for the Books,2018,90,Comedy,5.2,1022,TRUE,FALSE,FALSE,FALSE
+tt8416396,TV Movie,A Christmas to Cherish,2019,83,Comedy,6.1,1029,TRUE,FALSE,FALSE,FALSE
+tt8420670,TV Movie,The Last Christmas Home,2018,82,Drama,5.8,1106,TRUE,FALSE,FALSE,FALSE
+tt8425830,TV Movie,A Baby for Christmas,2018,93,Comedy,5.8,78,TRUE,FALSE,FALSE,FALSE
+tt8443810,Feature Film,Christmas Harmony,2018,85,Comedy,6.3,761,TRUE,FALSE,FALSE,FALSE
+tt8451018,TV Movie,Poinsettias for Christmas,2018,86,Family,6.5,1445,TRUE,FALSE,FALSE,FALSE
+tt8498184,TV Movie,Christmas at Pemberley Manor,2018,84,Comedy,6.3,2710,TRUE,FALSE,FALSE,FALSE
+tt8510488,Feature Film,Holiday in the Wild,2019,85,Comedy,6.2,16743,FALSE,FALSE,FALSE,TRUE
+tt8521718,Feature Film,The United States vs. Billie Holiday,2021,126,Other,6.3,14328,FALSE,FALSE,FALSE,TRUE
+tt8535852,Feature Film,A Frozen Christmas 3,2018,70,Animation,3.8,51,TRUE,FALSE,FALSE,FALSE
+tt8539280,Feature Film,The Legend of the Christmas Witch,2018,98,Other,4.8,869,TRUE,FALSE,FALSE,FALSE
+tt8552834,Feature Film,A Bennett Song Holiday,2020,117,Comedy,6,71,FALSE,FALSE,FALSE,TRUE
+tt8582056,Feature Film,High Holiday,2021,85,Comedy,4.4,125,FALSE,FALSE,FALSE,TRUE
+tt8583694,TV Movie,Christmas on Holly Lane,2018,86,Drama,6.4,1051,TRUE,FALSE,FALSE,FALSE
+tt8587650,TV Movie,Christmas Joy,2018,84,Family,6.4,2002,TRUE,FALSE,FALSE,FALSE
+tt8611700,Feature Film,Christmas at the Chateau,2019,98,Comedy,3.8,338,TRUE,FALSE,FALSE,FALSE
+tt8613908,TV Movie,The Christmas Contract,2018,89,Drama,6.8,2805,TRUE,FALSE,FALSE,FALSE
+tt8623904,Feature Film,Last Christmas,2019,103,Comedy,6.5,86058,TRUE,FALSE,FALSE,FALSE
+tt8634202,TV Movie,A Shoe Addict's Christmas,2018,85,Other,6.5,2951,TRUE,FALSE,FALSE,FALSE
+tt8659750,TV Movie,Hometown Holiday,2018,84,Comedy,5.1,1169,FALSE,FALSE,FALSE,TRUE
+tt8667202,TV Movie,Christmas with a Prince,2018,86,Comedy,5.3,1966,TRUE,FALSE,FALSE,FALSE
+tt8669354,Feature Film,Throwback Holiday,2018,88,Comedy,6.1,480,FALSE,FALSE,FALSE,TRUE
+tt8672786,TV Movie,A Christmas Arrangement,2018,90,Comedy,5.4,603,TRUE,FALSE,FALSE,FALSE
+tt8694374,TV Movie,Christmas at Graceland,2018,85,Comedy,5.7,1691,TRUE,FALSE,FALSE,FALSE
+tt8701132,Feature Film,Christmas Manger,2018,90,Drama,5.4,195,TRUE,FALSE,FALSE,FALSE
+tt8708564,TV Movie,Christmas in the Highlands,2019,84,Comedy,4.8,816,TRUE,FALSE,FALSE,FALSE
+tt8709036,Feature Film,A Christmas Prince: The Royal Wedding,2018,92,Comedy,5.3,11628,TRUE,FALSE,FALSE,FALSE
+tt8717018,Feature Film,The Christmas Cabin,2019,85,Comedy,4.6,479,TRUE,FALSE,FALSE,FALSE
+tt8732914,TV Movie,Road to Christmas,2018,84,Comedy,6.7,2186,TRUE,FALSE,FALSE,FALSE
+tt8794030,Feature Film,Pastor Greg's Reboot - Hope for Christmas,2018,45,Comedy,4.5,30,TRUE,FALSE,FALSE,FALSE
+tt8796786,TV Movie,A Twist of Christmas,2018,87,Family,6.4,974,TRUE,FALSE,FALSE,FALSE
+tt8805246,TV Movie,The Truth About Christmas,2018,90,Comedy,5.6,642,TRUE,FALSE,FALSE,FALSE
+tt8824542,TV Movie,Christmas Cracker,2015,45,Other,8,10,TRUE,FALSE,FALSE,FALSE
+tt8835626,Feature Film,Teenage Girl: Valerie's Holiday,2019,90,Comedy,8.6,74,FALSE,FALSE,FALSE,TRUE
+tt8846262,TV Movie,Christmas Cupid's Arrow,2018,90,Romance,4.6,347,TRUE,FALSE,FALSE,FALSE
+tt8850510,Feature Film,Oh Deer: It's Christmas,2018,75,Animation,8,102,TRUE,FALSE,FALSE,FALSE
+tt8851036,TV Movie,Coins for Christmas,2018,90,Comedy,6.4,151,TRUE,FALSE,FALSE,FALSE
+tt8861786,Feature Film,Puppy Star Christmas,2018,91,Comedy,3.7,290,TRUE,FALSE,FALSE,FALSE
+tt8864962,Feature Film,Holiday,2018,84,Other,3,33,FALSE,FALSE,FALSE,TRUE
+tt8879926,Feature Film,A Raunchy Christmas Story,2018,72,Comedy,1.7,132,TRUE,FALSE,FALSE,FALSE
+tt8888808,Feature Film,A Holiday Boyfriend,2019,105,Comedy,4.7,371,FALSE,FALSE,FALSE,TRUE
+tt8892454,Feature Film,Almost Christmas,2020,90,Comedy,6.2,55,TRUE,FALSE,FALSE,FALSE
+tt8942494,TV Movie,Christmas Pen Pals,2018,87,Comedy,7,1527,TRUE,FALSE,FALSE,FALSE
+tt8974850,TV Movie,A Christmas Coincidence,2018,87,Drama,6.6,1909,TRUE,FALSE,FALSE,FALSE
+tt8990334,TV Movie,Memories of Christmas,2018,120,Drama,6,779,TRUE,FALSE,FALSE,FALSE
+tt9020648,Feature Film,One Crazy Christmas,2018,85,Comedy,4.9,127,TRUE,FALSE,FALSE,FALSE
+tt9024926,Feature Film,Another Happy Christmas,2020,90,Comedy,5.7,493,TRUE,FALSE,FALSE,FALSE
+tt9028784,TV Movie,Christmas at Grand Valley,2018,85,Comedy,6.3,1390,TRUE,FALSE,FALSE,FALSE
+tt9028802,TV Movie,Christmas Everlasting,2018,85,Drama,6.3,1113,TRUE,FALSE,FALSE,FALSE
+tt9028856,TV Movie,Christmas Wonderland,2018,120,Comedy,5.9,3417,TRUE,FALSE,FALSE,FALSE
+tt9028872,TV Movie,Entertaining Christmas,2018,85,Comedy,6.1,1134,TRUE,FALSE,FALSE,FALSE
+tt9028880,TV Movie,Christmas Made to Order,2018,80,Romance,5.7,4879,TRUE,FALSE,FALSE,FALSE
+tt9029324,TV Movie,Northern Lights of Christmas,2018,84,Romance,6.6,1550,TRUE,FALSE,FALSE,FALSE
+tt9030506,TV Movie,Darci Lynne: My Hometown Christmas,2018,60,Comedy,7.7,47,TRUE,FALSE,FALSE,FALSE
+tt9032562,TV Movie,Homegrown Christmas,2018,88,Romance,6,1194,TRUE,FALSE,FALSE,FALSE
+tt9033308,TV Movie,Welcome to Christmas,2018,90,Comedy,6.3,1466,TRUE,FALSE,FALSE,FALSE
+tt9033632,TV Movie,Christmas at the Palace,2018,85,Romance,6.3,2472,TRUE,FALSE,FALSE,FALSE
+tt9033634,TV Movie,Christmas in Evergreen: Letters to Santa,2018,84,Drama,6.6,2088,TRUE,FALSE,FALSE,FALSE
+tt9033636,TV Movie,A Majestic Christmas,2018,94,Comedy,5.9,714,TRUE,FALSE,FALSE,FALSE
+tt9033640,TV Movie,Hope at Christmas,2018,84,Comedy,6.5,1534,TRUE,FALSE,FALSE,FALSE
+tt9033646,TV Movie,Reunited at Christmas,2018,85,Drama,6.3,1296,TRUE,FALSE,FALSE,FALSE
+tt9033712,TV Movie,Christmas in Love,2018,84,Drama,6.3,2223,TRUE,FALSE,FALSE,FALSE
+tt9047392,TV Movie,A Christmas Village,2018,84,Comedy,4.7,491,TRUE,FALSE,FALSE,FALSE
+tt9050186,Feature Film,A New Lease on Christmas,2021,87,Romance,5.3,232,TRUE,FALSE,FALSE,FALSE
+tt9058820,TV Movie,My Christmas Inn,2018,100,Comedy,5.6,2405,TRUE,FALSE,FALSE,FALSE
+tt9058944,TV Movie,Hometown Christmas,2018,90,Romance,5.9,855,TRUE,FALSE,FALSE,FALSE
+tt9059048,TV Movie,The Christmas Pact,2018,84,Comedy,5.8,612,TRUE,FALSE,FALSE,FALSE
+tt9067272,TV Movie,Christmas Lost and Found,2018,87,Drama,6,526,TRUE,FALSE,FALSE,FALSE
+tt9070794,Feature Film,Holiday Spectacular,2018,48,Family,6.6,73,FALSE,FALSE,FALSE,TRUE
+tt9083646,TV Movie,Christmas on Honeysuckle Lane,2018,100,Drama,6.2,1313,TRUE,FALSE,FALSE,FALSE
+tt9087578,TV Movie,Once Upon a Christmas Miracle,2018,83,Comedy,7.3,2478,TRUE,FALSE,FALSE,FALSE
+tt9093130,TV Movie,Time for Me to Come Home for Christmas,2018,84,Comedy,6.6,1747,TRUE,FALSE,FALSE,FALSE
+tt9101480,TV Movie,A Christmas in Tennessee,2018,87,Comedy,6.7,1469,TRUE,FALSE,FALSE,FALSE
+tt9101692,TV Movie,Christmas Around the Corner,2018,87,Comedy,6.6,1685,TRUE,FALSE,FALSE,FALSE
+tt9102152,TV Movie,Every Day Is Christmas,2018,85,Drama,5.9,552,TRUE,FALSE,FALSE,FALSE
+tt9103028,TV Movie,Return to Christmas Creek,2018,86,Drama,6.1,2325,TRUE,FALSE,FALSE,FALSE
+tt9103602,TV Movie,A Veteran's Christmas,2018,84,Drama,7,2266,TRUE,FALSE,FALSE,FALSE
+tt9104384,Feature Film,American Christmas,2019,80,Comedy,3.6,229,TRUE,FALSE,FALSE,FALSE
+tt9134798,TV Movie,Shoelaces for Christmas,2018,90,Drama,6.4,529,TRUE,FALSE,FALSE,FALSE
+tt9136058,Feature Film,A Christmas Carol,2020,94,Animation,5.2,374,TRUE,FALSE,FALSE,FALSE
+tt9144004,Feature Film,Lost at Christmas,2020,100,Comedy,5.1,653,TRUE,FALSE,FALSE,FALSE
+tt9149382,TV Movie,Pete the Cat: A Very Groovy Christmas,2018,31,Other,6.9,65,TRUE,FALSE,FALSE,FALSE
+tt9154566,TV Movie,A Christmas Switch,2018,86,Comedy,6,1122,TRUE,FALSE,FALSE,FALSE
+tt9165666,Feature Film,The CBeebies Christmas Show: Thumbelina,2018,73,Family,7.7,23,TRUE,FALSE,FALSE,FALSE
+tt9168416,TV Movie,Small Town Christmas,2018,85,Comedy,6.7,1899,TRUE,FALSE,FALSE,FALSE
+tt9182202,Feature Film,The Least of These: A Christmas Story,2018,101,Comedy,6,370,TRUE,FALSE,FALSE,FALSE
+tt9201720,Feature Film,A New Christmas,2019,79,Drama,5.3,359,TRUE,FALSE,FALSE,FALSE
+tt9202096,TV Movie,Christmas Bells Are Ringing,2018,88,Drama,6.4,1698,TRUE,FALSE,FALSE,FALSE
+tt9202102,TV Movie,Chandler Christmas Getaway,2018,88,Comedy,5.3,137,TRUE,FALSE,FALSE,FALSE
+tt9212666,TV Movie,Forever Christmas,2018,90,Drama,5.7,1328,TRUE,FALSE,FALSE,FALSE
+tt9217732,TV Movie,A Christmas in Royal Fashion,2018,90,Romance,5.3,795,TRUE,FALSE,FALSE,FALSE
+tt9217772,TV Movie,A Wedding for Christmas,2018,90,Romance,5.3,1083,TRUE,FALSE,FALSE,FALSE
+tt9233904,TV Movie,Elf Pets: Santa's St. Bernards Save Christmas,2018,26,Animation,5.5,116,TRUE,FALSE,FALSE,FALSE
+tt9274824,TV Movie,A Snow White Christmas,2018,87,Comedy,4.9,753,TRUE,FALSE,FALSE,FALSE
+tt9288486,TV Movie,Ghosting: The Spirit of Christmas,2019,87,Comedy,5.9,608,TRUE,FALSE,FALSE,FALSE
+tt9292510,Feature Film,A Stone Cold Christmas,2018,90,Comedy,5.7,213,TRUE,FALSE,FALSE,FALSE
+tt9296692,TV Movie,Country Christmas Album,2018,88,Drama,5.7,546,TRUE,FALSE,FALSE,FALSE
+tt9315418,TV Movie,Free Rein: The Twelve Neighs of Christmas,2018,56,Other,5.7,4578,TRUE,FALSE,FALSE,FALSE
+tt9316574,Feature Film,Forgotten Christmas,2019,70,Drama,5.9,420,TRUE,FALSE,FALSE,FALSE
+tt9347106,TV Movie,Christmas in Paris,2019,90,Drama,5.2,633,TRUE,FALSE,FALSE,FALSE
+tt9351618,TV Movie,Let's Go Luna!: Luna's Christmas Around the World,2018,47,Animation,9.2,18,TRUE,FALSE,FALSE,FALSE
+tt9351856,Feature Film,Holiday Twist,2023,95,Comedy,9,720,FALSE,FALSE,FALSE,TRUE
+tt9387380,Feature Film,A Christmas Carol,2018,121,Drama,2.4,20,TRUE,FALSE,FALSE,FALSE
+tt9416854,Feature Film,A Christmas Carol,2018,51,Animation,3.7,21,TRUE,FALSE,FALSE,FALSE
+tt9424462,Feature Film,The Grump Who Stole Christmas,2018,72,Animation,5.9,52,TRUE,FALSE,FALSE,FALSE
+tt9448428,TV Movie,Micky Flanagan's Christmas,2018,44,Comedy,5.2,34,TRUE,FALSE,FALSE,FALSE
+tt9460802,TV Movie,Christmas Cartoons: 14 Christmas Cartoon Classics - 2 Hours of Holiday Favorites,2016,119,Animation,6.5,33,TRUE,FALSE,FALSE,TRUE
+tt9485074,TV Movie,When Christmas Goes Horribly Wrong,2018,172,Other,5.4,10,TRUE,FALSE,FALSE,FALSE
+tt9487414,TV Movie,The Secret Story of the BBC Christmas Tapes,2018,29,Other,6.5,13,TRUE,FALSE,FALSE,FALSE
+tt9564270,Feature Film,A Christmas Gift from Bob,2020,92,Drama,6.3,2379,TRUE,FALSE,FALSE,FALSE
+tt9625298,Feature Film,Everyday But Christmas,2019,90,Comedy,7.7,38,TRUE,FALSE,FALSE,FALSE
+tt9651966,TV Movie,The Funny Side of Christmas,1982,80,Comedy,7.4,10,TRUE,FALSE,FALSE,FALSE
+tt9669176,Feature Film,Accident Man: Hitman's Holiday,2022,96,Other,5.9,4487,FALSE,FALSE,FALSE,TRUE
+tt9683542,Feature Film,A Karate Christmas Miracle,2019,90,Other,1.8,177,TRUE,FALSE,FALSE,FALSE
+tt9690756,TV Movie,A Ring for Christmas,2020,88,Comedy,4.8,365,TRUE,FALSE,FALSE,FALSE
+tt9747440,TV Movie,A Christmas Love Story,2019,84,Drama,6.9,1652,TRUE,FALSE,FALSE,FALSE
+tt9747450,TV Movie,Holiday for Heroes,2019,81,Romance,7,1655,FALSE,FALSE,FALSE,TRUE
+tt9802890,TV Movie,Christmas Jars,2019,93,Drama,7.3,914,TRUE,FALSE,FALSE,FALSE
+tt9815084,TV Movie,A Very British Christmas,2019,90,Comedy,5.7,725,TRUE,FALSE,FALSE,FALSE
+tt9892854,TV Movie,#Xmas,2022,84,Comedy,5.8,926,TRUE,FALSE,FALSE,FALSE
