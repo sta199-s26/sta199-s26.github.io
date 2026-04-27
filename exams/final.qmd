@@ -2,6 +2,10 @@
 title: "Final Exam Study Guide"
 ---
 
+::: callout-note
+Answer are [here](/exams/final-answers.html).
+:::
+
 
 ```{r}
 #| label: load-packages
