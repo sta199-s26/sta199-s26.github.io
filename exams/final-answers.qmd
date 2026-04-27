@@ -11,7 +11,7 @@ a. tidy data - every row is an observation and every column is a variable;
 a. computational reproducibility - given the data and the code from an analysis, I can perfectly reproduce all of the tables and figures;
 a. scientific replicability - different researchers independently conduct the same analysis using different data and reach broadly the same conclusions;
 a. observational data - data collected from the world without the researchers intervening to impose experimental controls;
-a. quantile - for a numerical variable, its quantiles are the cutoff points on the numberline that have a certain percentage of the observations to the left or right. So the 36% quantile is the cutoff that has 36% of the values to the left and the remaining `{r} 100 - 36`% to the right;
+a. quantile - for a numerical variable, its quantiles are the cutoff points on the numberline that have a certain percentage of the observations to the left or right. So the 36% quantile is the cutoff that has 36% of the values to the left and the remaining 64% to the right;
 a. ROC curve - visualizes the classification accuracy of a logistic regression model across different classification thresholds. FP rate on the horizontal, TP rate on the vertical, and the points along the curve give you the (FP, TP) for "all" thresholds from 0 to 1;
 a. discernibility level - the user-defined cutoff that determines whether the p-value is small enough to reject the null and accept the alternative;
 a. sampling uncertainty - variation in estimates across alternative datasets;
