@@ -3,7 +3,7 @@ title: "Final Exam Study Guide"
 ---
 
 ::: callout-note
-Answer are [here](/exams/final-answers.html).
+Answers are [here](/exams/final-answers.html).
 :::
 
 

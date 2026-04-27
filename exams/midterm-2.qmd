@@ -5,7 +5,7 @@ execute:
 ---
 
 ::: callout-note
-Answer are [here](/exams/midterm-2-answers.html).
+Answers are [here](/exams/midterm-2-answers.html).
 :::
 
 ```{r}
