@@ -1242,19 +1242,18 @@ set.seed(1234)
 boot_dist <- holiday_movies |>
   specify(score ~ title_type) |>
   generate(reps = 1000, type = "bootstrap") |>
-  calculate(
-    stat = "diff in means", 
-    order = c("TV Movie", "Feature Film")
-  )
+  fit()
 ```
 
 
 ```{r}
 #| include: false
 ci <- boot_dist |>
+  ungroup() |>
+  filter(term == "title_typeTV Movie") |>
   summarize(
-    lower = quantile(stat, 0.025),
-    upper = quantile(stat, 0.975),
+    lower = quantile(estimate, 0.025),
+    upper = quantile(estimate, 0.975),
   )
 ```
 
@@ -1265,7 +1264,10 @@ The bounds for this interval are overlaid on the plot.
 ```{r}
 #| echo: false
 #| fig-asp: 0.5
-ggplot(boot_dist, aes(x = stat)) +
+boot_dist |>
+  ungroup() |>
+  filter(term == "title_typeTV Movie") |>
+  ggplot(aes(x = estimate)) +
   geom_histogram(binwidth = 0.05, color = "gray") +
   scale_x_continuous(breaks = round(seq(-0.6, 0.6, 0.1), 1)) +
   scale_y_continuous(breaks = seq(0, 300, 50)) +
@@ -1304,13 +1306,10 @@ null_dist <- holiday_movies |>
   specify(score ~ title_type) |>
   hypothesize(null = "independence") |>
   generate(reps = 1000, type = "permute") |>
-  calculate(
-    stat = "diff in means", 
-    order = c("TV Movie", "Feature Film")
-  )
+  fit()
 ```
 
-The plot below visualizes the null distribution.
+The plot below visualizes the null distributions for the slope and intercept. Focus on the slope.
 
 ```{r}
 #| echo: false
