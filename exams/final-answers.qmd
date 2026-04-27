@@ -1,0 +1,123 @@
+---
+title: "Final Study Guide Solutions"
+format: html
+---
+
+# Concepts and main ideas
+
+## Question 1
+
+a. tidy data - every row is an observation and every column is a variable;
+a. computational reproducibility - given the data and the code from an analysis, I can perfectly reproduce all of the tables and figures;
+a. scientific replicability - different researchers independently conduct the same analysis using different data and reach broadly the same conclusions;
+a. observational data - data collected from the world without the researchers intervening to impose experimental controls;
+a. quantile - for a numerical variable, its quantiles are the cutoff points on the numberline that have a certain percentage of the observations to the left or right. So the 36% quantile is the cutoff that has 36% of the values to the left and the remaining `{r} 100 - 36`% to the right;
+a. ROC curve - visualizes the classification accuracy of a logistic regression model across different classification thresholds. FP rate on the horizontal, TP rate on the vertical, and the points along the curve give you the (FP, TP) for "all" thresholds from 0 to 1;
+a. discernibility level - the user-defined cutoff that determines whether the p-value is small enough to reject the null and accept the alternative;
+a. sampling uncertainty - variation in estimates across alternative datasets;
+a. bootstrap distribution - a distribution that describes how your estimates might vary over alternative datasets. Those alternative datasets are simulated using the bootstrap, which resamples the original data with replacement;
+a. null distribution - a distribution that describes how your estimates might vary over alternative datasets *if the null hypothesis were true*;
+a. p-value - the probability of getting an estimate as or more extreme than what you observed *if* the null is true;
+a. type 1 error - rejected the null hypothesis when it's true. In other words, a false positive;
+a. type 2 error - failing to reject the null when it is false. In other words, a false negative.
+
+A helpful mnemonic courtesy of the redoubtable Leah Johnson: "type 1, jump the gun; type 2, avoid the new."
+
+# Visual understanding
+
+## Question 2
+
+i. b - symmetric, centered at zero;
+i. c - right-skewed, so mean is above the median;
+i. d - symmetric, centered at -3;
+i. e - right-skewed, so mean is above the median, but more spread than plot ii;
+i. f - symmetric, centered at 2;
+i. a - left-skewed, so mean is below the median.
+ 
+Recall [this](/slides/03-grammar-of-data-transformation.html#interaction-between-shape-and-center).
+
+## Question 3
+
+::: {.center-table}
+| feature | quantity | 
+|---------|---------|
+| I | k |
+| II | c |
+| III |  d |
+| IV |  f |
+| V |  a |
+| VI |  g | 
+| VII |  b |
+| VIII |  b |
+| IX |  b |
+:::
+
+
+# Code doctor
+
+4. The common variable name that you're joining on is a different data type in the two data frames;
+4. For `geom_bar`, you map your categorical variable (`age` in this case) to either the `x` or `y` aesthetic, and then leave the other one blank. Because the counts are already precomputed in the `n` column, you want `geom_col` here;
+4. Inside `full_join` you want `by = join_by(state == state_name)`;
+4. There are two rows labeled `Alice` and `Quiz1`, so there are two values (`90` and `95`) that could go in the `Alice`/`Quiz1` entry of the wide data frame, and the computer doesn't know what you want;
+4. The model doesn't suck. We just screwed up the code. The "event" here is that the e-mail is spam, which is the second level of `spam`. Inside `roc_curve`, we accidentally supplied `.pred_0`, which are the probabilities for the base level (0, or not spam). This flips the graph backasswards from what it should be. You should supply `.pred_1` instead so that it's compatible with `event_level = "second"`. 
+
+# Stat doctor
+
+9. Our models deliver predictions, not guarantees. A speed of 0 is not guaranteed to yield a defense of 69.66. That's just the prediction *on average*;
+9. Holding attack and defense constant, a one unit increase in `hp` predicts an increase in the *odds* of being legendary by a multiplicative factor of $e^{0.0274}\approx 1.027$. On average. Maybe. We think. IDFK;
+9. This is just nonsense. 0.85 is the area under the ROC curve for a logistic regression model. It is not the $R^2$ for a linear regression;
+9. 95% of the *bootstrap estimates* lie between -0.065 and 0.046. Not the data values;
+9. The p-value **is not** the probability that the null is true. It is the probability of an estimate as or more extreme than the one you observed *assuming* the null is true;
+9. A discernibility level of 50% is just crazy. You would never do that. Even if you did, the conclusion is worded strangely. We don't *reject* the alternative hypothesis. You fail to reject the null. A large p-value is saying "the jury's out." The data are not speaking loudly enough to distinguish competing claims. So you aren't coming down firmly on either side if the p-value is large.
+
+# Duke Forest homes
+
+15. c
+15. a
+15. c
+15. a
+15. e
+15. a
+15. b, c, d
+15. a, b, e
+15. a, b, e
+
+# Holiday movies
+
+24. b, e
+24. b, c, d
+24. d
+24. e
+24. c, e
+24. a, b, c
+24. a, b
+24. e
+24. a
+24. e
+24. b
+24. a
+
+
+# GSS
+
+36. b
+36. c
+36. c
+36. b
+
+# Miscellaneous
+
+40. b, d, e
+40. a, e
+40. b
+40. b
+40. a, b, c, e
+40. d
+40. a, b, d
+40. b
+
+
+
+
+
+
