@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="Final Study Guide Solutions – STA 199 Spring 2026">
 <meta property="og:site_name" content="STA 199 Spring 2026">
@@ -482,20 +511,21 @@ ul.task-list li input[type="checkbox"] {
 <section id="question-1" class="level2">
 <h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
 <ol type="a">
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>tidy data - every row is an observation and every column is a variable;</li>
+<li>computational reproducibility - given the data and the code from an analysis, I can perfectly reproduce all of the tables and figures;</li>
+<li>scientific replicability - different researchers independently conduct the same analysis using different data and reach broadly the same conclusions;</li>
+<li>observational data - data collected from the world without the researchers intervening to impose experimental controls;</li>
+<li>quantile - for a numerical variable, its quantiles are the cutoff points on the numberline that have a certain percentage of the observations to the left or right. So the 36% quantile is the cutoff that has 36% of the values to the left and the remaining <code>{r} 100 - 36</code>% to the right;</li>
+<li>ROC curve - visualizes the classification accuracy of a logistic regression model across different classification thresholds. FP rate on the horizontal, TP rate on the vertical, and the points along the curve give you the (FP, TP) for “all” thresholds from 0 to 1;</li>
+<li>discernibility level - the user-defined cutoff that determines whether the p-value is small enough to reject the null and accept the alternative;</li>
+<li>sampling uncertainty - variation in estimates across alternative datasets;</li>
+<li>bootstrap distribution - a distribution that describes how your estimates might vary over alternative datasets. Those alternative datasets are simulated using the bootstrap, which resamples the original data with replacement;</li>
+<li>null distribution - a distribution that describes how your estimates might vary over alternative datasets <em>if the null hypothesis were true</em>;</li>
+<li>p-value - the probability of getting an estimate as or more extreme than what you observed <em>if</em> the null is true;</li>
+<li>type 1 error - rejected the null hypothesis when it’s true. In other words, a false positive;</li>
+<li>type 2 error - failing to reject the null when it is false. In other words, a false negative.</li>
 </ol>
+<p>A helpful mnemonic courtesy of the redoubtable Leah Johnson: “type 1, jump the gun; type 2, avoid the new.”</p>
 </section>
 </section>
 <section id="visual-understanding" class="level1">
@@ -503,13 +533,14 @@ ul.task-list li input[type="checkbox"] {
 <section id="question-2" class="level2">
 <h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
 <ol type="i">
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>b - symmetric, centered at zero;</li>
+<li>c - right-skewed, so mean is above the median;</li>
+<li>d - symmetric, centered at -3;</li>
+<li>e - right-skewed, so mean is above the median, but more spread than plot ii;</li>
+<li>f - symmetric, centered at 2;</li>
+<li>a - left-skewed, so mean is below the median.</li>
 </ol>
+<p>Recall <a href="../slides/03-grammar-of-data-transformation.html#interaction-between-shape-and-center">this</a>.</p>
 </section>
 <section id="question-3" class="level2">
 <h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
@@ -566,75 +597,75 @@ ul.task-list li input[type="checkbox"] {
 <section id="code-doctor" class="level1">
 <h1>Code doctor</h1>
 <ol start="4" type="1">
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>The common variable name that you’re joining on is a different data type in the two data frames;</li>
+<li>For <code>geom_bar</code>, you map your categorical variable (<code>age</code> in this case) to either the <code>x</code> or <code>y</code> aesthetic, and then leave the other one blank. Because the counts are already precomputed in the <code>n</code> column, you want <code>geom_col</code> here;</li>
+<li>Inside <code>full_join</code> you want <code>by = join_by(state == state_name)</code>;</li>
+<li>There are two rows labeled <code>Alice</code> and <code>Quiz1</code>, so there are two values (<code>90</code> and <code>95</code>) that could go in the <code>Alice</code>/<code>Quiz1</code> entry of the wide data frame, and the computer doesn’t know what you want;</li>
+<li>The model doesn’t suck. We just screwed up the code. The “event” here is that the e-mail is spam, which is the second level of <code>spam</code>. Inside <code>roc_curve</code>, we accidentally supplied <code>.pred_0</code>, which are the probabilities for the base level (0, or not spam). This flips the graph backasswards from what it should be. You should supply <code>.pred_1</code> instead so that it’s compatible with <code>event_level = "second"</code>.</li>
 </ol>
 </section>
 <section id="stat-doctor" class="level1">
 <h1>Stat doctor</h1>
 <ol start="9" type="1">
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>Our models deliver predictions, not guarantees. A speed of 0 is not guaranteed to yield a defense of 69.66. That’s just the prediction <em>on average</em>;</li>
+<li>Holding attack and defense constant, a one unit increase in <code>hp</code> predicts an increase in the <em>odds</em> of being legendary by a multiplicative factor of <span class="math inline">\(e^{0.0274}\approx 1.027\)</span>. On average. Maybe. We think. IDFK;</li>
+<li>This is just nonsense. 0.85 is the area under the ROC curve for a logistic regression model. It is not the <span class="math inline">\(R^2\)</span> for a linear regression;</li>
+<li>95% of the <em>bootstrap estimates</em> lie between -0.065 and 0.046. Not the data values;</li>
+<li>The p-value <strong>is not</strong> the probability that the null is true. It is the probability of an estimate as or more extreme than the one you observed <em>assuming</em> the null is true;</li>
+<li>A discernibility level of 50% is just crazy. You would never do that. Even if you did, the conclusion is worded strangely. We don’t <em>reject</em> the alternative hypothesis. You fail to reject the null. A large p-value is saying “the jury’s out.” The data are not speaking loudly enough to distinguish competing claims. So you aren’t coming down firmly on either side if the p-value is large.</li>
 </ol>
 </section>
 <section id="duke-forest-homes" class="level1">
 <h1>Duke Forest homes</h1>
 <ol start="15" type="1">
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>c</li>
+<li>a</li>
+<li>c</li>
+<li>a</li>
+<li>e</li>
+<li>a</li>
+<li>b, c, d</li>
+<li>a, b, e</li>
+<li>a, b, e</li>
 </ol>
 </section>
 <section id="holiday-movies" class="level1">
 <h1>Holiday movies</h1>
 <ol start="24" type="1">
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>b, e</li>
+<li>b, c, d</li>
+<li>d</li>
+<li>e</li>
+<li>c, e</li>
+<li>a, b, c</li>
+<li>a, b</li>
+<li>e</li>
+<li>a</li>
+<li>e</li>
+<li>b</li>
+<li>a</li>
 </ol>
 </section>
 <section id="gss" class="level1">
 <h1>GSS</h1>
 <ol start="36" type="1">
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>b</li>
+<li>c</li>
+<li>c</li>
+<li>b</li>
 </ol>
 </section>
 <section id="miscellaneous" class="level1">
 <h1>Miscellaneous</h1>
 <ol start="40" type="1">
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>b, d, e</li>
+<li>a, e</li>
+<li>b</li>
+<li>b</li>
+<li>a, b, c, e</li>
+<li>d</li>
+<li>a, b, d</li>
+<li>b</li>
 </ol>
 
 
