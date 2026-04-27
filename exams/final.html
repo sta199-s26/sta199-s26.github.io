@@ -1523,10 +1523,7 @@ $ is_legendary    &lt;fct&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
 <span><span class="va">boot_dist</span> <span class="op">&lt;-</span> <span class="va">holiday_movies</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">specify</span><span class="op">(</span><span class="va">score</span> <span class="op">~</span> <span class="va">title_type</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">generate</span><span class="op">(</span>reps <span class="op">=</span> <span class="fl">1000</span>, type <span class="op">=</span> <span class="st">"bootstrap"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">calculate</span><span class="op">(</span></span>
-<span>    stat <span class="op">=</span> <span class="st">"diff in means"</span>, </span>
-<span>    order <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"TV Movie"</span>, <span class="st">"Feature Film"</span><span class="op">)</span></span>
-<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The plot below visualizes the bootstrap distribution. The 95% confidence interval is (0.442, 0.670). The bounds for this interval are overlaid on the plot.</p>
 <div class="cell">
@@ -1553,12 +1550,9 @@ $ is_legendary    &lt;fct&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, F
 <span>  <span class="fu">specify</span><span class="op">(</span><span class="va">score</span> <span class="op">~</span> <span class="va">title_type</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">hypothesize</span><span class="op">(</span>null <span class="op">=</span> <span class="st">"independence"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">generate</span><span class="op">(</span>reps <span class="op">=</span> <span class="fl">1000</span>, type <span class="op">=</span> <span class="st">"permute"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">calculate</span><span class="op">(</span></span>
-<span>    stat <span class="op">=</span> <span class="st">"diff in means"</span>, </span>
-<span>    order <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"TV Movie"</span>, <span class="st">"Feature Film"</span><span class="op">)</span></span>
-<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu">fit</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The plot below visualizes the null distribution.</p>
+<p>The plot below visualizes the null distributions for the slope and intercept. Focus on the slope.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
