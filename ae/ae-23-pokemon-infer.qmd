@@ -185,13 +185,13 @@ bstrap_fits |>
   ungroup() |>
   group_by(term) |>
   summarize(
-    lower_ci = quantile(estimate, 0.05),
-    upper_ci = quantile(estimate, 0.95)
+    lower_ci = quantile(estimate, 0.025),
+    upper_ci = quantile(estimate, 0.975)
   )
 ```
 
 ::: callout-note 
-Same point as before. There's no magic here. `get_confidence_interval` is just a convenient way of doing something that you already knew how to do.s
+Same point as before. There's no magic here. `get_confidence_interval` is just a convenient way of doing something that you already knew how to do.
 :::
 
 f. **BONUS**: You can visualize the confidence interval:
