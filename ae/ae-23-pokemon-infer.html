@@ -765,15 +765,15 @@ Note
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">term</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span></span>
-<span>    lower_ci <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">estimate</span>, <span class="fl">0.05</span><span class="op">)</span>,</span>
-<span>    upper_ci <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">estimate</span>, <span class="fl">0.95</span><span class="op">)</span></span>
+<span>    lower_ci <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">estimate</span>, <span class="fl">0.025</span><span class="op">)</span>,</span>
+<span>    upper_ci <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="va">estimate</span>, <span class="fl">0.975</span><span class="op">)</span></span>
 <span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 3
   term       lower_ci upper_ci
   &lt;chr&gt;         &lt;dbl&gt;    &lt;dbl&gt;
-1 intercept     68.2      76.3
-2 log_height     2.22     12.4</code></pre>
+1 intercept    67.4       76.6
+2 log_height    0.942     13.3</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -786,7 +786,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Same point as before. There’s no magic here. <code>get_confidence_interval</code> is just a convenient way of doing something that you already knew how to do.s</p>
+<p>Same point as before. There’s no magic here. <code>get_confidence_interval</code> is just a convenient way of doing something that you already knew how to do.</p>
 </div>
 </div>
 <ol start="6" type="a">
