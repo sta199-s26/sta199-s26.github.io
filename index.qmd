@@ -6,8 +6,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.
-
 ```{r}
 #| echo: false
 #| message: false
