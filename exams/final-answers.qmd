@@ -8,8 +8,8 @@ format: html
 ## Question 1
 
 a. tidy data - every row is an observation and every column is a variable;
-a. computational reproducibility - given the data and the code from an analysis, I can perfectly reproduce all of the tables and figures. That doesn't mean the tables and figures are necessarily *correct*, nor does it mean that the results will *replicate* on further investigation (see the next item), but it means that we at least know *exactly* where the tables and figures came from;
-a. scientific replicability - different researchers independently conduct the same analysis using different data and reach broadly the same conclusions. It's a low bar, but you'd be shocked how often research fails to clear it;
+a. computational reproducibility - given the data and the code from an analysis, I can perfectly reproduce all of the tables and figures. That doesn't mean the tables and figures are necessarily *correct*, nor does it mean that the results will *replicate* on further investigation (see the next item), but it means that we at least know *exactly* where the tables and figures came from. It's a low bar, but you'd be shocked how often research fails to clear it;
+a. scientific replicability - different researchers independently conduct the same analysis using different data and reach broadly the same conclusions;
 a. observational data - data collected from the world without the researchers intervening to impose experimental controls;
 a. quantile - for a numerical variable, its quantiles are the cutoff points on the numberline that have a certain percentage of the observations to the left or right. So the 36% quantile is the cutoff that has 36% of the values to the left and the remaining 64% to the right;
 a. ROC curve - visualizes the classification accuracy of a logistic regression model across different classification thresholds. FP rate on the horizontal, TP rate on the vertical, and the points along the curve give you the (FP, TP) for "all" thresholds from 0 to 1;
