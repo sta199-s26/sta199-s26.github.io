@@ -110,7 +110,7 @@ Recall [this](/slides/03-grammar-of-data-transformation.html#interaction-between
 40. b, d, e
 40. a, e
 40. b
-40. b
+40. b, c
 40. a, b, c, e
 40. d
 40. a, b, d
