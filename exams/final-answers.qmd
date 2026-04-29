@@ -95,7 +95,7 @@ Recall [this](/slides/03-grammar-of-data-transformation.html#interaction-between
 24. a
 24. e
 24. b
-24. a
+24. a, c
 
 
 # GSS
