@@ -512,8 +512,8 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
 <ol type="a">
 <li>tidy data - every row is an observation and every column is a variable;</li>
-<li>computational reproducibility - given the data and the code from an analysis, I can perfectly reproduce all of the tables and figures. That doesn’t mean the tables and figures are necessarily <em>correct</em>, nor does it mean that the results will <em>replicate</em> on further investigation (see the next item), but it means that we at least know <em>exactly</em> where the tables and figures came from;</li>
-<li>scientific replicability - different researchers independently conduct the same analysis using different data and reach broadly the same conclusions. It’s a low bar, but you’d be shocked how often research fails to clear it;</li>
+<li>computational reproducibility - given the data and the code from an analysis, I can perfectly reproduce all of the tables and figures. That doesn’t mean the tables and figures are necessarily <em>correct</em>, nor does it mean that the results will <em>replicate</em> on further investigation (see the next item), but it means that we at least know <em>exactly</em> where the tables and figures came from. It’s a low bar, but you’d be shocked how often research fails to clear it;</li>
+<li>scientific replicability - different researchers independently conduct the same analysis using different data and reach broadly the same conclusions;</li>
 <li>observational data - data collected from the world without the researchers intervening to impose experimental controls;</li>
 <li>quantile - for a numerical variable, its quantiles are the cutoff points on the numberline that have a certain percentage of the observations to the left or right. So the 36% quantile is the cutoff that has 36% of the values to the left and the remaining 64% to the right;</li>
 <li>ROC curve - visualizes the classification accuracy of a logistic regression model across different classification thresholds. FP rate on the horizontal, TP rate on the vertical, and the points along the curve give you the (FP, TP) for “all” thresholds from 0 to 1;</li>
@@ -607,7 +607,7 @@ window.Quarto = {
 <section id="stat-doctor" class="level1">
 <h1>Stat doctor</h1>
 <ol start="9" type="1">
-<li>Our models deliver predictions, not guarantees. A speed of 0 is not guaranteed to yield a defense of 69.66. That’s just the prediction <em>on average</em>;</li>
+<li>First, they got the variables flipped. 69.66 is a prediction for <em>speed</em> when <em>defense</em> is zero. Second, our models deliver predictions, not guarantees. A defense of 0 is not guaranteed to yield a speed of 69.66. That’s just the prediction <em>on average</em>;</li>
 <li>Holding attack and defense constant, a one unit increase in <code>hp</code> predicts an increase in the <em>odds</em> of being legendary by a multiplicative factor of <span class="math inline">\(e^{0.0274}\approx 1.027\)</span>. On average. Maybe. We think. IDFK;</li>
 <li>This is just nonsense. 0.85 is the area under the ROC curve for a logistic regression model. It is not the <span class="math inline">\(R^2\)</span> for a linear regression;</li>
 <li>90% (not 95%) of the <em>bootstrap estimates</em> lie between -0.065 and 0.046. Not the data values;</li>
