@@ -63,7 +63,7 @@ Recall [this](/slides/03-grammar-of-data-transformation.html#interaction-between
 
 # Stat doctor
 
-9. Our models deliver predictions, not guarantees. A speed of 0 is not guaranteed to yield a defense of 69.66. That's just the prediction *on average*;
+9. First, they got the variables flipped. 69.66 is a prediction for *speed* when *defense* is zero. Second, our models deliver predictions, not guarantees. A defense of 0 is not guaranteed to yield a speed of 69.66. That's just the prediction *on average*;
 9. Holding attack and defense constant, a one unit increase in `hp` predicts an increase in the *odds* of being legendary by a multiplicative factor of $e^{0.0274}\approx 1.027$. On average. Maybe. We think. IDFK;
 9. This is just nonsense. 0.85 is the area under the ROC curve for a logistic regression model. It is not the $R^2$ for a linear regression;
 9. 90% (not 95%) of the *bootstrap estimates* lie between -0.065 and 0.046. Not the data values;
